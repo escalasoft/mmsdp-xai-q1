@@ -1,6 +1,6 @@
 # MMSDP-XAI Project Context
 
-Version: 2.0
+Version: 2.1
 
 This document consolidates only information stated in the authoritative documents under `reference/`.
 
@@ -262,6 +262,11 @@ Misalignment between thesis, paper, and code is a risk because the source docume
 - Reference documents added under `reference/`: project plan, thesis draft, and paper draft. (Source: current repository state)
 - `docs/PROJECT_CONTEXT.md` created as the first Single Source of Truth document. (Source: current repository state)
 
+### 2026-07-11
+
+- Milestone M0 approved: Governance and Architecture Baseline Complete.
+- Implementation may begin with Sprint 1 — Repository Scaffold.
+
 ## 25. Current Development Status
 
 Repository scaffold created. The current repository contains placeholder-backed directories for `configs`, `data`, `docs`, `notebooks`, `src`, `tests`, `scripts`, `experiments`, `outputs`, and `paper`. (Source: current repository state)
@@ -277,3 +282,13 @@ Dataset pipeline pending. No dataset pipeline implementation exists in the curre
 Model implementation pending. No model implementation exists in the current repository state.
 
 Experiments pending. No experiment implementation or experiment result files exist in the current repository state.
+
+## 26. Project Milestones
+
+### M0 — Governance and Architecture Baseline Complete
+
+- Status: Approved
+- Date: 2026-07-11
+- Description: The scientific governance, system architecture, dataset specification, feature specification, reviewer-derived quality controls, design decisions, quality requirements, risk register, experiment quality gates, and implementation architecture have been documented and reviewed.
+- Baseline tag: v0.1-governance
+- Implementation status: Ready to begin Sprint 1 — Repository Scaffold.
