@@ -206,6 +206,33 @@ tempCodeRunnerFile.py
 # Ruff stuff:
 .ruff_cache/
 
+# macOS artifacts
+.DS_Store
+
+# IDE-local files
+.idea/
+.vscode/
+
+# Generated data artifacts
+data/raw/*
+data/interim/*
+data/processed/*
+data/external/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!data/external/.gitkeep
+
+# Generated output artifacts
+outputs/models/*
+outputs/metrics/*
+outputs/figures/*
+outputs/reports/*
+!outputs/models/.gitkeep
+!outputs/metrics/.gitkeep
+!outputs/figures/.gitkeep
+!outputs/reports/.gitkeep
+
 # PyPI configuration file
 .pypirc
 

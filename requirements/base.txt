@@ -1,0 +1,2 @@
+# Runtime dependencies will be added incrementally as implementation decisions are approved.
+# No runtime packages are required for the Sprint 1 repository scaffold.
