@@ -2,7 +2,6 @@ from dataclasses import is_dataclass
 
 import feature_engineering
 
-
 EXPECTED_EXPORTS = {
     "CodeFeatureRecord",
     "FeatureArtifact",
@@ -36,4 +35,3 @@ def test_contracts_are_frozen_and_exclude_forbidden_fields() -> None:
         assert is_dataclass(record_type)
         assert record_type.__dataclass_params__.frozen
         assert prohibited.isdisjoint(record_type.__dataclass_fields__)
-

@@ -42,11 +42,12 @@ GOVERNANCE_DOCS = [
     "docs/RISK_REGISTER.md",
     "docs/EXPERIMENT_QUALITY_GATES.md",
 ]
+
+
 def test_required_governance_documents_exist() -> None:
     for doc in GOVERNANCE_DOCS:
-        assert (REPO_ROOT / doc).is_file(), (
-            f"Missing governance document: {doc}"
-        )
+        assert (REPO_ROOT / doc).is_file(), f"Missing governance document: {doc}"
+
 
 def test_required_src_packages_exist_with_init_files() -> None:
     for package in SRC_PACKAGES:

@@ -5,7 +5,7 @@ import hashlib
 import os
 import tempfile
 from collections.abc import Iterable
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from .git_client import ExtractionError, ExtractionOutputExistsError
@@ -168,7 +168,7 @@ def _write_csv(
             Path(temporary_name).unlink(missing_ok=True)
 
     checksum = hashlib.sha256(destination.read_bytes()).hexdigest()
-    timestamp = extracted_at or datetime.now(timezone.utc)
+    timestamp = extracted_at or datetime.now(UTC)
     if timestamp.tzinfo is None or timestamp.utcoffset() is None:
         raise ExtractionError("Manifest extraction timestamp must be timezone-aware")
     return ExtractionManifest(

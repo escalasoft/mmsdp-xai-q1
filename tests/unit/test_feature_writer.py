@@ -44,4 +44,3 @@ def test_writer_creates_parents_only_when_requested(tmp_path) -> None:
         write_code_features([record], output)
     artifact = write_code_features([record], output, create_parents=True)
     assert artifact.path.is_file()
-

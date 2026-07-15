@@ -1,6 +1,6 @@
 import csv
 import hashlib
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import pytest
 
@@ -15,7 +15,7 @@ from extraction.writer import COMMIT_COLUMNS
 
 
 def _record(subject="subject") -> CommitRecord:
-    timestamp = datetime(2024, 1, 1, tzinfo=timezone.utc)
+    timestamp = datetime(2024, 1, 1, tzinfo=UTC)
     return CommitRecord(
         "a" * 40,
         ("b" * 40,),
@@ -37,7 +37,7 @@ def test_deterministic_columns_manifest_count_and_checksum(tmp_path) -> None:
         output,
         repository_path=tmp_path,
         repository_head="a" * 40,
-        extracted_at=datetime(2024, 1, 2, tzinfo=timezone.utc),
+        extracted_at=datetime(2024, 1, 2, tzinfo=UTC),
     )
     with output.open(encoding="utf-8", newline="") as source:
         rows = list(csv.reader(source))

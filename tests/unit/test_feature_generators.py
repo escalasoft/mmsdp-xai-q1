@@ -25,7 +25,9 @@ def test_code_features_are_deterministic_arithmetic() -> None:
     assert first[0].changed_file_count == 2
 
 
-@pytest.mark.parametrize("field", ["lines_added", "lines_deleted", "changed_file_count"])
+@pytest.mark.parametrize(
+    "field", ["lines_added", "lines_deleted", "changed_file_count"]
+)
 def test_code_features_reject_invalid_counts(field) -> None:
     source = {
         "commit_hash": "abc",
@@ -79,4 +81,3 @@ def test_feature_contracts_are_immutable() -> None:
     )[0]
     with pytest.raises(FrozenInstanceError):
         feature.word_count = 99
-
