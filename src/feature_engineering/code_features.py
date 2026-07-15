@@ -46,4 +46,3 @@ def _non_negative_integer(record: Mapping[str, str], field: str) -> int:
     if number < 0:
         raise FeatureEngineeringError(f"Field must be non-negative: {field}")
     return number
-

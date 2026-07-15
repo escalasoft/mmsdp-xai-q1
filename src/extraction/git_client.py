@@ -66,8 +66,7 @@ class GitClient:
     def commit_log(self) -> str:
         """Return all commit metadata in deterministic Git history order."""
         format_spec = (
-            "%x1e%H%x1f%P%x1f%an%x1f%ae%x1f%aI%x1f%cn%x1f%ce%x1f%cI"
-            "%x1f%s%x1f%b"
+            "%x1e%H%x1f%P%x1f%an%x1f%ae%x1f%aI%x1f%cn%x1f%ce%x1f%cI%x1f%s%x1f%b"
         )
         return self._run(["log", "--topo-order", f"--format={format_spec}"])
 
@@ -118,7 +117,5 @@ class GitClient:
             ) from error
         if result.returncode != 0:
             detail = result.stderr.strip() or "no error output"
-            raise GitCommandError(
-                f"Git command failed ({arguments[0]}): {detail}"
-            )
+            raise GitCommandError(f"Git command failed ({arguments[0]}): {detail}")
         return result.stdout
