@@ -1,5 +1,5 @@
 from dataclasses import FrozenInstanceError
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import pytest
 
@@ -16,10 +16,10 @@ def test_commit_record_is_immutable() -> None:
         (),
         "Author",
         "author@example.test",
-        datetime.now(timezone.utc),
+        datetime.now(UTC),
         "Committer",
         "committer@example.test",
-        datetime.now(timezone.utc),
+        datetime.now(UTC),
         "subject",
         "body",
     )

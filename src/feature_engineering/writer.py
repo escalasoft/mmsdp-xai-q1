@@ -109,4 +109,3 @@ def _write(
         column_names=columns,
         checksum=hashlib.sha256(destination.read_bytes()).hexdigest(),
     )
-

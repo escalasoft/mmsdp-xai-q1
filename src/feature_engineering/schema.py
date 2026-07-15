@@ -58,4 +58,3 @@ class FeatureArtifact:
 
 class FeatureEngineeringError(Exception):
     """Raised when feature input or output violates the layer contract."""
-

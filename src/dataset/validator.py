@@ -51,9 +51,7 @@ def validate_duplicate_primary_keys(
             seen.add(value)
 
 
-def validate_missing_primary_keys(
-    records: Sequence[Record], primary_key: str
-) -> None:
+def validate_missing_primary_keys(records: Sequence[Record], primary_key: str) -> None:
     """Reject absent or empty primary-key values."""
     _validate_present_values(records, primary_key, "primary key")
 
@@ -113,9 +111,9 @@ def validate_chronological_split_ordering(
             raise DatasetValidationError(
                 "Records within each split must be in chronological order"
             )
-    if max(keyed_splits[0]) > min(keyed_splits[1]) or max(
-        keyed_splits[1]
-    ) > min(keyed_splits[2]):
+    if max(keyed_splits[0]) > min(keyed_splits[1]) or max(keyed_splits[1]) > min(
+        keyed_splits[2]
+    ):
         raise DatasetValidationError(
             "Split timestamps must follow train, validation, then test order"
         )

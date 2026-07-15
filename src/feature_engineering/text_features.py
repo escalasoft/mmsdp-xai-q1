@@ -26,4 +26,3 @@ def generate_text_features(
             )
         )
     return tuple(features)
-
