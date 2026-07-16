@@ -11,6 +11,12 @@ from preprocessing.schema import (
     PreprocessingSplit,
     TemporalSplit,
 )
+from preprocessing.validator import (
+    DataFrameLike,
+    PreprocessingValidationError,
+    PreprocessingValidationReport,
+    validate_preprocessing_dataframe,
+)
 
 __all__ = [
     "FeatureTable",
@@ -22,4 +28,8 @@ __all__ = [
     "PreprocessingSchemaError",
     "PreprocessingSplit",
     "TemporalSplit",
+    "DataFrameLike",
+    "PreprocessingValidationError",
+    "PreprocessingValidationReport",
+    "validate_preprocessing_dataframe",
 ]

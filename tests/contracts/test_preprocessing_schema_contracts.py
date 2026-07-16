@@ -14,6 +14,7 @@ from preprocessing import (
 def test_preprocessing_package_exports_only_stable_schema_api() -> None:
     expected = {
         "FeatureTable",
+        "DataFrameLike",
         "InvalidFeatureTableError",
         "InvalidManifestError",
         "InvalidTemporalSplitError",
@@ -22,6 +23,9 @@ def test_preprocessing_package_exports_only_stable_schema_api() -> None:
         "PreprocessingSchemaError",
         "PreprocessingSplit",
         "TemporalSplit",
+        "PreprocessingValidationError",
+        "PreprocessingValidationReport",
+        "validate_preprocessing_dataframe",
     }
 
     assert set(preprocessing.__all__) == expected
