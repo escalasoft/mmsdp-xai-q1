@@ -1,5 +1,16 @@
 """Stable preprocessing schema contracts."""
 
+from preprocessing.merger import (
+    ConflictingSharedMetadataError,
+    DuplicateModalityError,
+    DuplicatePrimaryKeyError,
+    IncompatiblePrimaryKeyError,
+    InvalidMergeInputError,
+    MergedFeatureTable,
+    MissingRequiredModalityError,
+    PreprocessingMergeError,
+    merge_preprocessing_tables,
+)
 from preprocessing.schema import (
     FeatureTable,
     InvalidFeatureTableError,
@@ -19,11 +30,19 @@ from preprocessing.validator import (
 )
 
 __all__ = [
+    "ConflictingSharedMetadataError",
+    "DuplicateModalityError",
+    "DuplicatePrimaryKeyError",
     "FeatureTable",
+    "IncompatiblePrimaryKeyError",
     "InvalidFeatureTableError",
+    "InvalidMergeInputError",
     "InvalidManifestError",
     "InvalidTemporalSplitError",
     "MergedFeatureRecord",
+    "MergedFeatureTable",
+    "MissingRequiredModalityError",
+    "PreprocessingMergeError",
     "PreprocessingManifest",
     "PreprocessingSchemaError",
     "PreprocessingSplit",
@@ -32,4 +51,5 @@ __all__ = [
     "PreprocessingValidationError",
     "PreprocessingValidationReport",
     "validate_preprocessing_dataframe",
+    "merge_preprocessing_tables",
 ]

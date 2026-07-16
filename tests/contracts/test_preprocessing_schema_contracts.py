@@ -13,18 +13,27 @@ from preprocessing import (
 
 def test_preprocessing_package_exports_only_stable_schema_api() -> None:
     expected = {
+        "ConflictingSharedMetadataError",
+        "DuplicateModalityError",
+        "DuplicatePrimaryKeyError",
         "FeatureTable",
         "DataFrameLike",
+        "IncompatiblePrimaryKeyError",
         "InvalidFeatureTableError",
+        "InvalidMergeInputError",
         "InvalidManifestError",
         "InvalidTemporalSplitError",
         "MergedFeatureRecord",
+        "MergedFeatureTable",
+        "MissingRequiredModalityError",
         "PreprocessingManifest",
+        "PreprocessingMergeError",
         "PreprocessingSchemaError",
         "PreprocessingSplit",
         "TemporalSplit",
         "PreprocessingValidationError",
         "PreprocessingValidationReport",
+        "merge_preprocessing_tables",
         "validate_preprocessing_dataframe",
     }
 
