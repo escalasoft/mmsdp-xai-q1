@@ -12,7 +12,7 @@ __all__ = [
     "EmptyDatasetError",
     "InvalidSplitInputError",
     "InvalidSplitRatiosError",
-    "PreprocessingSplit",
+    "PreprocessingPartitions",
     "PreprocessingSplitterError",
     "split_preprocessing_dataset",
 ]
@@ -54,7 +54,7 @@ FrameT = TypeVar("FrameT", bound=DataFrameCompatible)
 
 
 @dataclass(frozen=True)
-class PreprocessingSplit:
+class PreprocessingPartitions:
     """Immutable container for deterministic dataset partitions."""
 
     train_records: object
@@ -68,7 +68,7 @@ def split_preprocessing_dataset(
     train_ratio: float = 0.7,
     validation_ratio: float = 0.15,
     test_ratio: float = 0.15,
-) -> PreprocessingSplit:
+) -> PreprocessingPartitions:
     """Partition a dataframe-compatible input in its existing row order."""
 
     _validate_ratios(train_ratio, validation_ratio, test_ratio)
@@ -79,7 +79,7 @@ def split_preprocessing_dataset(
     train_end = int(row_count * train_ratio)
     validation_end = train_end + int(row_count * validation_ratio)
 
-    return PreprocessingSplit(
+    return PreprocessingPartitions(
         train_records=_copy_partition(dataframe, 0, train_end),
         validation_records=_copy_partition(dataframe, train_end, validation_end),
         test_records=_copy_partition(dataframe, validation_end, row_count),
