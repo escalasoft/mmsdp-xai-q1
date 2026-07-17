@@ -7,6 +7,7 @@ from dataclasses import dataclass
 from typing import Protocol, TypeVar
 
 from preprocessing.schema import PreprocessingSplit, _freeze_mapping
+from preprocessing.splitter import PreprocessingPartitions
 
 __all__ = [
     "FittedNormalizer",
@@ -74,3 +75,17 @@ class TrainFittedNormalizer(Protocol[DatasetT]):
         *,
         spec: NormalizationSpec,
     ) -> FittedNormalizer[DatasetT]: ...
+
+
+def transform_preprocessing_partitions(
+    partitions: PreprocessingPartitions,
+    fitted_normalizer: FittedNormalizer[DatasetT],
+    /,
+) -> NormalizedPartitions:
+    """Apply one fitted normalizer unchanged to every dataset partition."""
+    return NormalizedPartitions(
+        train_records=fitted_normalizer.transform(partitions.train_records),
+        validation_records=fitted_normalizer.transform(partitions.validation_records),
+        test_records=fitted_normalizer.transform(partitions.test_records),
+        fitted_state=fitted_normalizer.state,
+    )
