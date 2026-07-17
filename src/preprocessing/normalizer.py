@@ -77,6 +77,17 @@ class TrainFittedNormalizer(Protocol[DatasetT]):
     ) -> FittedNormalizer[DatasetT]: ...
 
 
+def fit_normalizer_on_training_data(
+    training_data: DatasetT,
+    normalizer: TrainFittedNormalizer[DatasetT],
+    /,
+    *,
+    spec: NormalizationSpec,
+) -> FittedNormalizer[DatasetT]:
+    """Fit a normalizer using only the supplied training dataset."""
+    return normalizer.fit(training_data, spec=spec)
+
+
 def transform_preprocessing_partitions(
     partitions: PreprocessingPartitions,
     fitted_normalizer: FittedNormalizer[DatasetT],
