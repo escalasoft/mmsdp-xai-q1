@@ -100,3 +100,19 @@ def transform_preprocessing_partitions(
         test_records=fitted_normalizer.transform(partitions.test_records),
         fitted_state=fitted_normalizer.state,
     )
+
+
+def normalize_preprocessing_partitions(
+    partitions: PreprocessingPartitions,
+    normalizer: TrainFittedNormalizer[DatasetT],
+    /,
+    *,
+    spec: NormalizationSpec,
+) -> NormalizedPartitions:
+    """Fit on training data and transform every partition with that fit."""
+    fitted_normalizer = fit_normalizer_on_training_data(
+        partitions.train_records,
+        normalizer,
+        spec=spec,
+    )
+    return transform_preprocessing_partitions(partitions, fitted_normalizer)
