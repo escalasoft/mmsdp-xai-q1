@@ -8,6 +8,7 @@ from types import MappingProxyType
 from typing import Self
 
 from fusion.contracts import PredictionOutput
+from fusion.stacking_contracts import StackingMetaModel
 from fusion.stacking_features import StackingFeatureBuilder
 
 __all__ = ["StackingFusionOrchestratorMetadata", "StackingFusionOrchestrator"]
@@ -46,7 +47,7 @@ class StackingFusionOrchestrator:
         self,
         input_modalities: Sequence[str],
         feature_builder: StackingFeatureBuilder,
-        meta_model: object,
+        meta_model: StackingMetaModel,
         *,
         configuration: Mapping[str, object] | None = None,
     ) -> None:
@@ -62,7 +63,7 @@ class StackingFusionOrchestrator:
             raise ValueError("meta_model must not be None")
 
         self._feature_builder = feature_builder
-        self._meta_model = meta_model
+        self._meta_model: StackingMetaModel = meta_model
         self._metadata = StackingFusionOrchestratorMetadata(
             orchestrator_name=type(self).__name__,
             fusion_strategy="stacking",
