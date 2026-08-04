@@ -13,6 +13,7 @@ from models.logistic_regression_adapter import (
     LogisticRegressionAdapter,
     PreparedLogisticRegressionModel,
 )
+from models.model_registry import PreparedTrainedModel
 from models.prediction import ModelPredictionResult, ModelPredictor
 from models.random_forest_adapter import (
     PreparedRandomForestModel,
@@ -23,6 +24,8 @@ __all__ = [
     "ModelExperimentResult",
     "ModelExperimentRunner",
 ]
+
+_UNSET = object()
 
 
 def _freeze(value: object) -> object:
@@ -172,18 +175,18 @@ class ModelExperimentRunner:
     def __init__(
         self,
         *,
-        model_adapter: object,
+        model_adapter: object = _UNSET,
         positive_label: object,
     ) -> None:
-        if not isinstance(
+        if model_adapter is not _UNSET and not isinstance(
             model_adapter, (LogisticRegressionAdapter, RandomForestAdapter)
         ):
             raise TypeError("unsupported model adapter")
-        self._model_adapter = model_adapter
+        self._model_adapter = None if model_adapter is _UNSET else model_adapter
         self._positive_label = _freeze(positive_label)
 
     @property
-    def model_adapter(self) -> LogisticRegressionAdapter | RandomForestAdapter:
+    def model_adapter(self) -> LogisticRegressionAdapter | RandomForestAdapter | None:
         """Return the configured supported model adapter."""
         return self._model_adapter
 
@@ -192,26 +195,49 @@ class ModelExperimentRunner:
         """Return a detached copy of the configured positive label."""
         return _thaw(self._positive_label)
 
-    def run(self, prepared_input: PreparedModelInput) -> ModelExperimentResult:
-        """Run one model experiment without transforming or mutating its input."""
+    def run(
+        self,
+        trained_model: PreparedTrainedModel | PreparedModelInput,
+        prepared_input: PreparedModelInput | None = None,
+    ) -> ModelExperimentResult:
+        """Predict and evaluate a supplied model without training.
+
+        The one-argument form remains for compatibility with earlier callers;
+        new orchestration must supply a :class:`PreparedTrainedModel`.
+        """
+        if isinstance(trained_model, PreparedModelInput):
+            if prepared_input is not None or self._model_adapter is None:
+                raise TypeError("a trained model and PreparedModelInput are required")
+            legacy_input = trained_model
+            model = self._model_adapter.train(legacy_input)
+            prepared_input = legacy_input
+            predictor = ModelPredictor()
+            validation_prediction = predictor.predict(
+                model, prepared_input, "validation"
+            )
+            test_prediction = predictor.predict(model, prepared_input, "test")
+            if isinstance(model, PreparedLogisticRegressionModel):
+                model_name = "logistic-regression"
+            elif isinstance(model, PreparedRandomForestModel):
+                model_name = "random-forest"
+            else:
+                raise TypeError("model adapter returned an unsupported model type")
+        elif isinstance(trained_model, PreparedTrainedModel):
+            if not isinstance(prepared_input, PreparedModelInput):
+                raise TypeError("prepared_input must be a PreparedModelInput")
+            model_name = trained_model.model_name
+            validation_prediction = trained_model.predictions["validation"]
+            test_prediction = trained_model.predictions["test"]
+        else:
+            if self._model_adapter is not None:
+                raise TypeError("prepared_input must be a PreparedModelInput")
+            raise TypeError("trained_model must be a PreparedTrainedModel")
         if not isinstance(prepared_input, PreparedModelInput):
             raise TypeError("prepared_input must be a PreparedModelInput")
-
-        model = self._model_adapter.train(prepared_input)
-        if isinstance(model, PreparedLogisticRegressionModel):
-            model_name = "logistic-regression"
-        elif isinstance(model, PreparedRandomForestModel):
-            model_name = "random-forest"
-        else:
-            raise TypeError("model adapter returned an unsupported model type")
-
-        predictor = ModelPredictor()
         evaluator = ModelPredictionEvaluator(positive_label=self._positive_label)
-        validation_prediction = predictor.predict(model, prepared_input, "validation")
         validation_evaluation = evaluator.evaluate(
             validation_prediction, prepared_input.validation.y
         )
-        test_prediction = predictor.predict(model, prepared_input, "test")
         test_evaluation = evaluator.evaluate(test_prediction, prepared_input.test.y)
 
         return ModelExperimentResult(

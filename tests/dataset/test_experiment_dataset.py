@@ -166,17 +166,17 @@ def test_dataset_rejects_invalid_names_partition_names_and_schemas():
         PreparedExperimentDataset("data", "1", train, validation, test, ("x",), "y")
 
 
-def test_dataset_rejects_overlapping_partition_identifiers():
-    with pytest.raises(ValueError, match="overlap"):
-        PreparedExperimentDataset(
-            "data",
-            "1",
-            partition("train", 1),
-            partition("validation", 1),
-            partition("test", 3),
-            ("value",),
-            "y",
-        )
+def test_dataset_allows_partition_scoped_identifiers():
+    result = PreparedExperimentDataset(
+        "data",
+        "1",
+        partition("train", 1),
+        partition("validation", 1),
+        partition("test", 3),
+        ("value",),
+        "y",
+    )
+    assert result.train.identifiers == result.validation.identifiers
 
 
 def test_prepare_rejects_missing_and_undeclared_features(split):
@@ -197,7 +197,7 @@ def test_prepare_rejects_missing_and_undeclared_features(split):
             ExperimentDatasetPreparer().prepare(invalid_split)
 
 
-def test_prepare_rejects_duplicate_or_overlapping_identifiers(split):
+def test_prepare_rejects_partition_duplicates_and_allows_cross_partition_ids(split):
     duplicate = TemporalDatasetSplit(
         "data",
         "1",
@@ -220,8 +220,7 @@ def test_prepare_rejects_duplicate_or_overlapping_identifiers(split):
     )
     with pytest.raises(ValueError, match="unique"):
         ExperimentDatasetPreparer().prepare(duplicate)
-    with pytest.raises(ValueError, match="overlap"):
-        ExperimentDatasetPreparer().prepare(overlap)
+    assert ExperimentDatasetPreparer().prepare(overlap).train.identifiers == (3,)
 
 
 def test_prepare_rejects_non_split_values():

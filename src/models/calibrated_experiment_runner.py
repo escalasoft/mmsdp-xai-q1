@@ -19,7 +19,7 @@ from models.calibration_evaluation import (
     ProbabilityCalibrationEvaluation,
     ProbabilityCalibrationEvaluator,
 )
-from models.experiment_runner import ModelExperimentResult, ModelExperimentRunner
+from models.experiment_runner import ModelExperimentResult
 from models.logistic_regression_adapter import LogisticRegressionAdapter
 from models.random_forest_adapter import RandomForestAdapter
 
@@ -29,6 +29,7 @@ __all__ = [
 ]
 
 _METHODS = frozenset({"platt", "isotonic"})
+_UNSET = object()
 
 
 def _freeze(value: object) -> object:
@@ -333,12 +334,12 @@ class CalibratedModelExperimentRunner:
     def __init__(
         self,
         *,
-        model_adapter: object,
+        model_adapter: object = _UNSET,
         calibration_configuration: ProbabilityCalibrationConfiguration,
         positive_label: object,
         bin_count: int = 10,
     ) -> None:
-        if not isinstance(
+        if model_adapter is not _UNSET and not isinstance(
             model_adapter, (LogisticRegressionAdapter, RandomForestAdapter)
         ):
             raise TypeError("unsupported model adapter")
@@ -353,13 +354,13 @@ class CalibratedModelExperimentRunner:
             raise TypeError("bin_count must be an integer and must not be bool")
         if bin_count < 2:
             raise ValueError("bin_count must be at least 2")
-        self._model_adapter = model_adapter
+        self._model_adapter = None if model_adapter is _UNSET else model_adapter
         self._calibration_configuration = calibration_configuration
         self._positive_label = _freeze(positive_label)
         self._bin_count = bin_count
 
     @property
-    def model_adapter(self) -> LogisticRegressionAdapter | RandomForestAdapter:
+    def model_adapter(self) -> LogisticRegressionAdapter | RandomForestAdapter | None:
         return self._model_adapter
 
     @property
@@ -375,16 +376,33 @@ class CalibratedModelExperimentRunner:
         return self._bin_count
 
     def run(
-        self, prepared_input: PreparedModelInput
+        self,
+        uncalibrated: ModelExperimentResult | PreparedModelInput,
+        prepared_input: PreparedModelInput | None = None,
     ) -> CalibratedModelExperimentResult:
-        """Execute one complete calibrated experiment in a fixed order."""
+        """Calibrate an existing experiment without any model training.
+
+        The one-argument form remains for compatibility with earlier callers.
+        New orchestration supplies the uncalibrated result explicitly.
+        """
+        if isinstance(uncalibrated, PreparedModelInput):
+            if prepared_input is not None or self.model_adapter is None:
+                raise TypeError(
+                    "an uncalibrated experiment and PreparedModelInput are required"
+                )
+            from models.experiment_runner import ModelExperimentRunner
+
+            prepared_input = uncalibrated
+            uncalibrated = ModelExperimentRunner(
+                model_adapter=self.model_adapter,
+                positive_label=self._positive_label,
+            ).run(prepared_input)
+        if not isinstance(uncalibrated, ModelExperimentResult):
+            if self.model_adapter is not None:
+                raise TypeError("prepared_input must be a PreparedModelInput")
+            raise TypeError("uncalibrated must be a ModelExperimentResult")
         if not isinstance(prepared_input, PreparedModelInput):
             raise TypeError("prepared_input must be a PreparedModelInput")
-
-        uncalibrated = ModelExperimentRunner(
-            model_adapter=self.model_adapter,
-            positive_label=self._positive_label,
-        ).run(prepared_input)
         evaluator = ProbabilityCalibrationEvaluator(
             positive_label=self._positive_label,
             bin_count=self.bin_count,

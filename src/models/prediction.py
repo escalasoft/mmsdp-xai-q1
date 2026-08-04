@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import math
+import pickle
 from collections.abc import Mapping, Sequence
 from copy import deepcopy
 from dataclasses import dataclass
@@ -264,21 +265,12 @@ class ModelPredictor:
     def _random_forest_estimator(
         model: PreparedRandomForestModel, prepared_input: PreparedModelInput
     ) -> RandomForestClassifier:
-        estimator = RandomForestClassifier(
-            **model.configuration.to_dict(),
-            n_jobs=1,
-        )
-        estimator.fit(prepared_input.train.X, prepared_input.train.y)
-        if tuple(
-            ModelPredictor._python_value(value) for value in estimator.classes_
-        ) != (model.class_labels):
-            raise ValueError("reconstructed class_labels do not match the model")
-        if tuple(tree.tree_.node_count for tree in estimator.estimators_) != (
-            model.tree_node_counts
-        ) or tuple(tree.tree_.max_depth for tree in estimator.estimators_) != (
-            model.tree_max_depths
-        ):
-            raise ValueError("random-forest snapshot could not be reconstructed")
+        del prepared_input
+        if model.serialized_estimator is None:
+            raise ValueError("random-forest snapshot lacks fitted estimator state")
+        estimator = pickle.loads(model.serialized_estimator)
+        if not isinstance(estimator, RandomForestClassifier):
+            raise ValueError("serialized estimator is not a random forest")
         return estimator
 
     @staticmethod

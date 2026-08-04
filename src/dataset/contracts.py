@@ -221,9 +221,6 @@ class AdaptedDataset:
                 raise ValueError(
                     "every record must expose exactly feature_names in the same order"
                 )
-        identifiers = tuple(record.identifier for record in normalized_records)
-        if _contains_duplicate(identifiers):
-            raise ValueError("record identifiers must be unique")
         if metadata is None:
             raise ValueError("metadata must not be None")
         if not isinstance(metadata, Mapping):
