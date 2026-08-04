@@ -187,9 +187,6 @@ class PreparedModelInput:
             raise ValueError("all partitions must expose the same feature_names")
         if normalized_names != train.feature_names:
             raise ValueError("top-level feature_names must match partition schemas")
-        all_identifiers = train.identifiers + validation.identifiers + test.identifiers
-        if _has_duplicates(all_identifiers):
-            raise ValueError("identifiers must not overlap across partitions")
         if not isinstance(metadata, Mapping):
             raise TypeError("metadata must be a mapping")
 

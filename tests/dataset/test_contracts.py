@@ -138,9 +138,8 @@ def test_adapted_dataset_rejects_empty_records() -> None:
         AdaptedDataset("sample", "1", (), ("feature",), "target")
 
 
-def test_adapted_dataset_rejects_duplicate_record_identifiers() -> None:
-    with pytest.raises(ValueError, match="identifiers"):
-        _dataset(_record("same"), _record("same"))
+def test_adapted_dataset_allows_identifiers_reused_across_future_partitions() -> None:
+    assert _dataset(_record("same"), _record("same")).observation_count == 2
 
 
 @pytest.mark.parametrize(

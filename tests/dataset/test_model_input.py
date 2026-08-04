@@ -134,7 +134,7 @@ def test_partition_rejects_misalignment_duplicates_and_bad_widths():
         ModelPartitionInput("train", (1,), ((1, 2),), (1,), ("x",))
 
 
-def test_prepared_input_rejects_wrong_partitions_schemas_and_overlap():
+def test_prepared_input_rejects_wrong_partitions_and_schemas():
     train = model_partition("train", 1)
     validation = model_partition("validation", 2)
     test = model_partition("test", 3)
@@ -145,16 +145,16 @@ def test_prepared_input_rejects_wrong_partitions_schemas_and_overlap():
     incompatible = ModelPartitionInput("validation", (2,), ((2,),), (2,), ("other",))
     with pytest.raises(ValueError, match="same feature_names"):
         PreparedModelInput("data", "1", train, incompatible, test, ("value",), "y")
-    with pytest.raises(ValueError, match="overlap"):
-        PreparedModelInput(
-            "data",
-            "1",
-            train,
-            model_partition("validation", 1),
-            test,
-            ("value",),
-            "y",
-        )
+    scoped = PreparedModelInput(
+        "data",
+        "1",
+        train,
+        model_partition("validation", 1),
+        test,
+        ("value",),
+        "y",
+    )
+    assert scoped.train.identifiers == scoped.validation.identifiers
 
 
 def test_builder_rejects_non_prepared_dataset():

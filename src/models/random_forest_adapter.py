@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+import base64
 import math
+import pickle
 from collections.abc import Mapping, Sequence
 from copy import deepcopy
 from dataclasses import dataclass
@@ -203,6 +205,7 @@ class PreparedRandomForestModel:
     tree_max_depths: tuple[int, ...]
     configuration: RandomForestConfiguration
     metadata: Mapping[str, object]
+    serialized_estimator: bytes | None
 
     def __init__(
         self,
@@ -216,11 +219,16 @@ class PreparedRandomForestModel:
         tree_max_depths: Sequence[int],
         configuration: RandomForestConfiguration,
         metadata: Mapping[str, object] = MappingProxyType({}),
+        serialized_estimator: bytes | None = None,
     ) -> None:
         if not isinstance(configuration, RandomForestConfiguration):
             raise TypeError("configuration must be RandomForestConfiguration")
         if not isinstance(metadata, Mapping):
             raise TypeError("metadata must be a mapping")
+        if serialized_estimator is not None and not isinstance(
+            serialized_estimator, bytes
+        ):
+            raise TypeError("serialized_estimator must be bytes or None")
         names = tuple(feature_names)
         labels = tuple(deepcopy(tuple(class_labels)))
         importances = tuple(float(value) for value in feature_importances)
@@ -253,6 +261,11 @@ class PreparedRandomForestModel:
         object.__setattr__(self, "tree_max_depths", depths)
         object.__setattr__(self, "configuration", configuration)
         object.__setattr__(self, "metadata", _freeze_mapping(metadata))
+        object.__setattr__(
+            self,
+            "serialized_estimator",
+            None if serialized_estimator is None else bytes(serialized_estimator),
+        )
 
     def to_dict(self) -> dict[str, object]:
         """Return a deterministic, fully detached standard representation."""
@@ -267,6 +280,11 @@ class PreparedRandomForestModel:
             "tree_max_depths": list(self.tree_max_depths),
             "configuration": self.configuration.to_dict(),
             "metadata": _thaw(self.metadata),
+            "serialized_estimator": (
+                None
+                if self.serialized_estimator is None
+                else base64.b64encode(self.serialized_estimator).decode("ascii")
+            ),
         }
 
 
@@ -327,4 +345,5 @@ class RandomForestAdapter:
             ),
             configuration=self.configuration,
             metadata=prepared_input.metadata,
+            serialized_estimator=pickle.dumps(estimator, protocol=5),
         )
