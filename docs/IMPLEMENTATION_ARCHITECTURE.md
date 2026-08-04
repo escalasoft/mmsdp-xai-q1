@@ -168,6 +168,38 @@ The following inventory defines planned module responsibilities only. No module 
 
 ## 8. Module Interfaces
 
+### Scientific Dataset Construction phase
+
+Sprint 10.8.2.1 defines a project-independent construction architecture under
+`src/dataset/`. Its deterministic stage order is repository acquisition, raw
+artifact extraction, target-evidence construction, target assignment, feature
+construction, feature-provenance audit, leakage validation, dataset assembly,
+manifest generation, and validation reporting.
+
+Target evidence is audit provenance only, target assignment is a separate
+contract validated against the official `ScientificTargetContract`, and
+predictors are constructed through a label-blind protected context. Feature
+Construction receives only the immutable ordered observation identifiers
+derived from target assignments for alignment; target fields, labels,
+rationales, evidence identifiers, target-evidence records, and target-evidence
+artifact references are structurally unavailable. Feature eligibility is
+determined from the scientific provenance inventory and temporal-availability
+controls, not from feature names alone.
+
+Repository snapshots store a resolved complete lowercase Git commit identifier
+(40-character SHA-1 or 64-character SHA-256), never an unresolved branch or tag;
+a future acquisition adapter may resolve a tag before constructing the snapshot.
+Target-evidence artifacts remain source-artifact provenance for reproducibility
+and target audit, but cannot back feature provenance or values. Inventory-level
+metadata is descriptive and excluded from inventory identity, while metadata on
+individual feature-provenance records remains digest-bearing when it records
+temporal, fit-scope, linkage, or other scientific controls.
+
+Each stage has one replaceable, project-independent handler. Qt is the first
+planned future project-specific implementation of those handlers; this phase
+does not claim that Qt acquisition, extraction, target construction, feature
+generation, or dataset assembly has been implemented by this hardening sprint.
+
 Interfaces must be stable contracts between packages, not library-specific implementations.
 
 | Interface | Provider | Consumers | Contract Summary | Status |
@@ -489,4 +521,3 @@ sequenceDiagram
     Viz->>U: Record figure metadata
     Exp->>U: Write run manifest and environment record
 ```
-
