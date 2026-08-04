@@ -428,6 +428,26 @@ class EndToEndExperimentResult:
 class EndToEndExperimentPipeline:
     pipeline_name = "end-to-end-experiment"
 
+    @staticmethod
+    def experiment_fingerprint(
+        dataset: AdaptedDataset,
+        configuration: EndToEndExperimentConfiguration,
+    ) -> str:
+        """Return the public deterministic fingerprint for scientific inputs."""
+        if not isinstance(dataset, AdaptedDataset):
+            raise TypeError("dataset must be an AdaptedDataset")
+        if not isinstance(configuration, EndToEndExperimentConfiguration):
+            raise TypeError("configuration must be an EndToEndExperimentConfiguration")
+        return _fingerprint(
+            {
+                "dataset_name": dataset.dataset_name,
+                "dataset_version": dataset.dataset_version,
+                "feature_names": dataset.feature_names,
+                "target_name": dataset.target_name,
+                **configuration.to_dict(),
+            }
+        )
+
     def __init__(
         self,
         configuration: EndToEndExperimentConfiguration,
@@ -490,14 +510,8 @@ class EndToEndExperimentPipeline:
             self._counterfactual_registry,
             "minimal-single-feature-linear-boundary",
         )
-        experiment_fingerprint = _fingerprint(
-            {
-                "dataset_name": dataset.dataset_name,
-                "dataset_version": dataset.dataset_version,
-                "feature_names": dataset.feature_names,
-                "target_name": dataset.target_name,
-                **self.configuration.to_dict(),
-            }
+        experiment_fingerprint = self.experiment_fingerprint(
+            dataset, self.configuration
         )
         executed = ["global"]
         if any(item.status == "successful" for item in local_outcomes):
