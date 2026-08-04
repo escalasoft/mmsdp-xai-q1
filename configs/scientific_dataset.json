@@ -1,0 +1,61 @@
+{
+  "identity": {
+    "dataset_name": "generic-commit-dataset-template",
+    "dataset_version": "template-1.0.0",
+    "schema_version": "1.0.0",
+    "builder_version": "builder-contract-1.0.0",
+    "source_repository_name": "repository-name-required-at-instantiation",
+    "source_repository_url": "repository-url-required-at-instantiation",
+    "source_repository_revision": "immutable-revision-required-at-instantiation",
+    "observation_unit": "commit",
+    "metadata": {"artifact_kind": "project-independent-template", "runtime_identity_fields": false}
+  },
+  "observation": {
+    "identifier_field": "commit_hash",
+    "identifier_role": "identifier",
+    "identifier_unique": true,
+    "identifier_non_empty": true,
+    "timestamp_field": "commit_timestamp",
+    "target_field": "is_defect_prone",
+    "metadata": {"cardinality": "one-row-per-commit"}
+  },
+  "target": {
+    "field_name": "is_defect_prone",
+    "target_type": "binary",
+    "negative_label": 0,
+    "positive_label": 1,
+    "positive_semantics": "defect-prone commit",
+    "negative_semantics": "non-defect-prone commit",
+    "derivation_policy": "Target construction is separate from feature construction; linking evidence is label provenance and is never automatically reused as a feature.",
+    "allowed_source_roles": ["provenance", "metadata"],
+    "prohibited_feature_reuse": true,
+    "metadata": {"causal_claim": false, "bug_fix_is_not_defect_induction": true}
+  },
+  "timestamp": {
+    "field_name": "commit_timestamp",
+    "timezone_policy": "Normalize an authoritative source timestamp to UTC while retaining source offset in provenance.",
+    "ordering_policy": "chronological ascending order",
+    "missing_allowed": false,
+    "duplicate_timestamp_policy": "allow only with deterministic secondary ordering by observation identifier",
+    "metadata": {"secondary_order_field": "commit_hash"}
+  },
+  "required_modalities": ["code", "process", "text"],
+  "optional_modalities": ["ast", "cfg", "call-graph", "image"],
+  "features": [
+    {"feature_name":"lines_added","modality":"code","source_artifact":"commit-diff","source_fields":["added_lines"],"temporal_scope":"commit-current","availability_time":"at commit creation","derivation_summary":"Count added source lines in the current commit.","uses_target":false,"uses_issue_linking_evidence":false,"uses_future_information":false,"uses_post_event_information":false,"computed_using_full_dataset":false,"leakage_risk":"low","disposition":"permitted","rationale":"Current-commit code change magnitude is observable at prediction time.","allowed_in_complete_scenario":true,"allowed_in_leakage_controlled_scenario":true,"metadata":{"aggregation_window":"current commit","fit_scope":"not-applicable"}},
+    {"feature_name":"prior_commit_count","modality":"process","source_artifact":"repository-history","source_fields":["prior_commits"],"temporal_scope":"history-before-commit","availability_time":"strictly before current commit","derivation_summary":"Count commits preceding the observation.","uses_target":false,"uses_issue_linking_evidence":false,"uses_future_information":false,"uses_post_event_information":false,"computed_using_full_dataset":false,"leakage_risk":"low","disposition":"permitted","rationale":"Uses only history strictly before the current commit and is independent of target construction.","allowed_in_complete_scenario":true,"allowed_in_leakage_controlled_scenario":true,"metadata":{"aggregation_window":"repository history before commit","fit_scope":"not-applicable"}},
+    {"feature_name":"message_embedding","modality":"text","source_artifact":"commit-message","source_fields":["commit_message"],"temporal_scope":"commit-current","availability_time":"at commit creation","derivation_summary":"Transform commit-time message text using a training-fitted representation.","uses_target":false,"uses_issue_linking_evidence":false,"uses_future_information":false,"uses_post_event_information":false,"computed_using_full_dataset":false,"leakage_risk":"medium","disposition":"review-required","rationale":"Text exists at commit time, but vocabulary or embedding fit scope and intentionally engineered target-linking tokens require review.","allowed_in_complete_scenario":true,"allowed_in_leakage_controlled_scenario":false,"metadata":{"fit_scope":"training observations only","target_linking_token_policy":"audit-required"}},
+    {"feature_name":"prior_issue_resolution_rate","modality":"process","source_artifact":"historical-issue-records","source_fields":["resolved_before_commit","issues_before_commit"],"temporal_scope":"history-before-commit","availability_time":"strictly before current commit","derivation_summary":"Rate calculated from issue records closed before the observation.","uses_target":false,"uses_issue_linking_evidence":true,"uses_future_information":false,"uses_post_event_information":false,"computed_using_full_dataset":false,"leakage_risk":"review-required","disposition":"review-required","rationale":"Historical issue-derived process measure retained as a sensitivity candidate.","allowed_in_complete_scenario":true,"allowed_in_leakage_controlled_scenario":false,"metadata":{"temporal_cutoff_policy":"strictly-before-observation","target_independence":true,"current_target_excluded":true,"future_links_excluded":true,"linkage_policy_version":"1.0.0"}},
+    {"feature_name":"bug_confidence","modality":"process","source_artifact":"label-construction","source_fields":["label_evidence"],"temporal_scope":"label-derived","availability_time":"after target derivation","derivation_summary":"Confidence assigned while constructing the target.","uses_target":true,"uses_issue_linking_evidence":true,"uses_future_information":false,"uses_post_event_information":false,"computed_using_full_dataset":false,"leakage_risk":"prohibited","disposition":"prohibited","rationale":"Target-linking confidence is label provenance, not a predictor.","allowed_in_complete_scenario":false,"allowed_in_leakage_controlled_scenario":false,"metadata":{}},
+    {"feature_name":"msg_has_bug_kw","modality":"text","source_artifact":"target-linking-text","source_fields":["commit_message"],"temporal_scope":"label-derived","availability_time":"during target linking","derivation_summary":"Engineered bug-keyword indicator used in target linking.","uses_target":true,"uses_issue_linking_evidence":true,"uses_future_information":false,"uses_post_event_information":false,"computed_using_full_dataset":false,"leakage_risk":"prohibited","disposition":"prohibited","rationale":"An intentionally engineered target-linking keyword proxy is prohibited.","allowed_in_complete_scenario":false,"allowed_in_leakage_controlled_scenario":false,"metadata":{}},
+    {"feature_name":"future_bug_count","modality":"process","source_artifact":"future-history","source_fields":["future_bug_links"],"temporal_scope":"future-derived","availability_time":"after current commit","derivation_summary":"Count future bug links.","uses_target":false,"uses_issue_linking_evidence":true,"uses_future_information":true,"uses_post_event_information":false,"computed_using_full_dataset":false,"leakage_risk":"prohibited","disposition":"prohibited","rationale":"Future information is unavailable at prediction time.","allowed_in_complete_scenario":false,"allowed_in_leakage_controlled_scenario":false,"metadata":{}},
+    {"feature_name":"post_release_defect_count","modality":"process","source_artifact":"post-release-observations","source_fields":["defects_after_release"],"temporal_scope":"post-event","availability_time":"after release","derivation_summary":"Count defects observed after release.","uses_target":false,"uses_issue_linking_evidence":true,"uses_future_information":false,"uses_post_event_information":true,"computed_using_full_dataset":false,"leakage_risk":"prohibited","disposition":"prohibited","rationale":"Post-event evidence is unavailable at commit prediction time.","allowed_in_complete_scenario":false,"allowed_in_leakage_controlled_scenario":false,"metadata":{}},
+    {"feature_name":"global_message_frequency","modality":"text","source_artifact":"all-dataset-text","source_fields":["commit_message"],"temporal_scope":"unknown","availability_time":"after complete dataset assembly","derivation_summary":"Frequency fitted over every observation.","uses_target":false,"uses_issue_linking_evidence":false,"uses_future_information":false,"uses_post_event_information":false,"computed_using_full_dataset":true,"leakage_risk":"prohibited","disposition":"prohibited","rationale":"A full-dataset fitted transformation contaminates training with future/test observations.","allowed_in_complete_scenario":false,"allowed_in_leakage_controlled_scenario":false,"metadata":{"fit_scope":"full dataset - prohibited"}}
+  ],
+  "prohibited_feature_name_patterns": ["(^|_)(bug_confidence)($|_)", "(^|_)(msg_has_bug_kw|has_bug_keyword|contains_bug_keyword|contains_fix_keyword)($|_)", "(^|_)(issue_link_indicator|bug_link_count)($|_)", "(^|_)(future_bug_count|future_fix_count|post_release_defect_count)($|_)", "(^|_)(label_confidence|target_probability|is_bug|is_buggy)($|_)"],
+  "review_required_feature_name_patterns": ["(^|_)(issue|bug|fix)($|_)", "(^|_)(embedding|vocabulary|tfidf)($|_)"],
+  "leakage_policy_version": "1.0.0",
+  "manifest_schema_version": "1.0.0",
+  "minimum_feature_count": 3,
+  "metadata": {"pattern_semantics":"Lowercase feature names are searched using Python regular expressions.","scenario_policy":{"complete":"Only explicitly enabled candidate predictors.","leakage_controlled":"Explicitly enabled permitted predictors; excludes prohibited and review-required features."},"preprocessing_fit_policy":"Learned transformations fit on training observations only."}
+}

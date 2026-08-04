@@ -4,6 +4,22 @@ Version: 1.0
 
 Primary source of truth: `docs/PROJECT_CONTEXT.md` Version 2.0.
 
+## Sprint 10.8.1 scientific dataset contract traceability
+
+The rows below refine only dataset-contract-related concerns. `addressed-by-specification` means a design control now exists; it does not mean that reconstruction or empirical validation is complete. Implementation and experimental evidence remain separate.
+
+| Reviewer concern | Specification-level response | Implementation evidence required | Experimental evidence required | Responsible sprint | Current status |
+| --- | --- | --- | --- | --- | --- |
+| Target leakage and label-derived predictors | Target construction is separate; target/link evidence and proxies are prohibited as predictors. | Feature inventory, linkage audit, scenario validation, and model-input manifest. | Leakage-controlled comparison and suspicious-feature ablations. | 10.8.1 specification; reconstruction sprint pending | addressed-by-specification; implementation-pending; experiment-pending |
+| `bug_confidence` | Canonical prohibited-name policy and prohibited provenance example. | Demonstrate absence from every fitted matrix and retain it only as label provenance if needed. | Ablation/comparison if any prior result used it. | 10.8.1 specification; reconstruction sprint pending | addressed-by-specification; implementation-pending; experiment-pending |
+| Bug/fix keyword features (`msg_has_bug_kw`, `has_bug_keyword`, variants) | Engineered target-linking keyword indicators are prohibited; raw text is assessed separately. | Token/feature lineage audit and verified exclusion of engineered linking indicators. | Text scenario/ablation evidence under leakage control. | 10.8.1 specification; reconstruction sprint pending | addressed-by-specification; implementation-pending; experiment-pending |
+| Temporal validation | One authoritative timestamp, chronological ascending order, deterministic identifier tie-break, and no future/post-event features. | Dataset ordering report and chronological split manifest. | Temporally valid evaluation; no random split as replacement. | 10.8.1 specification; dataset/evaluation sprints pending | addressed-by-specification; implementation-pending; experiment-pending |
+| Train/test preprocessing separation | Learned preprocessing, vocabularies, embeddings, imputers, scalers, and selectors are training-fit only. | Stored fit-scope manifest and tests proving transform-only validation/test handling. | Runs generated exclusively from compliant artifacts. | 10.8.1 specification; preprocessing evidence sprint pending | addressed-by-specification; implementation-pending; experiment-pending |
+| Reproducibility of dataset construction | Deterministic identity, versions, manifest, canonical JSON, and SHA-256 digest are required. | Builder configuration, immutable source revision, artifact checksums, rerun equivalence, validation report. | Independent rerun or reproducibility audit for reported experiments. | 10.8.1 specification; reconstruction sprint pending | addressed-by-specification; implementation-pending; experiment-pending |
+| Feature provenance | Every candidate, including excluded fields, requires source, timing, derivation, fit scope, leakage and scenario disposition. | Completed project-specific feature dictionary and source-to-feature lineage. | Feature/modality ablations and explanation traceability for accepted models. | 10.8.1 specification; feature sprint pending | addressed-by-specification; implementation-pending; experiment-pending |
+| Calibration isolation | Dataset contract excludes targets/proxies and test-fitted transformations; calibration remains a separate downstream stage. | Validation-only calibrator fit manifest and no test access during selection. | Pre/post Brier Score and ECE on held-out chronological test data. | 10.8.1 specification; calibration sprint evidence pending | addressed-by-specification; implementation-pending; experiment-pending |
+| Experiment reproducibility | Dataset digest and manifest become immutable experiment inputs. | Experiment manifests linking configuration, code, environment, dataset digest, seeds, and artifacts. | Repeated execution with matching outputs within declared determinism/tolerance. | 10.8.1 specification; experiment evidence sprint pending | addressed-by-specification; implementation-pending; experiment-pending |
+
 Secondary quality-improvement source: `reference/reviewer_feedback/Respuesta a los revisores.docx`.
 
 Supporting architecture source: `docs/SYSTEM_ARCHITECTURE.md`.
