@@ -206,3 +206,14 @@ The following controls are adopted or adapted as project-level quality requireme
 - Follow IEEE-specific abbreviation placement rules only when submitting to IEEE Access or a journal with equivalent instructions.
 - Use Paperpal Preflight or equivalent certificate only if required or beneficial for the target submission.
 - Remove IEEE template placeholder text, placeholder DOI, corresponding-author placeholder text, and funding footnote placeholders before IEEE Access submission.
+
+## Qt source reconstruction status
+
+| Concern | Implementation status | Reviewer-visible boundary |
+|---|---|---|
+| Dataset source reconstruction | acquisition-implemented; commit-extraction-implemented; diff-extraction-implemented | Contracts reconstruct immutable repository, commit, and file-change identities; no claim is made that the real Qt dataset or diffs have been acquired. |
+| File-change provenance | diff-extraction-implemented | Each raw file change retains commit, path, status, blob, mode, binary, line-count, and rename provenance with a canonical digest. |
+| Merge/root reproducibility | diff-extraction-implemented | Root commits use the empty tree; merge commits use the first parent; commit and parent order come from the validated commit artifact. |
+| Leakage prevention | issue-extraction-pending; target-construction-pending; feature-construction-pending | Raw diff extraction exposes no approved predictor or target construction API; empirical leakage validation remains pending. |
+| Temporal reconstruction prerequisites | acquisition-implemented; commit-extraction-implemented; diff-extraction-implemented | Stable source identities and ordered raw diffs are prerequisites only; temporal splitting remains experiment-pending. |
+| External validity | experiment-pending | No empirical result or generalization claim is made. |

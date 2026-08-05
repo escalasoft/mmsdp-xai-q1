@@ -531,3 +531,19 @@ sequenceDiagram
     Viz->>U: Record figure metadata
     Exp->>U: Write run manifest and environment record
 ```
+
+## Reproducible Qt diff extraction
+
+Qt diff extraction consumes an immutable `ScientificRepositorySnapshot` and its
+validated deterministic commit artifact. It emits exactly one commit-diff record
+per commit, in commit-artifact order, containing deterministically ordered raw
+file-change records. Root commits are compared with Git's empty-tree object;
+non-root commits, including merges, are compared with their first parent. Rename
+detection uses Git-native detection at a fixed 50% similarity threshold.
+
+Paths are normalized repository-relative POSIX paths. Binary changes retain file,
+mode, blob, status, and rename metadata, while unavailable line counts remain
+null rather than being fabricated as zero. The artifact record count is the total
+number of file-change records. This stage is raw artifact extraction, not feature
+engineering: it produces no issue links, labels, targets, datasets, models, or
+experiments.

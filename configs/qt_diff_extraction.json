@@ -1,0 +1,18 @@
+{
+  "repository_name": "qtbase",
+  "canonical_repository_url": "https://code.qt.io/qt/qtbase.git",
+  "repository_revision": "revision-required-before-execution",
+  "commit_artifact_digest": "commit-artifact-digest-required-before-execution",
+  "extraction_policy_version": "1.0.0",
+  "ordering_policy": "commit-artifact-order",
+  "merge_commit_policy": "first-parent-baseline",
+  "root_commit_policy": "empty-tree-baseline",
+  "rename_detection_policy": "git-native-renames",
+  "binary_file_policy": "metadata-only",
+  "path_normalization_policy": "repository-relative-posix",
+  "allowed_hash_algorithms": ["sha1", "sha256"],
+  "metadata": {
+    "artifact_record_count_policy": "file-change-records",
+    "rename_similarity_threshold_percent": 50
+  }
+}
