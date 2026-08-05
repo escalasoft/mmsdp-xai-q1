@@ -1,0 +1,6 @@
+{
+  "schema_version": "1.0.0",
+  "artifact_repository_relative_path": "artifacts/raw/qtbase-commits.json",
+  "ordering_policy": "topological-oldest-first-v1",
+  "metadata": {}
+}
