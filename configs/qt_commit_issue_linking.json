@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0.0",
+  "commit_artifact_digest": "commit-artifact-sha256-required-before-execution",
+  "issue_artifact_digest": "issue-artifact-sha256-required-before-execution",
+  "artifact_repository_relative_path": "artifacts/derived/qtbase-commit-issue-links.json",
+  "ordering_policy": "commit-revision-issue-identifier-reference-type-location",
+  "duplicate_policy": "remove-identical-explicit-references",
+  "matching_policy": "explicit-qtbug-identifiers-only",
+  "missing_issue_policy": "omit-unresolved-explicit-references"
+}

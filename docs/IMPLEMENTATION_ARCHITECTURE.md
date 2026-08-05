@@ -579,3 +579,20 @@ predictors. Commit--issue linking, target-evidence construction, and target
 assignment remain pending. This stage performs no feature engineering, dataset
 assembly, modeling, or experiments, and it makes no claim that a real Qt issue
 source has already been resolved or extracted.
+
+## Reproducible Qt commit--issue linking
+
+Sprint 10.8.2.7 consumes only digest-verified commit and issue artifacts already
+produced by the extraction layer. The `QtCommitIssueLinker` scans commit-message
+lines for exact `QTBUG-<digits>` identifiers, records the controlled reference
+form (`plain`, `fixes`, `task-number`, or `pick-to`) and source line, and retains
+the reference only when the exact issue identifier exists in the issue artifact.
+Identical references are removed and the result is sorted by commit revision,
+issue identifier, reference type, and reference location before canonical JSON
+serialization and SHA-256 identification.
+
+This artifact is provenance only: `commit_revision` points to
+`issue_identifier`. It contains no defect interpretation, label, target,
+feature, metric, aggregation, split, model, calibration, or experiment API.
+Semantic similarity, fuzzy matching, and inferred relationships are excluded;
+target-evidence construction and target assignment remain later stages.
