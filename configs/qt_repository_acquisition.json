@@ -1,0 +1,13 @@
+{
+  "repository_name": "qtbase",
+  "canonical_repository_url": "https://code.qt.io/qt/qtbase.git",
+  "transport_repository_url": "https://code.qt.io/qt/qtbase.git",
+  "requested_reference": "revision-required-before-execution",
+  "default_branch": "dev",
+  "acquisition_policy_version": "1.0.0",
+  "allowed_hash_algorithms": ["sha1", "sha256"],
+  "metadata": {
+    "source_project": "Qt Base",
+    "execution_policy": "explicit-revision-required"
+  }
+}

@@ -187,18 +187,28 @@ determined from the scientific provenance inventory and temporal-availability
 controls, not from feature names alone.
 
 Repository snapshots store a resolved complete lowercase Git commit identifier
-(40-character SHA-1 or 64-character SHA-256), never an unresolved branch or tag;
-a future acquisition adapter may resolve a tag before constructing the snapshot.
+(40-character SHA-1 or 64-character SHA-256), never an unresolved branch or tag.
 Target-evidence artifacts remain source-artifact provenance for reproducibility
 and target audit, but cannot back feature provenance or values. Inventory-level
 metadata is descriptive and excluded from inventory identity, while metadata on
 individual feature-provenance records remains digest-bearing when it records
 temporal, fit-scope, linkage, or other scientific controls.
 
-Each stage has one replaceable, project-independent handler. Qt is the first
-planned future project-specific implementation of those handlers; this phase
-does not claim that Qt acquisition, extraction, target construction, feature
-generation, or dataset assembly has been implemented by this hardening sprint.
+Each stage has one replaceable, project-independent handler.
+
+### Qt Base repository acquisition adapter
+
+Qt Base is the first concrete project-specific repository adapter. Its
+scientific identity uses the official canonical repository URL
+`https://code.qt.io/qt/qtbase.git`. The adapter resolves a caller-supplied
+mutable branch or tag, or a supplied commit reference, to a full immutable Git
+commit identifier. The snapshot stores that resolved commit rather than the
+branch or unresolved tag. Repository identity and artifact digests exclude
+local paths, runtime timestamps, durations, and machine identity.
+
+Sprint 10.8.2.2 implements repository acquisition and snapshot validation only.
+It does not extract commits, diffs, files, issues, labels, targets, features, or
+datasets, and it does not run models or experiments.
 
 Interfaces must be stable contracts between packages, not library-specific implementations.
 
