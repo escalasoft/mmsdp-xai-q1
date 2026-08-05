@@ -565,3 +565,17 @@ observations, not normalized variables or approved predictors. It performs no
 feature engineering, semantic inference, issue linkage, target assignment,
 dataset assembly, temporal or developer measurement, complexity analysis, model
 preparation, or experimentation.
+
+## Reproducible Qt issue extraction
+
+Sprint 10.8.2.6 consumes one explicitly versioned local issue artifact whose
+canonical source identity, immutable revision, schema version, and SHA-256
+digest are supplied before execution. The adapter retains source-native issue
+types without assuming defect semantics and preserves issue text only as raw
+provenance for later target-evidence analysis.
+
+Raw issue records remain structurally separate from commits, labels, and
+predictors. Commit--issue linking, target-evidence construction, and target
+assignment remain pending. This stage performs no feature engineering, dataset
+assembly, modeling, or experiments, and it makes no claim that a real Qt issue
+source has already been resolved or extracted.

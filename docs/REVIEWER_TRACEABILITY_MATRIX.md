@@ -211,10 +211,13 @@ The following controls are adopted or adapted as project-level quality requireme
 
 | Concern | Implementation status | Reviewer-visible boundary |
 |---|---|---|
-| Dataset source reconstruction | acquisition-implemented; commit-extraction-implemented; diff-extraction-implemented; diff-statistics-extraction-implemented | Contracts reconstruct immutable repository, commit, file-change, and structural-statistics identities; no claim is made that the real Qt dataset or diffs have been acquired. |
+| Dataset source reconstruction | acquisition-implemented; commit-extraction-implemented; diff-extraction-implemented; diff-statistics-extraction-implemented; issue-extraction-adapter-implemented | Contracts reconstruct immutable repository, commit, file-change, structural-statistics, and versioned issue-artifact identities; the real Qt issue source remains unresolved and no claim is made that real Qt issues have been extracted. |
 | File-change provenance | diff-extraction-implemented; diff-statistics-extraction-implemented | Each raw file change retains commit, path, status, blob, mode, binary, line-count, and rename provenance with a canonical digest; structural statistics bind directly to that immutable artifact. |
 | Structural diff statistics | diff-statistics-extraction-implemented | Deterministic per-file and per-commit counts cover change kinds, binary indicators, insertions, deletions, and text churn without normalization, semantic inference, or feature construction. |
 | Merge/root reproducibility | diff-extraction-implemented | Root commits use the empty tree; merge commits use the first parent; commit and parent order come from the validated commit artifact. |
-| Leakage prevention | issue-extraction-pending; target-construction-pending; feature-construction-pending | Raw diff extraction exposes no approved predictor or target construction API; empirical leakage validation remains pending. |
+| Issue provenance | issue-extraction-adapter-implemented; real-Qt-issue-source-pending | The offline adapter preserves source-native issue type, text, status, and timestamps as raw provenance; production source identity, revision, project identifier, and schema remain explicit unresolved placeholders. |
+| Commit--issue linking | pending | No issue record is linked to a commit in this stage. |
+| Target evidence and assignment | target-evidence-pending; target-assignment-pending | Issue fields remain target provenance only; no defect semantics, confidence, or labels are derived. |
+| Leakage prevention | feature-construction-pending; dataset-assembly-pending; experiment-pending | Raw extraction exposes no approved predictor or target-construction API; feature construction, dataset assembly, empirical leakage validation, and experiments remain pending. |
 | Temporal reconstruction prerequisites | acquisition-implemented; commit-extraction-implemented; diff-extraction-implemented | Stable source identities and ordered raw diffs are prerequisites only; temporal splitting remains experiment-pending. |
 | External validity | experiment-pending | No empirical result or generalization claim is made. |

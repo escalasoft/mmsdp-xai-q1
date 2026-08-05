@@ -1,0 +1,16 @@
+{
+  "project_name": "qtbase",
+  "canonical_issue_source": "issue-source-required-before-execution",
+  "source_revision": "immutable-issue-source-revision-required-before-execution",
+  "source_artifact_digest": "issue-source-sha256-required-before-execution",
+  "project_identifier": "qtbase-project-identifier-required-before-execution",
+  "issue_schema_version": "issue-schema-version-required-before-execution",
+  "extraction_policy_version": "1.0.0",
+  "ordering_policy": "canonical-issue-identifier",
+  "timestamp_policy": "normalize-authoritative-timestamps-to-utc",
+  "identity_policy": "source-native-stable-identifier",
+  "duplicate_policy": "reject-conflicting-duplicates",
+  "unresolved_record_policy": "retain-with-explicit-missing-fields",
+  "allowed_input_formats": ["json", "jsonl"],
+  "metadata": {}
+}
