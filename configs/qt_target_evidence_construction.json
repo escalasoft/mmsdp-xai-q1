@@ -1,0 +1,16 @@
+{
+  "project_name": "qtbase",
+  "commit_artifact_digest": "commit-artifact-digest-required-before-execution",
+  "issue_artifact_digest": "issue-artifact-digest-required-before-execution",
+  "linking_artifact_digest": "linking-artifact-digest-required-before-execution",
+  "evidence_policy_version": "qt-target-evidence-policy-1.0.0",
+  "ordering_policy": "observation-evidence-identifier",
+  "issue_type_policy": "preserve-source-native-type",
+  "link_reference_policy": "explicit-link-provenance-only",
+  "temporal_policy": "source-timestamps-normalized-to-utc",
+  "unsupported_evidence_policy": "retain-as-non-supporting-audit-evidence",
+  "metadata": {
+    "artifact_status": "unresolved-input-identities",
+    "scientific_role": "target-provenance-only"
+  }
+}
