@@ -211,8 +211,9 @@ The following controls are adopted or adapted as project-level quality requireme
 
 | Concern | Implementation status | Reviewer-visible boundary |
 |---|---|---|
-| Dataset source reconstruction | acquisition-implemented; commit-extraction-implemented; diff-extraction-implemented | Contracts reconstruct immutable repository, commit, and file-change identities; no claim is made that the real Qt dataset or diffs have been acquired. |
-| File-change provenance | diff-extraction-implemented | Each raw file change retains commit, path, status, blob, mode, binary, line-count, and rename provenance with a canonical digest. |
+| Dataset source reconstruction | acquisition-implemented; commit-extraction-implemented; diff-extraction-implemented; diff-statistics-extraction-implemented | Contracts reconstruct immutable repository, commit, file-change, and structural-statistics identities; no claim is made that the real Qt dataset or diffs have been acquired. |
+| File-change provenance | diff-extraction-implemented; diff-statistics-extraction-implemented | Each raw file change retains commit, path, status, blob, mode, binary, line-count, and rename provenance with a canonical digest; structural statistics bind directly to that immutable artifact. |
+| Structural diff statistics | diff-statistics-extraction-implemented | Deterministic per-file and per-commit counts cover change kinds, binary indicators, insertions, deletions, and text churn without normalization, semantic inference, or feature construction. |
 | Merge/root reproducibility | diff-extraction-implemented | Root commits use the empty tree; merge commits use the first parent; commit and parent order come from the validated commit artifact. |
 | Leakage prevention | issue-extraction-pending; target-construction-pending; feature-construction-pending | Raw diff extraction exposes no approved predictor or target construction API; empirical leakage validation remains pending. |
 | Temporal reconstruction prerequisites | acquisition-implemented; commit-extraction-implemented; diff-extraction-implemented | Stable source identities and ordered raw diffs are prerequisites only; temporal splitting remains experiment-pending. |

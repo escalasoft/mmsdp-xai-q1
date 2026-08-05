@@ -547,3 +547,21 @@ null rather than being fabricated as zero. The artifact record count is the tota
 number of file-change records. This stage is raw artifact extraction, not feature
 engineering: it produces no issue links, labels, targets, datasets, models, or
 experiments.
+
+## Reproducible Qt diff statistics extraction
+
+Sprint 10.8.2.5 consumes only the immutable, digest-identified Qt diff artifact
+from Sprint 10.8.2.4. It emits immutable per-file and per-commit structural
+statistics in the upstream commit and canonical file order. The contract records
+change-kind counts, text and binary file counts, an explicit binary indicator,
+insertions, deletions, and total text churn. Binary line counts remain null at
+file level and contribute no fabricated lines to commit totals.
+
+The output identity binds the source diff-artifact digest, immutable repository
+revision, policy version, controlled policies, and canonical records. It excludes
+timestamps, host information, runtime identifiers, machine paths, and unordered
+values. This adapter remains in `extraction/`: its counts are raw structural
+observations, not normalized variables or approved predictors. It performs no
+feature engineering, semantic inference, issue linkage, target assignment,
+dataset assembly, temporal or developer measurement, complexity analysis, model
+preparation, or experimentation.

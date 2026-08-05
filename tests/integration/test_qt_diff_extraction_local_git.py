@@ -14,6 +14,10 @@ from extraction.qt_diff_extraction import (
     QtDiffExtractionSpecification,
     QtDiffExtractor,
 )
+from extraction.qt_diff_statistics_extraction import (
+    QtDiffStatisticsExtractor,
+    QtDiffStatisticsSpecification,
+)
 from extraction.qt_repository_acquisition import (
     QtRepositoryAcquirer,
     QtRepositoryAcquisitionSpecification,
@@ -65,6 +69,15 @@ def extracted_inputs(tmp_path: Path):
     git(source, "mv", "root.txt", "renamed.txt")
     git(source, "commit", "-q", "-m", "rename")
     renamed = git(source, "rev-parse", "HEAD")
+    (source / "copied.txt").write_text(
+        (source / "renamed.txt").read_text(encoding="utf-8"), encoding="utf-8"
+    )
+    (source / "renamed.txt").write_text(
+        "one\nchanged\nthree\nsource changed\n", encoding="utf-8"
+    )
+    git(source, "add", ".")
+    git(source, "commit", "-q", "-m", "copy")
+    copied = git(source, "rev-parse", "HEAD")
     git(source, "commit", "-q", "--allow-empty", "-m", "empty")
     empty = git(source, "rev-parse", "HEAD")
     git(source, "checkout", "-q", "-b", "side", modified)
@@ -109,6 +122,7 @@ def extracted_inputs(tmp_path: Path):
             "root": root,
             "modified": modified,
             "renamed": renamed,
+            "copied": copied,
             "empty": empty,
             "merge": merge,
         },
@@ -171,3 +185,33 @@ def test_non_git_and_identity_mismatch_are_rejected(
     )
     with pytest.raises(ValueError, match="do not agree"):
         QtDiffExtractor().extract(wrong, repository, snapshot, commits)
+
+
+def test_offline_diff_statistics_are_structural_and_repeatable(
+    extracted_inputs,
+) -> None:
+    repository, snapshot, commits, diff_spec, ids = extracted_inputs
+    diff = QtDiffExtractor().extract(diff_spec, repository, snapshot, commits)
+    spec = QtDiffStatisticsSpecification(
+        repository_name="qtbase",
+        canonical_repository_url=CANONICAL,
+        repository_revision=snapshot.repository_revision,
+        diff_artifact_digest=diff.extraction_artifact.content_digest,
+        extraction_policy_version="1.0.0",
+    )
+    one = QtDiffStatisticsExtractor().extract(spec, diff)
+    two = QtDiffStatisticsExtractor().extract(spec, diff)
+
+    assert one == two
+    by_id = {item.commit_identifier: item for item in one.commit_statistics}
+    assert by_id[ids["empty"]].files_changed == 0
+    assert by_id[ids["renamed"]].files_renamed == 1
+    assert by_id[ids["copied"]].files_copied == 1
+    modified = by_id[ids["modified"]]
+    assert modified.files_removed == 1
+    assert modified.binary_files == 1 and modified.has_binary_files
+    assert modified.total_churn == modified.insertions + modified.deletions
+    assert tuple(item.path for item in modified.file_statistics) == tuple(
+        sorted(item.path for item in modified.file_statistics)
+    )
+    assert str(repository) not in repr(one) + str(one.to_dict())
