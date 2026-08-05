@@ -596,3 +596,21 @@ This artifact is provenance only: `commit_revision` points to
 feature, metric, aggregation, split, model, calibration, or experiment API.
 Semantic similarity, fuzzy matching, and inferred relationships are excluded;
 target-evidence construction and target assignment remain later stages.
+
+## Reproducible Qt target-evidence construction
+
+Sprint 10.8.2.8 consumes only the validated Qt commit, issue, and explicit
+commit--issue linking artifacts. It constructs immutable, digest-identified
+`ScientificTargetEvidenceRecord` values in canonical observation/evidence order.
+An explicit link proves reference provenance, not defect induction. The
+source-native issue type is preserved. A linked source-native Bug identifies
+relevant target provenance only; by itself it does not support the positive
+defect-inducing label. In particular, a commit that fixes a bug is not thereby
+identified as the commit that introduced it. Identification of the inducing
+commit remains pending and requires a separate target-assignment policy.
+
+Target evidence remains structurally unavailable to feature construction through
+the scientific builder pipeline's protected feature view. This stage produces no
+target assignment, feature, dataset, model, prediction, or experiment. Target
+assignment is a separate subsequent stage, and real Qt artifact identities remain
+unresolved until supplied through approved reproducible acquisition workflows.
