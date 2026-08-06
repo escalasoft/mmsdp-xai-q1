@@ -1,6 +1,6 @@
 """Contract tests for reproducible Qt diff extraction."""
 
-from dataclasses import FrozenInstanceError
+from dataclasses import FrozenInstanceError, replace
 
 import pytest
 
@@ -9,6 +9,7 @@ from extraction.qt_diff_extraction import (
     QtCommitDiffRecord,
     QtDiffExtractionSpecification,
     QtDiffExtractor,
+    QtDiffHunkRecord,
     QtFileChangeRecord,
 )
 
@@ -47,6 +48,33 @@ def file_record(**changes):
         "similarity_percent": None,
     }
     values.update(changes)
+    if "hunks" not in changes:
+        if values["is_binary"]:
+            values["hunks"] = ()
+        else:
+            old_start = 0 if values["deletions"] == 0 else 1
+            new_start = 0 if values["additions"] == 0 else 1
+            header = (
+                f"@@ -{old_start},{values['deletions']} "
+                f"+{new_start},{values['additions']} @@"
+            )
+            content = module._hunk_content(
+                values["commit_identifier"],
+                values["old_path"],
+                values["new_path"],
+                values["old_blob_identifier"],
+                values["new_blob_identifier"],
+                header,
+                old_start,
+                values["deletions"],
+                new_start,
+                values["additions"],
+                tuple(range(old_start, old_start + values["deletions"])),
+                tuple(range(new_start, new_start + values["additions"])),
+            )
+            values["hunks"] = (
+                QtDiffHunkRecord(*content.values(), module._digest(content)),
+            )
     return QtFileChangeRecord(**values)
 
 
@@ -72,6 +100,7 @@ def commit_record(changes):
 def test_exact_public_api_and_no_generic_git_api() -> None:
     assert module.__all__ == [
         "QtDiffExtractionSpecification",
+        "QtDiffHunkRecord",
         "QtFileChangeRecord",
         "QtCommitDiffRecord",
         "QtDiffExtractionResult",
@@ -82,6 +111,56 @@ def test_exact_public_api_and_no_generic_git_api() -> None:
         word in module.__all__
         for word in ("Issue", "Target", "Feature", "Dataset", "Model", "Experiment")
     )
+    prohibited = {"label", "target", "candidate", "inducing", "szz"}
+    for record_type in (QtDiffHunkRecord, QtFileChangeRecord, QtCommitDiffRecord):
+        names = set(record_type.__dataclass_fields__)
+        assert not any(term in name for name in names for term in prohibited)
+
+
+def test_hunk_contract_is_immutable_canonical_and_digest_identified() -> None:
+    hunk = file_record().hunks[0]
+    assert hunk.hunk_header == "@@ -1,1 +1,2 @@"
+    assert hunk.deleted_preimage_line_numbers == (1,)
+    assert hunk.added_line_numbers == (1, 2)
+    assert len(hunk.hunk_identifier) == 64
+    assert not hasattr(hunk, "__dict__")
+    with pytest.raises(FrozenInstanceError):
+        hunk.old_start = 2  # type: ignore[misc]
+    with pytest.raises(ValueError, match="identifier"):
+        replace(hunk, hunk_identifier="f" * 64)
+
+
+def test_zero_context_patch_parser_extracts_canonical_line_provenance() -> None:
+    patch = """diff --git a/a b/a
+index 3333333..4444444 100644
+--- a/a
++++ b/a
+@@ -2,2 +2,3 @@ optional function context
+-old two
+-old three
++new two
++new three
++new four
+"""
+    hunks = QtDiffExtractor._parse_hunks(patch, SHA1, "a", "a", "3" * 40, "4" * 40)
+    assert len(hunks) == 1
+    assert hunks[0].hunk_header == "@@ -2,2 +2,3 @@"
+    assert hunks[0].deleted_preimage_line_numbers == (2, 3)
+    assert hunks[0].added_line_numbers == (2, 3, 4)
+
+
+def test_hunk_parser_and_file_contract_reject_inconsistent_provenance() -> None:
+    with pytest.raises(RuntimeError, match="does not agree"):
+        QtDiffExtractor._parse_hunks(
+            "@@ -1,2 +1,1 @@\n-old\n+new\n",
+            SHA1,
+            "a",
+            "a",
+            "3" * 40,
+            "4" * 40,
+        )
+    with pytest.raises(ValueError, match="line provenance"):
+        file_record(hunks=())
 
 
 def test_specification_is_frozen_slotted_detached_and_deterministic() -> None:
