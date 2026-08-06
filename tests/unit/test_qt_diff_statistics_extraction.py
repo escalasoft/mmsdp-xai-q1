@@ -4,8 +4,9 @@ from dataclasses import FrozenInstanceError
 
 import pytest
 
+import extraction.qt_diff_extraction as diff_module
 import extraction.qt_diff_statistics_extraction as module
-from extraction.qt_diff_extraction import QtFileChangeRecord
+from extraction.qt_diff_extraction import QtDiffHunkRecord, QtFileChangeRecord
 from extraction.qt_diff_statistics_extraction import (
     QtDiffStatisticsExtractor,
     QtDiffStatisticsSpecification,
@@ -47,6 +48,32 @@ def change(kind="modified", path="b.txt", **changes):
         "similarity_percent": None,
     }
     values.update(changes)
+    if values["is_binary"]:
+        values["hunks"] = ()
+    else:
+        old_start = 0 if values["deletions"] == 0 else 1
+        new_start = 0 if values["additions"] == 0 else 1
+        header = (
+            f"@@ -{old_start},{values['deletions']} "
+            f"+{new_start},{values['additions']} @@"
+        )
+        content = diff_module._hunk_content(
+            values["commit_identifier"],
+            values["old_path"],
+            values["new_path"],
+            values["old_blob_identifier"],
+            values["new_blob_identifier"],
+            header,
+            old_start,
+            values["deletions"],
+            new_start,
+            values["additions"],
+            tuple(range(old_start, old_start + values["deletions"])),
+            tuple(range(new_start, new_start + values["additions"])),
+        )
+        values["hunks"] = (
+            QtDiffHunkRecord(*content.values(), diff_module._digest(content)),
+        )
     return QtFileChangeRecord(**values)
 
 

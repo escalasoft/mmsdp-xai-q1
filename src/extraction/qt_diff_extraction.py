@@ -22,6 +22,7 @@ from extraction.qt_commit_extraction import QtCommitExtractionResult
 
 __all__ = [
     "QtDiffExtractionSpecification",
+    "QtDiffHunkRecord",
     "QtFileChangeRecord",
     "QtCommitDiffRecord",
     "QtDiffExtractionResult",
@@ -51,6 +52,9 @@ _POLICIES = {
     "rename_detection_policy": "git-native-renames",
     "binary_file_policy": "metadata-only",
     "path_normalization_policy": "repository-relative-posix",
+    "hunk_context_policy": "zero-context",
+    "hunk_ordering_policy": "old-then-new-range",
+    "hunk_identifier_policy": "canonical-sha256",
 }
 _BANNED_KEYS = {
     "bug_confidence",
@@ -76,6 +80,7 @@ _OBJECT_REPR = re.compile(r"<[^>]*(?:object at )?0x[0-9a-fA-F]+>")
 _EVIDENCE = re.compile(
     r"git:(?:cat-file|config|diff|hash-object|rev-parse):completed\Z"
 )
+_HUNK_HEADER = re.compile(r"^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@(?: .*)?$")
 _EMPTY: Mapping[str, object] = MappingProxyType({})
 _RENAME_SIMILARITY = 50
 _TIMEOUT_SECONDS = 120
@@ -190,6 +195,17 @@ def _count(value: object, name: str, *, nullable: bool = False) -> int | None:
     return value
 
 
+def _line_numbers(value: object, name: str) -> tuple[int, ...]:
+    if not isinstance(value, (tuple, list)):
+        raise TypeError(f"{name} must be an ordered sequence")
+    numbers = tuple(value)
+    if any(type(item) is not int or item < 1 for item in numbers):
+        raise ValueError(f"{name} must contain positive integers")
+    if numbers != tuple(sorted(set(numbers))):
+        raise ValueError(f"{name} must be strictly increasing and unique")
+    return numbers
+
+
 @dataclass(frozen=True, slots=True)
 class QtDiffExtractionSpecification:
     repository_name: str
@@ -203,6 +219,9 @@ class QtDiffExtractionSpecification:
     rename_detection_policy: str = _POLICIES["rename_detection_policy"]
     binary_file_policy: str = _POLICIES["binary_file_policy"]
     path_normalization_policy: str = _POLICIES["path_normalization_policy"]
+    hunk_context_policy: str = _POLICIES["hunk_context_policy"]
+    hunk_ordering_policy: str = _POLICIES["hunk_ordering_policy"]
+    hunk_identifier_policy: str = _POLICIES["hunk_identifier_policy"]
     allowed_hash_algorithms: tuple[str, ...] = ("sha1", "sha256")
     metadata: Mapping[str, object] = field(default_factory=lambda: _EMPTY)
 
@@ -241,6 +260,141 @@ class QtDiffExtractionSpecification:
         return _thaw(self)  # type: ignore[return-value]
 
 
+def _hunk_content(
+    commit_identifier: str,
+    old_path: str | None,
+    new_path: str | None,
+    old_blob_identifier: str | None,
+    new_blob_identifier: str | None,
+    hunk_header: str,
+    old_start: int,
+    old_line_count: int,
+    new_start: int,
+    new_line_count: int,
+    deleted_preimage_line_numbers: tuple[int, ...],
+    added_line_numbers: tuple[int, ...],
+) -> dict[str, object]:
+    return {
+        "commit_identifier": commit_identifier,
+        "old_path": old_path,
+        "new_path": new_path,
+        "old_blob_identifier": old_blob_identifier,
+        "new_blob_identifier": new_blob_identifier,
+        "hunk_header": hunk_header,
+        "old_start": old_start,
+        "old_line_count": old_line_count,
+        "new_start": new_start,
+        "new_line_count": new_line_count,
+        "deleted_preimage_line_numbers": deleted_preimage_line_numbers,
+        "added_line_numbers": added_line_numbers,
+    }
+
+
+@dataclass(frozen=True, slots=True)
+class QtDiffHunkRecord:
+    """One immutable zero-context Git hunk with source-line provenance."""
+
+    commit_identifier: str
+    old_path: str | None
+    new_path: str | None
+    old_blob_identifier: str | None
+    new_blob_identifier: str | None
+    hunk_header: str
+    old_start: int
+    old_line_count: int
+    new_start: int
+    new_line_count: int
+    deleted_preimage_line_numbers: tuple[int, ...]
+    added_line_numbers: tuple[int, ...]
+    hunk_identifier: str
+
+    def __post_init__(self) -> None:
+        commit = _identifier(self.commit_identifier, "commit_identifier")
+        old_path = _path(self.old_path, "old_path", optional=True)
+        new_path = _path(self.new_path, "new_path", optional=True)
+        if old_path is None and new_path is None:
+            raise ValueError("a hunk requires an old or new path")
+        length = len(commit)
+        for name in ("old_blob_identifier", "new_blob_identifier"):
+            value = getattr(self, name)
+            if value is not None:
+                _identifier(value, name, length)
+        header = _text(self.hunk_header, "hunk_header")
+        for name in ("old_start", "old_line_count", "new_start", "new_line_count"):
+            _count(getattr(self, name), name)
+        match = _HUNK_HEADER.fullmatch(header)
+        if match is None:
+            raise ValueError("hunk_header must use canonical unified-diff syntax")
+        parsed = (
+            int(match[1]),
+            1 if match[2] is None else int(match[2]),
+            int(match[3]),
+            1 if match[4] is None else int(match[4]),
+        )
+        if parsed != (
+            self.old_start,
+            self.old_line_count,
+            self.new_start,
+            self.new_line_count,
+        ):
+            raise ValueError("hunk_header must agree with explicit hunk ranges")
+        if (self.old_line_count and not self.old_start) or (
+            self.new_line_count and not self.new_start
+        ):
+            raise ValueError("non-empty hunk ranges must start at a positive line")
+        deleted = _line_numbers(
+            self.deleted_preimage_line_numbers,
+            "deleted_preimage_line_numbers",
+        )
+        added = _line_numbers(self.added_line_numbers, "added_line_numbers")
+        if len(deleted) != self.old_line_count:
+            raise ValueError("deleted preimage lines must match old_line_count")
+        if len(added) != self.new_line_count:
+            raise ValueError("added lines must match new_line_count")
+        expected_deleted = tuple(
+            range(self.old_start, self.old_start + self.old_line_count)
+        )
+        expected_added = tuple(
+            range(self.new_start, self.new_start + self.new_line_count)
+        )
+        if deleted != expected_deleted or added != expected_added:
+            raise ValueError("hunk line numbers must agree with hunk ranges")
+        content = _hunk_content(
+            commit,
+            old_path,
+            new_path,
+            self.old_blob_identifier,
+            self.new_blob_identifier,
+            header,
+            self.old_start,
+            self.old_line_count,
+            self.new_start,
+            self.new_line_count,
+            deleted,
+            added,
+        )
+        if not _SHA256.fullmatch(self.hunk_identifier):
+            raise ValueError("hunk_identifier must be a lowercase SHA-256 digest")
+        if self.hunk_identifier != _digest(content):
+            raise ValueError("hunk_identifier must identify canonical hunk provenance")
+        object.__setattr__(self, "hunk_header", header)
+        object.__setattr__(self, "deleted_preimage_line_numbers", deleted)
+        object.__setattr__(self, "added_line_numbers", added)
+
+    def to_dict(self) -> dict[str, object]:
+        return _thaw(self)  # type: ignore[return-value]
+
+
+def _hunk_order(record: QtDiffHunkRecord) -> tuple[int, int, int, int, str]:
+    return (
+        record.old_start,
+        record.new_start,
+        record.old_line_count,
+        record.new_line_count,
+        record.hunk_identifier,
+    )
+
+
 @dataclass(frozen=True, slots=True)
 class QtFileChangeRecord:
     commit_identifier: str
@@ -256,6 +410,7 @@ class QtFileChangeRecord:
     old_file_mode: str | None
     new_file_mode: str | None
     similarity_percent: int | None
+    hunks: tuple[QtDiffHunkRecord, ...] = ()
     metadata: Mapping[str, object] = field(default_factory=lambda: _EMPTY)
 
     def __post_init__(self) -> None:
@@ -307,6 +462,31 @@ class QtFileChangeRecord:
                 )
         elif similarity is not None:
             raise ValueError("similarity_percent is only valid for rename/copy records")
+        hunks = tuple(self.hunks)
+        if any(not isinstance(hunk, QtDiffHunkRecord) for hunk in hunks):
+            raise TypeError("hunks must contain QtDiffHunkRecord values")
+        if self.is_binary and hunks:
+            raise ValueError("binary files cannot contain text hunks")
+        if hunks != tuple(sorted(hunks, key=_hunk_order)):
+            raise ValueError("hunks must use canonical deterministic ordering")
+        if len({hunk.hunk_identifier for hunk in hunks}) != len(hunks):
+            raise ValueError("duplicate hunk identifier")
+        for hunk in hunks:
+            if (
+                hunk.commit_identifier != commit
+                or hunk.old_path != old
+                or hunk.new_path != new
+                or hunk.old_blob_identifier != self.old_blob_identifier
+                or hunk.new_blob_identifier != self.new_blob_identifier
+            ):
+                raise ValueError("hunk provenance must agree with its file change")
+        if not self.is_binary and (
+            sum(len(hunk.added_line_numbers) for hunk in hunks) != additions
+            or sum(len(hunk.deleted_preimage_line_numbers) for hunk in hunks)
+            != deletions
+        ):
+            raise ValueError("hunk line provenance must agree with file line counts")
+        object.__setattr__(self, "hunks", hunks)
         object.__setattr__(self, "metadata", _freeze(self.metadata))
 
     def to_dict(self) -> dict[str, object]:
@@ -681,7 +861,11 @@ class QtDiffExtractor:
         ).strip()
         diffs = tuple(
             self._extract_commit(
-                reader, record.commit_id, record.parent_ids, empty_tree, algorithm
+                reader,
+                record.commit_id,
+                record.parent_ids,
+                empty_tree,
+                algorithm,
             )
             for record in commit_extraction_result.records
         )
@@ -757,8 +941,26 @@ class QtDiffExtractor:
         numstat = reader.run(
             "diff", [*common, "--numstat", "-z", baseline, commit, "--"]
         )
+        patch = reader.run(
+            "diff",
+            [
+                *common,
+                "--no-color",
+                "--no-indent-heuristic",
+                "--unified=0",
+                baseline,
+                commit,
+                "--",
+            ],
+        )
         stats = QtDiffExtractor._parse_numstat(numstat)
-        changes = QtDiffExtractor._parse_raw(raw, stats, commit, algorithm)
+        changes = QtDiffExtractor._parse_raw(
+            raw,
+            stats,
+            commit,
+            algorithm,
+            QtDiffExtractor._patch_groups(patch),
+        )
         changes = tuple(sorted(changes, key=_file_order))
         root, merge = not parents, len(parents) > 1
         digest = _digest(
@@ -816,12 +1018,14 @@ class QtDiffExtractor:
         ],
         commit: str,
         algorithm: str,
+        patch_groups: tuple[str, ...],
     ) -> tuple[QtFileChangeRecord, ...]:
         parts = value.split("\0")
         changes = []
         index = 0
         length = 40 if algorithm == "sha1" else 64
         zero = "0" * length
+        group_index = 0
         while index < len(parts) and parts[index]:
             header = parts[index]
             index += 1
@@ -855,6 +1059,24 @@ class QtDiffExtractor:
             stat = stats.get(key)
             if stat is None:
                 raise _QtDiffExtractionError("Git diff status and line counts disagree")
+            normalized_old_blob = None if old_blob == zero else old_blob
+            normalized_new_blob = None if new_blob == zero else new_blob
+            if group_index >= len(patch_groups):
+                raise _QtDiffExtractionError(
+                    "Git raw diff and patch file sections disagree"
+                )
+            patch_group = patch_groups[group_index]
+            group_index += 1
+            hunks: tuple[QtDiffHunkRecord, ...] = ()
+            if not stat[0]:
+                hunks = QtDiffExtractor._parse_hunks(
+                    patch_group,
+                    commit,
+                    old_path,
+                    new_path,
+                    normalized_old_blob,
+                    normalized_new_blob,
+                )
             changes.append(
                 QtFileChangeRecord(
                     commit,
@@ -865,11 +1087,111 @@ class QtDiffExtractor:
                     stat[0],
                     stat[1],
                     stat[2],
-                    None if old_blob == zero else old_blob,
-                    None if new_blob == zero else new_blob,
+                    normalized_old_blob,
+                    normalized_new_blob,
                     None if old_mode == "000000" else old_mode,
                     None if new_mode == "000000" else new_mode,
                     similarity,
+                    hunks,
                 )
             )
+        if group_index != len(patch_groups):
+            raise _QtDiffExtractionError("Git patch contains unmatched file sections")
         return tuple(changes)
+
+    @staticmethod
+    def _patch_groups(patch: str) -> tuple[str, ...]:
+        groups: list[list[str]] = []
+        for line in patch.splitlines():
+            if line.startswith("diff --git "):
+                groups.append([])
+            if not groups:
+                if line:
+                    raise _QtDiffExtractionError("Git patch preamble is malformed")
+                continue
+            groups[-1].append(line)
+        return tuple("\n".join(group) for group in groups)
+
+    @staticmethod
+    def _parse_hunks(
+        patch: str,
+        commit: str,
+        old_path: str | None,
+        new_path: str | None,
+        old_blob: str | None,
+        new_blob: str | None,
+    ) -> tuple[QtDiffHunkRecord, ...]:
+        lines = patch.splitlines()
+        hunks: list[QtDiffHunkRecord] = []
+        index = 0
+        while index < len(lines):
+            line = lines[index]
+            match = _HUNK_HEADER.fullmatch(line)
+            if match is None:
+                index += 1
+                continue
+            old_start = int(match[1])
+            old_count = 1 if match[2] is None else int(match[2])
+            new_start = int(match[3])
+            new_count = 1 if match[4] is None else int(match[4])
+            canonical_header = (
+                f"@@ -{old_start},{old_count} +{new_start},{new_count} @@"
+            )
+            index += 1
+            deleted_count = 0
+            added_count = 0
+            while index < len(lines) and not lines[index].startswith("@@ "):
+                body = lines[index]
+                if body.startswith("diff --git "):
+                    break
+                if body.startswith("-"):
+                    deleted_count += 1
+                elif body.startswith("+"):
+                    added_count += 1
+                elif body.startswith("\\ No newline at end of file"):
+                    pass
+                elif body.startswith(" "):
+                    raise _QtDiffExtractionError(
+                        "Git emitted context under the zero-context policy"
+                    )
+                else:
+                    raise _QtDiffExtractionError("Git patch hunk output is malformed")
+                index += 1
+            if (deleted_count, added_count) != (old_count, new_count):
+                raise _QtDiffExtractionError(
+                    "Git patch body does not agree with its hunk header"
+                )
+            deleted = tuple(range(old_start, old_start + old_count))
+            added = tuple(range(new_start, new_start + new_count))
+            content = _hunk_content(
+                commit,
+                old_path,
+                new_path,
+                old_blob,
+                new_blob,
+                canonical_header,
+                old_start,
+                old_count,
+                new_start,
+                new_count,
+                deleted,
+                added,
+            )
+            hunks.append(
+                QtDiffHunkRecord(
+                    commit,
+                    old_path,
+                    new_path,
+                    old_blob,
+                    new_blob,
+                    canonical_header,
+                    old_start,
+                    old_count,
+                    new_start,
+                    new_count,
+                    deleted,
+                    added,
+                    _digest(content),
+                )
+            )
+        return tuple(sorted(hunks, key=_hunk_order))

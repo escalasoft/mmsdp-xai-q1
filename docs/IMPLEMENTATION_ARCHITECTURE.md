@@ -548,6 +548,26 @@ number of file-change records. This stage is raw artifact extraction, not featur
 engineering: it produces no issue links, labels, targets, datasets, models, or
 experiments.
 
+Sprint 10.8.2.9 extends each text file-change record with immutable zero-context
+diff hunks. Every hunk retains its canonical unified-diff header, explicit old
+and new ranges, deleted preimage line numbers, added postimage line numbers, and
+a SHA-256 identifier derived from the commit, paths, blob identities, header,
+and ranges. Hunks use canonical old-then-new range ordering and their counts
+must agree with the file-level `numstat` values. Binary changes and unchanged
+rename/copy records contain an empty hunk tuple rather than invented line
+provenance.
+
+Raw, `numstat`, and patch views are extracted from the same immutable baseline
+and commit with the same fixed rename/copy policy. The patch uses zero context,
+disabled external diffs and text conversion, a controlled locale, and canonical
+coordinate-only headers so function-context text cannot alter scientific
+identity. Hunk content participates in the existing commit-record and artifact
+SHA-256 chain. This sprint supplies source-line provenance only: it performs no
+SZZ analysis, defect-inducing inference, candidate construction, target
+assignment, or labeling. The provenance is a prerequisite for a later Qt
+Defect-Inducing Candidate Construction sprint, where a separately approved
+policy may consume deleted preimage locations.
+
 ## Reproducible Qt diff statistics extraction
 
 Sprint 10.8.2.5 consumes only the immutable, digest-identified Qt diff artifact

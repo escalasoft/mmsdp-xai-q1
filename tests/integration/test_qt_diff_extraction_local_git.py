@@ -151,9 +151,24 @@ def test_offline_topology_and_repeatability(extracted_inputs) -> None:
         == by_id[ids["merge"]].parent_identifiers[0]
     )
     modified = by_id[ids["modified"]]
-    assert any(item.change_type == "deleted" for item in modified.file_changes)
+    deleted = next(
+        item for item in modified.file_changes if item.change_type == "deleted"
+    )
+    assert len(deleted.hunks) == 1
+    assert deleted.hunks[0].hunk_header == "@@ -1,1 +0,0 @@"
+    assert deleted.hunks[0].deleted_preimage_line_numbers == (1,)
+    assert deleted.hunks[0].added_line_numbers == ()
+    text_change = next(
+        item for item in modified.file_changes if item.path == "root.txt"
+    )
+    assert len(text_change.hunks) == 1
+    assert text_change.hunks[0].hunk_header == "@@ -2,1 +2,2 @@"
+    assert text_change.hunks[0].deleted_preimage_line_numbers == (2,)
+    assert text_change.hunks[0].added_line_numbers == (2, 3)
+    assert len(text_change.hunks[0].hunk_identifier) == 64
     binary = next(item for item in modified.file_changes if item.path == "binary.bin")
     assert binary.is_binary and binary.additions is None and binary.deletions is None
+    assert binary.hunks == ()
     rename = next(
         item
         for item in by_id[ids["renamed"]].file_changes
@@ -163,6 +178,11 @@ def test_offline_topology_and_repeatability(extracted_inputs) -> None:
         "root.txt",
         "renamed.txt",
         100,
+    )
+    assert rename.hunks == ()
+    assert one.diff_identity_digest == two.diff_identity_digest
+    assert (
+        one.extraction_artifact.content_digest == two.extraction_artifact.content_digest
     )
     rendered = repr(one) + str(one.to_dict())
     assert str(repository) not in rendered
