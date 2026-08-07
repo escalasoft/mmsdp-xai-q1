@@ -172,24 +172,27 @@ The following inventory defines planned module responsibilities only. No module 
 
 Sprint 10.8.2.1 defines a project-independent construction architecture under
 `src/dataset/`. Its deterministic stage order is repository acquisition, raw
-artifact extraction, target-evidence construction, target assignment, feature
-construction, feature-provenance audit, leakage validation, dataset assembly,
-manifest generation, and validation reporting.
+artifact extraction, target-evidence construction, candidate construction,
+target assignment, feature construction, feature-provenance audit, leakage
+validation, dataset assembly, manifest generation, and validation reporting.
 
-Target evidence is audit provenance only, target assignment is a separate
-contract validated against the official `ScientificTargetContract`, and
-predictors are constructed through a label-blind protected context. Feature
+Target evidence and defect-inducing candidates are audit provenance only.
+Candidate construction is a separate stage before target assignment, which is
+validated against the official `ScientificTargetContract`; predictors are
+constructed through a label-blind protected context. Feature
 Construction receives only the immutable ordered observation identifiers
 derived from target assignments for alignment; target fields, labels,
-rationales, evidence identifiers, target-evidence records, and target-evidence
-artifact references are structurally unavailable. Feature eligibility is
+rationales, evidence identifiers, target-evidence records, candidate records,
+attributions, exclusions, validations, bindings, and both audit artifact roles
+are structurally unavailable. Feature eligibility is
 determined from the scientific provenance inventory and temporal-availability
 controls, not from feature names alone.
 
 Repository snapshots store a resolved complete lowercase Git commit identifier
 (40-character SHA-1 or 64-character SHA-256), never an unresolved branch or tag.
-Target-evidence artifacts remain source-artifact provenance for reproducibility
-and target audit, but cannot back feature provenance or values. Inventory-level
+Target-evidence and defect-inducing-candidate artifacts remain source-artifact
+provenance for reproducibility and target audit, but cannot back feature
+provenance or values. Inventory-level
 metadata is descriptive and excluded from inventory identity, while metadata on
 individual feature-provenance records remains digest-bearing when it records
 temporal, fit-scope, linkage, or other scientific controls.
@@ -626,11 +629,53 @@ An explicit link proves reference provenance, not defect induction. The
 source-native issue type is preserved. A linked source-native Bug identifies
 relevant target provenance only; by itself it does not support the positive
 defect-inducing label. In particular, a commit that fixes a bug is not thereby
-identified as the commit that introduced it. Identification of the inducing
-commit remains pending and requires a separate target-assignment policy.
+identified as the commit that introduced it. Candidate attribution remains a
+separate subsequent construction stage, and assignment remains later still.
 
 Target evidence remains structurally unavailable to feature construction through
 the scientific builder pipeline's protected feature view. This stage produces no
-target assignment, feature, dataset, model, prediction, or experiment. Target
-assignment is a separate subsequent stage, and real Qt artifact identities remain
-unresolved until supplied through approved reproducible acquisition workflows.
+candidate, target assignment, feature, dataset, model, prediction, or experiment.
+Real Qt artifact identities remain unresolved until supplied through approved
+reproducible acquisition workflows.
+
+## Reproducible Qt defect-inducing candidate contract
+
+Sprint 10.8.2.10 defines, but does not execute, the contract between target
+evidence and target assignment. `DEFECT_INDUCING_CANDIDATE` is a distinct
+artifact role. A candidate is historical attribution evidence under a versioned
+policy; it is not a label, prediction, probability, confidence value, feature,
+or proof that the historical commit is defective.
+
+The project-independent contracts bind every line attribution to the repository
+snapshot, fixing commit, recorded parent baseline, issue, target-evidence record,
+commit--issue link, diff artifact, hunk, old path and blob, deleted preimage line,
+historical commit, attribution method, and policy identity. Canonical SHA-256
+identities use sorted-key compact JSON and ordered tuples. Runtime timestamps,
+local paths, host and user identity, execution duration, memory addresses, and
+unordered collections are rejected.
+
+The frozen Qt policy admits source-native Bug issues only when status is Closed
+or Resolved and resolution is Fixed, with an exact commit-message QTBUG link and
+matching target evidence. It uses the recorded first parent for ordinary and
+merge fixes; root fixes have no admissible baseline. Eligible deleted preimage
+lines come from modified, renamed, or deleted Qt source files. Generated,
+vendored, test, binary-content, copied, added, and type-changed inputs are not
+attributed. Future attribution uses line-porcelain, whitespace-insensitive,
+rename-following and no copy-following semantics; blank/comment and
+formatting-only lines are excluded, while failures, unblamable lines, and
+boundaries are recorded without guessing. Deletion-only hunks are eligible and
+replacement hunks contribute only deleted preimage lines.
+
+The comment-only and formatting-only decisions additionally require separate,
+non-empty classifier versions and lowercase SHA-256 classifier-content digests.
+Those four values are part of the canonical scientific policy digest, which is
+itself bound by the candidate specification digest. A future implementation
+cannot substitute a different classifier or rule while claiming the same
+scientific identity.
+
+Line, hunk, and commit aggregation is deterministic, ordered, and deduplicated
+by full provenance. Candidate artifact bindings connect the policy and
+specification digests to all upstream artifact digests and ordered output
+identifiers. No blame, SZZ execution, real candidate construction, target
+assignment, feature construction, dataset assembly, model execution, or
+experiment is implemented or claimed in this sprint.

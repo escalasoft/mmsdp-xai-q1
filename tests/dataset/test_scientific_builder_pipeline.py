@@ -204,7 +204,7 @@ def test_feature_context_excludes_target_evidence_and_confidence_fields() -> Non
     }
     pipeline = ScientificDatasetBuilderPipeline(handlers)
     pipeline.run({})
-    seen = handlers[4].seen
+    seen = handlers[5].seen
     assert seen is not None
     assert "target_evidence" not in seen
     assert seen["nested"] == {"safe": 1}
@@ -222,14 +222,35 @@ def test_feature_context_excludes_target_evidence_and_confidence_fields() -> Non
         assert secret not in serialized
 
 
+def test_feature_context_excludes_candidate_artifacts_and_records() -> None:
+    handlers = _handlers()
+    candidate_artifact = _artifact("candidates", "defect-inducing-candidate", SHA2)
+    handlers[3].output = {
+        "candidate_records": ({"candidate_identifier": "must-not-pass"},),
+        "candidate_exclusions": ({"reason": "must-not-pass"},),
+        "source_artifacts": (
+            _artifact("commits", "commit-artifact"),
+            candidate_artifact,
+        ),
+        "safe_candidate_stage_note": "contract-only",
+    }
+    ScientificDatasetBuilderPipeline(handlers).run({})
+    seen = handlers[5].seen
+    assert seen is not None
+    assert "candidate_records" not in seen
+    assert "candidate_exclusions" not in seen
+    assert seen["source_artifacts"] == (_artifact("commits", "commit-artifact"),)
+    assert "must-not-pass" not in repr(seen)
+
+
 def test_feature_alignment_and_stage_outputs_are_recursively_immutable() -> None:
     handlers = _handlers()
-    handlers[3].output = {
+    handlers[4].output = {
         "target_assignments": (_assignment("c1", 1),),
         "nested": {"values": [1]},
     }
     result = ScientificDatasetBuilderPipeline(handlers).run({})
-    seen = handlers[4].seen
+    seen = handlers[5].seen
     assert seen is not None
     with pytest.raises(TypeError):
         seen["nested"]["new"] = True
@@ -258,28 +279,28 @@ def test_upstream_alignment_key_cannot_override_canonical_identifiers(
     ]
     if not reserved_first:
         items.reverse()
-    handlers[3].output = dict(items)
+    handlers[4].output = dict(items)
     ScientificDatasetBuilderPipeline(handlers).run({})
-    seen = handlers[4].seen
+    seen = handlers[5].seen
     assert seen is not None
     assert seen["target_assignment_observation_identifiers"] == ("c2", "c1")
 
 
 def test_alignment_key_is_absent_without_target_assignments() -> None:
     handlers = _handlers()
-    handlers[3].output = {
+    handlers[4].output = {
         "target_assignment_observation_identifiers": ("forged",),
         "safe": True,
     }
     ScientificDatasetBuilderPipeline(handlers).run({})
-    seen = handlers[4].seen
+    seen = handlers[5].seen
     assert seen is not None
     assert "target_assignment_observation_identifiers" not in seen
 
 
 def test_normalized_target_assignment_variants_are_ambiguous() -> None:
     handlers = _handlers()
-    handlers[3].output = {
+    handlers[4].output = {
         "target_assignments": (_assignment("c1", 1),),
         "Target-Assignments": (_assignment("c2", 0),),
     }
@@ -289,7 +310,7 @@ def test_normalized_target_assignment_variants_are_ambiguous() -> None:
 
 def test_duplicate_alignment_identifiers_are_rejected() -> None:
     handlers = _handlers()
-    handlers[3].output = {
+    handlers[4].output = {
         "target_assignments": (_assignment("c1", 1), _assignment("c1", 0))
     }
     with pytest.raises(ValueError, match="unique"):
@@ -300,7 +321,7 @@ def test_empty_alignment_identifier_is_rejected_even_for_tampered_contract() -> 
     handlers = _handlers()
     assignment = _assignment("c1", 1)
     object.__setattr__(assignment, "observation_identifier", "")
-    handlers[3].output = {"target_assignments": (assignment,)}
+    handlers[4].output = {"target_assignments": (assignment,)}
     with pytest.raises(ValueError, match="non-empty"):
         ScientificDatasetBuilderPipeline(handlers).run({})
 
