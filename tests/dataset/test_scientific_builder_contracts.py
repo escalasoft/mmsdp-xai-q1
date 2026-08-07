@@ -217,6 +217,7 @@ def test_exact_public_api_and_enum_values() -> None:
         "repository-acquisition",
         "raw-artifact-extraction",
         "target-evidence-construction",
+        "candidate-construction",
         "target-assignment",
         "feature-construction",
         "feature-provenance-audit",
@@ -522,6 +523,23 @@ def test_assembly_rejects_prohibited_feature_and_controls_target_evidence() -> N
             feature_inventory=_inventory((bad_provenance,)),
         )
 
+    candidate = replace(
+        _artifact("candidates", "defect-inducing-candidate"),
+        content_digest=SHA2,
+    )
+    with pytest.raises(ValueError, match="candidate artifact"):
+        _assembly(
+            source_artifacts=(_artifact(), candidate),
+            feature_values=(replace(_value(), provenance_digest=SHA2),),
+        )
+    with pytest.raises(ValueError, match="candidate artifacts"):
+        _assembly(
+            source_artifacts=(_artifact(), candidate),
+            feature_inventory=(
+                _inventory((_provenance(source_artifact="candidates"),))
+            ),
+        )
+
 
 def test_target_assignments_are_bound_to_official_target_contract() -> None:
     with pytest.raises(ValueError, match="outside target contract"):
@@ -568,6 +586,19 @@ def test_manifest_counts_order_and_digest_invariants() -> None:
         _manifest(stage_sequence=tuple(contracts.ScientificBuilderStage)[:-1])
     with pytest.raises(ValueError, match="canonical"):
         replace(manifest, scientific_digest=SHA2)
+
+
+def test_manifest_accepts_distinct_candidate_artifact_digest() -> None:
+    candidate = replace(
+        _artifact("candidates", "defect-inducing-candidate"),
+        content_digest=SHA2,
+    )
+    manifest = _manifest(source_artifact_digests={"candidates": SHA2, "commits": SHA})
+    assert manifest.source_artifact_digests["candidates"] == candidate.content_digest
+    assert (
+        candidate.artifact_role
+        is contracts.ScientificArtifactRole.DEFECT_INDUCING_CANDIDATE
+    )
 
 
 def test_validation_invariants_and_deterministic_messages() -> None:

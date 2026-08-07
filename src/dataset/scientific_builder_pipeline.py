@@ -23,6 +23,16 @@ from dataset.scientific_builder_contracts import (
     ScientificTargetAssignment,
     ScientificTargetEvidenceRecord,
 )
+from dataset.scientific_candidate_contracts import (
+    ScientificCandidateArtifactBinding,
+    ScientificCandidateAttributionRecord,
+    ScientificCandidateConstructionPolicy,
+    ScientificCandidateConstructionResult,
+    ScientificCandidateConstructionSpecification,
+    ScientificCandidateConstructionValidation,
+    ScientificCandidateExclusionRecord,
+    ScientificDefectInducingCandidateRecord,
+)
 from dataset.scientific_dataset_contract import (
     ScientificFeatureProvenance,
     ScientificTargetContract,
@@ -82,6 +92,25 @@ _SCIENTIFIC_CONTRACT_TYPES = (
     ScientificDatasetBuildResult,
     ScientificFeatureProvenance,
     ScientificTargetContract,
+    ScientificCandidateConstructionSpecification,
+    ScientificCandidateConstructionPolicy,
+    ScientificCandidateAttributionRecord,
+    ScientificDefectInducingCandidateRecord,
+    ScientificCandidateExclusionRecord,
+    ScientificCandidateConstructionValidation,
+    ScientificCandidateArtifactBinding,
+    ScientificCandidateConstructionResult,
+)
+
+_CANDIDATE_TYPES = (
+    ScientificCandidateConstructionSpecification,
+    ScientificCandidateConstructionPolicy,
+    ScientificCandidateAttributionRecord,
+    ScientificDefectInducingCandidateRecord,
+    ScientificCandidateExclusionRecord,
+    ScientificCandidateConstructionValidation,
+    ScientificCandidateArtifactBinding,
+    ScientificCandidateConstructionResult,
 )
 
 
@@ -90,6 +119,8 @@ def _key(value: str) -> str:
 
 
 def _detach(value: object, *, feature_view: bool = False) -> object:
+    if feature_view and isinstance(value, _CANDIDATE_TYPES):
+        return None
     if feature_view and isinstance(value, ScientificTargetEvidenceRecord):
         return None
     if feature_view and isinstance(value, ScientificTargetAssignment):
@@ -105,7 +136,10 @@ def _detach(value: object, *, feature_view: bool = False) -> object:
     ):
         return None
     if feature_view and isinstance(value, ScientificArtifactReference):
-        if value.artifact_role is ScientificArtifactRole.TARGET_EVIDENCE:
+        if value.artifact_role in {
+            ScientificArtifactRole.TARGET_EVIDENCE,
+            ScientificArtifactRole.DEFECT_INDUCING_CANDIDATE,
+        }:
             return None
     if isinstance(value, _SCIENTIFIC_CONTRACT_TYPES):
         _detach(value.to_dict())
@@ -162,6 +196,12 @@ def _detach(value: object, *, feature_view: bool = False) -> object:
                 "target_contract",
                 "target_evidence",
                 "target_evidence_records",
+                "candidate_attributions",
+                "candidate_records",
+                "candidate_exclusions",
+                "candidate_validation",
+                "candidate_result",
+                "candidate_artifact_binding",
             }:
                 continue
             if feature_view and normalized == "target_assignments":

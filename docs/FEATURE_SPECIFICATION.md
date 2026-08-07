@@ -47,6 +47,15 @@ An enabled issue-derived historical feature must carry structured metadata with 
 
 Issue identifiers, SZZ/linking signals, keyword rules, confidence, and audit evidence used to construct the target are provenance, not predictors. Issue linking must not be interpreted automatically as defect causality, and bug-fixing commits must not be conflated with defect-inducing commits.
 
+Defect-inducing candidate artifacts are governed by the same hard boundary.
+Candidate identifiers, attribution records, blamed historical commits, hunk and
+line attribution outcomes, exclusion reasons, validation results, policy
+identities, and candidate artifact digests are target-construction audit
+provenance only. They cannot be feature sources, feature values, labels,
+predictions, probabilities, confidence values, or evidence that a historical
+commit is defective. The feature-construction context removes these contracts
+and artifacts structurally rather than relying on feature-name filtering.
+
 ### Target-derived proxies
 
 Direct target use, label confidence, target probability, or engineered variables reproducing the labeling rule are prohibited. This includes normalized variants of `bug_confidence`, `msg_has_bug_kw`, `has_bug_keyword`, keyword/link indicators, `is_bug`, and `is_buggy` when used as predictors.

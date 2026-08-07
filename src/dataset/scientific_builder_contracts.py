@@ -43,6 +43,7 @@ class ScientificBuilderStage(StrEnum):
     REPOSITORY_ACQUISITION = "repository-acquisition"
     RAW_ARTIFACT_EXTRACTION = "raw-artifact-extraction"
     TARGET_EVIDENCE_CONSTRUCTION = "target-evidence-construction"
+    CANDIDATE_CONSTRUCTION = "candidate-construction"
     TARGET_ASSIGNMENT = "target-assignment"
     FEATURE_CONSTRUCTION = "feature-construction"
     FEATURE_PROVENANCE_AUDIT = "feature-provenance-audit"
@@ -59,6 +60,7 @@ class ScientificArtifactRole(StrEnum):
     FILE_ARTIFACT = "file-artifact"
     ISSUE_ARTIFACT = "issue-artifact"
     TARGET_EVIDENCE = "target-evidence"
+    DEFECT_INDUCING_CANDIDATE = "defect-inducing-candidate"
     TARGET_ASSIGNMENT = "target-assignment"
     CODE_FEATURE = "code-feature"
     PROCESS_FEATURE = "process-feature"
@@ -616,6 +618,11 @@ class ScientificDatasetAssemblyInput:
             for item in artifacts
             if item.artifact_role is ScientificArtifactRole.TARGET_EVIDENCE
         )
+        candidate_artifacts = tuple(
+            item
+            for item in artifacts
+            if item.artifact_role is ScientificArtifactRole.DEFECT_INDUCING_CANDIDATE
+        )
         observations = _unique_names(
             self.observation_identifiers, "observation_identifiers", non_empty=True
         )
@@ -669,15 +676,25 @@ class ScientificDatasetAssemblyInput:
         target_evidence_digests = {
             item.content_digest for item in target_evidence_artifacts
         }
+        candidate_digests = {item.content_digest for item in candidate_artifacts}
         target_evidence_sources = {
             identity
             for item in target_evidence_artifacts
             for identity in (item.artifact_name, item.repository_relative_path)
         }
+        candidate_sources = {
+            identity
+            for item in candidate_artifacts
+            for identity in (item.artifact_name, item.repository_relative_path)
+        }
         for provenance in self.feature_inventory.feature_provenance:
-            if provenance.source_artifact in target_evidence_sources:
+            if (
+                provenance.source_artifact
+                in target_evidence_sources | candidate_sources
+            ):
                 raise ValueError(
-                    "target-evidence artifacts cannot be feature provenance sources"
+                    "target-evidence and candidate artifacts cannot be feature "
+                    "provenance sources"
                 )
         for value in values:
             if value.observation_identifier not in observations:
@@ -691,9 +708,10 @@ class ScientificDatasetAssemblyInput:
                 )
             if value.feature_name in {"target", "timestamp"}:
                 raise ValueError("target or timestamp cannot be reused as a feature")
-            if value.provenance_digest in target_evidence_digests:
+            if value.provenance_digest in target_evidence_digests | candidate_digests:
                 raise ValueError(
-                    "target-evidence artifact digest cannot back a feature value"
+                    "target-evidence or candidate artifact digest cannot back a "
+                    "feature value"
                 )
             provenance = by_name[value.feature_name]
             if (
