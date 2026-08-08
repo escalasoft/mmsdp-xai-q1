@@ -2,6 +2,15 @@
 
 from .code_features import generate_code_features
 from .process_features import generate_process_features
+from .qt_feature_inventory import (
+    QtFeatureAdmissibility,
+    QtFeatureDataType,
+    QtFeatureDefinition,
+    QtFeatureInventory,
+    QtFeatureLeakageClassification,
+    QtFeatureMissingPolicy,
+    build_qt_feature_inventory,
+)
 from .schema import (
     CodeFeatureRecord,
     FeatureArtifact,
@@ -26,4 +35,11 @@ __all__ = [
     "write_code_features",
     "write_process_features",
     "write_text_features",
+    "QtFeatureAdmissibility",
+    "QtFeatureDataType",
+    "QtFeatureDefinition",
+    "QtFeatureInventory",
+    "QtFeatureLeakageClassification",
+    "QtFeatureMissingPolicy",
+    "build_qt_feature_inventory",
 ]

@@ -15,6 +15,13 @@ EXPECTED_EXPORTS = {
     "write_code_features",
     "write_process_features",
     "write_text_features",
+    "QtFeatureAdmissibility",
+    "QtFeatureDataType",
+    "QtFeatureDefinition",
+    "QtFeatureInventory",
+    "QtFeatureLeakageClassification",
+    "QtFeatureMissingPolicy",
+    "build_qt_feature_inventory",
 }
 
 
