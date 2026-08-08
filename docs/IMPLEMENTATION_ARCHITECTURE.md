@@ -673,6 +673,12 @@ itself bound by the candidate specification digest. A future implementation
 cannot substitute a different classifier or rule while claiming the same
 scientific identity.
 
+Sprint 10.8.2.11 corrects the initial classifier identity binding from a digest
+of the version string alone to a digest of canonical UTF-8 JSON containing the
+version and explicit, implementation-independent scientific classification
+semantics. This corrective amendment changes classifier, policy, and dependent
+specification identities only; it does not change candidate-selection semantics.
+
 Line, hunk, and commit aggregation is deterministic, ordered, and deduplicated
 by full provenance. Candidate artifact bindings connect the policy and
 specification digests to all upstream artifact digests and ordered output
