@@ -60,7 +60,16 @@ def _commits() -> QtCommitExtractionResult:
             (FIXING, "2020-01-03T00:00:00+00:00", "neutral text"),
         )
     )
-    spec = QtCommitExtractionSpecification("1.0.0")
+    spec = QtCommitExtractionSpecification(
+        "1.0.0",
+        observation_window_start="2020-01-01T00:00:00+00:00",
+        observation_window_end="2020-01-03T23:59:59+00:00",
+    )
+    history_digest = hashlib.sha256(
+        commit_module._canonical_bytes(
+            {"reachable_commit_ids": tuple(item.commit_id for item in records)}
+        )
+    ).hexdigest()
     content = {
         "schema_version": spec.schema_version,
         "artifact_role": "commit-artifact",
@@ -69,6 +78,11 @@ def _commits() -> QtCommitExtractionResult:
         "source_snapshot_digest": SNAPSHOT,
         "object_hash_algorithm": "sha1",
         "ordering_policy": spec.ordering_policy,
+        "observation_window_start": spec.observation_window_start,
+        "observation_window_end": spec.observation_window_end,
+        "reachable_historical_commit_count": len(records),
+        "pre_window_historical_commit_count": 0,
+        "reachable_history_digest": history_digest,
         "records": records,
     }
     artifact = ScientificArtifactReference(
@@ -88,6 +102,9 @@ def _commits() -> QtCommitExtractionResult:
         artifact,
         spec.ordering_policy,
         ("git:cat-file:completed",),
+        len(records),
+        0,
+        history_digest,
     )
 
 

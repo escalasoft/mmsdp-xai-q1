@@ -183,7 +183,11 @@ def test_repeated_local_construction_is_identical_and_preserves_exclusions(
         acquisition,
         repository,
         tmp_path / "commits.json",
-        QtCommitExtractionSpecification("1.0.0"),
+        QtCommitExtractionSpecification(
+            "1.0.0",
+            observation_window_start="2002-01-01T00:00:00+00:00",
+            observation_window_end="2002-01-03T23:59:59+00:00",
+        ),
     )
     diffs = QtDiffExtractor().extract(
         QtDiffExtractionSpecification(

@@ -2,12 +2,15 @@
   "repository_name": "qtbase",
   "canonical_repository_url": "https://code.qt.io/qt/qtbase.git",
   "transport_repository_url": "https://code.qt.io/qt/qtbase.git",
-  "requested_reference": "revision-required-before-execution",
+  "requested_reference": "a1af25290bbd078628e362d4b704a047853d620c",
   "default_branch": "dev",
   "acquisition_policy_version": "1.0.0",
   "allowed_hash_algorithms": ["sha1", "sha256"],
   "metadata": {
     "source_project": "Qt Base",
-    "execution_policy": "explicit-revision-required"
+    "execution_policy": "explicit-revision-required",
+    "observation_window_start_utc_inclusive": "2011-06-18T00:00:00Z",
+    "observation_window_end_utc_inclusive": "2014-03-18T23:59:59Z",
+    "resolution_procedure": "git rev-list -1 --before=2014-03-19T00:00:00Z origin/dev"
   }
 }

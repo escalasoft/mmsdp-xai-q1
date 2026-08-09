@@ -66,6 +66,7 @@ class ScientificCandidateExclusionReason(StrEnum):
     BOUNDARY_COMMIT = "boundary-commit"
     IGNORED_REVISION = "ignored-revision"
     TEMPORAL_INCONSISTENCY = "temporal-inconsistency"
+    OUTSIDE_OBSERVATION_WINDOW = "outside-observation-window"
 
 
 class ScientificCandidateFileDisposition(StrEnum):
@@ -599,6 +600,7 @@ class ScientificCandidateExclusionRecord:
     policy_version: str
     policy_digest: str
     detail_code: str
+    blamed_historical_commit: str | None = None
     metadata: Mapping[str, object] = field(default_factory=lambda: _EMPTY)
 
     def __post_init__(self) -> None:
@@ -616,6 +618,18 @@ class ScientificCandidateExclusionRecord:
         )
         for name in ("fixing_commit", "baseline_commit", "old_blob_identifier"):
             object.__setattr__(self, name, _oid(getattr(self, name), name))
+        if self.blamed_historical_commit is not None:
+            object.__setattr__(
+                self,
+                "blamed_historical_commit",
+                _oid(self.blamed_historical_commit, "blamed_historical_commit"),
+            )
+        if (
+            self.reason is ScientificCandidateExclusionReason.OUTSIDE_OBSERVATION_WINDOW
+        ) != (self.blamed_historical_commit is not None):
+            raise ValueError(
+                "outside-window exclusions must bind the blamed historical commit"
+            )
         for name in (
             "issue_identifier",
             "target_evidence_identifier",
@@ -648,6 +662,7 @@ class ScientificCandidateExclusionRecord:
     def calculate_identifier(cls, **content: object) -> str:
         content.pop("metadata", None)
         content.pop("exclusion_identifier", None)
+        content.setdefault("blamed_historical_commit", None)
         return _canonical(content)
 
     def to_dict(self) -> dict[str, object]:
@@ -664,6 +679,8 @@ class ScientificCandidateConstructionValidation:
     exclusion_count: int
     error_codes: tuple[str, ...]
     warning_codes: tuple[str, ...]
+    outside_observation_window_attribution_count: int = 0
+    outside_observation_window_identity_digest: str | None = None
     metadata: Mapping[str, object] = field(default_factory=lambda: _EMPTY)
 
     def __post_init__(self) -> None:
@@ -675,6 +692,22 @@ class ScientificCandidateConstructionValidation:
             value = getattr(self, name)
             if type(value) is not int or value < 0:
                 raise ValueError(f"{name} must be a non-negative integer")
+        if (
+            type(self.outside_observation_window_attribution_count) is not int
+            or self.outside_observation_window_attribution_count < 0
+        ):
+            raise ValueError(
+                "outside_observation_window_attribution_count must be non-negative"
+            )
+        if self.outside_observation_window_attribution_count:
+            if not isinstance(
+                self.outside_observation_window_identity_digest, str
+            ) or not _SHA256.fullmatch(self.outside_observation_window_identity_digest):
+                raise ValueError(
+                    "outside-window provenance must have an identity digest"
+                )
+        elif self.outside_observation_window_identity_digest is not None:
+            raise ValueError("empty outside-window provenance must not have a digest")
         for name in ("error_codes", "warning_codes"):
             object.__setattr__(self, name, _ordered(getattr(self, name), name))
         if self.is_valid == bool(self.error_codes):

@@ -75,7 +75,14 @@ def _bundle(issue_type="Bug", metadata=None):
         committed_at="2024-01-03T00:00:00+00:00",
         message="Fixes: QTBUG-1\nfull commit message must not be copied",
     )
-    commit_spec = QtCommitExtractionSpecification("1.0.0")
+    commit_spec = QtCommitExtractionSpecification(
+        "1.0.0",
+        observation_window_start="2024-01-01T00:00:00+00:00",
+        observation_window_end="2024-01-07T00:00:00+00:00",
+    )
+    history_digest = hashlib.sha256(
+        commit_module._canonical_bytes({"reachable_commit_ids": (commit.commit_id,)})
+    ).hexdigest()
     commit_payload = {
         "schema_version": "1.0.0",
         "artifact_role": "commit-artifact",
@@ -84,6 +91,11 @@ def _bundle(issue_type="Bug", metadata=None):
         "source_snapshot_digest": "b" * 64,
         "object_hash_algorithm": "sha1",
         "ordering_policy": commit_spec.ordering_policy,
+        "observation_window_start": commit_spec.observation_window_start,
+        "observation_window_end": commit_spec.observation_window_end,
+        "reachable_historical_commit_count": 1,
+        "pre_window_historical_commit_count": 0,
+        "reachable_history_digest": history_digest,
         "records": (commit,),
     }
     commit_artifact = ScientificArtifactReference(
@@ -103,6 +115,9 @@ def _bundle(issue_type="Bug", metadata=None):
         commit_artifact,
         commit_spec.ordering_policy,
         ("git:cat-file:completed",),
+        1,
+        0,
+        history_digest,
     )
     issue = _issue(issue_type=issue_type)
     issue_spec = QtIssueExtractionSpecification(

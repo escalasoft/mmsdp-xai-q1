@@ -58,6 +58,15 @@ def _with_committed_at(committed_at: str):
         "source_snapshot_digest": commits.source_snapshot_digest,
         "object_hash_algorithm": commits.object_hash_algorithm,
         "ordering_policy": commits.ordering_policy,
+        "observation_window_start": commits.specification.observation_window_start,
+        "observation_window_end": commits.specification.observation_window_end,
+        "reachable_historical_commit_count": (
+            commits.reachable_historical_commit_count
+        ),
+        "pre_window_historical_commit_count": (
+            commits.pre_window_historical_commit_count
+        ),
+        "reachable_history_digest": commits.reachable_history_digest,
         "records": records,
     }
     artifact = replace(

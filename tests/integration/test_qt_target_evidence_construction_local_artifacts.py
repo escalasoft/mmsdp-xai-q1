@@ -38,6 +38,11 @@ def _expanded_bundle():
         )
     )
     records = commits.records + extra_commits
+    reachable_history_digest = hashlib.sha256(
+        commit_module._canonical_bytes(
+            {"reachable_commit_ids": tuple(item.commit_id for item in records)}
+        )
+    ).hexdigest()
     commit_payload = {
         "schema_version": "1.0.0",
         "artifact_role": "commit-artifact",
@@ -46,6 +51,11 @@ def _expanded_bundle():
         "source_snapshot_digest": "b" * 64,
         "object_hash_algorithm": "sha1",
         "ordering_policy": commits.ordering_policy,
+        "observation_window_start": commits.specification.observation_window_start,
+        "observation_window_end": commits.specification.observation_window_end,
+        "reachable_historical_commit_count": len(records),
+        "pre_window_historical_commit_count": 0,
+        "reachable_history_digest": reachable_history_digest,
         "records": records,
     }
     artifact = ScientificArtifactReference(
@@ -56,7 +66,13 @@ def _expanded_bundle():
         commits.artifact.schema_version,
         len(records),
     )
-    commits = dataclasses.replace(commits, records=records, artifact=artifact)
+    commits = dataclasses.replace(
+        commits,
+        records=records,
+        artifact=artifact,
+        reachable_historical_commit_count=len(records),
+        reachable_history_digest=reachable_history_digest,
+    )
     issue_factory = __import__(
         "tests.unit.test_qt_target_evidence_construction", fromlist=["_issue"]
     )._issue

@@ -764,10 +764,8 @@ class _GitReader:
                 cwd=self.repository,
                 check=False,
                 capture_output=True,
-                text=True,
-                input=input_text,
-                encoding="utf-8",
-                errors="surrogateescape",
+                text=False,
+                input=None if input_text is None else input_text.encode("utf-8"),
                 timeout=_TIMEOUT_SECONDS,
                 env=environment,
                 shell=False,
@@ -779,7 +777,7 @@ class _GitReader:
         if result.returncode:
             raise _QtDiffExtractionError(f"Git {operation} failed")
         self.evidence.add(f"git:{operation}:completed")
-        return result.stdout
+        return result.stdout.decode("utf-8", errors="surrogateescape")
 
 
 class QtDiffExtractor:
@@ -939,7 +937,17 @@ class QtDiffExtractor:
             "diff", [*common, "--raw", "-z", "--no-abbrev", baseline, commit, "--"]
         )
         numstat = reader.run(
-            "diff", [*common, "--numstat", "-z", baseline, commit, "--"]
+            "diff",
+            [
+                *common,
+                "--no-indent-heuristic",
+                "--unified=0",
+                "--numstat",
+                "-z",
+                baseline,
+                commit,
+                "--",
+            ],
         )
         patch = reader.run(
             "diff",
@@ -1102,7 +1110,7 @@ class QtDiffExtractor:
     @staticmethod
     def _patch_groups(patch: str) -> tuple[str, ...]:
         groups: list[list[str]] = []
-        for line in patch.splitlines():
+        for line in patch.split("\n"):
             if line.startswith("diff --git "):
                 groups.append([])
             if not groups:
@@ -1121,7 +1129,7 @@ class QtDiffExtractor:
         old_blob: str | None,
         new_blob: str | None,
     ) -> tuple[QtDiffHunkRecord, ...]:
-        lines = patch.splitlines()
+        lines = patch.split("\n")
         hunks: list[QtDiffHunkRecord] = []
         index = 0
         while index < len(lines):
@@ -1150,6 +1158,9 @@ class QtDiffExtractor:
                     added_count += 1
                 elif body.startswith("\\ No newline at end of file"):
                     pass
+                elif body == "" and index == len(lines) - 1:
+                    index += 1
+                    break
                 elif body.startswith(" "):
                     raise _QtDiffExtractionError(
                         "Git emitted context under the zero-context policy"

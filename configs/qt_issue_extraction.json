@@ -1,10 +1,10 @@
 {
   "project_name": "qtbase",
-  "canonical_issue_source": "issue-source-required-before-execution",
-  "source_revision": "immutable-issue-source-revision-required-before-execution",
-  "source_artifact_digest": "issue-source-sha256-required-before-execution",
-  "project_identifier": "qtbase-project-identifier-required-before-execution",
-  "issue_schema_version": "issue-schema-version-required-before-execution",
+  "canonical_issue_source": "https://qt-project.atlassian.net",
+  "source_revision": "qtbug-cloud-60b32ea8c64ec02c",
+  "source_artifact_digest": "60b32ea8c64ec02cd853b4bbb35db568c0cafb25ae63de0fa6ba6a6b15a494c6",
+  "project_identifier": "QTBUG",
+  "issue_schema_version": "qt-jira-cloud-normalized-1.0.0",
   "extraction_policy_version": "1.0.0",
   "ordering_policy": "canonical-issue-identifier",
   "timestamp_policy": "normalize-authoritative-timestamps-to-utc",
@@ -12,5 +12,12 @@
   "duplicate_policy": "reject-conflicting-duplicates",
   "unresolved_record_policy": "retain-with-explicit-missing-fields",
   "allowed_input_formats": ["json", "jsonl"],
-  "metadata": {}
+  "metadata": {
+    "acquired_at": "2026-08-08T15:20:29.803162+00:00",
+    "query_policy": "exact-commit-message-QTBUG-identifiers-only",
+    "updated_timestamp_policy": "not-requested-not-authoritative",
+    "record_count": 2916,
+    "missing_identifier_count": 4,
+    "acquisition_manifest": "data/external/qtbug/a1af25290bbd078628e362d4b704a047853d620c/qtbug-jira-cloud-acquisition.json"
+  }
 }

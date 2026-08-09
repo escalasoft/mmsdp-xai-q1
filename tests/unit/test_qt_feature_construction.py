@@ -148,7 +148,11 @@ def statistics_result(*, changed: bool = False) -> QtDiffStatisticsExtractionRes
 def commit_result(
     *, message: str = "Fix nothing; preserve raw text.\n"
 ) -> QtCommitExtractionResult:
-    specification = QtCommitExtractionSpecification("1.0.0")
+    specification = QtCommitExtractionSpecification(
+        "1.0.0",
+        observation_window_start="2001-01-01T00:00:00+00:00",
+        observation_window_end="2002-12-31T23:59:59+00:00",
+    )
     records = (
         ScientificCommitRecord(
             COMMIT_B,
@@ -181,6 +185,15 @@ def commit_result(
         "source_snapshot_digest": SNAPSHOT_DIGEST,
         "object_hash_algorithm": "sha1",
         "ordering_policy": specification.ordering_policy,
+        "observation_window_start": specification.observation_window_start,
+        "observation_window_end": specification.observation_window_end,
+        "reachable_historical_commit_count": len(records),
+        "pre_window_historical_commit_count": 0,
+        "reachable_history_digest": commit_module.hashlib.sha256(
+            commit_module._canonical_bytes(
+                {"reachable_commit_ids": tuple(item.commit_id for item in records)}
+            )
+        ).hexdigest(),
         "records": records,
     }
     digest = commit_module.hashlib.sha256(
@@ -200,6 +213,9 @@ def commit_result(
         ),
         specification.ordering_policy,
         ("git:cat-file:completed",),
+        len(records),
+        0,
+        payload["reachable_history_digest"],
     )
 
 

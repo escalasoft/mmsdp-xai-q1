@@ -10,7 +10,7 @@ import subprocess
 import tempfile
 from collections.abc import Mapping, Sequence
 from dataclasses import dataclass, field, fields, is_dataclass
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta, timezone
 from pathlib import Path, PurePosixPath
 from types import MappingProxyType
 
@@ -99,6 +99,8 @@ class QtCommitExtractionSpecification:
     schema_version: str
     artifact_repository_relative_path: str = "artifacts/raw/qtbase-commits.json"
     ordering_policy: str = _ORDERING_POLICY
+    observation_window_start: str = "2011-06-18T00:00:00+00:00"
+    observation_window_end: str = "2014-03-18T23:59:59+00:00"
     metadata: Mapping[str, object] = field(default_factory=lambda: _EMPTY)
 
     def __post_init__(self) -> None:
@@ -119,6 +121,20 @@ class QtCommitExtractionSpecification:
             raise ValueError("artifact path must be normalized and repository-relative")
         if self.ordering_policy != _ORDERING_POLICY:
             raise ValueError(f"ordering_policy must equal {_ORDERING_POLICY!r}")
+        boundaries = []
+        for name in ("observation_window_start", "observation_window_end"):
+            value = _text(getattr(self, name), name)
+            try:
+                timestamp = datetime.fromisoformat(value.replace("Z", "+00:00"))
+            except ValueError as error:
+                raise ValueError(f"{name} must be an ISO-8601 timestamp") from error
+            if timestamp.tzinfo is None or timestamp.utcoffset() is None:
+                raise ValueError(f"{name} must include a UTC offset")
+            normalized = timestamp.astimezone(UTC).isoformat()
+            object.__setattr__(self, name, normalized)
+            boundaries.append(timestamp.astimezone(UTC))
+        if boundaries[0] > boundaries[1]:
+            raise ValueError("observation window start must not follow end")
         object.__setattr__(self, "artifact_repository_relative_path", path)
         object.__setattr__(self, "metadata", _freeze(self.metadata))
 
@@ -190,6 +206,9 @@ class QtCommitExtractionResult:
     artifact: ScientificArtifactReference
     ordering_policy: str
     command_evidence: tuple[str, ...]
+    reachable_historical_commit_count: int
+    pre_window_historical_commit_count: int
+    reachable_history_digest: str
 
     def __post_init__(self) -> None:
         if not isinstance(self.specification, QtCommitExtractionSpecification):
@@ -201,6 +220,10 @@ class QtCommitExtractionResult:
         if any(not isinstance(record, ScientificCommitRecord) for record in records):
             raise TypeError("records must contain ScientificCommitRecord values")
         seen: set[str] = set()
+        window_start = datetime.fromisoformat(
+            self.specification.observation_window_start
+        )
+        window_end = datetime.fromisoformat(self.specification.observation_window_end)
         for record in records:
             if not pattern.fullmatch(record.commit_id):
                 raise ValueError(
@@ -210,6 +233,9 @@ class QtCommitExtractionResult:
                 raise ValueError("commit identifiers must be unique")
             if any(not pattern.fullmatch(parent) for parent in record.parent_ids):
                 raise ValueError("parent_ids must preserve complete object identifiers")
+            committed = datetime.fromisoformat(record.committed_at).astimezone(UTC)
+            if not window_start <= committed <= window_end:
+                raise ValueError("commit record lies outside the observation window")
             seen.add(record.commit_id)
         if self.ordering_policy != self.specification.ordering_policy:
             raise ValueError("result ordering policy must equal its specification")
@@ -227,6 +253,17 @@ class QtCommitExtractionResult:
             )
         if self.artifact.record_count != len(records):
             raise ValueError("artifact record count must equal extracted records")
+        if (
+            type(self.reachable_historical_commit_count) is not int
+            or type(self.pre_window_historical_commit_count) is not int
+            or self.reachable_historical_commit_count < len(records)
+            or self.pre_window_historical_commit_count < 0
+            or self.pre_window_historical_commit_count
+            != self.reachable_historical_commit_count - len(records)
+        ):
+            raise ValueError("historical and observation-window counts disagree")
+        if not _SHA256.fullmatch(self.reachable_history_digest):
+            raise ValueError("reachable_history_digest must be a SHA-256 digest")
         expected_content = _canonical_bytes(
             {
                 "schema_version": self.specification.schema_version,
@@ -236,6 +273,15 @@ class QtCommitExtractionResult:
                 "source_snapshot_digest": self.source_snapshot_digest,
                 "object_hash_algorithm": self.object_hash_algorithm,
                 "ordering_policy": self.ordering_policy,
+                "observation_window_start": self.specification.observation_window_start,
+                "observation_window_end": self.specification.observation_window_end,
+                "reachable_historical_commit_count": (
+                    self.reachable_historical_commit_count
+                ),
+                "pre_window_historical_commit_count": (
+                    self.pre_window_historical_commit_count
+                ),
+                "reachable_history_digest": self.reachable_history_digest,
                 "records": records,
             }
         )
@@ -324,17 +370,40 @@ class QtCommitExtractor:
         object_type = reader.run("cat-file", ["-t", revision]).strip()
         if object_type != "commit":
             raise QtCommitExtractionError("acquired revision is not a commit")
-        ordered_ids = tuple(
+        reachable_ids = tuple(
             item
             for item in reader.run(
                 "rev-list", ["--topo-order", "--reverse", revision]
             ).splitlines()
             if item
         )
-        records = tuple(
+        reachable_records = tuple(
             self._read_record(reader, commit_id, acquisition.object_hash_algorithm)
-            for commit_id in ordered_ids
+            for commit_id in reachable_ids
         )
+        window_start = datetime.fromisoformat(specification.observation_window_start)
+        window_end = datetime.fromisoformat(specification.observation_window_end)
+        records = tuple(
+            record
+            for record in reachable_records
+            if window_start
+            <= datetime.fromisoformat(record.committed_at).astimezone(UTC)
+            <= window_end
+        )
+        if not records:
+            raise QtCommitExtractionError("observation window contains no commits")
+        later = tuple(
+            record.commit_id
+            for record in reachable_records
+            if datetime.fromisoformat(record.committed_at).astimezone(UTC) > window_end
+        )
+        if later:
+            raise QtCommitExtractionError(
+                "snapshot contains commits after the approved observation window"
+            )
+        history_digest = hashlib.sha256(
+            _canonical_bytes({"reachable_commit_ids": reachable_ids})
+        ).hexdigest()
         payload = {
             "schema_version": specification.schema_version,
             "artifact_role": ScientificArtifactRole.COMMIT_ARTIFACT.value,
@@ -343,6 +412,11 @@ class QtCommitExtractor:
             "source_snapshot_digest": acquisition.repository_snapshot.snapshot_digest,
             "object_hash_algorithm": acquisition.object_hash_algorithm,
             "ordering_policy": specification.ordering_policy,
+            "observation_window_start": specification.observation_window_start,
+            "observation_window_end": specification.observation_window_end,
+            "reachable_historical_commit_count": len(reachable_records),
+            "pre_window_historical_commit_count": len(reachable_records) - len(records),
+            "reachable_history_digest": history_digest,
             "records": records,
         }
         content = _canonical_bytes(payload)
@@ -370,6 +444,9 @@ class QtCommitExtractor:
             artifact=artifact,
             ordering_policy=specification.ordering_policy,
             command_evidence=tuple(sorted(reader.evidence)),
+            reachable_historical_commit_count=len(reachable_records),
+            pre_window_historical_commit_count=len(reachable_records) - len(records),
+            reachable_history_digest=history_digest,
         )
         self._write_once(Path(output_path).resolve(), content)
         return result
@@ -446,6 +523,11 @@ class QtCommitExtractor:
                 os.fsync(temporary.fileno())
             os.link(temporary_name, destination)
         except FileExistsError as error:
+            try:
+                if destination.read_bytes() == content:
+                    return
+            except OSError:
+                pass
             raise QtCommitExtractionError("commit artifact already exists") from error
         except OSError as error:
             raise QtCommitExtractionError(

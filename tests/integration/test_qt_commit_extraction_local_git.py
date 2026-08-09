@@ -21,6 +21,14 @@ from extraction.qt_repository_acquisition import (
 CANONICAL = "https://code.qt.io/qt/qtbase.git"
 
 
+def commit_policy() -> QtCommitExtractionSpecification:
+    return QtCommitExtractionSpecification(
+        "1.0.0",
+        observation_window_start="2000-12-31T00:00:00+00:00",
+        observation_window_end="2001-01-03T23:59:59+00:00",
+    )
+
+
 def git(repository: Path, *arguments: str, env: dict[str, str] | None = None) -> str:
     environment = {
         "GIT_CONFIG_NOSYSTEM": "1",
@@ -88,7 +96,7 @@ def test_artifact_is_deterministic_complete_and_oldest_first(
     tmp_path: Path, acquired_repository
 ) -> None:
     repository, acquisition, first, second = acquired_repository
-    policy = QtCommitExtractionSpecification("1.0.0")
+    policy = commit_policy()
     first_output = tmp_path / "commits-one.json"
     second_output = tmp_path / "commits-two.json"
     one = QtCommitExtractor().extract(acquisition, repository, first_output, policy)
@@ -134,7 +142,7 @@ def test_exact_acquired_revision_is_used_even_when_head_moves(
         acquisition,
         repository,
         tmp_path / "anchored.json",
-        QtCommitExtractionSpecification("1.0.0"),
+        commit_policy(),
     )
     assert len(result.records) == 2
     assert result.records[-1].commit_id == second
@@ -151,6 +159,6 @@ def test_existing_artifact_is_never_overwritten(
             acquisition,
             repository,
             output,
-            QtCommitExtractionSpecification("1.0.0"),
+            commit_policy(),
         )
     assert output.read_text(encoding="utf-8") == "keep"
