@@ -1,0 +1,73 @@
+{
+  "agreement_statistics_present": false,
+  "algorithm": "deterministic greedy observable-coverage then SHA-256 seeded order",
+  "artifact_sha256": {
+    "blinded_review_package.jsonl": "f579085edc1ebcd4ee96e61bcf381783c8fa93e7abfa79d4bcb7ba2a82413d6d",
+    "decision_matrix.csv": "4af7c4110fcabf7d8494aac352f7d3f78a360d24d8d4f8eac16a318a6b7ca06c",
+    "field_definitions.md": "56630d04069702410f52a4cd7da0ea24da00ac9778640903f4bce191601f334e",
+    "protocol.json": "70468398c946f95aaf2b3c051917c7e30a2d73e4608ce37a90c17a1e609d3b6c",
+    "recovery_and_gate.md": "1dd76c1d27a6908439ed3abc9b47d3163b6284acffa976051ed98c34774d6144",
+    "review_form_template.csv": "f7ecf88312d268f3a7b16c739593eb91861680648879b698810c7e74adeb84ae",
+    "reviewer_A_form.csv": "ddffa314ce01b0f9795377a72e45a52013b5ac689d681bcd0b68039fc6f23771",
+    "reviewer_B_form.csv": "ddffa314ce01b0f9795377a72e45a52013b5ac689d681bcd0b68039fc6f23771",
+    "reviewer_instructions.md": "2b0c3b2d6a0e199a670b55ccd52e52fb93ff45da42e468bdf298238cf316b6ed",
+    "sample_review_package.py": "2a0864d838fbe48b410af178cfdbf5f6bf46172931a422179b312a5fc249b6fc"
+  },
+  "eligible_relationship_count": 3791,
+  "human_review_status": "HUMAN_REVIEW_REQUIRED_AFTER_INDEPENDENCE_GATE",
+  "independence_status": "NOT_DEMONSTRATED",
+  "input_sha256": {
+    "artifacts/derived/qtbase-commit-issue-links.json": "5a856d87ebf1975c6df491842a8cb5cdb1f4e486ad25dbacfb71ec766f1a1e31",
+    "artifacts/qtbase/diff-statistics/a1af25290bbd078628e362d4b704a047853d620c/qt-diff-statistics.jsonl": "79d5215b1bcb6f053e2d52e8e08e4a085924f2e9d9f07b4dce2021efd298d417",
+    "artifacts/qtbase/diffs/a1af25290bbd078628e362d4b704a047853d620c/qt-commit-diffs.jsonl": "917ee5354921822535b6c466645fe44f6375733748385c74722b8818a68486e6",
+    "artifacts/qtbase/issues/qtbug-cloud-60b32ea8c64ec02c/qt-issues.jsonl": "d1ec5febfe64e4e5029c252435f2796b91b67b304be6fcc54b0381eb040f4d2c",
+    "artifacts/raw/qtbase-commits.json": "75bd81bdc36eec906c00f096aa51697c028e7dbcab315bb63ea88653acad4993"
+  },
+  "protocol_id": "PROSPECTIVE_ALTERNATIVE_B_V1",
+  "represented_observable_stress_candidates": [
+    "assertive_non_corrective_candidate",
+    "deletion-dominant",
+    "deletion-only",
+    "future_fix_claim_candidate",
+    "housekeeping_or_provenance_candidate",
+    "mitigation_candidate",
+    "reversal_of_suppression_candidate",
+    "suppression_candidate",
+    "temporal_anomaly",
+    "test_only",
+    "weak_or_absent_issue_description"
+  ],
+  "sample_size": 48,
+  "seed": "SPRINT-10.8.2.18C.4-PROSPECTIVE-2026-08-14",
+  "source_head": "3388cd919ab72af3ab1ed78af11edc8637fddc62",
+  "strata_counts": {
+    "change_family": {
+      "documentation-only": 2,
+      "source-or-mixed": 38,
+      "test-only": 8
+    },
+    "deletion_band": {
+      "deletion-dominant": 10,
+      "deletion-only": 3,
+      "mixed": 27,
+      "none": 8
+    },
+    "diff_availability": {
+      "available": 48
+    },
+    "issue_description_availability": {
+      "absent-or-weak": 1,
+      "present": 47
+    },
+    "reference_type": {
+      "fixes": 1,
+      "plain": 5,
+      "task-number": 42
+    },
+    "temporal_relation": {
+      "ADMISSIBLE": 47,
+      "INADMISSIBLE": 1
+    }
+  },
+  "z_szz_fields_present": false
+}
