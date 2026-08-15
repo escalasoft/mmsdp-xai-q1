@@ -104,7 +104,11 @@ def extracted_inputs(tmp_path: Path):
         acquisition,
         repository,
         tmp_path / "commits.json",
-        QtCommitExtractionSpecification("1.0.0"),
+        QtCommitExtractionSpecification(
+            "1.0.0",
+            observation_window_start="2001-01-01T00:00:00+00:00",
+            observation_window_end="2100-01-01T00:00:00+00:00",
+        ),
     )
     spec = QtDiffExtractionSpecification(
         repository_name="qtbase",

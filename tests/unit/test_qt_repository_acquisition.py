@@ -189,13 +189,16 @@ def test_metadata_rejects_runtime_and_local_identity() -> None:
         specification(metadata={"note": "/tmp/local"})
 
 
-def test_configuration_keeps_deliberate_placeholder() -> None:
+def test_configuration_binds_approved_immutable_revision() -> None:
     config_path = (
         Path(__file__).resolve().parents[2] / "configs/qt_repository_acquisition.json"
     )
     config = json.loads(config_path.read_text(encoding="utf-8"))
     assert config["canonical_repository_url"] == CANONICAL
-    assert config["requested_reference"] == "revision-required-before-execution"
+    assert config["requested_reference"] == ("a1af25290bbd078628e362d4b704a047853d620c")
+    assert config["metadata"]["observation_window_start_utc_inclusive"] == (
+        "2011-06-18T00:00:00Z"
+    )
 
 
 def test_adapter_has_no_downstream_scientific_apis() -> None:

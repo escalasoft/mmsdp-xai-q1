@@ -2,5 +2,9 @@
   "schema_version": "1.0.0",
   "artifact_repository_relative_path": "artifacts/raw/qtbase-commits.json",
   "ordering_policy": "topological-oldest-first-v1",
-  "metadata": {}
+  "observation_window_start": "2011-06-18T00:00:00Z",
+  "observation_window_end": "2014-03-18T23:59:59Z",
+  "metadata": {
+    "history_policy": "full-reachable-history-for-provenance; in-window-commits-only-for-observations"
+  }
 }

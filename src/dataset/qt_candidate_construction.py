@@ -386,18 +386,76 @@ class QtCandidateConstructor:
                             exclusions[exclusion.exclusion_identifier] = exclusion
 
         ordered_attributions = tuple(attributions[key] for key in sorted(attributions))
+        eligible_commit_ids = {
+            item.commit_id for item in commit_extraction_result.records
+        }
+        outside_window_attributions = tuple(
+            item
+            for item in ordered_attributions
+            if item.blamed_historical_commit not in eligible_commit_ids
+        )
+        for attribution in outside_window_attributions:
+            values = dict(
+                disposition="excluded",
+                reason="outside-observation-window",
+                fixing_commit=attribution.fixing_commit,
+                baseline_commit=attribution.baseline_commit,
+                issue_identifier=attribution.issue_identifier,
+                target_evidence_identifier=attribution.target_evidence_identifier,
+                hunk_identifier=attribution.hunk_identifier,
+                old_path=attribution.old_path,
+                old_blob_identifier=attribution.old_blob_identifier,
+                deleted_preimage_line_number=(attribution.deleted_preimage_line_number),
+                policy_version=attribution.policy_version,
+                policy_digest=attribution.policy_digest,
+                detail_code="blamed-commit-precedes-observation-window",
+                blamed_historical_commit=attribution.blamed_historical_commit,
+            )
+            exclusion = ScientificCandidateExclusionRecord(
+                **values,
+                exclusion_identifier=(
+                    ScientificCandidateExclusionRecord.calculate_identifier(**values)
+                ),
+            )
+            exclusions[exclusion.exclusion_identifier] = exclusion
         ordered_exclusions = tuple(exclusions[key] for key in sorted(exclusions))
-        candidates = self._candidates(ordered_attributions, policy)
+        eligible_attributions = tuple(
+            item
+            for item in ordered_attributions
+            if item.blamed_historical_commit in eligible_commit_ids
+        )
+        candidates = self._candidates(eligible_attributions, policy)
         scientific_spec = specification.scientific_specification
         validation = ScientificCandidateConstructionValidation(
-            True,
-            scientific_spec.specification_digest,
-            policy.policy_digest,
-            len(ordered_attributions),
-            len(candidates),
-            len(ordered_exclusions),
-            (),
-            (),
+            is_valid=True,
+            specification_digest=scientific_spec.specification_digest,
+            policy_digest=policy.policy_digest,
+            attribution_count=len(ordered_attributions),
+            candidate_count=len(candidates),
+            exclusion_count=len(ordered_exclusions),
+            error_codes=(),
+            warning_codes=(),
+            outside_observation_window_attribution_count=len(
+                outside_window_attributions
+            ),
+            outside_observation_window_identity_digest=(
+                _digest(
+                    {
+                        "attribution_identifiers": [
+                            item.attribution_identifier
+                            for item in outside_window_attributions
+                        ],
+                        "blamed_historical_commits": sorted(
+                            {
+                                item.blamed_historical_commit
+                                for item in outside_window_attributions
+                            }
+                        ),
+                    }
+                )
+                if outside_window_attributions
+                else None
+            ),
         )
         upstream = dict(
             sorted(

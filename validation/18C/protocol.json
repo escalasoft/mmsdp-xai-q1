@@ -1,0 +1,60 @@
+{
+  "protocol_id": "PROSPECTIVE_ALTERNATIVE_B_V1",
+  "protocol_version": "1.0.0",
+  "status": "FROZEN_NON_PRODUCTION",
+  "frozen_at": "2026-08-14T11:53:38-05:00",
+  "source_commit": "3388cd919ab72af3ab1ed78af11edc8637fddc62",
+  "production_labels_may_be_modified": false,
+  "historical_18c1_exclusion_recovery": "NOT_RECOVERABLE",
+  "historical_18c2_matrix_recovery": "NOT_RECOVERABLE",
+  "independence_status": "NOT_DEMONSTRATED",
+  "independence_blocker": "The identities of all 18 protocol-design cases are unknown; no partition of the same frozen relationship corpus can prove that a sampled relationship was not among them.",
+  "exclusion_mechanism": {
+    "type": "historical_exact-list-only",
+    "identifiers": [],
+    "digest": null,
+    "rule": "Exclude every recovered 18C.1 relationship identifier. Because none were exactly recovered, candidate sampling may be prepared but must not be represented as independent validation. A reviewer must supply the exact list or certify case-level non-reuse from independently preserved records before review begins."
+  },
+  "sampling": {
+    "seed": "SPRINT-10.8.2.18C.4-PROSPECTIVE-2026-08-14",
+    "algorithm": "validation/18C/sample_review_package.py",
+    "target_size": 48,
+    "selection": "deterministic greedy coverage of pre-adjudication strata, then seeded SHA-256 order",
+    "strata": [
+      "reference_type",
+      "temporal_relation",
+      "diff_availability",
+      "deletion_band",
+      "change_family",
+      "issue_description_availability"
+    ]
+  },
+  "eligibility": {
+    "unit": "exact commit-issue-reference relationship",
+    "required": [
+      "relationship occurs in qtbase-commit-issue-links.json",
+      "commit metadata exists",
+      "issue metadata exists",
+      "relationship identifier is unique",
+      "relationship is not in the exact historical exclusion set"
+    ],
+    "not_required": ["diff availability", "issue description", "issue resolution timestamp"],
+    "forbidden_inputs": ["production target label", "model feature values", "model outcomes", "Z or SZZ opportunity"]
+  },
+  "review": {
+    "reviewers_required": 2,
+    "independence": "genuine independent human adjudication before comparison",
+    "blinding": "Reviewer packages contain no production target, model output, other reviewer judgment, or Z/SZZ field.",
+    "states": ["FIXING", "NON_FIXING", "UNRESOLVED"],
+    "categories": ["C1", "C2", "C3", "C4"],
+    "agreement_metrics_allowed_only_after_genuine_dual_review": true
+  },
+  "leakage_controls": {
+    "future_model_outcomes_used": false,
+    "z_or_szz_used": false,
+    "model_features_define_target": false,
+    "target_derived_features_introduced": false,
+    "temporal_use": "admissibility only",
+    "production_labels_touched": false
+  }
+}
