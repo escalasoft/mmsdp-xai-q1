@@ -1,0 +1,25 @@
+{
+  "experiment_version": "jit-defects4j-controlled-multimodal-fusion-1.0.0",
+  "fit_partition": "train",
+  "evaluation_partition": "validation",
+  "sealed_partition": "test",
+  "random_seed": 0,
+  "base_candidates": {
+    "CODE": "jit-10.8.2.25-code-rf-2",
+    "PROCESS": "jit-10.8.2.25-process-rf-2",
+    "TEXT": "jit-10.8.2.25-text-lr-2"
+  },
+  "fusion_candidates": [
+    {"candidate_id": "code-text-equal", "modalities": ["CODE", "TEXT"], "weights": [0.5, 0.5]},
+    {"candidate_id": "code-process-equal", "modalities": ["CODE", "PROCESS"], "weights": [0.5, 0.5]},
+    {"candidate_id": "text-process-equal", "modalities": ["TEXT", "PROCESS"], "weights": [0.5, 0.5]},
+    {"candidate_id": "code-process-text-equal", "modalities": ["CODE", "PROCESS", "TEXT"], "weights": [0.3333333333333333, 0.3333333333333333, 0.3333333333333333]}
+  ],
+  "fusion_strategy": "fixed-equal-weight-probability-average",
+  "selection_policy": "descending-validation-roc-auc-then-average-precision-then-fewer-modalities-then-candidate-id",
+  "near_tie_roc_auc_tolerance": 0.005,
+  "process_negligible_absolute_tolerance": 0.005,
+  "fixed_descriptive_threshold": 0.5,
+  "imbalance_policy": "natural-prevalence-no-resampling-no-class-weighting",
+  "prohibited_operations": ["test-predictor-access", "test-prediction", "test-metrics", "test-selection", "train-validation-refit", "threshold-optimization", "resampling", "calibration", "xai"]
+}
