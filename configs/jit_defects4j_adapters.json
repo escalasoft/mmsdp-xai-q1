@@ -1,0 +1,29 @@
+{
+  "adapter_version": "jit-defects4j-model-input-adapters-1.0.0",
+  "source_dataset_version": "1.0.0",
+  "source_scientific_identity": "e509995da233c932cafce531c13ad2cd617a0d8abbe8d81ccaa373b8f29fa519",
+  "source_manifest_sha256": "95b1a362f6756f641cc575cabf54a3a99e2846568d5ef110dac38a45f3d81ef1",
+  "code": {
+    "backend": "code-structural-counts-1.0.0",
+    "features": ["changed_file_count", "files_added", "files_deleted", "files_modified", "files_other", "mode_change_count"]
+  },
+  "process": {
+    "backend": "ancestor-only-raw-numeric-1.0.0",
+    "features": ["parent_count", "is_merge_commit", "has_prior_history", "prior_project_commit_count"],
+    "scaling": "none"
+  },
+  "text": {
+    "backend": "train-fitted-tfidf-unigram-1.0.0",
+    "source_field": "raw_commit_message",
+    "missing_sentinel": "<MISSING_COMMIT_MESSAGE>",
+    "lowercase": true,
+    "token_pattern": "(?u)\\b[^\\W_]{2,}\\b",
+    "minimum_document_frequency": 2,
+    "maximum_features": 5000,
+    "vocabulary_order": "descending-train-document-frequency-then-token",
+    "weighting": "sublinear-tf-smooth-idf-l2"
+  },
+  "fit_partition": "train",
+  "development_transform_partitions": ["train", "validation"],
+  "test_policy": "sealed-explicit-final-evaluation-capability-required"
+}
