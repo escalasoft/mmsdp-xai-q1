@@ -228,6 +228,7 @@ outputs/models/*
 outputs/metrics/*
 outputs/figures/*
 outputs/reports/*
+outputs/adapters/*
 !outputs/models/.gitkeep
 !outputs/metrics/.gitkeep
 !outputs/figures/.gitkeep
