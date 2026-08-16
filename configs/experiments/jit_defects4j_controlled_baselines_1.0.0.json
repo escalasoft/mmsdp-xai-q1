@@ -1,0 +1,22 @@
+{
+  "experiment_version": "jit-defects4j-controlled-baselines-1.0.0",
+  "fit_partition": "train",
+  "evaluation_partition": "validation",
+  "sealed_partition": "test",
+  "modalities": ["CODE", "PROCESS", "TEXT"],
+  "random_seed": 0,
+  "imbalance_policy": "natural-prevalence-no-resampling-no-class-weighting",
+  "selection_policy": "descending-validation-roc-auc-then-average-precision-then-candidate-id",
+  "models": {
+    "LR": [
+      {"C": 0.1, "class_weight": null, "fit_intercept": true, "max_iter": 2000, "random_state": 0, "solver": "liblinear", "tol": 0.0001},
+      {"C": 1.0, "class_weight": null, "fit_intercept": true, "max_iter": 2000, "random_state": 0, "solver": "liblinear", "tol": 0.0001}
+    ],
+    "RF": [
+      {"bootstrap": true, "class_weight": null, "criterion": "gini", "max_depth": null, "max_features": "sqrt", "min_samples_leaf": 1, "min_samples_split": 2, "n_estimators": 100, "random_state": 0},
+      {"bootstrap": true, "class_weight": null, "criterion": "gini", "max_depth": 12, "max_features": "sqrt", "min_samples_leaf": 5, "min_samples_split": 2, "n_estimators": 100, "random_state": 0}
+    ]
+  },
+  "fixed_descriptive_threshold": 0.5,
+  "prohibited_operations": ["test-access", "train-validation-refit", "resampling", "calibration", "multimodal-fusion", "stacking", "xai", "threshold-optimization"]
+}
