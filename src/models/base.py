@@ -150,10 +150,22 @@ class BaseModel(
         Raises:
             ValueError: If the input lengths differ.
         """
-        if len(first) != len(second):
+
+        def observation_count(value: Sized) -> int:
+            try:
+                return len(value)
+            except TypeError:
+                shape = getattr(value, "shape", None)
+                if not shape:
+                    raise
+                return int(shape[0])
+
+        first_count = observation_count(first)
+        second_count = observation_count(second)
+        if first_count != second_count:
             raise ValueError(
                 f"{first_name} and {second_name} must have the same length "
-                f"({len(first)} != {len(second)})"
+                f"({first_count} != {second_count})"
             )
 
     @abstractmethod
