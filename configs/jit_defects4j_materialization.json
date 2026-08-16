@@ -1,0 +1,35 @@
+{
+  "schema_version": "jit-defects4j-canonical-dataset-1.0.0",
+  "dataset_version": "1.0.0",
+  "source": {
+    "repository_url": "https://github.com/jacknichao/JIT-Fine.git",
+    "revision": "584799fdec6095ab75a45fd2a5f8db5b12163aa5",
+    "package_filename": "data.zip",
+    "package_sha256": "9e5ca1a393b70ee7e87c410b162005958775f3f3732f9f83da9dd24a7dfe2b47"
+  },
+  "observation_identity": ["project", "commit_hash"],
+  "canonical_timestamp": "git_committer_timestamp",
+  "split": {
+    "scope": "within_project",
+    "order": ["git_committer_timestamp", "commit_hash"],
+    "fractions": [0.70, 0.15, 0.15],
+    "rounding": "floor-train-floor-validation-remainder-test",
+    "shuffle": false,
+    "supplied_membership_reused": false
+  },
+  "missing_text_sentinel": "<MISSING_COMMIT_MESSAGE>",
+  "code": [
+    "file_changes",
+    "files_added",
+    "files_deleted",
+    "files_modified",
+    "files_other"
+  ],
+  "process": [
+    "parent_count",
+    "is_merge_commit",
+    "has_prior_history",
+    "prior_project_commit_count"
+  ],
+  "text": ["raw_commit_message"]
+}
