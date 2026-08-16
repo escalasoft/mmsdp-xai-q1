@@ -1,0 +1,24 @@
+{
+  "schema_version": "jit-defects4j-migration-audit-1.0.0",
+  "source": {
+    "repository_url": "https://github.com/jacknichao/JIT-Fine.git",
+    "branch": "master",
+    "revision": "584799fdec6095ab75a45fd2a5f8db5b12163aa5",
+    "package_filename": "data.zip",
+    "package_bytes": 75326372,
+    "package_sha256": "9e5ca1a393b70ee7e87c410b162005958775f3f3732f9f83da9dd24a7dfe2b47",
+    "publication_doi": "10.1145/3540250.3549165"
+  },
+  "observation_identity": ["project", "commit_hash"],
+  "target_field": "is_buggy_commit",
+  "canonical_timestamp": "git_committer_timestamp",
+  "split": {
+    "scope": "within_project",
+    "order": ["committer_timestamp", "commit_hash"],
+    "fractions": [0.70, 0.15, 0.15],
+    "shuffle": false,
+    "supplied_membership_reused": false
+  },
+  "read_only": true,
+  "modeling_permitted": false
+}

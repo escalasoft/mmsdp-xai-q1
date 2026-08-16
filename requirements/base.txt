@@ -1,2 +1,3 @@
-# Runtime dependencies will be added incrementally as implementation decisions are approved.
-# No runtime packages are required for the Sprint 1 repository scaffold.
+# Required only by the read-only JIT-Defects4J audit CLI for the official
+# replication package's published pandas pickle files.
+pandas==2.2.3
