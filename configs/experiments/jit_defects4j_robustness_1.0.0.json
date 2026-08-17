@@ -1,0 +1,26 @@
+{
+  "experiment_version": "jit-defects4j-robustness-1.0.0",
+  "sprint": "10.8.2.27",
+  "branch": "sprint-10/jit-defects4j-robustness-analysis",
+  "fit_partition": "train",
+  "evaluation_partition": "validation",
+  "sealed_partition": "test",
+  "primary_candidate": "CODE+TEXT",
+  "fusion_strategy": "equal_weight_probability_late_fusion",
+  "fusion_weights": [0.5, 0.5],
+  "seed_set": [0, 7, 13, 21, 42, 73, 101, 202],
+  "bootstrap_replicates": 1000,
+  "bootstrap_seed": 108227,
+  "training_fractions": [1.0, 0.9, 0.8],
+  "training_fraction_seeds": [0, 7, 13, 21, 42, 73, 101, 202],
+  "bootstrap_positive_threshold": 0.8,
+  "expected_identities": {
+    "dataset_identity": "e509995da233c932cafce531c13ad2cd617a0d8abbe8d81ccaa373b8f29fa519",
+    "canonical_manifest_sha256": "95b1a362f6756f641cc575cabf54a3a99e2846568d5ef110dac38a45f3d81ef1",
+    "frozen_boundary_identity": "d1b4448e22a1dba4292b9cf8969ba77db0cf9a10ef66dfddf98642cb5dc078a7",
+    "adapter_identity": "9c22de3d15d09132af1920eec0fd02e3ea9f879a70ecbd90bc5adc7913b63d2c",
+    "baseline_result_identity": "535459c72b0a91f9a82d19d1742d47feb5c7d8ab382d86756270336f7716268b",
+    "fusion_result_identity": "84d08dae0dca0158b786d70c90f05e597a3a22147c5aea82ae0500aca9efe4cd"
+  },
+  "prohibited_operations": ["test-predictor-access", "test-transform", "test-prediction", "test-metrics", "test-bootstrap", "test-project-analysis", "test-thresholding", "test-selection", "train-validation-refit", "calibration", "xai", "learned-fusion", "fusion-weight-optimization"]
+}
