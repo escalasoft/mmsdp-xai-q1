@@ -1,0 +1,60 @@
+{
+  "schema_version": "jit-defects4j-frozen-architecture-1.0.0",
+  "sprint": "10.8.2.28",
+  "experimental_unit": "commit",
+  "dataset": {
+    "name": "JIT-Defects4J",
+    "identity": "e509995da233c932cafce531c13ad2cd617a0d8abbe8d81ccaa373b8f29fa519",
+    "manifest_sha256": "95b1a362f6756f641cc575cabf54a3a99e2846568d5ef110dac38a45f3d81ef1",
+    "frozen_boundary_identity": "d1b4448e22a1dba4292b9cf8969ba77db0cf9a10ef66dfddf98642cb5dc078a7",
+    "adapter_identity": "9c22de3d15d09132af1920eec0fd02e3ea9f879a70ecbd90bc5adc7913b63d2c"
+  },
+  "prior_evidence": {
+    "sprint": "10.8.2.27",
+    "result_identity": "384e640924979d59882aa6b567b7d3216bdb7420948f66288a48d44f66e1c618",
+    "configuration_digest": "76d26af733a191a0f9927b4a48db8f29b2c33ec422bab401de3a552b71be178d",
+    "decision": "GO"
+  },
+  "primary_modalities": ["CODE", "TEXT"],
+  "base_predictors": {
+    "CODE": {
+      "candidate_id": "jit-10.8.2.25-code-rf-2",
+      "family": "RandomForestClassifier",
+      "configuration_digest": "cb70d1e47ae64bc0dd2ca95d09610332157116e90c0b51234c25be94c5de75f1",
+      "preprocessing": "TRAIN-fitted StandardScaler over six CODE-STRUCTURAL features",
+      "preprocessing_state_digest": "28c09e8e32fab4cbc51ba939b32e4d6b82fa394e5441df71724cfeca361b9bb3",
+      "feature_dimension": 6,
+      "random_state": 0
+    },
+    "TEXT": {
+      "candidate_id": "jit-10.8.2.25-text-lr-2",
+      "family": "LogisticRegression(liblinear)",
+      "configuration_digest": "e1b7aa6462309fd98665d770ab44bc778c092c6108a2c16963079b9c3d07689a",
+      "preprocessing": "TRAIN-fitted TF-IDF unigram sparse CSR; no VALIDATION/TEST vocabulary fit",
+      "preprocessing_state_digest": "a49422ffdead08298f3aa37f3bf76240b56cb6f105509bf4aca89b751ac89723",
+      "adapter_text_state_digest": "fa99100fc470530d3445f08f0a855aeb42ec02ed038d434e5ed000b662fa8f35",
+      "feature_dimension": 5000,
+      "random_state": 0
+    }
+  },
+  "probability_semantics": {
+    "target": "P(y=defect-prone|commit)",
+    "positive_label": 1,
+    "class_order": [0, 1],
+    "source_column": 1
+  },
+  "fusion": {
+    "strategy": "fixed_equal_weight_probability_level_late_fusion",
+    "learned": false,
+    "weights": {"CODE": 0.5, "TEXT": 0.5},
+    "equation": "p_fusion = 0.5 * p_CODE + 0.5 * p_TEXT",
+    "random_state": null
+  },
+  "process_status": {
+    "in_primary_predictor": false,
+    "retained": true,
+    "status": "OPTIONAL ABLATION MODALITY / NOT SUPPORTED AS PRIMARY CONTRIBUTOR UNDER CURRENT REPRESENTATION",
+    "scope": "representation- and experiment-specific; not evidence of intrinsic uselessness"
+  },
+  "immutability": "Calibration may consume only p_fusion and may not alter features, preprocessing, base predictors, or fusion weights."
+}
