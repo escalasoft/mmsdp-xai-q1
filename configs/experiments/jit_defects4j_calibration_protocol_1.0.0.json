@@ -1,0 +1,92 @@
+{
+  "schema_version": "jit-defects4j-calibration-protocol-1.0.0",
+  "sprint": "10.8.2.28",
+  "architecture_specification": "configs/experiments/jit_defects4j_frozen_architecture_1.0.0.json",
+  "calibration_target": "Frozen post-fusion raw p_fusion = P(y=defect-prone|commit)",
+  "candidate_methods": ["UNCALIBRATED", "PLATT", "ISOTONIC"],
+  "method_contracts": {
+    "UNCALIBRATED": "identity mapping; mandatory reference",
+    "PLATT": "monotonic logistic sigmoid fitted to the one-dimensional raw fused probability",
+    "ISOTONIC": "monotonic non-parametric isotonic regression with predictions clipped to [0,1]"
+  },
+  "data_usage": {
+    "TRAIN": ["fit frozen modality preprocessing", "fit frozen CODE and TEXT base predictors"],
+    "VALIDATION": ["fit calibration mappings within cross-fitting training folds", "evaluate only on held-out cross-fitting folds", "select calibrator type"],
+    "TEST": ["SEALED; no predictive access, transformations, fitting, selection, metrics, plots, or thresholds"],
+    "train_validation_refit_in_this_sprint": false
+  },
+  "cross_fitting": {
+    "partition": "VALIDATION",
+    "splitter": "StratifiedKFold",
+    "folds": 5,
+    "shuffle": true,
+    "random_seed": 108228,
+    "stratification_target": "binary defect-prone label",
+    "rationale": "The frozen VALIDATION partition has 260 positives and 3826 nominal negatives, supporting five deterministic class-stratified folds; calibration is a post-prediction mapping, so no feature or temporal model refit occurs.",
+    "fit_subset": "four VALIDATION folds for PLATT/ISOTONIC; none for UNCALIBRATED",
+    "evaluation_subset": "the disjoint held-out VALIDATION fold",
+    "aggregation": "place each held-out calibrated probability back at its original observation index; concatenate only by original VALIDATION order; compute metrics once over all OOF probabilities",
+    "minimum_fit_positives": 2,
+    "minimum_fit_negatives": 2,
+    "minimum_evaluation_positives": 1,
+    "minimum_evaluation_negatives": 1,
+    "pathological_fold_policy": "fail the protocol before candidate comparison; do not change K, seed, or folds post hoc",
+    "isotonic_feasibility": "each fit fold must contain both labels and at least two distinct raw probabilities; otherwise ISOTONIC is ineligible with a recorded failure and no fallback mapping",
+    "base_probabilities": "generated once by the frozen TRAIN-fitted predictor; calibrator folds never refit base models or preprocessing"
+  },
+  "metrics": {
+    "primary": "Brier Score",
+    "brier": "(1/N) * sum_i (p_i - y_i)^2 over all OOF VALIDATION observations",
+    "secondary": "Expected Calibration Error",
+    "ece": {
+      "bins": 10,
+      "strategy": "fixed equal-width over [0,1]",
+      "edges": [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+      "intervals": "[left,right), except final bin [0.9,1.0]",
+      "empty_bins": "omitted (zero contribution)",
+      "formula": "ECE = sum_{b:n_b>0} (n_b/N) * abs(mean_{i in b}(y_i) - mean_{i in b}(p_i))",
+      "weighting": "empirical bin support n_b/N"
+    },
+    "diagnostic": "reliability diagram",
+    "secondary_invariance_checks": ["ROC-AUC", "Average Precision"]
+  },
+  "reliability_diagram": {
+    "methods": ["UNCALIBRATED", "PLATT", "ISOTONIC"],
+    "bin_edges": "identical fixed ECE edges for every method",
+    "x": "mean predicted probability among observations in non-empty bin",
+    "y": "observed fraction positive among observations in non-empty bin",
+    "reference": "identity line y=x",
+    "support": "display n_b per non-empty bin",
+    "selection_use": false,
+    "test_diagrams": false
+  },
+  "selection_rule": {
+    "primary": "lowest OOF VALIDATION Brier Score",
+    "primary_absolute_tolerance": 1e-12,
+    "secondary_within_primary_tie": "lowest OOF VALIDATION ECE",
+    "secondary_absolute_tolerance": 1e-12,
+    "final_tie_order": ["UNCALIBRATED", "PLATT", "ISOTONIC"],
+    "composite_score": false,
+    "diagram_based_selection": false,
+    "test_based_selection": false
+  },
+  "threshold_separation": {
+    "calibrator_selection_uses_threshold_metrics": false,
+    "forbidden_in_this_sprint": ["threshold optimization", "F1", "precision", "recall", "MCC", "accuracy", "cost-sensitive or business thresholds"]
+  },
+  "leakage_safeguards": {
+    "forbidden_predictors": ["target-derived predictors", "fixing/SZZ evidence", "future information", "split identifiers", "issue-linkage evidence"],
+    "test_derived_transformations": false,
+    "test_calibrator_fit": false,
+    "test_method_selection": false,
+    "test_threshold_selection": false,
+    "project_identifier_as_predictor": false,
+    "project_identifier_metadata_only": true
+  },
+  "test_seal": {
+    "TEST_SEALED": true,
+    "allowed": "pre-existing partition identity/count metadata only; no row-level TEST predictors or labels",
+    "opening_conditions": ["protocol identities validated unchanged", "calibrator selected exclusively by predeclared OOF VALIDATION evidence", "separate final-refit and one-shot TEST evaluation protocol predeclared", "all leakage and quality gates pass", "explicit later-sprint authorization"]
+  },
+  "failure_conditions": ["frozen identity mismatch", "architecture mutation", "candidate-set mutation", "fold infeasibility", "OOF coverage not exactly once", "non-finite/out-of-range probabilities", "TEST predictive access", "threshold influence", "non-deterministic identity"]
+}
