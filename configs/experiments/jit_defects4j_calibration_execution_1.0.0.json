@@ -1,0 +1,13 @@
+{
+  "schema_version": "jit-defects4j-calibration-execution-1.0.0",
+  "sprint": "10.8.2.29",
+  "branch": "sprint-10/jit-defects4j-calibration-execution",
+  "architecture_identity": "0f0547ce58d19a7eee75a93bee6addbfe23251758c8c43fb29852f2009d0c47d",
+  "protocol_identity": "45233511ca629ea5f38e499029e0eb6dfcac7c160a52d030a31113ea36f35895",
+  "candidates": ["UNCALIBRATED", "PLATT", "ISOTONIC"],
+  "platt_implementation": {"class": "sklearn.linear_model.LogisticRegression", "solver": "liblinear", "random_state": 0},
+  "isotonic_implementation": {"class": "sklearn.isotonic.IsotonicRegression", "out_of_bounds": "clip"},
+  "test_access": false,
+  "threshold_optimization": false,
+  "final_refit_execution": false
+}
