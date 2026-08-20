@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0.0",
+  "documentary_inconsistencies": [
+    "Article alternates between three and four modalities, although the executable conceptual scope is CODE/PROCESS/TEXT.",
+    "Article/thesis describe early fusion, learned meta-fusion/stacking and Platt; frozen evidence is fixed CODE+TEXT fusion and isotonic.",
+    "Manuscript asserts consistent multimodal improvement and completed XAI beyond repository evidence.",
+    "Project plan assumes approximately 9.54% positives and threshold targets; sealed TEST prevalence is 3.8844% and no threshold is frozen."
+  ],
+  "documentary_rqs": {
+    "project_plan": [
+      "PE1 architecture",
+      "PE2 multimodal dataset",
+      "PE3 predictive improvement over uni/bimodal",
+      "PE4 calibration reliability",
+      "PE5 XAI interpretability"
+    ],
+    "thesis": [
+      "architecture/dataset",
+      "predictive multimodal improvement",
+      "calibration",
+      "explainability"
+    ]
+  },
+  "recommended_minimal_q1_rqs": [
+    {
+      "id": "RQ1",
+      "text": "Does multimodal integration improve temporally valid JIT prediction relative to unimodal baselines?"
+    },
+    {
+      "id": "RQ2",
+      "text": "What incremental information is contributed by CODE, PROCESS, and TEXT?"
+    },
+    {
+      "id": "RQ3",
+      "text": "Does the selected fusion strategy improve on simpler modality combinations?"
+    },
+    {
+      "id": "RQ4",
+      "text": "Does post-hoc calibration improve reliability without unacceptable discrimination loss?"
+    },
+    {
+      "id": "RQ5",
+      "text": "Are effects stable across temporal partitions and compatible external projects?"
+    },
+    {
+      "id": "RQ6",
+      "text": "For accepted models, what predictive factors drive outputs and how stable/useful are explanations?"
+    },
+    {
+      "id": "RQ7",
+      "text": "Does the model improve prioritization under realistic inspection budgets?"
+    }
+  ],
+  "adoption_rule": "Proposed alignment only; thesis/article must explicitly approve scope changes rather than silently replacing existing commitments."
+}

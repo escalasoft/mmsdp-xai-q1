@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "sprint_31_state": "SEALED_HISTORICAL_EVIDENCE",
+  "immutable_paths": [
+    "audits/jit-defects4j-one-shot-test/1.0.0",
+    "outputs/metrics/jit-defects4j-one-shot-test/1.0.0",
+    "configs/experiments/jit_defects4j_one_shot_test_1.0.0.json"
+  ],
+  "prohibitions": [
+    "rerun",
+    "rescore",
+    "tune",
+    "select features/models/fusion/calibration/thresholds from Sprint 31 TEST"
+  ],
+  "future_protocol": {
+    "development": "Use TRAIN/VALIDATION or newly defined chronological development folds without consulting Sprint 31 outcomes for adaptation.",
+    "final_evaluation": "Reserve an untouched later temporal boundary or independent compatible dataset, predeclare everything, persist fitted states, and open once.",
+    "sprint_31_role": "Report only as historical evidence for the frozen CODE+TEXT 0.5/0.5 isotonic configuration."
+  },
+  "sprint_32_execution_counts": {
+    "test_predictive_scoring": 0,
+    "model_training": 0,
+    "calibration_fitting": 0,
+    "xai_explanations": 0
+  }
+}
