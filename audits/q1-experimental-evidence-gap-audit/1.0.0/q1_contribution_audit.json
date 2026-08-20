@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "contributions": [
+    {
+      "contribution_id": "C1",
+      "contribution": "Leakage-controlled multimodal JIT defect prediction",
+      "classification": "PARTIALLY SUPPORTED",
+      "basis": "Leakage control is supported; sealed predictor is only CODE+TEXT."
+    },
+    {
+      "contribution_id": "C2",
+      "contribution": "Complementarity of CODE, PROCESS, and TEXT",
+      "classification": "NOT YET SUPPORTED",
+      "basis": "CODE+TEXT development evidence exists; PROCESS contribution is unsupported."
+    },
+    {
+      "contribution_id": "C3",
+      "contribution": "Benefit of multimodal fusion over unimodal prediction",
+      "classification": "PARTIALLY SUPPORTED",
+      "basis": "Development evidence favors fixed CODE+TEXT; no comparative sealed evaluation."
+    },
+    {
+      "contribution_id": "C4",
+      "contribution": "Probability calibration for trustworthy risk estimation",
+      "classification": "SUPPORTED NOW",
+      "basis": "Frozen isotonic calibration improved TEST Brier and ECE, scoped to one predictor/period."
+    },
+    {
+      "contribution_id": "C5",
+      "contribution": "Explainability of multimodal JIT predictions",
+      "classification": "NOT YET SUPPORTED",
+      "basis": "Code/tests are infrastructure, not empirical XAI evidence."
+    },
+    {
+      "contribution_id": "C6",
+      "contribution": "Temporal robustness",
+      "classification": "PARTIALLY SUPPORTED",
+      "basis": "One temporal TEST plus development stability; no repeated temporal origins."
+    },
+    {
+      "contribution_id": "C7",
+      "contribution": "Cross-project/external generalization",
+      "classification": "NOT YET SUPPORTED",
+      "basis": "No independent compatible external validation."
+    },
+    {
+      "contribution_id": "C8",
+      "contribution": "Operational software-testing relevance",
+      "classification": "NOT YET SUPPORTED",
+      "basis": "No effort/budget-aware accepted experiment."
+    }
+  ]
+}

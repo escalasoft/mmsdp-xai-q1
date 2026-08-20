@@ -1,0 +1,12 @@
+{
+  "schema_version": "q1-experimental-evidence-gap-audit-1.0.0",
+  "sprint": "10.8.2.32",
+  "mode": "documentary-and-repository-audit-only",
+  "output_namespace": "audits/q1-experimental-evidence-gap-audit/1.0.0",
+  "test_predictive_scoring": false,
+  "model_training": false,
+  "calibration_fitting": false,
+  "xai_execution": false,
+  "sealed_test_policy": "historical-evidence-only-no-rerun-rescore-selection-or-adaptation",
+  "decision_values": ["SPRINT_10.8.2.32_GO", "SPRINT_10.8.2.32_GO_WITH_LIMITATIONS", "SPRINT_10.8.2.32_BLOCKED"]
+}

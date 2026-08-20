@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "concerns": [
+    {
+      "id": "REV-A",
+      "concern": "Perfect RF/MM-RF results",
+      "disposition": "RESOLVED_FOR_CURRENT_PATH_ONLY",
+      "evidence": "Canonical denylist and plausible Sprint 25-31 metrics; old results remain superseded and unusable."
+    },
+    {
+      "id": "REV-B",
+      "concern": "bug_confidence/msg_has_bug_kw/has_bug_keyword proxies",
+      "disposition": "ABSENT_FROM_CURRENT_PREDICTIVE_PATH",
+      "evidence": "Canonical/schema leakage audits pass; repository search must remain a gate for semantic equivalents."
+    },
+    {
+      "id": "REV-C",
+      "concern": "Unimodal and bimodal baselines",
+      "disposition": "DEVELOPMENT_ONLY",
+      "evidence": "Sprints 25-27; repeated temporal confirmation missing."
+    },
+    {
+      "id": "REV-D",
+      "concern": "True C+P+T contribution",
+      "disposition": "NOT_SUPPORTED",
+      "evidence": "Development full candidate underperformed C+T; primary excludes PROCESS."
+    },
+    {
+      "id": "REV-E",
+      "concern": "Fusion, calibration, ablation",
+      "disposition": "PARTIAL",
+      "evidence": "Fixed fusion and isotonic supported within scope; stacking and full ablation/generalization missing."
+    },
+    {
+      "id": "REV-F",
+      "concern": "CV=2..11",
+      "disposition": "REJECTED_AS_ORDINARY_RANDOM_CV",
+      "evidence": "Random folds allow future-to-past learning; fold count is not a robustness argument."
+    }
+  ]
+}

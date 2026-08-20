@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "random_cv_decision": "REJECT ordinary shuffled/random k-fold CV=2..11 for temporally ordered JIT prediction; use blocked or rolling-origin evaluation.",
+  "sprints": [
+    {
+      "sprint_id": "10.8.2.33",
+      "phase": "A",
+      "scientific_objective": "Freeze a new post-Sprint-31 experimental protocol and validity gates.",
+      "hypothesis": "Not applicable: governance gate.",
+      "inputs": [
+        "documentary commitments",
+        "canonical lineage",
+        "feature contracts"
+      ],
+      "frozen_elements": [
+        "Sprint 31/31A artifacts",
+        "label semantics"
+      ],
+      "allowed_modifications": [
+        "new protocol",
+        "new future temporal boundaries",
+        "representation candidates declared without TEST evidence"
+      ],
+      "forbidden_modifications": [
+        "Sprint 31 rerun",
+        "selection from Sprint 31 metrics"
+      ],
+      "experiment": "No training; schema/provenance/temporal compatibility audit.",
+      "metrics": [
+        "coverage",
+        "denylist overlap",
+        "boundary checks"
+      ],
+      "statistical_analysis": "None.",
+      "acceptance_criteria": "Zero target proxies; time-available features; new untouched final boundary; fitted-state persistence required.",
+      "expected_artifact": "Versioned validity and evaluation contract.",
+      "dependency": [],
+      "scientific_claim_enabled": "Future results can be interpreted without contaminating Sprint 31."
+    },
+    {
+      "sprint_id": "10.8.2.34",
+      "phase": "B",
+      "scientific_objective": "Evaluate C/P/T, all pairs, and C+P+T on development temporal origins.",
+      "hypothesis": "Modalities may add complementary out-of-time signal; null/negative outcomes are accepted.",
+      "inputs": [
+        "10.8.2.33 contract"
+      ],
+      "frozen_elements": [
+        "labels",
+        "temporal folds",
+        "metrics",
+        "candidate representations"
+      ],
+      "allowed_modifications": [
+        "TRAIN-fold-only fitting"
+      ],
+      "forbidden_modifications": [
+        "random shuffling",
+        "new final TEST access"
+      ],
+      "experiment": "Rolling-origin/blocked temporal modality factorial comparison.",
+      "metrics": [
+        "ROC-AUC",
+        "AP",
+        "Brier",
+        "ECE",
+        "Recall@K",
+        "Precision@K"
+      ],
+      "statistical_analysis": "Store paired fold-level predictions; descriptive intervals pending synthesis.",
+      "acceptance_criteria": "Complete aligned results for 7 modality configurations with provenance.",
+      "expected_artifact": "Temporal modality comparison bundle.",
+      "dependency": [
+        "10.8.2.33"
+      ],
+      "scientific_claim_enabled": "Unimodal/bimodal/full model and modality contribution."
+    },
+    {
+      "sprint_id": "10.8.2.35",
+      "phase": "C",
+      "scientific_objective": "Compare fixed fusion and, only if retained, leakage-safe learned stacking; perform ablations.",
+      "hypothesis": "Fusion benefit exceeds simpler combinations without meta-feature leakage.",
+      "inputs": [
+        "10.8.2.34 predictions"
+      ],
+      "frozen_elements": [
+        "temporal origins",
+        "base candidates"
+      ],
+      "allowed_modifications": [
+        "predeclared fixed weights",
+        "nested temporal OOF meta-learner"
+      ],
+      "forbidden_modifications": [
+        "in-sample stacking features",
+        "weight tuning on final holdouts"
+      ],
+      "experiment": "Fusion comparison and leave-one-modality-out.",
+      "metrics": [
+        "ROC-AUC",
+        "AP",
+        "Brier",
+        "Recall@K"
+      ],
+      "statistical_analysis": "Paired fold effects and bootstrap within evaluation blocks.",
+      "acceptance_criteria": "Every fusion has a leakage audit and simpler comparator.",
+      "expected_artifact": "Fusion/ablation evidence bundle.",
+      "dependency": [
+        "10.8.2.34"
+      ],
+      "scientific_claim_enabled": "RQ2/RQ3."
+    },
+    {
+      "sprint_id": "10.8.2.36",
+      "phase": "D",
+      "scientific_objective": "Compare raw, Platt, and isotonic calibration for accepted candidates.",
+      "hypothesis": "Calibration reduces probabilistic error without unacceptable discrimination loss.",
+      "inputs": [
+        "accepted 10.8.2.35 models"
+      ],
+      "frozen_elements": [
+        "base scores",
+        "calibration folds",
+        "selection rule"
+      ],
+      "allowed_modifications": [
+        "calibration mapping only"
+      ],
+      "forbidden_modifications": [
+        "base-model adaptation",
+        "final-holdout selection"
+      ],
+      "experiment": "Nested/forward calibration within development periods.",
+      "metrics": [
+        "Brier",
+        "ECE",
+        "reliability diagram",
+        "ROC-AUC",
+        "AP"
+      ],
+      "statistical_analysis": "Paired Brier differences and interval estimates; ECE bin sensitivity.",
+      "acceptance_criteria": "Predeclared reliability improvement and all trade-offs reported.",
+      "expected_artifact": "Calibration comparison bundle.",
+      "dependency": [
+        "10.8.2.35"
+      ],
+      "scientific_claim_enabled": "RQ4/C4."
+    },
+    {
+      "sprint_id": "10.8.2.37",
+      "phase": "E1",
+      "scientific_objective": "Establish temporal robustness.",
+      "hypothesis": "Effects remain directionally stable under realistic temporal drift.",
+      "inputs": [
+        "frozen candidates"
+      ],
+      "frozen_elements": [
+        "rolling origins",
+        "horizons"
+      ],
+      "allowed_modifications": [
+        "time-respecting refit at each origin"
+      ],
+      "forbidden_modifications": [
+        "shuffled CV",
+        "future-to-past training"
+      ],
+      "experiment": "Rolling-origin or expanding-window evaluation with multiple chronological holdouts.",
+      "metrics": [
+        "ROC-AUC",
+        "AP",
+        "Brier",
+        "ECE",
+        "budget metrics"
+      ],
+      "statistical_analysis": "Period-level distributions and hierarchical reporting by project where feasible.",
+      "acceptance_criteria": "No temporal inversion; sufficient positive support disclosed; drift reported.",
+      "expected_artifact": "Temporal robustness panel.",
+      "dependency": [
+        "10.8.2.36"
+      ],
+      "scientific_claim_enabled": "RQ5/C6."
+    },
+    {
+      "sprint_id": "10.8.2.38",
+      "phase": "E2",
+      "scientific_objective": "Perform valid inference and compact model-family sensitivity.",
+      "hypothesis": "Framework effects have non-trivial magnitude and are not unique to one classifier.",
+      "inputs": [
+        "fold-level paired results"
+      ],
+      "frozen_elements": [
+        "comparisons",
+        "alpha",
+        "correction"
+      ],
+      "allowed_modifications": [
+        "LR",
+        "RF",
+        "one gradient-boosted tree family"
+      ],
+      "forbidden_modifications": [
+        "algorithm proliferation",
+        "row-wise Wilcoxon"
+      ],
+      "experiment": "Paired inference plus classifier sensitivity on same folds.",
+      "metrics": [
+        "metric deltas",
+        "95% CI",
+        "effect sizes"
+      ],
+      "statistical_analysis": "Paired bootstrap; Wilcoxon/Cliff's delta only over adequate independent temporal/project units; Holm correction; DeLong only for paired ROC-AUC as secondary.",
+      "acceptance_criteria": "Magnitude, uncertainty, multiplicity, and assumptions reported regardless of sign.",
+      "expected_artifact": "Statistical analysis package.",
+      "dependency": [
+        "10.8.2.37"
+      ],
+      "scientific_claim_enabled": "Qualified superiority or defensible null result."
+    },
+    {
+      "sprint_id": "10.8.2.39",
+      "phase": "F",
+      "scientific_objective": "Test external transportability on construct-compatible JIT data.",
+      "hypothesis": "Findings transfer beyond the original benchmark construction.",
+      "inputs": [
+        "compatible independent dataset or untouched later project periods"
+      ],
+      "frozen_elements": [
+        "compatibility criteria",
+        "final protocol"
+      ],
+      "allowed_modifications": [
+        "dataset-specific extraction adapters only"
+      ],
+      "forbidden_modifications": [
+        "label-semantic substitution",
+        "PROMISE-by-convenience",
+        "post-result tuning"
+      ],
+      "experiment": "Independent temporal/cross-project evaluation.",
+      "metrics": [
+        "same primary metrics as internal study"
+      ],
+      "statistical_analysis": "Project/dataset-level effects with heterogeneity.",
+      "acceptance_criteria": "Semantic equivalence documented; final boundaries untouched until freeze.",
+      "expected_artifact": "External validation package.",
+      "dependency": [
+        "10.8.2.38"
+      ],
+      "scientific_claim_enabled": "C7 and stronger Q1 generalization."
+    },
+    {
+      "sprint_id": "10.8.2.40",
+      "phase": "G",
+      "scientific_objective": "Explain only scientifically accepted predictors.",
+      "hypothesis": "Explanations are faithful enough, stable, and operationally interpretable.",
+      "inputs": [
+        "accepted internal/external models"
+      ],
+      "frozen_elements": [
+        "model",
+        "background/reference data",
+        "XAI protocol"
+      ],
+      "allowed_modifications": [
+        "SHAP-compatible global/local analysis",
+        "validated counterfactual constraints"
+      ],
+      "forbidden_modifications": [
+        "causal language",
+        "XAI-driven model tuning on final data"
+      ],
+      "experiment": "Global/local explanation and stability study.",
+      "metrics": [
+        "fidelity",
+        "rank stability",
+        "local stability",
+        "constraint validity"
+      ],
+      "statistical_analysis": "Bootstrap stability and cross-period consistency.",
+      "acceptance_criteria": "Associational scope explicit; unstable explanations disclosed.",
+      "expected_artifact": "XAI evidence package.",
+      "dependency": [
+        "10.8.2.39"
+      ],
+      "scientific_claim_enabled": "RQ6/C5."
+    },
+    {
+      "sprint_id": "10.8.2.41",
+      "phase": "H/I",
+      "scientific_objective": "Assess practical prioritization and synthesize claims.",
+      "hypothesis": "Accepted model improves discovery under realistic budgets.",
+      "inputs": [
+        "frozen predictions and effort measures"
+      ],
+      "frozen_elements": [
+        "budgets",
+        "effort definition",
+        "claims"
+      ],
+      "allowed_modifications": [
+        "reporting only after protocol freeze"
+      ],
+      "forbidden_modifications": [
+        "threshold/budget cherry-picking"
+      ],
+      "experiment": "Recall@K/Precision@K; AUCEC/Popt only with defensible effort proxy; final evidence synthesis.",
+      "metrics": [
+        "budget curves",
+        "Recall@K",
+        "Precision@K",
+        "optional AUCEC/Popt"
+      ],
+      "statistical_analysis": "Paired temporal intervals and sensitivity across budgets.",
+      "acceptance_criteria": "Claims do not exceed matrix support; negative results retained.",
+      "expected_artifact": "Final evidence synthesis and manuscript claim ledger.",
+      "dependency": [
+        "10.8.2.40"
+      ],
+      "scientific_claim_enabled": "RQ7/C8 and final article scope."
+    }
+  ]
+}
