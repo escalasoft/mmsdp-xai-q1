@@ -1,0 +1,47 @@
+[
+  {
+    "bin_index": 0,
+    "lower_bound": 0.0,
+    "mean_predicted_probability": 0.041718425287175835,
+    "observed_positive_fraction": 0.02729674200176108,
+    "support": 3407,
+    "upper_bound": 0.1,
+    "upper_bound_inclusive": false
+  },
+  {
+    "bin_index": 1,
+    "lower_bound": 0.1,
+    "mean_predicted_probability": 0.11898120855531459,
+    "observed_positive_fraction": 0.06930693069306931,
+    "support": 505,
+    "upper_bound": 0.2,
+    "upper_bound_inclusive": false
+  },
+  {
+    "bin_index": 2,
+    "lower_bound": 0.2,
+    "mean_predicted_probability": 0.23092148895745976,
+    "observed_positive_fraction": 0.08247422680412371,
+    "support": 97,
+    "upper_bound": 0.3,
+    "upper_bound_inclusive": false
+  },
+  {
+    "bin_index": 3,
+    "lower_bound": 0.3,
+    "mean_predicted_probability": 0.30700958627457936,
+    "observed_positive_fraction": 0.22018348623853212,
+    "support": 109,
+    "upper_bound": 0.4,
+    "upper_bound_inclusive": false
+  },
+  {
+    "bin_index": 5,
+    "lower_bound": 0.5,
+    "mean_predicted_probability": 0.5341949689907828,
+    "observed_positive_fraction": 0.0,
+    "support": 1,
+    "upper_bound": 0.6,
+    "upper_bound_inclusive": false
+  }
+]

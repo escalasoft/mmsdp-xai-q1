@@ -1,0 +1,31 @@
+{
+  "schema_version": "jit-defects4j-one-shot-test-1.0.0",
+  "sprint": "10.8.2.31",
+  "branch": "sprint-10/jit-defects4j-one-shot-test-evaluation",
+  "required_head_ancestor": "f93a439",
+  "expected_head_at_preflight": "0f7f2fe3b25d8a29b21074b9b311c1cb28c10ec8",
+  "initial_preflight_worktree_clean": true,
+  "selected_calibrator": "ISOTONIC",
+  "primary_modalities": ["CODE", "TEXT"],
+  "excluded_modalities": ["PROCESS"],
+  "fusion_weights": {"CODE": 0.5, "TEXT": 0.5},
+  "classification_threshold": null,
+  "test": {"observations": 4119, "positive": 160, "nominal_negative": 3959},
+  "ece_edges": [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+  "expected_identities": {
+    "dataset": "e509995da233c932cafce531c13ad2cd617a0d8abbe8d81ccaa373b8f29fa519",
+    "manifest": "95b1a362f6756f641cc575cabf54a3a99e2846568d5ef110dac38a45f3d81ef1",
+    "temporal_boundary": "d1b4448e22a1dba4292b9cf8969ba77db0cf9a10ef66dfddf98642cb5dc078a7",
+    "adapter": "9c22de3d15d09132af1920eec0fd02e3ea9f879a70ecbd90bc5adc7913b63d2c",
+    "baselines": "535459c72b0a91f9a82d19d1742d47feb5c7d8ab382d86756270336f7716268b",
+    "fusion": "84d08dae0dca0158b786d70c90f05e597a3a22147c5aea82ae0500aca9efe4cd",
+    "architecture": "0f0547ce58d19a7eee75a93bee6addbfe23251758c8c43fb29852f2009d0c47d",
+    "robustness": "384e640924979d59882aa6b567b7d3216bdb7420948f66288a48d44f66e1c618",
+    "calibration_protocol": "45233511ca629ea5f38e499029e0eb6dfcac7c160a52d030a31113ea36f35895",
+    "calibration_execution": "578283a75ae39ba37627e1201b1221e32cc5779daf993d66fdd643e5a1772aa3",
+    "final_refit_contract": "f146346caf4537ee7038e3df24065104c9dee81da6f0c8cdc0ab205701767381",
+    "final_refit_audit": "9fbffbf7d4ee54911399a52ba904af1e308613fb218e7d3eb884e53c1191e09c"
+  },
+  "prediction_artifact": "outputs/metrics/jit-defects4j-one-shot-test/1.0.0/predictions.jsonl",
+  "state_artifact": "outputs/metrics/jit-defects4j-one-shot-test/1.0.0/one-shot-state.json"
+}

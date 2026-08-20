@@ -1,0 +1,160 @@
+{
+  "architecture": "TRAIN-fitted six-feature CODE RF + TRAIN-only 5000-dimensional unigram TF-IDF TEXT liblinear LR",
+  "branch": "sprint-10/jit-defects4j-one-shot-test-evaluation",
+  "classification_threshold": "UNDEFINED",
+  "frozen_identities": {
+    "adapter": "9c22de3d15d09132af1920eec0fd02e3ea9f879a70ecbd90bc5adc7913b63d2c",
+    "architecture": "0f0547ce58d19a7eee75a93bee6addbfe23251758c8c43fb29852f2009d0c47d",
+    "baselines": "535459c72b0a91f9a82d19d1742d47feb5c7d8ab382d86756270336f7716268b",
+    "calibration_execution": "578283a75ae39ba37627e1201b1221e32cc5779daf993d66fdd643e5a1772aa3",
+    "calibration_protocol": "45233511ca629ea5f38e499029e0eb6dfcac7c160a52d030a31113ea36f35895",
+    "dataset": "e509995da233c932cafce531c13ad2cd617a0d8abbe8d81ccaa373b8f29fa519",
+    "final_refit_audit": "9fbffbf7d4ee54911399a52ba904af1e308613fb218e7d3eb884e53c1191e09c",
+    "final_refit_contract": "f146346caf4537ee7038e3df24065104c9dee81da6f0c8cdc0ab205701767381",
+    "fusion": "84d08dae0dca0158b786d70c90f05e597a3a22147c5aea82ae0500aca9efe4cd",
+    "manifest": "95b1a362f6756f641cc575cabf54a3a99e2846568d5ef110dac38a45f3d81ef1",
+    "robustness": "384e640924979d59882aa6b567b7d3216bdb7420948f66288a48d44f66e1c618",
+    "temporal_boundary": "d1b4448e22a1dba4292b9cf8969ba77db0cf9a10ef66dfddf98642cb5dc078a7"
+  },
+  "fusion": "p_raw_fusion = 0.5 * p_CODE + 0.5 * p_TEXT",
+  "head_at_preflight": "0f7f2fe3b25d8a29b21074b9b311c1cb28c10ec8",
+  "initial_worktree_clean": true,
+  "leakage_audit": {
+    "fixing_szz_issue_linkage_as_predictor": false,
+    "future_information_as_predictor": false,
+    "predictor_schema_denylist_overlap": [],
+    "result": "PASS",
+    "split_or_project_as_predictor": false,
+    "target_as_predictor": false,
+    "test_labels_during_transformation": false,
+    "test_statistics_during_fitting": false,
+    "test_vocabulary_scaling_calibration_or_weights": false
+  },
+  "limitations": [
+    "Single temporal TEST partition from JIT-Defects4J; not external validation across independent datasets.",
+    "No universal generalization, causality, or statistical superiority claim.",
+    "Project diagnostics, if derived later from this immutable artifact, are descriptive only."
+  ],
+  "metrics": {
+    "calibrated": {
+      "average_precision": 0.11285351950573486,
+      "brier": 0.037022526928812964,
+      "ece": 0.023942172754463573,
+      "roc_auc": 0.7452110697145744
+    },
+    "raw": {
+      "average_precision": 0.1219835857951105,
+      "brier": 0.039909306679003984,
+      "ece": 0.058956353166334366,
+      "roc_auc": 0.7471275890376357
+    }
+  },
+  "prediction_artifact": {
+    "path": "outputs/metrics/jit-defects4j-one-shot-test/1.0.0/predictions.jsonl",
+    "row_count": 4119,
+    "schema": [
+      "row_index",
+      "project",
+      "commit_hash",
+      "target",
+      "p_code",
+      "p_text",
+      "p_raw_fusion",
+      "p_calibrated"
+    ],
+    "scientific_identity": "f7d05ef2a3dc3fb5a3eb9b20dc43f3f7ebf02f3d534ef8a29a777158936fdd99",
+    "sha256": "98b218880a73b1fdee04a3a63449099627eb542f67c4db91df9254d7db39649f"
+  },
+  "preprocessing": {
+    "code_scaler": {
+      "digest": "f965086202e60c3766b7cb58e869a8bd0730efb3d0bc3f5debf95481a15b29a9",
+      "fit_partition": "TRAIN",
+      "mean": [
+        4.31013916500994,
+        0.6968714031599874,
+        0.18766349272784347,
+        3.4256042691221094,
+        0.0,
+        0.89081301663702
+      ],
+      "scale": [
+        8.408583358321758,
+        3.217139741940614,
+        2.175128502860248,
+        6.43282392672273,
+        1.0,
+        4.78871973540779
+      ]
+    },
+    "text": {
+      "dimension": 5000,
+      "fit_partition": "TRAIN",
+      "state_digest": "fa99100fc470530d3445f08f0a855aeb42ec02ed038d434e5ed000b662fa8f35"
+    }
+  },
+  "process": "EXCLUDED FROM PRIMARY PREDICTOR",
+  "prominent_statement": "THIS IS FINAL ONE-SHOT TEMPORAL TEST EVIDENCE FOR THE FROZEN CONFIGURATION.",
+  "reliability_bins": [
+    {
+      "bin_index": 0,
+      "lower_bound": 0.0,
+      "mean_predicted_probability": 0.041718425287175835,
+      "observed_positive_fraction": 0.02729674200176108,
+      "support": 3407,
+      "upper_bound": 0.1,
+      "upper_bound_inclusive": false
+    },
+    {
+      "bin_index": 1,
+      "lower_bound": 0.1,
+      "mean_predicted_probability": 0.11898120855531459,
+      "observed_positive_fraction": 0.06930693069306931,
+      "support": 505,
+      "upper_bound": 0.2,
+      "upper_bound_inclusive": false
+    },
+    {
+      "bin_index": 2,
+      "lower_bound": 0.2,
+      "mean_predicted_probability": 0.23092148895745976,
+      "observed_positive_fraction": 0.08247422680412371,
+      "support": 97,
+      "upper_bound": 0.3,
+      "upper_bound_inclusive": false
+    },
+    {
+      "bin_index": 3,
+      "lower_bound": 0.3,
+      "mean_predicted_probability": 0.30700958627457936,
+      "observed_positive_fraction": 0.22018348623853212,
+      "support": 109,
+      "upper_bound": 0.4,
+      "upper_bound_inclusive": false
+    },
+    {
+      "bin_index": 5,
+      "lower_bound": 0.5,
+      "mean_predicted_probability": 0.5341949689907828,
+      "observed_positive_fraction": 0.0,
+      "support": 1,
+      "upper_bound": 0.6,
+      "upper_bound_inclusive": false
+    }
+  ],
+  "result_digest": "ec3eaf099c1cc4eec7d24cf4d7b844a90b82a9d4ca3c1dc381e7febcd49eb34d",
+  "schema_version": "jit-defects4j-one-shot-test-1.0.0",
+  "scientific_decision": "SPRINT_10.8.2.31_GO",
+  "selected_calibrator": "ISOTONIC",
+  "sprint": "10.8.2.31",
+  "test": {
+    "canonical_order_preserved": true,
+    "development_overlap": 0,
+    "duplicates": 0,
+    "nominal_negative": 3959,
+    "observations": 4119,
+    "positive": 160,
+    "prevalence": 0.038844379703811605
+  },
+  "test_opening": "AUTHORIZED_AFTER_ALL_FROZEN_GATES_PASSED",
+  "test_scoring_count": 1
+}
