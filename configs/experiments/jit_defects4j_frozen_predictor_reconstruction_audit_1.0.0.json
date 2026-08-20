@@ -1,0 +1,19 @@
+{
+  "schema_version": "jit-defects4j-frozen-predictor-reconstruction-audit-1.0.0",
+  "sprint": "10.8.2.31A",
+  "branch": "sprint-10/jit-defects4j-frozen-predictor-reconstruction-audit",
+  "starting_head": "c2e55b1e890b4dccb3d88d613d930045f57f75ef",
+  "required_one_shot_ancestor": "be9b27e",
+  "development_inputs": ["TRAIN", "VALIDATION"],
+  "test_predictive_scoring": false,
+  "test_artifact_read_policy": "integrity-and-metric-recomputation-only",
+  "base_fit_population": "TRAIN",
+  "calibration_fit_population": "canonical VALIDATION",
+  "primary_modalities": ["CODE", "TEXT"],
+  "excluded_modalities": ["PROCESS"],
+  "fusion_weights": {"CODE": 0.5, "TEXT": 0.5},
+  "selected_calibrator": "ISOTONIC",
+  "classification_threshold": null,
+  "expected_prediction_sha256": "98b218880a73b1fdee04a3a63449099627eb542f67c4db91df9254d7db39649f",
+  "expected_one_shot_result_digest": "ec3eaf099c1cc4eec7d24cf4d7b844a90b82a9d4ca3c1dc381e7febcd49eb34d"
+}
