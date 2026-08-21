@@ -1,0 +1,24 @@
+{
+  "experiment_version": "q1-modality-factorial-1.0.0",
+  "development_partitions": ["train", "validation"],
+  "sealed_partition": "test",
+  "origin_fractions": ["1/2", "3/5", "7/10", "4/5", "9/10", "1"],
+  "treatments": ["C", "P", "T", "C+P", "C+T", "P+T", "C+P+T"],
+  "seed": 0,
+  "threshold": 0.5,
+  "calibration": "NONE_NOT_AUTHORIZED_IN_SPRINT_34",
+  "fusion": "fixed-equal-weight-probability-average",
+  "text": {
+    "lowercase": true,
+    "token_pattern": "(?u)\\b[^\\W_]{2,}\\b",
+    "minimum_document_frequency": 2,
+    "maximum_features": 5000,
+    "vocabulary_order": "descending-train-document-frequency-then-token",
+    "weighting": "sublinear-tf-smooth-idf-l2"
+  },
+  "models": {
+    "C": {"class": "RandomForestClassifier", "candidate": "jit-10.8.2.25-code-rf-2", "parameters": {"bootstrap": true, "class_weight": null, "criterion": "gini", "max_depth": 12, "max_features": "sqrt", "min_samples_leaf": 5, "min_samples_split": 2, "n_estimators": 100, "random_state": 0}},
+    "P": {"class": "RandomForestClassifier", "candidate": "jit-10.8.2.25-process-rf-2", "parameters": {"bootstrap": true, "class_weight": null, "criterion": "gini", "max_depth": 12, "max_features": "sqrt", "min_samples_leaf": 5, "min_samples_split": 2, "n_estimators": 100, "random_state": 0}},
+    "T": {"class": "LogisticRegression", "candidate": "jit-10.8.2.25-text-lr-2", "parameters": {"C": 1.0, "class_weight": null, "fit_intercept": true, "max_iter": 2000, "random_state": 0, "solver": "liblinear", "tol": 0.0001}}
+  }
+}
