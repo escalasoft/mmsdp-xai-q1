@@ -16,7 +16,7 @@ from dataclasses import dataclass, fields, is_dataclass
 from enum import Enum
 from types import MappingProxyType
 
-from dataset.model_input import ModelPartitionInput, PreparedModelInput
+from dataset.model_input import ModelPartitionInput
 from dataset.qt_model_input_adaptation import (
     QT_PROCESS_FEATURE_NAMES,
     QT_TEXT_FEATURE_NAMES,

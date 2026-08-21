@@ -1,0 +1,50 @@
+{
+  "experiment_version": "q1-fusion-process-ablation-1.0.0",
+  "starting_head": "b85cbb318eb8157bc30459859142ee29db681cca",
+  "development_partitions": ["train", "validation"],
+  "sealed_partition": "test",
+  "origin_membership_source": "audits/q1-modality-factorial/1.0.0/origin_memberships.json",
+  "origin_membership_sha256": "ec53675d5f02f3f9910f648063a3271d2695e7e381057612c5afcccd620944d7",
+  "seed": 0,
+  "threshold": 0.5,
+  "calibration": "NONE_NOT_AUTHORIZED_IN_SPRINT_35",
+  "process_ablation_family": {
+    "P_full": ["parent_count", "is_merge_commit", "has_prior_history", "prior_project_commit_count"],
+    "P_without_parent_count": ["is_merge_commit", "has_prior_history", "prior_project_commit_count"],
+    "P_without_is_merge_commit": ["parent_count", "has_prior_history", "prior_project_commit_count"],
+    "P_without_has_prior_history": ["parent_count", "is_merge_commit", "prior_project_commit_count"],
+    "P_without_prior_project_commit_count": ["parent_count", "is_merge_commit", "has_prior_history"],
+    "P_topology_only": ["parent_count", "is_merge_commit"],
+    "P_history_only": ["has_prior_history", "prior_project_commit_count"]
+  },
+  "fixed_fusion_candidates": {
+    "C+T": {
+      "CT_equal": {"C": 0.5, "T": 0.5},
+      "CT_code_60": {"C": 0.6, "T": 0.4},
+      "CT_text_60": {"C": 0.4, "T": 0.6}
+    },
+    "C+P+T": {
+      "CPT_equal": {"C": 0.3333333333333333, "P": 0.3333333333333333, "T": 0.3333333333333333},
+      "CPT_process_20": {"C": 0.4, "P": 0.2, "T": 0.4},
+      "CPT_process_05": {"C": 0.475, "P": 0.05, "T": 0.475}
+    }
+  },
+  "stacking": {
+    "treatments": ["C+T", "C+P+T"],
+    "nested_boundaries": ["1/2", "2/3", "5/6", "1"],
+    "minimum_training_class_count": 2,
+    "minimum_prediction_class_count": 1,
+    "meta_learner": {
+      "class": "LogisticRegression",
+      "parameters": {"C": 1.0, "class_weight": null, "fit_intercept": true, "max_iter": 2000, "random_state": 0, "solver": "liblinear", "tol": 0.0001}
+    }
+  },
+  "paired_inference": {
+    "family": "exact-two-sided-paired-sign-test",
+    "alpha": 0.05,
+    "zero_difference_rule": "exclude exact zero pairs",
+    "effect_summaries": ["mean_signed_difference", "median_signed_difference", "wins_ties_losses"]
+  },
+  "base_models_source": "configs/experiments/q1_modality_factorial_1.0.0.json",
+  "prohibited_predictors": ["target", "label", "is_buggy_commit", "classification", "fix", "fixing_status", "buggy_line", "line_label", "szz", "blame_output", "future_bug_fix", "future_issue_metadata", "post_observation_defect", "manual_defect_indicator", "bug_confidence", "has_bug_keyword", "msg_has_bug_kw", "packaged_split", "split", "project", "commit_hash", "git_committer_timestamp"]
+}
