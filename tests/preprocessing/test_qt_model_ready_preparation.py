@@ -5,6 +5,7 @@ from __future__ import annotations
 from dataclasses import replace
 
 import pytest
+from tests.dataset.test_qt_model_input_adaptation import _split
 
 from dataset.model_input import ModelPartitionInput, PreparedModelInput
 from dataset.qt_model_input_adaptation import (
@@ -18,7 +19,6 @@ from preprocessing.qt_model_ready_preparation import (
     QtTextRepresentationPolicy,
     prepare_qt_model_ready_inputs,
 )
-from tests.dataset.test_qt_model_input_adaptation import _split
 
 
 def _replace_partition(
