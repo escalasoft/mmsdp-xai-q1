@@ -1,0 +1,53 @@
+{
+  "experiment_version": "q1-forward-development-calibration-1.0.0",
+  "sprint": "10.8.2.36",
+  "branch": "sprint-10/q1-forward-development-calibration",
+  "starting_head": "78344ccec0926b500d1b915ee8eea19b32dc211a",
+  "expected_ancestry": ["Sprint 10.8.2.31", "Sprint 10.8.2.31A", "Sprint 10.8.2.32", "Sprint 10.8.2.33", "Sprint 10.8.2.34", "Sprint 10.8.2.35"],
+  "status": "DEVELOPMENT_ONLY",
+  "development_partitions": ["train", "validation"],
+  "sealed_partition": "test",
+  "test_policy": "NO_TEST_LOADING_SCORING_SELECTION_CALIBRATION_THRESHOLDING_OR_XAI",
+  "temporal_protocol": {
+    "outer_membership_source": "audits/q1-modality-factorial/1.0.0/origin_memberships.json",
+    "outer_membership_sha256": "ec53675d5f02f3f9910f648063a3271d2695e7e381057612c5afcccd620944d7",
+    "origins": ["O1", "O2", "O3", "O4", "O5"],
+    "calibration_split": "project-local chronological prefix",
+    "base_fit_fraction": "5/6",
+    "calibration_fit_fraction": "1/6",
+    "evaluation": "unchanged subsequent frozen outer evaluation block for evaluable projects",
+    "minimum_base_class_count": 2,
+    "minimum_calibration_class_count": 1,
+    "minimum_evaluation_class_count": 1,
+    "unsupported_policy": "NOT_EVALUABLE_WITHOUT_BOUNDARY_CHANGE"
+  },
+  "predictor": {
+    "identity": "FROZEN_CT_EQUAL",
+    "modalities": ["CODE", "TEXT"],
+    "fusion": {"C": 0.5, "T": 0.5},
+    "base_models_source": "configs/experiments/q1_modality_factorial_1.0.0.json",
+    "lineage_source": "audits/q1-fusion-process-ablation/1.0.0/experiment_manifest.json"
+  },
+  "calibration_candidates": ["UNCALIBRATED", "PLATT", "ISOTONIC"],
+  "calibration": {
+    "platt": {"class": "LogisticRegression", "parameters": {"C": 1.0, "class_weight": null, "fit_intercept": true, "max_iter": 2000, "random_state": 0, "solver": "liblinear", "tol": 0.0001}},
+    "isotonic": {"class": "IsotonicRegression", "parameters": {"increasing": true, "out_of_bounds": "clip", "y_min": 0.0, "y_max": 1.0}}
+  },
+  "metrics": {
+    "primary": "Brier",
+    "brier_definition": "mean((probability-label)^2)",
+    "secondary": "ECE",
+    "ece_bin_edges": [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+    "empty_bin_convention": "retain with support=0 and null means",
+    "discrimination_diagnostics": ["ROC_AUC", "PR_AUC"]
+  },
+  "selection_rule": ["lowest_mean_forward_origin_Brier", "if_abs_difference_le_1e-12_lowest_mean_ECE", "candidate_order_UNCALIBRATED_PLATT_ISOTONIC"],
+  "adequacy_gate": ["aggregate_Brier_strictly_improves_over_UNCALIBRATED", "improvement_occurs_in_at_least_two_origins", "no_severe_pathological_reliability", "reproducibility_passes", "leakage_audit_passes"],
+  "paired_inference": {"family": "exact-two-sided-paired-sign-test", "alpha": 0.05, "zero_difference_rule": "exclude_exact_zero", "unit": "temporal_origin"},
+  "decision_curve": {"policy": "READINESS_AUDIT_ONLY_NO_CURVE_EXECUTION", "formula": "TP/N - FP/N * pt/(1-pt)", "threshold_grid_status": "DEFER_UNTIL_PRACTICAL_COST_STRUCTURE_IS_DECLARED", "threshold_optimization": false},
+  "process_status": "NEGATIVE_OR_NON_COMPLEMENTARY_UNDER_CURRENT_FROZEN_REPRESENTATION",
+  "seed": 0,
+  "forbidden_operations": ["TEST scoring", "TEST prediction", "TEST probability loading", "TEST calibration", "TEST threshold optimization", "TEST-based selection", "hyperparameter search", "random or shuffled k-fold primary evaluation", "global preprocessing", "per-origin calibrator selection", "dynamic ECE bins", "threshold selection", "XAI on TEST", "PROCESS redesign", "continuous fusion-weight optimization"],
+  "prohibited_predictors": ["target", "label", "is_buggy_commit", "classification", "fix", "fixing_status", "buggy_line", "line_label", "szz", "blame_output", "future_bug_fix", "future_issue_metadata", "post_observation_defect", "manual_defect_indicator", "bug_confidence", "has_bug_keyword", "msg_has_bug_kw", "packaged_split", "split", "project", "commit_hash", "git_committer_timestamp"],
+  "expected_artifacts": ["REPORT.md", "experiment_manifest.json", "scientific_decision.json", "execution_ledger.json", "historical_artifact_hashes.json", "temporal_memberships.json", "calibration_memberships.json", "calibration_results.csv", "calibration_results.json", "paired_calibration_effects.json", "reliability_bins.json", "calibration_reproducibility_manifest.json", "decision_curve_readiness.json", "article_evidence_mapping.json", "fitted_state"]
+}
