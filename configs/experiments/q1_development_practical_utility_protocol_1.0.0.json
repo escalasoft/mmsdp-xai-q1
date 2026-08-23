@@ -1,0 +1,98 @@
+{
+  "experiment_version": "q1-development-practical-utility-protocol-1.0.0",
+  "sprint": "10.8.2.37",
+  "branch": "sprint-10/q1-development-practical-utility-protocol",
+  "starting_head": "abce993b1cf4664d3554a6ecbe58d33debba41bb",
+  "status": "PRE_EXECUTION_DEVELOPMENT_ONLY",
+  "sealed_partition": "test",
+  "decision_context": {
+    "target_unit": "commit",
+    "prediction": "probability that a commit is defect-prone under frozen benchmark target semantics",
+    "predicted_positive": "flag for additional quality attention, such as review, testing, inspection prioritization, or a quality alert",
+    "classification_is_not_intervention": true,
+    "industrial_deployment_cost_claim": false,
+    "confusion_semantics": {
+      "TP": "defect-prone commit correctly flagged",
+      "FP": "non-defect-prone commit incorrectly flagged, causing unnecessary review or inspection burden",
+      "TN": "non-defect-prone commit correctly not flagged",
+      "FN": "defect-prone commit not flagged, representing a missed opportunity for early intervention"
+    }
+  },
+  "cost_model": {
+    "type": "normalized_relative_sensitivity_scenarios_not_monetary_costs",
+    "C_TP": 0,
+    "C_TN": 0,
+    "C_FP": 1,
+    "FN_FP_ratios": [1, 2, 5, 10, 20],
+    "outcome_dependent_cost_selection": false
+  },
+  "threshold_policy": {
+    "grid": [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 0.95],
+    "historical_reference": 0.50,
+    "identical_across_origins_calibrators_and_candidates": true,
+    "outcome_dependent_threshold_selection": false,
+    "post_hoc_additions": false,
+    "optimization": false
+  },
+  "decision_curve": {
+    "formula": "NB(t) = TP(t) / N - FP(t) / N * t / (1 - t)",
+    "baselines": ["TREAT_NONE_FLAG_NONE", "TREAT_ALL_FLAG_ALL"],
+    "candidate_predictors": ["FROZEN_CT_EQUAL_REFERENCE"],
+    "executed_in_sprint_37": false
+  },
+  "utility": {
+    "expected_cost_formula": "ExpectedCost(t, r) = FP(t) * C_FP + FN(t) * C_FN(r)",
+    "C_FN_definition": "C_FN(r) = r",
+    "normalized_cost_formula": "NormalizedCost(t, r) = ExpectedCost(t, r) / N",
+    "direction": "lower_is_better",
+    "composite_with_predictive_metrics": false
+  },
+  "calibration_states": ["UNCALIBRATED", "PLATT", "ISOTONIC"],
+  "calibration_state_policy": "retain all Sprint 36 states for descriptive DEVELOPMENT comparison; no final-calibrator claim",
+  "temporal_protocol": {
+    "source": "audits/q1-forward-development-calibration/1.0.0/temporal_memberships.json",
+    "source_sha256": "ca9d74465292e28fadd8f7410e64edb14cd22ee2f203714b0dc4f76733a97d81",
+    "calibration_membership_source": "audits/q1-forward-development-calibration/1.0.0/calibration_memberships.json",
+    "origins": ["O1", "O2", "O3", "O4", "O5"],
+    "ordering": "project-local chronological forward evaluation",
+    "boundary_changes": false,
+    "difficult_origin_dropping": false,
+    "aggregation_unit": "temporal_origin"
+  },
+  "outputs": {
+    "per_origin_calibration_threshold": ["TP", "FP", "TN", "FN", "sensitivity_recall", "specificity", "precision", "MCC", "predicted_positive_rate", "observed_prevalence", "net_benefit", "normalized_cost_each_frozen_ratio"],
+    "probability_level": ["ROC_AUC", "PR_AUC", "Brier", "ECE"],
+    "descriptive_optional": ["F1"],
+    "accuracy_or_f1_as_sole_evidence": false
+  },
+  "aggregation": {
+    "across": "temporal_origins",
+    "required": ["median", "minimum", "maximum", "Q1", "Q3", "IQR"],
+    "when_scientifically_appropriate": ["mean", "standard_deviation", "confidence_interval"],
+    "distribution_plots_required_for_article": true,
+    "pooled_commit_pseudoreplication": false
+  },
+  "inference": {
+    "performed_in_sprint_37": false,
+    "unit": "temporal_origin",
+    "effect_size_first": true,
+    "uncertainty_required": true,
+    "raw_p_values_if_applicable": true,
+    "multiple_comparison_correction": "Benjamini-Hochberg FDR",
+    "family": "predeclared_family_of_comparisons",
+    "adjusted_p_values_retained": true,
+    "p_ge_0_05_means_equivalence": false,
+    "neutral_results_retained": true,
+    "limitation": "five temporal origins provide limited inferential resolution"
+  },
+  "advancement": {
+    "joint_criteria": ["leakage_safety", "temporal_validity", "reproducibility", "discrimination", "calibration", "practical_utility", "complexity_parsimony", "stability_across_origins", "absence_of_outcome_driven_tuning"],
+    "highest_single_metric_sufficient": false,
+    "simplest_defensible_candidate_may_advance": true,
+    "final_candidate_selected": false,
+    "holdout_access_authorized": false
+  },
+  "test_policy": "NO_TEST_LOADING_SCORING_SELECTION_CALIBRATION_THRESHOLDING_OR_XAI",
+  "execution_policy": "DECLARATION_ONLY_NO_DECISION_CURVE_OR_PRACTICAL_UTILITY_EXECUTION",
+  "seed": 0
+}

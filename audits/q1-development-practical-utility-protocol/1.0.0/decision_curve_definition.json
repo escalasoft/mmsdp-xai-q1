@@ -1,0 +1,1 @@
+{"baselines":["TREAT_NONE_FLAG_NONE","TREAT_ALL_FLAG_ALL"],"candidate_predictors":["FROZEN_CT_EQUAL_REFERENCE"],"executed_in_sprint_37":false,"formula":"NB(t) = TP(t) / N - FP(t) / N * t / (1 - t)"}
