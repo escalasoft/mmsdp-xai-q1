@@ -1,0 +1,1 @@
+{"final_candidate_selected":false,"highest_single_metric_sufficient":false,"holdout_access_authorized":false,"joint_criteria":["leakage_safety","temporal_validity","reproducibility","discrimination","calibration","practical_utility","complexity_parsimony","stability_across_origins","absence_of_outcome_driven_tuning"],"simplest_defensible_candidate_may_advance":true}

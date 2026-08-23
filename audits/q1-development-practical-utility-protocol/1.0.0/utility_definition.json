@@ -1,0 +1,1 @@
+{"C_FN_definition":"C_FN(r) = r","composite_with_predictive_metrics":false,"direction":"lower_is_better","expected_cost_formula":"ExpectedCost(t, r) = FP(t) * C_FP + FN(t) * C_FN(r)","normalized_cost_formula":"NormalizedCost(t, r) = ExpectedCost(t, r) / N"}
