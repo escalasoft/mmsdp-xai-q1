@@ -1,0 +1,29 @@
+{
+  "artifact_sha256": {
+    "REPORT.md": "1166afdc2a51d04230e417ceda5217a600dd78eb019a40c336e5357e53aaf00d",
+    "advancement_evaluation.json": "f4ffee33bec41e48a93a9bd7b76a79742e1f28e00f3f8c4c93314fd1723c3fa8",
+    "baseline_comparison.json": "45a1ff085a7ab43fa9611098747c10dc81e443f2f39e13470c3d3415fad0bdeb",
+    "calibration_state_comparison.json": "8667446fdde7f44c6f2946c76b610d696ea45e22ed0e66b705528bec2081c8b7",
+    "decision_curve_results.csv": "74dbe0c82288c842693ce10de76da3e5dce0e01dc0b1398861f3c6136b8e90a2",
+    "decision_curve_summary.json": "1efcc05ab94002cca9b0dd4723a8617939e464985f8a024493bfdbc3edc57f87",
+    "execution_ledger.json": "e2a7714397ff12ed5681d3b048773e5cf25509e3567e2b662ca44c63fdf290b4",
+    "historical_artifact_hashes.json": "bc49cfbc15ad8cb5aa569e8b2e79e920c5fc9087a35fd612ff93145f7f75973a",
+    "leakage_audit.json": "fafdb1d072666fe40f5823d64038a468f982bc58854e03ca6624e27b5b0792f4",
+    "origin_stability.json": "db34088f25ef3ec0f5321c947229f4ffd4ac8ff6b2437e78b8fb92b74d9b9674",
+    "practical_utility_results.csv": "9e04368c97daf4bfbaab9c1581cae18a3174f22baaff5eacf9e49993540c662f",
+    "practical_utility_summary.json": "8148d5acf9b810aef2f1136aa9e2c279ff741ee8ce4c861d25c67331e5b84286",
+    "protocol_integrity.json": "3ecef65a3643f44227f7683a2c9979d54c8f8771163e1d243ec596da4780ba9f",
+    "quality_gates.json": "b61d9abccc6e9fc8b2b5d6d352caf0b533968f3574e4b219d7f3778199d21b35",
+    "reproducibility_manifest.json": "356d2622e41c66f621e8a2704212fede322ef987d8607958e83679931edf4143",
+    "scientific_decision.json": "2ab62ff2dfe1d0fc999f67d58ef2aa82fe8af572d910afa875f8042e4d412c6a",
+    "temporal_memberships.json": "0e8880bbcc62a5ae6ad4320085bf21141dc6c5f9a0203cbb3798ba341f56e574"
+  },
+  "branch": "sprint-10/q1-development-practical-utility-execution",
+  "experiment_version": "q1-development-practical-utility-execution-1.0.0",
+  "python_module": "src/evaluation/q1_development_practical_utility_execution.py",
+  "sealed_partition": "test",
+  "source_protocol": "audits/q1-development-practical-utility-protocol/1.0.0",
+  "sprint": "10.8.2.38",
+  "starting_head": "488921fcfd2f8081748986930d77dce6a0d38ab2",
+  "test_remained_sealed": true
+}
