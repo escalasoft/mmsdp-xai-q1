@@ -1,0 +1,1 @@
+{"authorized_outcomes":["BLOCKED","NO_GO","GO_WITH_LIMITATIONS","GO"],"deterministic_repeatability":true,"exactly_one_outcome_per_vector":true,"input_order_invariance":true,"outcome_counts":{"BLOCKED":258256,"GO":1,"GO_WITH_LIMITATIONS":511,"NO_GO":3376},"vectors_verified":262144,"verdict":"PASS"}
