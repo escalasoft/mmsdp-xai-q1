@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "properties": {
+    "access_count": {"additionalProperties": false, "properties": {"after": {"const": 0}, "before": {"const": 0}, "during": {"const": 0}}, "required": ["before", "during", "after"], "type": "object"},
+    "authorization_amended": {"const": false},
+    "candidate_final_test_identity": {"type": "null"},
+    "candidate_temporal_boundary_identity": {"type": "null"},
+    "classification": {"enum": ["NO_VERIFIABLE_UNTOUCHED_FINAL_TEST", "AMBIGUOUS_FINAL_TEST_IDENTITY"]},
+    "distinct_untouched_final_test_exists": {"const": false},
+    "one_shot_test_access_authorized": {"const": false},
+    "overlap": {"type": "object"},
+    "protocol_id": {"const": "q1-final-test-identity-boundary-amendment"},
+    "reason": {"type": "string"},
+    "sprint": {"const": "10.8.2.46A"},
+    "test_sealed": {"const": true},
+    "version": {"const": "1.0.0"}
+  },
+  "required": ["protocol_id", "version", "sprint", "classification", "authorization_amended", "one_shot_test_access_authorized", "test_sealed", "access_count", "distinct_untouched_final_test_exists", "candidate_final_test_identity", "candidate_temporal_boundary_identity", "overlap", "reason"],
+  "type": "object"
+}

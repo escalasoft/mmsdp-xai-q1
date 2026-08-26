@@ -1,0 +1,23 @@
+{
+  "access_count": {
+    "after": 0,
+    "before": 0,
+    "during": 0
+  },
+  "authorization_amended": false,
+  "candidate_final_test_identity": null,
+  "candidate_temporal_boundary_identity": null,
+  "classification": "NO_VERIFIABLE_UNTOUCHED_FINAL_TEST",
+  "distinct_untouched_final_test_exists": false,
+  "one_shot_test_access_authorized": false,
+  "overlap": {
+    "historical_sprint31_test": "IDENTICAL_CANONICAL_PARTITION",
+    "train": "NOT_COMPUTABLE_WITHOUT_A_DISTINCT_CANDIDATE",
+    "validation": "NOT_COMPUTABLE_WITHOUT_A_DISTINCT_CANDIDATE"
+  },
+  "protocol_id": "q1-final-test-identity-boundary-amendment",
+  "reason": "The sole canonical TEST identity is the Sprint 31 consumed partition; no distinct later materialization is evidenced.",
+  "sprint": "10.8.2.46A",
+  "test_sealed": true,
+  "version": "1.0.0"
+}
