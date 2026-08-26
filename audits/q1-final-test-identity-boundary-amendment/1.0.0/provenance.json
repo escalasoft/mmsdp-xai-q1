@@ -1,0 +1,25 @@
+{
+  "canonical_dataset": {
+    "dataset_version": "1.0.0",
+    "manifest_identity": "95b1a362f6756f641cc575cabf54a3a99e2846568d5ef110dac38a45f3d81ef1",
+    "observation_identity": ["project", "commit_hash"],
+    "scientific_identity": "e509995da233c932cafce531c13ad2cd617a0d8abbe8d81ccaa373b8f29fa519",
+    "source_package_sha256": "9e5ca1a393b70ee7e87c410b162005958775f3f3732f9f83da9dd24a7dfe2b47",
+    "source_revision": "584799fdec6095ab75a45fd2a5f8db5b12163aa5"
+  },
+  "canonical_temporal_contract": {
+    "fractions": [0.7, 0.15, 0.15],
+    "identity": "d1b4448e22a1dba4292b9cf8969ba77db0cf9a10ef66dfddf98642cb5dc078a7",
+    "order": ["git_committer_timestamp", "commit_hash"],
+    "rounding": "floor-train-floor-validation-remainder-test",
+    "scope": "within_project",
+    "shuffle": false
+  },
+  "historical_sprint31_test": {
+    "access_consumed": true,
+    "commit": "be9b27e54ceb23e327bb22a001f6b39291029339",
+    "same_as_canonical_test": true
+  },
+  "identity_method": "Hashes and identities copied and cross-checked from committed governance metadata; no dataset row, label, prediction, or outcome file was opened.",
+  "repository": "MMSDP-XAI-Q1"
+}
