@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": true,
+  "properties": {
+    "blocking_reasons": {"items": {"type": "string"}, "type": "array"},
+    "gate_decision": {"enum": ["AUTHORIZED_ONE_SHOT_TEST_ACCESS", "BLOCKED"]},
+    "one_shot_test_access_authorized": {"type": "boolean"},
+    "protocol_id": {"const": "q1-final-test-access-gate"},
+    "test_access_count": {"const": 0},
+    "test_sealed": {"const": true},
+    "version": {"const": "1.0.0"}
+  },
+  "required": ["protocol_id", "version", "gate_decision", "blocking_reasons", "test_sealed", "test_access_count", "one_shot_test_access_authorized"],
+  "type": "object"
+}
