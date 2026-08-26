@@ -1,0 +1,90 @@
+{
+  "protocol_id": "q1-human-prospective-final-evaluation-authorization",
+  "version": "1.0.0",
+  "sprint": "10.8.2.45",
+  "human_acceptance": true,
+  "human_acceptance_scope": "PROSPECTIVE_PRE_TEST_FINAL_EVALUATION_GOVERNANCE",
+  "historical_resolution_semantics": "Unresolved Sprint <=44 selection was resolved by an explicit prospective human decision before any TEST access; no historical artifact selected these final-use states.",
+  "accepted_sprint44_commit": "f1c6aa385da81a5f46a70db7ad428f500e4db2e6",
+  "pre_materialization_head": "f0791c22e6d90b4055ecffab956bb072ed6e7650",
+  "sprint44_contract": {
+    "path": "audits/q1-predeclared-final-performance-contract/1.0.0/final_performance_contract.json",
+    "sha256": "15c02b6e46b9a45b5848a5713259a5dbd8c45038da41708fa08a163a51b761f9"
+  },
+  "principal_candidate": "FROZEN_CT_EQUAL",
+  "principal_candidate_alias": "CT_equal",
+  "principal_candidate_configuration": {
+    "path": "configs/experiments/q1_forward_development_calibration_1.0.0.json",
+    "sha256": "7b77624a68cbf3d4bfd30d3a62174885cc8ebc2666eebf8ff2ee1a3673ef6e9b",
+    "modalities": ["CODE", "TEXT"],
+    "fusion_weights": {"C": 0.5, "T": 0.5}
+  },
+  "candidate_state_family": {
+    "scope": "persisted DEVELOPMENT origin states; no fit or refit authorized",
+    "manifest_path": "audits/q1-fusion-process-ablation/1.0.0/reproducibility_manifest.json",
+    "manifest_sha256": "74f8c9f35d28ed6b0ae7dde86fb945299df138d5e9823e32714568ee9a27369f",
+    "states": [
+      {"origin_id": "O1", "path": "audits/q1-fusion-process-ablation/1.0.0/fitted_state/O1.pkl", "sha256": "221c8a363cf53a0b4e5281316380f4a533b8546c155760541aee02f271c0b502"},
+      {"origin_id": "O2", "path": "audits/q1-fusion-process-ablation/1.0.0/fitted_state/O2.pkl", "sha256": "4e5b37edffda1c20b6021bfe0c0c3354098bf51a42e3ffef9f32c661d0d0a7e9"},
+      {"origin_id": "O3", "path": "audits/q1-fusion-process-ablation/1.0.0/fitted_state/O3.pkl", "sha256": "6ebee081eddba600e016513429ca4392a9bddafc8ecba98ceba11ef26d4fb26e"},
+      {"origin_id": "O4", "path": "audits/q1-fusion-process-ablation/1.0.0/fitted_state/O4.pkl", "sha256": "f5dd816e475ae4f0e60a15e2e041702e6aa4de66a878e1fdce512b2a303de773"},
+      {"origin_id": "O5", "path": "audits/q1-fusion-process-ablation/1.0.0/fitted_state/O5.pkl", "sha256": "2154ec64b6769e0938810fc7cb876f3fd8661c682f74a328d2b993a2414e4630"}
+    ]
+  },
+  "frozen_candidate_use_authorized": true,
+  "candidate_selection_on_test_authorized": false,
+  "fixed_operational_threshold": 0.5,
+  "threshold_provenance": {
+    "path": "audits/q1-development-practical-utility-protocol/1.0.0/threshold_grid.json",
+    "sha256": "038c98912a051ef5212f2b75cddfb835868ea42708ad2bbe0163a2d032a1bab8",
+    "semantics": "Prospectively human-authorized stable historical/development reference; not an optimal threshold."
+  },
+  "frozen_threshold_use_authorized": true,
+  "threshold_selection_on_test_authorized": false,
+  "threshold_optimization_on_test_authorized": false,
+  "calibration_policy": "All frozen pre-TEST states are authorized only for final descriptive and calibration comparison; no single state is retrospectively declared the final calibrator.",
+  "calibration_states": [
+    {"id": "UNCALIBRATED", "frozen_before_test": true},
+    {"id": "PLATT", "frozen_before_test": true},
+    {"id": "ISOTONIC", "frozen_before_test": true}
+  ],
+  "calibration_state_provenance": {
+    "configuration_path": "configs/experiments/q1_forward_development_calibration_1.0.0.json",
+    "configuration_sha256": "7b77624a68cbf3d4bfd30d3a62174885cc8ebc2666eebf8ff2ee1a3673ef6e9b",
+    "manifest_path": "audits/q1-forward-development-calibration/1.0.0/calibration_reproducibility_manifest.json",
+    "manifest_sha256": "57a1504e6b5d885604a7fc31b7419c93a17762226ed1ff87a5708e7efa73677e",
+    "fitted_state_sha256": ["6ad4023d6fc453ab873be748ec5c0744b56bda207cc9936cc977869195679d95", "1883b5306bac09ca148297cb3cf7c7c55f7590a5dbac8936710779d539431a02", "206992dc5fe7d52506fb40c16048d85ea59d7ecefc622f4bad45b5feeb6d85fb", "20f6a6eedcbe60987fb2128acb621e26a5ce6bdb7f39c8ab02f9855330a107ea", "30f4a0b9a2dcbb09b3be6932412199b2f46f1d80a8f769c66d8e537cbdd84ef3"]
+  },
+  "frozen_calibrator_use_authorized": true,
+  "calibration_selection_on_test_authorized": false,
+  "calibrator_fit_or_refit_on_test_authorized": false,
+  "comparator_policy": "All predeclared admissible frozen unimodal references; no easiest-to-beat selection.",
+  "comparators": [
+    {"id": "C", "representation": "CODE", "model_candidate": "jit-10.8.2.25-code-rf-2"},
+    {"id": "P", "representation": "PROCESS", "model_candidate": "jit-10.8.2.25-process-rf-2"},
+    {"id": "T", "representation": "TEXT", "model_candidate": "jit-10.8.2.25-text-lr-2"}
+  ],
+  "comparator_provenance": {
+    "configuration_path": "configs/experiments/q1_modality_factorial_1.0.0.json",
+    "configuration_sha256": "34a03d0692525eecd20f6615b51c9e020acc6b5d9e4e6971034f758ba3ee514a",
+    "manifest_path": "audits/q1-modality-factorial/1.0.0/reproducibility_manifest.json",
+    "manifest_sha256": "3b4659c373055ca2cfb54292b37a2908b8b6c7a8a6d56728a432c8860ed11418",
+    "fitted_state_sha256": ["28a050e9518e6f786acabcdaf89c87fe4358453572f0e28d7c97f18cf3ccb19b", "1ef30d3cce795863a7022046976c91439a20d7995017235d59b15db85639550e", "b168d5779520cc767788a34779fa3bd7005c0c5d3183c1fe14f62b11f20a9527", "aa3eeec6ffd530ce88521e8948d0a717bb6608009ce49c7a1d1d336184805ff5", "38aef6a438abdb402695361c58fb5689dad857a377a97a96d45d241775a6d271"]
+  },
+  "hashed_references": [
+    {"path": "audits/q1-predeclared-final-performance-contract/1.0.0/final_performance_contract.json", "sha256": "15c02b6e46b9a45b5848a5713259a5dbd8c45038da41708fa08a163a51b761f9"},
+    {"path": "configs/experiments/q1_forward_development_calibration_1.0.0.json", "sha256": "7b77624a68cbf3d4bfd30d3a62174885cc8ebc2666eebf8ff2ee1a3673ef6e9b"},
+    {"path": "audits/q1-fusion-process-ablation/1.0.0/reproducibility_manifest.json", "sha256": "74f8c9f35d28ed6b0ae7dde86fb945299df138d5e9823e32714568ee9a27369f"},
+    {"path": "audits/q1-development-practical-utility-protocol/1.0.0/threshold_grid.json", "sha256": "038c98912a051ef5212f2b75cddfb835868ea42708ad2bbe0163a2d032a1bab8"},
+    {"path": "audits/q1-forward-development-calibration/1.0.0/calibration_reproducibility_manifest.json", "sha256": "57a1504e6b5d885604a7fc31b7419c93a17762226ed1ff87a5708e7efa73677e"},
+    {"path": "configs/experiments/q1_modality_factorial_1.0.0.json", "sha256": "34a03d0692525eecd20f6615b51c9e020acc6b5d9e4e6971034f758ba3ee514a"},
+    {"path": "audits/q1-modality-factorial/1.0.0/reproducibility_manifest.json", "sha256": "3b4659c373055ca2cfb54292b37a2908b8b6c7a8a6d56728a432c8860ed11418"}
+  ],
+  "zero_test_access_before_materialization": true,
+  "test_access_count": 0,
+  "one_shot_test_access_authorized": false,
+  "test_based_adaptation_authorized": false,
+  "xai_authorized": false,
+  "test_sealed": true,
+  "next_gate": "Separate final integrity and human-accepted TEST-access authorization after review and commit of this artifact."
+}
