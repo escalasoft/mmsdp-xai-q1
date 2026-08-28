@@ -1,0 +1,33 @@
+{
+  "access_counter": 0,
+  "authorized": false,
+  "default": "DENY",
+  "fail_closed_on": [
+    "missing/null/changed identity",
+    "manifest mismatch",
+    "nonzero access counter",
+    "overlap",
+    "schema incompatibility",
+    "authorization mismatch",
+    "attempted target fit/selection/normalization/calibration/thresholding"
+  ],
+  "historical_sprint31_test": {
+    "identity": "d1b4448e22a1dba4292b9cf8969ba77db0cf9a10ef66dfddf98642cb5dc078a7",
+    "status": "PERMANENTLY_INELIGIBLE_AS_NEW_CONFIRMATORY_TEST"
+  },
+  "label_isolation": "development loaders expose target predictors only after identity validation and never expose target labels; evaluation loader requires one-use authorization token",
+  "required_before_access": [
+    "dataset identity",
+    "version",
+    "provenance",
+    "sample identity hash",
+    "feature-schema identity",
+    "target-project identity",
+    "temporal-boundary identity",
+    "manifest hash",
+    "zero source/target/Sprint31 overlap proof",
+    "access counter = 0",
+    "human authorization bound to exact identities"
+  ],
+  "transaction": "atomically increment access counter before the single authorized evaluation; abort without exposing data if ledger update cannot be committed"
+}

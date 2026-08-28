@@ -1,0 +1,166 @@
+{
+  "algorithms": [
+    {
+      "id": "LR",
+      "name": "Logistic Regression",
+      "status": "AVAILABLE"
+    },
+    {
+      "id": "RF",
+      "name": "Random Forest",
+      "status": "AVAILABLE"
+    },
+    {
+      "id": "XGB",
+      "name": "XGBoost",
+      "status": "IMPLEMENTATION_AND_DEPENDENCY_REQUIRED"
+    },
+    {
+      "id": "LGBM",
+      "name": "LightGBM",
+      "status": "IMPLEMENTATION_AND_DEPENDENCY_REQUIRED"
+    }
+  ],
+  "calibration": {
+    "fit": "SOURCE_VALIDATION out-of-fold for selection; final mapping fitted on full SOURCE_VALIDATION after selection",
+    "reliability": "10 fixed equal-width bins plus reliability diagram",
+    "separation": "report Brier/ECE separately from discrimination",
+    "states": [
+      "UNCALIBRATED",
+      "PLATT",
+      "ISOTONIC"
+    ],
+    "target_fit_or_selection": false
+  },
+  "classification": "BLOCKED_MISSING_COMPATIBLE_DATASETS",
+  "execution_authorized": false,
+  "fusion": {
+    "historical_candidate": "FROZEN_CT_EQUAL / CT_equal, CODE+TEXT probability late fusion 0.5/0.5; historical evidence only",
+    "multimodal_campaign_comparator": "feature-level concatenation after modality-specific SOURCE-TRAIN fitting",
+    "reusable_mechanisms": [
+      "fixed weighted late fusion",
+      "stacking with LR/RF meta-models"
+    ],
+    "selection": "no fusion selection using TARGET",
+    "unimodal": "direct probability"
+  },
+  "hyperparameters": "nested chronological SOURCE development only; fixed search space must be added with XGB/LGBM implementations before execution; TARGET never participates",
+  "imbalance": {
+    "baseline": "natural prevalence; no resampling; no class weighting",
+    "conditional_sensitivity": "SOURCE-TRAIN-only class weighting, separately identified and frozen before authorization",
+    "validation_or_target_resampling": false
+  },
+  "lifecycle": {
+    "SOURCE_TRAIN": "fit preprocessing, representations, model and imbalance transformations",
+    "SOURCE_VALIDATION": "hyperparameters, calibrator policy and fixed threshold development only",
+    "TARGET_FINAL_TEST": "one authorized inference/evaluation after manifest and access gate pass",
+    "shuffle": false,
+    "temporal_order": true
+  },
+  "metrics": {
+    "accuracy_primary": false,
+    "target_optimization": false,
+    "threshold": 0.5,
+    "threshold_dependent": [
+      "Precision",
+      "Recall",
+      "F1",
+      "MCC"
+    ],
+    "threshold_independent": [
+      "ROC-AUC",
+      "PR-AUC",
+      "Brier Score",
+      "ECE"
+    ]
+  },
+  "modalities": [
+    "C",
+    "P",
+    "T",
+    "C+P",
+    "C+T",
+    "P+T",
+    "C+P+T"
+  ],
+  "preprocessing": {
+    "alignment": "fixed common feature order",
+    "categorical": "source-train-fitted encoder with explicit unknown category",
+    "fit_scope": "SOURCE_TRAIN_ONLY",
+    "numeric": "median imputation then zero-variance removal then Z-score using source-train mu/sigma",
+    "outliers": "no removal or winsorization in baseline",
+    "sparse": "preserve sparse representation; do not center",
+    "target_adaptation": "none",
+    "text": "source-train-fitted TF-IDF; vocabulary/IDF never fit on validation or target"
+  },
+  "prohibitions": [
+    "final experiment execution",
+    "target-label access before authorization",
+    "Sprint 31 TEST reuse",
+    "Sprint 47 execution",
+    "target-based fitting/selection/thresholding",
+    "post-outcome protocol changes",
+    "XAI-driven target optimization",
+    "superiority claims"
+  ],
+  "protocol_id": "q1-cpdp-multidataset-experimental-campaign",
+  "research_questions": {
+    "campaign_operational_rqs": [
+      "RQ1 multimodal versus unimodal predictive performance",
+      "RQ2 contribution of modality combinations",
+      "RQ3 stability across algorithms",
+      "RQ4 cross-project generalization",
+      "RQ5 calibration reliability versus discrimination",
+      "RQ6 statistical and practical meaning",
+      "RQ7 explanatory evidence of complementary modality contributions"
+    ],
+    "existing_general_rq": "How does integrating a multimodal and explainable framework combining code, process, and text influence precision, reliability, and interpretability of defect prediction?",
+    "reconciliation": "The seven campaign RQs operationalize, and do not overwrite, the repository's general RQ."
+  },
+  "sprint": "10.8.2.48",
+  "starting_state": {
+    "branch": "sprint-10/q1-cpdp-multidataset-experimental-campaign",
+    "head": "90acf442fe21e3becd8cf7cff02eaa75f8c97301",
+    "origin_main_ahead": 0,
+    "origin_main_behind": 0,
+    "preserved_classification": "NO_VERIFIABLE_UNTOUCHED_FINAL_TEST",
+    "sprint_46a_ancestor": "7d4f346",
+    "worktree_clean": true
+  },
+  "target_accesses": 0,
+  "topology": {
+    "conditional_secondary": [
+      "single-source-to-single-target",
+      "leave-one-dataset-out when at least four independently compatible datasets exist"
+    ],
+    "historical_test": "excluded from source and target",
+    "primary": "multi-source-to-single-target leave-one-project-out",
+    "source": "historical TRAIN/VALIDATION from all non-target projects",
+    "target": "new post-boundary materialization for held-out project"
+  },
+  "version": "1.0.0",
+  "xai": {
+    "available": [
+      "native global coefficient/importance",
+      "LR local linear attribution",
+      "LR counterfactual"
+    ],
+    "levels": [
+      "global",
+      "local",
+      "modality-level",
+      "feature-level"
+    ],
+    "missing": [
+      "SHAP adapter",
+      "LIME adapter",
+      "PDP",
+      "ICE",
+      "DiCE integration",
+      "faithful tree counterfactual"
+    ],
+    "purpose": "explain complementary modality contribution, not decorate or optimize",
+    "selection_use": false,
+    "timing": "after frozen predictive evaluation"
+  }
+}

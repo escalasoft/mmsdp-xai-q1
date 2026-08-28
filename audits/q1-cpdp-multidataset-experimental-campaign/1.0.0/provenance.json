@@ -1,0 +1,16 @@
+{
+  "generated_from_head": "90acf442fe21e3becd8cf7cff02eaa75f8c97301",
+  "generation": "deterministic standard-library contract generation",
+  "historical_inputs": [
+    "audits/q1-final-test-identity-boundary-amendment/1.0.0",
+    "audits/jit-defects4j-canonical/1.0.0",
+    "configs/experiments",
+    "src",
+    "tests",
+    "docs"
+  ],
+  "protocol_id": "q1-cpdp-multidataset-experimental-campaign",
+  "row_level_target_inputs": [],
+  "target_accesses": 0,
+  "version": "1.0.0"
+}
