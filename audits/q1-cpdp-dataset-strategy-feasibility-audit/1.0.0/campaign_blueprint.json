@@ -1,0 +1,49 @@
+{
+  "CPDP": "Primary pooled leave-one-project-out: all non-target projects are SOURCE, held-out project is unseen TARGET; target observations never enter training, fitting, calibration or threshold selection. Pairwise CPDP is optional diagnostic.",
+  "WPDP": "For each eligible project, chronological TRAIN -> VALIDATION -> new post-boundary TEST; tune/fit/calibrate on TRAIN/VALIDATION only; no shuffle.",
+  "algorithms": [
+    "LR",
+    "RF",
+    "XGBOOST",
+    "LIGHTGBM"
+  ],
+  "blockers": [
+    "new post-boundary target materializations and temporal ranges/class support",
+    "four independent C/P/T sources (for Strategy B; only one benchmark is verified)",
+    "QtBase compatible materialization",
+    "XGBoost/LightGBM dependencies/adapters/search spaces",
+    "generic CPDP orchestrator/schema mapper",
+    "campaign statistics and named XAI integrations",
+    "atomic target access enforcement and reproducible dependency lock"
+  ],
+  "calibrations": [
+    "UNCALIBRATED",
+    "PLATT",
+    "ISOTONIC"
+  ],
+  "classification": "BLOCKED_MISSING_DATASET_EVIDENCE",
+  "execution_authorized": false,
+  "minimum_projects": 10,
+  "modalities": [
+    "C",
+    "P",
+    "T",
+    "C+P",
+    "C+T",
+    "P+T",
+    "C+P+T"
+  ],
+  "pooled_policy": "Pooled SOURCE training is valid in addition to WPDP and optional individual-source CPDP, but superiority is an empirical result.",
+  "practical_utility": "Translate effects to recall at comparable precision, false-negative rate, inspection/ranking effort, and calibrated prioritization; make no causal/economic claim without a cost model.",
+  "recommended_strategy": "C_HYBRID_CONDITIONAL_ON_EXTERNAL_COMPATIBILITY; A_PLUS_D_AS_EXECUTABLE_FALLBACK",
+  "reviewer_floor": 4,
+  "starting_state": {
+    "branch": "sprint-10/q1-cpdp-dataset-strategy-feasibility-audit",
+    "clean": true,
+    "head": "5420b425ab225b35c3e109503e4f1bca065118d4",
+    "origin_main": "5420b425ab225b35c3e109503e4f1bca065118d4"
+  },
+  "target_test_access_count": 0,
+  "test_policy": "Historical Sprint 31 TEST remains historical only. New targets require exact identity, zero overlap, label-sealed development, human authorization and an atomic one-use ledger.",
+  "xai_policy": "Run only after models/configurations are frozen independently of target outcomes. Use SHAP global/local, LIME local, PDP/ICE only for interpretable low-dimensional features with dependence caveats, and DiCE only where feature actionability/constraints are defensible."
+}

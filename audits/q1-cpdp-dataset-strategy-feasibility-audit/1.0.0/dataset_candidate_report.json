@@ -1,0 +1,754 @@
+{
+  "benchmark_projects_verified": 21,
+  "benchmark_total": {
+    "nominal_negative": 24987,
+    "observations": 27319,
+    "positive": 2332,
+    "prevalence": 0.08536183608477617
+  },
+  "dataset_sources_verified": 1,
+  "feature_contract": {
+    "C": [
+      "file_changes",
+      "files_added",
+      "files_deleted",
+      "files_modified",
+      "files_other"
+    ],
+    "P": [
+      "parent_count",
+      "is_merge_commit",
+      "has_prior_history",
+      "prior_project_commit_count"
+    ],
+    "T": [
+      "raw_commit_message -> SOURCE-TRAIN-fitted TF-IDF"
+    ]
+  },
+  "independent_external_sources_verified": 0,
+  "label": "commit-level binary is_defect_prone; negatives are closed-world nominal negatives",
+  "other_candidate": {
+    "dataset": "QtBase",
+    "modalities": "contracted C/P/T but not materially verified",
+    "nominal_negative": null,
+    "observations": null,
+    "positive": null,
+    "prevalence": null,
+    "project": "qtbase",
+    "source_or_target_eligibility": "UNVERIFIED",
+    "status": "NOT_MATERIALIZED",
+    "temporal_range": null,
+    "version": null
+  },
+  "panel_is_final": false,
+  "preferred_panel": [
+    "ant-ivy",
+    "commons-bcel",
+    "commons-collections",
+    "commons-jcs",
+    "commons-lang",
+    "commons-math",
+    "commons-net",
+    "giraph",
+    "opennlp",
+    "parquet-mr"
+  ],
+  "projects": [
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        293,
+        24,
+        15
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 1439,
+      "observations": 1771,
+      "positive": 332,
+      "prevalence": 0.18746470920383965,
+      "primary_panel_candidate": true,
+      "project": "ant-ivy",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "historical class support in every chronological partition (>=5 positives)",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        44,
+        8,
+        8
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 765,
+      "observations": 825,
+      "positive": 60,
+      "prevalence": 0.07272727272727272,
+      "primary_panel_candidate": true,
+      "project": "commons-bcel",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "historical class support in every chronological partition (>=5 positives)",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        36,
+        1,
+        0
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 574,
+      "observations": 611,
+      "positive": 37,
+      "prevalence": 0.060556464811783964,
+      "primary_panel_candidate": false,
+      "project": "commons-beanutils",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "not in minimum panel because one historical partition has <5 positives",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        29,
+        6,
+        1
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 725,
+      "observations": 761,
+      "positive": 36,
+      "prevalence": 0.04730617608409987,
+      "primary_panel_candidate": false,
+      "project": "commons-codec",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "not in minimum panel because one historical partition has <5 positives",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        32,
+        7,
+        11
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 1773,
+      "observations": 1823,
+      "positive": 50,
+      "prevalence": 0.027427317608337904,
+      "primary_panel_candidate": true,
+      "project": "commons-collections",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "historical class support in every chronological partition (>=5 positives)",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        155,
+        19,
+        4
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 1452,
+      "observations": 1630,
+      "positive": 178,
+      "prevalence": 0.10920245398773006,
+      "primary_panel_candidate": false,
+      "project": "commons-compress",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "not in minimum panel because one historical partition has <5 positives",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        143,
+        9,
+        3
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 1683,
+      "observations": 1838,
+      "positive": 155,
+      "prevalence": 0.08433079434167573,
+      "primary_panel_candidate": false,
+      "project": "commons-configuration",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "not in minimum panel because one historical partition has <5 positives",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        56,
+        2,
+        0
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 979,
+      "observations": 1037,
+      "positive": 58,
+      "prevalence": 0.055930568948891035,
+      "primary_panel_candidate": false,
+      "project": "commons-dbcp",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "not in minimum panel because one historical partition has <5 positives",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        7,
+        5,
+        7
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 1060,
+      "observations": 1079,
+      "positive": 19,
+      "prevalence": 0.017608897126969416,
+      "primary_panel_candidate": false,
+      "project": "commons-digester",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "not in minimum panel because one historical partition has <5 positives",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        69,
+        3,
+        1
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 1069,
+      "observations": 1142,
+      "positive": 73,
+      "prevalence": 0.063922942206655,
+      "primary_panel_candidate": false,
+      "project": "commons-io",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "not in minimum panel because one historical partition has <5 positives",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        64,
+        12,
+        12
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 743,
+      "observations": 831,
+      "positive": 88,
+      "prevalence": 0.10589651022864019,
+      "primary_panel_candidate": true,
+      "project": "commons-jcs",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "historical class support in every chronological partition (>=5 positives)",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        109,
+        29,
+        8
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 2823,
+      "observations": 2969,
+      "positive": 146,
+      "prevalence": 0.04917480633209835,
+      "primary_panel_candidate": true,
+      "project": "commons-lang",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "historical class support in every chronological partition (>=5 positives)",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        252,
+        59,
+        24
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 3691,
+      "observations": 4026,
+      "positive": 335,
+      "prevalence": 0.08320914058618976,
+      "primary_panel_candidate": true,
+      "project": "commons-math",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "historical class support in every chronological partition (>=5 positives)",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        102,
+        10,
+        5
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 1004,
+      "observations": 1121,
+      "positive": 117,
+      "prevalence": 0.10437109723461195,
+      "primary_panel_candidate": true,
+      "project": "commons-net",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "historical class support in every chronological partition (>=5 positives)",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        37,
+        2,
+        8
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 497,
+      "observations": 544,
+      "positive": 47,
+      "prevalence": 0.08639705882352941,
+      "primary_panel_candidate": false,
+      "project": "commons-scxml",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "not in minimum panel because one historical partition has <5 positives",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        26,
+        6,
+        4
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 562,
+      "observations": 598,
+      "positive": 36,
+      "prevalence": 0.06020066889632107,
+      "primary_panel_candidate": false,
+      "project": "commons-validator",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "not in minimum panel because one historical partition has <5 positives",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        105,
+        6,
+        3
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 996,
+      "observations": 1110,
+      "positive": 114,
+      "prevalence": 0.10270270270270271,
+      "primary_panel_candidate": false,
+      "project": "commons-vfs",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "not in minimum panel because one historical partition has <5 positives",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        140,
+        12,
+        11
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 681,
+      "observations": 844,
+      "positive": 163,
+      "prevalence": 0.19312796208530805,
+      "primary_panel_candidate": true,
+      "project": "giraph",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "historical class support in every chronological partition (>=5 positives)",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        39,
+        0,
+        0
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 514,
+      "observations": 553,
+      "positive": 39,
+      "prevalence": 0.0705244122965642,
+      "primary_panel_candidate": false,
+      "project": "gora",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "not in minimum panel because one historical partition has <5 positives",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        75,
+        8,
+        8
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 995,
+      "observations": 1086,
+      "positive": 91,
+      "prevalence": 0.08379373848987108,
+      "primary_panel_candidate": true,
+      "project": "opennlp",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "historical class support in every chronological partition (>=5 positives)",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    },
+    {
+      "dataset": "JIT-Defects4J",
+      "dataset_version": "1.0.0",
+      "duplicate_status": "benchmark-wide identity uniqueness passed",
+      "future_source": "historical TRAIN/VALIDATION only; exclude historical TEST",
+      "future_untouched_target": "not currently available; requires new post-boundary materialization",
+      "historical_test_consumed": true,
+      "historical_train_validation_test_positive": [
+        99,
+        32,
+        27
+      ],
+      "identity": [
+        "project",
+        "commit_hash"
+      ],
+      "missingness": "aggregate audit reports 16 missing commit messages benchmark-wide; per-project missingness unavailable",
+      "modalities": [
+        "C",
+        "P",
+        "T"
+      ],
+      "nominal_negative": 962,
+      "observations": 1120,
+      "positive": 158,
+      "prevalence": 0.14107142857142857,
+      "primary_panel_candidate": true,
+      "project": "parquet-mr",
+      "schema_compatibility": "common within JIT-Defects4J; external compatibility unverified",
+      "selection_basis": "historical class support in every chronological partition (>=5 positives)",
+      "temporal_field": "git_committer_timestamp",
+      "temporal_range": null
+    }
+  ],
+  "provenance": "jacknichao/JIT-Fine data.zip plus immutable upstream repository snapshots",
+  "requalification": "Every project needs new post-boundary counts, class support, temporal range, hashes, missingness and zero-overlap proof before freezing; substitute by the same criteria, never performance.",
+  "scientific_limitation": "Projects are distinct domains inside one benchmark, not four independent dataset sources."
+}

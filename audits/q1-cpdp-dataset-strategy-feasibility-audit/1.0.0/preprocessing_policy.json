@@ -1,0 +1,18 @@
+{
+  "fit_scope": "SOURCE_TRAIN_ONLY",
+  "primary_protocol": "STRICT_INDUCTIVE_CPDP",
+  "steps": {
+    "calibration": "fit using source validation or nested source-only out-of-fold predictions",
+    "categorical_encoding": "source-train fitted with frozen unknown category",
+    "class_weighting": "derive from source train only",
+    "dimensionality_reduction": "source-train fitted only",
+    "feature_selection": "source-train/validation only; freeze before target access",
+    "imputation": "source-train median for numeric; source-train explicit missing/unknown token for text/categorical",
+    "normalization": "source-train mean/std, applied unchanged; zero variance removed from source train",
+    "resampling": "source train only; never validation or target",
+    "target_zscore": "PROHIBITED in primary protocol: TARGET mean/std is transductive covariate adaptation even without labels",
+    "text": "source-train vocabulary and IDF; sparse and uncentered",
+    "threshold": "predeclare 0.5 and any operational threshold from source validation only"
+  },
+  "transductive_secondary": "A separately labelled, preregistered sensitivity analysis may fit unsupervised target covariate normalization; it must never use target labels or be conflated with strict inductive CPDP."
+}

@@ -1,0 +1,40 @@
+{
+  "historical_integrity": "historical artifacts are read-only and remain authoritative",
+  "prohibited_payloads_opened": [],
+  "scope": "committed aggregate metadata and source/contracts only",
+  "sources": [
+    {
+      "path": "audits/jit-defects4j/1.0.0/audit.json",
+      "use": "provenance, aggregate project inventory and label semantics"
+    },
+    {
+      "path": "audits/jit-defects4j-canonical/1.0.0/audit.json",
+      "use": "aggregate counts, missingness, schemas and temporal policy"
+    },
+    {
+      "path": "audits/jit-defects4j-one-shot-test/1.0.0/REPORT.md",
+      "use": "historical Sprint 31 TEST-consumption fact only"
+    },
+    {
+      "path": "audits/q1-final-test-identity-boundary-amendment/1.0.0/identity_boundary_amendment.json",
+      "use": "NO_VERIFIABLE_UNTOUCHED_FINAL_TEST governance conclusion"
+    },
+    {
+      "path": "audits/q1-cpdp-multidataset-experimental-campaign/1.0.0",
+      "use": "Sprint 48 contract and declared gaps"
+    },
+    {
+      "path": "configs/qt_*.json and src/{extraction,dataset}/qt_*.py",
+      "use": "Qt construction contracts; no materialized observations"
+    },
+    {
+      "path": "src/{preprocessing,models,calibration,experimentation,explainability}",
+      "use": "implementation readiness"
+    },
+    {
+      "path": "pyproject.toml",
+      "use": "declared dependency readiness"
+    }
+  ],
+  "target_test_access_count": 0
+}

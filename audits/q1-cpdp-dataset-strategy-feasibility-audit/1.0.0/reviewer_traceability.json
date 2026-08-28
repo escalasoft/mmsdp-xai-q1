@@ -1,0 +1,96 @@
+{
+  "complete": true,
+  "rows": [
+    {
+      "analysis": "Friedman; gated Wilcoxon; Holm; CIs/effects",
+      "future_experiment": "paired target-project scores",
+      "paper_artifact": "Table 6",
+      "question": "statistical significance",
+      "requirement": "A"
+    },
+    {
+      "analysis": "paired algorithm contrasts",
+      "future_experiment": "LR/RF/XGBoost/LightGBM frozen implementations",
+      "paper_artifact": "Tables 2-5",
+      "question": "add and compare four named algorithms",
+      "requirement": "B/C"
+    },
+    {
+      "analysis": "descriptive audit",
+      "future_experiment": "identity/provenance/count/prevalence/time/label/CPT/missingness",
+      "paper_artifact": "Table 1",
+      "question": "explain every dataset individually",
+      "requirement": "D"
+    },
+    {
+      "analysis": "per-project rows",
+      "future_experiment": ">=10 preferred targets, never fewer than four eligible",
+      "paper_artifact": "Tables 2-3",
+      "question": "evaluate four projects individually",
+      "requirement": "E"
+    },
+    {
+      "analysis": "project-level distributions/CIs",
+      "future_experiment": "temporal WPDP plus held-out-project LOPO CPDP",
+      "paper_artifact": "Tables 2-3; Figures 2-3",
+      "question": "generalization and stability",
+      "requirement": "F"
+    },
+    {
+      "analysis": "paired target contrasts; no assumed superiority",
+      "future_experiment": "pooled non-target SOURCE vs individual-source diagnostic",
+      "paper_artifact": "Table 3",
+      "question": "audit pooled integration",
+      "requirement": "G"
+    },
+    {
+      "analysis": "paired FN/FP, recall/precision/MCC",
+      "future_experiment": "fixed source-selected threshold confusion deltas",
+      "paper_artifact": "Table 4",
+      "question": "does multimodality reduce errors",
+      "requirement": "H1"
+    },
+    {
+      "analysis": "PR-AUC/MCC paired effects",
+      "future_experiment": "C+P+T vs C/P/T and bimodal LOPO",
+      "paper_artifact": "Tables 3-4",
+      "question": "does it improve generalization",
+      "requirement": "H2"
+    },
+    {
+      "analysis": "incremental effects and explanation concordance",
+      "future_experiment": "seven-level ablation plus frozen-model XAI",
+      "paper_artifact": "Table 4; Figures 5-6",
+      "question": "complementary information",
+      "requirement": "H3"
+    },
+    {
+      "analysis": "no cost claim absent cost model",
+      "future_experiment": "recall at comparable precision, FNR, ranking/inspection effort, calibration risk tiers",
+      "paper_artifact": "dedicated practical-utility columns/text",
+      "question": "practical implication separate from performance",
+      "requirement": "H4/I"
+    },
+    {
+      "analysis": "Brier/ECE/reliability curves; source-only fit",
+      "future_experiment": "C+P+T uncalibrated/Platt/isotonic",
+      "paper_artifact": "Table 5; Figure 4",
+      "question": "effect and probability reliability",
+      "requirement": "Calibration"
+    },
+    {
+      "analysis": "SHAP global/local, LIME local, appropriate PDP/ICE, feasible DiCE",
+      "future_experiment": "post-evaluation frozen models only",
+      "paper_artifact": "Figures 5-6",
+      "question": "interpret contribution",
+      "requirement": "XAI"
+    },
+    {
+      "analysis": "zero overlap and atomic access ledger",
+      "future_experiment": "identity-bound new post-boundary targets",
+      "paper_artifact": "manifest and Table 1",
+      "question": "no reused TEST as untouched",
+      "requirement": "Integrity"
+    }
+  ]
+}

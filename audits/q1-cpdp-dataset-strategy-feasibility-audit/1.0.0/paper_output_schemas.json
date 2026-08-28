@@ -1,0 +1,92 @@
+{
+  "figures": {
+    "FIGURE_1": "leakage-safe WPDP/LOPO protocol",
+    "FIGURE_2": "paired performance distributions",
+    "FIGURE_3": "target-wise CPDP generalization",
+    "FIGURE_4": "reliability diagrams with counts",
+    "FIGURE_5": "global SHAP/modality contributions for frozen models",
+    "FIGURE_6": "preselected representative local SHAP/LIME explanation"
+  },
+  "population_policy": "Schemas only; Phase 2/3 populate results. No prospective result field contains a value.",
+  "tables": {
+    "TABLE_1": [
+      "dataset",
+      "project",
+      "version",
+      "source",
+      "provenance_hash",
+      "time_start",
+      "time_end",
+      "n",
+      "positive",
+      "negative",
+      "prevalence",
+      "label_definition",
+      "C_features",
+      "P_features",
+      "T_representation",
+      "missingness",
+      "duplicates",
+      "prior_test_status"
+    ],
+    "TABLE_2": [
+      "project",
+      "split_boundaries",
+      "algorithm",
+      "modality",
+      "calibration",
+      "metrics",
+      "CI"
+    ],
+    "TABLE_3": [
+      "source_projects",
+      "target_project",
+      "topology",
+      "algorithm",
+      "modality",
+      "calibration",
+      "metrics",
+      "CI"
+    ],
+    "TABLE_4": [
+      "design",
+      "target",
+      "algorithm",
+      "contrast",
+      "metric_delta",
+      "CI",
+      "effect_size"
+    ],
+    "TABLE_5": [
+      "design",
+      "target",
+      "algorithm",
+      "calibration",
+      "Brier",
+      "ECE",
+      "bin_counts",
+      "calibration_slope",
+      "calibration_intercept"
+    ],
+    "TABLE_6": [
+      "RQ",
+      "design",
+      "metric",
+      "methods",
+      "n_projects",
+      "test",
+      "statistic",
+      "raw_p",
+      "Holm_p",
+      "effect",
+      "CI"
+    ],
+    "TABLE_7": [
+      "reviewer_requirement",
+      "experiment",
+      "metric_or_analysis",
+      "artifact",
+      "answer_status"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "phases": [
+    {
+      "exit": "at least 10 eligible post-boundary target projects and preferably >=1 independent source; all four algorithms and access gates pass; otherwise reclassify scope before labels are exposed",
+      "name": "dataset materialization and compatibility closure",
+      "outputs": [
+        "frozen dataset/project list",
+        "source/target identities",
+        "temporal boundaries",
+        "sample/label/feature hashes",
+        "counts/missingness/overlap",
+        "XGB/LGBM adapters and lock",
+        "CPDP/schema/governance gates"
+      ],
+      "phase": 1
+    },
+    {
+      "exit": "one authorized run with no target-driven changes",
+      "name": "frozen full experimental execution",
+      "outputs": [
+        "720-cell minimum matrix or deterministic eligible-target expansion",
+        "Tables 2-5 raw schemas",
+        "Figures 2-4 inputs",
+        "immutable execution ledger"
+      ],
+      "phase": 2
+    },
+    {
+      "exit": "all claims trace to frozen evidence and limitations",
+      "name": "statistics, calibration, XAI and paper evidence",
+      "outputs": [
+        "Table 6 tests/effects/CIs",
+        "Table 7 reviewer answers",
+        "Figures 1-6",
+        "practical-utility interpretation",
+        "paper-ready evidence package"
+      ],
+      "phase": 3
+    }
+  ],
+  "pre_execution_freeze": [
+    "datasets/projects",
+    "source/target identities",
+    "temporal/sample boundaries",
+    "label/feature contracts",
+    "algorithms/hyperparameter spaces",
+    "modalities",
+    "calibration/thresholds",
+    "metrics/tests",
+    "target-access and XAI policies",
+    "table/figure schemas"
+  ]
+}
