@@ -1,0 +1,16 @@
+{
+  "algorithms": {
+    "LIGHTGBM": "MISSING dependency, adapter and frozen search space",
+    "LR": "AVAILABLE",
+    "RF": "AVAILABLE",
+    "XGBOOST": "MISSING dependency, adapter and frozen search space"
+  },
+  "calibration": "Platt/isotonic and Brier/ECE primitives exist; source-only campaign orchestration and minimum-support gates required",
+  "cpdp": "generic pooled-source/held-out-target orchestrator and schema mapper absent",
+  "datasets": "BLOCKED: untouched compatible target materializations absent",
+  "dependencies": "pyproject declares no runtime dependencies; reproducible lock/declarations for sklearn/numpy/scipy/XGBoost/LightGBM/XAI stack are required",
+  "governance": "atomic identity-bound one-use target authorization/access ledger absent",
+  "modalities": "C/P/T and all seven combinations are contract-ready for JIT-Defects4J; cross-source semantics unverified",
+  "statistics": "plan is ready; campaign-wide executor absent",
+  "xai": "native LR/RF global importance, LR local/counterfactual boundaries exist; SHAP/LIME/PDP/ICE/DiCE and XGB/LGBM adapters are absent"
+}

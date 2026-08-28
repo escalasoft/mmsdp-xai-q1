@@ -1,0 +1,33 @@
+{
+  "claims": "Statistical, practical, discrimination and calibration conclusions remain separate.",
+  "degeneracy": "Undefined metrics remain NA; never impute. Report complete-case target counts per contrast.",
+  "effects": [
+    "paired median difference",
+    "Hodges-Lehmann shift",
+    "rank-biserial correlation",
+    "absolute Brier/ECE difference"
+  ],
+  "four_project_warning": "With n=4 nonzero pairs, the minimum two-sided exact Wilcoxon p-value is 0.125; four projects alone cannot deliver conventional 0.05 Wilcoxon significance.",
+  "key_secondary": "MCC",
+  "multiplicity": "Holm correction within each predeclared RQ x design x metric family",
+  "not_replicates": [
+    "commits",
+    "folds",
+    "seeds",
+    "calibration states",
+    "configuration rows"
+  ],
+  "omnibus": "Friedman across >=10 complete non-degenerate target projects for prespecified multi-method families",
+  "other_metrics": [
+    "ROC-AUC",
+    "Precision",
+    "Recall",
+    "F1",
+    "Brier Score",
+    "ECE"
+  ],
+  "pairing_unit": "same target project, same frozen target samples, same design; one prespecified aggregate score per method and target",
+  "post_hoc": "after omnibus rejection, paired two-sided Wilcoxon signed-rank with Pratt zero handling",
+  "primary_metric": "PR-AUC / Average Precision",
+  "uncertainty": "project-stratified paired bootstrap confidence intervals for median/mean paired differences; per-project bootstrap is descriptive only"
+}

@@ -1,0 +1,36 @@
+{
+  "decision_rule": "Use hybrid if at least one independent C/P/T source passes the same immutable contract; otherwise report Strategy A+D honestly as within-benchmark multi-project evidence, without claiming independent-dataset external validity.",
+  "recommended": "C_HYBRID_CONDITIONAL_ON_EXTERNAL_COMPATIBILITY; A_PLUS_D_AS_EXECUTABLE_FALLBACK",
+  "strategies": [
+    {
+      "CPDP": "feasible as cross-project within-benchmark generalization",
+      "WPDP": "feasible only after new post-boundary targets",
+      "id": "A",
+      "limitation": "not independent-dataset external validity; consumed historical TEST",
+      "name": "multi-project JIT-Defects4J",
+      "status": "CONDITIONALLY_FEASIBLE",
+      "strength": "controlled common provenance/schema"
+    },
+    {
+      "id": "B",
+      "limitation": "repository verifies no four commit-level binary C/P/T sources; QtBase is unmaterialized",
+      "name": "four independent sources",
+      "status": "BLOCKED_MISSING_EVIDENCE",
+      "strength": "strongest source-level external validity"
+    },
+    {
+      "id": "C",
+      "limitation": "external compatible target absent",
+      "name": "hybrid",
+      "status": "PREFERRED_IF_PHASE_1_CLOSES_EXTERNAL_DATA",
+      "strength": "combines controlled within-benchmark replication with external validity"
+    },
+    {
+      "id": "D",
+      "limitation": "pooling is a hypothesis and may mask project heterogeneity",
+      "name": "pooled source training",
+      "status": "CONDITIONALLY_FEASIBLE",
+      "strength": "valid LOPO CPDP when target is strictly excluded"
+    }
+  ]
+}
