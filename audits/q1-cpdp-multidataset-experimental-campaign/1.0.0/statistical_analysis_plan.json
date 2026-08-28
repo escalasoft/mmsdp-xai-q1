@@ -1,0 +1,29 @@
+{
+  "confidence_intervals": "paired stratified project-level bootstrap, 10,000 resamples, seed 108248; sample bootstrap within project only for descriptive per-target intervals",
+  "effect_sizes": [
+    "paired median difference",
+    "Hodges-Lehmann paired shift",
+    "rank-biserial correlation",
+    "absolute Brier/ECE change"
+  ],
+  "feasibility": "tests requiring project-level replication are not run with fewer than the stated complete targets; class-degenerate target metrics are NA, never imputed",
+  "frozen_before_target_access": true,
+  "interpretation": "statistical significance is reported with uncertainty and effect size and is not treated as practical importance",
+  "multiplicity": "Holm correction within each RQ-by-metric comparison family; report raw and adjusted p-values",
+  "not_independent_replicates": [
+    "seeds",
+    "folds",
+    "individual commits pooled across projects"
+  ],
+  "omnibus": "Friedman test across eligible target projects for each prespecified metric/comparison family when >=10 complete, non-degenerate paired projects",
+  "post_hoc": "only after applicable omnibus rejection: paired Wilcoxon signed-rank across target-project scores, two-sided, Pratt zero handling",
+  "primary_metric": "PR-AUC",
+  "secondary_metrics": [
+    "ROC-AUC",
+    "F1",
+    "MCC",
+    "Brier Score",
+    "ECE"
+  ],
+  "unit_of_pairing": "same eligible target project and identical target samples"
+}

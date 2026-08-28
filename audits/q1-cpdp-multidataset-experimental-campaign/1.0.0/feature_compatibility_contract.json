@@ -1,0 +1,51 @@
+{
+  "COMMON_FEATURES": {
+    "C": [
+      "file_changes",
+      "files_added",
+      "files_deleted",
+      "files_modified",
+      "files_other",
+      "mode_changes"
+    ],
+    "P": [
+      "parent_count",
+      "is_merge_commit",
+      "has_prior_history",
+      "prior_project_commit_count"
+    ],
+    "T": [
+      "raw_commit_message transformed by SOURCE-TRAIN-fitted TF-IDF"
+    ]
+  },
+  "DATASET_SPECIFIC_FEATURES": {
+    "JIT-Defects4J": [],
+    "QtBase": "unresolved until materialization and mapping audit"
+  },
+  "INCOMPATIBLE_FEATURES": [
+    "language-specific AST/CFG features without common semantics",
+    "dataset-supplied partitions as predictors",
+    "unmapped source-native issue attributes"
+  ],
+  "POTENTIAL_LEAKAGE_FEATURES": [
+    "bug_confidence",
+    "msg_has_bug_kw",
+    "issue_link_indicator",
+    "bug_link_count",
+    "future_bug_count",
+    "future_fix_count",
+    "post_release_defect_count",
+    "label_confidence",
+    "target_probability",
+    "is_bug",
+    "is_buggy",
+    "full-dataset-fitted vocabulary or embeddings"
+  ],
+  "alignment": "intersection schema in fixed order; missing required common fields fail closed; no target-derived imputation or vocabulary",
+  "comparability_gate": "matching names are insufficient: provenance, prediction-time availability, units, aggregation, and target semantics must match",
+  "modalities": {
+    "C": "CODE",
+    "P": "PROCESS",
+    "T": "TEXT"
+  }
+}

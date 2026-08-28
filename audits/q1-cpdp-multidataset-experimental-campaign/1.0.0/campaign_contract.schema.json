@@ -1,0 +1,59 @@
+{
+  "$id": "campaign_contract.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "classification": {
+      "enum": [
+        "READY_TO_MATERIALIZE_CPDP_CAMPAIGN",
+        "BLOCKED_MISSING_COMPATIBLE_DATASETS",
+        "BLOCKED_MISSING_REQUIRED_INFRASTRUCTURE"
+      ]
+    },
+    "execution_authorized": {
+      "const": false
+    },
+    "modalities": {
+      "const": [
+        "C",
+        "P",
+        "T",
+        "C+P",
+        "C+T",
+        "P+T",
+        "C+P+T"
+      ]
+    },
+    "protocol_id": {
+      "const": "q1-cpdp-multidataset-experimental-campaign"
+    },
+    "sprint": {
+      "const": "10.8.2.48"
+    },
+    "target_accesses": {
+      "const": 0
+    },
+    "version": {
+      "const": "1.0.0"
+    }
+  },
+  "required": [
+    "protocol_id",
+    "version",
+    "sprint",
+    "classification",
+    "execution_authorized",
+    "target_accesses",
+    "starting_state",
+    "topology",
+    "modalities",
+    "algorithms",
+    "preprocessing",
+    "calibration",
+    "metrics",
+    "xai",
+    "prohibitions"
+  ],
+  "title": "MMSDP-XAI CPDP campaign contract",
+  "type": "object"
+}

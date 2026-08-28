@@ -1,0 +1,107 @@
+{
+  "candidates": [
+    {
+      "commit_identity": "available",
+      "dataset_name": "JIT-Defects4J",
+      "duplicate_and_overlap": "identity uniqueness passed and historical cross-partition overlap was zero",
+      "feature_compatibility": "COMMON_SCHEMA_ACROSS_21_PROJECTS",
+      "label": {
+        "field": "is_defect_prone",
+        "negative": "nominal non-defect-prone commit",
+        "positive": "defect-prone commit"
+      },
+      "leakage_risk": "denylist passed; nominal negatives retain closed-world benchmark semantics",
+      "modalities": [
+        "CODE",
+        "PROCESS",
+        "TEXT"
+      ],
+      "negative": 24987,
+      "observations": 27319,
+      "positive": 2332,
+      "prevalence": 0.08536183608477617,
+      "projects": [
+        "ant-ivy",
+        "commons-bcel",
+        "commons-beanutils",
+        "commons-codec",
+        "commons-collections",
+        "commons-compress",
+        "commons-configuration",
+        "commons-dbcp",
+        "commons-digester",
+        "commons-io",
+        "commons-jcs",
+        "commons-lang",
+        "commons-math",
+        "commons-net",
+        "commons-scxml",
+        "commons-validator",
+        "commons-vfs",
+        "giraph",
+        "gora",
+        "opennlp",
+        "parquet-mr"
+      ],
+      "provenance": "jacknichao/JIT-Fine data.zip plus 21 immutable upstream repository snapshots",
+      "reason": "the only canonical TEST boundary was consumed in Sprint 31",
+      "sample_identity": [
+        "project",
+        "commit_hash"
+      ],
+      "scientific_identity": "e509995da233c932cafce531c13ad2cd617a0d8abbe8d81ccaa373b8f29fa519",
+      "source_suitability": "ELIGIBLE_DEVELOPMENT_SOURCE_USING_ONLY_HISTORICAL_TRAIN_AND_VALIDATION",
+      "target_suitability": "INELIGIBLE_AS_NEW_CONFIRMATORY_TARGET",
+      "timestamp": "git_committer_timestamp; chronological within project",
+      "unit_of_analysis": "commit",
+      "version": "1.0.0"
+    },
+    {
+      "commit_identity": "contracted",
+      "dataset_name": "QtBase",
+      "duplicate_and_overlap": "NOT_COMPUTABLE",
+      "feature_compatibility": "NOT_ESTABLISHED_BY_A_MATERIALIZED_AUDIT",
+      "label": {
+        "field": "is_defect_prone",
+        "semantics": "contracted but final compatible materialization absent"
+      },
+      "leakage_risk": "construction denylist exists; materialized audit required",
+      "modalities": [
+        "CODE",
+        "PROCESS",
+        "TEXT"
+      ],
+      "negative": null,
+      "observations": null,
+      "positive": null,
+      "prevalence": null,
+      "projects": [
+        "qtbase"
+      ],
+      "provenance": "repository snapshot and Jira/source construction contracts exist",
+      "sample_identity": [
+        "commit_hash"
+      ],
+      "source_suitability": "NOT_YET_MATERIALIZED",
+      "target_suitability": "NOT_YET_MATERIALIZED",
+      "timestamp": "contracted UTC commit timestamp",
+      "unit_of_analysis": "commit",
+      "version": null
+    }
+  ],
+  "classification": "INSUFFICIENT_COMPATIBLE_DATASETS",
+  "evidence_boundary": "repository metadata and committed audits only; no row-level TEST or prediction artifacts opened",
+  "required_materialization": {
+    "minimum": "new post-boundary, provenance-compatible target observations for at least four eligible projects; preferably all 21 rotations",
+    "must_establish": [
+      "immutable dataset/version/provenance",
+      "row-stable sample and commit identities",
+      "timestamps and target temporal boundary",
+      "C/P/T schema mapping",
+      "class support",
+      "zero overlap with all source and Sprint 31 TEST identities",
+      "access counter zero before authorization"
+    ],
+    "prohibited_substitution": "unrelated binary defect datasets"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "no_superiority_claim": true,
+  "rows": [
+    {
+      "campaign_response": "LR/RF/XGBoost/LightGBM controlled comparison",
+      "measurable_evidence": "paired metrics by algorithm; XGB/LGBM blocked until implemented",
+      "reviewer_request": "compare four algorithms"
+    },
+    {
+      "campaign_response": "predeclared Friedman/Wilcoxon hierarchy with Holm correction",
+      "measurable_evidence": "adjusted p-values, confidence intervals, effect sizes",
+      "reviewer_request": "significance testing"
+    },
+    {
+      "campaign_response": "multi-source leave-one-project-out CPDP",
+      "measurable_evidence": "between-project distribution and paired stability",
+      "reviewer_request": "stable/generalizable results"
+    },
+    {
+      "campaign_response": "dataset/project provenance and characterization audit",
+      "measurable_evidence": "identity, size, prevalence, modalities, leakage and suitability",
+      "reviewer_request": "describe datasets individually"
+    },
+    {
+      "campaign_response": "21 evidenced project rotations, conditional on >=4 new compatible targets",
+      "measurable_evidence": "eligible target count and per-project results",
+      "reviewer_request": "test on four datasets/projects"
+    },
+    {
+      "campaign_response": "complete ablation plus post-evaluation XAI",
+      "measurable_evidence": "incremental metric deltas, effect sizes, modality/feature contributions",
+      "reviewer_request": "explain why combination matters"
+    },
+    {
+      "campaign_response": "fixed-threshold paired error analysis",
+      "measurable_evidence": "precision, recall, F1, MCC and confusion counts",
+      "reviewer_request": "Does it reduce errors?"
+    },
+    {
+      "campaign_response": "held-out-project CPDP",
+      "measurable_evidence": "PR-AUC/ROC-AUC and cross-project effect distribution",
+      "reviewer_request": "Does it improve generalization?"
+    },
+    {
+      "campaign_response": "C/P/T ablation and explanation concordance",
+      "measurable_evidence": "incremental deltas and modality-level contribution",
+      "reviewer_request": "Does it capture ignored information?"
+    }
+  ]
+}
