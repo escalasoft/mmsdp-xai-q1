@@ -1,0 +1,1 @@
+{"boundary_order":["committer_epoch","commit_sha"],"boundary_violation_count":0,"evidence_cutoff":"2026-08-30T23:59:59-05:00","future_ground_truth_is_predictor":false,"historical_identity_overlap_count":0,"schema_version":"q1-48c-temporal-integrity-1.0.0","strict_post_boundary_count":58272}

@@ -1,0 +1,1 @@
+{"eligible_count":0,"frozen_primary_targets":[],"predictive_performance_consulted":false,"schema_version":"q1-four-target-freeze-1.0.0","selection_rule":"lexicographically first four project identifiers among projects passing all G1-G15 gates","selection_rule_predeclared_and_performance_independent":true,"status":"BLOCKED_FEWER_THAN_FOUR_ELIGIBLE","target_access_count":0}
