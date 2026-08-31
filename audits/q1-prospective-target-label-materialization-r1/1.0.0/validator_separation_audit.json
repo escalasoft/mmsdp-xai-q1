@@ -1,0 +1,63 @@
+{
+  "schema_version": "q1-48c-r1-validator-separation-audit-1.0.0",
+  "sprint": "10.8.2.48C-R1",
+  "starting_branch": "sprint-10/q1-prospective-target-label-materialization",
+  "starting_head": "30a37f1fbf582b549ddc08e8b535ac30e10989bd",
+  "classification": "PASS_48C_R1_READY_FOR_CLOSURE",
+  "scientific_classification_preserved": "BLOCKED_PROSPECTIVE_LABEL_PROVENANCE",
+  "before": {
+    "entry_point": "validate(output)",
+    "mixed_concerns": true,
+    "snapshot_literals_embedded_in_general_validation": {
+      "total": 58272,
+      "project_count": 21,
+      "assigned_label_count": 0,
+      "eligible_count": 0
+    }
+  },
+  "after": {
+    "general_validator": "validate(output)",
+    "snapshot_validator": "validate_frozen_48c_snapshot(output)",
+    "materialization_script_validator": "validate_frozen_48c_snapshot(output)",
+    "general_permits_supported_future_states": true,
+    "general_permits_assigned_label_count_above_zero": true,
+    "general_permits_eligible_count_above_zero": true,
+    "future_state_condition": "all reusable scientific invariants and artifact digests must pass"
+  },
+  "snapshot_regression_assertions": {
+    "total": 58272,
+    "project_count": 21,
+    "assigned_label_count": 0,
+    "eligible_count": 0
+  },
+  "reusable_scientific_invariants": [
+    "summary counts equal manifest-derived evidence-state and assignment counts",
+    "observations use only declared evidence states",
+    "positive-supported state carries label 1",
+    "positive labels require resolved provenance and a complete positive chain",
+    "negative-supported state carries label 0",
+    "negative labels require resolved provenance, affirmative verification, and maturity support",
+    "unresolved and censored states carry no binary label",
+    "prospective identities are strictly post-boundary",
+    "per-observation evidence hashes match canonical payloads",
+    "project counts and eligibility decisions equal common-gate recomputation",
+    "predictive metrics are forbidden from TARGET selection",
+    "TARGET freeze is lexical, predeclared, and performance-independent",
+    "TARGET access and predictive scoring remain unauthorized and zero",
+    "campaign remains blocked and unexecuted",
+    "MANIFEST.sha256 covers every artifact and all hashes match"
+  ],
+  "test_evidence": {
+    "hypothetical_only": true,
+    "actual_48c_evidence_modified": false,
+    "assigned_label_count": 2,
+    "eligible_count": 1,
+    "positive_support": "resolved provenance plus complete positive chain",
+    "negative_support": "affirmative verification plus completed maturity",
+    "general_validation": "PASS",
+    "frozen_snapshot_validation": "EXPECTED_REJECTION"
+  },
+  "scientific_guards_weakened": false,
+  "temporal_boundaries_changed": false,
+  "target_predictively_accessed": false
+}

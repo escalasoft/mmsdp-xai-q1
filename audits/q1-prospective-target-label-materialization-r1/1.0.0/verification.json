@@ -1,0 +1,76 @@
+{
+  "schema_version": "q1-48c-r1-verification-1.0.0",
+  "classification": "PASS_48C_R1_READY_FOR_CLOSURE",
+  "environment": {
+    "python": ".venv/bin/python (Python 3.11.14)",
+    "pytest": "9.1.1",
+    "branch": "sprint-10/q1-prospective-target-label-materialization",
+    "head": "30a37f1fbf582b549ddc08e8b535ac30e10989bd"
+  },
+  "focused_48c_r1": {
+    "status": "PASS",
+    "passed": 16,
+    "failed": 0,
+    "errors": 0,
+    "elapsed_seconds": 18.45
+  },
+  "relevant_regressions": {
+    "status": "PASS",
+    "scope": "conservative expanded set covering frozen reconstruction, JIT materialization/migration, and 48A/48B campaign/materialization contracts",
+    "passed": 33,
+    "failed": 0,
+    "errors": 0,
+    "elapsed_seconds": 11.57
+  },
+  "complete_pytest_suite": {
+    "status": "EXPECTED_HISTORICAL_GUARD_REJECTIONS_ONLY",
+    "collected": 1581,
+    "passed": 1555,
+    "skipped": 1,
+    "failed": 2,
+    "errors": 23,
+    "elapsed_seconds": 127.17,
+    "expected_historical_integrity_guard": 25,
+    "pre_existing_unrelated_failure": 0,
+    "48c_regression": 0,
+    "unknown_requires_investigation": 0,
+    "junit_evidence": "/tmp/sprint48c_r1_closure_full_suite.xml"
+  },
+  "ruff_changed_python_files": {
+    "status": "PASS",
+    "files": [
+      "src/experimentation/q1_prospective_target_label_materialization.py",
+      "scripts/materialize_q1_prospective_target_labels.py",
+      "tests/experimentation/test_q1_prospective_target_label_materialization.py"
+    ]
+  },
+  "git_diff_check": "PASS",
+  "frozen_48c_manifest": {
+    "status": "PASS",
+    "verified_payloads": 14
+  },
+  "frozen_snapshot_validation_errors": [],
+  "target_access": {
+    "target_access_policy": 0,
+    "provenance": 0,
+    "four_target_freeze": 0
+  },
+  "predictive_scoring_count": 0,
+  "campaign_configuration_count": 720,
+  "campaign_status": "BLOCKED_NOT_EXECUTED",
+  "r1_manifest_verification": "PASS",
+  "final_git_status_short": [
+    "?? audits/q1-prospective-target-label-materialization-r1/",
+    "?? audits/q1-prospective-target-label-materialization/",
+    "?? scripts/materialize_q1_prospective_target_labels.py",
+    "?? src/experimentation/q1_prospective_target_label_materialization.py",
+    "?? tests/experimentation/test_q1_prospective_target_label_materialization.py"
+  ],
+  "prohibited_operations": {
+    "commit": false,
+    "push": false,
+    "pull_request": false,
+    "merge": false,
+    "sprint_48d_started": false
+  }
+}

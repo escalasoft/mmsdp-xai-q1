@@ -1,0 +1,1 @@
+{"access_counter":0,"campaign_configuration_count":720,"campaign_status":"BLOCKED_NOT_EXECUTED","default":"DENY","execution_authorized":false,"predictive_scoring_count":0,"prohibited_uses":["brier","ece","f1","mcc","pr_auc","precision","recall","roc_auc"],"schema_version":"q1-48c-target-access-policy-1.0.0"}
