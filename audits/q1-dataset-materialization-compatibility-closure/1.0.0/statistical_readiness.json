@@ -1,0 +1,29 @@
+{
+  "final_testing_executed": false,
+  "four_target_warning": "n=4 nonzero pairs has minimum exact two-sided Wilcoxon p=0.125",
+  "metrics": [
+    "ROC-AUC",
+    "PR-AUC",
+    "Precision",
+    "Recall",
+    "F1",
+    "MCC",
+    "Brier",
+    "ECE"
+  ],
+  "pairing_unit": "target project",
+  "plan": [
+    "Friedman omnibus when resolution/complete cases permit",
+    "gated paired Wilcoxon",
+    "Holm correction",
+    "confidence intervals",
+    "effect sizes"
+  ],
+  "primary_metric": "PR-AUC",
+  "pseudo_replication_prohibited": [
+    "commits",
+    "folds",
+    "seeds",
+    "configuration rows"
+  ]
+}

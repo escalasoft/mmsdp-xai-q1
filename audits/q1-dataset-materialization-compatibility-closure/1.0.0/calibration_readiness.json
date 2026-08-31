@@ -1,0 +1,11 @@
+{
+  "campaign_scope": "Platt/isotonic only for C+P+T as frozen in Sprint 48A",
+  "fit_data": "SOURCE-side validation or nested SOURCE-only OOF predictions",
+  "isotonic_gate": "require sufficient distinct source-side predictions and both classes; otherwise fail closed/NA",
+  "states": [
+    "UNCALIBRATED",
+    "PLATT",
+    "ISOTONIC"
+  ],
+  "target_fit_count": 0
+}

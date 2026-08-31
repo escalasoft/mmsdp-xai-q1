@@ -1,0 +1,16 @@
+{
+  "existing": [
+    "native LR/RF global importance",
+    "LR local importance",
+    "LR counterfactual boundary"
+  ],
+  "pipeline_requirement": "exact fitted predictive pipeline with feature/modality provenance",
+  "required_named": {
+    "DiCE": "dependency/integration missing",
+    "LIME": "dependency/integration missing",
+    "PDP_ICE": "integration missing",
+    "SHAP": "dependency/integration missing"
+  },
+  "status": "PARTIAL_BLOCKED_OPTIONAL_XAI_DEPENDENCIES",
+  "target_xai_executed": false
+}

@@ -1,0 +1,64 @@
+{
+  "LOPO_CPDP": "CONTRACT_READY_TARGET_BLOCKED",
+  "WPDP": "CONTRACT_READY_TARGET_BLOCKED",
+  "ablation": "READY",
+  "algorithms": {
+    "LIGHTGBM": {
+      "adapter": "src/models/boosting_adapters.py",
+      "bounded_search_space": "LIGHTGBM_SEARCH_SPACE",
+      "dependency": {
+        "installed": true,
+        "version": "4.6.0"
+      },
+      "seed": 20260829
+    },
+    "LR": {
+      "adapter": "existing",
+      "dependency": {
+        "installed": true,
+        "version": "1.9.0"
+      },
+      "seeded": true
+    },
+    "RF": {
+      "adapter": "existing",
+      "dependency": {
+        "installed": true,
+        "version": "1.9.0"
+      },
+      "seeded": true
+    },
+    "XGBOOST": {
+      "adapter": "src/models/boosting_adapters.py",
+      "bounded_search_space": "XGBOOST_SEARCH_SPACE",
+      "dependency": {
+        "installed": true,
+        "version": "3.2.0"
+      },
+      "seed": 20260829
+    },
+    "target_driven_tuning": false
+  },
+  "calibration": "READY_SOURCE_ONLY",
+  "campaign_generator": "READY_720_BLOCKED_CELLS",
+  "classification": "BLOCKED_MISSING_PROSPECTIVE_TEST",
+  "dataset_identity_materialization": "COMPLETE_FOR_LABEL_SEALED_POST_BOUNDARY_IDENTITIES",
+  "feature_compatibility": "READY_WITH_FAIL_CLOSED_COMMON_CONTRACT",
+  "four_project_core": "BLOCKED",
+  "modalities": "READY_7_OF_7",
+  "prospective_target_materialization": "BLOCKED_LABELS_AND_CLASS_SUPPORT",
+  "statistics": "PLAN_READY_NOT_EXECUTED",
+  "target_access": "DEFAULT_DENY_ZERO_ACCESSES",
+  "unresolved_blockers": [
+    "audited prospective binary labels and class support for at least four projects",
+    "named SHAP/LIME/PDP/ICE/DiCE integrations for final paper-level XAI"
+  ],
+  "verification": {
+    "focused_pytest": "PASS: 13 passed",
+    "full_pytest": "EXPECTED LEGACY-GATE REJECTION: 1539 passed, 1 skipped, 2 failed, 23 errors; historical-integrity gates reject current-sprint paths/changes and were not weakened",
+    "git_diff_check": "PASS",
+    "regression_pytest": "PASS: 602 passed",
+    "ruff": "PASS on all new/modified Python files; repository-wide Ruff reports 37 pre-existing findings outside Sprint 48B files"
+  },
+  "xai": "PARTIAL_BLOCKED_NAMED_INTEGRATIONS"
+}

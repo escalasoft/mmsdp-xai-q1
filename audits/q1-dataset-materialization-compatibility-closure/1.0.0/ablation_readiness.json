@@ -1,0 +1,21 @@
+{
+  "arbitrary_ablations_added": false,
+  "controls": [
+    "same target samples",
+    "same algorithm",
+    "same source membership",
+    "same seed",
+    "same calibration scope",
+    "same threshold policy"
+  ],
+  "factor": "modality membership",
+  "levels": [
+    "C",
+    "P",
+    "T",
+    "C+P",
+    "C+T",
+    "P+T",
+    "C+P+T"
+  ]
+}

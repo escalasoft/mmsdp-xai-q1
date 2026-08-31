@@ -1,0 +1,73 @@
+{
+  "resolved": false,
+  "rows": [
+    {
+      "component": "models/boosting_adapters.py",
+      "concern": "four algorithms",
+      "evidence": "algorithm_readiness.json",
+      "metric_or_test": "focused adapter tests",
+      "paper_output": "algorithm comparison tables",
+      "requirement": "LR/RF/XGBoost/LightGBM"
+    },
+    {
+      "component": "prospective inventory and eligibility gate",
+      "concern": "at least four projects",
+      "evidence": "project_eligibility.json",
+      "metric_or_test": "identity/time/class/overlap checks",
+      "paper_output": "dataset table; currently blocked",
+      "requirement": "evidence-selected eligible targets"
+    },
+    {
+      "component": "campaign generator",
+      "concern": "generalization",
+      "evidence": "temporal_partition_contract.json and cpdp_lopo_contract.json",
+      "metric_or_test": "paired project metrics",
+      "paper_output": "WPDP/CPDP tables",
+      "requirement": "WPDP + pooled LOPO CPDP"
+    },
+    {
+      "component": "programmatic modality matrix",
+      "concern": "multimodal contribution",
+      "evidence": "modality_matrix.json",
+      "metric_or_test": "paired ablations",
+      "paper_output": "ablation table",
+      "requirement": "seven controlled modality levels"
+    },
+    {
+      "component": "existing calibrators plus campaign scope",
+      "concern": "calibration",
+      "evidence": "calibration_readiness.json",
+      "metric_or_test": "Brier/ECE",
+      "paper_output": "reliability table/figure",
+      "requirement": "SOURCE-only Platt/isotonic"
+    },
+    {
+      "component": "frozen statistical plan",
+      "concern": "significance",
+      "evidence": "statistical_readiness.json",
+      "metric_or_test": "Friedman/gated Wilcoxon/Holm/effects/CIs",
+      "paper_output": "statistical table",
+      "requirement": "project-level inference"
+    },
+    {
+      "component": "XAI integrations",
+      "concern": "explainability",
+      "evidence": "xai_readiness.json",
+      "metric_or_test": "provenance/shape/adapter tests",
+      "paper_output": "XAI figures; unresolved",
+      "requirement": "pipeline-faithful named XAI"
+    },
+    {
+      "component": "target access policy",
+      "concern": "no reused final TEST",
+      "evidence": "target_access_policy.json",
+      "metric_or_test": "zero overlap/access tests",
+      "paper_output": "integrity statement",
+      "requirement": "new identity-bound target and one-use gate"
+    }
+  ],
+  "unresolved_concerns": [
+    "eligible prospective labels",
+    "named XAI integrations"
+  ]
+}

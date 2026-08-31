@@ -1,0 +1,17 @@
+{
+  "access_counter": 0,
+  "atomic_consumption": "O_CREAT|O_EXCL one-use ledger in later authorized sprint",
+  "authorization_token": null,
+  "default": "DENY",
+  "development_label_access": "PROHIBITED",
+  "execution_authorized": false,
+  "predictive_target_scoring_this_sprint": 0,
+  "required_bindings": [
+    "dataset_identity",
+    "target_identity",
+    "temporal_boundary_digest",
+    "sample_manifest_sha256",
+    "provenance_digest",
+    "feature_schema_digest"
+  ]
+}

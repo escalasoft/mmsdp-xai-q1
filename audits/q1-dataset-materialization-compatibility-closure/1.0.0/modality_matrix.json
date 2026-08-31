@@ -1,0 +1,14 @@
+{
+  "construction": "programmatic ordered combinations; no manual code edits",
+  "count": 7,
+  "modalities": [
+    "C",
+    "P",
+    "T",
+    "C+P",
+    "C+T",
+    "P+T",
+    "C+P+T"
+  ],
+  "predictor_leakage_columns": 0
+}

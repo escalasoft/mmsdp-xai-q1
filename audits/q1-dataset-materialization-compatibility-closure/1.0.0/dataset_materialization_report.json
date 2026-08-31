@@ -1,0 +1,32 @@
+{
+  "candidate_manifest": "prospective_sample_manifest.jsonl",
+  "candidate_manifest_status": "LABEL_SEALED_NOT_TEST",
+  "final_target_partitions_materialized": 0,
+  "independent_compatible_binary_sources": 0,
+  "jit_defects4j_historical_reverified": {
+    "nominal_negative": 24987,
+    "observations": 27319,
+    "positive": 2332,
+    "prevalence": 0.08536183608477617
+  },
+  "post_boundary_identity_candidates_materialized": 58272,
+  "projects": 21,
+  "qtbase": {
+    "artifact": "artifacts/qtbase/datasets/a1af25290bbd078628e362d4b704a047853d620c/qt-multimodal-commit-dataset.jsonl",
+    "artifact_sha256": "231c38192a14151dc4364ba8d93fa29d9319ed2121dc3e901fdde7094d3da5bc",
+    "binary_campaign_eligible": false,
+    "blocker": "zero admissible positive target assignments",
+    "dataset": "QtBase construction candidate",
+    "historical_test_consumed": false,
+    "modalities": [
+      "C",
+      "P",
+      "T"
+    ],
+    "nominal_negative": 16740,
+    "observations": 16740,
+    "positive": 0,
+    "prevalence": 0.0,
+    "prospective_test_eligible": false
+  }
+}
