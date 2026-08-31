@@ -1,3 +1,9 @@
-# Required only by the read-only JIT-Defects4J audit CLI for the official
-# replication package's published pandas pickle files.
+# Frozen runtime declared for the later Q1 campaign.  XGBoost and LightGBM are
+# imported lazily so evidence-only audits can still fail closed when a native
+# wheel is unavailable in the execution environment.
+numpy==2.4.6
 pandas==2.2.3
+scikit-learn==1.9.0
+scipy==1.17.1
+xgboost==3.2.0
+lightgbm==4.6.0

@@ -1,0 +1,14 @@
+{
+  "historical_classification_preserved": "NO_VERIFIABLE_UNTOUCHED_FINAL_TEST",
+  "inspected": [
+    "audits/q1-cpdp-multidataset-experimental-campaign/1.0.0",
+    "audits/q1-cpdp-dataset-strategy-feasibility-audit/1.0.0",
+    "audits/jit-defects4j-one-shot-test/1.0.0",
+    "audits/q1-final-test-identity-boundary-amendment/1.0.0",
+    "data/processed/jit_defects4j/1.0.0/manifest.json",
+    "artifacts/qtbase/datasets/a1af25290bbd078628e362d4b704a047853d620c/qt-multimodal-commit-dataset.jsonl",
+    "dataset/preprocessing/model/calibration/fusion/evaluation/XAI/runner/test contracts"
+  ],
+  "prohibited_final_target_payloads_opened": [],
+  "target_test_access_count": 0
+}

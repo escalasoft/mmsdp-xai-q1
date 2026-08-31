@@ -1,0 +1,18 @@
+{
+  "fit_scope": "SOURCE_TRAIN_ONLY",
+  "membership_manifests": "deterministically generated only after targets become eligible",
+  "pairwise_cpdp": "optional diagnostic, never primary replacement",
+  "source_only_decisions": [
+    "preprocessing",
+    "feature selection",
+    "hyperparameters",
+    "threshold",
+    "calibration",
+    "fusion/meta-learning",
+    "early stopping"
+  ],
+  "source_scope": "eligible non-target historical TRAIN/VALIDATION only; historical TEST excluded",
+  "target_label_use": "later authorized final evaluation only",
+  "target_scope": "new post-boundary identity manifest only after label/provenance/class gates",
+  "topology": "pooled SOURCE projects -> completely held-out TARGET project"
+}

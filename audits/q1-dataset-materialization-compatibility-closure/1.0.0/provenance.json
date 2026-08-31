@@ -1,0 +1,14 @@
+{
+  "generator": "src/experimentation/q1_dataset_materialization_closure.py",
+  "historical_evidence_modified": false,
+  "origin_main_at_start": "f402988d109396e7bad8374160c7c95c4381d2c7",
+  "origin_main_relationship": {
+    "ahead": 0,
+    "behind": 0
+  },
+  "sprint": "10.8.2.48B",
+  "starting_branch": "sprint-10/q1-dataset-materialization-compatibility-closure",
+  "starting_head": "f402988d109396e7bad8374160c7c95c4381d2c7",
+  "target_test_access_count": 0,
+  "working_tree_at_start": "clean"
+}

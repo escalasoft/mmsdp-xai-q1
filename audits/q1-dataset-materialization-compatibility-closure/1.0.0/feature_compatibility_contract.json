@@ -1,0 +1,62 @@
+{
+  "cross_dataset_safe_common_subset": {
+    "C": [
+      "files_added",
+      "files_deleted",
+      "files_modified"
+    ],
+    "P": [
+      "parent_count",
+      "is_merge_commit",
+      "has_prior_history",
+      "prior_project_commit_count"
+    ],
+    "T": [
+      "raw_commit_message"
+    ]
+  },
+  "denylist_categories": [
+    "target/label",
+    "issue/fix/SZZ evidence",
+    "post-outcome fields",
+    "direct defect keyword/linkage",
+    "future history",
+    "target-fitted transforms"
+  ],
+  "dimensional_alignment": "exact ordered contract plus SOURCE-fitted state digest; unknown or target-only fields rejected",
+  "incompatible_schema_policy": "FAIL_CLOSED",
+  "missing_values": "numeric SOURCE-TRAIN median; text fixed missing token; no silent row/field dropping",
+  "raw_vs_learned": {
+    "learned": [
+      "median imputation",
+      "zero-variance removal",
+      "Z-score",
+      "TF-IDF vocabulary and IDF"
+    ],
+    "learned_fit_scope": "SOURCE_TRAIN_ONLY",
+    "raw": [
+      "all numeric C/P fields",
+      "raw_commit_message"
+    ]
+  },
+  "schema_version": "q1-feature-compatibility-1.0.0",
+  "text_policy": "SOURCE-TRAIN-fitted TF-IDF, sparse and uncentered; unchanged transform on validation/TARGET",
+  "within_jit_benchmark": {
+    "C": [
+      "file_changes",
+      "files_added",
+      "files_deleted",
+      "files_modified",
+      "files_other"
+    ],
+    "P": [
+      "parent_count",
+      "is_merge_commit",
+      "has_prior_history",
+      "prior_project_commit_count"
+    ],
+    "T": [
+      "raw_commit_message"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "LIGHTGBM": {
+    "adapter": "src/models/boosting_adapters.py",
+    "bounded_search_space": "LIGHTGBM_SEARCH_SPACE",
+    "dependency": {
+      "installed": true,
+      "version": "4.6.0"
+    },
+    "seed": 20260829
+  },
+  "LR": {
+    "adapter": "existing",
+    "dependency": {
+      "installed": true,
+      "version": "1.9.0"
+    },
+    "seeded": true
+  },
+  "RF": {
+    "adapter": "existing",
+    "dependency": {
+      "installed": true,
+      "version": "1.9.0"
+    },
+    "seeded": true
+  },
+  "XGBOOST": {
+    "adapter": "src/models/boosting_adapters.py",
+    "bounded_search_space": "XGBOOST_SEARCH_SPACE",
+    "dependency": {
+      "installed": true,
+      "version": "3.2.0"
+    },
+    "seed": 20260829
+  },
+  "target_driven_tuning": false
+}
