@@ -1,0 +1,31 @@
+{
+  "adapter": "generic Git/Java adapter required; Qt/JIT-Defects4J extractor is not assumed compatible",
+  "available": [
+    "parent diff",
+    "files changed",
+    "lines added/deleted",
+    "churn",
+    "Java AST/structural deltas"
+  ],
+  "classification": "PASS_WITH_LIMITATION",
+  "contract": "derive only from the prediction commit and its direct parent",
+  "current_change_metrics_assigned_to_code": [
+    "la",
+    "ld",
+    "nf",
+    "nd",
+    "ns",
+    "ent"
+  ],
+  "repository_resolution_sample": {
+    "legacy_fallbacks": {
+      "apache/hadoop-hdfs": "apache/hadoop",
+      "apache/hadoop-mapreduce": "apache/hadoop"
+    },
+    "method": "chronological median row per distributed project identity, GitHub commits API",
+    "resolved": 15,
+    "sample_size": 15,
+    "scope_limitation": "sample resolution establishes feasibility, not complete 106,674-SHA materialization"
+  },
+  "schema_version": "apachejit-code-compatibility-1.0.0"
+}

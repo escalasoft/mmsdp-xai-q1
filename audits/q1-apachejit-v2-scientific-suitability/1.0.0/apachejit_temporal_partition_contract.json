@@ -1,0 +1,18 @@
+{
+  "ordering": [
+    "TRAIN",
+    "VALIDATION",
+    "TEST"
+  ],
+  "policy": "per-project chronological blocks; stable SHA tie-break for identical timestamps",
+  "primary_key": [
+    "project",
+    "author_date_utc",
+    "commit_id"
+  ],
+  "proportions": "freeze in next sprint from class/history support without predictive results",
+  "schema_version": "apachejit-temporal-partition-contract-1.0.0",
+  "status": "FEASIBLE_NOT_MATERIALIZED",
+  "supplied_partition_policy": "reference only; rebuild from raw timestamps because synthetic year mismatch exists",
+  "test_closed": true
+}

@@ -1,0 +1,15 @@
+{
+  "candidate_not_final": true,
+  "coverage_priority": [
+    "provenance completeness",
+    "CPT reconstruction",
+    "temporal depth",
+    "class support",
+    "repository reproducibility"
+  ],
+  "do_not_force_exactly_four": true,
+  "policy": "retain every candidate-eligible project family for 48F materialization; make no final selection in 48E-R1",
+  "schema_version": "apachejit-project-selection-policy-1.1.0",
+  "selection_by_predictive_performance": false,
+  "tie_break": "lexical canonical project identity"
+}

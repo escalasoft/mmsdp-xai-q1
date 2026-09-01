@@ -1,0 +1,11 @@
+{
+  "acceptable_for_48f_dataset_construction": true,
+  "acceptable_for_final_q1_campaign": "CONDITIONAL_ON_48F_FINAL_ELIGIBILITY",
+  "acceptance_basis": "The public v2 archive, construction assets, exact commit identities, temporal fields and multi-project repositories support causal C/P/T construction, while labels are explicitly treated as reproducible benchmark observations rather than verified ground truth.",
+  "classification": "PASS_48E_R1_READY_FOR_FREEZE",
+  "exact_next_sprint": "Sprint 10.8.2.48F - ApacheJIT Final Dataset Construction and Freeze: materialize all candidate-eligible repository SHAs and parents, freeze distinct CODE/PROCESS/TEXT, rebuild UTC temporal/source-target partitions, and prepare TRAIN/VALIDATION while predictive TEST remains closed.",
+  "mandatory_limitation": "SZZ-derived positives and closed-world observed negatives may be noisy.",
+  "schema_version": "apachejit-final-decision-1.1.0",
+  "test_access": "DENY",
+  "underlying_apachejit_suitability": "PASS_WITH_LABEL_CONSTRUCT_LIMITATION"
+}

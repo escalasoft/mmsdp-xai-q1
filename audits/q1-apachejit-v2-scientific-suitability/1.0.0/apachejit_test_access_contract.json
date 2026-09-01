@@ -1,0 +1,27 @@
+{
+  "criteria": {
+    "CALIBRATION_PROTOCOL_FROZEN": "REQUIRED_PASS",
+    "DATASET_FROZEN": "REQUIRED_PASS",
+    "FEATURE_CONTRACT_FROZEN": "REQUIRED_PASS",
+    "FUSION_FROZEN": "REQUIRED_PASS",
+    "HYPERPARAMETERS_FROZEN": "REQUIRED_PASS",
+    "LABEL_CONTRACT_FROZEN": "REQUIRED_PASS",
+    "LEAKAGE_AUDIT": "REQUIRED_PASS",
+    "METRICS_FROZEN": "REQUIRED_PASS",
+    "MODEL_FAMILY_FROZEN": "REQUIRED_PASS",
+    "SOURCE_TRAIN_ONLY_FITTING": "REQUIRED_PASS",
+    "STATISTICAL_PLAN_FROZEN": "REQUIRED_PASS",
+    "TARGET_ACCESS_BEFORE_GATE": 0,
+    "TEMPORAL_INTEGRITY": "REQUIRED_PASS",
+    "THRESHOLD_POLICY_FROZEN": "REQUIRED_PASS"
+  },
+  "current_test_access": "DENY",
+  "rule": "any FAIL, MIXED, or UNRESOLVED criterion means DENY",
+  "schema_version": "apachejit-test-access-contract-1.0.0",
+  "scientific_redesign_after_test": "PROHIBITED",
+  "stages": {
+    "T0": "schema, identity, dimensions, hashes, frozen-transform compatibility only",
+    "T1": "small deterministic smoke; results cannot select or redesign",
+    "T2": "full frozen final evaluation after authorization"
+  }
+}

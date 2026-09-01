@@ -1,0 +1,21 @@
+{
+  "bug_fixing_not_bug_inducing": true,
+  "classification": "BENCHMARK_DEFINED_OBSERVED_LABEL",
+  "final_positive_in_raw_link_files": 28239,
+  "final_positive_raw_link_coverage": 1.0,
+  "final_positive_rows": 28239,
+  "limitation": "The final surviving issue->fix->inducing edge is not materialized as a single row-level table; it must be replayed through notebooks and repository state.",
+  "raw_bug_not_before_fix_rows": 157,
+  "raw_fix_equals_bug_violations": 0,
+  "raw_link_rows": 162818,
+  "raw_unique_blamed_sha": 58124,
+  "raw_unique_fixing_sha": 37621,
+  "schema_version": "apachejit-positive-provenance-audit-1.0.0",
+  "trace": [
+    "Apache JIRA issue typed Bug, status Closed/Resolved, resolution Fixed",
+    "GitHub commit search using issue key selects best-match fixing commit",
+    "PyDriller get_commits_last_modified_lines attributes changed lines",
+    "temporal/outlier and GumTree trivial-change filters",
+    "distinct blamed SHA becomes positive ApacheJIT row"
+  ]
+}

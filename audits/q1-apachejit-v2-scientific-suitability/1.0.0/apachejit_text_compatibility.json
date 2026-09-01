@@ -1,0 +1,16 @@
+{
+  "classification": "PASS_WITH_LIMITATION",
+  "evidence": "full SHA and resolvable repository identity; median SHA sample resolved for every CSV identity",
+  "leakage_safe_policy": "Reconstruct the message at the prediction commit, exclude engineered label/fix/issue keyword indicators, fit vocabulary/embeddings on source TRAIN only, and predeclare masking/sensitivity analysis for label-construction tokens.",
+  "prohibited_features": [
+    "bug_confidence",
+    "has_bug_keyword",
+    "msg_has_bug_kw",
+    "msg_has_ref_kw",
+    "msg_has_fix_kw",
+    "defect/fix/issue keyword indicators"
+  ],
+  "raw_message_in_csv": false,
+  "reconstructable": true,
+  "schema_version": "apachejit-text-compatibility-1.0.0"
+}

@@ -1,0 +1,28 @@
+{
+  "assessment": "PASS_WITH_LIMITATION",
+  "distributed_year_mismatch_count": 1314,
+  "duplicate_project_timestamp_count_beyond_first": 1153,
+  "mismatch_cause": "published year is synthetic floor strata from fixed epoch and 365.25-day intervals, not UTC calendar year",
+  "missing_timestamp_count": 0,
+  "raw_timestamp_field": "author_date Unix seconds",
+  "required_remediation": "construct all final partitions from raw UTC author_date with stable SHA tie-breaks; do not reuse synthetic year as the authoritative boundary",
+  "schema_version": "apachejit-temporal-integrity-1.0.0",
+  "supplied_test_large": {
+    "rows": 30111,
+    "year_max": 2019,
+    "year_min": 2017
+  },
+  "supplied_test_small": {
+    "rows": 7526,
+    "year_max": 2019,
+    "year_min": 2017
+  },
+  "supplied_train": {
+    "balanced": true,
+    "rows": 44834,
+    "year_max": 2016,
+    "year_min": 2003
+  },
+  "timezone_policy": "convert Unix seconds to UTC; never use locale-dependent parsing",
+  "train_test_large_identity_overlap": 0
+}

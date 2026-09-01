@@ -1,0 +1,67 @@
+{
+  "frozen_prior_audits_modified": false,
+  "historical_guards_weakened": false,
+  "rows": [
+    {
+      "concern": "leakage/proxy predictors",
+      "future_control": "feature contract prohibits fix/issue/bug proxies and future features",
+      "solved_by_48e": false
+    },
+    {
+      "concern": "implausible perfect RF/MM-RF",
+      "future_control": "future leakage audit and frozen temporal/source-fit pipeline; 48E makes no performance claim",
+      "solved_by_48e": false
+    },
+    {
+      "concern": "unimodal baselines",
+      "future_control": "seven-cell modality factorial",
+      "solved_by_48e": false
+    },
+    {
+      "concern": "pairwise combinations",
+      "future_control": "CODE+PROCESS, CODE+TEXT, PROCESS+TEXT predeclared",
+      "solved_by_48e": false
+    },
+    {
+      "concern": "true late fusion/meta-learning",
+      "future_control": "out-of-fold source-TRAIN stacking contract",
+      "solved_by_48e": false
+    },
+    {
+      "concern": "ablation",
+      "future_control": "unimodal/pairwise/full factorial supports controlled ablation",
+      "solved_by_48e": false
+    },
+    {
+      "concern": "dataset/label provenance",
+      "future_control": "authoritative archive and observed-label amendment",
+      "solved_by_48e": false
+    },
+    {
+      "concern": "temporal validation",
+      "future_control": "UTC chronological partitions and forward folds",
+      "solved_by_48e": false
+    },
+    {
+      "concern": "calibration",
+      "future_control": "RAW/PLATT/ISOTONIC with TRAIN/VALIDATION-only fitting",
+      "solved_by_48e": false
+    },
+    {
+      "concern": "statistical analysis",
+      "future_control": "paired project-level effects, intervals, multiplicity control",
+      "solved_by_48e": false
+    },
+    {
+      "concern": "reproducibility",
+      "future_control": "DOI, version, archive hashes, file inventory, scripts, manifest",
+      "solved_by_48e": false
+    },
+    {
+      "concern": "external/cross-project validation",
+      "future_control": "strict inductive LOPO/CPDP contract",
+      "solved_by_48e": false
+    }
+  ],
+  "schema_version": "apachejit-reviewer-traceability-1.0.0"
+}

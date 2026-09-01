@@ -1,0 +1,22 @@
+{
+  "archive_zip_integrity": "PASS",
+  "focused_tests": {
+    "failed": 0,
+    "passed": 5
+  },
+  "full_suite": {
+    "expected_guard_nonpassing": 25,
+    "new_regressions": 0,
+    "passed": 1574,
+    "skipped": 1
+  },
+  "git_diff_check": "PASS",
+  "manifest_verification": "PASS",
+  "relevant_regressions": {
+    "failed": 0,
+    "passed": 406,
+    "scope": "all pre-existing tests/dataset tests excluding the focused 48E-R1 module"
+  },
+  "ruff": "PASS",
+  "schema_version": "apachejit-verification-1.0.0"
+}

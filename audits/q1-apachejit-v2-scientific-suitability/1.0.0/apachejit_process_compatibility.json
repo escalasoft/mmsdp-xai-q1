@@ -1,0 +1,22 @@
+{
+  "allowed": [
+    "ndev",
+    "age",
+    "nuc",
+    "aexp",
+    "arexp",
+    "asexp",
+    "prior file history",
+    "prior ownership"
+  ],
+  "ancestor_only": true,
+  "classification": "PASS_WITH_LIMITATION",
+  "limitation": "distributed metric lineage must be independently replay-checked before freeze",
+  "prohibited": [
+    "future fixes",
+    "future issues",
+    "future developer activity",
+    "future defect history"
+  ],
+  "schema_version": "apachejit-process-compatibility-1.0.0"
+}

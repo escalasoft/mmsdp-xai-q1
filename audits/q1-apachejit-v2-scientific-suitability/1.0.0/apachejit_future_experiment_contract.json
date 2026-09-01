@@ -1,0 +1,56 @@
+{
+  "calibration": {
+    "candidates": [
+      "RAW",
+      "PLATT",
+      "ISOTONIC"
+    ],
+    "fit": "TRAIN/VALIDATION only",
+    "metrics": [
+      "Brier",
+      "ECE",
+      "reliability analysis"
+    ],
+    "test_selection": "PROHIBITED"
+  },
+  "factorial": [
+    "CODE",
+    "PROCESS",
+    "TEXT",
+    "CODE+PROCESS",
+    "CODE+TEXT",
+    "PROCESS+TEXT",
+    "CODE+PROCESS+TEXT"
+  ],
+  "fusion": {
+    "early": "explicit concatenation baseline",
+    "late": "out-of-fold source-TRAIN stacking with validation-only meta-learner",
+    "undocumented_voting": "PROHIBITED"
+  },
+  "model_roles": "freeze before TEST; LR interpretable baseline, RF/tree baseline, boosting competitive baselines",
+  "models": [
+    "LogisticRegression",
+    "RandomForest",
+    "XGBoost",
+    "LightGBM"
+  ],
+  "performance_metrics": [
+    "PR-AUC",
+    "ROC-AUC",
+    "MCC",
+    "Recall",
+    "Precision",
+    "F1"
+  ],
+  "pseudo_replication": "PROHIBITED",
+  "schema_version": "apachejit-future-experiment-contract-1.0.0",
+  "statistics": [
+    "project-level paired comparisons",
+    "effect sizes",
+    "confidence intervals",
+    "multiple-comparison control",
+    "stability/generalization analysis"
+  ],
+  "status": "GOVERNANCE_ONLY_NO_EXECUTION",
+  "xai_gate": "only after frozen leakage-passing evaluated pipeline and predeclared model selection"
+}
