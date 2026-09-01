@@ -1,0 +1,11 @@
+{
+  "engineered_bug_fix_issue_szz_indicators": "PROHIBITED",
+  "exact_bytes_field": "raw_commit_message_bytes_base64",
+  "future_representation_fitting": "TRAIN_OR_SOURCE_ONLY",
+  "global_representation_fitting": "NOT_EXECUTED_AND_PROHIBITED",
+  "identity_provenance_as_text": "PROHIBITED",
+  "schema_version": "apachejit-48f-r1-final-dataset-freeze-1.0.0",
+  "source": "PRIMARY_GIT_COMMIT_OBJECT_RECONSTRUCTION",
+  "text_view": "UTF-8 decoded with replacement only if invalid bytes exist",
+  "variable": "raw_commit_message"
+}

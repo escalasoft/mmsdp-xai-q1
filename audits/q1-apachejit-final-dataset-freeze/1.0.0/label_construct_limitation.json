@@ -1,0 +1,9 @@
+{
+  "fixing_commit_equals_bug_inducing_commit": false,
+  "label": "BENCHMARK_DEFINED_OBSERVED_LABEL",
+  "labels_rewritten": false,
+  "negative_semantics": "commit not identified as bug-inducing by that procedure; not a verified-clean or true-negative claim",
+  "positive_semantics": "commit identified as bug-inducing by the ApacheJIT benchmark construction procedure",
+  "schema_version": "apachejit-48f-r1-final-dataset-freeze-1.0.0",
+  "verified_ground_truth_claimed": false
+}

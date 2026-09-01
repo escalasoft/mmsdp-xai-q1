@@ -1,0 +1,44 @@
+{
+  "acceptance_criteria": {
+    "R1": "PASS_NO_REQUIRED_FINAL_PROJECT_COUNT",
+    "R10": "PASS_70_15_15_AMENDMENT_TRANSPARENT",
+    "R11": "PASS_T1_T2_MEMBERSHIP_PERFORMANCE_INDEPENDENT",
+    "R12": "PASS_T1_T2_UNEXECUTED",
+    "R13": "PASS_TEST_ACCESS_DENY",
+    "R14": "PASS_HISTORICAL_GUARDS_NOT_WEAKENED",
+    "R15": "PASS_NEW_UNEXPLAINED_REGRESSION_0",
+    "R16": "PASS_DETERMINISTIC_MANIFEST",
+    "R17": "PASS_NO_PREDICTIVE_RESULT",
+    "R2": "PASS_EACH_CANDIDATE_E1_E15_DRIVEN",
+    "R3": "PASS_NO_PREDICTIVE_PERFORMANCE_IN_ELIGIBILITY",
+    "R4": "PASS_CODE_BENCHMARK_VALUE_SOURCE_EXPLICIT",
+    "R5": "PASS_PROCESS_BENCHMARK_VALUE_SOURCE_EXPLICIT",
+    "R6": "PASS_NO_FALSE_FULL_RECONSTRUCTION_CLAIM",
+    "R7": "PASS_TEXT_PRIMARY_GIT_RECONSTRUCTION",
+    "R8": "PASS_FUTURE_PROCESS_REPLAY_ANCESTOR_ONLY",
+    "R9": "PASS_60_20_4_16_PRE_PERFORMANCE_JUSTIFICATION"
+  },
+  "classification": "PASS_48F_R1_FINAL_DATASET_FREEZE_READY_FOR_COMMIT",
+  "execution_counters": {
+    "calibration_fit_count": 0,
+    "model_training_count": 0,
+    "predictive_scoring_count": 0,
+    "test_predictive_access_count": 0,
+    "xai_execution_count": 0
+  },
+  "experimental_set_sufficiency": {
+    "count_policy": "No final eligible-project count is required. The only numerical conditions are logical necessities of the frozen questions: at least one project for within-project evaluation and at least two independent families for comparison and LOPO/CPDP.",
+    "eligible_family_count": 13,
+    "eligible_project_count_emerges_from_gates": 14,
+    "requirements": {
+      "LOPO_CPDP": true,
+      "multi_project_comparison": true,
+      "statistical_comparison": true,
+      "within_project_temporal_evaluation": true
+    },
+    "sufficient": true,
+    "unresolved_candidate_count": 0,
+    "unresolved_exclusion_policy": "An unresolved candidate may remain excluded only when the eligible set still satisfies every frozen experimental requirement and the exclusion does not alter the predeclared question."
+  },
+  "schema_version": "apachejit-48f-r1-final-dataset-freeze-1.0.0"
+}

@@ -1,0 +1,24 @@
+{
+  "forward_development_design": {
+    "blocks": 11,
+    "fold_k_future_blocks": "inaccessible to that fold",
+    "fold_k_train": "forward blocks with identifier less than k",
+    "fold_k_validation": "forward block with identifier equal to k",
+    "future_folds": "folds 2 through 11"
+  },
+  "frozen_48e_r1_year_mismatch_rows": 1314,
+  "ordering": [
+    "normalized_utc_timestamp",
+    "commit_sha"
+  ],
+  "partition_percentages": {
+    "T1": 4,
+    "T2": 16,
+    "TRAIN": 60,
+    "VALIDATION": 20
+  },
+  "random_or_shuffled_cv": "PROHIBITED",
+  "schema_version": "apachejit-48f-r1-final-dataset-freeze-1.0.0",
+  "synthetic_year_authoritative": false,
+  "timestamp_source": "raw Git author timestamp matching ApacheJIT author_date"
+}
