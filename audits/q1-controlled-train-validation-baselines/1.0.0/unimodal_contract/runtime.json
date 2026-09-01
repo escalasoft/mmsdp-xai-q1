@@ -1,0 +1,1 @@
+{"algorithm_random_seeds":{"LightGBM":20260901,"Logistic Regression":20260901,"Random Forest":20260901,"XGBoost":20260901},"packages":{"lightgbm":"4.6.0","numpy":"2.4.6","scikit-learn":"1.9.0","scipy":"1.17.1","xgboost":"3.2.0"},"python":"3.11.14","random_seed":20260901,"schema_version":"q1-controlled-unimodal-modeling-1.0.0"}
