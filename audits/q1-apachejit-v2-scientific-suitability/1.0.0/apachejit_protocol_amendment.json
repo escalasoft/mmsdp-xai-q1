@@ -1,0 +1,21 @@
+{
+  "change": "Use reproducible peer-reviewed benchmark-defined observed SZZ labels instead of claiming prospective verified ground truth.",
+  "rationale": [
+    "The archive, construction assets, SHAs, repositories and aggregate labels are public and versioned.",
+    "The label construct is transparent and scientifically precedented but not perfect ground truth.",
+    "This is preferable to manufacturing unverifiable prospective labels.",
+    "The decision was made without predictive performance or TEST access."
+  ],
+  "requires_human_approval": true,
+  "reviewer_traceability": "apachejit_reviewer_traceability.json",
+  "schema_version": "apachejit-protocol-amendment-1.0.0",
+  "status": "PROPOSED_ACCEPTABLE_FOR_FINAL_Q1_CAMPAIGN",
+  "threats_to_validity": [
+    "SZZ false positives and false negatives",
+    "GitHub best-match issue-to-fix linkage is not guaranteed unique",
+    "closed-world negative label noise",
+    "extrinsic bugs omitted",
+    "right-censoring near the dataset endpoint",
+    "final row-level issue/fix/inducing edge requires replay"
+  ]
+}

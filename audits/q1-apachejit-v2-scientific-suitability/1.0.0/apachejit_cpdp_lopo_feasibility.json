@@ -1,0 +1,21 @@
+{
+  "designs": [
+    "leave-one-project-out",
+    "source-project to target-project",
+    "multi-source to held-out target"
+  ],
+  "hadoop_family_grouping": "freeze as a related identity family to avoid source-target history overlap",
+  "primary_design": "strict inductive source-fit",
+  "schema_version": "apachejit-cpdp-lopo-feasibility-1.0.0",
+  "source_only_fitting": [
+    "representation",
+    "normalization",
+    "feature selection",
+    "hyperparameters",
+    "calibration",
+    "threshold"
+  ],
+  "status": "PASS_WITH_LIMITATION",
+  "target_distribution_use": "PROHIBITED_PRIMARY; if studied separately label TRANSDUCTIVE",
+  "target_label_use_before_final_evaluation": "PROHIBITED"
+}

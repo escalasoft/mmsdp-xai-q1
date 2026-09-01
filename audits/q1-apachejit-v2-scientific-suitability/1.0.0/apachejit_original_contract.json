@@ -1,0 +1,297 @@
+{
+  "aggregates": {
+    "contradictory_project_sha_labels": 0,
+    "distributed_project_identities": 15,
+    "distributed_year_vs_utc_author_year_mismatch": 1314,
+    "duplicate_project_sha": 0,
+    "duplicate_project_timestamps_beyond_first": 1153,
+    "duplicate_rows": 0,
+    "explanation_of_15_vs_14": "The CSV retains apache/hadoop plus legacy apache/hadoop-hdfs and apache/hadoop-mapreduce identities; the paper counts Hadoop as one conceptual project family.",
+    "fixing_rows": 10690,
+    "malformed_sha": 0,
+    "missing_cells": 0,
+    "negative": 78435,
+    "paper_conceptual_projects": 14,
+    "positive": 28239,
+    "rows": 106674
+  },
+  "claims": {
+    "clean_meaning": {
+      "evidence": "eligible commit not in collected fixing-commit set or attributed positive set",
+      "state": "EVIDENCED"
+    },
+    "commit_sha_retained": {
+      "evidence": "commit_id is a full 40-hex SHA in all total rows",
+      "state": "EVIDENCED"
+    },
+    "coverage": {
+      "evidence": "software revisions 2003-2019; issues 2010-2019",
+      "state": "EVIDENCED"
+    },
+    "deduplication": {
+      "evidence": "notebook drops duplicate fix/bug pairs and commit identities at specified stages",
+      "state": "EVIDENCED"
+    },
+    "instance": {
+      "evidence": "one Git commit/software revision",
+      "state": "EVIDENCED"
+    },
+    "issue_dependency": {
+      "evidence": "Apache JIRA fixed bug issues, 2010-01-01 through 2019-12-31",
+      "state": "EVIDENCED"
+    },
+    "negative": {
+      "evidence": "78,435 benchmark-defined negative rows called clean by the package; not verified clean commits",
+      "state": "EVIDENCED"
+    },
+    "positive": {
+      "evidence": "28,239 SZZ-attributed bug-inducing rows",
+      "state": "EVIDENCED"
+    },
+    "positive_meaning": {
+      "evidence": "filtered SZZ candidate bug-inducing commit",
+      "state": "EVIDENCED"
+    },
+    "project_identity_retained": {
+      "evidence": "project column retained",
+      "state": "EVIDENCED"
+    },
+    "projects": {
+      "evidence": "14 paper project families; 15 CSV identities",
+      "state": "EVIDENCED_WITH_CLARIFICATION"
+    },
+    "raw_message_retained": {
+      "evidence": "not present in distributed CSV; reconstructable only from repositories",
+      "state": "CONTRADICTED"
+    },
+    "raw_timestamp_retained": {
+      "evidence": "author_date Unix seconds retained",
+      "state": "EVIDENCED"
+    },
+    "repository_dependency": {
+      "evidence": "GitHub Apache repositories and Git history",
+      "state": "EVIDENCED"
+    },
+    "rows": {
+      "evidence": "106,674 in paper and authoritative CSV",
+      "state": "EVIDENCED"
+    },
+    "szz_variant": {
+      "evidence": "PyDriller last-modified-lines SZZ plus McIntosh/Kamei-inspired filters and GumTree",
+      "state": "EVIDENCED"
+    },
+    "temporal_split": {
+      "evidence": "author split is 2003-2016 vs 2017-2019 by synthetic strata; train is balanced",
+      "state": "EVIDENCED_WITH_LIMITATION"
+    }
+  },
+  "distributed_files": {
+    "test_large": "apachejit_test_large.csv",
+    "test_small": "apachejit_test_small.csv",
+    "total": "apachejit_total.csv",
+    "train": "apachejit_train.csv"
+  },
+  "paper": {
+    "citation": "Keshavarz, H. and Nagappan, M. (2022). ApacheJIT: A Large Dataset for Just-In-Time Defect Prediction. MSR 2022, 191-195.",
+    "doi": "10.1145/3524842.3527996",
+    "peer_reviewed": true
+  },
+  "projects": [
+    {
+      "distributed_year_max": 2019,
+      "distributed_year_min": 2005,
+      "max_timestamp_utc": "2019-12-11T14:05:50+00:00",
+      "min_timestamp_utc": "2005-12-12T17:57:25+00:00",
+      "missing_timestamp_count": 0,
+      "negative": 4722,
+      "positive": 1404,
+      "project": "apache/activemq",
+      "rows": 6126,
+      "utc_calendar_year_count": 15,
+      "valid_sha_count": 6126
+    },
+    {
+      "distributed_year_max": 2019,
+      "distributed_year_min": 2007,
+      "max_timestamp_utc": "2019-12-26T11:31:48+00:00",
+      "min_timestamp_utc": "2007-03-19T10:54:57+00:00",
+      "missing_timestamp_count": 0,
+      "negative": 19622,
+      "positive": 3078,
+      "project": "apache/camel",
+      "rows": 22700,
+      "utc_calendar_year_count": 13,
+      "valid_sha_count": 22700
+    },
+    {
+      "distributed_year_max": 2019,
+      "distributed_year_min": 2009,
+      "max_timestamp_utc": "2019-12-09T15:32:35+00:00",
+      "min_timestamp_utc": "2009-03-02T23:34:21+00:00",
+      "missing_timestamp_count": 0,
+      "negative": 5042,
+      "positive": 3117,
+      "project": "apache/cassandra",
+      "rows": 8159,
+      "utc_calendar_year_count": 11,
+      "valid_sha_count": 8159
+    },
+    {
+      "distributed_year_max": 2019,
+      "distributed_year_min": 2010,
+      "max_timestamp_utc": "2019-12-26T07:37:50+00:00",
+      "min_timestamp_utc": "2010-12-17T15:07:10+00:00",
+      "missing_timestamp_count": 0,
+      "negative": 8880,
+      "positive": 2811,
+      "project": "apache/flink",
+      "rows": 11691,
+      "utc_calendar_year_count": 10,
+      "valid_sha_count": 11691
+    },
+    {
+      "distributed_year_max": 2019,
+      "distributed_year_min": 2003,
+      "max_timestamp_utc": "2019-12-25T10:49:51+00:00",
+      "min_timestamp_utc": "2003-09-11T14:54:46+00:00",
+      "missing_timestamp_count": 0,
+      "negative": 6445,
+      "positive": 1614,
+      "project": "apache/groovy",
+      "rows": 8059,
+      "utc_calendar_year_count": 17,
+      "valid_sha_count": 8059
+    },
+    {
+      "distributed_year_max": 2019,
+      "distributed_year_min": 2009,
+      "max_timestamp_utc": "2019-12-25T05:37:25+00:00",
+      "min_timestamp_utc": "2009-06-01T21:10:16+00:00",
+      "missing_timestamp_count": 0,
+      "negative": 11964,
+      "positive": 0,
+      "project": "apache/hadoop",
+      "rows": 11964,
+      "utc_calendar_year_count": 11,
+      "valid_sha_count": 11964
+    },
+    {
+      "distributed_year_max": 2019,
+      "distributed_year_min": 2009,
+      "max_timestamp_utc": "2019-12-03T03:48:09+00:00",
+      "min_timestamp_utc": "2009-05-19T04:53:47+00:00",
+      "missing_timestamp_count": 0,
+      "negative": 685,
+      "positive": 2222,
+      "project": "apache/hadoop-hdfs",
+      "rows": 2907,
+      "utc_calendar_year_count": 11,
+      "valid_sha_count": 2907
+    },
+    {
+      "distributed_year_max": 2019,
+      "distributed_year_min": 2009,
+      "max_timestamp_utc": "2019-11-27T06:17:14+00:00",
+      "min_timestamp_utc": "2009-05-19T04:37:10+00:00",
+      "missing_timestamp_count": 0,
+      "negative": 483,
+      "positive": 838,
+      "project": "apache/hadoop-mapreduce",
+      "rows": 1321,
+      "utc_calendar_year_count": 11,
+      "valid_sha_count": 1321
+    },
+    {
+      "distributed_year_max": 2019,
+      "distributed_year_min": 2007,
+      "max_timestamp_utc": "2019-12-25T20:38:02+00:00",
+      "min_timestamp_utc": "2007-04-06T21:09:28+00:00",
+      "missing_timestamp_count": 0,
+      "negative": 4948,
+      "positive": 3782,
+      "project": "apache/hbase",
+      "rows": 8730,
+      "utc_calendar_year_count": 13,
+      "valid_sha_count": 8730
+    },
+    {
+      "distributed_year_max": 2019,
+      "distributed_year_min": 2008,
+      "max_timestamp_utc": "2019-12-20T13:55:26+00:00",
+      "min_timestamp_utc": "2008-09-09T17:36:23+00:00",
+      "missing_timestamp_count": 0,
+      "negative": 2619,
+      "positive": 4223,
+      "project": "apache/hive",
+      "rows": 6842,
+      "utc_calendar_year_count": 12,
+      "valid_sha_count": 6842
+    },
+    {
+      "distributed_year_max": 2019,
+      "distributed_year_min": 2014,
+      "max_timestamp_utc": "2019-12-26T12:17:11+00:00",
+      "min_timestamp_utc": "2014-02-20T12:09:51+00:00",
+      "missing_timestamp_count": 0,
+      "negative": 9597,
+      "positive": 2439,
+      "project": "apache/ignite",
+      "rows": 12036,
+      "utc_calendar_year_count": 6,
+      "valid_sha_count": 12036
+    },
+    {
+      "distributed_year_max": 2019,
+      "distributed_year_min": 2011,
+      "max_timestamp_utc": "2019-12-20T01:05:19+00:00",
+      "min_timestamp_utc": "2011-10-06T19:48:03+00:00",
+      "missing_timestamp_count": 0,
+      "negative": 1269,
+      "positive": 1115,
+      "project": "apache/kafka",
+      "rows": 2384,
+      "utc_calendar_year_count": 9,
+      "valid_sha_count": 2384
+    },
+    {
+      "distributed_year_max": 2019,
+      "distributed_year_min": 2010,
+      "max_timestamp_utc": "2019-12-26T17:39:53+00:00",
+      "min_timestamp_utc": "2010-12-06T05:20:15+00:00",
+      "missing_timestamp_count": 0,
+      "negative": 833,
+      "positive": 632,
+      "project": "apache/spark",
+      "rows": 1465,
+      "utc_calendar_year_count": 9,
+      "valid_sha_count": 1465
+    },
+    {
+      "distributed_year_max": 2019,
+      "distributed_year_min": 2013,
+      "max_timestamp_utc": "2019-12-20T14:52:21+00:00",
+      "min_timestamp_utc": "2013-08-15T11:57:35+00:00",
+      "missing_timestamp_count": 0,
+      "negative": 829,
+      "positive": 622,
+      "project": "apache/zeppelin",
+      "rows": 1451,
+      "utc_calendar_year_count": 7,
+      "valid_sha_count": 1451
+    },
+    {
+      "distributed_year_max": 2019,
+      "distributed_year_min": 2007,
+      "max_timestamp_utc": "2019-12-03T18:12:30+00:00",
+      "min_timestamp_utc": "2007-11-06T17:15:39+00:00",
+      "missing_timestamp_count": 0,
+      "negative": 497,
+      "positive": 342,
+      "project": "apache/zookeeper",
+      "rows": 839,
+      "utc_calendar_year_count": 13,
+      "valid_sha_count": 839
+    }
+  ],
+  "schema_version": "apachejit-original-contract-1.0.0"
+}

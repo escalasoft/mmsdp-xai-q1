@@ -1,0 +1,79 @@
+{
+  "definitions": {
+    "CODE": "predictive source-code change/content/structure representation",
+    "CPT": "all three genuinely used as predictive inputs",
+    "PROCESS": "causally prior development-history information",
+    "TEXT": "predictive linguistic representation available at commit time"
+  },
+  "rows": [
+    {
+      "CODE": "YES",
+      "PROCESS": "YES",
+      "Q1_status": "Q1_UNVERIFIED",
+      "TEXT": "NO",
+      "XAI": "NO",
+      "actual_CPT": "NO",
+      "calibration": "NO",
+      "cross_project": "NO",
+      "doi": "10.1145/3691620.3695056",
+      "evidence_status": "EVIDENCED",
+      "fusion": "feature-level augmentation; not controlled late fusion",
+      "peer_reviewed_status": "PEER_REVIEWED_VERIFIED",
+      "ranking_source": "NONE_FROZEN",
+      "ranking_year": null,
+      "temporal_validation": "YES"
+    },
+    {
+      "CODE": "YES",
+      "PROCESS": "YES",
+      "Q1_status": "Q1_VERIFIED",
+      "TEXT": "NO_IN_MAIN_EXPERIMENT; YES_IN_REPORTED_SUPPLEMENT",
+      "XAI": "NO",
+      "actual_CPT": "NO_CONTROLLED_CPT_FACTORIAL",
+      "calibration": "NO",
+      "cross_project": "NO",
+      "doi": "10.1007/s10664-024-10492-2",
+      "evidence_status": "EVIDENCED_WITH_LIMITATION",
+      "fusion": "black-box model recycling; not MMSDP-XAI late fusion",
+      "peer_reviewed_status": "PEER_REVIEWED_VERIFIED",
+      "ranking_source": "SCImago Journal & Country Rank, Software category",
+      "ranking_year": 2024,
+      "temporal_validation": "YES"
+    },
+    {
+      "CODE": "YES_CURRENT_CHANGE_METRICS_FROM_GIT_GRAPH",
+      "PROCESS": "YES",
+      "Q1_status": "Q1_VERIFIED",
+      "TEXT": "NO",
+      "XAI": "NO",
+      "actual_CPT": "NO",
+      "calibration": "NO",
+      "cross_project": "NO",
+      "doi": "10.1007/s10664-024-10464-6",
+      "evidence_status": "EVIDENCED",
+      "fusion": "none",
+      "peer_reviewed_status": "PEER_REVIEWED_VERIFIED",
+      "ranking_source": "SCImago Journal & Country Rank, Software category",
+      "ranking_year": 2024,
+      "temporal_validation": "YES"
+    },
+    {
+      "CODE": "YES",
+      "PROCESS": "UNRESOLVED_REPORTED_STATIC_METRICS_WITHOUT_ANCESTOR_LINEAGE_EVIDENCE",
+      "Q1_status": "Q1_VERIFIED",
+      "TEXT": "YES",
+      "XAI": "NO",
+      "actual_CPT": "UNRESOLVED_NOT_CONTROLLED",
+      "calibration": "NO",
+      "cross_project": "NO",
+      "doi": "10.1007/s00521-024-09930-5",
+      "evidence_status": "EVIDENCED_WITH_UNRESOLVED_FIELDS",
+      "fusion": "input concatenation; not evidenced as controlled late fusion",
+      "peer_reviewed_status": "PEER_REVIEWED_VERIFIED",
+      "ranking_source": "Wageningen University & Research Library UT browser (Scopus Journal Metrics/SJR), Software and Artificial Intelligence categories",
+      "ranking_year": 2024,
+      "temporal_validation": "UNKNOWN"
+    }
+  ],
+  "schema_version": "apachejit-modality-precedent-matrix-1.1.0"
+}

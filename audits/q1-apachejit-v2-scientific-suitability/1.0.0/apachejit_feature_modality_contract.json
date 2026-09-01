@@ -1,0 +1,157 @@
+{
+  "ambiguity_policy": "use AMBIGUOUS_REQUIRES_HUMAN_DECISION; never assign silently",
+  "ambiguous_features": [],
+  "prohibited_predictors": [
+    "commit SHA/project/timestamp identity fields",
+    "label and label-construction metadata",
+    "fix/bug/issue engineered indicators",
+    "future-derived variables"
+  ],
+  "rows": [
+    {
+      "distributed_name": "la",
+      "evidence_status": "EVIDENCED_DEFINITION_AND_SCIENTIFIC_ASSIGNMENT",
+      "feature": "la",
+      "final_modality": "CODE",
+      "information_source": "added-line count from commit-parent diff",
+      "leakage_status": "ALLOWED_WITH_COMMIT_PARENT_ONLY_RECONSTRUCTION",
+      "scientific_rationale": "describes the magnitude or spatial distribution of the current software change, not prior development history",
+      "semantic_definition": "lines added by the current commit",
+      "temporal_availability": "AT_PREDICTION_COMMIT_FROM_COMMIT_AND_PARENT"
+    },
+    {
+      "distributed_name": "ld",
+      "evidence_status": "EVIDENCED_DEFINITION_AND_SCIENTIFIC_ASSIGNMENT",
+      "feature": "ld",
+      "final_modality": "CODE",
+      "information_source": "deleted-line count from commit-parent diff",
+      "leakage_status": "ALLOWED_WITH_COMMIT_PARENT_ONLY_RECONSTRUCTION",
+      "scientific_rationale": "describes the magnitude or spatial distribution of the current software change, not prior development history",
+      "semantic_definition": "lines deleted by the current commit",
+      "temporal_availability": "AT_PREDICTION_COMMIT_FROM_COMMIT_AND_PARENT"
+    },
+    {
+      "distributed_name": "nf",
+      "evidence_status": "EVIDENCED_DEFINITION_AND_SCIENTIFIC_ASSIGNMENT",
+      "feature": "nf",
+      "final_modality": "CODE",
+      "information_source": "file set in commit-parent diff",
+      "leakage_status": "ALLOWED_WITH_COMMIT_PARENT_ONLY_RECONSTRUCTION",
+      "scientific_rationale": "describes the magnitude or spatial distribution of the current software change, not prior development history",
+      "semantic_definition": "files modified by the current commit",
+      "temporal_availability": "AT_PREDICTION_COMMIT_FROM_COMMIT_AND_PARENT"
+    },
+    {
+      "distributed_name": "nd",
+      "evidence_status": "EVIDENCED_DEFINITION_AND_SCIENTIFIC_ASSIGNMENT",
+      "feature": "nd",
+      "final_modality": "CODE",
+      "information_source": "directory paths in commit-parent diff",
+      "leakage_status": "ALLOWED_WITH_COMMIT_PARENT_ONLY_RECONSTRUCTION",
+      "scientific_rationale": "describes the magnitude or spatial distribution of the current software change, not prior development history",
+      "semantic_definition": "directories touched by the current commit",
+      "temporal_availability": "AT_PREDICTION_COMMIT_FROM_COMMIT_AND_PARENT"
+    },
+    {
+      "distributed_name": "ns",
+      "evidence_status": "EVIDENCED_DEFINITION_AND_SCIENTIFIC_ASSIGNMENT",
+      "feature": "ns",
+      "final_modality": "CODE",
+      "information_source": "subsystem paths in commit-parent diff",
+      "leakage_status": "ALLOWED_WITH_COMMIT_PARENT_ONLY_RECONSTRUCTION",
+      "scientific_rationale": "describes the magnitude or spatial distribution of the current software change, not prior development history",
+      "semantic_definition": "subsystems touched by the current commit",
+      "temporal_availability": "AT_PREDICTION_COMMIT_FROM_COMMIT_AND_PARENT"
+    },
+    {
+      "distributed_name": "ent",
+      "evidence_status": "EVIDENCED_DEFINITION_AND_SCIENTIFIC_ASSIGNMENT",
+      "feature": "entropy",
+      "final_modality": "CODE",
+      "information_source": "per-file change distribution in commit-parent diff",
+      "leakage_status": "ALLOWED_WITH_COMMIT_PARENT_ONLY_RECONSTRUCTION",
+      "scientific_rationale": "describes the magnitude or spatial distribution of the current software change, not prior development history",
+      "semantic_definition": "distribution entropy of the current change across modified files",
+      "temporal_availability": "AT_PREDICTION_COMMIT_FROM_COMMIT_AND_PARENT"
+    },
+    {
+      "distributed_name": "ndev",
+      "evidence_status": "EVIDENCED_DEFINITION_REPLAY_REQUIRED",
+      "feature": "ndev",
+      "final_modality": "PROCESS",
+      "information_source": "ancestor history of affected files",
+      "leakage_status": "ALLOWED_WITH_ANCESTOR_ONLY_REPLAY",
+      "scientific_rationale": "summarizes causally prior development, ownership, file, or author history",
+      "semantic_definition": "prior developers who changed the affected files",
+      "temporal_availability": "BEFORE_PREDICTION_COMMIT_ANCESTORS_ONLY"
+    },
+    {
+      "distributed_name": "age",
+      "evidence_status": "EVIDENCED_DEFINITION_REPLAY_REQUIRED",
+      "feature": "age",
+      "final_modality": "PROCESS",
+      "information_source": "ancestor timestamps of affected files",
+      "leakage_status": "ALLOWED_WITH_ANCESTOR_ONLY_REPLAY",
+      "scientific_rationale": "summarizes causally prior development, ownership, file, or author history",
+      "semantic_definition": "time since prior changes to the affected files",
+      "temporal_availability": "BEFORE_PREDICTION_COMMIT_ANCESTORS_ONLY"
+    },
+    {
+      "distributed_name": "nuc",
+      "evidence_status": "EVIDENCED_DEFINITION_REPLAY_REQUIRED",
+      "feature": "nuc",
+      "final_modality": "PROCESS",
+      "information_source": "ancestor history of affected files",
+      "leakage_status": "ALLOWED_WITH_ANCESTOR_ONLY_REPLAY",
+      "scientific_rationale": "summarizes causally prior development, ownership, file, or author history",
+      "semantic_definition": "prior unique changes to the affected files",
+      "temporal_availability": "BEFORE_PREDICTION_COMMIT_ANCESTORS_ONLY"
+    },
+    {
+      "distributed_name": "aexp",
+      "evidence_status": "EVIDENCED_DEFINITION_REPLAY_REQUIRED",
+      "feature": "aexp",
+      "final_modality": "PROCESS",
+      "information_source": "author's ancestor commits",
+      "leakage_status": "ALLOWED_WITH_ANCESTOR_ONLY_REPLAY",
+      "scientific_rationale": "summarizes causally prior development, ownership, file, or author history",
+      "semantic_definition": "author experience before the current commit",
+      "temporal_availability": "BEFORE_PREDICTION_COMMIT_ANCESTORS_ONLY"
+    },
+    {
+      "distributed_name": "arexp",
+      "evidence_status": "EVIDENCED_DEFINITION_REPLAY_REQUIRED",
+      "feature": "arexp",
+      "final_modality": "PROCESS",
+      "information_source": "recency-weighted ancestor commits by author",
+      "leakage_status": "ALLOWED_WITH_ANCESTOR_ONLY_REPLAY",
+      "scientific_rationale": "summarizes causally prior development, ownership, file, or author history",
+      "semantic_definition": "recent author experience before the current commit",
+      "temporal_availability": "BEFORE_PREDICTION_COMMIT_ANCESTORS_ONLY"
+    },
+    {
+      "distributed_name": "asexp",
+      "evidence_status": "EVIDENCED_DEFINITION_REPLAY_REQUIRED",
+      "feature": "asexp",
+      "final_modality": "PROCESS",
+      "information_source": "author's ancestor commits in affected subsystems",
+      "leakage_status": "ALLOWED_WITH_ANCESTOR_ONLY_REPLAY",
+      "scientific_rationale": "summarizes causally prior development, ownership, file, or author history",
+      "semantic_definition": "author subsystem experience before the current commit",
+      "temporal_availability": "BEFORE_PREDICTION_COMMIT_ANCESTORS_ONLY"
+    },
+    {
+      "distributed_name": null,
+      "evidence_status": "RECONSTRUCTABLE_FROM_RESOLVED_SHA_WITH_LIMITATION",
+      "feature": "raw_commit_message",
+      "final_modality": "TEXT",
+      "information_source": "repository commit object",
+      "leakage_status": "ALLOWED_WITH_PROXY_POLICY_AND_SOURCE_TRAIN_ONLY_FITTING",
+      "scientific_rationale": "the permitted linguistic artifact is distinct from code-change and historical-process information",
+      "semantic_definition": "linguistic content of the prediction commit message",
+      "temporal_availability": "AT_PREDICTION_COMMIT"
+    }
+  ],
+  "schema_version": "apachejit-feature-modality-contract-1.1.0",
+  "single_assignment_required": true
+}

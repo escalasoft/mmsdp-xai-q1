@@ -1,0 +1,57 @@
+{
+  "acceptance": {
+    "R1": {
+      "evidence": "C/P/T contract is explicit and each permitted predictor has one primary modality",
+      "state": "PASS"
+    },
+    "R10": {
+      "evidence": "full-suite nonpassing inventory contains no new unexplained regression",
+      "state": "PASS"
+    },
+    "R11": {
+      "evidence": "audit generation is deterministic and MANIFEST.sha256 verifies",
+      "state": "PASS"
+    },
+    "R12": {
+      "evidence": "no predictive performance was generated or used in R1 decisions",
+      "state": "PASS"
+    },
+    "R2": {
+      "evidence": "ambiguity policy is explicit; no audited metric required silent resolution",
+      "state": "PASS"
+    },
+    "R3": {
+      "evidence": "800/300/400 screen is inactive and classified as provisional, not scientifically validated",
+      "state": "PASS"
+    },
+    "R4": {
+      "evidence": "candidate eligibility is explicit; final eligibility is unresolved and deferred to 48F",
+      "state": "PASS"
+    },
+    "R5": {
+      "evidence": "peer-reviewed and Q1 states are separate fields per precedent",
+      "state": "PASS"
+    },
+    "R6": {
+      "evidence": "Q1 is verified only with a frozen independent source, year, and category",
+      "state": "PASS"
+    },
+    "R7": {
+      "evidence": "positive and negative labels remain benchmark-defined observed labels",
+      "state": "PASS"
+    },
+    "R8": {
+      "evidence": "all predictive TEST-access counters remain zero; T1/T2 were not executed",
+      "state": "PASS"
+    },
+    "R9": {
+      "evidence": "no historical guard or frozen earlier-sprint artifact was modified",
+      "state": "PASS"
+    }
+  },
+  "classification": "PASS_48E_R1_READY_FOR_FREEZE",
+  "final_project_eligibility_declared": false,
+  "schema_version": "apachejit-48e-r1-contract-closure-1.0.0",
+  "test_access": "DENY",
+  "underlying_apachejit_suitability": "PASS_WITH_LABEL_CONSTRUCT_LIMITATION"
+}

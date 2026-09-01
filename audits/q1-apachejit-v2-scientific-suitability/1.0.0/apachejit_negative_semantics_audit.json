@@ -1,0 +1,15 @@
+{
+  "affirmatively_verified_non_bug_inducing": false,
+  "classification": "BENCHMARK_DEFINED_OBSERVED_LABEL",
+  "closed_world_remainder": true,
+  "construction": "Repository commits in the bounded period that are not among collected fixing commits are filtered for size/language/significant Java change, then assigned buggy=False.",
+  "potential_noise": [
+    "unreported/unlinked bugs",
+    "false-negative SZZ attribution",
+    "extrinsic bugs that SZZ cannot identify",
+    "right-censoring near the data endpoint"
+  ],
+  "schema_version": "apachejit-negative-semantics-audit-1.0.0",
+  "semantics": "commit not identified as bug-inducing by the benchmark construction procedure",
+  "semantics_choice": 2
+}

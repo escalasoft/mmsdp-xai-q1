@@ -1,0 +1,15 @@
+{
+  "classification": "NO_PRECEDENT_FOUND_WITHIN_AUDITED_SCOPE",
+  "combination_sought": [
+    "CODE+PROCESS+TEXT",
+    "controlled multimodal fusion",
+    "probability calibration",
+    "temporal validation",
+    "cross-project/generalization evaluation",
+    "XAI"
+  ],
+  "nonclaim": "This is a bounded-search result and is not a universal originality claim.",
+  "schema_version": "apachejit-novelty-scope-1.0.0",
+  "search_scope_ref": "apachejit_peer_reviewed_precedent.json",
+  "support": "No audited peer-reviewed ApacheJIT study evidenced the complete conjunction."
+}

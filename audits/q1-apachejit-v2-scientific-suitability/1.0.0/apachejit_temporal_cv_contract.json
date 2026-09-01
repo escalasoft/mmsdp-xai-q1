@@ -1,0 +1,8 @@
+{
+  "cv_2_to_11": "permitted only when each requested fold count satisfies temporal and class-support constraints",
+  "fold_rule": "every validation block occurs strictly after its training history",
+  "method": "expanding-window or blocked forward validation inside source TRAIN only",
+  "schema_version": "apachejit-temporal-cv-contract-1.0.0",
+  "shuffled_cv": "PROHIBITED",
+  "status": "FEASIBLE"
+}

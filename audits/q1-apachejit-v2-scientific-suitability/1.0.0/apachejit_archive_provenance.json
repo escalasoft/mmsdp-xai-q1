@@ -1,0 +1,822 @@
+{
+  "acquired_at_utc": "2026-08-31T23:02:54Z",
+  "archive_inventory": [
+    {
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "crc32": "00000000",
+      "is_directory": true,
+      "path": "apachejit/"
+    },
+    {
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "crc32": "00000000",
+      "is_directory": true,
+      "path": "apachejit/data/"
+    },
+    {
+      "bytes": 5332910,
+      "compressed_bytes": 2537321,
+      "crc32": "f4da69a9",
+      "is_directory": false,
+      "path": "apachejit/data/clean_filtered.csv"
+    },
+    {
+      "bytes": 399733,
+      "compressed_bytes": 126020,
+      "crc32": "bfbe86f5",
+      "is_directory": false,
+      "path": "apachejit/data/2010.csv"
+    },
+    {
+      "bytes": 530281,
+      "compressed_bytes": 167869,
+      "crc32": "571bfdaf",
+      "is_directory": false,
+      "path": "apachejit/data/2011.csv"
+    },
+    {
+      "bytes": 610467,
+      "compressed_bytes": 196118,
+      "crc32": "554f047e",
+      "is_directory": false,
+      "path": "apachejit/data/2012.csv"
+    },
+    {
+      "bytes": 776410,
+      "compressed_bytes": 248669,
+      "crc32": "4e03497f",
+      "is_directory": false,
+      "path": "apachejit/data/2013.csv"
+    },
+    {
+      "bytes": 1655590,
+      "compressed_bytes": 538634,
+      "crc32": "d0693a0b",
+      "is_directory": false,
+      "path": "apachejit/data/2014.csv"
+    },
+    {
+      "bytes": 1304578,
+      "compressed_bytes": 430813,
+      "crc32": "b2b5964b",
+      "is_directory": false,
+      "path": "apachejit/data/2015.csv"
+    },
+    {
+      "bytes": 1194623,
+      "compressed_bytes": 396936,
+      "crc32": "fc85b3d5",
+      "is_directory": false,
+      "path": "apachejit/data/2016.csv"
+    },
+    {
+      "bytes": 1049360,
+      "compressed_bytes": 350993,
+      "crc32": "74cba49f",
+      "is_directory": false,
+      "path": "apachejit/data/2017.csv"
+    },
+    {
+      "bytes": 905907,
+      "compressed_bytes": 302929,
+      "crc32": "ae7726b8",
+      "is_directory": false,
+      "path": "apachejit/data/2018.csv"
+    },
+    {
+      "bytes": 669515,
+      "compressed_bytes": 227125,
+      "crc32": "a1eb443d",
+      "is_directory": false,
+      "path": "apachejit/data/2019.csv"
+    },
+    {
+      "bytes": 76220,
+      "compressed_bytes": 40653,
+      "crc32": "c3b3a006",
+      "is_directory": false,
+      "path": "apachejit/data/AMQ.csv"
+    },
+    {
+      "bytes": 152466,
+      "compressed_bytes": 79428,
+      "crc32": "a09f5d95",
+      "is_directory": false,
+      "path": "apachejit/data/CAMEL.csv"
+    },
+    {
+      "bytes": 240808,
+      "compressed_bytes": 116470,
+      "crc32": "1a5d696d",
+      "is_directory": false,
+      "path": "apachejit/data/CASSANDRA.csv"
+    },
+    {
+      "bytes": 438524,
+      "compressed_bytes": 136426,
+      "crc32": "c3853f4d",
+      "is_directory": false,
+      "path": "apachejit/data/commit_links_AMQ.csv"
+    },
+    {
+      "bytes": 160775,
+      "compressed_bytes": 83615,
+      "crc32": "b9f24d55",
+      "is_directory": false,
+      "path": "apachejit/data/FLINK.csv"
+    },
+    {
+      "bytes": 105490,
+      "compressed_bytes": 53347,
+      "crc32": "0084240e",
+      "is_directory": false,
+      "path": "apachejit/data/GROOVY.csv"
+    },
+    {
+      "bytes": 304897,
+      "compressed_bytes": 156288,
+      "crc32": "703b0700",
+      "is_directory": false,
+      "path": "apachejit/data/HBASE.csv"
+    },
+    {
+      "bytes": 156172,
+      "compressed_bytes": 82369,
+      "crc32": "f725dd87",
+      "is_directory": false,
+      "path": "apachejit/data/HDFS.csv"
+    },
+    {
+      "bytes": 347257,
+      "compressed_bytes": 181454,
+      "crc32": "b854dd55",
+      "is_directory": false,
+      "path": "apachejit/data/HIVE.csv"
+    },
+    {
+      "bytes": 149483,
+      "compressed_bytes": 76842,
+      "crc32": "508f3f82",
+      "is_directory": false,
+      "path": "apachejit/data/IGNITE.csv"
+    },
+    {
+      "bytes": 120023,
+      "compressed_bytes": 62469,
+      "crc32": "43ea5210",
+      "is_directory": false,
+      "path": "apachejit/data/KAFKA.csv"
+    },
+    {
+      "bytes": 89172,
+      "compressed_bytes": 43461,
+      "crc32": "ff5aea07",
+      "is_directory": false,
+      "path": "apachejit/data/MAPREDUCE.csv"
+    },
+    {
+      "bytes": 28780,
+      "compressed_bytes": 14713,
+      "crc32": "bf09c02e",
+      "is_directory": false,
+      "path": "apachejit/data/MESOS.csv"
+    },
+    {
+      "bytes": 339832,
+      "compressed_bytes": 172579,
+      "crc32": "650fa1ec",
+      "is_directory": false,
+      "path": "apachejit/data/SPARK.csv"
+    },
+    {
+      "bytes": 53023,
+      "compressed_bytes": 26636,
+      "crc32": "72ffc5dc",
+      "is_directory": false,
+      "path": "apachejit/data/ZEPPELIN.csv"
+    },
+    {
+      "bytes": 39234,
+      "compressed_bytes": 19335,
+      "crc32": "0d003aad",
+      "is_directory": false,
+      "path": "apachejit/data/ZOOKEEPER.csv"
+    },
+    {
+      "bytes": 876622,
+      "compressed_bytes": 260497,
+      "crc32": "1db47e40",
+      "is_directory": false,
+      "path": "apachejit/data/commit_links_HDFS.csv"
+    },
+    {
+      "bytes": 3713674,
+      "compressed_bytes": 1019478,
+      "crc32": "9faec0f0",
+      "is_directory": false,
+      "path": "apachejit/data/commit_links_HIVE.csv"
+    },
+    {
+      "bytes": 699094,
+      "compressed_bytes": 251400,
+      "crc32": "0874e160",
+      "is_directory": false,
+      "path": "apachejit/data/commit_links_CAMEL.csv"
+    },
+    {
+      "bytes": 1355024,
+      "compressed_bytes": 378766,
+      "crc32": "0b98b088",
+      "is_directory": false,
+      "path": "apachejit/data/commit_links_FLINK.csv"
+    },
+    {
+      "bytes": 2404204,
+      "compressed_bytes": 682718,
+      "crc32": "bacc9c20",
+      "is_directory": false,
+      "path": "apachejit/data/commit_links_HBASE.csv"
+    },
+    {
+      "bytes": 1320484,
+      "compressed_bytes": 306347,
+      "crc32": "d34bf195",
+      "is_directory": false,
+      "path": "apachejit/data/commit_links_KAFKA.csv"
+    },
+    {
+      "bytes": 2264504,
+      "compressed_bytes": 704950,
+      "crc32": "6e0894e7",
+      "is_directory": false,
+      "path": "apachejit/data/commit_links_SPARK.csv"
+    },
+    {
+      "bytes": 566699,
+      "compressed_bytes": 174993,
+      "crc32": "80694d78",
+      "is_directory": false,
+      "path": "apachejit/data/commit_links_GROOVY.csv"
+    },
+    {
+      "bytes": 1654277,
+      "compressed_bytes": 448076,
+      "crc32": "ede94797",
+      "is_directory": false,
+      "path": "apachejit/data/commit_links_IGNITE.csv"
+    },
+    {
+      "bytes": 327518,
+      "compressed_bytes": 83436,
+      "crc32": "3e661474",
+      "is_directory": false,
+      "path": "apachejit/data/commit_links_ZEPPELIN.csv"
+    },
+    {
+      "bytes": 1666838,
+      "compressed_bytes": 456095,
+      "crc32": "ba1ace33",
+      "is_directory": false,
+      "path": "apachejit/data/commit_links_CASSANDRA.csv"
+    },
+    {
+      "bytes": 450914,
+      "compressed_bytes": 101801,
+      "crc32": "768ff381",
+      "is_directory": false,
+      "path": "apachejit/data/commit_links_MAPREDUCE.csv"
+    },
+    {
+      "bytes": 233174,
+      "compressed_bytes": 52832,
+      "crc32": "87f2f4bc",
+      "is_directory": false,
+      "path": "apachejit/data/commit_links_ZOOKEEPER.csv"
+    },
+    {
+      "bytes": 1279784,
+      "compressed_bytes": 739756,
+      "crc32": "81261850",
+      "is_directory": false,
+      "path": "apachejit/data/keys_apachejava_ast.csv"
+    },
+    {
+      "bytes": 3095838,
+      "compressed_bytes": 1791597,
+      "crc32": "aa01c6df",
+      "is_directory": false,
+      "path": "apachejit/data/keys_clean_ast.csv"
+    },
+    {
+      "bytes": 13167304,
+      "compressed_bytes": 6009815,
+      "crc32": "fe3a6d0a",
+      "is_directory": false,
+      "path": "apachejit/data/apache_metrics_kamei.csv"
+    },
+    {
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "crc32": "00000000",
+      "is_directory": true,
+      "path": "apachejit/notebooks/"
+    },
+    {
+      "bytes": 155904,
+      "compressed_bytes": 14435,
+      "crc32": "1f711a9a",
+      "is_directory": false,
+      "path": "apachejit/notebooks/data_linking_filtering.ipynb"
+    },
+    {
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "crc32": "00000000",
+      "is_directory": true,
+      "path": "apachejit/notebooks/.ipynb_checkpoints/"
+    },
+    {
+      "bytes": 155904,
+      "compressed_bytes": 14435,
+      "crc32": "1f711a9a",
+      "is_directory": false,
+      "path": "apachejit/notebooks/.ipynb_checkpoints/data_linking_filtering-checkpoint.ipynb"
+    },
+    {
+      "bytes": 84613,
+      "compressed_bytes": 8012,
+      "crc32": "64fbb74e",
+      "is_directory": false,
+      "path": "apachejit/notebooks/.ipynb_checkpoints/dataset_construction-checkpoint.ipynb"
+    },
+    {
+      "bytes": 84613,
+      "compressed_bytes": 8012,
+      "crc32": "64fbb74e",
+      "is_directory": false,
+      "path": "apachejit/notebooks/dataset_construction.ipynb"
+    },
+    {
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "crc32": "00000000",
+      "is_directory": true,
+      "path": "apachejit/src/"
+    },
+    {
+      "bytes": 13533,
+      "compressed_bytes": 3418,
+      "crc32": "e96d34e0",
+      "is_directory": false,
+      "path": "apachejit/src/gumtree.py"
+    },
+    {
+      "bytes": 4831,
+      "compressed_bytes": 1613,
+      "crc32": "e395c6c1",
+      "is_directory": false,
+      "path": "apachejit/src/gitminer.py"
+    },
+    {
+      "bytes": 4629,
+      "compressed_bytes": 1330,
+      "crc32": "61568848",
+      "is_directory": false,
+      "path": "apachejit/src/git_token.py"
+    },
+    {
+      "bytes": 0,
+      "compressed_bytes": 2,
+      "crc32": "00000000",
+      "is_directory": false,
+      "path": "apachejit/src/__init__.py"
+    },
+    {
+      "bytes": 4520,
+      "compressed_bytes": 1702,
+      "crc32": "ea7e9f65",
+      "is_directory": false,
+      "path": "apachejit/src/collector.py"
+    },
+    {
+      "bytes": 3979,
+      "compressed_bytes": 1813,
+      "crc32": "8e9d24a3",
+      "is_directory": false,
+      "path": "apachejit/readme.md"
+    },
+    {
+      "bytes": 1610,
+      "compressed_bytes": 865,
+      "crc32": "d65d11d9",
+      "is_directory": false,
+      "path": "apachejit/requirements.txt"
+    },
+    {
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "crc32": "00000000",
+      "is_directory": true,
+      "path": "apachejit/dataset/"
+    },
+    {
+      "bytes": 4689193,
+      "compressed_bytes": 1883459,
+      "crc32": "bb5ea3a5",
+      "is_directory": false,
+      "path": "apachejit/dataset/apachejit_test_large.csv"
+    },
+    {
+      "bytes": 1167149,
+      "compressed_bytes": 470257,
+      "crc32": "437cc682",
+      "is_directory": false,
+      "path": "apachejit/dataset/apachejit_test_small.csv"
+    },
+    {
+      "bytes": 16467692,
+      "compressed_bytes": 6536457,
+      "crc32": "90b32cce",
+      "is_directory": false,
+      "path": "apachejit/dataset/apachejit_total.csv"
+    },
+    {
+      "bytes": 7038900,
+      "compressed_bytes": 2804312,
+      "crc32": "1d95dfe6",
+      "is_directory": false,
+      "path": "apachejit/dataset/apachejit_train.csv"
+    },
+    {
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "crc32": "00000000",
+      "is_directory": true,
+      "path": "apachejit/gumtree-3.0.0/"
+    },
+    {
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "crc32": "00000000",
+      "is_directory": true,
+      "path": "apachejit/gumtree-3.0.0/lib/"
+    },
+    {
+      "bytes": 55306457,
+      "compressed_bytes": 50669372,
+      "crc32": "2ad0a76c",
+      "is_directory": false,
+      "path": "apachejit/gumtree-3.0.0/lib/gumtree.jar"
+    },
+    {
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "crc32": "00000000",
+      "is_directory": true,
+      "path": "apachejit/gumtree-3.0.0/bin/"
+    },
+    {
+      "bytes": 5647,
+      "compressed_bytes": 2248,
+      "crc32": "8ef9c4eb",
+      "is_directory": false,
+      "path": "apachejit/gumtree-3.0.0/bin/gumtree"
+    },
+    {
+      "bytes": 2167,
+      "compressed_bytes": 847,
+      "crc32": "c948ad57",
+      "is_directory": false,
+      "path": "apachejit/gumtree-3.0.0/bin/gumtree.bat"
+    }
+  ],
+  "bytes": 82769782,
+  "canonical_archive_url": "https://zenodo.org/records/5907847",
+  "doi": "10.5281/zenodo.5907847",
+  "download_url": "https://zenodo.org/records/5907847/files/apachejit_dataset_replication.zip?download=1",
+  "evidence_sources": [
+    "https://zenodo.org/records/5907847",
+    "https://doi.org/10.5281/zenodo.5907847"
+  ],
+  "extracted_file_inventory": [
+    {
+      "bytes": 399733,
+      "path": "data/2010.csv",
+      "sha256": "163865b7bbfb32f9be1b1a516ca6d1373e8690eda37ca182c074df146d2e911d"
+    },
+    {
+      "bytes": 530281,
+      "path": "data/2011.csv",
+      "sha256": "b9c5e5f077f9613358d095d89d2ffb20dcf25f26a7ab3c9ebb154b58eb7805d9"
+    },
+    {
+      "bytes": 610467,
+      "path": "data/2012.csv",
+      "sha256": "2c7ed2ac3085fe77fe55efd46857124d98d423be13e826e5ff78bb70024739d3"
+    },
+    {
+      "bytes": 776410,
+      "path": "data/2013.csv",
+      "sha256": "e00a1ae94dd9b852af71a8106aebf1cde581df0ddc0b5f1a5c30fd969858211d"
+    },
+    {
+      "bytes": 1655590,
+      "path": "data/2014.csv",
+      "sha256": "35c858251ebbe31cb0c6b89bc6bfad7cfae601181f18ca9e7d6bb37ea698054b"
+    },
+    {
+      "bytes": 1304578,
+      "path": "data/2015.csv",
+      "sha256": "10746313808b9251d4f7c74050921d2bc68d5ab5e2b666ec888529ae2a26e88f"
+    },
+    {
+      "bytes": 1194623,
+      "path": "data/2016.csv",
+      "sha256": "5e9404cfd688ffc9729c4ff12fb8c11c62376cd17b23e56743b62ae256178ca9"
+    },
+    {
+      "bytes": 1049360,
+      "path": "data/2017.csv",
+      "sha256": "5b64060065419361c40a152f7048099be56c3999047ee3aaa8ea2cc149ccab22"
+    },
+    {
+      "bytes": 905907,
+      "path": "data/2018.csv",
+      "sha256": "92389ba939251ee029ab158e33d7b86b0f009298046e345b6be5e642d8309251"
+    },
+    {
+      "bytes": 669515,
+      "path": "data/2019.csv",
+      "sha256": "ba6159549dd32a06d207b9bd530832230fc056212d2d528585b0f666e3aa0820"
+    },
+    {
+      "bytes": 76220,
+      "path": "data/AMQ.csv",
+      "sha256": "409ef57246f737537b4a86390a15c74ca09bf9048f58b81898cca0d803d8d505"
+    },
+    {
+      "bytes": 152466,
+      "path": "data/CAMEL.csv",
+      "sha256": "56d64486d1d35d88dad33e4638a8fece0bf5e8073c5fe01225c1e2d385994a4e"
+    },
+    {
+      "bytes": 240808,
+      "path": "data/CASSANDRA.csv",
+      "sha256": "118d4f7fe81e1c46216435f2bec33c28fdf64fd0ac0dfd9bf98bbe1ecf3adf51"
+    },
+    {
+      "bytes": 160775,
+      "path": "data/FLINK.csv",
+      "sha256": "9b78753a51a1fd0f055573ae7e7f152372341c813f13619e3a72b45136bb2380"
+    },
+    {
+      "bytes": 105490,
+      "path": "data/GROOVY.csv",
+      "sha256": "561990309a2bf0c3f31c81f212e410548e02e1b412ec6e7d6abd2a403701f025"
+    },
+    {
+      "bytes": 304897,
+      "path": "data/HBASE.csv",
+      "sha256": "d55e16af0639f7b1db8f9f982d22a90160bf8339980ea164c2708ed5113f2f7f"
+    },
+    {
+      "bytes": 156172,
+      "path": "data/HDFS.csv",
+      "sha256": "b3891590a1d0a114a3c7e31d4a99cf013c74e825559e98c4cdcbc169447c2790"
+    },
+    {
+      "bytes": 347257,
+      "path": "data/HIVE.csv",
+      "sha256": "c92a0891c7c7794207efa50f33fbe062beef46d2a6c298f993d561558082c8aa"
+    },
+    {
+      "bytes": 149483,
+      "path": "data/IGNITE.csv",
+      "sha256": "5bb475b57bd3f34db55b251b86562999876c4f20026635630751239b05871a27"
+    },
+    {
+      "bytes": 120023,
+      "path": "data/KAFKA.csv",
+      "sha256": "4fc28078b0dec051880e641805c52590d75bc4a6da37ee36b12bd44b2c261df2"
+    },
+    {
+      "bytes": 89172,
+      "path": "data/MAPREDUCE.csv",
+      "sha256": "297c12c70e52999f2879bce3b338b86325bb06e099d576afd045eaff99750973"
+    },
+    {
+      "bytes": 28780,
+      "path": "data/MESOS.csv",
+      "sha256": "0fb7c867d6ba6472a79a3734ce1a37008b71da82c216330711dbf21ce3249bdb"
+    },
+    {
+      "bytes": 339832,
+      "path": "data/SPARK.csv",
+      "sha256": "48895fa2088e1d2e550665fe1e010535312ae75228853961ddbd7076f5de3a7b"
+    },
+    {
+      "bytes": 53023,
+      "path": "data/ZEPPELIN.csv",
+      "sha256": "24f91d5fbf996b6dd7d7c66c815718e9ae943173ff5ce24578ddb14d6d6fa2ef"
+    },
+    {
+      "bytes": 39234,
+      "path": "data/ZOOKEEPER.csv",
+      "sha256": "ea6bcfe7972d91a9b64c01dc6d74453f2a5668f16ea636cc158ae4767e7947ef"
+    },
+    {
+      "bytes": 13167304,
+      "path": "data/apache_metrics_kamei.csv",
+      "sha256": "1f10c3ebd04e1ea109376e6aeb7d7125955edf3334a8449d8ffef03e0d8103c8"
+    },
+    {
+      "bytes": 5332910,
+      "path": "data/clean_filtered.csv",
+      "sha256": "021e417ae30d7bfba56e5efd8ae0ddaadb558e009e6c3766acddbddc99fd0aa4"
+    },
+    {
+      "bytes": 438524,
+      "path": "data/commit_links_AMQ.csv",
+      "sha256": "1c16e774252d9b4a30757c4f48f5f68e71f3948a52e85b996658f2fad5b1931a"
+    },
+    {
+      "bytes": 699094,
+      "path": "data/commit_links_CAMEL.csv",
+      "sha256": "e6675d0b122eab87405539a713aa4778f1d0665cf2342e6efc3790149a80efc4"
+    },
+    {
+      "bytes": 1666838,
+      "path": "data/commit_links_CASSANDRA.csv",
+      "sha256": "6aa993e5a060b6129bb375bdf869fef535fd39d224a3e10be979aab8255b0bed"
+    },
+    {
+      "bytes": 1355024,
+      "path": "data/commit_links_FLINK.csv",
+      "sha256": "2b0e951c80e81b7335117bf8b0f989a8fa7fec8a695bf9c5682cad270741b3e6"
+    },
+    {
+      "bytes": 566699,
+      "path": "data/commit_links_GROOVY.csv",
+      "sha256": "0d46929958f5406329e52443c0f2c337e4101240788fd4309ccc3f496d24e5db"
+    },
+    {
+      "bytes": 2404204,
+      "path": "data/commit_links_HBASE.csv",
+      "sha256": "1e3f73ef4127ead146c363ffaf2e052fdc6dcefc4ca0f44ce77688d1ba93d034"
+    },
+    {
+      "bytes": 876622,
+      "path": "data/commit_links_HDFS.csv",
+      "sha256": "6a4d248cc7584df376e82c0ed3659a98bdde8f182006031656666b44ca894fc6"
+    },
+    {
+      "bytes": 3713674,
+      "path": "data/commit_links_HIVE.csv",
+      "sha256": "09fabcdd3e7ef5274fc24d93fde197084522caa5283e26956f4b31a2d6e5707a"
+    },
+    {
+      "bytes": 1654277,
+      "path": "data/commit_links_IGNITE.csv",
+      "sha256": "dd7ae2096593f794df4c0a536ea7275586c272085c2cdcf60ac5ef0e22b7048a"
+    },
+    {
+      "bytes": 1320484,
+      "path": "data/commit_links_KAFKA.csv",
+      "sha256": "d25093c828b00eb44ddacf4664dcfd97dffacbec4c331765a267e647dbc7e6ae"
+    },
+    {
+      "bytes": 450914,
+      "path": "data/commit_links_MAPREDUCE.csv",
+      "sha256": "64241be4cf711e1a2dcf44db37bf2cf991703a9634a0159ac6e8f1a6ffc8ac6a"
+    },
+    {
+      "bytes": 2264504,
+      "path": "data/commit_links_SPARK.csv",
+      "sha256": "8429cd8c17d0d3ad15bcd15d9b972d0e8c033af9d4dd72cc73afa3a9b4b075d7"
+    },
+    {
+      "bytes": 327518,
+      "path": "data/commit_links_ZEPPELIN.csv",
+      "sha256": "83ad89231f057f73952d8044428bf87d6301e169c76a67767de5f3aad5d6aaef"
+    },
+    {
+      "bytes": 233174,
+      "path": "data/commit_links_ZOOKEEPER.csv",
+      "sha256": "25e3ca9dbe494e0b9bffe16a95424f972120c602c6c34943300345a4cc39e312"
+    },
+    {
+      "bytes": 1279784,
+      "path": "data/keys_apachejava_ast.csv",
+      "sha256": "91753fb1ab6c6d89341bf962c7a17c89459f374a2a11480be170f6e74e327908"
+    },
+    {
+      "bytes": 3095838,
+      "path": "data/keys_clean_ast.csv",
+      "sha256": "d4f32134cfda3a0d0514f837c93c4288f48fe99f2fa9c67bdf48675a3c4f09c8"
+    },
+    {
+      "bytes": 4689193,
+      "path": "dataset/apachejit_test_large.csv",
+      "sha256": "2f21e858026fa625f51f4f6639d845c22c24595e212a3b03d8a5df93bde43ea2"
+    },
+    {
+      "bytes": 1167149,
+      "path": "dataset/apachejit_test_small.csv",
+      "sha256": "0cc3c6edfbd46572330b9790ee672f944234ff3689ea13f9a3214191ccc0b9a3"
+    },
+    {
+      "bytes": 16467692,
+      "path": "dataset/apachejit_total.csv",
+      "sha256": "5097cbbbab8c4611a709b3cf95ac5c9fe5f62e619bab081911a2a247ddbed4e0"
+    },
+    {
+      "bytes": 7038900,
+      "path": "dataset/apachejit_train.csv",
+      "sha256": "7425b77e98ed30270e1d17ce3d179800539cc46a656c927e88e6609cd9b893d2"
+    },
+    {
+      "bytes": 5647,
+      "path": "gumtree-3.0.0/bin/gumtree",
+      "sha256": "b4aaff90a32e6725368a041f3b929a17f3de2eca0edac9b7068f59ba77cb7533"
+    },
+    {
+      "bytes": 2167,
+      "path": "gumtree-3.0.0/bin/gumtree.bat",
+      "sha256": "f2d2b8d58e7032616e2693e6953ea59e2aad3024d8308d0437ae1c3555203ce8"
+    },
+    {
+      "bytes": 55306457,
+      "path": "gumtree-3.0.0/lib/gumtree.jar",
+      "sha256": "4ebf8c7d12ceaaa25696bd3a1b1abbce235f023d01491ad2cc5bf3f9cf3a2241"
+    },
+    {
+      "bytes": 155904,
+      "path": "notebooks/.ipynb_checkpoints/data_linking_filtering-checkpoint.ipynb",
+      "sha256": "c66173e98d4231aa0e82a0d8d7e9a0e395b5503134c8a5bdf4c89bd51a1c012c"
+    },
+    {
+      "bytes": 84613,
+      "path": "notebooks/.ipynb_checkpoints/dataset_construction-checkpoint.ipynb",
+      "sha256": "ef3a60e5eec0ef9b4f4ac669af92f7a4d80edd4d5365f90097c448cc2295f495"
+    },
+    {
+      "bytes": 155904,
+      "path": "notebooks/data_linking_filtering.ipynb",
+      "sha256": "c66173e98d4231aa0e82a0d8d7e9a0e395b5503134c8a5bdf4c89bd51a1c012c"
+    },
+    {
+      "bytes": 84613,
+      "path": "notebooks/dataset_construction.ipynb",
+      "sha256": "ef3a60e5eec0ef9b4f4ac669af92f7a4d80edd4d5365f90097c448cc2295f495"
+    },
+    {
+      "bytes": 3979,
+      "path": "readme.md",
+      "sha256": "ca75da21b8881f855e1a01614289e3599bbcfaf1f294d28a34d817e92e5e2a9d"
+    },
+    {
+      "bytes": 1610,
+      "path": "requirements.txt",
+      "sha256": "6f86d17349f7fea4f6e5e12fb4ebdebd439ad326492f0bffa3037c213d89520f"
+    },
+    {
+      "bytes": 0,
+      "path": "src/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 4520,
+      "path": "src/collector.py",
+      "sha256": "0008fcf49c633c7a9418d0030c9aa2c42379a8472b6d0c0e98b48793740901fd"
+    },
+    {
+      "bytes": 4629,
+      "path": "src/git_token.py",
+      "sha256": "422e5395b38507010030763f49c059b6a068e5b28646cc1d5e967e3a7b5d79d6"
+    },
+    {
+      "bytes": 4831,
+      "path": "src/gitminer.py",
+      "sha256": "fc79f702255cea1580e210eff482f54ecf5bfe8a88117b6dc328593999c1c189"
+    },
+    {
+      "bytes": 13533,
+      "path": "src/gumtree.py",
+      "sha256": "741d221af038bb4a78b00509081d066b5b10eb14340e7e17e3288a6f47983e9d"
+    }
+  ],
+  "filename": "apachejit_dataset_replication.zip",
+  "license": "UNKNOWN_NOT_STATED_ON_RECORD_OR_INCLUDED_LICENSE_FILE",
+  "md5": "528bf0ee04b15976be6bf15f8efddc65",
+  "published": "2022-01-26",
+  "record_id": "5907847",
+  "record_modified": "2022-01-27",
+  "schema_version": "apachejit-archive-provenance-1.0.0",
+  "sha256": "533e7c6fc4f7cb6f34b35539a972d00baa63a125e88ddb5743283dd277edcd5c",
+  "silent_substitution": false,
+  "version": "v2",
+  "zenodo_md5_match": true,
+  "zip_integrity": "PASS"
+}

@@ -1,0 +1,49 @@
+{
+  "classification_counts": {
+    "48E_REGRESSION": 0,
+    "EXPECTED_HISTORICAL_INTEGRITY_GUARD": 25,
+    "PREEXISTING_FAILURE": 0,
+    "UNKNOWN_REQUIRES_INVESTIGATION": 0
+  },
+  "comparison_to_48d": {
+    "additional_passes": 5,
+    "additional_passes_source": "new 48E/48E-R1 focused tests",
+    "same_nonpassing_case_count": 25,
+    "same_nonpassing_groups": true
+  },
+  "groups": [
+    {
+      "cases": 16,
+      "classification": "EXPECTED_HISTORICAL_INTEGRITY_GUARD",
+      "outcome": "ERROR_AT_SETUP",
+      "test_file": "tests/evaluation/test_q1_controlled_advancement_decision.py"
+    },
+    {
+      "cases": 7,
+      "classification": "EXPECTED_HISTORICAL_INTEGRITY_GUARD",
+      "outcome": "ERROR_AT_SETUP",
+      "test_file": "tests/evaluation/test_q1_predeclared_final_performance_contract.py"
+    },
+    {
+      "cases": 1,
+      "classification": "EXPECTED_HISTORICAL_INTEGRITY_GUARD",
+      "outcome": "FAILED",
+      "test_file": "tests/evaluation/test_q1_final_test_identity_boundary_amendment.py"
+    },
+    {
+      "cases": 1,
+      "classification": "EXPECTED_HISTORICAL_INTEGRITY_GUARD",
+      "outcome": "FAILED",
+      "test_file": "tests/evaluation/test_q1_human_prospective_authorization.py"
+    }
+  ],
+  "guards_weakened": false,
+  "run_result": {
+    "elapsed_seconds": 139.78,
+    "errors": 23,
+    "failed": 2,
+    "passed": 1574,
+    "skipped": 1
+  },
+  "schema_version": "apachejit-full-suite-failure-inventory-1.0.0"
+}

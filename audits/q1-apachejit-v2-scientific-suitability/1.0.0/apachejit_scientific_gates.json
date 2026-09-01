@@ -1,0 +1,102 @@
+{
+  "gates": {
+    "G1": {
+      "evidence": "Zenodo v2 record 5907847 and DOI identified",
+      "state": "PASS"
+    },
+    "G10": {
+      "evidence": "raw timestamps complete; synthetic year mismatches require UTC repartition",
+      "state": "PASS_WITH_LIMITATION"
+    },
+    "G11": {
+      "evidence": "commit-parent code reconstruction feasible via generic Git/Java adapter",
+      "state": "PASS_WITH_LIMITATION"
+    },
+    "G12": {
+      "evidence": "ancestor-only process reconstruction feasible; replay audit required",
+      "state": "PASS_WITH_LIMITATION"
+    },
+    "G13": {
+      "evidence": "messages reconstructable from SHAs; proxy-safe policy mandatory",
+      "state": "PASS_WITH_LIMITATION"
+    },
+    "G14": {
+      "evidence": "distinct C/P/T inputs feasible under contracts",
+      "state": "PASS_WITH_LIMITATION"
+    },
+    "G15": {
+      "evidence": "14 performance-independent eligible candidates; final materialization pending",
+      "state": "PASS_WITH_LIMITATION"
+    },
+    "G16": {
+      "evidence": "raw timestamps support chronological blocks and forward folds",
+      "state": "PASS"
+    },
+    "G17": {
+      "evidence": "multi-project identities support strict LOPO/CPDP; Hadoop family grouping required",
+      "state": "PASS_WITH_LIMITATION"
+    },
+    "G18": {
+      "evidence": "source/train-only fitting contract frozen",
+      "state": "PASS"
+    },
+    "G19": {
+      "evidence": "targeted peer-reviewed precedent audit completed",
+      "state": "PASS"
+    },
+    "G2": {
+      "evidence": "82,769,782-byte archive matches Zenodo MD5; SHA-256 and inventory frozen",
+      "state": "PASS"
+    },
+    "G20": {
+      "evidence": "NO_PRECEDENT_FOUND_WITHIN_AUDITED_SCOPE; no universal novelty claim",
+      "state": "PASS"
+    },
+    "G21": {
+      "evidence": "reviewer concerns mapped to future controls without predictive claims",
+      "state": "PASS"
+    },
+    "G22": {
+      "evidence": "progressive T0/T1/T2 TEST-access contract frozen; current access DENY",
+      "state": "PASS"
+    },
+    "G23": {
+      "evidence": "versioned machine-readable audit package, report and manifest generated",
+      "state": "PASS"
+    },
+    "G24": {
+      "evidence": "predictive TARGET/TEST access count remains zero",
+      "state": "PASS"
+    },
+    "G3": {
+      "evidence": "paper and package contract evidenced; license remains unknown",
+      "state": "PASS_WITH_LIMITATION"
+    },
+    "G4": {
+      "evidence": "106,674 = 28,239 positive + 78,435 negative; no duplicate identity or contradictory label",
+      "state": "PASS"
+    },
+    "G5": {
+      "evidence": "SZZ chain and raw edges evidenced; final surviving edge requires notebook replay",
+      "state": "PASS_WITH_LIMITATION"
+    },
+    "G6": {
+      "evidence": "negative is procedure-defined closed-world remainder, not verified clean ground truth",
+      "state": "PASS_WITH_LIMITATION"
+    },
+    "G7": {
+      "evidence": "observed-label benchmark acceptable only under the explicit proposed amendment and human approval",
+      "state": "PASS_WITH_LIMITATION"
+    },
+    "G8": {
+      "evidence": "15 CSV identities mapped; Hadoop legacy identities require canonical-family fallback",
+      "state": "PASS_WITH_LIMITATION"
+    },
+    "G9": {
+      "evidence": "all SHAs well formed and median SHA resolved per identity; full materialization deferred",
+      "state": "PASS_WITH_LIMITATION"
+    }
+  },
+  "schema_version": "apachejit-scientific-gates-1.0.0",
+  "unresolved_promoted_to_pass": false
+}

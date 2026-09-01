@@ -1,0 +1,21 @@
+{
+  "alignment": [
+    "CODE",
+    "PROCESS",
+    "TEXT",
+    "multimodal integration",
+    "temporal validation",
+    "calibration",
+    "XAI",
+    "unimodal/bimodal comparison"
+  ],
+  "human_approval_required": true,
+  "proposed_amendments": [
+    "benchmark-defined observed labels replace any perfect-ground-truth claim",
+    "raw UTC partitions replace reliance on the authors' synthetic year strata",
+    "strict source-fit LOPO/CPDP is primary",
+    "generic Git/Java adapter replaces assumed Qt/JIT-Defects4J compatibility"
+  ],
+  "schema_version": "apachejit-thesis-traceability-1.0.0",
+  "silent_divergence": false
+}

@@ -1,0 +1,16 @@
+{
+  "aggregate_consistency": "PASS",
+  "audit_method": "aggregate consistency plus deterministic complete-file checks and one median SHA resolution per CSV identity",
+  "contradictory_label_count": 0,
+  "duplicate_identity_count": 0,
+  "full_reconstruction": "NOT_EXECUTED",
+  "malformed_record_count": 0,
+  "negative": "BENCHMARK_DEFINED_OBSERVED_LABEL",
+  "negative_count": 78435,
+  "positive": "BENCHMARK_DEFINED_OBSERVED_LABEL",
+  "positive_count": 28239,
+  "row_count": 106674,
+  "schema_version": "apachejit-label-construct-audit-1.0.0",
+  "scientific_usability": "PASS_WITH_LABEL_CONSTRUCT_LIMITATION",
+  "verified_ground_truth_claimed": false
+}
