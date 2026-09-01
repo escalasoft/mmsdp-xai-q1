@@ -1,0 +1,32 @@
+{
+  "T0": "all frozen rows; structural/non-predictive identity, schema, hash, partition, and class-support checks only",
+  "T1": "chronologically first 4% of each eligible project; limited catastrophic predictive pipeline check after human authorization",
+  "T1_executed": false,
+  "T1_not_easiest_portion_assertion": "No difficulty, model output, error, confidence, or predictive performance quantity influenced membership.",
+  "T1_results_prohibited_uses": [
+    "model selection",
+    "feature selection",
+    "modality selection",
+    "hyperparameter tuning",
+    "project selection",
+    "fusion selection",
+    "calibration selection",
+    "threshold selection",
+    "hypothesis modification"
+  ],
+  "T1_selection_basis": "timestamp/SHA chronology frozen before prediction; labels used only for pre-predictive structural class-support eligibility",
+  "T2": "chronologically final 16% of each eligible project; final one-shot predictive evaluation after separate human authorization",
+  "T2_executed": false,
+  "exception_policy": "explicit protocol amendment; affected T2 may no longer be claimed fully untouched",
+  "membership_file": "temporal_partition_manifest.jsonl.gz",
+  "post_T1_redesign": "PROHIBITED",
+  "predictive_access_current": "DENY",
+  "schema_version": "apachejit-48f-r1-final-dataset-freeze-1.0.0",
+  "sequence": [
+    "T0",
+    "HUMAN_REVIEW",
+    "T1",
+    "HUMAN_REVIEW",
+    "T2"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "calibration": [
+    "raw/uncalibrated",
+    "Platt",
+    "isotonic"
+  ],
+  "calibration_fit_scope": "TRAIN/VALIDATION only",
+  "calibration_metrics": [
+    "Brier score",
+    "ECE",
+    "reliability diagrams"
+  ],
+  "dataset_selection_by_significance": "PROHIBITED",
+  "executed_in_48f": false,
+  "fusion": {
+    "feature_concatenation": "early fusion",
+    "late_fusion": "combine separately fitted modality outputs",
+    "must_not_be_conflated": true,
+    "stacking": "meta-model fit only on leakage-safe out-of-fold source/TRAIN predictions"
+  },
+  "modalities": [
+    "CODE",
+    "PROCESS",
+    "TEXT",
+    "CODE+PROCESS",
+    "CODE+TEXT",
+    "PROCESS+TEXT",
+    "CODE+PROCESS+TEXT"
+  ],
+  "models": [
+    "Logistic Regression",
+    "Random Forest",
+    "XGBoost",
+    "LightGBM"
+  ],
+  "moderate_or_negative_results_valid": true,
+  "multimodal_superiority_promised": false,
+  "predictive_metrics": [
+    "PR-AUC",
+    "ROC-AUC",
+    "MCC",
+    "Recall",
+    "Precision",
+    "F1"
+  ],
+  "required_analyses": [
+    "modality ablation",
+    "pairwise/full multimodal comparison",
+    "temporal robustness",
+    "cross-project evaluation",
+    "statistical comparison where justified",
+    "calibration",
+    "practical/effort-aware utility",
+    "XAI only after predictive validity"
+  ],
+  "schema_version": "apachejit-48f-r1-final-dataset-freeze-1.0.0"
+}

@@ -1,0 +1,9 @@
+{
+  "calibration_fit_count": 0,
+  "model_training_count": 0,
+  "predictive_performance_inspection_count": 0,
+  "predictive_scoring_count": 0,
+  "schema_version": "apachejit-48f-r1-final-dataset-freeze-1.0.0",
+  "test_predictive_access_count": 0,
+  "xai_execution_count": 0
+}

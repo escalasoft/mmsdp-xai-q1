@@ -1,0 +1,22 @@
+{
+  "entropy_alias": {
+    "canonical": "entropy",
+    "distributed": "ent"
+  },
+  "future_information": "PROHIBITED",
+  "independent_reconstruction_status": "NOT_INDEPENDENTLY_REPRODUCED_FOR_ALL_ROWS_IN_48F_R1",
+  "information_boundary": "prediction commit plus direct first parent only",
+  "label_provenance": "PROHIBITED",
+  "merge_policy": "first parent is the direct-parent comparison baseline",
+  "numeric_value_source": "APACHEJIT_V2_FROZEN_BENCHMARK_FEATURE",
+  "root_policy": "empty-tree baseline where no direct parent exists",
+  "schema_version": "apachejit-48f-r1-final-dataset-freeze-1.0.0",
+  "variables": [
+    "la",
+    "ld",
+    "nf",
+    "nd",
+    "ns",
+    "ent"
+  ]
+}

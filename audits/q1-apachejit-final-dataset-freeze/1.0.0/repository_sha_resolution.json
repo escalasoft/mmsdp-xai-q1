@@ -1,0 +1,319 @@
+{
+  "archive_sha256": "533e7c6fc4f7cb6f34b35539a972d00baa63a125e88ddb5743283dd277edcd5c",
+  "assignment_evidence": [
+    {
+      "commit_objects_present": 6126,
+      "identical_sha_overlap_count": 0,
+      "project": "apache/activemq",
+      "repository_identity": "apache/activemq",
+      "repository_priority": 1,
+      "rows_assigned": 6126
+    },
+    {
+      "commit_objects_present": 22700,
+      "identical_sha_overlap_count": 0,
+      "project": "apache/camel",
+      "repository_identity": "apache/camel",
+      "repository_priority": 1,
+      "rows_assigned": 22700
+    },
+    {
+      "commit_objects_present": 8159,
+      "identical_sha_overlap_count": 0,
+      "project": "apache/cassandra",
+      "repository_identity": "apache/cassandra",
+      "repository_priority": 1,
+      "rows_assigned": 8159
+    },
+    {
+      "commit_objects_present": 11691,
+      "identical_sha_overlap_count": 0,
+      "project": "apache/flink",
+      "repository_identity": "apache/flink",
+      "repository_priority": 1,
+      "rows_assigned": 11691
+    },
+    {
+      "commit_objects_present": 8059,
+      "identical_sha_overlap_count": 0,
+      "project": "apache/groovy",
+      "repository_identity": "apache/groovy",
+      "repository_priority": 1,
+      "rows_assigned": 8059
+    },
+    {
+      "commit_objects_present": 603,
+      "identical_sha_overlap_count": 142,
+      "project": "apache/hadoop-hdfs",
+      "repository_identity": "apache/hadoop-hdfs",
+      "repository_priority": 1,
+      "rows_assigned": 603
+    },
+    {
+      "commit_objects_present": 2446,
+      "identical_sha_overlap_count": 142,
+      "project": "apache/hadoop-hdfs",
+      "repository_identity": "apache/hadoop",
+      "repository_priority": 2,
+      "rows_assigned": 2304
+    },
+    {
+      "commit_objects_present": 525,
+      "identical_sha_overlap_count": 0,
+      "project": "apache/hadoop-mapreduce",
+      "repository_identity": "apache/hadoop-mapreduce",
+      "repository_priority": 1,
+      "rows_assigned": 525
+    },
+    {
+      "commit_objects_present": 796,
+      "identical_sha_overlap_count": 0,
+      "project": "apache/hadoop-mapreduce",
+      "repository_identity": "apache/hadoop",
+      "repository_priority": 2,
+      "rows_assigned": 796
+    },
+    {
+      "commit_objects_present": 8730,
+      "identical_sha_overlap_count": 0,
+      "project": "apache/hbase",
+      "repository_identity": "apache/hbase",
+      "repository_priority": 1,
+      "rows_assigned": 8730
+    },
+    {
+      "commit_objects_present": 6842,
+      "identical_sha_overlap_count": 0,
+      "project": "apache/hive",
+      "repository_identity": "apache/hive",
+      "repository_priority": 1,
+      "rows_assigned": 6842
+    },
+    {
+      "commit_objects_present": 12036,
+      "identical_sha_overlap_count": 0,
+      "project": "apache/ignite",
+      "repository_identity": "apache/ignite",
+      "repository_priority": 1,
+      "rows_assigned": 12036
+    },
+    {
+      "commit_objects_present": 2384,
+      "identical_sha_overlap_count": 0,
+      "project": "apache/kafka",
+      "repository_identity": "apache/kafka",
+      "repository_priority": 1,
+      "rows_assigned": 2384
+    },
+    {
+      "commit_objects_present": 1465,
+      "identical_sha_overlap_count": 0,
+      "project": "apache/spark",
+      "repository_identity": "apache/spark",
+      "repository_priority": 1,
+      "rows_assigned": 1465
+    },
+    {
+      "commit_objects_present": 1451,
+      "identical_sha_overlap_count": 0,
+      "project": "apache/zeppelin",
+      "repository_identity": "apache/zeppelin",
+      "repository_priority": 1,
+      "rows_assigned": 1451
+    },
+    {
+      "commit_objects_present": 839,
+      "identical_sha_overlap_count": 0,
+      "project": "apache/zookeeper",
+      "repository_identity": "apache/zookeeper",
+      "repository_priority": 1,
+      "rows_assigned": 839
+    }
+  ],
+  "candidate_rows": 94710,
+  "duplicate_project_sha_rows": 0,
+  "non_exact_utf8_messages": 0,
+  "overlap_resolution": "Choose the first repository in the frozen ApacheJIT collector priority; identical SHA means identical Git object content.",
+  "repositories": [
+    {
+      "assigned_rows": 6126,
+      "distinct_direct_parents": 6112,
+      "parent_resolution_status": "PASS_ALL_APPLICABLE_RESOLVED",
+      "remote": "https://github.com/apache/activemq.git",
+      "repository_identity": "apache/activemq",
+      "sha_resolution_status": "PASS_ALL_RESOLVED",
+      "unresolved_parents": 0,
+      "unresolved_shas": 0
+    },
+    {
+      "assigned_rows": 22700,
+      "distinct_direct_parents": 22630,
+      "parent_resolution_status": "PASS_ALL_APPLICABLE_RESOLVED",
+      "remote": "https://github.com/apache/camel.git",
+      "repository_identity": "apache/camel",
+      "sha_resolution_status": "PASS_ALL_RESOLVED",
+      "unresolved_parents": 0,
+      "unresolved_shas": 0
+    },
+    {
+      "assigned_rows": 8159,
+      "distinct_direct_parents": 8115,
+      "parent_resolution_status": "PASS_ALL_APPLICABLE_RESOLVED",
+      "remote": "https://github.com/apache/cassandra.git",
+      "repository_identity": "apache/cassandra",
+      "sha_resolution_status": "PASS_ALL_RESOLVED",
+      "unresolved_parents": 0,
+      "unresolved_shas": 0
+    },
+    {
+      "assigned_rows": 11691,
+      "distinct_direct_parents": 11607,
+      "parent_resolution_status": "PASS_ALL_APPLICABLE_RESOLVED",
+      "remote": "https://github.com/apache/flink.git",
+      "repository_identity": "apache/flink",
+      "sha_resolution_status": "PASS_ALL_RESOLVED",
+      "unresolved_parents": 0,
+      "unresolved_shas": 0
+    },
+    {
+      "assigned_rows": 8059,
+      "distinct_direct_parents": 7955,
+      "parent_resolution_status": "PASS_ALL_APPLICABLE_RESOLVED",
+      "remote": "https://github.com/apache/groovy.git",
+      "repository_identity": "apache/groovy",
+      "sha_resolution_status": "PASS_ALL_RESOLVED",
+      "unresolved_parents": 0,
+      "unresolved_shas": 0
+    },
+    {
+      "assigned_rows": 3100,
+      "distinct_direct_parents": 3100,
+      "parent_resolution_status": "PASS_ALL_APPLICABLE_RESOLVED",
+      "remote": "https://github.com/apache/hadoop.git",
+      "repository_identity": "apache/hadoop",
+      "sha_resolution_status": "PASS_ALL_RESOLVED",
+      "unresolved_parents": 0,
+      "unresolved_shas": 0
+    },
+    {
+      "assigned_rows": 603,
+      "distinct_direct_parents": 603,
+      "parent_resolution_status": "PASS_ALL_APPLICABLE_RESOLVED",
+      "remote": "https://github.com/apache/hadoop-hdfs.git",
+      "repository_identity": "apache/hadoop-hdfs",
+      "sha_resolution_status": "PASS_ALL_RESOLVED",
+      "unresolved_parents": 0,
+      "unresolved_shas": 0
+    },
+    {
+      "assigned_rows": 525,
+      "distinct_direct_parents": 525,
+      "parent_resolution_status": "PASS_ALL_APPLICABLE_RESOLVED",
+      "remote": "https://github.com/apache/hadoop-mapreduce.git",
+      "repository_identity": "apache/hadoop-mapreduce",
+      "sha_resolution_status": "PASS_ALL_RESOLVED",
+      "unresolved_parents": 0,
+      "unresolved_shas": 0
+    },
+    {
+      "assigned_rows": 8730,
+      "distinct_direct_parents": 8726,
+      "parent_resolution_status": "PASS_ALL_APPLICABLE_RESOLVED",
+      "remote": "https://github.com/apache/hbase.git",
+      "repository_identity": "apache/hbase",
+      "sha_resolution_status": "PASS_ALL_RESOLVED",
+      "unresolved_parents": 0,
+      "unresolved_shas": 0
+    },
+    {
+      "assigned_rows": 6842,
+      "distinct_direct_parents": 6834,
+      "parent_resolution_status": "PASS_ALL_APPLICABLE_RESOLVED",
+      "remote": "https://github.com/apache/hive.git",
+      "repository_identity": "apache/hive",
+      "sha_resolution_status": "PASS_ALL_RESOLVED",
+      "unresolved_parents": 0,
+      "unresolved_shas": 0
+    },
+    {
+      "assigned_rows": 12036,
+      "distinct_direct_parents": 11393,
+      "parent_resolution_status": "PASS_ALL_APPLICABLE_RESOLVED",
+      "remote": "https://github.com/apache/ignite.git",
+      "repository_identity": "apache/ignite",
+      "sha_resolution_status": "PASS_ALL_RESOLVED",
+      "unresolved_parents": 0,
+      "unresolved_shas": 0
+    },
+    {
+      "assigned_rows": 2384,
+      "distinct_direct_parents": 2384,
+      "parent_resolution_status": "PASS_ALL_APPLICABLE_RESOLVED",
+      "remote": "https://github.com/apache/kafka.git",
+      "repository_identity": "apache/kafka",
+      "sha_resolution_status": "PASS_ALL_RESOLVED",
+      "unresolved_parents": 0,
+      "unresolved_shas": 0
+    },
+    {
+      "assigned_rows": 1465,
+      "distinct_direct_parents": 1463,
+      "parent_resolution_status": "PASS_ALL_APPLICABLE_RESOLVED",
+      "remote": "https://github.com/apache/spark.git",
+      "repository_identity": "apache/spark",
+      "sha_resolution_status": "PASS_ALL_RESOLVED",
+      "unresolved_parents": 0,
+      "unresolved_shas": 0
+    },
+    {
+      "assigned_rows": 1451,
+      "distinct_direct_parents": 1435,
+      "parent_resolution_status": "PASS_ALL_APPLICABLE_RESOLVED",
+      "remote": "https://github.com/apache/zeppelin.git",
+      "repository_identity": "apache/zeppelin",
+      "sha_resolution_status": "PASS_ALL_RESOLVED",
+      "unresolved_parents": 0,
+      "unresolved_shas": 0
+    },
+    {
+      "assigned_rows": 839,
+      "distinct_direct_parents": 839,
+      "parent_resolution_status": "PASS_ALL_APPLICABLE_RESOLVED",
+      "remote": "https://github.com/apache/zookeeper.git",
+      "repository_identity": "apache/zookeeper",
+      "sha_resolution_status": "PASS_ALL_RESOLVED",
+      "unresolved_parents": 0,
+      "unresolved_shas": 0
+    }
+  ],
+  "resolution_priority": {
+    "apache/hadoop-hdfs": [
+      "apache/hadoop-hdfs",
+      "apache/hadoop"
+    ],
+    "apache/hadoop-mapreduce": [
+      "apache/hadoop-mapreduce",
+      "apache/hadoop"
+    ]
+  },
+  "resolved_applicable_parents": 94707,
+  "resolved_shas": 94710,
+  "root_commits": [
+    [
+      "apache/camel",
+      "77b260b65ba821b3443d922320cc3d9b708c8d83"
+    ],
+    [
+      "apache/camel",
+      "375f13eed7be48abb3f548209b87ba45501559a9"
+    ],
+    [
+      "apache/camel",
+      "4c78e449c8acbe854a9409321e9ea5625778ed72"
+    ]
+  ],
+  "schema_version": "apachejit-48f-r1-final-dataset-freeze-1.0.0",
+  "timestamp_mismatches": 0,
+  "unresolved_parents": 0,
+  "unresolved_shas": 0
+}

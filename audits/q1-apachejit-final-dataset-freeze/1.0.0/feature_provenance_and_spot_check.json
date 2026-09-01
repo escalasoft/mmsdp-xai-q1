@@ -1,0 +1,338 @@
+{
+  "CODE": {
+    "full_independent_reconstruction": false,
+    "numeric_value_source": "APACHEJIT_V2_FROZEN_BENCHMARK_FEATURE",
+    "spot_check": {
+      "all_exact": true,
+      "rows": [
+        {
+          "benchmark_values": {
+            "la": 25,
+            "ld": 3,
+            "nf": 3
+          },
+          "commit_sha": "69e3b6c8c83d2bf0a06a0a7f0e3a8bd44cde907b",
+          "direct_parent_sha": "b8c2d09220415efc90844853a9c8ebb31a560fa7",
+          "exact_match": {
+            "la": true,
+            "ld": true,
+            "nf": true
+          },
+          "primary_git_spot_check_values": {
+            "la": 25,
+            "ld": 3,
+            "nf": 3
+          },
+          "project": "apache/activemq",
+          "repository_identity": "apache/activemq",
+          "selection_rule": "chronological median row after UTC/SHA ordering"
+        },
+        {
+          "benchmark_values": {
+            "la": 93,
+            "ld": 11,
+            "nf": 5
+          },
+          "commit_sha": "68403097d1dbc6d2cdf00c20053e3e32c571c877",
+          "direct_parent_sha": "e501b5efda28263f0a0e3258329771b73effc696",
+          "exact_match": {
+            "la": true,
+            "ld": true,
+            "nf": true
+          },
+          "primary_git_spot_check_values": {
+            "la": 93,
+            "ld": 11,
+            "nf": 5
+          },
+          "project": "apache/camel",
+          "repository_identity": "apache/camel",
+          "selection_rule": "chronological median row after UTC/SHA ordering"
+        },
+        {
+          "benchmark_values": {
+            "la": 19,
+            "ld": 3,
+            "nf": 3
+          },
+          "commit_sha": "7a90c7466fc3a4c372eb1d864bdb8229fdba6391",
+          "direct_parent_sha": "ae3efc2d069e0035938f47b69a43065ce2d69e60",
+          "exact_match": {
+            "la": true,
+            "ld": true,
+            "nf": true
+          },
+          "primary_git_spot_check_values": {
+            "la": 19,
+            "ld": 3,
+            "nf": 3
+          },
+          "project": "apache/cassandra",
+          "repository_identity": "apache/cassandra",
+          "selection_rule": "chronological median row after UTC/SHA ordering"
+        },
+        {
+          "benchmark_values": {
+            "la": 436,
+            "ld": 227,
+            "nf": 14
+          },
+          "commit_sha": "4779c7eca0f7e91dd5ee38122baa3fe99c8b7bea",
+          "direct_parent_sha": "568845a3cfea1f6fe71a99f1f546cbd4d947fb33",
+          "exact_match": {
+            "la": true,
+            "ld": true,
+            "nf": true
+          },
+          "primary_git_spot_check_values": {
+            "la": 436,
+            "ld": 227,
+            "nf": 14
+          },
+          "project": "apache/flink",
+          "repository_identity": "apache/flink",
+          "selection_rule": "chronological median row after UTC/SHA ordering"
+        },
+        {
+          "benchmark_values": {
+            "la": 187,
+            "ld": 38,
+            "nf": 8
+          },
+          "commit_sha": "e4f54bec9a6558c654f52baf86e45341252f775f",
+          "direct_parent_sha": "02b873b80cffe62abe5cc4a7193b656c7e7a0f44",
+          "exact_match": {
+            "la": true,
+            "ld": true,
+            "nf": true
+          },
+          "primary_git_spot_check_values": {
+            "la": 187,
+            "ld": 38,
+            "nf": 8
+          },
+          "project": "apache/groovy",
+          "repository_identity": "apache/groovy",
+          "selection_rule": "chronological median row after UTC/SHA ordering"
+        },
+        {
+          "benchmark_values": {
+            "la": 141,
+            "ld": 31,
+            "nf": 4
+          },
+          "commit_sha": "05f35518f19d48890770128727289582cca3457b",
+          "direct_parent_sha": "6772d07fdc0ad7d0cd1be851bf83ae0208abd391",
+          "exact_match": {
+            "la": true,
+            "ld": true,
+            "nf": true
+          },
+          "primary_git_spot_check_values": {
+            "la": 141,
+            "ld": 31,
+            "nf": 4
+          },
+          "project": "apache/hadoop-hdfs",
+          "repository_identity": "apache/hadoop",
+          "selection_rule": "chronological median row after UTC/SHA ordering"
+        },
+        {
+          "benchmark_values": {
+            "la": 230,
+            "ld": 45,
+            "nf": 8
+          },
+          "commit_sha": "51a667bef8300d6499c9867b50eee352311a4185",
+          "direct_parent_sha": "073a13aeb16681be9dd250850c45646ea4f171dd",
+          "exact_match": {
+            "la": true,
+            "ld": true,
+            "nf": true
+          },
+          "primary_git_spot_check_values": {
+            "la": 230,
+            "ld": 45,
+            "nf": 8
+          },
+          "project": "apache/hadoop-mapreduce",
+          "repository_identity": "apache/hadoop",
+          "selection_rule": "chronological median row after UTC/SHA ordering"
+        },
+        {
+          "benchmark_values": {
+            "la": 115,
+            "ld": 3,
+            "nf": 2
+          },
+          "commit_sha": "4a7cc45f8a443b58f77742031d780ab40f4c2c45",
+          "direct_parent_sha": "4b2a4d10de0b48f8ceb33ae33d1af4f1a081170e",
+          "exact_match": {
+            "la": true,
+            "ld": true,
+            "nf": true
+          },
+          "primary_git_spot_check_values": {
+            "la": 115,
+            "ld": 3,
+            "nf": 2
+          },
+          "project": "apache/hbase",
+          "repository_identity": "apache/hbase",
+          "selection_rule": "chronological median row after UTC/SHA ordering"
+        },
+        {
+          "benchmark_values": {
+            "la": 3,
+            "ld": 10,
+            "nf": 2
+          },
+          "commit_sha": "da040ba059db9fd60b9e77094792c87f7073c8e5",
+          "direct_parent_sha": "8b0f753c9c63f0a913d4bf3bb2e9b2a7873fe7fc",
+          "exact_match": {
+            "la": true,
+            "ld": true,
+            "nf": true
+          },
+          "primary_git_spot_check_values": {
+            "la": 3,
+            "ld": 10,
+            "nf": 2
+          },
+          "project": "apache/hive",
+          "repository_identity": "apache/hive",
+          "selection_rule": "chronological median row after UTC/SHA ordering"
+        },
+        {
+          "benchmark_values": {
+            "la": 18,
+            "ld": 0,
+            "nf": 2
+          },
+          "commit_sha": "5e0bbf2332cf64666e1e0aa65754e682fa442cc9",
+          "direct_parent_sha": "fce94eb2ad12139945728657da2ca5c3bdf93241",
+          "exact_match": {
+            "la": true,
+            "ld": true,
+            "nf": true
+          },
+          "primary_git_spot_check_values": {
+            "la": 18,
+            "ld": 0,
+            "nf": 2
+          },
+          "project": "apache/ignite",
+          "repository_identity": "apache/ignite",
+          "selection_rule": "chronological median row after UTC/SHA ordering"
+        },
+        {
+          "benchmark_values": {
+            "la": 58,
+            "ld": 49,
+            "nf": 11
+          },
+          "commit_sha": "752e5317410f05d08f69f302e4ee0cadae183b59",
+          "direct_parent_sha": "facd2c5a8c7a4379755955ba3e318bfecde6af39",
+          "exact_match": {
+            "la": true,
+            "ld": true,
+            "nf": true
+          },
+          "primary_git_spot_check_values": {
+            "la": 58,
+            "ld": 49,
+            "nf": 11
+          },
+          "project": "apache/kafka",
+          "repository_identity": "apache/kafka",
+          "selection_rule": "chronological median row after UTC/SHA ordering"
+        },
+        {
+          "benchmark_values": {
+            "la": 80,
+            "ld": 16,
+            "nf": 6
+          },
+          "commit_sha": "0abee534f0ad9bbe84d8d3d3478ecaa594f1e0f4",
+          "direct_parent_sha": "4d93b653f7294698526674950d3dc303691260f8",
+          "exact_match": {
+            "la": true,
+            "ld": true,
+            "nf": true
+          },
+          "primary_git_spot_check_values": {
+            "la": 80,
+            "ld": 16,
+            "nf": 6
+          },
+          "project": "apache/spark",
+          "repository_identity": "apache/spark",
+          "selection_rule": "chronological median row after UTC/SHA ordering"
+        },
+        {
+          "benchmark_values": {
+            "la": 59,
+            "ld": 2,
+            "nf": 3
+          },
+          "commit_sha": "5a4aacef25b0b54d151cfc7a3ea81cc312f6f655",
+          "direct_parent_sha": "c82dd4ec6de628ea46c28f61be427be113b9f1af",
+          "exact_match": {
+            "la": true,
+            "ld": true,
+            "nf": true
+          },
+          "primary_git_spot_check_values": {
+            "la": 59,
+            "ld": 2,
+            "nf": 3
+          },
+          "project": "apache/zeppelin",
+          "repository_identity": "apache/zeppelin",
+          "selection_rule": "chronological median row after UTC/SHA ordering"
+        },
+        {
+          "benchmark_values": {
+            "la": 11,
+            "ld": 5,
+            "nf": 3
+          },
+          "commit_sha": "4ed40f05a649783c855b63d09a1b485eff2b9555",
+          "direct_parent_sha": "46a3dd2e240e069217d1779a366f88a9cfcca46f",
+          "exact_match": {
+            "la": true,
+            "ld": true,
+            "nf": true
+          },
+          "primary_git_spot_check_values": {
+            "la": 11,
+            "ld": 5,
+            "nf": 3
+          },
+          "project": "apache/zookeeper",
+          "repository_identity": "apache/zookeeper",
+          "selection_rule": "chronological median row after UTC/SHA ordering"
+        }
+      ],
+      "rows_checked": 14,
+      "selection": "one chronological-median row per frozen candidate project",
+      "variables": [
+        "la",
+        "ld",
+        "nf"
+      ]
+    }
+  },
+  "PROCESS": {
+    "future_constraint": "Any independent recomputation must use strict ancestors only.",
+    "independent_reconstruction_status": "NOT_INDEPENDENTLY_REPRODUCED_IN_48F_R1",
+    "numeric_value_source": "APACHEJIT_V2_FROZEN_BENCHMARK_FEATURE",
+    "reason": "Exact reproduction depends on the benchmark's specific Kamei author/file/history semantics; R1 does not substitute a simplified metric for the published feature.",
+    "spot_check": "NOT_PERFORMED"
+  },
+  "TEXT": {
+    "independently_materialized_rows": 94710,
+    "source": "PRIMARY_GIT_COMMIT_OBJECT_RECONSTRUCTION"
+  },
+  "schema_version": "apachejit-48f-r1-final-dataset-freeze-1.0.0"
+}

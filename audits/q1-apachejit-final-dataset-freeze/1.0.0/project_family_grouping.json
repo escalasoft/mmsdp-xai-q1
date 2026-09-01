@@ -1,0 +1,47 @@
+{
+  "families": {
+    "apache/activemq": [
+      "apache/activemq"
+    ],
+    "apache/camel": [
+      "apache/camel"
+    ],
+    "apache/cassandra": [
+      "apache/cassandra"
+    ],
+    "apache/flink": [
+      "apache/flink"
+    ],
+    "apache/groovy": [
+      "apache/groovy"
+    ],
+    "apache/hadoop-family": [
+      "apache/hadoop",
+      "apache/hadoop-hdfs",
+      "apache/hadoop-mapreduce"
+    ],
+    "apache/hbase": [
+      "apache/hbase"
+    ],
+    "apache/hive": [
+      "apache/hive"
+    ],
+    "apache/ignite": [
+      "apache/ignite"
+    ],
+    "apache/kafka": [
+      "apache/kafka"
+    ],
+    "apache/spark": [
+      "apache/spark"
+    ],
+    "apache/zeppelin": [
+      "apache/zeppelin"
+    ],
+    "apache/zookeeper": [
+      "apache/zookeeper"
+    ]
+  },
+  "hadoop_rule": "apache/hadoop, apache/hadoop-hdfs, and apache/hadoop-mapreduce may never be on opposite sides of a source-target split",
+  "schema_version": "apachejit-48f-r1-final-dataset-freeze-1.0.0"
+}

@@ -1,0 +1,77 @@
+{
+  "ancestor_only": true,
+  "causal_contract": "Published historical definitions are used as supplied. Any future independent recomputation must use strict ancestors only.",
+  "frozen_values_source": "ApacheJIT v2 apache_metrics_kamei.csv joined into apachejit_total.csv",
+  "future_information": "PROHIBITED",
+  "independent_reconstruction_status": "NOT_INDEPENDENTLY_REPRODUCED_IN_48F_R1",
+  "numeric_value_source": "APACHEJIT_V2_FROZEN_BENCHMARK_FEATURE",
+  "schema_version": "apachejit-48f-r1-final-dataset-freeze-1.0.0",
+  "variables": {
+    "aexp": {
+      "author_identity_handling": "upstream Git author identity as used by the frozen ApacheJIT metric; no cross-repository identity merge",
+      "cold_start_handling": "zero prior history contributes zero",
+      "file_identity_handling": "repository-relative paths under frozen ApacheJIT/Kamei semantics; no future rename information",
+      "historical_window": "all reachable strict ancestors; current commit excluded",
+      "independent_reconstruction_status": "NOT_INDEPENDENTLY_REPRODUCED_IN_48F_R1",
+      "missing_value_handling": "fail closed; no generated eligible row may be missing",
+      "numeric_value_source": "APACHEJIT_V2_FROZEN_BENCHMARK_FEATURE",
+      "repository_scope": "the row's canonical repository only",
+      "semantic_definition": "author commits before the prediction commit"
+    },
+    "age": {
+      "author_identity_handling": "upstream Git author identity as used by the frozen ApacheJIT metric; no cross-repository identity merge",
+      "cold_start_handling": "zero prior history contributes zero",
+      "file_identity_handling": "repository-relative paths under frozen ApacheJIT/Kamei semantics; no future rename information",
+      "historical_window": "all reachable strict ancestors; current commit excluded",
+      "independent_reconstruction_status": "NOT_INDEPENDENTLY_REPRODUCED_IN_48F_R1",
+      "missing_value_handling": "fail closed; no generated eligible row may be missing",
+      "numeric_value_source": "APACHEJIT_V2_FROZEN_BENCHMARK_FEATURE",
+      "repository_scope": "the row's canonical repository only",
+      "semantic_definition": "mean time since prior changes to the touched files"
+    },
+    "arexp": {
+      "author_identity_handling": "upstream Git author identity as used by the frozen ApacheJIT metric; no cross-repository identity merge",
+      "cold_start_handling": "zero prior history contributes zero",
+      "file_identity_handling": "repository-relative paths under frozen ApacheJIT/Kamei semantics; no future rename information",
+      "historical_window": "all reachable strict ancestors; current commit excluded",
+      "independent_reconstruction_status": "NOT_INDEPENDENTLY_REPRODUCED_IN_48F_R1",
+      "missing_value_handling": "fail closed; no generated eligible row may be missing",
+      "numeric_value_source": "APACHEJIT_V2_FROZEN_BENCHMARK_FEATURE",
+      "repository_scope": "the row's canonical repository only",
+      "semantic_definition": "recency-weighted author commits before the prediction commit"
+    },
+    "asexp": {
+      "author_identity_handling": "upstream Git author identity as used by the frozen ApacheJIT metric; no cross-repository identity merge",
+      "cold_start_handling": "zero prior history contributes zero",
+      "file_identity_handling": "repository-relative paths under frozen ApacheJIT/Kamei semantics; no future rename information",
+      "historical_window": "all reachable strict ancestors; current commit excluded",
+      "independent_reconstruction_status": "NOT_INDEPENDENTLY_REPRODUCED_IN_48F_R1",
+      "missing_value_handling": "fail closed; no generated eligible row may be missing",
+      "numeric_value_source": "APACHEJIT_V2_FROZEN_BENCHMARK_FEATURE",
+      "repository_scope": "the row's canonical repository only",
+      "semantic_definition": "author commits in touched subsystems before the prediction commit"
+    },
+    "ndev": {
+      "author_identity_handling": "upstream Git author identity as used by the frozen ApacheJIT metric; no cross-repository identity merge",
+      "cold_start_handling": "zero prior history contributes zero",
+      "file_identity_handling": "repository-relative paths under frozen ApacheJIT/Kamei semantics; no future rename information",
+      "historical_window": "all reachable strict ancestors; current commit excluded",
+      "independent_reconstruction_status": "NOT_INDEPENDENTLY_REPRODUCED_IN_48F_R1",
+      "missing_value_handling": "fail closed; no generated eligible row may be missing",
+      "numeric_value_source": "APACHEJIT_V2_FROZEN_BENCHMARK_FEATURE",
+      "repository_scope": "the row's canonical repository only",
+      "semantic_definition": "prior developers of files touched by the prediction commit"
+    },
+    "nuc": {
+      "author_identity_handling": "upstream Git author identity as used by the frozen ApacheJIT metric; no cross-repository identity merge",
+      "cold_start_handling": "zero prior history contributes zero",
+      "file_identity_handling": "repository-relative paths under frozen ApacheJIT/Kamei semantics; no future rename information",
+      "historical_window": "all reachable strict ancestors; current commit excluded",
+      "independent_reconstruction_status": "NOT_INDEPENDENTLY_REPRODUCED_IN_48F_R1",
+      "missing_value_handling": "fail closed; no generated eligible row may be missing",
+      "numeric_value_source": "APACHEJIT_V2_FROZEN_BENCHMARK_FEATURE",
+      "repository_scope": "the row's canonical repository only",
+      "semantic_definition": "prior unique changes to files touched by the prediction commit"
+    }
+  }
+}

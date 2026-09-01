@@ -1,0 +1,31 @@
+{
+  "current_full_suite_result": {
+    "errors": 23,
+    "expected_historical_guard_nonpassing": 25,
+    "failed": 2,
+    "passed": 1584,
+    "skipped": 1
+  },
+  "historical_expected_nonpassing": 25,
+  "historical_groups": [
+    {
+      "cases": 16,
+      "test_file": "tests/evaluation/test_q1_controlled_advancement_decision.py"
+    },
+    {
+      "cases": 7,
+      "test_file": "tests/evaluation/test_q1_predeclared_final_performance_contract.py"
+    },
+    {
+      "cases": 1,
+      "test_file": "tests/evaluation/test_q1_final_test_identity_boundary_amendment.py"
+    },
+    {
+      "cases": 1,
+      "test_file": "tests/evaluation/test_q1_human_prospective_authorization.py"
+    }
+  ],
+  "historical_integrity_guards_weakened": false,
+  "new_unexplained_regressions": 0,
+  "schema_version": "apachejit-48f-r1-final-dataset-freeze-1.0.0"
+}

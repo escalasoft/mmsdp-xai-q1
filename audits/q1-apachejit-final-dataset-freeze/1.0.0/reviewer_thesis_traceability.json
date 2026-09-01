@@ -1,0 +1,15 @@
+{
+  "candidate_selection_performance_independent": true,
+  "classification": "PASS_48F_R1_FINAL_DATASET_FREEZE_READY_FOR_COMMIT",
+  "label_limitation_preserved": true,
+  "next_authorization": {
+    "T0_STRUCTURAL_TEST": "YES",
+    "T1_PREDICTIVE_TEST": "NO",
+    "T2_FINAL_PREDICTIVE_TEST": "NO",
+    "TRAIN_VALIDATION": "YES"
+  },
+  "objective": "freeze reproducible ApacheJIT C/P/T experimental substrate",
+  "rows_auditable": 94710,
+  "schema_version": "apachejit-48f-r1-final-dataset-freeze-1.0.0",
+  "test_access": "DENY"
+}

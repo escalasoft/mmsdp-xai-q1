@@ -1,0 +1,31 @@
+{
+  "FINAL_EMPIRICAL_PROTOCOL": {
+    "TEST": 20,
+    "TRAIN": 60,
+    "VALIDATION": 20
+  },
+  "ORIGINAL_THESIS_PLAN": {
+    "TEST": 15,
+    "TRAIN": 70,
+    "VALIDATION": 15
+  },
+  "PREDICTIVE_PERFORMANCE_USED_TO_CHANGE_SPLIT": false,
+  "PROTOCOL_CHANGE_TIMING": "BEFORE_PREDICTIVE_EXPERIMENTATION",
+  "TEST_INTERNAL_RELEASE": {
+    "T1_TEST_RESERVE_PERCENT": 20,
+    "T1_TOTAL_DATA_PERCENTAGE_POINTS": 4,
+    "T2_TEST_RESERVE_PERCENT": 80,
+    "T2_TOTAL_DATA_PERCENTAGE_POINTS": 16
+  },
+  "rationale": [
+    "A 20% VALIDATION reserve supports controlled model, fusion, and calibration selection without TEST use.",
+    "A full chronological 20% future TEST reserve strengthens final evaluation protection.",
+    "T1 consumes only the chronologically earliest 20% of that TEST reserve to detect catastrophic end-to-end defects after authorization.",
+    "T2 preserves the chronologically latest 80% of TEST as the main untouched final predictive evidence."
+  ],
+  "reporting_commitment": "The thesis and article will identify 70/15/15 as the original plan and 60/20/20 with 4/16 release as the pre-performance methodological amendment.",
+  "schema_version": "apachejit-48f-r1-final-dataset-freeze-1.0.0",
+  "scientific_equivalence": "The thesis objective remains temporally causal within-project and cross-project multimodal evaluation; only the predeclared development/evidence allocation changes.",
+  "temporal_causality": "All boundaries remain chronological under raw UTC time and SHA tie-break; no row is shuffled.",
+  "test_protection": "The amendment enlarges the future reserve from 15% to 20%, limits T1 to 4 total percentage points, and leaves 16 points untouched for T2."
+}

@@ -1,0 +1,16 @@
+{
+  "admissibility_rule": "source family_group_identifier must differ from target family_group_identifier",
+  "design": "strict inductive leave-one-project-out",
+  "hadoop_family_grouped": true,
+  "schema_version": "apachejit-48f-r1-final-dataset-freeze-1.0.0",
+  "source_only_operations": [
+    "representation fitting",
+    "normalization",
+    "feature selection",
+    "hyperparameter selection",
+    "calibration fitting",
+    "threshold selection"
+  ],
+  "target_labels_for_fitting": "PROHIBITED",
+  "target_statistics_for_fitting": "PROHIBITED"
+}
