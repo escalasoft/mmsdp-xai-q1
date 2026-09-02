@@ -1,0 +1,40 @@
+{
+  "amendment_scope": "PROSPECTIVE_TEMPORAL_ROLE_AND_K2_CAUSAL_STACKING_ONLY",
+  "algorithms": [
+    "Logistic Regression",
+    "Random Forest",
+    "XGBoost",
+    "LightGBM"
+  ],
+  "classification": "PASS_50_R1_TEMPORAL_PROTOCOL_AMENDMENT_READY_FOR_HUMAN_AUTHORIZATION",
+  "configurations": ["C", "P", "T", "C+P", "C+T", "P+T", "C+P+T"],
+  "cv_values": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+  "expected_condition_count": 3920,
+  "experiment_version": "q1-sprint50-r1-temporal-protocol-1.0.0",
+  "fold_semantics": "FIT_ALL_AUTHORIZED_DEVELOPMENT_ROWS_IN_BLOCKS_LESS_THAN_K_AND_EVALUATE_ALL_AUTHORIZED_DEVELOPMENT_ROWS_IN_BLOCK_K",
+  "k2_inner_rule": {
+    "base_fit": "CHRONOLOGICALLY_FIRST_FLOOR_HALF_OF_BLOCK_1",
+    "meta_prediction": "CHRONOLOGICALLY_REMAINING_HALF_OF_BLOCK_1",
+    "split_index": "FLOOR_N_DIVIDED_BY_2",
+    "target_aware_boundary": false,
+    "warmup_backfill": false
+  },
+  "projects": [
+    "apache/activemq",
+    "apache/camel",
+    "apache/cassandra",
+    "apache/flink",
+    "apache/groovy",
+    "apache/hadoop-hdfs",
+    "apache/hadoop-mapreduce",
+    "apache/hbase",
+    "apache/hive",
+    "apache/ignite",
+    "apache/kafka",
+    "apache/spark",
+    "apache/zeppelin",
+    "apache/zookeeper"
+  ],
+  "starting_head": "2a140be481d29949d2fe0fd74dc5c99aeeecd143",
+  "test_access": {"T1": "DENY", "T2": "DENY"}
+}
