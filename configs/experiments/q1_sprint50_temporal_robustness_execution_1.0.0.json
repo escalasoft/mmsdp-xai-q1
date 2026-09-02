@@ -1,0 +1,41 @@
+{
+  "bootstrap": {
+    "confidence_level": 0.95,
+    "iterations": 10000,
+    "resampling_unit": "PROJECT",
+    "seed": 20260901
+  },
+  "ceiling_diagnostic_threshold": 0.99,
+  "classification_rule": {
+    "all_primary_comparisons_required_for_robust": 48,
+    "minimum_absolute_rank_biserial_for_nontrivial": 0.3,
+    "mixed_if_some_but_not_all_robust": true,
+    "no_superiority_if_zero_robust": true
+  },
+  "configurations": ["C", "P", "T", "C+P", "C+T", "P+T", "C+P+T"],
+  "cv_values": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+  "expected_condition_count": 3920,
+  "experiment_version": "q1-sprint50-temporal-robustness-execution-1.0.0",
+  "inference": {
+    "alternative": "two-sided",
+    "comparators": ["C", "P", "T", "C+P", "C+T", "P+T"],
+    "dependence_control": "AVERAGE_CV_WITHIN_PROJECT_THEN_PAIR_14_PROJECTS",
+    "effect_size": "PAIRED_RANK_BISERIAL_CORRELATION",
+    "experimental_unit": "PROJECT",
+    "family_definition": "SIX_COMPARATORS_WITHIN_ALGORITHM_AND_METRIC",
+    "multiple_comparison_correction": "HOLM",
+    "omnibus_test": "FRIEDMAN_ACROSS_SEVEN_CONFIGURATIONS_ON_PROJECT_CV_MEANS",
+    "pairwise_test": "WILCOXON_SIGNED_RANK",
+    "primary_metrics": ["PR_AUC", "MCC"],
+    "significance_alpha": 0.05
+  },
+  "metrics": ["PR_AUC", "ROC_AUC", "MCC", "Recall", "Precision", "F1"],
+  "protocol_amendment_manifest": "audits/q1-temporal-protocol-amendment/1.0.0/MANIFEST.sha256",
+  "raw_probability_metrics": ["Brier", "ECE"],
+  "seed": 20260901,
+  "sprint49_selection_artifact": "audits/q1-controlled-train-validation-baselines/1.0.0/campaign/development_selections.json",
+  "starting_head": "2a140be481d29949d2fe0fd74dc5c99aeeecd143",
+  "test_access": {"T1": "DENY", "T2": "DENY"},
+  "threshold": 0.5,
+  "xai": "PROHIBITED"
+}

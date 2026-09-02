@@ -237,6 +237,9 @@ outputs/adapters/*
 # PyPI configuration file
 .pypirc
 
+# Sprint 50 external scientific ledger (tracked by external artifact inventory)
+/audits/q1-temporal-robustness-cv/1.0.0/raw_probability_provenance.jsonl.gz
+
 # Marimo
 marimo/_static/
 marimo/_lsp/

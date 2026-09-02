@@ -1,0 +1,33 @@
+{
+  "algorithms": [
+    "Logistic Regression",
+    "Random Forest",
+    "XGBoost",
+    "LightGBM"
+  ],
+  "configurations": ["C", "P", "T", "C+P", "C+T", "P+T", "C+P+T"],
+  "cv_values": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+  "expected_condition_count": 3920,
+  "experiment_version": "q1-sprint50-preflight-1.0.0",
+  "frozen_dataset_manifest": "audits/q1-apachejit-final-dataset-freeze/1.0.0/MANIFEST.sha256",
+  "frozen_sprint49_campaign_manifest": "audits/q1-controlled-train-validation-baselines/1.0.0/campaign/MANIFEST.sha256",
+  "frozen_sprint49_verification_manifest": "audits/q1-controlled-train-validation-baselines/1.0.0/verification/MANIFEST.sha256",
+  "projects": [
+    "apache/activemq",
+    "apache/camel",
+    "apache/cassandra",
+    "apache/flink",
+    "apache/groovy",
+    "apache/hadoop-hdfs",
+    "apache/hadoop-mapreduce",
+    "apache/hbase",
+    "apache/hive",
+    "apache/ignite",
+    "apache/kafka",
+    "apache/spark",
+    "apache/zeppelin",
+    "apache/zookeeper"
+  ],
+  "starting_head": "2a140be481d29949d2fe0fd74dc5c99aeeecd143",
+  "test_access": {"T1": "DENY", "T2": "DENY"}
+}
