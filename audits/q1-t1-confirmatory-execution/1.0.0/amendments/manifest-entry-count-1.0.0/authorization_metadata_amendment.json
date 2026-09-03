@@ -1,0 +1,105 @@
+{
+  "schema_version": "q1-t1-confirmatory-authorization-metadata-amendment-1.0.0",
+  "classification": "PROSPECTIVE_METADATA_CORRECTION_BEFORE_T1_ACCESS",
+  "created_at_utc": "2026-09-03T04:34:46Z",
+  "execution_identifier": "9fb5e4f7b43c7f5be7092632c4d471594aa28eeefa22cac4aa4a7e15355d7260",
+  "immutable_inputs": {
+    "original_authorization": {
+      "path": "audits/q1-t1-confirmatory-execution/1.0.0/execution_authorization.json",
+      "sha256_before": "1994e7f1bb4b718dc27c67623323c15fed951ddaa58939902da981105d6077c2",
+      "sha256_at_amendment": "1994e7f1bb4b718dc27c67623323c15fed951ddaa58939902da981105d6077c2",
+      "modified": false
+    },
+    "sprint53_manifest": {
+      "path": "audits/q1-t1-confirmatory-protocol/1.0.0/MANIFEST.sha256",
+      "sha256_declared": "0bc00b31835381defccb90ac1efd01e4f21a74968bda537385c3f1a1d1c8e20e",
+      "sha256_actual": "0bc00b31835381defccb90ac1efd01e4f21a74968bda537385c3f1a1d1c8e20e",
+      "hashes_identical": true,
+      "modified": false
+    }
+  },
+  "metadata_correction": {
+    "field": "sprint53_protocol.manifest_entry_count",
+    "original_declared_entry_count": 21,
+    "independently_verified_actual_entry_count": 22,
+    "effective_entry_count": 22,
+    "authorized_correction_fields": [
+      "sprint53_protocol.manifest_entry_count"
+    ],
+    "generic_tolerance_or_bypass": false
+  },
+  "manifest_entries": [
+    {"index": 1, "name": "FINAL_HUMAN_REVIEW_REPORT.md", "declared_sha256": "fefb0ed9f118a9f604aa99179caf1aa17ea497a7b7d8d8774e29215085ef8443", "exists": true, "hash_verified": true},
+    {"index": 2, "name": "REPORT.md", "declared_sha256": "fefb0ed9f118a9f604aa99179caf1aa17ea497a7b7d8d8774e29215085ef8443", "exists": true, "hash_verified": true},
+    {"index": 3, "name": "ablation_contract.json", "declared_sha256": "6fc0a2154c109924cd9a8a9186fef943719f55f4c29467b1206c8b9a275ee124", "exists": true, "hash_verified": true},
+    {"index": 4, "name": "confirmatory_interpretation_contract.json", "declared_sha256": "8374573a35915f446e19e6b825f45a1ba93c44c0b649f9b7cee157b7da668f09", "exists": true, "hash_verified": true},
+    {"index": 5, "name": "confirmatory_research_questions.json", "declared_sha256": "9f0b108006a846a06177da7a17a3858cd80a12d84e2090b46816c685b3db0923", "exists": true, "hash_verified": true},
+    {"index": 6, "name": "development_t1_consistency_contract.json", "declared_sha256": "169168f3bed67d31b5f82d623fa3fc9e4aab6e18767409dbeb3060cb0d335a63", "exists": true, "hash_verified": true},
+    {"index": 7, "name": "execution_ledger.json", "declared_sha256": "f36f2bcaa945f94c6e10be9f33504da2ff02e8dea39add1e294afa094fe0713b", "exists": true, "hash_verified": true},
+    {"index": 8, "name": "framework_pipeline_contract.json", "declared_sha256": "f597918a67db3654d2e0ab73712c9151ea2f568c4aa21fbb58d7d17c8ce87229", "exists": true, "hash_verified": true},
+    {"index": 9, "name": "frozen_comparator_contract.json", "declared_sha256": "73daa3ffdf8e2ed9b6b1d75246c2cad657161d0106a1c45e458820d73f8ffc37", "exists": true, "hash_verified": true},
+    {"index": 10, "name": "frozen_metric_contract.json", "declared_sha256": "b7a09c78ce237dd5c7bb658b4d031034afdd2daba694d7c64800b394f5ba5d54", "exists": true, "hash_verified": true},
+    {"index": 11, "name": "future_xai_multirole_protocol.json", "declared_sha256": "929e1ed66dd804b492555df9891d71329a061bf9e5683c1a90665e8ae85f0168", "exists": true, "hash_verified": true},
+    {"index": 12, "name": "near_perfect_result_audit_contract.json", "declared_sha256": "2edbca94971c34488c7a61e6dcd2df515f935a6caa58e50130404dcd9ab160f4", "exists": true, "hash_verified": true},
+    {"index": 13, "name": "post_t1_prohibition_contract.json", "declared_sha256": "1639c40009b1c170206e8eebc0a6a76a6d5903b72bee1da856291b2173bfb9e2", "exists": true, "hash_verified": true},
+    {"index": 14, "name": "reviewer_traceability.json", "declared_sha256": "e9e884fd31a15e4288549e47e126e82d0e1d13f9f15b1d51d2b0a9280ef6557d", "exists": true, "hash_verified": true},
+    {"index": 15, "name": "scientific_limitations.json", "declared_sha256": "51c2569d7702db8d73f3e7b9106bc3823f3b00e2f4799b29cbf760fa887fcc9e", "exists": true, "hash_verified": true},
+    {"index": 16, "name": "statistical_analysis_contract.json", "declared_sha256": "e6cb3c5d08a3e7e4eb7945c6ec47b29ad96b366ad14b8903c49bc032d3b5288c", "exists": true, "hash_verified": true},
+    {"index": 17, "name": "t1_execution_authorization_gate.json", "declared_sha256": "b94b3732328c6d7c069c0e237b7f1ac797658a95d73e1831678e50f8842e5572", "exists": true, "hash_verified": true},
+    {"index": 18, "name": "t1_reporting_figures_contract.json", "declared_sha256": "0fde83e25c402b9646f8c23f6548281c3ac0a50c205fe436b65c17c8fe494190", "exists": true, "hash_verified": true},
+    {"index": 19, "name": "t1_reporting_tables_contract.json", "declared_sha256": "4dbf996efa50ffb6054ecbfeb964e422565255f58a469060791c7aa70d550a25", "exists": true, "hash_verified": true},
+    {"index": 20, "name": "t2_sealed_reserve_verification.json", "declared_sha256": "25d53fd1a94c0dab856051338f5073eca7b8acc2676de87f01a9fda5db1d5415", "exists": true, "hash_verified": true},
+    {"index": 21, "name": "thesis_traceability.json", "declared_sha256": "985da1bb96332fd831f1c4185d3a9e0efe533ad6c489885e2095a376c53d0564", "exists": true, "hash_verified": true},
+    {"index": 22, "name": "verification_report.json", "declared_sha256": "f5ac7f6e0e8895b160cdd06809dde8944d144f74e649d6615d531b9c7e097e96", "exists": true, "hash_verified": true}
+  ],
+  "entry_verification": {
+    "enumerated_entry_count": 22,
+    "all_entries_exist": true,
+    "all_entry_hashes_match": true,
+    "verification_status": "PASS_ALL_22_ENTRIES"
+  },
+  "scientific_rationale": "This prospective amendment corrects only an entry-count metadata transcription before T1 access. It does not alter the Sprint 53 manifest or any model, feature, preprocessing, hyperparameter, modality, fusion, calibration, threshold, metric, comparator, statistical, ablation, reporting, integrity, research-question, T1 identity, T2 identity, or prediction artifact.",
+  "scientific_contract_changes": {
+    "model": false,
+    "feature": false,
+    "preprocessing": false,
+    "hyperparameter": false,
+    "modality": false,
+    "fusion": false,
+    "calibration": false,
+    "threshold": false,
+    "metric": false,
+    "comparator": false,
+    "statistical_analysis": false,
+    "ablation": false,
+    "reporting": false,
+    "integrity": false,
+    "research_questions": false,
+    "t1_identity": false,
+    "t2_identity": false,
+    "predictions": false
+  },
+  "counters_at_amendment": {
+    "t1_predictive_access_count": 0,
+    "t2_predictive_access_count": 0,
+    "predictive_scoring_count": 0,
+    "xai_execution_count": 0
+  },
+  "effective_authorization_view": {
+    "composition": [
+      "original immutable authorization",
+      "this prospective amendment"
+    ],
+    "effective_sprint53_manifest_entry_count": 22,
+    "authorization_mode": "ONE_SHOT_CONFIRMATORY_EVALUATION",
+    "t1_access_state": "AUTHORIZED_NOT_YET_ACCESSED",
+    "t2_access_state": "DENY",
+    "xai_access_state": "DENY"
+  },
+  "historical_failure_preservation": {
+    "path": "audits/q1-t1-confirmatory-execution/1.0.0/engine/pre_execution_failure.json",
+    "sha256": "62ece47b2305c7eca9cd5c98c81e93b79ad000fda4f1f85b7e6a1d73012ab940",
+    "preserved": true
+  },
+  "remaining_discrepancies_after_effective_view": []
+}

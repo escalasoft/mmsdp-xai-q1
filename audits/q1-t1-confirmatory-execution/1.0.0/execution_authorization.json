@@ -1,0 +1,168 @@
+{
+  "schema_version": "q1-t1-confirmatory-execution-authorization-1.0.0",
+  "record_status": "AUTHORIZED_SCOPE_FROZEN_T1_NOT_YET_ACCESSED",
+  "authorization_timestamp_utc": "2026-09-03T04:08:00Z",
+  "starting_head": "2c37c261f15678b425facb31959001fb8989dcd7",
+  "starting_head_role": "SPRINT_53_MAIN_MERGE",
+  "execution_identifier": "9fb5e4f7b43c7f5be7092632c4d471594aa28eeefa22cac4aa4a7e15355d7260",
+  "execution_identifier_definition": {
+    "algorithm": "SHA-256",
+    "canonical_basis": "schema=q1-t1-confirmatory-execution-authorization-1.0.0|head=2c37c261f15678b425facb31959001fb8989dcd7|protocol_manifest=0bc00b31835381defccb90ac1efd01e4f21a74968bda537385c3f1a1d1c8e20e|t1=50186112bc3860c7c97d00233b389386a84acf0505d4f05bdb2075128b350f93|t2=e6ba492aae300a61aefad01d1697bef3e10303bffc924ba437bd8437f6dbb4f7|algorithms=Logistic Regression,Random Forest,XGBoost,LightGBM|configurations=C,P,T,C+P,C+T,P+T,C+P+T|calibration=RAW:27,PLATT:0,ISOTONIC:LightGBM*P|threshold=0.5|partition=T1|mode=ONE_SHOT_CONFIRMATORY",
+    "timestamp_excluded": true
+  },
+  "scientific_authorization": {
+    "authorized_partition": "T1",
+    "authorization_mode": "ONE_SHOT_CONFIRMATORY_EVALUATION",
+    "purpose": "Execute the complete frozen Sprint 53 confirmatory protocol exactly once and preserve favorable, mixed, null, and unfavorable evidence.",
+    "t1_predictive_execution_authorized": true,
+    "t1_predictive_execution_started": false,
+    "t1_predictive_access_count_at_freeze": 0,
+    "other_heldout_partitions_authorized": [],
+    "scope_change_after_authorization": "PROHIBITED"
+  },
+  "sprint53_protocol": {
+    "directory": "audits/q1-t1-confirmatory-protocol/1.0.0",
+    "manifest": "audits/q1-t1-confirmatory-protocol/1.0.0/MANIFEST.sha256",
+    "manifest_sha256": "0bc00b31835381defccb90ac1efd01e4f21a74968bda537385c3f1a1d1c8e20e",
+    "manifest_entry_count": 21,
+    "verification": "PASS_ALL_ENTRIES"
+  },
+  "heldout_identity_contract": {
+    "membership_manifest": "audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_manifest.jsonl.gz",
+    "membership_manifest_sha256": "c862c417413c177aab945d1d687dee5c19753c5af73aa81d9d521824a2e793d3",
+    "manifest_contains_labels_or_predictions": false,
+    "t1": {
+      "role": "CONFIRMATORY_HELD_OUT_TEST",
+      "identity_row_count": 3787,
+      "unique_row_identifier_count": 3787,
+      "identity_sha256": "50186112bc3860c7c97d00233b389386a84acf0505d4f05bdb2075128b350f93",
+      "identity_verification": "PASS_STRUCTURAL_NON_PREDICTIVE",
+      "access_state": "AUTHORIZED_NOT_YET_ACCESSED",
+      "predictive_access_count": 0
+    },
+    "t2": {
+      "role": "SEALED_REVIEWER_RESERVE",
+      "identity_row_count": 15161,
+      "unique_row_identifier_count": 15161,
+      "identity_sha256": "e6ba492aae300a61aefad01d1697bef3e10303bffc924ba437bd8437f6dbb4f7",
+      "identity_verification": "PASS_STRUCTURAL_NON_PREDICTIVE",
+      "access_state": "DENY",
+      "predictive_access_count": 0,
+      "predictive_use": "PROHIBITED",
+      "automatic_access_after_t1": false
+    }
+  },
+  "execution_matrix": [
+    {"algorithm": "Logistic Regression", "configuration": "C", "configuration_name": "CODE", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "Logistic Regression", "configuration": "P", "configuration_name": "PROCESS", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "Logistic Regression", "configuration": "T", "configuration_name": "TEXT", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "Logistic Regression", "configuration": "C+P", "configuration_name": "CODE+PROCESS", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "Logistic Regression", "configuration": "C+T", "configuration_name": "CODE+TEXT", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "Logistic Regression", "configuration": "P+T", "configuration_name": "PROCESS+TEXT", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "Logistic Regression", "configuration": "C+P+T", "configuration_name": "CODE+PROCESS+TEXT", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "Random Forest", "configuration": "C", "configuration_name": "CODE", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "Random Forest", "configuration": "P", "configuration_name": "PROCESS", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "Random Forest", "configuration": "T", "configuration_name": "TEXT", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "Random Forest", "configuration": "C+P", "configuration_name": "CODE+PROCESS", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "Random Forest", "configuration": "C+T", "configuration_name": "CODE+TEXT", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "Random Forest", "configuration": "P+T", "configuration_name": "PROCESS+TEXT", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "Random Forest", "configuration": "C+P+T", "configuration_name": "CODE+PROCESS+TEXT", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "XGBoost", "configuration": "C", "configuration_name": "CODE", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "XGBoost", "configuration": "P", "configuration_name": "PROCESS", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "XGBoost", "configuration": "T", "configuration_name": "TEXT", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "XGBoost", "configuration": "C+P", "configuration_name": "CODE+PROCESS", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "XGBoost", "configuration": "C+T", "configuration_name": "CODE+TEXT", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "XGBoost", "configuration": "P+T", "configuration_name": "PROCESS+TEXT", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "XGBoost", "configuration": "C+P+T", "configuration_name": "CODE+PROCESS+TEXT", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "LightGBM", "configuration": "C", "configuration_name": "CODE", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "LightGBM", "configuration": "P", "configuration_name": "PROCESS", "calibration": "ISOTONIC", "threshold": 0.5},
+    {"algorithm": "LightGBM", "configuration": "T", "configuration_name": "TEXT", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "LightGBM", "configuration": "C+P", "configuration_name": "CODE+PROCESS", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "LightGBM", "configuration": "C+T", "configuration_name": "CODE+TEXT", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "LightGBM", "configuration": "P+T", "configuration_name": "PROCESS+TEXT", "calibration": "RAW", "threshold": 0.5},
+    {"algorithm": "LightGBM", "configuration": "C+P+T", "configuration_name": "CODE+PROCESS+TEXT", "calibration": "RAW", "threshold": 0.5}
+  ],
+  "calibration_policy": {
+    "selection_counts": {"RAW": 27, "PLATT": 0, "ISOTONIC": 1},
+    "only_non_raw_scope": {"algorithm": "LightGBM", "configuration": "P", "configuration_name": "PROCESS", "calibration": "ISOTONIC"},
+    "selection_partition": "DEVELOPMENT_ONLY",
+    "selection_using_t1": "PROHIBITED"
+  },
+  "threshold_policy": {
+    "decision_threshold": 0.5,
+    "applies_to_all_28_scopes": true,
+    "selection_using_t1": "PROHIBITED"
+  },
+  "contract_registry": {
+    "model": {"path": "audits/q1-heldout-governance-calibration-freeze/1.0.0/frozen_model_universe.json", "sha256": "a7b61881ac077677b10d40f6087dc15e4c0b944ba8d2c0bb857040b0edd26583"},
+    "feature": {"path": "audits/q1-heldout-governance-calibration-freeze/1.0.0/frozen_feature_contract.json", "sha256": "32d84281a60f8c16c1ba62ab03ac747ae7bed6bc5c3bb37dddc16b0b5c5193cf"},
+    "preprocessing": {"path": "audits/q1-controlled-train-validation-baselines/1.0.0/unimodal_contract/unimodal_contract.json", "sha256": "8eae29cd0aae5ef18e703f121e0e3269e211ab025b78f1c4952d428bf51c7431"},
+    "hyperparameter": {"path": "audits/q1-heldout-governance-calibration-freeze/1.0.0/frozen_hyperparameter_provenance.json", "sha256": "227379aa21ce26a10cfe8b5e08bc80aa5ccb46e190104d0f771d695a60a9bfdd"},
+    "modality_and_fusion": {"path": "audits/q1-heldout-governance-calibration-freeze/1.0.0/frozen_modality_contract.json", "sha256": "25c0b427b00f70dd5d29e0abdd1b9921d47dd5d4e1f40f155ae7bee760414154"},
+    "late_fusion_stacking": {"path": "audits/q1-controlled-train-validation-baselines/1.0.0/late_fusion_contract/late_fusion_contract.json", "sha256": "b427a7057b46c0482afd387f64fde630d1dc261b23bf39e9ba26884dfab5c9d3"},
+    "calibration": {"path": "audits/q1-heldout-governance-calibration-freeze/1.0.0/frozen_calibration_policy.json", "sha256": "b1fcce1e0dc5178ecf0606ddba3263add308db0da959c58a5addc136ebcefc25"},
+    "threshold": {"path": "audits/q1-heldout-governance-calibration-freeze/1.0.0/frozen_threshold_policy.json", "sha256": "06da87fe9d790c129b4debefcd2f739719b6882a022468cd322fbee7ce0cb0c5"},
+    "metric": {"path": "audits/q1-t1-confirmatory-protocol/1.0.0/frozen_metric_contract.json", "sha256": "b7a09c78ce237dd5c7bb658b4d031034afdd2daba694d7c64800b394f5ba5d54"},
+    "comparator": {"path": "audits/q1-t1-confirmatory-protocol/1.0.0/frozen_comparator_contract.json", "sha256": "73daa3ffdf8e2ed9b6b1d75246c2cad657161d0106a1c45e458820d73f8ffc37"},
+    "statistical_analysis": {"path": "audits/q1-t1-confirmatory-protocol/1.0.0/statistical_analysis_contract.json", "sha256": "e6cb3c5d08a3e7e4eb7945c6ec47b29ad96b366ad14b8903c49bc032d3b5288c"},
+    "ablation": {"path": "audits/q1-t1-confirmatory-protocol/1.0.0/ablation_contract.json", "sha256": "6fc0a2154c109924cd9a8a9186fef943719f55f4c29467b1206c8b9a275ee124"},
+    "reporting_tables": {"path": "audits/q1-t1-confirmatory-protocol/1.0.0/t1_reporting_tables_contract.json", "sha256": "4dbf996efa50ffb6054ecbfeb964e422565255f58a469060791c7aa70d550a25"},
+    "reporting_figures": {"path": "audits/q1-t1-confirmatory-protocol/1.0.0/t1_reporting_figures_contract.json", "sha256": "0fde83e25c402b9646f8c23f6548281c3ac0a50c205fe436b65c17c8fe494190"},
+    "near_perfect_integrity": {"path": "audits/q1-t1-confirmatory-protocol/1.0.0/near_perfect_result_audit_contract.json", "sha256": "2edbca94971c34488c7a61e6dcd2df515f935a6caa58e50130404dcd9ab160f4"},
+    "post_t1_prohibition": {"path": "audits/q1-t1-confirmatory-protocol/1.0.0/post_t1_prohibition_contract.json", "sha256": "1639c40009b1c170206e8eebc0a6a76a6d5903b72bee1da856291b2173bfb9e2"},
+    "interpretation": {"path": "audits/q1-t1-confirmatory-protocol/1.0.0/confirmatory_interpretation_contract.json", "sha256": "8374573a35915f446e19e6b825f45a1ba93c44c0b649f9b7cee157b7da668f09"},
+    "t1_identity": {"path": "audits/q1-heldout-governance-calibration-freeze/1.0.0/t1_identity_integrity.json", "sha256": "250e6e0974bcbcca8d7badfe835ccb0036950bcbdb07fa1a8d01365fd0ef755f"},
+    "t2_identity": {"path": "audits/q1-heldout-governance-calibration-freeze/1.0.0/t2_identity_integrity.json", "sha256": "3a36b94e13cce902a22fae938db9411df2af57476a22caefffcbc1e7ac247bd7"}
+  },
+  "prohibited_t1_uses": [
+    "retraining",
+    "hyperparameter tuning",
+    "feature selection",
+    "modality selection",
+    "model selection",
+    "calibration selection",
+    "threshold optimization",
+    "comparator selection",
+    "research-question modification",
+    "post-hoc exclusion of unfavorable configurations"
+  ],
+  "t2_deny_contract": {
+    "labels": "DENY",
+    "features": "DENY",
+    "predictions": "DENY",
+    "probabilities": "DENY",
+    "metrics": "DENY",
+    "xai_inputs": "DENY",
+    "training": "DENY",
+    "scoring": "DENY",
+    "calibration": "DENY",
+    "selection": "DENY",
+    "inspection": "DENY",
+    "summarization": "DENY"
+  },
+  "xai_contract": {
+    "access_state": "DENY",
+    "execution_count": 0,
+    "methods_authorized": [],
+    "future_evidence_preservation_required": [
+      "row identifiers",
+      "predictions",
+      "probabilities",
+      "labels",
+      "model identities",
+      "configuration identities",
+      "provenance"
+    ],
+    "future_retraining_or_reselection_for_xai": "PROHIBITED"
+  },
+  "pre_execution_counters": {
+    "t1_predictive_access_count": 0,
+    "t2_predictive_access_count": 0,
+    "predictive_scoring_count": 0,
+    "model_training_count": 0,
+    "calibration_selection_count": 0,
+    "threshold_selection_count": 0,
+    "xai_execution_count": 0
+  },
+  "discrepancies": []
+}
