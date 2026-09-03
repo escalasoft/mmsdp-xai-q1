@@ -1,0 +1,1 @@
+{"architecture":"DECISION_LEVEL_STACKING_LATE_FUSION","independently_learned_base_modalities":true,"post_t1_meta_learner_fitting":false,"raw_feature_concatenation":false,"semantically_distinct_modalities":["CODE","PROCESS","TEXT"],"simple_averaging":false,"status":"PASS","voting":false}

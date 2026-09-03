@@ -1,0 +1,30 @@
+{
+  "schema_version": "q1-t1-confirmatory-execution-engine-1.0.0",
+  "status": "BLOCKED_AUTHORIZATION_RECORD_DISCREPANCY",
+  "detected_at_utc": "2026-09-03T04:24:10Z",
+  "execution_identifier": "9fb5e4f7b43c7f5be7092632c4d471594aa28eeefa22cac4aa4a7e15355d7260",
+  "immutable_authorization_record": "audits/q1-t1-confirmatory-execution/1.0.0/execution_authorization.json",
+  "immutable_authorization_record_sha256": "1994e7f1bb4b718dc27c67623323c15fed951ddaa58939902da981105d6077c2",
+  "sprint53_manifest": "audits/q1-t1-confirmatory-protocol/1.0.0/MANIFEST.sha256",
+  "sprint53_manifest_sha256_declared": "0bc00b31835381defccb90ac1efd01e4f21a74968bda537385c3f1a1d1c8e20e",
+  "sprint53_manifest_sha256_actual": "0bc00b31835381defccb90ac1efd01e4f21a74968bda537385c3f1a1d1c8e20e",
+  "sprint53_manifest_entry_count_declared": 21,
+  "sprint53_manifest_entry_count_actual": 22,
+  "discrepancies": [
+    {
+      "field": "sprint53_protocol.manifest_entry_count",
+      "declared": 21,
+      "actual": 22,
+      "classification": "IMMUTABLE_AUTHORIZATION_METADATA_MISMATCH",
+      "action": "FAIL_CLOSED_NO_T1_ACCESS"
+    }
+  ],
+  "engine_implementation_prepared": true,
+  "engine_readiness_authorized": false,
+  "t1_execution_performed": false,
+  "t1_predictive_access_count": 0,
+  "t2_predictive_access_count": 0,
+  "xai_execution_count": 0,
+  "repair_performed": false,
+  "rerun_permitted": false
+}
