@@ -1,0 +1,86 @@
+{
+  "schema_version": "q1-development-only-calibration-contract-1.0.0",
+  "sprint": "10.8.2.51",
+  "starting_head": "5f2e0ef7b77081db3e91a46fca85da03a831d3ce",
+  "source_audit": "audits/q1-temporal-robustness-cv/1.0.0",
+  "source_ledger": "audits/q1-temporal-robustness-cv/1.0.0/raw_probability_provenance.jsonl.gz",
+  "source_ledger_sha256": "94be037a1ed99e71b11bc1ae9733c1cffeef7ad5b881a5e48039fbd2b8145203",
+  "source_ledger_size_bytes": 96315731,
+  "source_ledger_rows": 1928304,
+  "development_partitions": ["TRAIN", "VALIDATION"],
+  "prohibited_partitions": ["T1", "T2"],
+  "algorithms": ["Logistic Regression", "Random Forest", "XGBoost", "LightGBM"],
+  "configurations": ["C", "P", "T", "C+P", "C+T", "P+T", "C+P+T"],
+  "methods": ["RAW", "PLATT", "ISOTONIC"],
+  "temporal_protocol": {
+    "raw_baseline_origins": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "common_comparison_origins": [3, 4, 5, 6, 7, 8, 9, 10, 11],
+    "fit_rule": "For project, algorithm, configuration, and evaluation origin K, fit the calibrator on raw out-of-time predictions and labels from origins 2 through K-1, then evaluate origin K.",
+    "cv2_rule": "RAW_ONLY_NO_EARLIER_PROBABILITY_EVIDENCE",
+    "strict_order_key_source": "Sprint 50-R1 frozen (timestamp, commit_sha) membership order",
+    "minimum_fit_rows": 50,
+    "minimum_fit_positives": 5,
+    "minimum_fit_negatives": 5,
+    "minimum_unique_probabilities": 2
+  },
+  "calibrators": {
+    "PLATT": {
+      "class": "sklearn.linear_model.LogisticRegression",
+      "solver": "lbfgs",
+      "C": 1000000.0,
+      "max_iter": 2000,
+      "random_state": 20260902
+    },
+    "ISOTONIC": {
+      "class": "sklearn.isotonic.IsotonicRegression",
+      "out_of_bounds": "clip",
+      "y_min": 0.0,
+      "y_max": 1.0
+    }
+  },
+  "metrics": {
+    "primary": ["Brier", "ECE"],
+    "diagnostic_only": ["ROC_AUC", "PR_AUC"],
+    "ece_bin_edges": [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
+    "empty_bins_retained": true,
+    "dispersion": "mean and sample standard deviation across project-origin evaluation units"
+  },
+  "inference": {
+    "experimental_unit": "PROJECT",
+    "dependence_control": "AVERAGE_ORIGINS_3_THROUGH_11_WITHIN_PROJECT",
+    "paired_test": "two-sided Wilcoxon signed-rank",
+    "zero_method": "wilcox",
+    "effect_size": "paired rank-biserial correlation",
+    "multiple_comparison_family": "six method-pair by primary-metric comparisons within each algorithm/configuration",
+    "correction": "Holm",
+    "alpha": 0.05
+  },
+  "selection_rule": {
+    "scope": "independent per algorithm and configuration",
+    "minimum_relative_brier_improvement": 0.01,
+    "minimum_relative_ece_improvement": 0.05,
+    "minimum_project_win_fraction_each_primary_metric": 0.5714285714285714,
+    "minimum_improvement_rank_biserial_each_primary_metric": 0.3,
+    "require_holm_adjusted_p_each_primary_metric": true,
+    "maximum_fraction_large_degradations_each_primary_metric": 0.25,
+    "large_degradation_relative_threshold": 0.25,
+    "require_all_fit_units_supported": true,
+    "tie_rule": "If both calibrated methods pass, select one only when it is significantly and nontrivially better on both primary metrics; otherwise prefer PLATT as the lower-variance parametric mapping.",
+    "fallback": "RAW"
+  },
+  "near_perfect_diagnostic": {
+    "approximately_zero_threshold": 0.000001,
+    "extreme_probability_threshold": 0.000001,
+    "extreme_probability_concentration_fraction_threshold": 0.95,
+    "sparse_bin_count_threshold": 5,
+    "class_imbalance_prevalence_threshold": 0.05
+  },
+  "seed": 20260902,
+  "numeric_thread_limit": 1,
+  "calibrated_probability_decimal_precision": 12,
+  "calibrator_state_decimal_precision": 8,
+  "threshold_optimization": false,
+  "model_training": false,
+  "hyperparameter_search": false,
+  "xai": false
+}

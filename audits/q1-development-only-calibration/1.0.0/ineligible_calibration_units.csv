@@ -1,0 +1,2 @@
+project,algorithm,configuration,evaluation_origin,eligible,fit_rows,fit_positive,fit_negative,fit_unique_probabilities,reason,action
+apache/zeppelin,LightGBM,T,3,False,105,16,89,1,INSUFFICIENT_CALIBRATION_FIT_SUPPORT,EXCLUDE_UNIT_FOR_ALL_THREE_STATES_AND_RETAIN_RAW_IN_ALL_ORIGIN_BASELINE
