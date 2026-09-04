@@ -1,0 +1,43 @@
+{
+  "schema_version": "q1-xai-reconstruction-component-inventory-1.0.0",
+  "project_scope_count": 392,
+  "projects": 14,
+  "algorithm_families": ["Logistic Regression", "Random Forest", "XGBoost", "LightGBM"],
+  "configurations": ["C", "P", "T", "C+P", "C+T", "P+T", "C+P+T"],
+  "minimum_final_state_units": {
+    "unimodal_base_predictors": 168,
+    "numeric_fitted_preprocessing_chains": 112,
+    "text_fitted_tfidf_vectorizers": 56,
+    "fusion_logistic_regression_meta_learners": 224,
+    "persisted_isotonic_mappings_reused_not_refitted": 14,
+    "raw_identity_calibration_mappings": 378
+  },
+  "required_per_base_predictor": [
+    "exact family-specific fitted predictor state",
+    "positive and negative class ordering",
+    "feature schema and feature ordering",
+    "fitted imputation and scaling state where applicable",
+    "project, modality, candidate, hyperparameters, seed, TRAIN membership and model_identity_sha256 provenance"
+  ],
+  "required_per_text_predictor": [
+    "learned token-to-column vocabulary",
+    "IDF vector",
+    "token pattern or tokenizer",
+    "lowercase policy",
+    "n-gram range",
+    "normalization",
+    "feature ordering",
+    "predictor-to-vectorizer alignment"
+  ],
+  "required_per_multimodal_scope": [
+    "equivalence-verified base predictors for every participating modality",
+    "ordered unimodal positive-class probability columns",
+    "strict-forward source-only OOF records and fold lineage",
+    "OOF membership digest",
+    "fitted LR meta-learner coefficients, intercept and class order",
+    "configuration-specific model_identity_sha256 linkage",
+    "RAW identity or exact persisted isotonic calibration linkage"
+  ],
+  "oof_policy": "Every fitted fold-specific predictor and preprocessor used to regenerate OOF meta-features is itself a reconstructed component and must be persisted immediately with fold membership and state digests; the number of fold states is derived only from the frozen project-specific fold lineage.",
+  "scope_atomicity": "Eligibility is assigned per project/algorithm/configuration identity; shared components must retain every identity linkage that consumes them."
+}

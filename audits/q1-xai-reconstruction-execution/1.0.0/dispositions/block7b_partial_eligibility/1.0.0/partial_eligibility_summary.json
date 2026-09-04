@@ -1,0 +1,318 @@
+{
+  "affected_scopes": [
+    {
+      "algorithm": "Logistic Regression",
+      "configuration": "C+P+T",
+      "eligibility_outcome": "G3_INELIGIBLE_PROPAGATED_DEPENDENCY",
+      "failed_dependency_logical_ids": [
+        "apache/zeppelin|Logistic Regression|OOF|T|block=2",
+        "apache/zeppelin|Logistic Regression|FUSION_META|C+P+T"
+      ],
+      "model_identity_sha256": "76c18e414f03fb10ea26dbb9b021b843a337cf69ec28f9e51f03e0d6cdc50837",
+      "project": "apache/zeppelin"
+    },
+    {
+      "algorithm": "Logistic Regression",
+      "configuration": "C+T",
+      "eligibility_outcome": "G3_INELIGIBLE_PROPAGATED_DEPENDENCY",
+      "failed_dependency_logical_ids": [
+        "apache/zeppelin|Logistic Regression|OOF|T|block=2",
+        "apache/zeppelin|Logistic Regression|FUSION_META|C+T"
+      ],
+      "model_identity_sha256": "0147ca63a4a2489b26c36de8f710f55cbf2c260d0c2b17465ef3955085c611c9",
+      "project": "apache/zeppelin"
+    },
+    {
+      "algorithm": "Logistic Regression",
+      "configuration": "P+T",
+      "eligibility_outcome": "G3_INELIGIBLE_PROPAGATED_DEPENDENCY",
+      "failed_dependency_logical_ids": [
+        "apache/zeppelin|Logistic Regression|OOF|T|block=2",
+        "apache/zeppelin|Logistic Regression|FUSION_META|P+T"
+      ],
+      "model_identity_sha256": "dc23ba88042d5f02f5713e0e667f67d7b4fcb1e5031aafe01249bf4238557333",
+      "project": "apache/zeppelin"
+    }
+  ],
+  "eligibility_by_algorithm": {
+    "LightGBM": {
+      "eligible": 98,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 98,
+      "unresolved": 0
+    },
+    "Logistic Regression": {
+      "eligible": 95,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 3,
+      "ineligible_root_failure": 0,
+      "total": 98,
+      "unresolved": 0
+    },
+    "Random Forest": {
+      "eligible": 98,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 98,
+      "unresolved": 0
+    },
+    "XGBoost": {
+      "eligible": 98,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 98,
+      "unresolved": 0
+    }
+  },
+  "eligibility_by_configuration": {
+    "C": {
+      "eligible": 56,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 56,
+      "unresolved": 0
+    },
+    "C+P": {
+      "eligible": 56,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 56,
+      "unresolved": 0
+    },
+    "C+P+T": {
+      "eligible": 55,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 1,
+      "ineligible_root_failure": 0,
+      "total": 56,
+      "unresolved": 0
+    },
+    "C+T": {
+      "eligible": 55,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 1,
+      "ineligible_root_failure": 0,
+      "total": 56,
+      "unresolved": 0
+    },
+    "P": {
+      "eligible": 56,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 56,
+      "unresolved": 0
+    },
+    "P+T": {
+      "eligible": 55,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 1,
+      "ineligible_root_failure": 0,
+      "total": 56,
+      "unresolved": 0
+    },
+    "T": {
+      "eligible": 56,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 56,
+      "unresolved": 0
+    }
+  },
+  "eligibility_by_project": {
+    "apache/activemq": {
+      "eligible": 28,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 28,
+      "unresolved": 0
+    },
+    "apache/camel": {
+      "eligible": 28,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 28,
+      "unresolved": 0
+    },
+    "apache/cassandra": {
+      "eligible": 28,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 28,
+      "unresolved": 0
+    },
+    "apache/flink": {
+      "eligible": 28,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 28,
+      "unresolved": 0
+    },
+    "apache/groovy": {
+      "eligible": 28,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 28,
+      "unresolved": 0
+    },
+    "apache/hadoop-hdfs": {
+      "eligible": 28,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 28,
+      "unresolved": 0
+    },
+    "apache/hadoop-mapreduce": {
+      "eligible": 28,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 28,
+      "unresolved": 0
+    },
+    "apache/hbase": {
+      "eligible": 28,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 28,
+      "unresolved": 0
+    },
+    "apache/hive": {
+      "eligible": 28,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 28,
+      "unresolved": 0
+    },
+    "apache/ignite": {
+      "eligible": 28,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 28,
+      "unresolved": 0
+    },
+    "apache/kafka": {
+      "eligible": 28,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 28,
+      "unresolved": 0
+    },
+    "apache/spark": {
+      "eligible": 28,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 28,
+      "unresolved": 0
+    },
+    "apache/zeppelin": {
+      "eligible": 25,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 3,
+      "ineligible_root_failure": 0,
+      "total": 28,
+      "unresolved": 0
+    },
+    "apache/zookeeper": {
+      "eligible": 28,
+      "g1_g2_ineligible": 0,
+      "ineligible_propagated_dependency": 0,
+      "ineligible_root_failure": 0,
+      "total": 28,
+      "unresolved": 0
+    }
+  },
+  "eligibility_counts": {
+    "eligible": 389,
+    "g1_g2_ineligible": 0,
+    "g3_ineligible_propagated_dependency": 3,
+    "g3_ineligible_root_failure": 0,
+    "ineligible": 3,
+    "unresolved": 0
+  },
+  "frozen_g3": {
+    "DOWNSTREAM_PROPAGATED_FAILURE_COUNT": 3,
+    "G3_FAIL_NONDETERMINISTIC": 4,
+    "G3_PASS_DETERMINISTIC": 1732,
+    "INDEPENDENT_ROOT_FAILURE_COUNT": 1,
+    "RAW_FAILED_LOGICAL_UNIT_COUNT": 4,
+    "downstream_logical_ids": [
+      "apache/zeppelin|Logistic Regression|FUSION_META|C+P+T",
+      "apache/zeppelin|Logistic Regression|FUSION_META|C+T",
+      "apache/zeppelin|Logistic Regression|FUSION_META|P+T"
+    ],
+    "root_classification": "TRUE_FITTED_MODEL_NONDETERMINISM",
+    "root_logical_id": "apache/zeppelin|Logistic Regression|OOF|T|block=2"
+  },
+  "governance": {
+    "G4_execution_count": 0,
+    "G5_execution_count": 0,
+    "T1_original_predictive_access_count": 1,
+    "T1_original_predictive_scoring_count": 1,
+    "T1_rerun": false,
+    "T2_access_count": 0,
+    "T2_state": "DENY_SEALED_REVIEWER_RESERVE",
+    "XAI_execution_count": 0,
+    "block7_7a_7b_reconstructed_model_T1_query_count": 0
+  },
+  "historical_execution_outcome": "RECONSTRUCTION_NONDETERMINISTIC_STOP",
+  "policy_rules": [
+    "The first failed required gate stops the affected scope and all downstream gates.",
+    "No aggregate metric, visual similarity, explanation attractiveness, family substitution or historical artifact may rescue a failed scope.",
+    "A failed shared base component makes every consuming multimodal identity ineligible until a prospectively governed resolution exists.",
+    "A family or modality failure does not invalidate independently verified scopes.",
+    "Partial eligibility must enumerate exact project/algorithm/configuration/model_identity_sha256 values and passed gates.",
+    "E0 evidence-only interpretation remains distinct and must not be labeled model-specific attribution."
+  ],
+  "post_forensic_scope_disposition": "PARTIAL_G1_G3_RECONSTRUCTION_READY_FOR_G4_REVIEW",
+  "schema_version": "q1-xai-block7b-partial-eligibility-summary-v1",
+  "scope_universe": {
+    "total": 392,
+    "unique_model_identities": 392
+  },
+  "source_hashes": {
+    "block6_manifest_sha256": "17341b4a585baab73118f21cc1056914326b61cba6751b16ff91bdf4b3dfc386",
+    "block6a_manifest_sha256": "c9502cb1ec85d3053b8a972d61657038e66d04fb5e619b0fe08ed94d581c91bb",
+    "block7_g3_results_sha256": "c07a0bd18d1c73e2cddae0ca829de3dd9e698b233d5d27f3f3f8928fb153f8a5",
+    "block7_manifest_sha256": "994a6f7aa8d1393904c605e0b5d65db6fcd39b9be55a1eb5219f899346b83d2e",
+    "block7a_manifest_sha256": "a6f4bd5e5ec43f844860283aef6b3f21933728a5d0817773e7cb1fb742b866e7",
+    "failure_partial_eligibility_policy_sha256": "cfa869239109d9ca12195ef62c99d454a8ae2083f40c55c82510c8cf8b084bf8",
+    "scope_plan_sha256": "8adf052b5e141399b5a16ccf845ab2f960f1e329ba2ebeec7625084ab0384127",
+    "sprint54_manifest_sha256": "f4f910a5144241b53f7f741ab2e49a5cb541abd8cff88f72c7a05ee30ecaeedf",
+    "sprint54_t1_prediction_evidence_sha256": "eb4b6956b185e63cd322d92b8cdf96f53fcb09ef83b6a16f2334d660c6f5adc8"
+  },
+  "unaffected_zeppelin_logistic_regression_configurations": [
+    "C",
+    "C+P",
+    "P",
+    "T"
+  ],
+  "xai_interpretation": {
+    "G1_G3_eligibility_only": true,
+    "establishes_LIME_eligibility": false,
+    "establishes_SHAP_eligibility": false,
+    "establishes_T1_equivalence": false,
+    "establishes_explanatory_validity": false,
+    "establishes_original_state_identity": false,
+    "establishes_scientific_superiority": false,
+    "g3_failed_scopes_prohibited_from_model_specific_xai": true
+  }
+}

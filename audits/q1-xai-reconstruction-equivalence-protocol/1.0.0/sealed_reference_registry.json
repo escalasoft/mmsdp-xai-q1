@@ -1,0 +1,17 @@
+{
+  "schema_version": "q1-xai-reconstruction-sealed-reference-registry-1.0.0",
+  "references": [
+    {"path": "audits/q1-t1-confirmatory-execution/1.0.0/results/t1_prediction_evidence.jsonl.gz", "sha256": "eb4b6956b185e63cd322d92b8cdf96f53fcb09ef83b6a16f2334d660c6f5adc8"},
+    {"path": "audits/q1-t1-confirmatory-execution/1.0.0/results/MANIFEST.sha256", "sha256": "f396cfa0db8d01c8c1392fe7bb8affe8413638e3c0e20a3c113d7fe94a6d3a7e"},
+    {"path": "audits/q1-t1-confirmatory-execution/1.0.0/results/execution_completed.json", "sha256": "292083ee53c2042e439aee564ebf1958e9c66be6ea6a073da1582c9d1dbed1f2"},
+    {"path": "audits/q1-t1-confirmatory-execution/1.0.0/results/scientific_classification.json", "sha256": "e52dd3b9a6c288570f58d7d462fd2d5f077096071d2a78668b17a024e9319009"},
+    {"path": "audits/q1-t1-confirmatory-execution/1.0.0/block6_evidence_audit/1.0.0/MANIFEST.sha256", "sha256": "bc279a8b7f74992db2010d3273476e7e337f9a916d2f49e12cab194fda5c18f7"},
+    {"path": "audits/q1-t1-confirmatory-execution/1.0.0/block8_final_closure/1.0.0/MANIFEST.sha256", "sha256": "26a55a6870855a3e0d24abeb9067b0bd0f927c70a6d646342dfef87b2b6b42d5"},
+    {"path": "audits/q1-controlled-train-validation-baselines/1.0.0/campaign/reproducibility_manifest.json", "sha256": "7776c1c1ed013f4454997523c5bdf93e10f05f13583c13e0554b421235949e14"},
+    {"path": "audits/q1-controlled-train-validation-baselines/1.0.0/campaign/execution_provenance.json", "sha256": "2b945554eb73ca0744354e686b59bf4ceec21486b439e832e5c0c927134b9160"},
+    {"path": "audits/q1-controlled-train-validation-baselines/1.0.0/unimodal_contract/runtime.json", "sha256": "b37b75b718eaea8470c163220d0eca7d0e813c803e18207365583a5d9e9aee4f"},
+    {"path": "audits/q1-development-only-calibration/1.0.0/calibrator_states.jsonl.gz", "sha256": "5708a6e2ca35d54e8fdc6cf0bbd23bc5e72be66d22400be97de152ee183dcbe3"}
+  ],
+  "sealed_inputs_modified": false,
+  "verification_policy": "Every digest must match before any later reconstruction phase begins."
+}

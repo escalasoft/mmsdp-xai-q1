@@ -1,0 +1,37 @@
+{
+  "schema_version": "q1-xai-reconstruction-equivalence-gates-1.0.0",
+  "ordered_fail_closed_gates": [
+    {
+      "gate": "G1_RECONSTRUCTION_PROVENANCE_EQUIVALENCE",
+      "operation_class": "G0_G1_AUDIT",
+      "requirement": "Every allowed input, membership, identity, configuration and frozen hash matches the Sprint 54 specification.",
+      "block6_execution": "STATIC_CONTRACT_VALIDATION_ONLY"
+    },
+    {
+      "gate": "G2_FITTED_STATE_STRUCTURAL_VALIDITY",
+      "operation_class": "FUTURE_G5_RECONSTRUCTION_THEN_G1_INSPECTION",
+      "requirement": "Family, fitted state, schema/order, class order, modality identity, preprocessing alignment and executability are exact and complete.",
+      "block6_execution": "DENY"
+    },
+    {
+      "gate": "G3_DETERMINISTIC_RECONSTRUCTION_REPEATABILITY",
+      "operation_class": "FUTURE_G5_RECONSTRUCTION",
+      "requirement": "Three independent TRAIN/source-only repetitions satisfy exact canonical state and output repeatability.",
+      "block6_execution": "DENY"
+    },
+    {
+      "gate": "G4_RAW_PREDICTIVE_OUTPUT_EQUIVALENCE",
+      "operation_class": "FUTURE_SEPARATELY_AUTHORIZED_G4_T1_MODEL_QUERY_VERIFICATION",
+      "requirement": "After G1-G3 pass, compare every row-level reconstructed raw unimodal or raw fused probability with the immutable Sprint 54 evidence under the frozen tolerance.",
+      "block6_execution": "DENY"
+    },
+    {
+      "gate": "G5_FUSION_CALIBRATION_FINAL_OUTPUT_EQUIVALENCE",
+      "operation_class": "FUTURE_SEPARATELY_AUTHORIZED_G4_VERIFICATION_AFTER_G1_G4_BASE_PASS",
+      "requirement": "For multimodal identities: verify base outputs, ordered meta-features, LR fusion, raw fused probability, frozen calibration mapping, final probability and exact decision in that order.",
+      "block6_execution": "DENY"
+    }
+  ],
+  "metric_non_equivalence": ["PR-AUC", "ROC-AUC", "MCC", "F1", "Precision", "Recall", "Brier", "ECE", "aggregate or project-level metric similarity"],
+  "eligibility_rule": "A scope may become XAI-E1 only after its required G1-G3 gates pass and XAI-E2 only after applicable G4-G5 equivalence plus a separate method/query authorization; no gate may be skipped."
+}

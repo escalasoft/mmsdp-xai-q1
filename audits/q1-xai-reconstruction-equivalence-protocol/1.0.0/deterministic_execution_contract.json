@@ -1,0 +1,32 @@
+{
+  "schema_version": "q1-xai-deterministic-reconstruction-contract-1.0.0",
+  "frozen_runtime": {
+    "python": "3.11.14",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.0",
+    "xgboost": "3.2.0",
+    "lightgbm": "4.6.0"
+  },
+  "random_seed": 20260901,
+  "independent_reconstruction_repetitions": 3,
+  "execution_controls": {
+    "cpu_threads": 1,
+    "blas_openmp_native_threads": 1,
+    "algorithm_n_jobs": 1,
+    "stable_input_row_order_required": true,
+    "stable_feature_order_required": true,
+    "explicit_positive_class_required": true,
+    "family_deterministic_flags_required_where_available": true,
+    "environment_image_digest_required": true
+  },
+  "persistence": {
+    "timing": "IMMEDIATELY_AFTER_EACH_COMPONENT_FIT_BEFORE_ANY_T1_VERIFICATION",
+    "container": "versioned non-executable artifact bundle with a documented family-native payload; pickle-only portability is insufficient",
+    "canonical_state_payload": "semantic fitted parameters, structures, arrays, feature/class order and linked preprocessing state encoded deterministically",
+    "required_digests": ["SHA-256 of native payload", "SHA-256 of canonical state payload", "SHA-256 of provenance manifest"],
+    "required_metadata": ["runtime image digest", "package versions", "platform", "endianness", "serializer and version", "seed", "thread controls", "source commit", "model_identity_sha256"]
+  },
+  "repeatability_rule": "All three repetitions must have identical canonical structural digests and identical canonical float64 TRAIN/source-only check-output byte digests. Container bytes may differ only for documented non-semantic metadata and may never substitute for canonical-state equality.",
+  "failure_outcome": "RECONSTRUCTION_NONDETERMINISTIC"
+}

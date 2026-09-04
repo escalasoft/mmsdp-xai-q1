@@ -1,0 +1,32 @@
+{
+  "schema_version": "q1-xai-g3-recovery-relationship-1.0.0",
+  "classification": "RECOVERY_UNRELATED_BY_EVIDENCE",
+  "interruption_cause": "EXTERNAL_SESSION_USAGE_LIMIT_INTERRUPTION",
+  "interruption_type": "OPERATIONAL_NOT_SCIENTIFIC",
+  "recovery_started_utc": "2026-09-04T07:06:49.088144+00:00",
+  "rep_02_terminal_utc": "2026-09-04T07:15:47.957171+00:00",
+  "root_persisted_object_filesystem_time_local": "2026-09-04T02:14:45-0500",
+  "root_reconstructed_before_interruption": false,
+  "root_reconstructed_after_recovery": true,
+  "first_resumed_logical_id": "apache/hadoop-hdfs|Random Forest|OOF|P|block=5",
+  "first_resumed_ordinal_1_based": 662,
+  "root_logical_id": "apache/zeppelin|Logistic Regression|OOF|T|block=2",
+  "root_ordinal_1_based": 1491,
+  "completed_units_between_resume_point_and_root": 829,
+  "root_was_first_resumed_component": false,
+  "root_was_close_to_recovery_boundary": false,
+  "downstream_ordinals_1_based": {
+    "apache/zeppelin|Logistic Regression|FUSION_META|C+T": 1517,
+    "apache/zeppelin|Logistic Regression|FUSION_META|P+T": 1518,
+    "apache/zeppelin|Logistic Regression|FUSION_META|C+P+T": 1519
+  },
+  "evidence": [
+    "The root was 830 component positions after the initial 661-record rep_02 prefix and was not the first resumed component.",
+    "The 829 intervening newly reconstructed units preceding the root did not create a G3 failure.",
+    "Rep_03 was reconstructed later in the same recovered process and its root semantic state and check output exactly match rep_01.",
+    "The resume path applies the same frozen fitting function to missing rep_02 units and all rep_03 units; recovered records are skipped by identity and are not used as the root unit's fit input.",
+    "No incomplete transaction, object collision, journal inconsistency, persistence mismatch, or recovery-boundary adjacency exists for the root."
+  ],
+  "limitation": "Component journals do not contain per-record timestamps; the root time is bounded by the recovery journal and supported by immutable object filesystem metadata. This does not establish a solver-internal mechanism.",
+  "causality_statement": "Post-recovery timing alone is not treated as causal. Persisted ordering, controls, rep_03 behavior, and artifact integrity provide affirmative evidence against a recovery implementation artifact."
+}

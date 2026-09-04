@@ -1,0 +1,109 @@
+{
+  "block7a_downstream_evidence_sha256": "6096ea2ad2af1de0b393b0d921479229949a3838d9c161895360fefd9ead254c",
+  "edges": [
+    {
+      "from": "apache/zeppelin|Logistic Regression|OOF|T|block=2",
+      "relation": "TEXT_OOF_COLUMN_CONSUMED_BY_FUSION_TRAINING",
+      "to": "apache/zeppelin|Logistic Regression|FUSION_META|C+P+T"
+    },
+    {
+      "from": "apache/zeppelin|Logistic Regression|OOF|T|block=2",
+      "relation": "REQUIRED_OOF_DEPENDENCY",
+      "to": "scope:76c18e414f03fb10ea26dbb9b021b843a337cf69ec28f9e51f03e0d6cdc50837"
+    },
+    {
+      "from": "apache/zeppelin|Logistic Regression|FUSION_META|C+P+T",
+      "relation": "REQUIRED_FUSION_COMPONENT",
+      "to": "scope:76c18e414f03fb10ea26dbb9b021b843a337cf69ec28f9e51f03e0d6cdc50837"
+    },
+    {
+      "from": "apache/zeppelin|Logistic Regression|OOF|T|block=2",
+      "relation": "TEXT_OOF_COLUMN_CONSUMED_BY_FUSION_TRAINING",
+      "to": "apache/zeppelin|Logistic Regression|FUSION_META|C+T"
+    },
+    {
+      "from": "apache/zeppelin|Logistic Regression|OOF|T|block=2",
+      "relation": "REQUIRED_OOF_DEPENDENCY",
+      "to": "scope:0147ca63a4a2489b26c36de8f710f55cbf2c260d0c2b17465ef3955085c611c9"
+    },
+    {
+      "from": "apache/zeppelin|Logistic Regression|FUSION_META|C+T",
+      "relation": "REQUIRED_FUSION_COMPONENT",
+      "to": "scope:0147ca63a4a2489b26c36de8f710f55cbf2c260d0c2b17465ef3955085c611c9"
+    },
+    {
+      "from": "apache/zeppelin|Logistic Regression|OOF|T|block=2",
+      "relation": "TEXT_OOF_COLUMN_CONSUMED_BY_FUSION_TRAINING",
+      "to": "apache/zeppelin|Logistic Regression|FUSION_META|P+T"
+    },
+    {
+      "from": "apache/zeppelin|Logistic Regression|OOF|T|block=2",
+      "relation": "REQUIRED_OOF_DEPENDENCY",
+      "to": "scope:dc23ba88042d5f02f5713e0e667f67d7b4fcb1e5031aafe01249bf4238557333"
+    },
+    {
+      "from": "apache/zeppelin|Logistic Regression|FUSION_META|P+T",
+      "relation": "REQUIRED_FUSION_COMPONENT",
+      "to": "scope:dc23ba88042d5f02f5713e0e667f67d7b4fcb1e5031aafe01249bf4238557333"
+    }
+  ],
+  "negative_dependency_check": {
+    "consumes_root_failure": false,
+    "outcome": "G1_G3_ELIGIBLE_FOR_FUTURE_G4_REVIEW",
+    "reason": "The unimodal final TEXT scope consumes its independently G3-passing FINAL_BASE T component, not OOF fold state.",
+    "required_components": [
+      "apache/zeppelin|Logistic Regression|FINAL_BASE|T"
+    ],
+    "required_oof_components": [],
+    "scope": {
+      "algorithm": "Logistic Regression",
+      "configuration": "T",
+      "model_identity_sha256": "3439d2ceeaa9f4371acb935876c03cce93075d2e875fccf86effb5882d56fc8a",
+      "project": "apache/zeppelin"
+    }
+  },
+  "nodes": [
+    {
+      "classification": "TRUE_FITTED_MODEL_NONDETERMINISM",
+      "id": "apache/zeppelin|Logistic Regression|OOF|T|block=2",
+      "type": "ROOT_FAILED_LOGICAL_UNIT"
+    },
+    {
+      "classification": "PROPAGATED_FROM_ROOT_TEXT_OOF",
+      "id": "apache/zeppelin|Logistic Regression|FUSION_META|C+P+T",
+      "type": "PROPAGATED_FAILED_LOGICAL_UNIT"
+    },
+    {
+      "algorithm": "Logistic Regression",
+      "configuration": "C+P+T",
+      "id": "scope:76c18e414f03fb10ea26dbb9b021b843a337cf69ec28f9e51f03e0d6cdc50837",
+      "project": "apache/zeppelin",
+      "type": "FINAL_PROJECT_SCOPE"
+    },
+    {
+      "classification": "PROPAGATED_FROM_ROOT_TEXT_OOF",
+      "id": "apache/zeppelin|Logistic Regression|FUSION_META|C+T",
+      "type": "PROPAGATED_FAILED_LOGICAL_UNIT"
+    },
+    {
+      "algorithm": "Logistic Regression",
+      "configuration": "C+T",
+      "id": "scope:0147ca63a4a2489b26c36de8f710f55cbf2c260d0c2b17465ef3955085c611c9",
+      "project": "apache/zeppelin",
+      "type": "FINAL_PROJECT_SCOPE"
+    },
+    {
+      "classification": "PROPAGATED_FROM_ROOT_TEXT_OOF",
+      "id": "apache/zeppelin|Logistic Regression|FUSION_META|P+T",
+      "type": "PROPAGATED_FAILED_LOGICAL_UNIT"
+    },
+    {
+      "algorithm": "Logistic Regression",
+      "configuration": "P+T",
+      "id": "scope:dc23ba88042d5f02f5713e0e667f67d7b4fcb1e5031aafe01249bf4238557333",
+      "project": "apache/zeppelin",
+      "type": "FINAL_PROJECT_SCOPE"
+    }
+  ],
+  "schema_version": "q1-xai-block7b-affected-dependency-graph-v1"
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": "q1-xai-g4-operational-recovery-1.0.0",
+  "classification": "FAIL_CLOSED_PRE_QUERY_SCHEMA_DECLARATION_MISMATCH",
+  "scientific_failure": false,
+  "representative_policy_changed": false,
+  "authorization_changed": false,
+  "tolerance_changed": false,
+  "failed_attempt": {
+    "last_completed_stage": "AUTHORIZED_T1_FEATURE_LOAD_FOR_APACHE_ACTIVEMQ",
+    "authorized_t1_feature_rows_accessed": 245,
+    "reconstructed_model_query_count": 0,
+    "row_probability_comparison_count": 0,
+    "failure": "Strict identity schema declaration used the evidence-facing lowercase label alias instead of the frozen source field constant BENCHMARK_DEFINED_OBSERVED_LABEL."
+  },
+  "correction": {
+    "scope": "SCHEMA_DECLARATION_ONLY",
+    "source_field": "BENCHMARK_DEFINED_OBSERVED_LABEL",
+    "label_value_used_for_computation": false,
+    "training_or_prediction_semantics_changed": false
+  },
+  "authorized_diagnostic": {
+    "T1_identity_schema_access_count": 1,
+    "content_retained": "FIELD_NAMES_ONLY",
+    "label_value_used_for_computation": false,
+    "reconstructed_model_query_count": 0,
+    "row_probability_comparison_count": 0
+  },
+  "resume_decision": "RETRY_G4_EXECUTION_FROM_PREPARED_POLICY_WITH_OPERATIONAL_ATTEMPT_ACCOUNTING",
+  "markers": [
+    "NOT_CONFIRMATORY",
+    "NO_MODEL_SELECTION",
+    "NO_SCIENTIFIC_UPDATE"
+  ]
+}

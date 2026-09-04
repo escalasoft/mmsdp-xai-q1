@@ -1,0 +1,38 @@
+{
+  "schema_version": "q1-xai-frozen-reconstruction-input-contract-1.0.0",
+  "allowed_fit_partition": "TRAIN_SOURCE_ONLY",
+  "required_bound_inputs": [
+    "exact TRAIN row identity membership and ordering",
+    "project",
+    "algorithm family",
+    "modality and configuration",
+    "selected candidate identifiers and exact hyperparameters",
+    "algorithm and campaign seeds",
+    "feature schema and modality-specific feature ordering",
+    "numeric preprocessing recipe",
+    "TF-IDF configuration",
+    "late-fusion modality ordering",
+    "strict-forward OOF construction policy, fold lineage and meta-training membership",
+    "RAW or ISOTONIC calibration state",
+    "runtime and dependency versions",
+    "Sprint 54 model_identity_sha256"
+  ],
+  "allowed_sources": [
+    "audits/q1-controlled-train-validation-baselines/1.0.0/campaign/reproducibility_manifest.json",
+    "audits/q1-controlled-train-validation-baselines/1.0.0/campaign/execution_provenance.json",
+    "audits/q1-controlled-train-validation-baselines/1.0.0/unimodal_contract/runtime.json",
+    "audits/q1-t1-confirmatory-execution/1.0.0/engine/engine_readiness.json",
+    "frozen TRAIN/source feature and identity artifacts referenced by those manifests",
+    "audits/q1-development-only-calibration/1.0.0/calibrator_states.jsonl.gz"
+  ],
+  "prohibited_inputs": [
+    "T1 labels",
+    "T1 metrics or statistical outcomes",
+    "T1 explanation results",
+    "T2 identities, features, labels, probabilities, predictions or models",
+    "post-Sprint-54 performance-driven candidate choices",
+    "historical or development fitted artifacts not bound to the exact Sprint 54 identity"
+  ],
+  "calibration_rule": "The 14 exact LightGBM+PROCESS isotonic mappings are linked read-only by source SHA-256 and state SHA-256; reconstruction may copy/link but never refit them.",
+  "input_validation_outcome_on_any_mismatch": "RECONSTRUCTION_PREREQUISITES_INCOMPLETE"
+}

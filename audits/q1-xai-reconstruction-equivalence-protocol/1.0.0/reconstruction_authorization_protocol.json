@@ -1,0 +1,34 @@
+{
+  "schema_version": "q1-xai-reconstruction-equivalence-protocol-1.0.0",
+  "sprint": "10.8.2.55",
+  "block": "6/8",
+  "status": "RECONSTRUCTION_AUTHORIZED_NOT_EXECUTED",
+  "block6_authorizes_execution": false,
+  "accepted_block5_finding": "ORIGINAL_STATE_INSUFFICIENT_RECONSTRUCTION_REQUIRED_FOR_MEANINGFUL_E1_E2",
+  "purpose": "Prospectively freeze the gates for a separately authorized deterministic TRAIN/source-only reconstruction and equivalence audit.",
+  "immutable_scientific_state": {
+    "sprint54_classification": "MIXED_CONFIRMATORY_EVIDENCE",
+    "evidence_audit_classification": "PASS_CONFIRMATORY_EVIDENCE_INTERNALLY_CONSISTENT_REPORTABLE_MIXED",
+    "t1_predictive_access_count": 1,
+    "t1_predictive_scoring_count": 1,
+    "t1_rerun_permitted": false,
+    "t2_predictive_access_count": 0,
+    "t2_state": "DENY_SEALED_REVIEWER_RESERVE",
+    "xai_execution_count": 0
+  },
+  "current_authorization": {
+    "train_source_only_reconstruction": "DENY_PENDING_SEPARATE_HUMAN_G5_AUTHORIZATION",
+    "t1_feature_access_or_model_query": "DENY_PENDING_SEPARATE_HUMAN_G4_AUTHORIZATION",
+    "fusion_calibration_final_output_verification": "DENY_PENDING_G4_G5_GATE_AUTHORIZATION",
+    "t2_access": "DENY_SEALED_REVIEWER_RESERVE",
+    "xai_execution": "DENY_PENDING_EQUIVALENCE_AND_XAI_AUTHORIZATION"
+  },
+  "prohibitions": [
+    "No T1 labels, metrics, statistical outcomes, explanations, or aggregate performance may influence reconstruction, fitting, tuning, selection, thresholds, preprocessing, features, or calibration.",
+    "No aggregate metric similarity establishes predictor equivalence.",
+    "No failed scope may be relabeled as the Sprint 54 predictor.",
+    "The 14 provenance-verified isotonic mappings must be reused unchanged and must not be refitted.",
+    "No tolerance may be relaxed after reconstructed output is observed."
+  ],
+  "stop_condition": "PROTOCOL_FROZEN_NO_RECONSTRUCTION_NO_G4_NO_G5_NO_XAI_NO_T2"
+}

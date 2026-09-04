@@ -1,0 +1,2 @@
+{"permitted_future_claims":["feature association with model predictions","modality contribution to fusion output","local prediction decomposition","global attribution patterns","heterogeneity across projects/models"],"prohibited_claims":["causal effects","defect causes","proof that a feature causes bugs","proof that one modality is scientifically superior","proof that multimodality is universally better","human-understandable semantic intent of commit messages"],"schema_version":"q1-xai-claim-boundaries-freeze-1.0.0"}
+

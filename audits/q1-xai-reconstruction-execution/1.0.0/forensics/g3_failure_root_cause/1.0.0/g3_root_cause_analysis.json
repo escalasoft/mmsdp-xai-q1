@@ -1,0 +1,75 @@
+{
+  "schema_version": "q1-xai-g3-failure-root-cause-analysis-1.0.0",
+  "created_utc": "2026-09-04T07:51:52Z",
+  "authorization_scope": "READ_ONLY_FORENSIC_DIAGNOSIS_PERSISTED_TRAIN_SOURCE_EVIDENCE_ONLY",
+  "block7_outcome_preserved": "RECONSTRUCTION_NONDETERMINISTIC_STOP",
+  "g3_counts_preserved": {
+    "G3_PASS_DETERMINISTIC": 1732,
+    "G3_FAIL_NONDETERMINISTIC": 4
+  },
+  "RAW_FAILED_LOGICAL_UNIT_COUNT": 4,
+  "INDEPENDENT_ROOT_FAILURE_COUNT": 1,
+  "DOWNSTREAM_PROPAGATED_FAILURE_COUNT": 3,
+  "root_logical_id": "apache/zeppelin|Logistic Regression|OOF|T|block=2",
+  "root_cause_classification": "TRUE_FITTED_MODEL_NONDETERMINISM",
+  "classification_basis": [
+    "All three repetitions have identical persisted provenance, membership digests, selected candidate, hyperparameters, seed, TF-IDF vocabulary, token-to-column mapping, feature order, IDF values, class order, n_iter, and n_features_in.",
+    "Rep_02 differs from rep_01/rep_03 in the semantic fitted LR coefficient and intercept arrays; rep_01 and rep_03 match exactly.",
+    "The persisted rep_02 TRAIN/source check output differs consistently with the fitted-state difference, excluding a hash-only or serialization-only explanation.",
+    "The first differing semantic field is canonical_state.model.coef; canonical_state.model.intercept differs next.",
+    "The observed magnitudes are at floating-point scale, but persisted evidence does not identify a specific internal liblinear or numeric-runtime mechanism; the narrower NUMERIC_RUNTIME_NONDETERMINISM classification is therefore not asserted."
+  ],
+  "first_semantic_difference": {
+    "field": "canonical_state.model.coef",
+    "rep_01_sha256": "3e277af0a8b0ae066ea64251e84f6464facec46becbb11285b45745609f80d42",
+    "rep_02_sha256": "ed9f3bf7d6881b580fe8118f66b348b9de0b100de4c532e01ea1944f6b3f6f59",
+    "rep_03_sha256": "3e277af0a8b0ae066ea64251e84f6464facec46becbb11285b45745609f80d42"
+  },
+  "input_integrity_classification": "INPUT_IDENTICAL",
+  "text_representation_classification": "DETERMINISTIC_IDENTICAL",
+  "persistence_classification": "NOT_CAUSAL_TO_G3_FAILURE",
+  "recovery_relationship_classification": "RECOVERY_UNRELATED_BY_EVIDENCE",
+  "downstream": {
+    "apache/zeppelin|Logistic Regression|FUSION_META|C+T": "PROPAGATED_FROM_ROOT_TEXT_OOF",
+    "apache/zeppelin|Logistic Regression|FUSION_META|P+T": "PROPAGATED_FROM_ROOT_TEXT_OOF",
+    "apache/zeppelin|Logistic Regression|FUSION_META|C+P+T": "PROPAGATED_FROM_ROOT_TEXT_OOF"
+  },
+  "scientific_interpretation": {
+    "affected_project": "apache/zeppelin",
+    "affected_algorithm": "Logistic Regression",
+    "affected_modality": "T",
+    "affected_oof_block": 2,
+    "final_base_predictor_affected": false,
+    "all_other_1732_logical_units_deterministic": true,
+    "potential_xai_scope_effect": "The root unit and the three T-consuming Zeppelin Logistic Regression fusion scopes fail G3. Block 7 remains stopped globally; no XAI scope is authorized in this block."
+  },
+  "unaffected_controls": {
+    "zeppelin_lr_oof_c_block_2": "G3_PASS_DETERMINISTIC",
+    "zeppelin_lr_oof_p_block_2": "G3_PASS_DETERMINISTIC",
+    "zeppelin_lr_text_blocks_3_through_9": "ALL_G3_PASS_DETERMINISTIC",
+    "zeppelin_other_algorithms_text_block_2": "ALL_3_G3_PASS_DETERMINISTIC",
+    "other_projects_lr_text_block_2": "ALL_13_G3_PASS_DETERMINISTIC",
+    "zeppelin_lr_final_text_base": "G3_PASS_DETERMINISTIC",
+    "zeppelin_lr_fusion_c_plus_p": "G3_PASS_DETERMINISTIC"
+  },
+  "governance": {
+    "t1_original_predictive_access_count": 1,
+    "t1_original_predictive_scoring_count": 1,
+    "t1_rerun": false,
+    "block7_t1_new_model_queries": 0,
+    "t2_access_count": 0,
+    "t2_state": "DENY_SEALED_REVIEWER_RESERVE",
+    "g4_execution_count": 0,
+    "g5_execution_count": 0,
+    "xai_execution_count": 0,
+    "reconstruction_or_refit_during_forensics": 0
+  },
+  "frozen_evidence_sha256": {
+    "sprint54_t1_prediction_evidence": "eb4b6956b185e63cd322d92b8cdf96f53fcb09ef83b6a16f2334d660c6f5adc8",
+    "block6_manifest": "17341b4a585baab73118f21cc1056914326b61cba6751b16ff91bdf4b3dfc386",
+    "block6a_manifest": "c9502cb1ec85d3053b8a972d61657038e66d04fb5e619b0fe08ed94d581c91bb",
+    "block7_manifest": "994a6f7aa8d1393904c605e0b5d65db6fcd39b9be55a1eb5219f899346b83d2e",
+    "block7_g1_g2_g3_results": "c07a0bd18d1c73e2cddae0ca829de3dd9e698b233d5d27f3f3f8928fb153f8a5"
+  },
+  "prohibited_operations_executed": []
+}

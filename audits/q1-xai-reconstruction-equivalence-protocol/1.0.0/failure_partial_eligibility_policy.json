@@ -1,0 +1,25 @@
+{
+  "schema_version": "q1-xai-reconstruction-failure-policy-1.0.0",
+  "allowed_outcomes": [
+    "RECONSTRUCTION_AUTHORIZED_NOT_EXECUTED",
+    "RECONSTRUCTION_PREREQUISITES_INCOMPLETE",
+    "RECONSTRUCTION_NONDETERMINISTIC",
+    "RECONSTRUCTED_STATE_STRUCTURALLY_INVALID",
+    "RAW_OUTPUT_EQUIVALENCE_FAILED",
+    "FUSION_EQUIVALENCE_FAILED",
+    "CALIBRATION_EQUIVALENCE_FAILED",
+    "PARTIAL_XAI_ELIGIBILITY",
+    "XAI_INELIGIBLE_RECONSTRUCTION_NOT_EQUIVALENT"
+  ],
+  "current_outcome": "RECONSTRUCTION_AUTHORIZED_NOT_EXECUTED",
+  "fail_closed_rules": [
+    "The first failed required gate stops the affected scope and all downstream gates.",
+    "No aggregate metric, visual similarity, explanation attractiveness, family substitution or historical artifact may rescue a failed scope.",
+    "A failed shared base component makes every consuming multimodal identity ineligible until a prospectively governed resolution exists.",
+    "A family or modality failure does not invalidate independently verified scopes.",
+    "Partial eligibility must enumerate exact project/algorithm/configuration/model_identity_sha256 values and passed gates.",
+    "E0 evidence-only interpretation remains distinct and must not be labeled model-specific attribution."
+  ],
+  "scope_result_required_fields": ["project", "algorithm", "configuration", "model_identity_sha256", "gate_results", "component_digests", "outcome", "reason"],
+  "no_fallback": "XAI_INELIGIBLE_RECONSTRUCTION_NOT_EQUIVALENT"
+}

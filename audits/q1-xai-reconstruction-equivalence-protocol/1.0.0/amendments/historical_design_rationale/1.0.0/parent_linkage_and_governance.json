@@ -1,0 +1,35 @@
+{
+  "schema_version": "q1-xai-historical-rationale-parent-linkage-1.0.0",
+  "parent": {
+    "package": "audits/q1-xai-reconstruction-equivalence-protocol/1.0.0",
+    "manifest_sha256_before_amendment": "17341b4a585baab73118f21cc1056914326b61cba6751b16ff91bdf4b3dfc386",
+    "manifest_sha256_at_amendment": "17341b4a585baab73118f21cc1056914326b61cba6751b16ff91bdf4b3dfc386",
+    "manifest_entry_count": 12,
+    "manifest_modified": false,
+    "tolerances_modified": false,
+    "gates_modified": false,
+    "inputs_modified": false,
+    "deterministic_requirements_modified": false,
+    "failure_rules_modified": false
+  },
+  "governance": {
+    "t1_predictive_access_count": 1,
+    "t1_predictive_scoring_count": 1,
+    "t1_rerun_permitted": false,
+    "t2_predictive_access_count": 0,
+    "t2_state": "DENY_SEALED_REVIEWER_RESERVE",
+    "xai_execution_count": 0,
+    "reconstructed_model_count": 0,
+    "trained_or_refitted_model_count": 0,
+    "g4_execution_count": 0,
+    "g5_execution_count": 0
+  },
+  "sprint54_evidence": {
+    "t1_prediction_evidence_sha256": "eb4b6956b185e63cd322d92b8cdf96f53fcb09ef83b6a16f2334d660c6f5adc8",
+    "results_manifest_sha256": "f396cfa0db8d01c8c1392fe7bb8affe8413638e3c0e20a3c113d7fe94a6d3a7e",
+    "scientific_classification_sha256": "e52dd3b9a6c288570f58d7d462fd2d5f077096071d2a78668b17a024e9319009",
+    "modified": false
+  },
+  "amendment_authorizes_execution": false,
+  "stop_state": "DOCUMENTATION_VALIDATED_STOP_BEFORE_BLOCK7"
+}

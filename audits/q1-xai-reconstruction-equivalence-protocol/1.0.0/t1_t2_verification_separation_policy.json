@@ -1,0 +1,30 @@
+{
+  "schema_version": "q1-xai-t1-technical-verification-separation-1.0.0",
+  "sprint54_confirmatory_evaluation": {
+    "state": "IMMUTABLE_COMPLETE_DO_NOT_RERUN",
+    "purpose": "confirmatory scientific evaluation",
+    "classification": "MIXED_CONFIRMATORY_EVIDENCE",
+    "access_count": 1,
+    "predictive_scoring_count": 1,
+    "rerun_permitted": false
+  },
+  "future_reconstruction_equivalence_verification": {
+    "state": "NOT_AUTHORIZED_NOT_EXECUTED",
+    "purpose": "technical row-level identity verification only",
+    "permitted_only_after": ["G1", "G2", "G3", "separate human G4 authorization"],
+    "may_use": "already frozen T1 feature identities solely to query reconstructed candidates and compare with immutable stored probabilities",
+    "must_not": ["alter Sprint 54 predictions", "create a second confirmatory evaluation", "recompute model selection", "tune or refit", "change thresholds", "refit calibration", "change metrics, statistics or scientific conclusions"]
+  },
+  "separate_ledger_required": {
+    "name": "RECONSTRUCTION_EQUIVALENCE_TECHNICAL_VERIFICATION_LEDGER",
+    "does_not_increment_original_t1_predictive_access_count": true,
+    "does_not_increment_original_t1_predictive_scoring_count": true,
+    "required_counters": ["technical_t1_feature_access_count", "technical_reconstructed_model_query_count", "row_probability_comparison_count"],
+    "required_labels": ["NOT_CONFIRMATORY", "NO_MODEL_SELECTION", "NO_SCIENTIFIC_UPDATE"]
+  },
+  "t2": {
+    "state": "DENY_SEALED_REVIEWER_RESERVE",
+    "access_count": 0,
+    "prohibited": ["identities", "features", "labels", "predictions", "model queries", "equivalence checks", "SHAP", "LIME", "calibration", "thresholding", "statistics"]
+  }
+}
