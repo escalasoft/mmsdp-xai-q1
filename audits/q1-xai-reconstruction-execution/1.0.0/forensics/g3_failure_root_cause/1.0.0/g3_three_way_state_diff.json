@@ -1,0 +1,120 @@
+{
+  "schema_version": "q1-xai-g3-three-way-state-diff-1.0.0",
+  "logical_id": "apache/zeppelin|Logistic Regression|OOF|T|block=2",
+  "comparison_policy": "EXACT_PERSISTED_SEMANTIC_STATE_NO_MODEL_EXECUTION",
+  "first_semantic_difference": "model.coef",
+  "identical_across_repetitions": {
+    "logical_id": true,
+    "provenance": true,
+    "fit_membership_sha256": "c9adb39f403b1092bbf09915e5276d1dd5c083605300280de40bbbe9089ff2a2",
+    "prediction_membership_sha256": "da8bcc203e009fdeddec1dde6daa9b972dc66837b8105432b5f20d3ec44532c1",
+    "selected_candidate_id": "LR_C_1_0",
+    "selected_parameters": {
+      "C": 1.0,
+      "class_weight": null,
+      "max_iter": 2000,
+      "random_state": 20260901,
+      "solver": "liblinear"
+    },
+    "seed": 20260901,
+    "text_preprocessing_parameters": {
+      "lowercase": true,
+      "max_features": 5000,
+      "min_df": 2,
+      "ngram_range": [1, 1],
+      "norm": "l2",
+      "sublinear_tf": true,
+      "token_pattern": "(?u)\\b[^\\W_]\\w+\\b"
+    },
+    "tfidf_vocabulary_sha256": "be8cb98302b3060b997991e4a936f1777a28658632dca4ae1da2d6677d1f2f5e",
+    "tfidf_idf_sha256": "cd3057df0a918130eed7e4b04e0e87653d5d18a5542463e6dab90887bcadc29f",
+    "tfidf_feature_order_sha256": "858663ca1a27a92f1aa826f5a2dcb1d876eab11c2ca32c591325dfe1ba0238c4",
+    "tfidf_representation_object_sha256": "dfde0e0685c7f9403c9820daf71011f6f8415d2a470aedf31cb241b7748d0bcc",
+    "feature_count": 90,
+    "vocabulary_membership": true,
+    "token_to_column_assignment": true,
+    "feature_order": true,
+    "idf_values": true,
+    "model_classes": [0, 1],
+    "n_iter": [4],
+    "n_iter_sha256": "fb5e512425fc9449316ec95969ebe71e2d576dbab833d61e2a5b9330fd70ee02",
+    "n_features_in": 90
+  },
+  "tfidf_rep_01_vs_rep_02": {
+    "vocabulary_symmetric_difference_count": 0,
+    "token_to_column_difference_count": 0,
+    "idf_differing_elements": 0,
+    "idf_max_absolute_difference": 0.0,
+    "feature_order_exact_equal": true
+  },
+  "repetitions": {
+    "rep_01": {
+      "lr_coef_sha256": "3e277af0a8b0ae066ea64251e84f6464facec46becbb11285b45745609f80d42",
+      "lr_intercept_sha256": "df4e5365e225518775d4811e0e394b4dd73c41966e6d24496a2b77dc9d3204b8",
+      "executable_object_sha256": "f238594530769ce7d4e19107b1a98c65e26e5271657fa33e3e918bb1bdee43b7",
+      "canonical_state_sha256": "9c678b271847bf055b4152b579971b43d3622ec6083fcfde47c88720559da60c",
+      "check_output_object_sha256": "9f1ff7c893c87b72294785a8fd9ad401824a6381909b75795ac5dbd81d1160e6",
+      "train_source_check_output_sha256": "6bb807bcf7bd0a367e7116fe2da771b0f9c6f5f920d32aabf348827301b65c7b"
+    },
+    "rep_02": {
+      "lr_coef_sha256": "ed9f3bf7d6881b580fe8118f66b348b9de0b100de4c532e01ea1944f6b3f6f59",
+      "lr_intercept_sha256": "be4048d612452df3339b46ea2bf38c4ede859e7a23b318a2996a2b398b7a3794",
+      "executable_object_sha256": "96496bd864b2847a9b9216dd851f5a5279edf96d74b76de3d624b227c07115b0",
+      "canonical_state_sha256": "10663ebad491acc56a7a7b4092bfd8a63f05f20f6ad5de77675e832130e5f529",
+      "check_output_object_sha256": "71a8f588274442b6fc683091f1ada7515f5569f1a3dbfbdd8a8adc25569bdc3c",
+      "train_source_check_output_sha256": "db56dd585321f751d3fe17e845bbc58ac06aa7afff20904ab365e16b760597a1"
+    },
+    "rep_03": {
+      "lr_coef_sha256": "3e277af0a8b0ae066ea64251e84f6464facec46becbb11285b45745609f80d42",
+      "lr_intercept_sha256": "df4e5365e225518775d4811e0e394b4dd73c41966e6d24496a2b77dc9d3204b8",
+      "executable_object_sha256": "bb774e2e1a0ca2559467e18a822dd22e88d7ffe1f38cc791c6a3f278d800d94b",
+      "canonical_state_sha256": "9c678b271847bf055b4152b579971b43d3622ec6083fcfde47c88720559da60c",
+      "check_output_object_sha256": "9f1ff7c893c87b72294785a8fd9ad401824a6381909b75795ac5dbd81d1160e6",
+      "train_source_check_output_sha256": "6bb807bcf7bd0a367e7116fe2da771b0f9c6f5f920d32aabf348827301b65c7b"
+    }
+  },
+  "rep_01_vs_rep_02_numeric_diagnostics": {
+    "coef": {
+      "shape": [1, 90],
+      "exact_equal": false,
+      "differing_elements": 78,
+      "max_absolute_difference": 3.3306690738754696e-16,
+      "max_relative_difference_rep01_denominator_where_nonzero": 6.67708419572521e-15
+    },
+    "intercept": {
+      "shape": [1],
+      "exact_equal": false,
+      "differing_elements": 1,
+      "max_absolute_difference": 2.220446049250313e-16,
+      "max_relative_difference_rep01_denominator_where_nonzero": 1.5280786215866009e-16
+    },
+    "n_iter": {
+      "exact_equal": true,
+      "differing_elements": 0
+    },
+    "check_output": {
+      "shape": [105],
+      "exact_equal": false,
+      "differing_elements": 47,
+      "max_absolute_difference": 1.1102230246251565e-16,
+      "max_relative_difference_rep01_denominator_where_nonzero": 3.7556465955499235e-16
+    }
+  },
+  "rep_01_vs_rep_03": "EXACT_SEMANTIC_STATE_AND_CHECK_OUTPUT_MATCH",
+  "input_and_order_integrity": {
+    "classification": "INPUT_IDENTICAL",
+    "zeppelin_train_count": 870,
+    "zeppelin_train_identity_sha256": "28009321714a239fbbf0813683cc233987b823801aa7732e08688a029aadd7bc",
+    "zeppelin_train_labels_sha256": "7c42fa11c10ef7eeb7a71712ed96a0e97f75cf9fddd3c8c70cee2fb9a83e7972",
+    "zeppelin_train_raw_message_ordered_utf8_sha256": "b49c09f72ba6af96891dc2a5ba59088741081f4f8ea3aa1759a31a937c53da62",
+    "block_2_fit_count": 106,
+    "block_2_fit_identity_sha256": "c9adb39f403b1092bbf09915e5276d1dd5c083605300280de40bbbe9089ff2a2",
+    "block_2_fit_labels_sha256": "acfa73ed1175856cdd3c486887a4301adf5177fa93b32b78429d21c18db68ca7",
+    "block_2_fit_raw_message_ordered_utf8_sha256": "3f10da4d30a3fef607305fffa91d4357aa1eb4d2a222933b074a7853fb9ff769",
+    "block_2_prediction_count": 105,
+    "block_2_prediction_identity_sha256": "da8bcc203e009fdeddec1dde6daa9b972dc66837b8105432b5f20d3ec44532c1",
+    "block_2_prediction_labels_sha256": "ad66a93c0b203de8aebfc4165f0dda5c6d9da0d813d967d6f53f50b4ecdf0e84",
+    "block_2_prediction_raw_message_ordered_utf8_sha256": "c76a915c6917ebd40950e0c4c36fc66eaadbba4a413e66b706490640af1c7e47"
+  },
+  "diagnostic_values_are_not_equivalence_tolerances": true
+}

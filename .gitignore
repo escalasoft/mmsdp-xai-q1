@@ -240,6 +240,9 @@ outputs/adapters/*
 # Sprint 50 external scientific ledger (tracked by external artifact inventory)
 /audits/q1-temporal-robustness-cv/1.0.0/raw_probability_provenance.jsonl.gz
 
+# Externally governed reconstructed fitted-state artifacts; SHA-256 inventory remains tracked in Git.
+/audits/q1-xai-reconstruction-execution/1.0.0/objects/
+
 # Marimo
 marimo/_static/
 marimo/_lsp/

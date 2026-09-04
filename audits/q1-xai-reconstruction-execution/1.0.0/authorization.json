@@ -1,0 +1,2 @@
+{"authorized":["reconstruction","immediate persistence","G1","G2","G3"],"denied":["G4","G5","T1 model query","T2 access","XAI","performance analysis"],"human_authorization":"GRANTED_G1_G3_TRAIN_SOURCE_ONLY","repetitions":3,"schema_version":"q1-xai-train-source-reconstruction-1.0.0","seed":20260901}
+

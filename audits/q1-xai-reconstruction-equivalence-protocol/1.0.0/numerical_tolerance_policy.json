@@ -1,0 +1,37 @@
+{
+  "schema_version": "q1-xai-prospective-equivalence-tolerances-1.0.0",
+  "frozen_before_reconstruction": true,
+  "policy_mutability": "IMMUTABLE_AFTER_ANY_RECONSTRUCTED_STATE_OR_OUTPUT_IS_OBSERVED",
+  "deterministic_repeatability": {
+    "canonical_state_digest": "EXACT_SHA256_EQUALITY_ACROSS_3_REPETITIONS",
+    "canonical_train_source_check_output": "EXACT_FLOAT64_BYTE_DIGEST_EQUALITY_ACROSS_3_REPETITIONS",
+    "tolerance": 0.0
+  },
+  "row_level_probability_equivalence": {
+    "applies_to": ["raw unimodal base probability", "raw fused probability", "RAW final probability", "ISOTONIC calibrated final probability"],
+    "maximum_absolute_error": 1e-12,
+    "maximum_relative_error": 1e-10,
+    "relative_error_domain": "reference absolute probability >= 1e-8",
+    "pass_rule": "Every row must satisfy maximum_absolute_error and, where defined, maximum_relative_error; no quantile, mean, metric or aggregate substitution is allowed.",
+    "nan_or_infinite": "FAIL",
+    "row_identity_or_order_mismatch": "FAIL"
+  },
+  "fusion_checks": {
+    "ordered_base_probability_columns": "EXACT_IDENTITY_AND_ORDER",
+    "meta_learner_class_order": "EXACT",
+    "raw_fused_probability": "ROW_LEVEL_PROBABILITY_EQUIVALENCE_POLICY"
+  },
+  "calibration_checks": {
+    "RAW_mapping": "EXACT_IDENTITY_MAPPING",
+    "ISOTONIC_state_sha256": "EXACT",
+    "ISOTONIC_threshold_arrays": "EXACT_CANONICAL_ARRAY_EQUALITY",
+    "final_probability": "ROW_LEVEL_PROBABILITY_EQUIVALENCE_POLICY"
+  },
+  "decision_equivalence": {
+    "threshold": 0.5,
+    "required": "EXACT_FOR_EVERY_ROW",
+    "mismatch_budget": 0
+  },
+  "justification": "Exact equality is expected for repeated executions in the same frozen single-thread environment. The 1e-12 absolute bound accommodates decimal serialization and final floating-point representation without accepting behaviorally material drift; the additional 1e-10 relative bound protects small nonzero probabilities. Exact state, ordering, calibration identity and decisions are categorical invariants.",
+  "failure_rule": "Tolerances may not be widened, transformed or re-estimated after results; a breach fails the applicable scope."
+}

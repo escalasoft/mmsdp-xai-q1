@@ -1,0 +1,17 @@
+{
+  "schema_version": "q1-xai-post-reconstruction-eligibility-policy-1.0.0",
+  "shap_status": "CANDIDATE_COMPLEMENTARY_METHOD_NOT_AUTHORIZED_NOT_EXECUTED",
+  "lime_status": "CANDIDATE_COMPLEMENTARY_METHOD_NOT_AUTHORIZED_NOT_EXECUTED",
+  "stored_predictions_alone_sufficient": false,
+  "requirements_for_model_level_or_local_xai": [
+    "exact executable predictor and preprocessing state",
+    "passed applicable reconstruction-equivalence gates",
+    "method-family and output-scale compatibility",
+    "separately frozen background/reference and query budget",
+    "separate G2, G3 or G4 authorization as applicable"
+  ],
+  "target_selection": "NOT_PERFORMED; no target may be selected by T1 performance or explanation attractiveness.",
+  "block6_xai_execution_count": 0,
+  "counterfactual_status": "EXCLUDED_BY_BLOCK4",
+  "eligibility_effect": "No scope becomes E1 or E2 eligible merely because this protocol exists."
+}

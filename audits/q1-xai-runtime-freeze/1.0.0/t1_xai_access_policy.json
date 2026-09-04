@@ -1,0 +1,1 @@
+{"freeze_access_count":0,"future_access_class":"TECHNICAL_EXPLANATION_ACCESS","future_rows":"ONLY_FROZEN_FOREGROUND_AND_LOCAL_POLICY_ROWS","historical_T1_predictive_access_count":1,"historical_T1_predictive_scoring_count":1,"historical_T1_rerun":false,"historical_counter_increment":false,"label_use_for_selection":false,"schema_version":"q1-xai-runtime-freeze-1.0.0"}

@@ -1,0 +1,22 @@
+{
+  "schema_version": "q1-future-fitted-state-persistence-policy-1.0.0",
+  "applies_to": "every future predictive execution, including any separately authorized T2 execution",
+  "persist_during_original_execution": [
+    "fitted base predictors",
+    "fitted preprocessors, imputers, scalers and encoders",
+    "fitted TEXT vectorizers with vocabulary, IDF and feature order",
+    "OOF fold lineage and any required fitted fold states",
+    "fitted fusion/meta-learners",
+    "calibration objects or exact mappings",
+    "feature, modality and class ordering",
+    "model, serializer, runtime and platform metadata",
+    "native-payload and canonical-state SHA-256 digests",
+    "row-level raw, fused, calibrated and final predictions as applicable",
+    "complete provenance manifests",
+    "XAI compatibility metadata including supported output scales"
+  ],
+  "timing": "Persist and hash fitted state before held-out scoring whenever scientifically and operationally possible; seal it together with the execution evidence.",
+  "portability": "Use family-native portable formats plus canonical semantic-state records; pickle alone is insufficient.",
+  "t2_authorization": "NOT_GRANTED_BY_THIS_POLICY",
+  "purpose": "Prevent future post-hoc reconstruction from becoming a prerequisite for governed XAI."
+}

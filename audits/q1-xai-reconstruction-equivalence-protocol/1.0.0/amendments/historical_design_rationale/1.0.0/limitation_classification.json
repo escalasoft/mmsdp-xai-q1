@@ -1,0 +1,58 @@
+{
+  "schema_version": "q1-xai-executable-state-persistence-limitation-1.0.0",
+  "classification": "POST_CONFIRMATORY_EXECUTABLE_STATE_PERSISTENCE_LIMITATION",
+  "status": "PRESERVED_AND_PROSPECTIVELY_REMEDIATED_NOT_RESOLVED",
+  "scope": {
+    "limits": [
+      "direct post-hoc executable-model reproducibility",
+      "direct model-specific E1 feature attribution",
+      "direct model-specific E2 fusion attribution",
+      "model-query-dependent SHAP and LIME eligibility"
+    ],
+    "does_not_invalidate": [
+      "immutable Sprint 54 row-level predictive evidence",
+      "T1 labels and prediction identities",
+      "frozen metrics and statistical evidence",
+      "frozen calibration evidence",
+      "MIXED_CONFIRMATORY_EVIDENCE",
+      "PASS_CONFIRMATORY_EVIDENCE_INTERNALLY_CONSISTENT_REPORTABLE_MIXED",
+      "reporting traceability and chain of custody"
+    ],
+    "does_not_authorize": [
+      "replacement of original Sprint 54 evidence",
+      "reconstruction or refitting",
+      "G4 or G5 verification",
+      "T1 or T2 model queries",
+      "XAI execution"
+    ]
+  },
+  "absent_original_state": [
+    "fitted Logistic Regression predictors",
+    "fitted Random Forest predictors",
+    "fitted XGBoost predictors",
+    "fitted LightGBM predictors",
+    "fitted numeric imputers and scalers where applicable",
+    "fitted TEXT TF-IDF vocabulary, IDF and feature-order state",
+    "fitted late-fusion Logistic Regression meta-learners",
+    "required fitted OOF fold states"
+  ],
+  "reconstructed_state_isolation": {
+    "required_namespace": "NEW_PROVENANCE_SEPARATED_RECONSTRUCTION_NAMESPACE",
+    "must_never": ["overwrite", "rename", "mutate", "replace", "masquerade as an original Sprint 54 fitted artifact"],
+    "successful_label": "RECONSTRUCTED_EQUIVALENCE_VERIFIED",
+    "prohibited_label": "ORIGINAL_SPRINT54_FITTED_STATE",
+    "purpose": "technical and XAI eligibility only, never retroactive historical replacement"
+  },
+  "remediation_path": [
+    "IMMUTABLE_SPRINT54_EVIDENCE",
+    "SEPARATELY_PERSISTED_TRAIN_SOURCE_ONLY_RECONSTRUCTION_CANDIDATE",
+    "G1_PROVENANCE_VERIFICATION",
+    "G2_STRUCTURAL_VALIDITY",
+    "G3_DETERMINISTIC_RECONSTRUCTION_REPEATABILITY",
+    "SEPARATELY_AUTHORIZED_G4_ROW_LEVEL_PREDICTIVE_EQUIVALENCE",
+    "APPLICABLE_G5_FUSION_CALIBRATION_FINAL_OUTPUT_EQUIVALENCE",
+    "XAI_ELIGIBILITY_FOR_PASSING_SCOPES_ONLY"
+  ],
+  "aggregate_metric_similarity_sufficient": false,
+  "limitation_resolved": false
+}

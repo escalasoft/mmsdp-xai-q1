@@ -1,0 +1,94 @@
+{
+  "schema_version": "q1-xai-g3-downstream-propagation-1.0.0",
+  "root_logical_id": "apache/zeppelin|Logistic Regression|OOF|T|block=2",
+  "raw_failed_logical_unit_count": 4,
+  "independent_root_failure_count": 1,
+  "downstream_propagated_failure_count": 3,
+  "oof_training_matrix": {
+    "row_count": 764,
+    "row_identity_order_equal_across_repetitions": true,
+    "targets_equal_across_repetitions": true,
+    "rep_01_object_sha256": "a4d8cbc164cb55a6439ade71683b7d0ea40b0e6bf8ce26d372c919381e6896b7",
+    "rep_02_object_sha256": "535b61cc146486b8a099a999e4652834cd3dc796fe49ccdda8022d27a7814992",
+    "rep_03_object_sha256": "a4d8cbc164cb55a6439ade71683b7d0ea40b0e6bf8ce26d372c919381e6896b7",
+    "rep_01_vs_rep_02": {
+      "C": {
+        "exact_equal": true,
+        "differing_elements": 0,
+        "max_absolute_difference": 0.0
+      },
+      "P": {
+        "exact_equal": true,
+        "differing_elements": 0,
+        "max_absolute_difference": 0.0
+      },
+      "T": {
+        "exact_equal": false,
+        "differing_elements": 47,
+        "max_absolute_difference": 1.1102230246251565e-16,
+        "max_relative_difference_rep01_denominator_where_nonzero": 3.7556465955499235e-16,
+        "all_differences_localized_to_block_2_root_output": true
+      }
+    },
+    "rep_01_vs_rep_03": {
+      "C_exact_equal": true,
+      "P_exact_equal": true,
+      "T_exact_equal": true
+    }
+  },
+  "causal_chain": [
+    "rep_02 root TEXT OOF fitted LR state differs",
+    "47 of 105 persisted block-2 TEXT check probabilities differ",
+    "the same 47 differences are the only differences in the 764-row TEXT OOF meta-training column",
+    "C and P OOF columns, row identities, row order, and targets remain exactly identical",
+    "all fusion configurations containing T receive the differing matrix; C+P does not and passes G3"
+  ],
+  "downstream_units": {
+    "apache/zeppelin|Logistic Regression|FUSION_META|C+T": {
+      "classification": "PROPAGATED_FROM_ROOT_TEXT_OOF",
+      "input_columns": ["C", "T"],
+      "unaffected_columns_exact_equal": ["C"],
+      "meta_state_exact_equal_rep_01_vs_rep_02": false,
+      "coef_differing_elements": 2,
+      "coef_max_absolute_difference": 1.7763568394002505e-15,
+      "intercept_differing_elements": 1,
+      "intercept_max_absolute_difference": 8.881784197001252e-16,
+      "n_iter_rep_01_rep_02": [4, 4],
+      "check_output_differing_elements": 497,
+      "check_output_max_absolute_difference": 4.440892098500626e-16,
+      "independent_fusion_nondeterminism_evidence": false
+    },
+    "apache/zeppelin|Logistic Regression|FUSION_META|P+T": {
+      "classification": "PROPAGATED_FROM_ROOT_TEXT_OOF",
+      "input_columns": ["P", "T"],
+      "unaffected_columns_exact_equal": ["P"],
+      "meta_state_exact_equal_rep_01_vs_rep_02": true,
+      "coef_differing_elements": 0,
+      "intercept_differing_elements": 0,
+      "n_iter_rep_01_rep_02": [3, 3],
+      "check_output_differing_elements": 11,
+      "check_output_max_absolute_difference": 1.1102230246251565e-16,
+      "independent_fusion_nondeterminism_evidence": false
+    },
+    "apache/zeppelin|Logistic Regression|FUSION_META|C+P+T": {
+      "classification": "PROPAGATED_FROM_ROOT_TEXT_OOF",
+      "input_columns": ["C", "P", "T"],
+      "unaffected_columns_exact_equal": ["C", "P"],
+      "meta_state_exact_equal_rep_01_vs_rep_02": true,
+      "coef_differing_elements": 0,
+      "intercept_differing_elements": 0,
+      "n_iter_rep_01_rep_02": [4, 4],
+      "check_output_differing_elements": 3,
+      "check_output_max_absolute_difference": 5.551115123125783e-17,
+      "independent_fusion_nondeterminism_evidence": false
+    }
+  },
+  "negative_control": {
+    "logical_id": "apache/zeppelin|Logistic Regression|FUSION_META|C+P",
+    "contains_text_column": false,
+    "canonical_state_exact_equal_across_repetitions": true,
+    "check_output_exact_equal_across_repetitions": true,
+    "g3_result": "G3_PASS_DETERMINISTIC"
+  },
+  "conclusion": "The three fusion failures are fully explained by propagation of the root rep_02 TEXT OOF probability-column difference; persisted evidence shows no independent fusion cause."
+}
