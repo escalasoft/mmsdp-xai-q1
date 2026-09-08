@@ -1,0 +1,49 @@
+{
+  "Git_provenance": {
+    "filesystem_mtime_proves_generation_order": false,
+    "method": "Git metadata only; neither historical file payload nor current mtime read",
+    "records": [
+      {
+        "HEAD_tree_entry": "100644 blob 64dfe790faefade81e05576b97af308037414c7c\taudits/q1-primary-xai-e1-input-e2-reference-resolution/1.0.0/prospective_resolution_policy.json\n",
+        "change_commits": [
+          "4572ec9a6e231996df72f0aa3ec5e7bd9ffec14b"
+        ],
+        "first_commit_tree_entry": "100644 blob 64dfe790faefade81e05576b97af308037414c7c\taudits/q1-primary-xai-e1-input-e2-reference-resolution/1.0.0/prospective_resolution_policy.json\n",
+        "history_exact": "4572ec9a6e231996df72f0aa3ec5e7bd9ffec14b 89fe7e1c2da425ea63427d1d699d6f8a531e8c6f 2026-09-07 23:41:08 -0500 Sprint 10.8.2.56.2: establish Q1-viable alternative primary XAI design\n",
+        "path": "audits/q1-primary-xai-e1-input-e2-reference-resolution/1.0.0/prospective_resolution_policy.json"
+      },
+      {
+        "HEAD_tree_entry": "100644 blob 2fa5833e22c4671574e0fdf967dca5464302e9bc\taudits/q1-primary-xai-e1-input-e2-reference-resolution/1.0.0/e2_reference_means.jsonl\n",
+        "change_commits": [
+          "4572ec9a6e231996df72f0aa3ec5e7bd9ffec14b"
+        ],
+        "first_commit_tree_entry": "100644 blob 2fa5833e22c4671574e0fdf967dca5464302e9bc\taudits/q1-primary-xai-e1-input-e2-reference-resolution/1.0.0/e2_reference_means.jsonl\n",
+        "history_exact": "4572ec9a6e231996df72f0aa3ec5e7bd9ffec14b 89fe7e1c2da425ea63427d1d699d6f8a531e8c6f 2026-09-07 23:41:08 -0500 Sprint 10.8.2.56.2: establish Q1-viable alternative primary XAI design\n",
+        "path": "audits/q1-primary-xai-e1-input-e2-reference-resolution/1.0.0/e2_reference_means.jsonl"
+      }
+    ]
+  },
+  "R1_amendment_used_for_this_review": false,
+  "assertion": "test_q1_primary_xai_e1_e2_resolution.py::test_decision_frozen_before_mean",
+  "bounded_limitation": "The recorded timestamp failure remains a historical provenance limitation, not proof of invalid E2 values. It is not a protocol-definition blocker for this unexecuted prospective E1 freeze. No historical chronology claim is permitted.",
+  "checks": {
+    "both_files_unchanged_since_joint_introduction": true,
+    "future_protocol_unexecuted": true,
+    "historical_tracked_evidence_unchanged": true,
+    "prospective_pre_attribution_gates_retained": true
+  },
+  "disposition": "PASS_WITH_NONSCIENTIFIC_LIMITATION",
+  "future_scientific_requirement": "Persist explicit event/protocol digests before future population selection/attribution; never substitute mtime for prospective governance",
+  "historical_generation_order": "NOT_PROVEN; neither filesystem mtime nor same-commit trees establish within-commit event order",
+  "original_assertion_redefined_as_PASS": false,
+  "original_failure_preserved": [
+    {
+      "blocking": "Recorded unresolved historical assertion; does not authorize rewriting the protocol or parent",
+      "finding": "prospective_resolution_policy.json mtime_ns=1788842959590101819 is not earlier than e2_reference_means.jsonl mtime_ns=1788842959524103472",
+      "interpretation": "Checkout filesystem timestamps fail historical ordering assertion. Git does not preserve original file mtimes; no files retimed and no new execution performed. Historical chronology not independently re-proved by this check.",
+      "test": "test_q1_primary_xai_e1_e2_resolution.py::test_decision_frozen_before_mean"
+    }
+  ],
+  "scientific_relevance_boundary": "The failed filesystem test concerns historical E2 reference-file write order. R2 does not validate that historical order or recompute/use row-level E2 values. Future E1 population, fidelity, scale and authorization definitions are immutable and still precede any authorized E1 execution.",
+  "unknown_or_additional_order_failures": "BLOCKED; this adjudication applies only to the recorded test and exact two paths"
+}

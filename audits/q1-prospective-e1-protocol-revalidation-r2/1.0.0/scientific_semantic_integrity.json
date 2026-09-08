@@ -1,0 +1,109 @@
+{
+  "R1_evidence_references": {
+    "SPRINT56_1_XAI_RUNTIME_SMOKE_REPORT.md": {
+      "HEAD_blob": "b2f9328827f8e4db232b06406510e75c8b39f047",
+      "HEAD_match": true,
+      "manifest_expected_sha256": "78a70e2d7546c3a3cec11ca5d02fc63cb7a5c1c00c746ea9016ed5561d6701e3",
+      "manifest_match": true,
+      "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/SPRINT56_1_XAI_RUNTIME_SMOKE_REPORT.md",
+      "sha256": "78a70e2d7546c3a3cec11ca5d02fc63cb7a5c1c00c746ea9016ed5561d6701e3"
+    },
+    "determinism_smoke.json": {
+      "HEAD_blob": "055c8caaf01e418d1832d47d150b6e60553efd1f",
+      "HEAD_match": true,
+      "manifest_expected_sha256": "1e9a4fb67c90023b8b1fd95c4de9dac0cd1194769e7edfa00f7a61e4ade7a026",
+      "manifest_match": true,
+      "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/determinism_smoke.json",
+      "sha256": "1e9a4fb67c90023b8b1fd95c4de9dac0cd1194769e7edfa00f7a61e4ade7a026"
+    },
+    "implementation_provenance.json": {
+      "HEAD_blob": "05ae2748c81defea7ec391d49937f17b2d58c918",
+      "HEAD_match": true,
+      "manifest_expected_sha256": "113994c7361d93c1c08d80f075e801e938f69ab12f2b166d24f9c996ee9a51f6",
+      "manifest_match": true,
+      "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/implementation_provenance.json",
+      "sha256": "113994c7361d93c1c08d80f075e801e938f69ab12f2b166d24f9c996ee9a51f6"
+    },
+    "postexecution_integrity.json": {
+      "HEAD_blob": "3fb5d9f3075e3df326d95b876a1bc2333766f7e8",
+      "HEAD_match": true,
+      "manifest_expected_sha256": "9ad6816a56ed1d24db3527d3d5634df020d42ec2cd355e345f855de0625d477d",
+      "manifest_match": true,
+      "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/postexecution_integrity.json",
+      "sha256": "9ad6816a56ed1d24db3527d3d5634df020d42ec2cd355e345f855de0625d477d"
+    },
+    "predictive_inventory_after.json": {
+      "HEAD_blob": "ab85f756c9d0ff6a0748685aefd51a739ee41e45",
+      "HEAD_match": true,
+      "manifest_expected_sha256": "3391e8106a2447f228f94345adfa58ed79f9d34a2a6980d8c0c35d2e575ef4c2",
+      "manifest_match": true,
+      "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/predictive_inventory_after.json",
+      "sha256": "3391e8106a2447f228f94345adfa58ed79f9d34a2a6980d8c0c35d2e575ef4c2"
+    },
+    "predictive_inventory_before.json": {
+      "HEAD_blob": "91cbbc3287ed01d815485a1e2120e86cb371a2da",
+      "HEAD_match": true,
+      "manifest_expected_sha256": "05a0a46c7f2109983b3ccc52bfafb0b917806233daa338b5489047f1ac85678b",
+      "manifest_match": true,
+      "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/predictive_inventory_before.json",
+      "sha256": "05a0a46c7f2109983b3ccc52bfafb0b917806233daa338b5489047f1ac85678b"
+    },
+    "preexecution_integrity.json": {
+      "HEAD_blob": "4746bb26d1185a0cc57c6de0a934da81d24264b9",
+      "HEAD_match": true,
+      "manifest_expected_sha256": "c3b4549dd9052bf53ecee5c03d14866079e4685db8ad530b27a76bfab3c0ca75",
+      "manifest_match": true,
+      "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/preexecution_integrity.json",
+      "sha256": "c3b4549dd9052bf53ecee5c03d14866079e4685db8ad530b27a76bfab3c0ca75"
+    },
+    "runtime_governance_counters.json": {
+      "HEAD_blob": "4c38790d46522b2283046f3b2200f2484c953bef",
+      "HEAD_match": true,
+      "manifest_expected_sha256": "0b6e8e11de25003c869282517cb6a2e9037d7fe4a66ca317a894b1d36f190bfc",
+      "manifest_match": true,
+      "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/runtime_governance_counters.json",
+      "sha256": "0b6e8e11de25003c869282517cb6a2e9037d7fe4a66ca317a894b1d36f190bfc"
+    },
+    "sprint56_1_summary.json": {
+      "HEAD_blob": "ce19286ee87463e351bc3c01928d521d7450c02c",
+      "HEAD_match": true,
+      "manifest_expected_sha256": "3d391a9b3aaa5491a5f33ea477a0b3e622d86486eb870346d2623334a1ea3015",
+      "manifest_match": true,
+      "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/sprint56_1_summary.json",
+      "sha256": "3d391a9b3aaa5491a5f33ea477a0b3e622d86486eb870346d2623334a1ea3015"
+    },
+    "validation-final-output.txt": {
+      "HEAD_blob": "fb614f4828e91ad7e86913d7fb1c9ff64d65cb9e",
+      "HEAD_match": true,
+      "manifest_expected_sha256": "7df425aa8d6d431268a827503a705f526c4bb8ae353e197ba74685f6ce3a749c",
+      "manifest_match": true,
+      "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/validation-final-output.txt",
+      "sha256": "7df425aa8d6d431268a827503a705f526c4bb8ae353e197ba74685f6ce3a749c"
+    },
+    "validation_history.json": {
+      "HEAD_blob": "8a8cfc1a85271a6da94650bd4b25700208ee6c8f",
+      "HEAD_match": true,
+      "manifest_expected_sha256": "b8a4f384cff9e0d3ebcf6ffb0be92ea86020d2f6e1815c7e5a846681db125ab3",
+      "manifest_match": true,
+      "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/validation_history.json",
+      "sha256": "b8a4f384cff9e0d3ebcf6ffb0be92ea86020d2f6e1815c7e5a846681db125ab3"
+    },
+    "validation_results.json": {
+      "HEAD_blob": "850b373c61640d260897cd7c7726fd36d8d38e3a",
+      "HEAD_match": true,
+      "manifest_expected_sha256": "ceb97a42663d1eac43a6a39192c382336140140e8c8a960520897d7b58042e9e",
+      "manifest_match": true,
+      "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/validation_results.json",
+      "sha256": "ceb97a42663d1eac43a6a39192c382336140140e8c8a960520897d7b58042e9e"
+    }
+  },
+  "independent_support": true,
+  "not_a_universal_manifest_waiver": true,
+  "provenance_limits": [
+    "Original expected bytes not recovered from reachable Git",
+    "Actor/tool/time of whitespace handling unproved",
+    "Historical within-commit generation order unproved"
+  ],
+  "scope": "audits/q1-primary-xai-runtime-smoke/1.0.0/validation-initial-output.txt",
+  "status": "PASS_WITH_PROVENANCE_AMENDMENT"
+}

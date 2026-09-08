@@ -1,0 +1,28 @@
+{
+  "E1_supply": "Within-modality top features and stability",
+  "E2_supply": "Analytical modality contributions on frozen fusion meta-logit and OOF reference",
+  "allowed_wording": "modality-level contribution co-occurred with stable feature-level attribution patterns",
+  "common_chain_required": "Exact linked row/population, base state, representation and unimodal probability to E2 inputs for empirical co-occurrence; architecture-only otherwise",
+  "forbidden_wording": [
+    "feature X caused modality Y to dominate",
+    "SHAP proves why multimodality improved",
+    "feature X explains the performance gain"
+  ],
+  "no_mathematical_composition": true,
+  "status_precedence": [
+    "BRIDGE_INSUFFICIENT_E2",
+    "BRIDGE_INSUFFICIENT_E1",
+    "BRIDGE_CONSISTENT",
+    "BRIDGE_PARTIALLY_CONSISTENT",
+    "BRIDGE_DIVERGENT"
+  ],
+  "statuses": {
+    "BRIDGE_CONSISTENT": "All strong E2 modalities contain STABLE E1 patterns",
+    "BRIDGE_DIVERGENT": "Every strong modality has UNSTABLE E1 despite complete eligible comparable evidence",
+    "BRIDGE_INSUFFICIENT_E1": "Missing eligible E1, undefined stability, inadequate population or unproved exact common chain",
+    "BRIDGE_INSUFFICIENT_E2": "Missing eligible/fidelity-complete E2 for configuration",
+    "BRIDGE_PARTIALLY_CONSISTENT": "At least one strong modality has STABLE or MIXED_STABILITY E1 but not all are STABLE"
+  },
+  "strong_modality": "Modality with maximum mean absolute E2 contribution in configuration; exact ties all retained",
+  "unit": "project x family x multimodal configuration; only included modalities"
+}

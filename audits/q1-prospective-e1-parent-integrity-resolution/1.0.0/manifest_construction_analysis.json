@@ -1,0 +1,118 @@
+{
+  "causal_candidates": [
+    {
+      "candidate": "Trailing-whitespace removal after hashing, before first commit",
+      "status": "EXACT_BYTE_TRANSFORMATION_PROVEN; ACTOR_AND_COMMAND_UNPROVED"
+    },
+    {
+      "candidate": "Stale digest copied from whitespace-preserving log",
+      "status": "CONSISTENT_WITH_BYTES; exact operation unproved"
+    },
+    {
+      "candidate": "Scientific output or PASS/FAIL changed in this log",
+      "status": "REFUTED_BY_EXACT_SHA256_WHITESPACE_ONLY_CANDIDATE"
+    },
+    {
+      "candidate": "Newline, timestamps, paths, warning/version/order changes",
+      "status": "NOT_NEEDED; exact candidate/current diff contains none"
+    },
+    {
+      "candidate": "Regeneration of the log after manifest",
+      "status": "NOT_ESTABLISHED; no execution replay authorized"
+    }
+  ],
+  "causal_limit": "Exact transformation and initial packaging inconsistency proven; no unsupported attribution to Git, an editor, hook or user. Git normally preserves spaces; storage alone is not evidence of trimming.",
+  "close_order": "Writes metadata/report then calls manifest at closure line156; also provides standalone manifest CLI stage",
+  "diagnostic_log_writer": "No dedicated target-log writer in inspected reachable source/test/scripts; log content is captured pytest stdout, but exact capture command/mode not preserved",
+  "generator": "q1_primary_xai_runtime_smoke_closure.manifest()",
+  "hashing": "q1_primary_xai_runtime_smoke.sha reads raw bytes in rb blocks; no newline/whitespace normalization",
+  "manifest_write_mode": "Path.write_text overwrite; not append",
+  "recipe": "Sorted direct child regular files; raw SHA256; entry uses p.name basename; final LF; manifest excludes itself",
+  "source_references": {
+    "src/evaluation/q1_primary_xai_runtime_smoke.py": {
+      "relevant_lines": [
+        {
+          "line": 46,
+          "text": "def sha(path):"
+        },
+        {
+          "line": 48,
+          "text": "    with Path(path).open('rb') as f:"
+        },
+        {
+          "line": 50,
+          "text": "            h.update(block)"
+        },
+        {
+          "line": 80,
+          "text": "    physical = {p.relative_to(STORE).as_posix() for p in (STORE / 'objects').rglob('*') if p.is_file()}"
+        },
+        {
+          "line": 83,
+          "text": "                for line in (STORE / 'MANIFEST.sha256').read_text().splitlines()"
+        },
+        {
+          "line": 108,
+          "text": "        paths.extend(p for p in (ROOT / 'audits' / namespace).rglob('*') if p.is_file())"
+        },
+        {
+          "line": 198,
+          "text": "    (OUT / 'requirements-xai-hashed.txt').write_text(''.join("
+        }
+      ],
+      "sha256": "b311a5292868b0a209bf736f1dff79e86512717c23614c07e6e8074cc294ce4f"
+    },
+    "src/evaluation/q1_primary_xai_runtime_smoke_closure.py": {
+      "relevant_lines": [
+        {
+          "line": 18,
+          "text": "def manifest():"
+        },
+        {
+          "line": 19,
+          "text": "    (OUT / 'MANIFEST.sha256').write_text(''.join("
+        },
+        {
+          "line": 21,
+          "text": "        if p.is_file() and p.name != 'MANIFEST.sha256'))"
+        },
+        {
+          "line": 98,
+          "text": "    validation_path = OUT / 'validation_results.json'"
+        },
+        {
+          "line": 99,
+          "text": "    validation = m.load(validation_path) if validation_path.exists() else {'status': 'PENDING_FOCUSED_TESTS'}"
+        },
+        {
+          "line": 151,
+          "text": "Validation development history is retained in `validation_history.json` and the captured test logs. Test-only corrections normalize JSON tuples/lists and restore XGBoost float32 arithmetic after JSON loading. The XGBoost additive sum also passes the original 1e-6 relative tolerance when independently recomputed in float64. No smoke execution, model, scope, version, attribution vector or tolerance was changed or rerun to obtain these test results."
+        },
+        {
+          "line": 155,
+          "text": "    (OUT / 'SPRINT56_1_XAI_RUNTIME_SMOKE_REPORT.md').write_text(text_report)"
+        },
+        {
+          "line": 156,
+          "text": "    manifest()"
+        }
+      ],
+      "sha256": "ffaa00000128424614954cd52e9684daee3579ccf7b3c39ce729d51030abd962"
+    },
+    "tests/evaluation/test_q1_primary_xai_runtime_smoke.py": {
+      "relevant_lines": [
+        {
+          "line": 195,
+          "text": "    for line in (OUT / 'MANIFEST.sha256').read_text().splitlines():"
+        },
+        {
+          "line": 199,
+          "text": "    assert set(manifest) == {p.name for p in OUT.iterdir() if p.is_file() and p.name != 'MANIFEST.sha256'}"
+        }
+      ],
+      "sha256": "ee09893429788572438290a2434e6bb3ba69aad2453a69dec5024abe6dfb6264"
+    }
+  },
+  "test_runner_writes_target": "NOT_ESTABLISHED; inspected tests read the manifest/log but do not generate target",
+  "validation_rerun": "validation_history proves initial and final test runs; says scientific smoke was not rerun. Wall-clock ordering relative to each manifest invocation not preserved"
+}

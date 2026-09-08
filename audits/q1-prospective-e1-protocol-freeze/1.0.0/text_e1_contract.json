@@ -1,0 +1,29 @@
+{
+  "allowed_wording": [
+    "associated with model prediction",
+    "contributed to the model output",
+    "received positive/negative attribution"
+  ],
+  "any_unknown": "TEXT_E1_INELIGIBLE",
+  "cross_project": "No literal token-rank averaging without demonstrated vocabulary and semantic alignment",
+  "empty_message": "Preserve frozen vectorizer behavior; no synthetic token or silent row deletion",
+  "forbidden": [
+    "developer intent",
+    "tokens cause defects",
+    "correlation grouping of tokens"
+  ],
+  "global": "Mean absolute token attribution within project/model over ALL selected rows, including zero-valued tokens",
+  "local": "Exact transformed message token contributions; retain nonzero attribution to absent tokens for centered/path-dependent methods",
+  "required_proofs": [
+    "exact frozen vocabulary",
+    "exact IDF",
+    "tokenizer and lowercasing",
+    "n-gram range",
+    "min_df/max_df/max_features/sublinear_tf/norm/token_pattern/analyzer/stop_words/encoding",
+    "final column order",
+    "predictor-vectorizer alignment",
+    "future row transformed representation availability",
+    "token identity"
+  ],
+  "semantic_categories": "Optional only with explicit versioned manual coding rubric, token-to-category map and reproducible coding audit before synthesis"
+}

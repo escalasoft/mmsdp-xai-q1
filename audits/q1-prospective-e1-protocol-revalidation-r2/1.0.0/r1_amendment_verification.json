@@ -1,0 +1,47 @@
+{
+  "conditions": {
+    "PASS_FAIL_semantics_unchanged": true,
+    "R1_resolution_exact": true,
+    "R1_validation_pass": true,
+    "T1_historical_and_T2_preserved": true,
+    "all_scientific_counters_zero": true,
+    "amendment_digest_pair_binds_original_failure": true,
+    "amendment_type_exact": true,
+    "difference_classes_exact": true,
+    "downstream_action_exact": true,
+    "historical_mutation_zero": true,
+    "independent_support": true,
+    "no_false_Git_recovery": true,
+    "no_prior_execution_authorization": true,
+    "one_target_exact": true,
+    "original_disposition_retained": true,
+    "recorded_mismatch_retained": true,
+    "scientific_result_unchanged": true,
+    "support_records_bound": true,
+    "test_count_unchanged": true
+  },
+  "excluded_from_amendment": [
+    "any other manifest mismatch",
+    "mtime/order",
+    "source provenance",
+    "model state",
+    "TEXT alignment",
+    "population source",
+    "T1/T2 boundary",
+    "scientific input provenance"
+  ],
+  "manifest": {
+    "exact_file_set": true,
+    "manifest_sha256": "a4fbf73fdd5e564e46fe02cb13e0229c7f56edb270679cf9d9c36475c5c9efab",
+    "namespace": "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0",
+    "status": "PASS",
+    "verified_file_count": 24
+  },
+  "resolution": "R1_PASS_MANIFEST_PACKAGING_INCONSISTENCY_DIAGNOSTIC_ONLY",
+  "scope": {
+    "current_sha256": "b9d17eb93ab80e96d9eae4d0d924511ed9aa23e5ce53c569274913ceb7100ab6",
+    "manifest_expected_sha256": "8c4e2582fc9bc11d2d417f8e785089eebe44c6390d13343e9200b1f639eda4de",
+    "only_artifact": "audits/q1-primary-xai-runtime-smoke/1.0.0/validation-initial-output.txt"
+  },
+  "status": "VALID"
+}

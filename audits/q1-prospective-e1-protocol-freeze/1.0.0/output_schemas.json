@@ -1,0 +1,603 @@
+{
+  "schema_version": "1.0.0",
+  "schemas": {
+    "attribution": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "algorithm_family": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "base_value": {
+          "type": "number"
+        },
+        "feature_names": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "feature_order_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "fidelity_status": {
+          "enum": [
+            "FIDELITY_PASS",
+            "FIDELITY_FAIL"
+          ]
+        },
+        "modality": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "model_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "model_output": {
+          "type": "number"
+        },
+        "population_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "preprocessing_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "project": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "protocol_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "residual": {
+          "type": "number"
+        },
+        "row_identity": {
+          "type": "string"
+        },
+        "scale": {
+          "enum": [
+            "LOGIT",
+            "POSITIVE_CLASS_PROBABILITY",
+            "NATIVE_RAW_MARGIN"
+          ]
+        },
+        "scope_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "seed": {
+          "maximum": 20260920,
+          "minimum": 20260901,
+          "type": "integer"
+        },
+        "values": {
+          "items": {
+            "type": "number"
+          },
+          "minItems": 1,
+          "type": "array"
+        }
+      },
+      "required": [
+        "scope_id",
+        "project",
+        "algorithm_family",
+        "modality",
+        "protocol_digest",
+        "model_digest",
+        "preprocessing_digest",
+        "feature_order_digest",
+        "population_digest",
+        "row_identity",
+        "seed",
+        "scale",
+        "feature_names",
+        "values",
+        "base_value",
+        "model_output",
+        "residual",
+        "fidelity_status"
+      ],
+      "type": "object"
+    },
+    "bridge": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "E2_evidence_digest": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "algorithm_family": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "configuration": {
+          "enum": [
+            "C+P",
+            "C+T",
+            "P+T",
+            "C+P+T"
+          ]
+        },
+        "continuity_label": {
+          "type": "string"
+        },
+        "feature_order_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "modality": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "model_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "population_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "preprocessing_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "project": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "protocol_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "reason": {
+          "type": "string"
+        },
+        "row_link_digest": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scope_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "BRIDGE_CONSISTENT",
+            "BRIDGE_PARTIALLY_CONSISTENT",
+            "BRIDGE_DIVERGENT",
+            "BRIDGE_INSUFFICIENT_E1",
+            "BRIDGE_INSUFFICIENT_E2"
+          ]
+        }
+      },
+      "required": [
+        "scope_id",
+        "project",
+        "algorithm_family",
+        "modality",
+        "protocol_digest",
+        "model_digest",
+        "preprocessing_digest",
+        "feature_order_digest",
+        "population_digest",
+        "configuration",
+        "row_link_digest",
+        "E2_evidence_digest",
+        "status",
+        "continuity_label",
+        "reason"
+      ],
+      "type": "object"
+    },
+    "global_feature": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "algorithm_family": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "display_name": {
+          "type": "string"
+        },
+        "feature_name": {
+          "type": "string"
+        },
+        "feature_order_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "mean_absolute": {
+          "minimum": 0,
+          "type": "number"
+        },
+        "modality": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "model_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "population_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "preprocessing_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "project": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "protocol_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "rank": {
+          "minimum": 1,
+          "type": "integer"
+        },
+        "scale": {
+          "type": "string"
+        },
+        "scope_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "signed_mean": {
+          "type": "number"
+        },
+        "support_count": {
+          "minimum": 1,
+          "type": "integer"
+        }
+      },
+      "required": [
+        "scope_id",
+        "project",
+        "algorithm_family",
+        "modality",
+        "protocol_digest",
+        "model_digest",
+        "preprocessing_digest",
+        "feature_order_digest",
+        "population_digest",
+        "feature_name",
+        "display_name",
+        "mean_absolute",
+        "signed_mean",
+        "rank",
+        "support_count",
+        "scale"
+      ],
+      "type": "object"
+    },
+    "population": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "algorithm_family": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "feature_order_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "modality": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "model_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "partition": {
+          "enum": [
+            "TRAIN",
+            "T1"
+          ]
+        },
+        "population_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "position": {
+          "minimum": 0,
+          "type": "integer"
+        },
+        "preprocessing_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "project": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "protocol_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "TRAIN_REFERENCE",
+            "GLOBAL",
+            "LOCAL"
+          ]
+        },
+        "row_identity": {
+          "type": "string"
+        },
+        "scope_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "selection_key": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        }
+      },
+      "required": [
+        "scope_id",
+        "project",
+        "algorithm_family",
+        "modality",
+        "protocol_digest",
+        "model_digest",
+        "preprocessing_digest",
+        "feature_order_digest",
+        "population_digest",
+        "partition",
+        "row_identity",
+        "selection_key",
+        "role",
+        "position"
+      ],
+      "type": "object"
+    },
+    "stability": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "algorithm_family": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "comparison_id": {
+          "type": "string"
+        },
+        "feature_order_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "metrics": {
+          "properties": {
+            "TV": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "jaccard_k10": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "jaccard_k3": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "max_absolute_difference": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "sign_agreement": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "spearman": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "jaccard_k3",
+            "jaccard_k10",
+            "spearman",
+            "sign_agreement",
+            "TV",
+            "max_absolute_difference"
+          ],
+          "type": "object"
+        },
+        "modality": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "model_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "population_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "preprocessing_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "project": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "protocol_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "STABLE",
+            "MIXED_STABILITY",
+            "UNSTABLE",
+            "INSUFFICIENT_EVIDENCE"
+          ]
+        },
+        "undefined_reasons": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "scope_id",
+        "project",
+        "algorithm_family",
+        "modality",
+        "protocol_digest",
+        "model_digest",
+        "preprocessing_digest",
+        "feature_order_digest",
+        "population_digest",
+        "comparison_id",
+        "metrics",
+        "undefined_reasons",
+        "status"
+      ],
+      "type": "object"
+    },
+    "sufficiency": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "properties": {
+        "algorithm_family": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "criterion": {
+          "enum": [
+            "exact reconstructed-state provenance",
+            "equivalence eligibility",
+            "feature-order integrity",
+            "preprocessing integrity",
+            "TRAIN background integrity",
+            "T1 foreground integrity",
+            "model-output scale integrity",
+            "fidelity",
+            "deterministic repeatability",
+            "stability",
+            "attribution completeness",
+            "project coverage",
+            "algorithm-family coverage",
+            "modality coverage",
+            "local explanation coverage",
+            "global explanation coverage",
+            "heterogeneity analysis eligibility",
+            "manuscript traceability"
+          ]
+        },
+        "evidence_reference": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "feature_order_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "modality": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "model_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "population_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "preprocessing_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "project": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "protocol_digest": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "reason": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "scope_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "PASS",
+            "PASS_WITH_LIMITATION",
+            "FAIL",
+            "NOT_APPLICABLE"
+          ]
+        }
+      },
+      "required": [
+        "scope_id",
+        "project",
+        "algorithm_family",
+        "modality",
+        "protocol_digest",
+        "model_digest",
+        "preprocessing_digest",
+        "feature_order_digest",
+        "population_digest",
+        "criterion",
+        "status",
+        "evidence_reference",
+        "reason"
+      ],
+      "type": "object"
+    }
+  },
+  "semantic_validation": [
+    "Finite numbers only",
+    "Attribution length equals ordered feature count",
+    "All row identities belong to authorized population; local subset global",
+    "Digest references resolve to immutable validated files",
+    "No row record from T2",
+    "No schema-valid record alone proves scientific eligibility"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "current_access_count": 0,
+  "forbidden_uses": [
+    "background",
+    "foreground",
+    "local",
+    "stability",
+    "figures",
+    "method selection",
+    "protocol validation"
+  ],
+  "future_budget": 0,
+  "partial_consumption": "FORBIDDEN",
+  "status": "DENY_SEALED_REVIEWER_RESERVE"
+}

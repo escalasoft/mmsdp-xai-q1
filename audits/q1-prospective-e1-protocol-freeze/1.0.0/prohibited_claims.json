@@ -1,0 +1,25 @@
+{
+  "allowed": [
+    "feature association with model output",
+    "relative within-scope attribution importance",
+    "model/project-specific explanatory patterns",
+    "cross-model disagreement",
+    "cross-project heterogeneity",
+    "analytical fusion modality contribution",
+    "architectural continuity",
+    "measured explanation stability",
+    "descriptive cross-level co-occurrence when linked"
+  ],
+  "prohibited": [
+    "causal defect causes",
+    "causal developer behavior",
+    "semantic intent from TEXT",
+    "universal software-defect mechanisms",
+    "universal feature superiority",
+    "universal multimodal superiority",
+    "reconstructed states are original Sprint54 models",
+    "unvalidated end-to-end E1 decomposition of E2",
+    "SHAP proves performance improvement",
+    "largest E1 feature caused largest E2 modality contribution"
+  ]
+}

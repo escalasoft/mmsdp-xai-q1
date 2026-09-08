@@ -1,0 +1,38 @@
+{
+  "denominator": "All frozen expected foreground rows in every required repetition; failed/omitted rows never removed",
+  "inherited_exact": {
+    "TreeSHAP": {
+      "approximate": "FORBIDDEN",
+      "failure": "XAI_FAIL_ADDITIVITY",
+      "identity": "base_value + sum(SHAP_values) = model_output_on_frozen_scale",
+      "residual_bound": "abs(residual) <= 1e-6 * (1 + abs(model_output))"
+    },
+    "analytical_LR": {
+      "failure": "XAI_FAIL_FIDELITY",
+      "identity": "eta = intercept + sum(feature_contributions)",
+      "residual_bound": "abs(residual) <= 1e-10 * (1 + abs(eta))",
+      "sigmoid_bound": "abs(sigmoid(eta) - model_probability) <= 1e-10"
+    },
+    "global": {
+      "aggregation": "MEAN_ABSOLUTE_ATTRIBUTION_ON_FROZEN_FOREGROUND",
+      "also_store": [
+        "SIGNED_MEAN_ATTRIBUTION",
+        "RANK",
+        "SUPPORT_COUNT"
+      ],
+      "reconstruction_tolerance": 1e-12
+    },
+    "schema_version": "q1-xai-runtime-freeze-1.0.0"
+  },
+  "sampled_fidelity_only": "FORBIDDEN",
+  "scope_admission": "Only FIDELITY_PASS; any unexplained fraction >0 fails scientific eligibility",
+  "statuses": {
+    "FIDELITY_FAIL": "Any attempted row fails bound, raises error or yields nonfinite attribution/output",
+    "FIDELITY_MIXED": "Attempted rows pass but expected rows missing; diagnostic only, scope inadmissible",
+    "FIDELITY_NOT_TESTED": "Zero attempted rows",
+    "FIDELITY_PASS": "Every expected row attempted and passes finite residual bounds"
+  },
+  "threshold_origin": "56.3A strict completion rule; no numerical tolerance changes",
+  "tolerance_relaxation": "FORBIDDEN",
+  "unexplained_fraction_threshold": 0.0
+}

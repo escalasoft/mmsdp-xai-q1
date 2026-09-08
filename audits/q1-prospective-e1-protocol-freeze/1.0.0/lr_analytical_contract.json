@@ -1,0 +1,31 @@
+{
+  "class_semantics": "Positive observed benchmark class 1; exact stored class order required",
+  "coefficient_magnitude": "DIAGNOSTIC_ONLY",
+  "eta": "intercept + sum(beta_j*x_j)",
+  "fidelity": {
+    "failure": "XAI_FAIL_FIDELITY",
+    "identity": "eta = intercept + sum(feature_contributions)",
+    "residual_bound": "abs(residual) <= 1e-10 * (1 + abs(eta))",
+    "sigmoid_bound": "abs(sigmoid(eta) - model_probability) <= 1e-10"
+  },
+  "identity": "phi_0 + sum(phi_j) = eta(x)",
+  "mu_j": "Arithmetic mean over exact transformed selected TRAIN reference; no refit",
+  "phi_0": "intercept + sum(beta_j*mu_j)",
+  "phi_j": "beta_j*(x_j-mu_j)",
+  "primary_global": "mean_i(abs(phi_j(x_i)))",
+  "primary_method": {
+    "coefficient_magnitude": "DIAGNOSTIC_ONLY",
+    "global": "MEAN_ABSOLUTE_CENTERED_LOGIT_CONTRIBUTION",
+    "local": "EXACT_ANALYTICAL_LOGIT_DECOMPOSITION",
+    "optional_cross_check": "LINEARSHAP_ONLY_AFTER_SEPARATE_AUTHORIZATION_AND_NUMERICAL_EQUIVALENCE",
+    "primary_method": "ANALYTICAL_LINEAR_LOGIT_DECOMPOSITION",
+    "scale": "LOGIT"
+  },
+  "scale": "LOGIT",
+  "secondary": [
+    "sign consistency",
+    "rank stability",
+    "coefficient sign",
+    "contribution distribution"
+  ]
+}

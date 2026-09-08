@@ -1,0 +1,233 @@
+{
+  "E1": "feature -> unimodal-model contribution",
+  "E1_role": "COMPLEMENTARY_FEATURE_LAYER",
+  "E2": "unimodal probability -> fused meta-logit contribution",
+  "E2_role": "PRIMARY_EXPLANATORY_CORE",
+  "chain": [
+    "original feature",
+    "unimodal representation",
+    "unimodal model",
+    "unimodal probability",
+    "fusion meta-model",
+    "multimodal prediction"
+  ],
+  "label_assignment": "Architectural label is design-level; directional/project/model labels require future evidence and may accompany it; no empirical label assigned now",
+  "labels": {
+    "CONTINUITY_ARCHITECTURAL": "Same CODE/PROCESS/TEXT definitions and late-fusion hierarchy documented; distinct reconstructed/historical states and populations disclosed",
+    "CONTINUITY_DIRECTIONAL": "Architectural continuity plus exact same-row/state/probability linkage, passing E1/E2 fidelity and stable within-scale directional co-occurrence; descriptive only",
+    "CONTINUITY_MODEL_DEPENDENT": "Directional conditions vary by family within an aligned project/population; all families shown",
+    "CONTINUITY_NOT_ESTABLISHED": "Architecture/semantics incompatible or required empirical linkage absent for the proposed claim",
+    "CONTINUITY_PROJECT_SPECIFIC": "Directional conditions hold only in named projects; disclose all other projects and failures"
+  },
+  "parent_exact_link_contract": {
+    "candidate_record_schema": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "continuity_classification": {
+                "const": "DIRECT"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "algorithm_family": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "calibration_identity": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "commit_identity": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "e1_predictor_identity": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "e1_preprocessing_identity": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "e2_base_predictor_identity": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "e2_meta_model_identity": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "modality": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "modality_probability_identity": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "partition": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "project": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "row_identity": {
+                "minLength": 1,
+                "type": "string"
+              }
+            }
+          }
+        }
+      ],
+      "properties": {
+        "algorithm_family": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "calibration_identity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "commit_identity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "continuity_classification": {
+          "enum": [
+            "DIRECT",
+            "NESTED",
+            "ARCHITECTURAL",
+            "CONCEPTUAL_ONLY",
+            "NONE"
+          ]
+        },
+        "e1_predictor_identity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "e1_preprocessing_identity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "e2_base_predictor_identity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "e2_meta_model_identity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "modality": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "modality_probability_identity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "partition": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "project": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "row_identity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "project",
+        "row_identity",
+        "commit_identity",
+        "partition",
+        "algorithm_family",
+        "modality",
+        "e1_predictor_identity",
+        "e1_preprocessing_identity",
+        "modality_probability_identity",
+        "e2_base_predictor_identity",
+        "e2_meta_model_identity",
+        "calibration_identity",
+        "continuity_classification"
+      ],
+      "type": "object"
+    },
+    "class_definitions": {
+      "ARCHITECTURAL": "Same frozen modality semantics and late-fusion architecture; distinct study rows/models labelled explicitly",
+      "CONCEPTUAL_ONLY": "Same modality/family concepts without an exact or validated architectural empirical chain",
+      "DIRECT": "Same exact local chain and quantities, complete proof",
+      "NESTED": "Global only, proved nested population with common linked states, adequate coverage and no subset bias",
+      "NONE": "Material mismatch or missing even conceptual linkage"
+    },
+    "composite_figure": "Show linked E1 and E2 panels with explicit scales and baseline definitions; arrows denote provenance, not equality of additive feature bars to fusion-logit bars. No toy numeric examples are results.",
+    "cross_level_scale_bridge": {
+      "LR": "eta_m -> sigmoid(eta_m) = p_m -> beta_m*(p_m-mu_m)",
+      "RF": "Positive-class base probability -> beta_m*(p_m-mu_m)",
+      "boosted_trees": "Objective-governed raw margin -> exact positive-class link -> beta_m*(p_m-mu_m)",
+      "warning": "E1 logit/margin feature attributions cannot be multiplied by beta or summed as the E2 modality attribution without a separately justified compositional method. Nonlinear probability links change the quantity. E1 intercept/feature baseline and E2 OOF baseline differ."
+    },
+    "exact_local_requirements": [
+      "same_project",
+      "same_row",
+      "same_commit",
+      "same_partition_population",
+      "same_algorithm",
+      "same_modality",
+      "same_base_predictor",
+      "same_preprocessing",
+      "same_probability_input",
+      "same_fusion",
+      "calibration_link_exact"
+    ],
+    "global_requirements": [
+      "same or proved nested population",
+      "adequate projects and families",
+      "stable direction supported by actual future evidence",
+      "no conflicting subset bias"
+    ],
+    "historical_global_dominance_chain": "NOT_SUPPORTED;80 TRAIN rows cannot explain global T1 modality rankings",
+    "missing_is_not_true": true,
+    "same_predictor_rule": "Local DIRECT requires the exact predictor identity, never merely a scientifically linked replacement. Global nested claims require separately proved nesting and state/output linkage.",
+    "unsupported_local_action": "Separate population-level E2 and labelled complementary E1 illustration; no shared-commit title or merged waterfall"
+  },
+  "prohibited": [
+    "propagate E1 SHAP through E2",
+    "sum heterogeneous base-model scales",
+    "largest E1 feature necessarily responsible for largest E2 modality contribution",
+    "splice prospective E1 and historical E2 into an exact shared-row chain"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "aggregation": {
+    "E1_Q1_NOT_READY": "No admissible scope or common governance/provenance violation",
+    "E1_Q1_PARTIAL_ONLY": "Some hard-gate-passing evidence but minimum coverage/synthesis or required outputs incomplete",
+    "E1_Q1_READY": "All 168 candidate scopes satisfy every applicable criterion; all modalities/families/projects covered; complete local/global and heterogeneity outputs",
+    "E1_Q1_READY_WITH_PREDECLARED_LIMITATIONS": "All admitted scopes pass hard gates; minimum limited synthesis coverage met for every claimed modality; deficits/instability disclosed without universal claims"
+  },
+  "coverage_minimum_for_limited_synthesis": ">=3 projects each with >=3 comparable families per claimed modality; cross-project stability still requires inherited >=11 pass and <=1 reversal",
+  "criteria": [
+    "exact reconstructed-state provenance",
+    "equivalence eligibility",
+    "feature-order integrity",
+    "preprocessing integrity",
+    "TRAIN background integrity",
+    "T1 foreground integrity",
+    "model-output scale integrity",
+    "fidelity",
+    "deterministic repeatability",
+    "stability",
+    "attribution completeness",
+    "project coverage",
+    "algorithm-family coverage",
+    "modality coverage",
+    "local explanation coverage",
+    "global explanation coverage",
+    "heterogeneity analysis eligibility",
+    "manuscript traceability"
+  ],
+  "current_assessment": "NOT_EXECUTED; no E1_Q1_READY disposition in 56.3A",
+  "hard_gates": [
+    "exact reconstructed-state provenance",
+    "equivalence eligibility",
+    "feature-order integrity",
+    "preprocessing integrity",
+    "TRAIN background integrity",
+    "T1 foreground integrity",
+    "model-output scale integrity",
+    "fidelity",
+    "deterministic repeatability",
+    "attribution completeness",
+    "manuscript traceability"
+  ],
+  "matrix_rule": "PASS requires criterion fully met; PASS_WITH_LIMITATION only predeclared coverage/stability limits; FAIL for unmet required gate; NOT_APPLICABLE only logically absent diagnostic, never missing data",
+  "matrix_statuses": [
+    "PASS",
+    "PASS_WITH_LIMITATION",
+    "FAIL",
+    "NOT_APPLICABLE"
+  ],
+  "no_promotion_by_explainer_success": true,
+  "scope_minimum": ">=3 global rows; >=1 local row per nonempty predicted class (max8); exact small-population counts disclosed"
+}

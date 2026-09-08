@@ -1,0 +1,11 @@
+{
+  "cannot": [
+    "redefine primary universe",
+    "replace poor/heterogeneous E1 findings",
+    "select on XAI outcomes"
+  ],
+  "inferential_policy": "Descriptive effects, rank/sign/distribution agreement and coverage; any inference needs separate justified freeze",
+  "primary": "PERFORMANCE_INDEPENDENT_SCOPE_COMPLETE_ELIGIBLE_UNIVERSE",
+  "secondary": "Only after primary E1 complete, use stored frozen PR-AUC ranking; ties keep all; no metric recomputation",
+  "secondary_label": "POST_HOC_BEST_OBSERVED_MODEL_ANALYSIS"
+}

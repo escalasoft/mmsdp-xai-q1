@@ -1,0 +1,7 @@
+{
+  "amendment_type": "PROVENANCE_AMENDMENT_NOT_MANIFEST_CORRECTION",
+  "objective": "Parent diagnostic byte provenance only",
+  "resolution": "R1_PASS_MANIFEST_PACKAGING_INCONSISTENCY_DIAGNOSTIC_ONLY",
+  "scientific_execution_authorized": false,
+  "sprint": "10.8.2.56.3A-R1"
+}

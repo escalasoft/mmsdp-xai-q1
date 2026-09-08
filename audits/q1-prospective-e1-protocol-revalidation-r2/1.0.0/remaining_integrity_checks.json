@@ -1,0 +1,226 @@
+{
+  "checks": [
+    {
+      "basis": "Current source/test bytes match the sealed original implementation digest",
+      "current_sha256": "27286a945a26e359aa02fce4ec3d348e4251716994e7cd7832398c9d3557ea78",
+      "expected_sha256": "27286a945a26e359aa02fce4ec3d348e4251716994e7cd7832398c9d3557ea78",
+      "status": "PASS_PROVEN",
+      "test": "implementation_provenance:src/evaluation/q1_prospective_e1_protocol_freeze.py"
+    },
+    {
+      "basis": "Current source/test bytes match the sealed original implementation digest",
+      "current_sha256": "69e1c0c441bdc25a1cb07138cdbb7abdce3477eb8a5c6a21696d3ffeba8290cd",
+      "expected_sha256": "69e1c0c441bdc25a1cb07138cdbb7abdce3477eb8a5c6a21696d3ffeba8290cd",
+      "status": "PASS_PROVEN",
+      "test": "implementation_provenance:tests/evaluation/test_q1_prospective_e1_protocol_freeze.py"
+    },
+    {
+      "basis": "Current source/test bytes match the sealed original implementation digest",
+      "current_sha256": "9cb8ba5c6fe7e162a519e5875d1a06adf030209fa2f87e2bf923331c36350781",
+      "expected_sha256": "9cb8ba5c6fe7e162a519e5875d1a06adf030209fa2f87e2bf923331c36350781",
+      "status": "PASS_PROVEN",
+      "test": "implementation_provenance:tests/evaluation/run_q1_prospective_e1_governance_regressions.py"
+    },
+    {
+      "basis": "Current source/test bytes match the sealed original implementation digest",
+      "current_sha256": "6d4e60b2287acf23c346e32d85416b187e7ea21ae590d6ca4b8d65d9cc00677b",
+      "expected_sha256": "6d4e60b2287acf23c346e32d85416b187e7ea21ae590d6ca4b8d65d9cc00677b",
+      "status": "PASS_PROVEN",
+      "test": "implementation_provenance:src/evaluation/q1_prospective_e1_parent_integrity_resolution.py"
+    },
+    {
+      "basis": "Current source/test bytes match the sealed original implementation digest",
+      "current_sha256": "bf57b9ac307d7c02eb8c547aaa47f21a30ad8dd50c89f8c53912cade27df82ac",
+      "expected_sha256": "bf57b9ac307d7c02eb8c547aaa47f21a30ad8dd50c89f8c53912cade27df82ac",
+      "status": "PASS_PROVEN",
+      "test": "implementation_provenance:tests/evaluation/test_q1_prospective_e1_parent_integrity_resolution.py"
+    },
+    {
+      "basis": "Specific byte mismatch retained; semantic acceptance through exact R1 amendment",
+      "original_failure": {
+        "blocking": true,
+        "finding": {
+          "actual_sha256": "b9d17eb93ab80e96d9eae4d0d924511ed9aa23e5ce53c569274913ceb7100ab6",
+          "manifest_sha256": "8c4e2582fc9bc11d2d417f8e785089eebe44c6390d13343e9200b1f639eda4de",
+          "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/validation-initial-output.txt",
+          "scope": "Historical validation log; original bytes not recoverable from current manifest alone",
+          "status": "FAIL_MANIFEST_MISMATCH"
+        },
+        "interpretation": "Committed parent validation log differs from its manifest and snapshot. This sprint did not change it. Original reason for discrepancy unproved; no hash repair or integrity waiver.",
+        "test": "test_q1_primary_xai_alternative_design.py::test_parent_preservation"
+      },
+      "status": "PASS_PROVEN",
+      "test": "test_q1_primary_xai_alternative_design.py::test_parent_preservation"
+    },
+    {
+      "basis": "Separate R2 relevance review; not covered by R1 amendment",
+      "original_failure": {
+        "blocking": "Recorded unresolved historical assertion; does not authorize rewriting the protocol or parent",
+        "finding": "prospective_resolution_policy.json mtime_ns=1788842959590101819 is not earlier than e2_reference_means.jsonl mtime_ns=1788842959524103472",
+        "interpretation": "Checkout filesystem timestamps fail historical ordering assertion. Git does not preserve original file mtimes; no files retimed and no new execution performed. Historical chronology not independently re-proved by this check.",
+        "test": "test_q1_primary_xai_e1_e2_resolution.py::test_decision_frozen_before_mean"
+      },
+      "status": "PASS_WITH_NONSCIENTIFIC_LIMITATION",
+      "test": "test_q1_primary_xai_e1_e2_resolution.py::test_decision_frozen_before_mean"
+    }
+  ],
+  "contract_checks": {
+    "E2_E3_architecture": {
+      "scientific": true,
+      "status": "PASS"
+    },
+    "E2_continuity": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "LIME_counterfactual_excluded": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "LR_method": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "T2_sealed": {
+      "scientific": true,
+      "status": "PASS"
+    },
+    "TEXT_alignment": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "all_new_original_counters_zero": {
+      "scientific": true,
+      "status": "PASS"
+    },
+    "authorization_closed": {
+      "scientific": true,
+      "status": "PASS"
+    },
+    "bridge_separate": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "claims": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "correlated_features": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "feature_registry": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "fidelity_tolerances": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "figure_families": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "foreground_label_blind": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "heterogeneity": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "historical_counters": {
+      "scientific": true,
+      "status": "PASS"
+    },
+    "historical_recovery_closed": {
+      "scientific": true,
+      "status": "PASS"
+    },
+    "input_provenance_still_required": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "lgb_exact_tree": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "local_subset_cap": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "missing_value_policy": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "original_scope_counts": {
+      "scientific": true,
+      "status": "PASS"
+    },
+    "persistence": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "predictive_state": {
+      "scientific": true,
+      "status": "PASS"
+    },
+    "primary_secondary": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "query_budgets": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "rf_exact_tree": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "runtime_frozen": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "scientific_sufficiency": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "scope_equivalence_no_execution": {
+      "scientific": true,
+      "status": "PASS"
+    },
+    "scope_identity_unique": {
+      "scientific": true,
+      "status": "PASS"
+    },
+    "scope_projects_families": {
+      "scientific": true,
+      "status": "PASS"
+    },
+    "scope_status_no_promotion": {
+      "scientific": true,
+      "status": "PASS"
+    },
+    "stability": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "t1_global_foreground_policy": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "train_background_policy": {
+      "scientific": false,
+      "status": "PASS"
+    },
+    "unimodal_scope_only": {
+      "scientific": true,
+      "status": "PASS"
+    },
+    "xgb_exact_tree": {
+      "scientific": false,
+      "status": "PASS"
+    }
+  },
+  "no_scientific_requirement_waived": true
+}

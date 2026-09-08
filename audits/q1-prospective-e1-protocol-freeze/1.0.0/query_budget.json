@@ -1,0 +1,46 @@
+{
+  "LR": "Analytical row count, not inflated prediction queries; validation queries counted only when actually made",
+  "additional_background_model_queries": 0,
+  "current_all_scientific_budgets": 0,
+  "extension": "Separate prospective human authorization; never auto-expand",
+  "future_direct_model_row_evaluations_max": 5120,
+  "future_per_scope": {
+    "T1_global_foreground_unique_rows_max": 256,
+    "T1_local_cases_max": 8,
+    "TRAIN_background_unique_rows_max": 256,
+    "fidelity_checks": "EVERY_EXPLAINED_ROW",
+    "local_cases_are_foreground_subset": true,
+    "primary_attribution_row_evaluations_max_including_stability": 5120,
+    "stability_repetitions": 20,
+    "unique_model_input_rows_max": 512
+  },
+  "inherited_exact": {
+    "T2_queries": 0,
+    "budget_extension": "REQUIRES_NEW_PROSPECTIVE_HUMAN_AUTHORIZATION",
+    "execution_in_freeze": false,
+    "per_scope": {
+      "T1_global_foreground_unique_rows_max": 256,
+      "T1_local_cases_max": 8,
+      "TRAIN_background_unique_rows_max": 256,
+      "fidelity_checks": "EVERY_EXPLAINED_ROW",
+      "local_cases_are_foreground_subset": true,
+      "primary_attribution_row_evaluations_max_including_stability": 5120,
+      "stability_repetitions": 20,
+      "unique_model_input_rows_max": 512
+    },
+    "schema_version": "q1-xai-runtime-freeze-1.0.0"
+  },
+  "no_extra_queries_for_local_subset": true,
+  "record": [
+    "explainer calls",
+    "rows supplied including repeats",
+    "unique TRAIN rows",
+    "unique T1 rows",
+    "direct model calls",
+    "direct model row evaluations",
+    "measurable internal evaluations",
+    "analytical row count",
+    "cached/reused outputs"
+  ],
+  "tree_internal_evaluations": "Record measured count or null with measurement limitation; unknown is never zero; distinguish row inputs and traversal operations"
+}

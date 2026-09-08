@@ -1,0 +1,268 @@
+{
+  "empirical_E1_Q1_readiness_claimed": false,
+  "items": [
+    {
+      "checks": [
+        "LR_method",
+        "rf_exact_tree",
+        "xgb_exact_tree",
+        "lgb_exact_tree",
+        "LIME_counterfactual_excluded",
+        "runtime_frozen"
+      ],
+      "id": "A",
+      "item": "explanation methods",
+      "limitation": null,
+      "meaning": "Protocol definition readiness only, not executed scientific sufficiency",
+      "source_files": {
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/e1_method_contract.json": "796037890733fca8730b4f049cb1288b15005bedfe1346b93335cfbbe742859d"
+      },
+      "status": "FROZEN_PASS"
+    },
+    {
+      "checks": [
+        "LR_method",
+        "rf_exact_tree",
+        "xgb_exact_tree",
+        "lgb_exact_tree"
+      ],
+      "id": "B",
+      "item": "output scales",
+      "limitation": null,
+      "meaning": "Protocol definition readiness only, not executed scientific sufficiency",
+      "source_files": {
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/lgb_treeshap_contract.json": "6775aebb30ea3a1dc13a1603e35fda8efa2a2df801d903173784cfa9889249af",
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/lr_analytical_contract.json": "3750577cf1fecb4a5bce5ae3fe74780345a1648e778bb363d3edb5a0bc765060",
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/rf_treeshap_contract.json": "9734cecc1b8ffd80df7307f70de0b9df49b43e0fbc3ade235a090f161d176850",
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/xgb_treeshap_contract.json": "165e0985bbf99441c32f096237ef1e012ac8578b3c7babf568a5d7b6efd180f9"
+      },
+      "status": "FROZEN_PASS"
+    },
+    {
+      "checks": [
+        "train_background_policy"
+      ],
+      "id": "C",
+      "item": "background policy",
+      "limitation": null,
+      "meaning": "Protocol definition readiness only, not executed scientific sufficiency",
+      "source_files": {
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/train_background_policy.json": "7f7e0082ceae60685c9d217df465fc034171c5a081862135ede2b3b5f3d4dc45"
+      },
+      "status": "FROZEN_PASS"
+    },
+    {
+      "checks": [
+        "t1_global_foreground_policy",
+        "foreground_label_blind"
+      ],
+      "id": "D",
+      "item": "foreground policy",
+      "limitation": null,
+      "meaning": "Protocol definition readiness only, not executed scientific sufficiency",
+      "source_files": {
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/t1_global_foreground_policy.json": "9c3f589e0d77cdd0b1d9f0debf8ed0e9fa283146932a172b4fc84dd20ce15d5c"
+      },
+      "status": "FROZEN_PASS"
+    },
+    {
+      "checks": [
+        "local_subset_cap"
+      ],
+      "id": "E",
+      "item": "local case policy",
+      "limitation": null,
+      "meaning": "Protocol definition readiness only, not executed scientific sufficiency",
+      "source_files": {
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/local_case_selection_policy.json": "20c542f76bf723593ad52ec3dc50202b7f5ac4a390e0d1a655f6c2a9df41f83b"
+      },
+      "status": "FROZEN_PASS"
+    },
+    {
+      "checks": [
+        "query_budgets"
+      ],
+      "id": "F",
+      "item": "query budgets",
+      "limitation": null,
+      "meaning": "Protocol definition readiness only, not executed scientific sufficiency",
+      "source_files": {
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/query_budget.json": "a31694d283c39690a7ba7f71730ddb31534635ecc80407cd248045ed5c27395f"
+      },
+      "status": "FROZEN_PASS"
+    },
+    {
+      "checks": [
+        "fidelity_tolerances"
+      ],
+      "id": "G",
+      "item": "fidelity tolerances",
+      "limitation": null,
+      "meaning": "Protocol definition readiness only, not executed scientific sufficiency",
+      "source_files": {
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/fidelity_contract.json": "2048cfa3715fde991de5cd12f64ec26b1a7594a69fc7dbb74203f744137435b6"
+      },
+      "status": "FROZEN_PASS"
+    },
+    {
+      "checks": [
+        "stability"
+      ],
+      "id": "H",
+      "item": "stability protocol",
+      "limitation": null,
+      "meaning": "Protocol definition readiness only, not executed scientific sufficiency",
+      "source_files": {
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/stability_contract.json": "df534173e4128cb777a3b5ba57bd61cf9e59809aa92dc125a1e74a6d5ab81afe"
+      },
+      "status": "FROZEN_PASS"
+    },
+    {
+      "checks": [
+        "correlated_features",
+        "feature_registry"
+      ],
+      "id": "I",
+      "item": "correlated-feature handling",
+      "limitation": null,
+      "meaning": "Protocol definition readiness only, not executed scientific sufficiency",
+      "source_files": {
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/code_process_feature_contract.json": "77a90fc08938bab074c25bce750a38e2365f2b2ca68d8766b0cf3cc276a753b4",
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/correlated_feature_policy.json": "dcd9cf480cb8d230acf768a2a9b262453a490004f7cc1b2f78fc600131f2fca7"
+      },
+      "status": "FROZEN_PASS"
+    },
+    {
+      "checks": [
+        "heterogeneity"
+      ],
+      "id": "J",
+      "item": "heterogeneity policy",
+      "limitation": null,
+      "meaning": "Protocol definition readiness only, not executed scientific sufficiency",
+      "source_files": {
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/heterogeneity_contract.json": "2a69cd4545d6766485be6f992f14b64e91e89c8d7545ab639e1606572670b85c"
+      },
+      "status": "FROZEN_PASS"
+    },
+    {
+      "checks": [
+        "TEXT_alignment"
+      ],
+      "id": "K",
+      "item": "TEXT attribution constraints",
+      "limitation": "All56TEXT scopes remain ineligible; defining the alignment gate is not fulfilling it",
+      "meaning": "Protocol definition readiness only, not executed scientific sufficiency",
+      "source_files": {
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/text_e1_contract.json": "8af0b93ae3e51199e1f0c53c7fcc778bf5c20c75252c992cf7113b2e04e6660a"
+      },
+      "status": "FROZEN_WITH_LIMITATION"
+    },
+    {
+      "checks": [
+        "E2_continuity",
+        "bridge_separate"
+      ],
+      "id": "L",
+      "item": "E2 analytical fusion continuity",
+      "limitation": null,
+      "meaning": "Protocol definition readiness only, not executed scientific sufficiency",
+      "source_files": {
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/e1_e2_bridge_policy.json": "887478648549435ca3ad491793a9abac2c80415fba6ce1f6934a637365123897",
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/e1_e2_continuity_contract.json": "a375d259c7f53ebbef9873232c43e0089b9881eef4b5b4419443129c8578b6b1"
+      },
+      "status": "FROZEN_PASS"
+    },
+    {
+      "checks": [
+        "E2_E3_architecture"
+      ],
+      "id": "M",
+      "item": "calibration explanation boundary",
+      "limitation": null,
+      "meaning": "Protocol definition readiness only, not executed scientific sufficiency",
+      "source_files": {
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/scientific_state_preservation.json": "bd1c5431d4ffe942ee507985f02e881daa31de2728de0f8a416f9343b58060ae"
+      },
+      "status": "FROZEN_PASS"
+    },
+    {
+      "checks": [
+        "claims",
+        "primary_secondary"
+      ],
+      "id": "N",
+      "item": "prohibited overclaims",
+      "limitation": null,
+      "meaning": "Protocol definition readiness only, not executed scientific sufficiency",
+      "source_files": {
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/primary_secondary_analysis_policy.json": "4e258f10f4d72887804f2e057796420bcee7d6bf27e1eff4586023a4e902e1e2",
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/prohibited_claims.json": "c8a12ad1fdb1000ad3a04d384670651cff5adf1314cb759b4fc818df38c62cb7"
+      },
+      "status": "FROZEN_PASS"
+    },
+    {
+      "checks": [
+        "T2_sealed"
+      ],
+      "id": "O",
+      "item": "T2 reserve boundary",
+      "limitation": null,
+      "meaning": "Protocol definition readiness only, not executed scientific sufficiency",
+      "source_files": {
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/t2_sealed_reserve_policy.json": "31b878e695a49f25c47434596e005ed5869525840f0481c902078bede63e828d"
+      },
+      "status": "FROZEN_PASS"
+    },
+    {
+      "checks": [
+        "figure_families"
+      ],
+      "id": "P",
+      "item": "figure families",
+      "limitation": null,
+      "meaning": "Protocol definition readiness only, not executed scientific sufficiency",
+      "source_files": {
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/figure_contract.json": "4e1d165a3d0e0bf51727dcd5d70177830508cadfc305628dd6e0d1cfc562fcb3"
+      },
+      "status": "FROZEN_PASS"
+    },
+    {
+      "checks": [
+        "scope_identity_unique",
+        "scope_status_no_promotion",
+        "authorization_closed"
+      ],
+      "id": "Q",
+      "item": "scope eligibility rules",
+      "limitation": "All168scopes remain non-executable;112numeric pending and56TEXT ineligible",
+      "meaning": "Protocol definition readiness only, not executed scientific sufficiency",
+      "source_files": {
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/e1_scope_universe.jsonl": "7a0178ccad75e5f8939d702b6794030f3cb88dbe0810dc5ea5bfb31c4e17fddf",
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/e1_unit_of_analysis.json": "903df8525f785fa0cc5f6e002ec1fc05b69a50de59e2f825dd76425c30fda133"
+      },
+      "status": "FROZEN_WITH_LIMITATION"
+    },
+    {
+      "checks": [
+        "input_provenance_still_required",
+        "persistence",
+        "missing_value_policy"
+      ],
+      "id": "R",
+      "item": "scientific input provenance requirement",
+      "limitation": "Legitimate source/representation proof is still absent; no input requirement waived",
+      "meaning": "Protocol definition readiness only, not executed scientific sufficiency",
+      "source_files": {
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/execution_authorization_gate.json": "318a335277cfd2d00a5e66450241c13b759addb19ab7dd97502b9487fa86bf83",
+        "audits/q1-prospective-e1-protocol-freeze/1.0.0/reproducibility_persistence_contract.json": "5360708b46a0425f60ad7697d92dccbacd4ae6a459ff6705422b50f340f07d12"
+      },
+      "status": "FROZEN_WITH_LIMITATION"
+    }
+  ],
+  "no_definition_blocker": true,
+  "status_counts": {
+    "FROZEN_PASS": 15,
+    "FROZEN_WITH_LIMITATION": 3
+  }
+}

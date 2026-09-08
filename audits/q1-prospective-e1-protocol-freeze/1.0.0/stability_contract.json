@@ -1,0 +1,63 @@
+{
+  "TV": "0.5*sum(abs(p_j-q_j)), p normalized mean absolute attribution over identical support; all-zero distribution undefined",
+  "comparison_pairs": "All 190 unordered repetition pairs",
+  "comparison_thresholds": {
+    "Jaccard": 0.6,
+    "Spearman": 0.7,
+    "sign_agreement": 0.8,
+    "total_variation_max": 0.25
+  },
+  "inherited_exact": {
+    "deterministic_method_max_absolute_attribution_difference": 1e-12,
+    "metrics": [
+      "JACCARD_OVERLAP",
+      "SPEARMAN_RANK_CORRELATION",
+      "SIGN_AGREEMENT",
+      "TOTAL_VARIATION_DISTANCE"
+    ],
+    "population_reselection_by_stability_seed": false,
+    "post_result_threshold_change": "FORBIDDEN",
+    "schema_version": "q1-xai-runtime-freeze-1.0.0",
+    "seeds": [
+      20260901,
+      20260902,
+      20260903,
+      20260904,
+      20260905,
+      20260906,
+      20260907,
+      20260908,
+      20260909,
+      20260910,
+      20260911,
+      20260912,
+      20260913,
+      20260914,
+      20260915,
+      20260916,
+      20260917,
+      20260918,
+      20260919,
+      20260920
+    ],
+    "top_k": [
+      3,
+      10
+    ]
+  },
+  "k": "min(k, aligned feature count); k covering entire support is non-discriminating and cannot alone support STABLE",
+  "populations": "Identical state, reference and foreground across seeds; no population reselection",
+  "post_result_change": "FORBIDDEN",
+  "ranking": "Descending mean absolute attribution; exact feature identity lexical tie-break; Spearman uses average tied ranks",
+  "repetitions": 20,
+  "scope": "Numerical repeatability and fixed-population ranking agreement, not sampling/reference robustness",
+  "sign_agreement": "Fraction of aligned row-feature attribution entries with equal sign using zero band +/-1e-12; also report signed-mean global agreement; do not silently drop zeros",
+  "statuses": {
+    "INSUFFICIENT_EVIDENCE": "Missing repetition, fidelity failure, unaligned support, undefined required metric or no informative metric",
+    "MIXED_STABILITY": "Fidelity complete and numerical repeatability passes, with both passing and failing informative ranking diagnostics",
+    "STABLE": "Fidelity complete; all numerical repeats <=1e-12 and all defined informative metrics meet all frozen thresholds",
+    "UNSTABLE": "Any numerical-repeat bound violation or all informative ranking diagnostics fail"
+  },
+  "threshold_source": "Sprint55 heterogeneity diagnostic thresholds; prospectively applied to comparable ranking diagnostics",
+  "undefined": "Report reason; never replace undefined with a pass"
+}

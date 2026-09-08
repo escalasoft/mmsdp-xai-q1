@@ -1,0 +1,18 @@
+{
+  "file_mtimes_are_not_historical_execution_order": true,
+  "first_file_commit": "4572ec9a6e231996df72f0aa3ec5e7bd9ffec14b",
+  "first_manifest_commit": "4572ec9a6e231996df72f0aa3ec5e7bd9ffec14b",
+  "generation_before_commit": "Both already existed at their joint addition; exact precommit creation/mutation times unrecorded",
+  "initial_file_blob": "150a9905dcaca3b623c2ed41a0c31b7baa48fee2",
+  "initial_file_identical_to_current": true,
+  "initial_file_sha256": "b9d17eb93ab80e96d9eae4d0d924511ed9aa23e5ce53c569274913ceb7100ab6",
+  "initial_manifest_blob": "84f50a16b4b7a591cbf6636c32e291d48d78f948",
+  "initial_manifest_expected_sha256": "8c4e2582fc9bc11d2d417f8e785089eebe44c6390d13343e9200b1f639eda4de",
+  "initial_manifest_identical_to_current": true,
+  "introduced_together": true,
+  "manifest_change_commit_count": 1,
+  "mismatch_present_in_first_commit": true,
+  "one_target_historical_blob": true,
+  "subsequent_modification_evidence": "NONE_IN_REACHABLE_PATH_HISTORY",
+  "target_change_commit_count": 1
+}

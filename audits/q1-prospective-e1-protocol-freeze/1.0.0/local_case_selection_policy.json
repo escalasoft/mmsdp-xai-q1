@@ -1,0 +1,21 @@
+{
+  "algorithm": "Within each class select ordered roles without replacement, ties by global selection key. Reallocate unused class slots by ascending global key. If probability or threshold linkage incomplete, use ascending global key with available decision quotas; annotate confidence roles unavailable.",
+  "attractive_plot_selection": "FORBIDDEN",
+  "class_quota": "Four predicted-positive and four predicted-negative if available",
+  "freeze_before_attribution": true,
+  "label_aware_alternative": "Future amendment may specify high-confidence TP,TN,FP,FN,near-threshold positive,near-threshold negative,median-confidence,integrity-supported extreme; prohibited in current primary selection",
+  "labels": "TP/TN/FP/FN strata not authorized; correctness may be annotated after selection only under separate label access authorization",
+  "maximum_rows_per_scope": 8,
+  "mode": "T1_SELECTION_LABEL_BLIND",
+  "ordered_roles_per_predicted_class": [
+    "maximum absolute p_minus_frozen_threshold: high confidence",
+    "minimum absolute p_minus_frozen_threshold: near threshold",
+    "minimum distance from within-class median absolute p_minus_frozen_threshold",
+    "maximum absolute p_minus_frozen_threshold among remaining: integrity-supported extreme"
+  ],
+  "probability_scale": "Exactly frozen decision input scale, calibration identity recorded; no newly computed confidence for selection",
+  "seed": 20260901,
+  "selection_executed": false,
+  "subset_of_global": true,
+  "tie_break": "SHA-256 lexical ordering over stable row identity; identity lexical order resolves a hash collision"
+}

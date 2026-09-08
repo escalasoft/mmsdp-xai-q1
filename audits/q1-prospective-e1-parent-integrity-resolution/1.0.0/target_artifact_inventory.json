@@ -1,0 +1,22 @@
+{
+  "generated_role": "Historical initial pytest diagnostic, not final validation or predictive results",
+  "git_mode": "100644",
+  "manifest": "audits/q1-primary-xai-runtime-smoke/1.0.0/MANIFEST.sha256",
+  "mode": "0o644",
+  "target": "audits/q1-primary-xai-runtime-smoke/1.0.0/validation-initial-output.txt",
+  "tracking": {
+    "HEAD_tree": "100644 blob 150a9905dcaca3b623c2ed41a0c31b7baa48fee2\taudits/q1-primary-xai-runtime-smoke/1.0.0/validation-initial-output.txt\n",
+    "check_attributes": "",
+    "check_ignore_output": "",
+    "diff_HEAD_name_only": "",
+    "generated": "Captured diagnostic stdout per content/history; exact capture command is unrecorded",
+    "git_hash_object": "150a9905dcaca3b623c2ed41a0c31b7baa48fee2",
+    "identical_to_HEAD": true,
+    "ignored": false,
+    "ls_files_stage_exact": "100644 150a9905dcaca3b623c2ed41a0c31b7baa48fee2 0\taudits/q1-primary-xai-runtime-smoke/1.0.0/validation-initial-output.txt\n",
+    "modified": false,
+    "status_short_exact": "",
+    "tracked": true,
+    "untracked": false
+  }
+}

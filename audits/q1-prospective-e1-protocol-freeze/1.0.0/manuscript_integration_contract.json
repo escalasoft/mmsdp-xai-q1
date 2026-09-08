@@ -1,0 +1,19 @@
+{
+  "E1": "PROSPECTIVE_COMPLEMENTARY",
+  "E2": "PRIMARY_ANALYTICAL_FUSION_CORE",
+  "E3": "SEPARATE",
+  "current_scope": "Protocol/design text only; no empirical XAI results",
+  "predictive_layer": "CLOSED",
+  "sections": [
+    "Explainability Protocol",
+    "Feature-Level Explanations (E1)",
+    "Multimodal Fusion Explanations (E2)",
+    "Calibration Interpretation (E3)",
+    "Cross-Model Explanation Stability",
+    "Cross-Project Explanation Heterogeneity",
+    "Local Explanation Case Study",
+    "E1–E2 Architectural Continuity",
+    "Limitations of Reconstructed-State Explanation",
+    "Threats to XAI Validity"
+  ]
+}

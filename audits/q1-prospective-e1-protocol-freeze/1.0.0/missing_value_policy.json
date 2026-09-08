@@ -1,0 +1,17 @@
+{
+  "Inf": "Reject unless explicit frozen predictor semantics prove validity; never silently replace",
+  "NaN": "Preserve supported fitted model missing semantics; otherwise exact frozen imputer only",
+  "SHAP_specific_imputation": "FORBIDDEN",
+  "dtype_count_order_mismatch": "Block scope before any attribution",
+  "empty_or_unknown_population": "INELIGIBLE; no synthetic padding",
+  "invalid_selected_row": "Keep in failure denominator; no post-attribution replacement",
+  "new_imputer_fit": "FORBIDDEN",
+  "validate": [
+    "NaN",
+    "+Inf",
+    "-Inf",
+    "dtype",
+    "feature count",
+    "feature order"
+  ]
+}

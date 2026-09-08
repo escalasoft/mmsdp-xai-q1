@@ -1,0 +1,16 @@
+{
+  "future_label_policy": "T1_SELECTION_LABEL_BLIND",
+  "historical_T1_predictive_access_count": 1,
+  "historical_T1_predictive_scoring_count": 1,
+  "metadata_reads": "Scope aggregate counts and digests only; no individual T1 identities, labels, features or prediction rows",
+  "mode": "DENY_IN_56_3A",
+  "new_counter_namespace": [
+    "T1_SCIENTIFIC_ROW_ACCESS_COUNT",
+    "T1_EXPLANATION_ROWS_READ_COUNT",
+    "T1_E1_XAI_ACCESS_COUNT",
+    "T1_E1_MODEL_QUERY_COUNT",
+    "T1_E1_ATTRIBUTION_COUNT",
+    "T1_E1_EXPLAINED_ROW_COUNT"
+  ],
+  "no_predictive_reaccess_or_rescoring": true
+}
