@@ -1,0 +1,28 @@
+{
+  "design_controls": [
+    "exact state and population provenance",
+    "global and local scope",
+    "fidelity/additivity on declared output scale",
+    "deterministic repetition and predeclared stability diagnostics",
+    "no explanation-driven selection",
+    "no causal or token-intent claims",
+    "explicit project/family heterogeneity"
+  ],
+  "primary_LIME_excluded": true,
+  "sources": [
+    {
+      "evidence_level": "Primary author abstract",
+      "lesson": "Reliability and consistency require explicit evaluation in software analytics, including JIT prediction.",
+      "limit": "Study-specific findings about evaluated methods, not a proof that all explainers fail.",
+      "title": "EvaluateXAI: A Framework to Evaluate the Reliability and Consistency of Rule-based XAI Techniques for Software Analytics Tasks",
+      "url": "https://arxiv.org/abs/2407.13902"
+    },
+    {
+      "evidence_level": "Primary publisher search abstract; direct full-text retrieval unavailable",
+      "lesson": "Formal correctness and robustness motivate distinguishing numerical fidelity from formal explanatory guarantees.",
+      "limit": "No claim that analytical decomposition or exact TreeSHAP inherits the formal guarantees studied by FoX.",
+      "title": "A Formal Explainer for Just-In-Time Defect Predictions",
+      "url": "https://doi.org/10.1145/3664809"
+    }
+  ]
+}

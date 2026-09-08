@@ -1,0 +1,12 @@
+{
+  "authorization_sha256": "9e632bdb4b0dd3b4a3d765ff8a7570c81a80f248db1c99ff6639b66d229c578b",
+  "execution_runtime": ".venv; standard-library governance only, no ML package imports in sprint module",
+  "files": {
+    "src/evaluation/q1_primary_xai_population_freeze.py": "1ee85ee928f5e911f4303c560b68deee45f611aa2297282e871f061ad6c123e0",
+    "tests/evaluation/test_q1_primary_xai_population_freeze.py": "c8de5f4c255ea2e7d7b213c51ab469c7ec7a3d3dffeb10149dff97421b5bde60"
+  },
+  "isolated_runtime_check": "importlib.metadata subprocess only; no SHAP/model imports",
+  "no_scientific_execution": true,
+  "no_subagents_used": true,
+  "source_finalized_after_preparation_for_contract_tests_and_failure_closure": true
+}

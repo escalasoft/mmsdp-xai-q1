@@ -1,0 +1,17 @@
+ M .gitignore
+?? audits/q1-primary-xai-frozen-evidence-reuse/
+?? audits/q1-primary-xai-population-freeze/
+?? audits/q1-primary-xai-runtime-smoke/
+?? audits/q1-primary-xai-safe-population-source/
+?? audits/q1-primary-xai-t2-semantic-boundary-amendment/
+?? src/evaluation/q1_primary_xai_frozen_evidence_reuse.py
+?? src/evaluation/q1_primary_xai_population_freeze.py
+?? src/evaluation/q1_primary_xai_runtime_smoke.py
+?? src/evaluation/q1_primary_xai_runtime_smoke_closure.py
+?? src/evaluation/q1_primary_xai_safe_population_source.py
+?? src/evaluation/q1_primary_xai_t2_semantic_boundary.py
+?? tests/evaluation/test_q1_primary_xai_frozen_evidence_reuse.py
+?? tests/evaluation/test_q1_primary_xai_population_freeze.py
+?? tests/evaluation/test_q1_primary_xai_runtime_smoke.py
+?? tests/evaluation/test_q1_primary_xai_safe_population_source.py
+?? tests/evaluation/test_q1_primary_xai_t2_semantic_boundary.py

@@ -1,0 +1,25 @@
+{
+  "final_full_suite": {
+    "deselected": 3,
+    "failed": 0,
+    "passed": 51
+  },
+  "first_full_suite": {
+    "deselected": 2,
+    "failed": 3,
+    "failures": [
+      "Tuple/list equality after JSON serialization; test corrected to canonical JSON comparison",
+      "XGBoost float32 attribution sums were recomputed as float64 after JSON deserialization; test now checks original dtype exact residual and independently verifies float64 with unchanged tolerance",
+      "Historical Sprint55 worktree byte-size assertion; replaced with Sprint56.1 narrow-ignore/visibility test"
+    ],
+    "passed": 48
+  },
+  "preexecution_targeted_check": {
+    "failed": 1,
+    "passed": 1,
+    "reason": "Prefix reader passed; combined guard/evidence test reached runtime_read_events.json before smoke had created it. Denial assertions passed before missing artifact."
+  },
+  "scientific_outputs_changed": false,
+  "smoke_reexecuted_after_observing_outputs": false,
+  "versions_scopes_tolerances_changed": false
+}

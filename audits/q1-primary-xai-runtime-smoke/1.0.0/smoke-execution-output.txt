@@ -1,0 +1,9 @@
+lr LR_ANALYTICAL_SMOKE_PASS
+rf RF_TREESHAP_SMOKE_PASS
+xgb XGB_TREESHAP_SMOKE_PASS
+/Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/.venv-xai-s56/lib/python3.11/site-packages/shap/explainers/_tree.py:620: UserWarning: LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+  warnings.warn(
+/Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/.venv-xai-s56/lib/python3.11/site-packages/shap/explainers/_tree.py:620: UserWarning: LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+  warnings.warn(
+lgb LGB_TREESHAP_SMOKE_PASS
+fusion FUSION_ANALYTICAL_SMOKE_PASS

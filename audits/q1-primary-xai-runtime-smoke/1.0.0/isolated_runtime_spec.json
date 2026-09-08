@@ -1,0 +1,51 @@
+{
+  "role": "ISOLATED_XAI_RUNTIME",
+  "environment": ".venv-xai-s56",
+  "python": "3.11.14",
+  "packages": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.0",
+    "xgboost": "3.2.0",
+    "lightgbm": "4.6.0",
+    "shap": "0.51.0",
+    "numba": "0.62.1",
+    "llvmlite": "0.45.1",
+    "joblib": "1.5.3",
+    "cloudpickle": "3.1.2"
+  },
+  "decision": "PROSPECTIVE_BEFORE_MODEL_LOAD_OR_EXPLANATION",
+  "rationale": "Retain Python and all predictive model-library versions; only NumPy changes to latest 2.3 patch for supported Numba 0.62.1 / llvmlite 0.45.1 Darwin x86_64 binary chain; SHAP 0.51.0 supports Python 3.11 and explicitly requires numba<0.63 on this platform. No output-driven version selection. Binary wheels required.",
+  "sources": [
+    "https://pypi.org/pypi/shap/0.51.0/json",
+    "https://pypi.org/pypi/numba/0.62.1/json",
+    "https://pypi.org/pypi/llvmlite/0.45.1/json",
+    "https://numba.readthedocs.io/en/stable/user/installing.html#version-support-information"
+  ],
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "tolerances": {
+    "analytical_relative": 1e-10,
+    "sigmoid_absolute": 1e-10,
+    "tree_relative": 1e-06,
+    "repeat_absolute": 1e-12
+  },
+  "tree_config": {
+    "feature_perturbation": "tree_path_dependent",
+    "model_output": "raw",
+    "approximate": false,
+    "RF_positive_class": 1,
+    "background": "Persisted TRAIN tree path counts; no explicit background for TreeExplainer"
+  },
+  "budgets": {
+    "background": 64,
+    "foreground": 16,
+    "local": 4
+  },
+  "authorization": "Sprint 56.1 TRAIN-only; no T1/T2, fit, reconstruction, calibration, metrics or primary XAI. No commit/push."
+}

@@ -1,0 +1,60 @@
+..F.......F.........................F..............                      [100%]
+=================================== FAILURES ===================================
+_____ test_selection_is_deterministic_performance_independent_and_eligible _____
+
+    def test_selection_is_deterministic_performance_independent_and_eligible():
+>       assert module.select_scopes() == load('representative_scope_selection.json')
+E       AssertionError: assert {'project': '...s', ...], ...} == {'configurati...': False, ...}
+E
+E         Omitting 8 identical items, use -vv to show
+E         Differing items:
+E         {'excluded_scopes': [('apache/zeppelin', 'Logistic Regression', 'C+P+T'), ('apache/zeppelin', 'Logistic Regression', 'C+T'), ('apache/zeppelin', 'Logistic Regression', 'P+T')]} != {'excluded_scopes': [['apache/zeppelin', 'Logistic Regression', 'C+P+T'], ['apache/zeppelin', 'Logistic Regression', 'C+T'], ['apache/zeppelin', 'Logistic Regression', 'P+T']]}
+E         Use -v to get more diff
+
+tests/evaluation/test_q1_primary_xai_runtime_smoke.py:43: AssertionError
+__ test_exact_tree_contract_and_recorded_additivity[xgb_treeshap_smoke.json] ___
+
+name = 'xgb_treeshap_smoke.json'
+
+    @pytest.mark.parametrize('name', ['rf_treeshap_smoke.json', 'xgb_treeshap_smoke.json', 'lgb_treeshap_smoke.json'])
+    def test_exact_tree_contract_and_recorded_additivity(name):
+        result = load(name)
+        if 'run_1' not in result:
+            assert result['outcome'].endswith('_FAIL') and result['error']
+            return
+        for run in [result['run_1'], result['run_2']]:
+            assert run['explainer']['approximate'] is False
+            assert run['explainer']['feature_perturbation'] == 'tree_path_dependent'
+            assert run['explainer']['model_output'] == 'raw'
+            output = np.asarray(run['model_output'])
+            residual = run['base_value'] + np.asarray(run['contribution_vector']).sum(axis=1) - output
+>           assert np.array_equal(residual, run['residual'])
+E           assert False
+E            +  where False = <function array_equal at 0x109def270>(array([ 6.42612576e-08, -3.51108611e-07,  1.25728548e-07,  2.43075192e-07,\n        6.21657819e-08, -6.41681254e-07,  1...5765e-08,  3.28058377e-07,  5.45289367e-07,\n       -6.61239028e-07, -2.30967999e-07,  6.42612576e-08, -6.40749931e-07]), [2.384185791015625e-07, -2.384185791015625e-07, 0.0, 2.384185791015625e-07, 1.1920928955078125e-07, -4.76837158203125e-07, ...])
+E            +    where <function array_equal at 0x109def270> = np.array_equal
+
+tests/evaluation/test_q1_primary_xai_runtime_smoke.py:154: AssertionError
+_________ test_gitignore_is_exact_narrow_and_registry_remains_visible __________
+
+    def test_gitignore_is_exact_narrow_and_registry_remains_visible():
+        lines = (ROOT / ".gitignore").read_text().splitlines()
+        assert lines.count(RULE) == 1
+        assert not any(line in {"audits/", "/audits/", "*.joblib", "*.npy", "*.pkl"} for line in lines)
+        sample = next(OBJECTS.iterdir())
+        assert subprocess.run(["git", "check-ignore", "-q", str(sample.relative_to(ROOT))], cwd=ROOT).returncode == 0
+        assert subprocess.run(["git", "check-ignore", "-q", str((REGISTRY / "external_artifact_summary.json").relative_to(ROOT))], cwd=ROOT).returncode == 1
+        assert subprocess.run(["git", "check-ignore", "-q", "audits/q1-xai-final-output-equivalence-g5/1.0.0/g5_summary.json"], cwd=ROOT).returncode == 1
+        summary = load("external_artifact_summary.json")
+        untracked = subprocess.check_output(["git", "ls-files", "--others", "--exclude-standard", "-z"], cwd=ROOT).split(b"\0")
+        modified = subprocess.check_output(["git", "diff", "--name-only", "-z"], cwd=ROOT).split(b"\0")
+        names = {item.decode() for item in (*untracked, *modified) if item}
+>       assert summary["git_visible_sprint55_size_bytes_after_object_exclusion"] == sum((ROOT / name).stat().st_size for name in names if (ROOT / name).is_file())
+E       assert 42143545 == 1467886
+E        +  where 1467886 = sum(<generator object test_gitignore_is_exact_narrow_and_registry_remains_visible.<locals>.<genexpr> at 0x112cc2e90>)
+
+tests/evaluation/test_q1_xai_external_artifact_store_freeze.py:71: AssertionError
+=========================== short test summary info ============================
+FAILED tests/evaluation/test_q1_primary_xai_runtime_smoke.py::test_selection_is_deterministic_performance_independent_and_eligible
+FAILED tests/evaluation/test_q1_primary_xai_runtime_smoke.py::test_exact_tree_contract_and_recorded_additivity[xgb_treeshap_smoke.json]
+FAILED tests/evaluation/test_q1_xai_external_artifact_store_freeze.py::test_gitignore_is_exact_narrow_and_registry_remains_visible
+3 failed, 48 passed, 2 deselected in 26.69s

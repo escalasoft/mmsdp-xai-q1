@@ -1,0 +1,36 @@
+{
+  "counter_audit_note": "Aggregate T1 identity-registry discovery access is counted conservatively as 1 metadata access; actual T1 identity/label rows remain zero. Counter test updated to distinguish metadata registry access from actual population reads.",
+  "deselected": 3,
+  "excluded_tests": {
+    "test_gitignore_is_exact_narrow_and_registry_remains_visible": "Historical Sprint55 uncommitted-size assertion; current narrow-ignore test from Sprint56.1 passes",
+    "test_isotonic_state_digests_match_persisted_source_and_block7_linkage": "Out-of-scope development probability ledger",
+    "test_parent_hashes_tolerances_and_calibrators_remain_unchanged": "Historical T1 prediction payload outside identity-only authorization"
+  },
+  "failed": 0,
+  "full_JSON_Schema_engine_installed_or_used": false,
+  "git_diff_check": "PASS",
+  "guard_enabled": true,
+  "passed": 64,
+  "real_population_checks": {
+    "T1_only_membership": "NOT_EXECUTED_SOURCE_UNAVAILABLE",
+    "TRAIN_correlated_groups": "NOT_EXECUTED_SOURCE_UNAVAILABLE",
+    "TRAIN_only_membership": "NOT_EXECUTED_SOURCE_UNAVAILABLE",
+    "local_subset": "NOT_EXECUTED_SOURCE_UNAVAILABLE"
+  },
+  "schema_validation": "Focused validator for the exact frozen scalar schema subset, including algorithm/method/scale bindings; no package installation",
+  "status": "GOVERNANCE_AND_CONTRACT_TESTS_PASS_REAL_POPULATIONS_NOT_FROZEN",
+  "verified": [
+    "389 unique scopes and 3 exclusions",
+    "G1-G5 links and required immutable object hashes",
+    "runtime lock binding and unchanged predictive inventory",
+    "method/scale assignments",
+    "168 feature orders and 56 exact TFIDF representations",
+    "synthetic TRAIN balanced selection, SHA256 ordering, T1 identity-only selection and local subset",
+    "reject forbidden partitions, labels, prediction signals and immutable writes",
+    "fidelity, budgets, stability, heterogeneity and E3 distribution",
+    "complete E1/E2 schema with scalar/provenance validation",
+    "fail-closed unavailable population status",
+    "Sprint55/Sprint56.1 evidence preserved",
+    "exact manifest"
+  ]
+}
