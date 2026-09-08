@@ -1,0 +1,27 @@
+{
+  "candidate_scopes": 168,
+  "disposition": "PROSPECTIVE_E1_PROTOCOL_FREEZE_BLOCKED",
+  "eligibility_counts": {
+    "E1_PENDING_SCIENTIFIC_INPUT_PROVENANCE": 112,
+    "TEXT_E1_INELIGIBLE": 56
+  },
+  "equivalence_eligible_count": 168,
+  "execution_authorized": false,
+  "limitations": [
+    "Complete legitimate TRAIN/T1 scientific inputs not established",
+    "All TEXT scopes fail complete input/alignment proof at freeze time",
+    "No empirical E1 fidelity, stability, heterogeneity or continuity established",
+    "No new source, predictor, training or historical recovery authorized"
+  ],
+  "parent_integrity_finding": {
+    "actual_sha256": "b9d17eb93ab80e96d9eae4d0d924511ed9aa23e5ce53c569274913ceb7100ab6",
+    "manifest_sha256": "8c4e2582fc9bc11d2d417f8e785089eebe44c6390d13343e9200b1f639eda4de",
+    "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/validation-initial-output.txt",
+    "scope": "Historical validation log; original bytes not recoverable from current manifest alone",
+    "status": "FAIL_MANIFEST_MISMATCH"
+  },
+  "protocol_acceptance": "BLOCKED_PENDING_VALIDATION_RESOLUTION",
+  "protocol_frozen_is_not_E1_Q1_ready": true,
+  "schema_version": "q1-prospective-e1-protocol-freeze-1.0.0",
+  "scientific_execution_eligible_count": 0
+}

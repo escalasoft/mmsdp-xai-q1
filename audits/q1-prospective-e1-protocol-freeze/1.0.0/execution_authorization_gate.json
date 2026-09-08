@@ -1,0 +1,62 @@
+{
+  "56_3B": "Metadata-only source/provenance and eligibility assessment first; any row materialization needs separate explicit authorization before payload access",
+  "56_3C": "Only after 56.3B verified populations and separate scientific attribution authorization",
+  "additional_hard_gates": [
+    "Legitimate source authorization independent of historical closed recovery",
+    "Exact row/partition/representation/predictor linkage",
+    "Separate human approval of scope roster and digest-bound execution plan"
+  ],
+  "no_source": "Stop and request design review; do not reopen repeated historical recovery or train new states",
+  "requirements": {
+    "AUTH-E1-1": {
+      "execution_gate_status": "PENDING_FUTURE_EVIDENCE_AND_HUMAN_APPROVAL",
+      "requirement": "eligible reconstructed model state verified"
+    },
+    "AUTH-E1-10": {
+      "execution_gate_status": "PENDING_FUTURE_EVIDENCE_AND_HUMAN_APPROVAL",
+      "requirement": "stability protocol frozen"
+    },
+    "AUTH-E1-11": {
+      "execution_gate_status": "PENDING_FUTURE_EVIDENCE_AND_HUMAN_APPROVAL",
+      "requirement": "claim boundaries accepted"
+    },
+    "AUTH-E1-12": {
+      "execution_gate_status": "PENDING_FUTURE_EVIDENCE_AND_HUMAN_APPROVAL",
+      "requirement": "T2 access remains zero"
+    },
+    "AUTH-E1-2": {
+      "execution_gate_status": "PENDING_FUTURE_EVIDENCE_AND_HUMAN_APPROVAL",
+      "requirement": "TRAIN background identities frozen"
+    },
+    "AUTH-E1-3": {
+      "execution_gate_status": "PENDING_FUTURE_EVIDENCE_AND_HUMAN_APPROVAL",
+      "requirement": "T1 foreground identities frozen"
+    },
+    "AUTH-E1-4": {
+      "execution_gate_status": "PENDING_FUTURE_EVIDENCE_AND_HUMAN_APPROVAL",
+      "requirement": "local case identities frozen"
+    },
+    "AUTH-E1-5": {
+      "execution_gate_status": "PENDING_FUTURE_EVIDENCE_AND_HUMAN_APPROVAL",
+      "requirement": "runtime/explainer version frozen"
+    },
+    "AUTH-E1-6": {
+      "execution_gate_status": "PENDING_FUTURE_EVIDENCE_AND_HUMAN_APPROVAL",
+      "requirement": "output scale frozen"
+    },
+    "AUTH-E1-7": {
+      "execution_gate_status": "PENDING_FUTURE_EVIDENCE_AND_HUMAN_APPROVAL",
+      "requirement": "feature order and preprocessing frozen"
+    },
+    "AUTH-E1-8": {
+      "execution_gate_status": "PENDING_FUTURE_EVIDENCE_AND_HUMAN_APPROVAL",
+      "requirement": "query budget frozen"
+    },
+    "AUTH-E1-9": {
+      "execution_gate_status": "PENDING_FUTURE_EVIDENCE_AND_HUMAN_APPROVAL",
+      "requirement": "fidelity tolerance frozen"
+    }
+  },
+  "rule": "All required gates PASS with evidence references and explicit human execution approval; freeze is never authorization",
+  "scientific_execution_authorized": false
+}

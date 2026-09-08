@@ -1,0 +1,66 @@
+{
+  "TEXT": "Project-specific unless exact cross-project semantic mapping is proved",
+  "axes": [
+    "within-project cross-model",
+    "within-model cross-project",
+    "modality synthesis"
+  ],
+  "comparison": "Every unordered eligible family pair on common exact feature semantics and aligned population; unequal populations descriptive only, not isolated model effects",
+  "cross_project_rule": {
+    "eligible_project_universe": 14,
+    "fewer_than_projects": 3,
+    "insufficient_label": "INSUFFICIENT_PROJECT_SUPPORT",
+    "maximum_material_reversal_projects": 1,
+    "otherwise": [
+      "PROJECT_SPECIFIC",
+      "HETEROGENEOUS",
+      "MODEL_DEPENDENT"
+    ],
+    "stable_minimum_pass_projects": 11,
+    "universal_claim": "ALL_ELIGIBLE_PROJECTS_AND_ALL_APPLICABLE_ALGORITHM_FAMILIES_REQUIRED"
+  },
+  "inferential_policy": "Descriptive only; no predictive significance tests for explanation superiority; future inferential test requires separate freeze",
+  "inherited_exact": {
+    "cross_model": {
+      "failure_labels": [
+        "MODEL_DEPENDENT",
+        "HETEROGENEOUS"
+      ],
+      "family_reselection": "FORBIDDEN",
+      "minimum_eligible_comparable_algorithm_families": 3,
+      "thresholds": {
+        "Jaccard": 0.6,
+        "Spearman": 0.7,
+        "sign_agreement": 0.8,
+        "total_variation_max": 0.25
+      }
+    },
+    "cross_project": {
+      "eligible_project_universe": 14,
+      "fewer_than_projects": 3,
+      "insufficient_label": "INSUFFICIENT_PROJECT_SUPPORT",
+      "maximum_material_reversal_projects": 1,
+      "otherwise": [
+        "PROJECT_SPECIFIC",
+        "HETEROGENEOUS",
+        "MODEL_DEPENDENT"
+      ],
+      "stable_minimum_pass_projects": 11,
+      "universal_claim": "ALL_ELIGIBLE_PROJECTS_AND_ALL_APPLICABLE_ALGORITHM_FAMILIES_REQUIRED"
+    },
+    "performance_independent": true,
+    "schema_version": "q1-xai-runtime-freeze-1.0.0"
+  },
+  "material_reversal": "Opposite nonzero signed-mean attribution for an aligned top-3 feature, exceeding the fixed zero band in both projects; disclose every reversal",
+  "precedence": "Insufficient first; report axis-specific labels, never force one pooled label",
+  "scales": "Compare ranks and normalized nonnegative mean-absolute attribution distributions only; never pool raw probability/logit/margin magnitudes",
+  "sign_comparison": "Aligned signed-mean feature contribution direction only; differing references disclosed; cancellation/undefined signs reported",
+  "statuses": {
+    "HETEROGENEOUS_PATTERN": "Both axes disagree or no single project/family localization supported",
+    "INSUFFICIENT_CROSS_MODEL_EVIDENCE": "Fewer than 3 comparable eligible families or required comparison metrics undefined",
+    "MODEL_DEPENDENT_PATTERN": "Within-project cross-family disagreement with a consistent passing within-family cross-project pattern",
+    "PROJECT_SPECIFIC_PATTERN": "Within-project stable pattern but cross-project support rule fails",
+    "STABLE_CROSS_MODEL_PATTERN": "All comparable family pairs meet all thresholds within project"
+  },
+  "universal": "All 14 candidate projects and all four families eligible/comparable and passing, with zero material reversals; otherwise no universal claim"
+}

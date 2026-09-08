@@ -1,0 +1,35 @@
+{
+  "TRAIN_reference_role": "Freeze capped TRAIN reference for diagnostics; TreeSHAP uses persisted TRAIN path counts, data=None",
+  "approximate": false,
+  "background": "PERSISTED_TRAIN_PATH_COUNTS; EXPLICIT_BACKGROUND_NOT_REQUIRED",
+  "check_additivity": true,
+  "class_order": "Verify exact model ordering before selecting class-1 slice",
+  "explainer": "shap.TreeExplainer",
+  "family": "LightGBM",
+  "feature_perturbation": "tree_path_dependent",
+  "fidelity": {
+    "approximate": "FORBIDDEN",
+    "failure": "XAI_FAIL_ADDITIVITY",
+    "identity": "base_value + sum(SHAP_values) = model_output_on_frozen_scale",
+    "residual_bound": "abs(residual) <= 1e-6 * (1 + abs(model_output))"
+  },
+  "impurity_importance": "DIAGNOSTIC_ONLY_NOT_SHAP",
+  "model_output": "raw",
+  "no_switch_to_interventional": true,
+  "positive_class": 1,
+  "primary_method": {
+    "approximate": false,
+    "explainer": "TreeSHAP",
+    "primary_method": "EXACT_TREESHAP_NATIVE_RAW_MARGIN",
+    "scale": "NATIVE_RAW_MARGIN"
+  },
+  "required": [
+    "exact booster/predictor state digest",
+    "exact feature order",
+    "objective and positive-class semantics",
+    "missing/categorical semantics",
+    "runtime compatibility",
+    "every-row manual frozen-scale residual check"
+  ],
+  "scale": "NATIVE_RAW_MARGIN"
+}

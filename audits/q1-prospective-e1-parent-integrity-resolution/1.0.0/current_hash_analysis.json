@@ -1,0 +1,12 @@
+{
+  "CR_count": 0,
+  "Git_blob_SHA1_independent": "150a9905dcaca3b623c2ed41a0c31b7baa48fee2",
+  "Git_hash_object": "150a9905dcaca3b623c2ed41a0c31b7baa48fee2",
+  "LF_count": 60,
+  "SHA256": "b9d17eb93ab80e96d9eae4d0d924511ed9aa23e5ce53c569274913ceb7100ab6",
+  "bytes": 4758,
+  "line_count": 60,
+  "matches_HEAD": true,
+  "matches_manifest": false,
+  "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/validation-initial-output.txt"
+}

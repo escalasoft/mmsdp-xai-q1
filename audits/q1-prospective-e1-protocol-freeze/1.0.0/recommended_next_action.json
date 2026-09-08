@@ -1,0 +1,23 @@
+{
+  "blocking_evidence": {
+    "actual_sha256": "b9d17eb93ab80e96d9eae4d0d924511ed9aa23e5ce53c569274913ceb7100ab6",
+    "manifest_sha256": "8c4e2582fc9bc11d2d417f8e785089eebe44c6390d13343e9200b1f639eda4de",
+    "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/validation-initial-output.txt",
+    "scope": "Historical validation log; original bytes not recoverable from current manifest alone",
+    "status": "FAIL_MANIFEST_MISMATCH"
+  },
+  "if_source_unavailable": "BLOCK prospective execution; human design review required; no automatic new model training or source substitution",
+  "immediate_action": "Parent integrity provenance review, then re-review Sprint56.3A; do not start56.3B",
+  "next_scientific_execution_authorized": false,
+  "next_sprint": "Sprint 10.8.2.56.3B — Prospective E1 Scientific Input Provenance and Population Eligibility Gate",
+  "prerequisites": [
+    "Human review of this immutable protocol and disclosed 0 execution-eligible scopes",
+    "Resolve legitimate non-T2 source provenance without repeated historical recovery",
+    "Exact reconstructed-state and representation linkage, including strict TEXT proof",
+    "Separate authorization before TRAIN/T1 population materialization",
+    "Persist deterministic TRAIN/global/local identities and complete AUTH-E1-1 through AUTH-E1-12",
+    "Human authorization of Sprint56.3C scientific attribution only after 56.3B gates pass"
+  ],
+  "start_authorized": false,
+  "stop_after_56_3A": true
+}

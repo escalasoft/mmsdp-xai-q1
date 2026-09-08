@@ -1,0 +1,49 @@
+{
+  "manifest": {
+    "changes": [
+      {
+        "author": "aescalante",
+        "commit": "4572ec9a6e231996df72f0aa3ec5e7bd9ffec14b",
+        "date": "2026-09-07 23:41:08 -0500",
+        "ls_tree": "100644 blob 84f50a16b4b7a591cbf6636c32e291d48d78f948\taudits/q1-primary-xai-runtime-smoke/1.0.0/MANIFEST.sha256\n",
+        "parents": [
+          "89fe7e1c2da425ea63427d1d699d6f8a531e8c6f"
+        ],
+        "subject": "Sprint 10.8.2.56.2: establish Q1-viable alternative primary XAI design"
+      }
+    ],
+    "first_introduction_commit": "4572ec9a6e231996df72f0aa3ec5e7bd9ffec14b",
+    "follow_log_exact": "4572ec9a6e231996df72f0aa3ec5e7bd9ffec14b\t89fe7e1c2da425ea63427d1d699d6f8a531e8c6f\t2026-09-07 23:41:08 -0500\taescalante\tSprint 10.8.2.56.2: establish Q1-viable alternative primary XAI design\n",
+    "name_status_log_exact": "4572ec9a6e231996df72f0aa3ec5e7bd9ffec14b 2026-09-07 23:41:08 -0500 Sprint 10.8.2.56.2: establish Q1-viable alternative primary XAI design\n\nA\taudits/q1-primary-xai-runtime-smoke/1.0.0/MANIFEST.sha256\n",
+    "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/MANIFEST.sha256",
+    "scope": "All local refs reachable via --all; no network fetch, reflog or dangling-object claim"
+  },
+  "reachable_refs_only": true,
+  "target": {
+    "changes": [
+      {
+        "author": "aescalante",
+        "commit": "4572ec9a6e231996df72f0aa3ec5e7bd9ffec14b",
+        "date": "2026-09-07 23:41:08 -0500",
+        "ls_tree": "100644 blob 150a9905dcaca3b623c2ed41a0c31b7baa48fee2\taudits/q1-primary-xai-runtime-smoke/1.0.0/validation-initial-output.txt\n",
+        "parents": [
+          "89fe7e1c2da425ea63427d1d699d6f8a531e8c6f"
+        ],
+        "subject": "Sprint 10.8.2.56.2: establish Q1-viable alternative primary XAI design"
+      }
+    ],
+    "first_introduction_commit": "4572ec9a6e231996df72f0aa3ec5e7bd9ffec14b",
+    "follow_log_exact": "4572ec9a6e231996df72f0aa3ec5e7bd9ffec14b\t89fe7e1c2da425ea63427d1d699d6f8a531e8c6f\t2026-09-07 23:41:08 -0500\taescalante\tSprint 10.8.2.56.2: establish Q1-viable alternative primary XAI design\n",
+    "name_status_log_exact": "4572ec9a6e231996df72f0aa3ec5e7bd9ffec14b 2026-09-07 23:41:08 -0500 Sprint 10.8.2.56.2: establish Q1-viable alternative primary XAI design\n\nA\taudits/q1-primary-xai-runtime-smoke/1.0.0/validation-initial-output.txt\n",
+    "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/validation-initial-output.txt",
+    "scope": "All local refs reachable via --all; no network fetch, reflog or dangling-object claim"
+  },
+  "target_historical_blobs": [
+    {
+      "blob": "150a9905dcaca3b623c2ed41a0c31b7baa48fee2",
+      "bytes": 4758,
+      "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/validation-initial-output.txt",
+      "sha256": "b9d17eb93ab80e96d9eae4d0d924511ed9aa23e5ce53c569274913ceb7100ab6"
+    }
+  ]
+}

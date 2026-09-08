@@ -1,0 +1,67 @@
+{
+  "dimensions": [
+    {
+      "basis": "Manifest- and Git-matching non-log summary/history/determinism support historical PASS; initial log has only a separator whitespace difference",
+      "dimension": "Sprint56.1 runtime-smoke conclusion",
+      "id": "A",
+      "impact_scope": "Impact of this diagnostic mismatch only; not a fresh scientific validation campaign",
+      "status": "PASS_WITH_PROVENANCE_LIMITATION"
+    },
+    {
+      "basis": "Recorded pre/post object/protected digests agree; no current model load or independent model rehash; target cannot mutate state",
+      "dimension": "Sprint56.1 model-state integrity",
+      "id": "B",
+      "impact_scope": "Impact of this diagnostic mismatch only; not a fresh scientific validation campaign",
+      "status": "PASS_WITH_PROVENANCE_LIMITATION"
+    },
+    {
+      "basis": "No G4/G5 change; diagnostic validation output is not equivalence input",
+      "dimension": "Sprint55 reconstructed-state equivalence",
+      "id": "C",
+      "impact_scope": "Impact of this diagnostic mismatch only; not a fresh scientific validation campaign",
+      "status": "PASS_NO_IMPACT"
+    },
+    {
+      "basis": "No predictive evidence or metric read/recomputation; tracked parent identities unchanged",
+      "dimension": "Sprint54 predictive results",
+      "id": "D",
+      "impact_scope": "Impact of this diagnostic mismatch only; not a fresh scientific validation campaign",
+      "status": "PASS_NO_IMPACT"
+    },
+    {
+      "basis": "E2-primary/prospective-E1 architecture unchanged; historical recovery remains closed",
+      "dimension": "Sprint56.2 alternative XAI architecture",
+      "id": "E",
+      "impact_scope": "Impact of this diagnostic mismatch only; not a fresh scientific validation campaign",
+      "status": "PASS_NO_IMPACT"
+    },
+    {
+      "basis": "Contract values unaffected; original BLOCKED record remains; separate explicit R1-based revalidation only",
+      "dimension": "Sprint56.3A protocol contracts",
+      "id": "F",
+      "impact_scope": "Impact of this diagnostic mismatch only; not a fresh scientific validation campaign",
+      "status": "PASS_WITH_PROVENANCE_LIMITATION"
+    },
+    {
+      "basis": "168 candidates,112 CODE/PROCESS pending,56TEXT ineligible,0execution-authorized unchanged",
+      "dimension": "E1 candidate universe",
+      "id": "G",
+      "impact_scope": "Impact of this diagnostic mismatch only; not a fresh scientific validation campaign",
+      "status": "PASS_NO_IMPACT"
+    },
+    {
+      "basis": "New T1 counters zero; historical predictive1/1 unchanged",
+      "dimension": "T1 governance",
+      "id": "H",
+      "impact_scope": "Impact of this diagnostic mismatch only; not a fresh scientific validation campaign",
+      "status": "PASS_NO_IMPACT"
+    },
+    {
+      "basis": "DENY_SEALED_REVIEWER_RESERVE; zero access",
+      "dimension": "T2 sealed reserve",
+      "id": "I",
+      "impact_scope": "Impact of this diagnostic mismatch only; not a fresh scientific validation campaign",
+      "status": "PASS_NO_IMPACT"
+    }
+  ]
+}

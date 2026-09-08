@@ -1,0 +1,165 @@
+{
+  "families": [
+    {
+      "condition": "Eligible evidence, fidelity/stability and complete coverage disclosure",
+      "id": "E1-G1",
+      "normalization": "Within-scope raw scale; rank/TV panels may use sum-to-one absolute importance with zero-sum flagged; never cross-scale raw pooling",
+      "reporting": "DESCRIPTIVE",
+      "required_metadata": [
+        "eligible scope count",
+        "population count",
+        "family",
+        "modality",
+        "attribution scale",
+        "normalization rule",
+        "missing/ineligible scopes",
+        "descriptive/inferential label",
+        "source manifest",
+        "feature/row/state digests"
+      ],
+      "status": "FROZEN_DESIGN_NOT_EMPIRICAL_RESULT",
+      "title": "Global mean absolute feature attribution"
+    },
+    {
+      "condition": "Eligible evidence, fidelity/stability and complete coverage disclosure",
+      "id": "E1-G2",
+      "normalization": "Within-scope raw scale; rank/TV panels may use sum-to-one absolute importance with zero-sum flagged; never cross-scale raw pooling",
+      "reporting": "DESCRIPTIVE",
+      "required_metadata": [
+        "eligible scope count",
+        "population count",
+        "family",
+        "modality",
+        "attribution scale",
+        "normalization rule",
+        "missing/ineligible scopes",
+        "descriptive/inferential label",
+        "source manifest",
+        "feature/row/state digests"
+      ],
+      "status": "FROZEN_DESIGN_NOT_EMPIRICAL_RESULT",
+      "title": "Cross-model rank stability and heterogeneity matrix"
+    },
+    {
+      "condition": "Eligible evidence, fidelity/stability and complete coverage disclosure",
+      "id": "E1-G3",
+      "normalization": "Within-scope raw scale; rank/TV panels may use sum-to-one absolute importance with zero-sum flagged; never cross-scale raw pooling",
+      "reporting": "DESCRIPTIVE",
+      "required_metadata": [
+        "eligible scope count",
+        "population count",
+        "family",
+        "modality",
+        "attribution scale",
+        "normalization rule",
+        "missing/ineligible scopes",
+        "descriptive/inferential label",
+        "source manifest",
+        "feature/row/state digests"
+      ],
+      "status": "FROZEN_DESIGN_NOT_EMPIRICAL_RESULT",
+      "title": "Project-level top-feature/group heatmap"
+    },
+    {
+      "condition": "Eligible evidence, fidelity/stability and complete coverage disclosure",
+      "id": "E1-L1",
+      "normalization": "Within-scope raw scale; rank/TV panels may use sum-to-one absolute importance with zero-sum flagged; never cross-scale raw pooling",
+      "reporting": "DESCRIPTIVE",
+      "required_metadata": [
+        "eligible scope count",
+        "population count",
+        "family",
+        "modality",
+        "attribution scale",
+        "normalization rule",
+        "missing/ineligible scopes",
+        "descriptive/inferential label",
+        "source manifest",
+        "feature/row/state digests"
+      ],
+      "status": "FROZEN_DESIGN_NOT_EMPIRICAL_RESULT",
+      "title": "Preselected local waterfall"
+    },
+    {
+      "condition": "Correct-versus-error annotation requires separate label authorization after label-blind selection; otherwise prediction-only panels, no correct/error claim",
+      "id": "E1-L2",
+      "normalization": "Within-scope raw scale; rank/TV panels may use sum-to-one absolute importance with zero-sum flagged; never cross-scale raw pooling",
+      "reporting": "DESCRIPTIVE",
+      "required_metadata": [
+        "eligible scope count",
+        "population count",
+        "family",
+        "modality",
+        "attribution scale",
+        "normalization rule",
+        "missing/ineligible scopes",
+        "descriptive/inferential label",
+        "source manifest",
+        "feature/row/state digests"
+      ],
+      "status": "FROZEN_DESIGN_NOT_EMPIRICAL_RESULT",
+      "title": "Preselected local comparison"
+    },
+    {
+      "condition": "Eligible evidence, fidelity/stability and complete coverage disclosure",
+      "id": "E1-C1",
+      "normalization": "Within-scope raw scale; rank/TV panels may use sum-to-one absolute importance with zero-sum flagged; never cross-scale raw pooling",
+      "reporting": "DESCRIPTIVE",
+      "required_metadata": [
+        "eligible scope count",
+        "population count",
+        "family",
+        "modality",
+        "attribution scale",
+        "normalization rule",
+        "missing/ineligible scopes",
+        "descriptive/inferential label",
+        "source manifest",
+        "feature/row/state digests"
+      ],
+      "status": "FROZEN_DESIGN_NOT_EMPIRICAL_RESULT",
+      "title": "CODE/PROCESS correlated-group comparison"
+    },
+    {
+      "condition": "Eligible evidence, fidelity/stability and complete coverage disclosure",
+      "id": "E1-T1",
+      "normalization": "Within-scope raw scale; rank/TV panels may use sum-to-one absolute importance with zero-sum flagged; never cross-scale raw pooling",
+      "reporting": "DESCRIPTIVE",
+      "required_metadata": [
+        "eligible scope count",
+        "population count",
+        "family",
+        "modality",
+        "attribution scale",
+        "normalization rule",
+        "missing/ineligible scopes",
+        "descriptive/inferential label",
+        "source manifest",
+        "feature/row/state digests"
+      ],
+      "status": "FROZEN_DESIGN_NOT_EMPIRICAL_RESULT",
+      "title": "Project/model token attribution summary"
+    },
+    {
+      "condition": "Exact bridge linkage or architecture-only diagram with separate scales",
+      "id": "E1-E2",
+      "normalization": "Within-scope raw scale; rank/TV panels may use sum-to-one absolute importance with zero-sum flagged; never cross-scale raw pooling",
+      "reporting": "DESCRIPTIVE",
+      "required_metadata": [
+        "eligible scope count",
+        "population count",
+        "family",
+        "modality",
+        "attribution scale",
+        "normalization rule",
+        "missing/ineligible scopes",
+        "descriptive/inferential label",
+        "source manifest",
+        "feature/row/state digests"
+      ],
+      "status": "FROZEN_DESIGN_NOT_EMPIRICAL_RESULT",
+      "title": "Architectural feature-to-unimodal-to-fusion bridge"
+    }
+  ],
+  "generated_count": 0
+}

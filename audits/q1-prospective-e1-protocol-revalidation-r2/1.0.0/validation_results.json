@@ -1,0 +1,42 @@
+{
+  "56_1_55_governance_passed": 2,
+  "R1_regressions_passed": 30,
+  "commands": [
+    "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=. .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_prospective_e1_protocol_revalidation_r2.py",
+    "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=. .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_prospective_e1_parent_integrity_resolution.py -k 'material_difference_not_whitelisted or no_scientific_payload_read or reader_rejects_symlink or git_inspection_is_read_only or git_blob_reader_denies_model_or_T1_route or no_scientific_imports_calls_or_shell or historical_namespace_write_denied or new_package_only_no_overwrite_and_manifest or resolution_is_fail_closed_and_finite or unresolved_cannot_pass_from_log_label_alone'",
+    "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=. .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_prospective_e1_protocol_freeze.py -k 'no_scientific_payload_read or allowlist_not_extended_by_manifest_or_file_suffix or missing_parent_fails_closed or symlink_metadata_fails_closed or no_scientific_execution_imports_or_calls or bad_preflight_cannot_publish'",
+    "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=. .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_xai_runtime_freeze.py::test_source_has_no_forbidden_execution_or_data_path tests/evaluation/test_q1_primary_xai_runtime_smoke.py::test_prefix_reader_does_not_decode_or_scan_tail",
+    ".venv/bin/ruff check --no-cache src/evaluation/q1_prospective_e1_protocol_revalidation_r2.py tests/evaluation/test_q1_prospective_e1_protocol_revalidation_r2.py",
+    "git diff --check"
+  ],
+  "commits_pushes_PRs": 0,
+  "deselected_count": 96,
+  "deselection_reason": "43R1 and53original56.3A tests use historical forensic/compiler evidence loaders outside the R2 read boundary or duplicate that older execution context. No historical failure is relabelled as a test pass.",
+  "failed": 0,
+  "focused_R2_passed": 87,
+  "git_diff_check": "PASS",
+  "input_packages": "Both original56.3A andR1 exact manifest/file sets verified; all71preexisting bytes verified unchanged",
+  "log_sha256": {
+    "56_1_55_governance": "ed4e09caf2c123cc998a4a054db510aefa9991486486560067423d72e1530bca",
+    "R1_regressions": "4a47c21d9b45932e0257e139438498d78e418b3039e6172db275915bbcb02bff",
+    "R2_focused": "6f82be2f13fd0aac23d4901034ef6bd2c05b2042603716ea831a4c439047eb5b",
+    "original_56_3A_regressions": "9856522326d46a2194172c7f6c8e7cad9b666bf8ffaa215b37ab97301e2e0558"
+  },
+  "logs": {
+    "56_1_55_governance": "..                                                                       [100%]\n2 passed in 0.26s\n",
+    "R1_regressions": "..............................                                           [100%]\n30 passed, 43 deselected in 0.16s\n",
+    "R2_focused": "........................................................................ [ 82%]\n...............                                                          [100%]\n87 passed in 14.96s\n",
+    "original_56_3A_regressions": "...............                                                          [100%]\n15 passed, 53 deselected in 0.16s\n"
+  },
+  "model_loads": 0,
+  "new_package_verification": "Exact manifest coverage verified before publication and persisted bytes compared afterward; independent final verification follows",
+  "old_packages_modified": 0,
+  "original_56_3A_regressions_passed": 15,
+  "original_failures": "Log mismatch retained and accepted semantically only viaR1; original mtime failure retained and separately bounded in mtime_order_resolution.json. No failing assertion erased.",
+  "regression_scope": "Selected pure/static/guard tests and a synthetic prefix-boundary fixture. Parent fixtures that reload historical audit packages, rows, smoke vectors or models were not invoked. R2 rechecks the actual frozen contract via39metadata checks and18Q1 items.",
+  "ruff": "PASS",
+  "scientific_execution_tests_run": 0,
+  "scientific_rows_loaded": 0,
+  "status": "PASS",
+  "total_passed": 134
+}

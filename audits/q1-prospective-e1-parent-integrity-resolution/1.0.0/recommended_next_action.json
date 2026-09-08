@@ -1,0 +1,6 @@
+{
+  "action": "Human review of R1 provenance amendment; only separately requested56.3A revalidation afterward",
+  "automatic_revalidation": false,
+  "never": "Rewrite old log/manifest or start56.3B/XAI",
+  "stop_after_R1": true
+}

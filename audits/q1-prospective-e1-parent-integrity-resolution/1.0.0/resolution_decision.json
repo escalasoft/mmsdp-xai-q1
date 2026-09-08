@@ -1,0 +1,32 @@
+{
+  "cases_A_through_H": {
+    "A": "Byte version changed relative to manifested stream; exact mutation command/time not established",
+    "B": "PROVEN: stored manifest digest is stale relative to initially committed and current log",
+    "C": "NOT_ESTABLISHED: no log regeneration command or model rerun inferred",
+    "D": "PROVEN: nine trailing ASCII spaces only, line8; all other bytes equal to hash-matching candidate",
+    "E": "REFUTED for the log: no PASS/FAIL/test count/scientific text change",
+    "F": "NOT_FOUND in reachable target history or safely searched metadata/source blobs",
+    "G": "SUPPORTED_WITH_SEARCH_SCOPE: target history contains one nonmatching blob; no claim about uninspected/dangling/remote objects",
+    "H": "PROVEN: file and manifest jointly introduced with mismatch already present"
+  },
+  "criteria": {
+    "exact_hash_candidate": true,
+    "independent_support": true,
+    "initial_packaging_mismatch": true,
+    "whitespace_only": true
+  },
+  "not_proved": [
+    "Responsible actor/tool",
+    "Exact overwrite or append command",
+    "Exact precommit chronology",
+    "Expected version present in Git"
+  ],
+  "proved": [
+    "Exact expected SHA256 candidate",
+    "Single whitespace-only changed line",
+    "Initial joint commit already inconsistent",
+    "Independent manifested/Git-matching non-log PASS evidence"
+  ],
+  "resolution": "R1_PASS_MANIFEST_PACKAGING_INCONSISTENCY_DIAGNOSTIC_ONLY",
+  "root_cause": "Historical packaging inconsistency: manifest hashes a byte stream equal to current log plus9trailing spaces on line8; first committed log lacks those spaces. Exact editor/hook/command/time of whitespace handling is not recoverable."
+}

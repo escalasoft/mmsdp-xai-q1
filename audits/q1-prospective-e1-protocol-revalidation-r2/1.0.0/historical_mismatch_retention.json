@@ -1,0 +1,17 @@
+{
+  "HISTORICAL_BYTE_INTEGRITY": "KNOWN_MISMATCH_RETAINED",
+  "R1_manifest_sha256": "a4fbf73fdd5e564e46fe02cb13e0229c7f56edb270679cf9d9c36475c5c9efab",
+  "current_sha256": "b9d17eb93ab80e96d9eae4d0d924511ed9aa23e5ce53c569274913ceb7100ab6",
+  "historical_manifest_match": false,
+  "historical_manifest_modified": false,
+  "manifest_expected_sha256": "8c4e2582fc9bc11d2d417f8e785089eebe44c6390d13343e9200b1f639eda4de",
+  "no_retroactive_byte_identity": true,
+  "only_artifact": "audits/q1-primary-xai-runtime-smoke/1.0.0/validation-initial-output.txt",
+  "original_56_3A_finding": {
+    "actual_sha256": "b9d17eb93ab80e96d9eae4d0d924511ed9aa23e5ce53c569274913ceb7100ab6",
+    "manifest_sha256": "8c4e2582fc9bc11d2d417f8e785089eebe44c6390d13343e9200b1f639eda4de",
+    "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/validation-initial-output.txt",
+    "scope": "Historical validation log; original bytes not recoverable from current manifest alone",
+    "status": "FAIL_MANIFEST_MISMATCH"
+  }
+}

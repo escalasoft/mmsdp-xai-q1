@@ -1,0 +1,34 @@
+{
+  "56_1_55_governance_passed": 11,
+  "56_3A_contract_tests_passed": 68,
+  "56_3A_status_not_revalidated": "Contract tests retain the original BLOCKED result; no package regenerated or promotion applied",
+  "R1_focused_passed": 73,
+  "commands": [
+    "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=. .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_prospective_e1_parent_integrity_resolution.py",
+    "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=. .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_prospective_e1_protocol_freeze.py",
+    "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=. .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_xai_runtime_freeze.py tests/evaluation/test_q1_primary_xai_runtime_smoke.py::test_guard_denies_protected_reads_and_state_writes tests/evaluation/test_q1_primary_xai_runtime_smoke.py::test_no_reconstruction_refit_metrics_or_unapproved_explainers",
+    ".venv/bin/ruff check --no-cache src/evaluation/q1_prospective_e1_parent_integrity_resolution.py tests/evaluation/test_q1_prospective_e1_parent_integrity_resolution.py",
+    "git diff --check"
+  ],
+  "failed": 0,
+  "git_diff_check": "PASS",
+  "historical_mutations": 0,
+  "log_sha256": {
+    "56_1_55_metadata_governance": "c1b9970d9ba1306b6beaf0105d2da0b7d1bf8b0d24750646d0a8fcfe102621cf",
+    "56_3A_contract_regressions": "9f88e092fe846eaf7f62d73af4adad0d3519dbca99cce846d4ca163a5020be53",
+    "R1_focused": "1681d55c31032b1053f55220b46a3dd3a88eaa1064123e9dd3857cde57ccb2de"
+  },
+  "logs": {
+    "56_1_55_metadata_governance": "...........                                                              [100%]\n11 passed in 0.27s\n",
+    "56_3A_contract_regressions": "....................................................................     [100%]\n68 passed in 0.64s\n",
+    "R1_focused": "........................................................................ [ 98%]\n.                                                                        [100%]\n73 passed in 6.40s\n"
+  },
+  "new_manifest_verification": "Generator verifies exact file coverage and every SHA256 before writing and compares persisted bytes afterward; independent post-publication verification follows",
+  "no_commit_push_PR": true,
+  "parent_regression_limits": "No full Sprint56.1 scientific-array or external-model hash suite run. Its known manifest mismatch remains visible; this suite does not relabel that assertion as passing. The historical mtime-order assertion remains outside R1.",
+  "ruff": "PASS",
+  "scientific_executions": 0,
+  "scope": "New forensic unit/integration tests and explicitly selected metadata/static parent tests only; no old evidence generator or scientific smoke stage executed",
+  "status": "PASS",
+  "total_passed": 152
+}

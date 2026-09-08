@@ -1,0 +1,19 @@
+{
+  "threats": [
+    "Reconstructed predictors are not original Sprint54 serialized states",
+    "Model explanation is not a causal software-engineering mechanism",
+    "Correlated features redistribute attribution",
+    "TEXT association does not establish semantic developer intent",
+    "Cross-project vocabularies and token semantics differ",
+    "Eligibility failures reduce project/modality coverage",
+    "RF probability and LR/boosted logit-margin scales differ",
+    "Attribution magnitudes require justified normalization before cross-model comparison",
+    "Local explanations are case-specific",
+    "E2 modality contribution is not E1 feature importance",
+    "ApacheJIT benchmark-defined observed labels are not independently verified-clean ground truth",
+    "One benchmark family limits external generalization",
+    "Balanced capped reference/foreground defines a sample-specific estimand",
+    "Identical deterministic repetitions do not establish sampling or background robustness",
+    "Historical input provenance remains unresolved and cannot be repaired by policy wording"
+  ]
+}

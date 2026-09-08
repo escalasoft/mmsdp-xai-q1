@@ -1,0 +1,14 @@
+{
+  "PASS_FAIL_semantic_difference": false,
+  "all_other_bytes_identical": true,
+  "byte_difference": 9,
+  "changed_lines": 1,
+  "classes": [
+    "WHITESPACE_ONLY",
+    "FORMAT_ONLY"
+  ],
+  "normalization_performed_on_historical_file": false,
+  "runtime_version_scientific_result_difference": false,
+  "semantic_token_stream_equal": true,
+  "test_count_difference": false
+}

@@ -1,0 +1,19 @@
+{
+  "exact_bytes_found_in_reachable_Git": false,
+  "forensic_copy_persisted": false,
+  "hash_verified_candidate": {
+    "bytes": 4767,
+    "candidate_tests": 80,
+    "git_blob_identity_if_materialized": "4049ab63fd66e2b79816ddceb5c95940a0c53a2a",
+    "line_1_based": 8,
+    "not_claimed": "No actor, tool, timestamp, or Git storage of these bytes inferred from hash equality",
+    "recipe": "Insert trailing ASCII spaces before LF on the bare E diagnostic separator line",
+    "restored_ASCII_spaces": 9,
+    "sha256": "8c4e2582fc9bc11d2d417f8e785089eebe44c6390d13343e9200b1f639eda4de",
+    "source": "DETERMINISTIC_HASH_VERIFIED_RECONSTRUCTION_NOT_GIT_RECOVERY",
+    "status": "EXACT_MANIFEST_SHA256_MATCH"
+  },
+  "matching_git_versions": [],
+  "original_git_blob_available": false,
+  "reason_no_copy": "Expected bytes were reconstructed by exact SHA256 hypothesis testing, not recovered from a historical Git version; persist recipe and line/hex ledger only"
+}

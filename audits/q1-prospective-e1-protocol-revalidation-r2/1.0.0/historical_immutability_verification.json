@@ -1,0 +1,10 @@
+{
+  "R1_manifest_sha256_before_after": "a4fbf73fdd5e564e46fe02cb13e0229c7f56edb270679cf9d9c36475c5c9efab",
+  "historical_Sprint56_1_manifest_unchanged": true,
+  "historical_tracked_tree_unchanged": true,
+  "original56_3A_manifest_sha256_before_after": "bce0934d6a996cba0a2f48a5b75156cb7318c4ff3868da182c71fd2c6734955c",
+  "preexisting_files_byte_identical": 71,
+  "tracked_diff_exact": "",
+  "tree_sha256": "98d5dfebbc926d39861dafd13a9d09721c1fffb6627c530244dac55dae7b750f",
+  "verification_boundary": "Current Git tree and empty tracked diff retain all historical tracked audit bytes, including the old manifest. No historical scientific file opened; R1 and56.3A files individually SHA256-checked before/after."
+}

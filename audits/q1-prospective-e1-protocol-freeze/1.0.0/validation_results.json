@@ -1,0 +1,60 @@
+{
+  "commands": [
+    "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=. .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_prospective_e1_protocol_freeze.py",
+    "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=.:src .venv/bin/python tests/evaluation/run_q1_prospective_e1_governance_regressions.py",
+    "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=.:src .venv/bin/python audits/q1-primary-xai-alternative-design/1.0.0/parent_regression_runner.py",
+    ".venv/bin/ruff check --no-cache src/evaluation/q1_prospective_e1_protocol_freeze.py tests/evaluation/test_q1_prospective_e1_protocol_freeze.py tests/evaluation/run_q1_prospective_e1_governance_regressions.py",
+    "git diff --check"
+  ],
+  "deselection": "Only obsolete test_branch_head from56.2H: expected branch and HEAD refer to its pre-merge state; new sprint checks actual branch/HEAD. No failing scientific test deselected.",
+  "failures": [
+    {
+      "blocking": true,
+      "finding": {
+        "actual_sha256": "b9d17eb93ab80e96d9eae4d0d924511ed9aa23e5ce53c569274913ceb7100ab6",
+        "manifest_sha256": "8c4e2582fc9bc11d2d417f8e785089eebe44c6390d13343e9200b1f639eda4de",
+        "path": "audits/q1-primary-xai-runtime-smoke/1.0.0/validation-initial-output.txt",
+        "scope": "Historical validation log; original bytes not recoverable from current manifest alone",
+        "status": "FAIL_MANIFEST_MISMATCH"
+      },
+      "interpretation": "Committed parent validation log differs from its manifest and snapshot. This sprint did not change it. Original reason for discrepancy unproved; no hash repair or integrity waiver.",
+      "test": "test_q1_primary_xai_alternative_design.py::test_parent_preservation"
+    },
+    {
+      "blocking": "Recorded unresolved historical assertion; does not authorize rewriting the protocol or parent",
+      "finding": "prospective_resolution_policy.json mtime_ns=1788842959590101819 is not earlier than e2_reference_means.jsonl mtime_ns=1788842959524103472",
+      "interpretation": "Checkout filesystem timestamps fail historical ordering assertion. Git does not preserve original file mtimes; no files retimed and no new execution performed. Historical chronology not independently re-proved by this check.",
+      "test": "test_q1_primary_xai_e1_e2_resolution.py::test_decision_frozen_before_mean"
+    }
+  ],
+  "focused_tests": {
+    "failed": 0,
+    "passed": 68
+  },
+  "git_diff_check": "PASS",
+  "no_T1_T2_scientific_access": true,
+  "no_environment_model_mutation": true,
+  "no_figures_commit_push_PR": true,
+  "package_manifest_check": "Publish compares all persisted bytes and exact file set to deterministic compiled package before returning; independent verification follows",
+  "parent_changes": "NONE; current metadata anchored to committed parent blobs during publication",
+  "parent_governance_regressions": {
+    "deselected": 1,
+    "failed": 2,
+    "passed": 110
+  },
+  "ruff": "PASS",
+  "scientific_payload_execution": "NONE; metadata/static governance checks only",
+  "status": "BLOCKED_PARENT_INTEGRITY_REGRESSION",
+  "total_failed": 2,
+  "total_passed": 178,
+  "validation_log_sha256": {
+    "earlier_governance": "58bf760cd1c309cc66dac08abfd7ba9091953fa3094da72236191801613c3e79",
+    "focused": "9f88e092fe846eaf7f62d73af4adad0d3519dbca99cce846d4ca163a5020be53",
+    "parent_runtime_and_alternative": "098ec4c44403eb516dd93d3050b9bf7305eb31f77bbe2211ca87728110f89bf9"
+  },
+  "validation_logs": {
+    "earlier_governance": "............................F...........................                 [100%]\n=================================== FAILURES ===================================\n_______________________ test_decision_frozen_before_mean _______________________\n\n    def test_decision_frozen_before_mean():\n>    assert (s.OUT/'prospective_resolution_policy.json').stat().st_mtime_ns<(s.OUT/'e2_reference_means.jsonl').stat().st_mtime_ns\nE    AssertionError: assert 1788842959590101819 < 1788842959524103472\nE     +  where 1788842959590101819 = os.stat_result(st_mode=33188, st_ino=125078632, st_dev=16777225, st_nlink=1, st_uid=501, st_gid=20, st_size=1864, st_atime=1788842960, st_mtime=1788842959, st_ctime=1788842959).st_mtime_ns\nE     +    where os.stat_result(st_mode=33188, st_ino=125078632, st_dev=16777225, st_nlink=1, st_uid=501, st_gid=20, st_size=1864, st_atime=1788842960, st_mtime=1788842959, st_ctime=1788842959) = stat()\nE     +      where stat = (PosixPath('/Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/audits/q1-primary-xai-e1-input-e2-reference-resolution/1.0.0') / 'prospective_resolution_policy.json').stat\nE     +        where PosixPath('/Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/audits/q1-primary-xai-e1-input-e2-reference-resolution/1.0.0') = s.OUT\nE     +  and   1788842959524103472 = os.stat_result(st_mode=33188, st_ino=125078620, st_dev=16777225, st_nlink=1, st_uid=501, st_gid=20, st_size=153250, st_atime=1788842960, st_mtime=1788842959, st_ctime=1788842959).st_mtime_ns\nE     +    where os.stat_result(st_mode=33188, st_ino=125078620, st_dev=16777225, st_nlink=1, st_uid=501, st_gid=20, st_size=153250, st_atime=1788842960, st_mtime=1788842959, st_ctime=1788842959) = stat()\nE     +      where stat = (PosixPath('/Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/audits/q1-primary-xai-e1-input-e2-reference-resolution/1.0.0') / 'e2_reference_means.jsonl').stat\nE     +        where PosixPath('/Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/audits/q1-primary-xai-e1-input-e2-reference-resolution/1.0.0') = s.OUT\n\ntests/evaluation/test_q1_primary_xai_e1_e2_resolution.py:66: AssertionError\n=========================== short test summary info ============================\nFAILED tests/evaluation/test_q1_primary_xai_e1_e2_resolution.py::test_decision_frozen_before_mean\n1 failed, 55 passed in 5.14s\n",
+    "focused": "....................................................................     [100%]\n68 passed in 0.64s\n",
+    "parent_runtime_and_alternative": ".........F..............................................                 [100%]\n=================================== FAILURES ===================================\n___________________________ test_parent_preservation ___________________________\n\n>   def test_parent_preservation():assert s.snapshot()==get('parent_integrity_before.json')==get('parent_integrity_after.json')\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE   AssertionError: assert {'audits/q1-p...6d65c5d', ...} == {'.gitignore'...a42825c', ...}\nE     \nE     Omitting 337 identical items, use -vv to show\nE     Differing items:\nE     {'audits/q1-primary-xai-runtime-smoke/1.0.0/validation-initial-output.txt': 'b9d17eb93ab80e96d9eae4d0d924511ed9aa23e5ce53c569274913ceb7100ab6'} != {'audits/q1-primary-xai-runtime-smoke/1.0.0/validation-initial-output.txt': '8c4e2582fc9bc11d2d417f8e785089eebe44c6390d13343e9200b1f639eda4de'}\nE     Use -v to get more diff\n\ntests/evaluation/test_q1_primary_xai_alternative_design.py:10: AssertionError\n=========================== short test summary info ============================\nFAILED tests/evaluation/test_q1_primary_xai_alternative_design.py::test_parent_preservation\n1 failed, 55 passed, 1 deselected in 1.07s\n"
+  }
+}

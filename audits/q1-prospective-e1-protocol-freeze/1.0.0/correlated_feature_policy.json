@@ -1,0 +1,24 @@
+{
+  "absolute_threshold": 0.7,
+  "causal_responsibility_claim": "FORBIDDEN",
+  "evidence_source": "TRAIN_ONLY",
+  "freeze_timing": "BEFORE_ATTRIBUTION_INTERPRETATION",
+  "group_alignment": "Same frozen TRAIN group identities required for across-family grouped comparisons",
+  "group_construction": "CONNECTED_COMPONENTS_OF_UNDIRECTED_PAIRWISE_THRESHOLD_GRAPH; SINGLETONS_NOT_REPORTED_AS_CORRELATED_GROUPS",
+  "group_importance": "mean_i(abs(sum_j_in_group(phi_ij)))",
+  "measure": "SPEARMAN_RHO",
+  "missing": "Use exact model preprocessing; report missing pair support; never fit a SHAP-specific imputer",
+  "modalities": [
+    "CODE",
+    "PROCESS"
+  ],
+  "outputs": [
+    "INDIVIDUAL_ATTRIBUTIONS",
+    "GROUPED_ATTRIBUTION_SUMMARIES"
+  ],
+  "population": "Frozen valid TRAIN reference, at most 256 rows; no T1 correlation computation",
+  "ranks": "Average ranks for ties; pairwise finite values only with support count >=3; undefined/constant pairs create no edge",
+  "redistribution": "Also report sum_j mean_i(abs(phi_ij)), each member share and cancellation gap",
+  "schema_version": "q1-xai-runtime-freeze-1.0.0",
+  "warning": "Small within-group rank swaps need not imply substantive instability; no causal interpretation"
+}

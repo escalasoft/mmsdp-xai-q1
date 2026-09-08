@@ -1,0 +1,35 @@
+{
+  "eligibility_rules": {
+    "E1_ELIGIBLE_AFTER_SEPARATE_AUTHORIZATION": "All AUTH-E1 gates plus full per-scope evidence; not assigned in 56.3A",
+    "E1_INELIGIBLE_EQUIVALENCE": "Any G1–G5/state gate not verified",
+    "E1_PENDING_SCIENTIFIC_INPUT_PROVENANCE": "State equivalent; complete legitimate inputs unproved",
+    "TEXT_E1_INELIGIBLE": "Any exact text alignment or future row representation proof absent"
+  },
+  "families": [
+    "Logistic Regression",
+    "Random Forest",
+    "XGBoost",
+    "LightGBM"
+  ],
+  "modalities": [
+    "CODE",
+    "PROCESS",
+    "TEXT"
+  ],
+  "multimodal_E1": "FORBIDDEN",
+  "primary_selection": "PERFORMANCE_INDEPENDENT_SCOPE_COMPLETE_ELIGIBLE_UNIVERSE",
+  "terminology": {
+    "E1": "Feature-level explanation of one specific unimodal predictive model",
+    "E2": "Analytical multimodal fusion explanation at modality level",
+    "E3": "Calibration mapping explanation or calibration-state inspection",
+    "historical_E1": "Historical frozen predictor explanation with incompletely recovered scientific input chain",
+    "prospective_complementary_E1": "New predeclared explanation analysis of eligible reconstructed states and controlled TRAIN/T1 populations"
+  },
+  "theoretical_maximum": 168,
+  "unit": [
+    "project",
+    "algorithm_family",
+    "unimodal_modality"
+  ],
+  "unknown": "Fail closed; retain in coverage denominator; never silently drop"
+}

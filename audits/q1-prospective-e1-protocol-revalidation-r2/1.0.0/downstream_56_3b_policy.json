@@ -1,0 +1,9 @@
+{
+  "E1_execution_authorized": false,
+  "SHAP_authorized": false,
+  "SPRINT56_3B_ELIGIBILITY": "READY_FOR_SEPARATE_HUMAN_AUTHORIZATION",
+  "T1_scientific_row_access_authorized": false,
+  "authorized": false,
+  "automatically_started": false,
+  "prerequisites": "Separate human authorization of56.3B source/provenance/eligibility scope; later scientific execution requires all original AUTH-E1 gates"
+}

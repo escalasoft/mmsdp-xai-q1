@@ -1,0 +1,14 @@
+{
+  "allowed_if_R2_PASS": "The prospective E1 protocol was revalidated after an explicit provenance amendment resolved a historical diagnostic packaging inconsistency. The original byte-level mismatch remains visible and was not retroactively corrected. Independent immutable metadata supported unchanged scientific semantics.",
+  "currently_applicable": true,
+  "prohibited": [
+    "The historical manifest was corrected.",
+    "The original bytes were recovered from Git.",
+    "The original file always matched the manifest.",
+    "The discrepancy had no provenance limitation.",
+    "E1 scientific execution was completed.",
+    "TEXT E1 was fully validated.",
+    "T1 was re-explained.",
+    "T2 was accessed."
+  ]
+}

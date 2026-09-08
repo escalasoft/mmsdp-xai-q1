@@ -1,0 +1,9 @@
+{
+  "historical_mutation_count": 0,
+  "old_manifest_sha256_before_after": "09ef4883a78906d0e0fd7fa87bc8246a9fd1788de80e9bb24a0afbcf0b68cb38",
+  "preexisting_56_3A_files_verified": 44,
+  "scope": "Git mode/blob identities and empty worktree diff for tracked historical packages; byte SHA256 before/after for inspected metadata; no scientific payload deserialization",
+  "tracked_audit_tree_after_sha256": "98d5dfebbc926d39861dafd13a9d09721c1fffb6627c530244dac55dae7b750f",
+  "tracked_audit_tree_before_sha256": "98d5dfebbc926d39861dafd13a9d09721c1fffb6627c530244dac55dae7b750f",
+  "tracked_diff_exact": ""
+}

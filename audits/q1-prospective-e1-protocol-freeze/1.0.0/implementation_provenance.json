@@ -1,0 +1,6 @@
+{
+  "regression_runner_sha256": "9cb8ba5c6fe7e162a519e5875d1a06adf030209fa2f87e2bf923331c36350781",
+  "runtime": "Existing .venv Python; standard-library compiler; no installation",
+  "source_sha256": "27286a945a26e359aa02fce4ec3d348e4251716994e7cd7832398c9d3557ea78",
+  "test_sha256": "69e1c0c441bdc25a1cb07138cdbb7abdce3477eb8a5c6a21696d3ffeba8290cd"
+}

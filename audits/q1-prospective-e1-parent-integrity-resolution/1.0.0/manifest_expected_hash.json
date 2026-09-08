@@ -1,0 +1,9 @@
+{
+  "comparison": "MISMATCH_REMAINS_VISIBLE_NOT_REPAIRED",
+  "entry_path": "validation-initial-output.txt",
+  "exact_line": "8c4e2582fc9bc11d2d417f8e785089eebe44c6390d13343e9200b1f639eda4de  validation-initial-output.txt",
+  "expected_sha256": "8c4e2582fc9bc11d2d417f8e785089eebe44c6390d13343e9200b1f639eda4de",
+  "manifest_path": "audits/q1-primary-xai-runtime-smoke/1.0.0/MANIFEST.sha256",
+  "manifest_sha256": "09ef4883a78906d0e0fd7fa87bc8246a9fd1788de80e9bb24a0afbcf0b68cb38",
+  "path_semantics": "PACKAGE_RELATIVE_BASENAME"
+}

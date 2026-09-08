@@ -1,0 +1,293 @@
+{
+  "NEW_56_3A_R2": [
+    "audits/q1-prospective-e1-protocol-revalidation-r2/1.0.0/",
+    "src/evaluation/q1_prospective_e1_protocol_revalidation_r2.py",
+    "tests/evaluation/test_q1_prospective_e1_protocol_revalidation_r2.py"
+  ],
+  "preexisting": {
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/MANIFEST.sha256": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "a4fbf73fdd5e564e46fe02cb13e0229c7f56edb270679cf9d9c36475c5c9efab"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/SPRINT56_3A_R1_PARENT_INTEGRITY_RESOLUTION_REPORT.md": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "e8f3513d64b6d35c3fce2226cecb86dde2a4b369ce8ecbc814893e24a2b22fd9"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/change_classification.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "511ca74686fce2643027e4f10a7b49fc754f1a6352b8b5d846541496107dd49b"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/current_hash_analysis.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "7f3ec2b8fb5383ea8d4578ff1ff7789df729e6d75a3a2214655ae53a2b8479b1"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/difference_classification_summary.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "0bf1a0193c70d68a049fa6cfe296da6ad9fad126b3b3f3dca41f7469bdd7b694"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/downstream_56_3a_policy.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "8cc437756c6a39c0f7df9ea54da74ee7f8848e7bfb8e25e7faf742c9ce56f3e0"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/expected_digest_search.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "8cccfd9d6208ca0f9f596a6d48ab4e4d05863b2c52f7ac9e0cb4b34417610a93"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/git_history_provenance.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "119433590b2ee5450037b6a0c7cb0948300050d82bdb294ed16c4f441d28886a"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/governance_counters.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "270090c600ea89617cb598a682882130b5a244398b56f5baaffdd64fb745fb86"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/historical_byte_recovery.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "4ca5aecd726285898f44946a73290ef8081c33d361369b78f0fc63b5aeda5520"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/historical_current_diff_ledger.jsonl": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "6b4a01ca257aa34cea0c69557058fe687ae255182542b3f81f3a73ea3777181f"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/historical_immutability_verification.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "57c47c241690a13c482cff306e1125ee3d366729fc955f5a51bc3e1c4516f8af"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/implementation_provenance.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "030c54d60adb8d889bf153c72373cb66d3e47fe17436c9aa8fb454a9d83edc9b"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/manifest_construction_analysis.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "8ed779a17651ebdbb2544d32420864abb109c9f266ed30040a2259b6eee76c4d"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/manifest_expected_hash.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "159ab20718f58d9f8ae66164cf272f9bf2b6c9533cfa071356d564ae7de39847"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/manifest_file_timeline.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "5ccfee56f661253b57d7a6d89f3a6fbfccea78580a568285ece1165f370a5583"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/preflight.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "e3a04ebb7b975f648036dce5b3726a8aa78a273d857118e789b8dbdc9b6a2c87"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/protocol_summary.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "49182843f8f31d65afc21a200d638a49f10d143e2c37c80526bdbfdda3279ca7"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/read_only_access_ledger.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "727fe8800dade5105f8a3c5e9a91daca02a18e0e1ec3d38de7892e1b373ee683"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/recommended_next_action.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "198529f8c63dcf84135100d135244b0e2ce4b90622f8eab4e2ec3b63e2aaa9d8"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/resolution_decision.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "227089ca285dc685d5061db708e7fd08e038a3d3222d288be394e0a6dd703020"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/scientific_impact_matrix.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "8a08387f5357fa276570167694cd9d0cb86ddbf7bd7423cfc270621375d13543"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/sprint56_1_semantic_reconciliation.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "43431a0ee53e6ac321c3924736aa2801c571f7b436feaff22e992307a913ba56"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/target_artifact_inventory.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "a9bf09be8c5729761b8b504a5890660e222ca4c8c55209a6b6b11eeb387563d2"
+    },
+    "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/validation_results.json": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "7d238f981dcf17ad18cf830118820054461f122de6e0eba9eff5b235efe08a4c"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/MANIFEST.sha256": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "bce0934d6a996cba0a2f48a5b75156cb7318c4ff3868da182c71fd2c6734955c"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/SPRINT56_3A_PROSPECTIVE_E1_PROTOCOL_FREEZE_REPORT.md": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "5e6e41fcfa9835f18035035541a0b830a7413f4f06d0cb84522f098b13f6b360"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/access_log.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "00cb2e57886fbb53ff4b19486449586e54c3c15083c67acbf82ee5e80542e321"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/code_process_feature_contract.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "77a90fc08938bab074c25bce750a38e2365f2b2ca68d8766b0cf3cc276a753b4"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/correlated_feature_policy.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "dcd9cf480cb8d230acf768a2a9b262453a490004f7cc1b2f78fc600131f2fca7"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/e1_e2_bridge_policy.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "887478648549435ca3ad491793a9abac2c80415fba6ce1f6934a637365123897"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/e1_e2_continuity_contract.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "a375d259c7f53ebbef9873232c43e0089b9881eef4b5b4419443129c8578b6b1"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/e1_method_contract.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "796037890733fca8730b4f049cb1288b15005bedfe1346b93335cfbbe742859d"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/e1_scope_universe.jsonl": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "7a0178ccad75e5f8939d702b6794030f3cb88dbe0810dc5ea5bfb31c4e17fddf"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/e1_unit_of_analysis.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "903df8525f785fa0cc5f6e002ec1fc05b69a50de59e2f825dd76425c30fda133"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/execution_authorization_gate.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "318a335277cfd2d00a5e66450241c13b759addb19ab7dd97502b9487fa86bf83"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/execution_counters.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "be489a0d7a27bbfd607a86a72450bdea0a2bcd57db22f8f9c079f646f330667c"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/fidelity_contract.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "2048cfa3715fde991de5cd12f64ec26b1a7594a69fc7dbb74203f744137435b6"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/figure_contract.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "4e1d165a3d0e0bf51727dcd5d70177830508cadfc305628dd6e0d1cfc562fcb3"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/heterogeneity_contract.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "2a69cd4545d6766485be6f992f14b64e91e89c8d7545ab639e1606572670b85c"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/implementation_provenance.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "79f854d0c1d910ee0eafc556f99272c8194319d0e93bb2bc7829c2e0d6da52b0"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/lgb_treeshap_contract.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "6775aebb30ea3a1dc13a1603e35fda8efa2a2df801d903173784cfa9889249af"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/local_case_selection_policy.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "20c542f76bf723593ad52ec3dc50202b7f5ac4a390e0d1a655f6c2a9df41f83b"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/lr_analytical_contract.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "3750577cf1fecb4a5bce5ae3fe74780345a1648e778bb363d3edb5a0bc765060"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/manuscript_integration_contract.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "2bdd3a375f0d62299f5f3e372230d4c35abdcb4f7bc9767e80e760a84a8194f9"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/missing_value_policy.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "8761e38560662887f1c60f22a8b43d00da2567c7f2155a26706ba4dafa8c0f64"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/output_schemas.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "6b968a8f91fc33465035662172e5307dd4776e7ef62db5a2f8f2e93e58deffc5"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/parent_integrity.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "066cb03184a84d22af909a8f213a6a1ebadb1dc523d055d7cc55e648a95fb8ce"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/primary_secondary_analysis_policy.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "4e258f10f4d72887804f2e057796420bcee7d6bf27e1eff4586023a4e902e1e2"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/prohibited_claims.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "c8a12ad1fdb1000ad3a04d384670651cff5adf1314cb759b4fc818df38c62cb7"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/protocol_summary.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "6024e914f4a17c8838d032b084319db381d6a9f08633c633dbb94f612424044c"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/q1_scientific_sufficiency_gate.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "9e6e835517ae22351499a2451625eb8c4e01900d3d71bedbdf12ffed3bfb23b9"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/query_budget.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "a31694d283c39690a7ba7f71730ddb31534635ecc80407cd248045ed5c27395f"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/recommended_next_action.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "2ec6de6bbbc6a3540f148c5d409656f4bd01747e216f2dec3d1bfbaf8c80336a"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/reproducibility_persistence_contract.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "5360708b46a0425f60ad7697d92dccbacd4ae6a459ff6705422b50f340f07d12"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/rf_treeshap_contract.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "9734cecc1b8ffd80df7307f70de0b9df49b43e0fbc3ade235a090f161d176850"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/scientific_state_preservation.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "bd1c5431d4ffe942ee507985f02e881daa31de2728de0f8a416f9343b58060ae"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/stability_contract.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "df534173e4128cb777a3b5ba57bd61cf9e59809aa92dc125a1e74a6d5ab81afe"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/t1_global_foreground_policy.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "9c3f589e0d77cdd0b1d9f0debf8ed0e9fa283146932a172b4fc84dd20ce15d5c"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/t1_xai_access_policy.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "6311dd877d33e173702b0b706fa5dad89e7b855ce3f16efad8446c19ca1604fd"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/t2_sealed_reserve_policy.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "31b878e695a49f25c47434596e005ed5869525840f0481c902078bede63e828d"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/text_e1_contract.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "8af0b93ae3e51199e1f0c53c7fcc778bf5c20c75252c992cf7113b2e04e6660a"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/threats_to_validity.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "71e578645902bbf0d9a4894cf2d93ddbcb9b2fc6993b78016beeb9dfeed44c2a"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/train_background_policy.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "7f7e0082ceae60685c9d217df465fc034171c5a081862135ede2b3b5f3d4dc45"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/validation_results.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "e007889ee14e525cf845169fc1bbe41165bdbfc7838d6134b15f14f4e106915d"
+    },
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/xgb_treeshap_contract.json": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "165e0985bbf99441c32f096237ef1e012ac8578b3c7babf568a5d7b6efd180f9"
+    },
+    "src/evaluation/q1_prospective_e1_parent_integrity_resolution.py": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "6d4e60b2287acf23c346e32d85416b187e7ea21ae590d6ca4b8d65d9cc00677b"
+    },
+    "src/evaluation/q1_prospective_e1_protocol_freeze.py": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "27286a945a26e359aa02fce4ec3d348e4251716994e7cd7832398c9d3557ea78"
+    },
+    "tests/evaluation/run_q1_prospective_e1_governance_regressions.py": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "9cb8ba5c6fe7e162a519e5875d1a06adf030209fa2f87e2bf923331c36350781"
+    },
+    "tests/evaluation/test_q1_prospective_e1_parent_integrity_resolution.py": {
+      "classification": "PREEXISTING_56_3A_R1",
+      "sha256": "bf57b9ac307d7c02eb8c547aaa47f21a30ad8dd50c89f8c53912cade27df82ac"
+    },
+    "tests/evaluation/test_q1_prospective_e1_protocol_freeze.py": {
+      "classification": "PREEXISTING_56_3A",
+      "sha256": "69e1c0c441bdc25a1cb07138cdbb7abdce3477eb8a5c6a21696d3ffeba8290cd"
+    }
+  }
+}
