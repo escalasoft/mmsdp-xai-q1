@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "focused_tests": 55,
+  "parent_governance_regressions": 46,
+  "total_passed": 101,
+  "focused_command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=. .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_primary_xai_canonical_rematerialization_feasibility.py",
+  "regression_command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=.:src .venv/bin/python audits/q1-primary-xai-canonical-source-rematerialization-feasibility/1.0.0/parent_regression_runner.py",
+  "regression_scope": "Metadata/static governance only; no prior source loading, materialization, metrics or XAI repeated",
+  "missing_value_audit": "364 unobserved project/feature/partition diagnostic cells; no zero-observation inference",
+  "git_diff_check": "PASS"
+}

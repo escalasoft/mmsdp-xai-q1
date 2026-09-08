@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "focused_tests": 53,
+  "parent_governance_regressions": 36,
+  "total_passed": 89,
+  "focused_command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=. .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_primary_xai_e1_scientific_input_materialization.py",
+  "regression_command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=.:src .venv/bin/python audits/q1-primary-xai-e1-scientific-input-materialization/1.0.0/parent_regression_runner.py",
+  "historical_equivalence": "Unavailable, not falsely marked PASS; exact repeatability and source/preprocessor linkage checked instead",
+  "git_diff_check": "PASS",
+  "E2_integrity": "PASS_PRESERVED"
+}

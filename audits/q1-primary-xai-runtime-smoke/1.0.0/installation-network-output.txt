@@ -1,0 +1,72 @@
+Collecting numpy==2.3.5 (from -r audits/q1-primary-xai-runtime-smoke/1.0.0/requirements-xai.txt (line 1))
+  Downloading numpy-2.3.5-cp311-cp311-macosx_14_0_x86_64.whl.metadata (62 kB)
+Collecting scipy==1.17.1 (from -r audits/q1-primary-xai-runtime-smoke/1.0.0/requirements-xai.txt (line 2))
+  Downloading scipy-1.17.1-cp311-cp311-macosx_14_0_x86_64.whl.metadata (62 kB)
+Collecting scikit-learn==1.9.0 (from -r audits/q1-primary-xai-runtime-smoke/1.0.0/requirements-xai.txt (line 3))
+  Downloading scikit_learn-1.9.0-cp311-cp311-macosx_10_9_x86_64.whl.metadata (11 kB)
+Collecting xgboost==3.2.0 (from -r audits/q1-primary-xai-runtime-smoke/1.0.0/requirements-xai.txt (line 4))
+  Downloading xgboost-3.2.0-py3-none-macosx_10_15_x86_64.whl.metadata (2.1 kB)
+Collecting lightgbm==4.6.0 (from -r audits/q1-primary-xai-runtime-smoke/1.0.0/requirements-xai.txt (line 5))
+  Downloading lightgbm-4.6.0-py3-none-macosx_10_15_x86_64.whl.metadata (17 kB)
+Collecting shap==0.51.0 (from -r audits/q1-primary-xai-runtime-smoke/1.0.0/requirements-xai.txt (line 6))
+  Downloading shap-0.51.0-cp311-cp311-macosx_10_9_x86_64.whl.metadata (25 kB)
+Collecting numba==0.62.1 (from -r audits/q1-primary-xai-runtime-smoke/1.0.0/requirements-xai.txt (line 7))
+  Downloading numba-0.62.1-cp311-cp311-macosx_10_15_x86_64.whl.metadata (2.8 kB)
+Collecting llvmlite==0.45.1 (from -r audits/q1-primary-xai-runtime-smoke/1.0.0/requirements-xai.txt (line 8))
+  Downloading llvmlite-0.45.1-cp311-cp311-macosx_10_15_x86_64.whl.metadata (4.8 kB)
+Collecting joblib==1.5.3 (from -r audits/q1-primary-xai-runtime-smoke/1.0.0/requirements-xai.txt (line 9))
+  Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+Collecting cloudpickle==3.1.2 (from -r audits/q1-primary-xai-runtime-smoke/1.0.0/requirements-xai.txt (line 10))
+  Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+Collecting narwhals>=2.0.1 (from scikit-learn==1.9.0->-r audits/q1-primary-xai-runtime-smoke/1.0.0/requirements-xai.txt (line 3))
+  Downloading narwhals-2.25.0-py3-none-any.whl.metadata (15 kB)
+Collecting threadpoolctl>=3.5.0 (from scikit-learn==1.9.0->-r audits/q1-primary-xai-runtime-smoke/1.0.0/requirements-xai.txt (line 3))
+  Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Collecting pandas (from shap==0.51.0->-r audits/q1-primary-xai-runtime-smoke/1.0.0/requirements-xai.txt (line 6))
+  Downloading pandas-3.0.5-cp311-cp311-macosx_10_9_x86_64.whl.metadata (79 kB)
+Collecting tqdm>=4.27.0 (from shap==0.51.0->-r audits/q1-primary-xai-runtime-smoke/1.0.0/requirements-xai.txt (line 6))
+  Downloading tqdm-4.70.0-py3-none-any.whl.metadata (57 kB)
+Collecting packaging>20.9 (from shap==0.51.0->-r audits/q1-primary-xai-runtime-smoke/1.0.0/requirements-xai.txt (line 6))
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting slicer==0.0.8 (from shap==0.51.0->-r audits/q1-primary-xai-runtime-smoke/1.0.0/requirements-xai.txt (line 6))
+  Downloading slicer-0.0.8-py3-none-any.whl.metadata (4.0 kB)
+Collecting typing-extensions (from shap==0.51.0->-r audits/q1-primary-xai-runtime-smoke/1.0.0/requirements-xai.txt (line 6))
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting python-dateutil>=2.8.2 (from pandas->shap==0.51.0->-r audits/q1-primary-xai-runtime-smoke/1.0.0/requirements-xai.txt (line 6))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->shap==0.51.0->-r audits/q1-primary-xai-runtime-smoke/1.0.0/requirements-xai.txt (line 6))
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Downloading numpy-2.3.5-cp311-cp311-macosx_14_0_x86_64.whl (6.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 70.0 MB/s  0:00:00
+Downloading scipy-1.17.1-cp311-cp311-macosx_14_0_x86_64.whl (22.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 22.7/22.7 MB 73.9 MB/s  0:00:00
+Downloading scikit_learn-1.9.0-cp311-cp311-macosx_10_9_x86_64.whl (8.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.8/8.8 MB 44.7 MB/s  0:00:00
+Downloading xgboost-3.2.0-py3-none-macosx_10_15_x86_64.whl (2.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 20.0 MB/s  0:00:00
+Downloading lightgbm-4.6.0-py3-none-macosx_10_15_x86_64.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 63.2 MB/s  0:00:00
+Downloading shap-0.51.0-cp311-cp311-macosx_10_9_x86_64.whl (565 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 565.1/565.1 kB 54.9 MB/s  0:00:00
+Downloading numba-0.62.1-cp311-cp311-macosx_10_15_x86_64.whl (2.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.7/2.7 MB 74.4 MB/s  0:00:00
+Downloading llvmlite-0.45.1-cp311-cp311-macosx_10_15_x86_64.whl (43.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.0/43.0 MB 27.7 MB/s  0:00:01
+Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+Downloading slicer-0.0.8-py3-none-any.whl (15 kB)
+Downloading narwhals-2.25.0-py3-none-any.whl (467 kB)
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Downloading tqdm-4.70.0-py3-none-any.whl (80 kB)
+Downloading pandas-3.0.5-cp311-cp311-macosx_10_9_x86_64.whl (10.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.4/10.4 MB 66.3 MB/s  0:00:00
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Installing collected packages: typing-extensions, tqdm, threadpoolctl, slicer, six, packaging, numpy, narwhals, llvmlite, joblib, cloudpickle, scipy, python-dateutil, numba, xgboost, scikit-learn, pandas, lightgbm, shap
+
+Successfully installed cloudpickle-3.1.2 joblib-1.5.3 lightgbm-4.6.0 llvmlite-0.45.1 narwhals-2.25.0 numba-0.62.1 numpy-2.3.5 packaging-26.3 pandas-3.0.5 python-dateutil-2.9.0.post0 scikit-learn-1.9.0 scipy-1.17.1 shap-0.51.0 six-1.17.0 slicer-0.0.8 threadpoolctl-3.6.0 tqdm-4.70.0 typing-extensions-4.16.0 xgboost-3.2.0
+
+[notice] A new release of pip is available: 25.2 -> 26.2.1
+[notice] To update, run: /Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/.venv-xai-s56/bin/python -m pip install --upgrade pip

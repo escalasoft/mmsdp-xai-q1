@@ -1,0 +1,1187 @@
+SPRINT 10.8.2.56.2 — PRIMARY XAI EXECUTION AUTHORIZATION & POPULATION FREEZE
+
+HUMAN AUTHORIZATION DECISION
+
+Human authorization is GRANTED for Sprint 56.2 only.
+
+Current branch MUST remain:
+
+sprint-10/q1-primary-xai-execution
+
+Sprint 56.1 has already established:
+
+PRIMARY_XAI_ISOLATED_RUNTIME_SMOKE_TEST_PASS
+
+and:
+
+TRAIN_ONLY_RUNTIME_VALIDATION_NO_SCIENTIFIC_XAI_CLAIM
+
+Sprint 56.2 is a GOVERNANCE + POPULATION FREEZE stage.
+
+This stage MUST NOT execute primary scientific XAI yet.
+
+This authorization allows only:
+
+- freezing the exact primary XAI scope universe
+- freezing method assignment by algorithm/fusion type
+- freezing TRAIN reference/background populations
+- freezing T1 foreground populations
+- freezing local-case populations
+- freezing query budgets
+- freezing feature/token/modality ordering
+- freezing output scales
+- freezing fidelity/additivity contracts
+- freezing stability analysis rules
+- freezing heterogeneity/cross-family interpretation rules
+- freezing XAI result schemas and provenance contracts
+- verifying model-state availability/readiness without scientific attribution execution
+
+This authorization DOES NOT grant:
+
+- SHAP execution over T1
+- analytical attribution execution over T1
+- scientific XAI result generation
+- article-quality plots
+- T2 access
+- predictive metric recomputation
+- model retraining
+- model refitting
+- predictor reconstruction
+- recalibration
+- performance-driven model selection
+- explanation-driven model selection
+- LIME
+- PDP/ICE
+- counterfactuals
+- permutation importance
+
+============================================================
+1. FROZEN STARTING STATE
+============================================================
+
+Accept and preserve:
+
+Sprint 54:
+MIXED_CONFIRMATORY_EVIDENCE
+
+Sprint 55:
+CLOSED / MERGED / XAI READINESS ESTABLISHED
+
+Sprint 56.1:
+PRIMARY_XAI_ISOLATED_RUNTIME_SMOKE_TEST_PASS
+
+Historical Sprint 54 predictive access/scoring:
+1/1
+
+T1 rerun:
+false
+
+T2:
+T2_ACCESS_COUNT = 0
+T2_STATE = DENY_SEALED_REVIEWER_RESERVE
+
+Primary XAI execution count:
+0
+
+Scientific SHAP execution count:
+0
+
+Scientific analytical-attribution execution count:
+0
+
+============================================================
+2. FROZEN PRIMARY XAI UNIVERSE
+============================================================
+
+Freeze the primary XAI universe as exactly:
+
+389 eligible project-scopes
+
+derived from the Sprint 55 G1–G5 eligibility chain.
+
+The following three scopes remain excluded:
+
+apache/zeppelin | Logistic Regression | C+T
+apache/zeppelin | Logistic Regression | P+T
+apache/zeppelin | Logistic Regression | C+P+T
+
+No new scope may be added.
+
+No excluded scope may be rescued.
+
+No scope may be removed because its explanation appears inconvenient,
+unstable, sparse, counterintuitive, visually unattractive, or
+scientifically unfavorable.
+
+Persist an exact 389-row authorization ledger.
+
+============================================================
+3. PRIMARY XAI METHOD ASSIGNMENT
+============================================================
+
+Freeze method assignment by predictive family.
+
+E1 — FEATURE-LEVEL / UNIMODAL EXPLANATION
+
+Logistic Regression:
+PRIMARY METHOD =
+ANALYTICAL_LINEAR_LOGIT_DECOMPOSITION
+
+Random Forest:
+PRIMARY METHOD =
+EXACT_TREESHAP_POSITIVE_CLASS_OUTPUT
+
+XGBoost:
+PRIMARY METHOD =
+EXACT_TREESHAP_NATIVE_RAW_MARGIN
+
+LightGBM:
+PRIMARY METHOD =
+EXACT_TREESHAP_NATIVE_RAW_MARGIN
+
+E2 — MULTIMODAL FUSION EXPLANATION
+
+All late-fusion multimodal scopes:
+PRIMARY METHOD =
+ANALYTICAL_LR_FUSION_DECOMPOSITION
+
+Do NOT execute naive SHAP directly over the original concatenated
+feature space of the fused model.
+
+E1 feature attributions remain attached to the corresponding
+unimodal base predictor.
+
+E2 modality contributions explain the LR fusion meta-model.
+
+============================================================
+4. PRIMARY OUTPUT SCALES
+============================================================
+
+Freeze the explanation scale for every family.
+
+Logistic Regression E1:
+LOGIT
+
+Random Forest E1:
+FROZEN POSITIVE-CLASS MODEL OUTPUT
+as defined by the Sprint 55/56.1 contract
+
+XGBoost E1:
+NATIVE_RAW_MARGIN
+
+LightGBM E1:
+NATIVE_RAW_MARGIN
+
+Fusion E2:
+META_LOGIT
+
+Final calibrated probability:
+report separately only where needed
+
+Do not silently convert between probability and logit scales.
+
+Every explanation record must contain:
+
+- explanation scale
+- baseline
+- attribution sum
+- reconstructed model output
+- residual
+- final probability if separately available
+
+============================================================
+5. ISOLATED XAI RUNTIME LOCK
+============================================================
+
+Freeze the exact Sprint 56.1 isolated runtime as the only allowed
+primary XAI execution runtime unless later changed by a separately
+authorized prospective amendment.
+
+Expected runtime:
+
+Python        3.11.14
+NumPy         2.3.5
+SciPy         1.17.1
+scikit-learn  1.9.0
+XGBoost       3.2.0
+LightGBM      4.6.0
+SHAP          0.51.0
+Numba         0.62.1
+llvmlite      0.45.1
+joblib        1.5.3
+cloudpickle   3.1.2
+
+Environment:
+
+.venv-xai-s56
+
+The validated predictive environment remains immutable.
+
+Any runtime change after this freeze requires:
+
+PROSPECTIVE_XAI_RUNTIME_AMENDMENT
+
+before observing scientific attribution results.
+
+============================================================
+6. EXECUTABLE STATE READINESS
+============================================================
+
+Before freezing scientific populations, verify that all 389
+authorized scopes resolve to the required persisted reconstructed
+states.
+
+Use the external artifact registry and SHA-256 checks.
+
+Classify each required state:
+
+READY_VERIFIED
+or
+NOT_READY
+
+Do not execute SHAP or analytical attribution yet.
+
+If any scope is NOT_READY:
+
+STOP with:
+
+PRIMARY_XAI_STATE_READINESS_INCOMPLETE
+
+unless the missing scope is already one of the three frozen
+Sprint 55 exclusions.
+
+No reconstruction or repair is authorized in Sprint 56.2.
+
+============================================================
+7. TRAIN REFERENCE / BACKGROUND POPULATION
+============================================================
+
+For every eligible project-scope, freeze a deterministic TRAIN-only
+reference population.
+
+Maximum:
+
+256 TRAIN rows per project-scope
+
+Selection must be:
+
+- project-specific
+- TRAIN-only
+- deterministic
+- SHA-256 ordered
+- performance-independent
+- explanation-independent
+
+Use frozen seed:
+
+20260901
+
+Where class-stratified selection is scientifically feasible without
+using T1 labels, preserve class balance from TRAIN.
+
+If a project-scope contains fewer than 256 eligible TRAIN rows,
+use all eligible rows and record the exact count.
+
+Persist:
+
+- selected row identities
+- partition
+- class where permitted
+- selection hash
+- ordering hash
+- count
+- source membership digest
+
+No T1 row may appear in TRAIN reference.
+
+============================================================
+8. T1 GLOBAL FOREGROUND POPULATION
+============================================================
+
+Human authorization is GRANTED in Sprint 56.2 to READ T1 identity
+metadata needed ONLY to freeze the future explanation population.
+
+This authorization DOES NOT permit model queries or attribution.
+
+Freeze, per project:
+
+maximum 256 T1 rows
+
+for global XAI.
+
+Selection must be deterministic and independent of attribution
+outputs.
+
+Use frozen seed:
+
+20260901
+
+Selection may use T1 labels only for deterministic stratified
+population construction if that was already authorized by the
+frozen Sprint 55 XAI population policy.
+
+Do not use:
+
+- prediction correctness
+- confidence
+- PR-AUC contribution
+- residual
+- SHAP value
+- feature importance
+- anomaly score
+- visual attractiveness
+
+for selecting rows.
+
+Persist:
+
+T1_GLOBAL_FOREGROUND_SELECTION
+
+with:
+
+- row identity
+- project
+- partition
+- class if policy allows
+- SHA-256 selection key
+- final deterministic ordering
+
+============================================================
+9. T1 LOCAL EXPLANATION CASES
+============================================================
+
+Freeze local cases prospectively.
+
+Maximum:
+
+8 local cases per eligible project-scope
+
+or the previously frozen lower budget where applicable.
+
+Use deterministic strata, for example where available:
+
+- true positive
+- true negative
+- false positive
+- false negative
+- high-confidence positive
+- high-confidence negative
+
+ONLY if those strata are already allowed by the frozen XAI policy.
+
+Do not optimize for visually interesting cases.
+
+If a stratum is unavailable, document it rather than substituting
+another case post hoc.
+
+Persist local-case rationale and exact identity.
+
+Local cases must be a subset of the authorized T1 foreground.
+
+============================================================
+10. REPRESENTATION AND FEATURE ORDER
+============================================================
+
+Freeze exact feature semantics and ordering.
+
+CODE:
+exact frozen feature names/order
+
+PROCESS:
+exact frozen feature names/order
+
+TEXT:
+exact persisted TF-IDF:
+
+- vocabulary
+- IDF
+- token-column map
+- tokenizer rules
+- lowercasing policy
+- n-gram policy
+- final column order
+- predictor alignment
+
+No feature reordering is permitted during XAI execution.
+
+============================================================
+11. CORRELATED FEATURE GROUPS
+============================================================
+
+For CODE and PROCESS, derive correlated groups using TRAIN only.
+
+Use:
+
+|Spearman rho| >= 0.70
+
+Freeze:
+
+- group membership
+- feature identities
+- project
+- modality
+- correlation sign/magnitude
+
+This grouping is descriptive.
+
+It does NOT redefine SHAP values.
+
+It is used only to distinguish:
+
+INDIVIDUAL_FEATURE_ATTRIBUTION
+
+from
+
+CORRELATED_GROUP_ATTRIBUTION_SUMMARY
+
+Do not infer causality.
+
+============================================================
+12. E1 GLOBAL ATTRIBUTION SUMMARY CONTRACT
+============================================================
+
+For each eligible unimodal scope, future primary execution must
+produce:
+
+- per-row attribution vector
+- baseline
+- model output
+- additivity/fidelity residual
+- mean absolute attribution per feature
+- signed mean attribution
+- rank
+- optional grouped correlated-feature summary
+
+Global importance:
+
+mean(|phi_j|)
+
+Ranking must be deterministic.
+
+Ties must be broken by exact feature identity.
+
+Do not normalize across model families unless explicitly specified.
+
+============================================================
+13. E2 MULTIMODAL FUSION CONTRACT
+============================================================
+
+For each eligible multimodal scope:
+
+eta_fusion =
+alpha + Σ beta_m * p_m
+
+Local raw modality contribution:
+
+c_m = beta_m * p_m
+
+Centered modality contribution:
+
+phi_m = beta_m * (p_m - mu_m)
+
+Baseline:
+
+phi_0 = alpha + Σ beta_m * mu_m
+
+where:
+
+mu_m =
+frozen TRAIN-reference mean unimodal probability
+
+Freeze exact modality order:
+
+C
+P
+T
+
+as applicable to the configuration.
+
+Persist both:
+
+RAW_MODALITY_CONTRIBUTION
+
+and
+
+CENTERED_MODALITY_CONTRIBUTION
+
+Primary cross-case/global modality comparison must use the centered
+form unless the analysis explicitly states otherwise.
+
+Meta-coefficients describe learned fusion behavior.
+
+They do NOT establish causal modality importance.
+
+============================================================
+14. CALIBRATION / E3 SEPARATION
+============================================================
+
+Calibration remains a separate explanatory layer.
+
+Existing mapping universe:
+
+375 RAW
+14 ISOTONIC
+
+Do not fit new calibrators.
+
+Do not attribute isotonic calibration changes to original features.
+
+For ISOTONIC scopes:
+
+future reporting may show:
+
+raw fused/model probability
+-> frozen isotonic mapping
+-> calibrated probability
+
+but this is E3 calibration behavior, not E1/E2 attribution.
+
+============================================================
+15. FIDELITY / ADDITIVITY CONTRACTS
+============================================================
+
+Freeze tolerances exactly.
+
+LR analytical:
+
+abs(residual)
+<= 1e-10 * (1 + abs(logit))
+
+LR sigmoid reconstruction:
+
+<= 1e-10
+
+Fusion analytical:
+
+abs(residual)
+<= 1e-10 * (1 + abs(meta_logit))
+
+Fusion sigmoid reconstruction:
+
+<= 1e-10
+
+TreeSHAP:
+
+abs(residual)
+<= 1e-6 * (1 + abs(model_output))
+
+Global attribution reconstruction:
+
+<= 1e-12 where applicable
+
+Do not weaken these tolerances after execution.
+
+============================================================
+16. APPROXIMATE SHAP PROHIBITION
+============================================================
+
+Freeze:
+
+TreeSHAP approximate = false
+
+Approximate SHAP execution is prohibited in the primary campaign.
+
+If exact TreeSHAP cannot run for a scope:
+
+classify the scope as XAI execution failure.
+
+Do not silently substitute:
+
+- gain importance
+- impurity importance
+- split count
+- permutation importance
+- approximate TreeSHAP
+
+============================================================
+17. STABILITY DESIGN
+============================================================
+
+Freeze stability diagnostics before primary execution.
+
+Seeds:
+
+20260901
+through
+20260920
+
+Diagnostics:
+
+Top-k:
+3
+10
+
+Metrics where defined:
+
+- Jaccard overlap
+- Spearman rank correlation
+- sign agreement
+- attribution-total-variation
+
+Deterministic repeated-run attribution difference:
+
+<= 1e-12
+
+Freeze status categories:
+
+PASS
+MIXED
+FAIL
+INSUFFICIENT_EVIDENCE
+
+Do not change thresholds after seeing results.
+
+============================================================
+18. CROSS-FAMILY MODEL-DEPENDENCE CONTRACT
+============================================================
+
+Only compare explanatory patterns across algorithm families when
+at least 3 eligible families exist for the same scientific context.
+
+Freeze thresholds:
+
+Jaccard >= 0.60
+Spearman >= 0.70
+sign agreement >= 0.80
+TV <= 0.25
+
+If thresholds are not met:
+
+classify:
+
+MODEL_DEPENDENT_EXPLANATION_PATTERN
+
+Do not select another model because explanations agree better.
+
+============================================================
+19. PROJECT-LEVEL HETEROGENEITY
+============================================================
+
+Freeze interpretation precedence.
+
+Possible classifications:
+
+INSUFFICIENT_EVIDENCE
+
+STABLE_EXPLANATORY_PATTERN
+
+PROJECT_SPECIFIC_PATTERN
+
+HETEROGENEOUS_MODEL_DEPENDENT_PATTERN
+
+For a stable project-level pattern require:
+
+PASS in >= 11 of 14 projects
+
+and no material reversal in more than 1 project.
+
+Do not force universal claims.
+
+============================================================
+20. TEXT ATTRIBUTION POLICY
+============================================================
+
+TEXT attributions are feature/token associations in frozen TF-IDF
+space.
+
+Allowed:
+
+- token-level rank within a project/model
+- signed association with model output
+- mean absolute attribution
+- local token contribution
+
+Prohibited interpretation:
+
+- developer intention
+- causal defect mechanism
+- semantic truth
+- psychological meaning
+
+Do not average literal token ranks across projects unless vocabulary
+identity, tokenizer, column semantics, and feature meaning are
+strictly aligned.
+
+Prefer project-specific or grouped lexical reporting.
+
+============================================================
+21. GLOBAL FIGURE POLICY
+============================================================
+
+Sprint 56.2 freezes which figures MAY later be produced.
+
+Do NOT generate them yet.
+
+Future allowed primary figures include:
+
+A. SHAP mean(|value|) bar plots
+
+B. SHAP beeswarm plots
+
+C. selected local waterfall plots
+
+D. dependence plots only for prospectively selected high-priority
+   features/groups
+
+E. multimodal contribution plots for CODE / PROCESS / TEXT
+
+F. project-family heterogeneity heatmaps or rank summaries
+
+G. calibration mapping visualization for E3 where justified
+
+All figures must be derived from frozen primary outputs.
+
+No plot-driven case reselection.
+
+============================================================
+22. QUERY BUDGET FREEZE
+============================================================
+
+Freeze future primary XAI budgets.
+
+Per eligible project-scope:
+
+TRAIN background:
+<= 256 rows
+
+T1 global foreground:
+<= 256 rows
+
+T1 local foreground:
+<= 8 rows
+
+Fidelity:
+all rows actually explained
+
+Stability:
+maximum 5,120 row-evaluations per scope
+or the exact frozen Sprint 55 budget if lower.
+
+No query-budget increase after seeing explanation outputs without
+prospective amendment.
+
+============================================================
+23. T1 AUTHORIZATION BOUNDARY
+============================================================
+
+Sprint 56.2 may read only the minimum T1 metadata/rows required to
+freeze future XAI populations.
+
+Allowed T1 activity:
+
+- identity read
+- partition verification
+- label read only if required by frozen stratification policy
+- feature row identification
+- deterministic selection
+
+Not allowed:
+
+- model inference
+- SHAP
+- analytical attribution
+- probability recomputation
+- predictive metric recomputation
+- plot generation
+
+Create separate counters:
+
+T1_XAI_POPULATION_FREEZE_ACCESS_COUNT
+
+T1_XAI_MODEL_QUERY_COUNT = 0
+
+T1_XAI_ATTRIBUTION_EXECUTION_COUNT = 0
+
+Do not alter historical Sprint 54 predictive access/scoring = 1/1.
+
+============================================================
+24. T2 ABSOLUTE RESERVE
+============================================================
+
+T2 remains sealed.
+
+Required:
+
+T2_ACCESS_COUNT = 0
+
+T2_STATE =
+DENY_SEALED_REVIEWER_RESERVE
+
+No T2 identity read.
+No T2 feature read.
+No T2 label read.
+No T2 model query.
+No T2 attribution.
+No T2 plot.
+
+Preserve T2 for reviewer-facing future validation.
+
+============================================================
+25. PREDICTIVE METRICS PROHIBITED
+============================================================
+
+Do NOT compute:
+
+PR-AUC
+ROC-AUC
+F1
+MCC
+Recall
+Precision
+Brier
+ECE
+
+Do not re-rank models.
+
+Do not recompute Sprint 54 results.
+
+============================================================
+26. LIME / PDP / COUNTERFACTUAL STATUS
+============================================================
+
+LIME:
+EXCLUDED_FROM_PRIMARY_XAI
+
+PDP/ICE:
+EXCLUDED_FROM_PRIMARY_XAI
+
+Counterfactuals:
+EXCLUDED_FROM_PRIMARY_XAI
+
+Permutation importance:
+NOT A PRIMARY SUBSTITUTE
+
+No installation/execution in Sprint 56.2.
+
+============================================================
+27. RESULT SCHEMA FREEZE
+============================================================
+
+Freeze future primary result records before execution.
+
+At minimum every E1 result row must contain:
+
+- project
+- algorithm
+- configuration
+- modality
+- row identity
+- partition
+- method
+- explanation scale
+- feature identity
+- feature value
+- attribution value
+- baseline
+- model output
+- reconstructed output
+- residual
+- runtime hash
+- model-state hash
+- population-selection hash
+
+Every E2 result row must contain:
+
+- project
+- algorithm
+- configuration
+- row identity
+- modality
+- modality probability
+- beta
+- raw contribution
+- reference mean probability
+- centered contribution
+- baseline
+- meta-logit
+- fused probability
+- residual
+- runtime hash
+- model-state hash
+- population-selection hash
+
+============================================================
+28. PROVENANCE CHAIN
+============================================================
+
+Freeze exact provenance:
+
+Sprint 54 model identity
+-> reconstructed state
+-> G4
+-> G5
+-> Sprint 56.1 runtime/load readiness
+-> Sprint 56.2 scope authorization
+-> population selection
+-> future XAI execution
+-> result record
+-> figure
+
+Every future scientific figure must be traceable back to exact
+result records and source model-state hashes.
+
+============================================================
+29. PRIMARY EXECUTION FAILURE POLICY
+============================================================
+
+Freeze fail-closed classifications:
+
+XAI_STATE_NOT_READY
+
+XAI_T1_POPULATION_NOT_READY
+
+XAI_FEATURE_ALIGNMENT_FAIL
+
+XAI_EXPLAINER_EXECUTION_FAIL
+
+XAI_FIDELITY_FAIL
+
+XAI_DETERMINISM_FAIL
+
+XAI_QUERY_BUDGET_VIOLATION
+
+XAI_PROVENANCE_FAIL
+
+XAI_RUNTIME_INTEGRITY_FAIL
+
+A failed scope remains failed.
+
+Do not rescue by:
+
+- changing project
+- changing family
+- changing SHAP version
+- changing background
+- changing foreground
+- changing tolerance
+- reducing rows after failure
+- using T2
+
+============================================================
+30. PARTIAL SCIENTIFIC COVERAGE POLICY
+============================================================
+
+If future execution succeeds for some scopes and fails for others:
+
+retain exact coverage.
+
+Report:
+
+eligible
+executed
+passed
+failed
+excluded
+unresolved
+
+Do not drop failed scopes from denominators.
+
+Do not claim complete coverage if incomplete.
+
+============================================================
+31. NO PERFORMANCE-BASED PRIMARY SCOPE REDUCTION
+============================================================
+
+Primary XAI universe is performance-independent.
+
+Do not limit primary XAI only to:
+
+- best algorithm
+- best modality
+- best project
+- highest PR-AUC
+- statistically significant scopes
+
+Secondary post-hoc best-observed-model analysis is allowed only
+after primary XAI completion and must remain separately labeled:
+
+POST_HOC_BEST_OBSERVED_MODEL_ANALYSIS
+
+============================================================
+32. OUTPUT NAMESPACE
+============================================================
+
+Create:
+
+audits/q1-primary-xai-population-freeze/
+    1.0.0/
+
+or repository-consistent equivalent.
+
+Do not modify Sprint 55 or Sprint 56.1 frozen evidence.
+
+============================================================
+33. REQUIRED ARTIFACTS
+============================================================
+
+Create at minimum:
+
+SPRINT56_2_PRIMARY_XAI_AUTHORIZATION_REPORT.md
+
+primary_xai_scope_ledger.jsonl
+
+primary_xai_method_assignment.json
+
+xai_output_scale_contract.json
+
+xai_runtime_binding.json
+
+model_state_readiness_ledger.jsonl
+
+train_reference_population.jsonl
+
+t1_global_foreground_population.jsonl
+
+t1_local_case_population.jsonl
+
+population_selection_summary.json
+
+feature_order_registry.json
+
+text_representation_registry.json
+
+correlated_feature_groups.jsonl
+
+fusion_explanation_contract.json
+
+calibration_e3_contract.json
+
+xai_fidelity_contract.json
+
+xai_stability_contract.json
+
+xai_heterogeneity_contract.json
+
+xai_query_budget.json
+
+xai_result_schema.json
+
+xai_failure_policy.json
+
+xai_governance_counters.json
+
+sprint56_3_execution_prerequisites.json
+
+MANIFEST.sha256
+
+If code is needed, add narrowly scoped source and tests.
+
+============================================================
+34. VALIDATION
+============================================================
+
+Run focused tests verifying:
+
+- exactly 389 authorized scopes
+- exactly 3 frozen exclusions
+- no duplicates
+- every scope linked to G4/G5 PASS
+- every scope linked to required reconstructed state
+- all required state hashes verify
+- runtime hash matches Sprint 56.1 isolated runtime
+- method assignment is deterministic
+- output scale assignment is deterministic
+- TRAIN reference uses TRAIN only
+- T1 foreground uses T1 only
+- local cases are subset of T1 foreground
+- no T2 read
+- no model query
+- no attribution execution
+- no predictive metrics
+- no refit/reconstruction/recalibration
+- feature order exact
+- TEXT vocabulary/IDF/order exact
+- query budgets frozen
+- fidelity tolerances unchanged
+- stability thresholds unchanged
+- result schema complete
+- manifest exact
+- git diff --check passes
+
+Run relevant Sprint 55 and Sprint 56.1 governance regressions.
+
+============================================================
+35. REQUIRED FINAL REPORT
+============================================================
+
+Report:
+
+A. branch and HEAD
+B. Sprint 56.1 inherited outcome
+C. authorized scope count
+D. excluded scope count and identities
+E. state-readiness count
+F. method counts by algorithm
+G. multimodal E2 scope count
+H. runtime binding
+I. TRAIN reference counts
+J. T1 global foreground counts
+K. T1 local-case counts
+L. feature/TEXT registry integrity
+M. correlated-group count
+N. query budgets
+O. fidelity tolerances
+P. stability policy
+Q. heterogeneity policy
+R. result-schema status
+S. T1 population-freeze counters
+T. T1 model-query count
+U. attribution execution count
+V. T2 access/state
+W. predictive metric count
+X. mutation/reconstruction/refit/calibration count
+Y. Sprint 56.3 authorization state
+Z. scientific disposition
+
+No commit or push.
+
+============================================================
+36. SUCCESS OUTCOME
+============================================================
+
+If all governance, readiness, and population-freeze checks pass,
+classify:
+
+PRIMARY_XAI_POPULATION_FREEZE_READY_FOR_EXECUTION
+
+This outcome does NOT mean XAI has been executed.
+
+============================================================
+37. ALLOWED FINAL OUTCOMES
+============================================================
+
+Use exactly one:
+
+PRIMARY_XAI_POPULATION_FREEZE_READY_FOR_EXECUTION
+
+PRIMARY_XAI_STATE_READINESS_INCOMPLETE
+
+PRIMARY_XAI_POPULATION_FREEZE_INTEGRITY_FAILURE
+
+PRIMARY_XAI_T1_SELECTION_CONTRACT_FAILURE
+
+PRIMARY_XAI_RUNTIME_BINDING_FAILURE
+
+PRIMARY_XAI_PROVENANCE_FAILURE
+
+============================================================
+38. STOP CONDITION
+============================================================
+
+STOP after authorization and population freeze.
+
+Do NOT execute SHAP.
+
+Do NOT execute analytical attribution on T1.
+
+Do NOT generate article figures.
+
+Do NOT access T2.
+
+Do NOT start Sprint 56.3.
+
+Do NOT commit or push.
+
+End exactly:
+
+READY FOR HUMAN REVIEW BEFORE PRIMARY XAI SCIENTIFIC EXECUTION

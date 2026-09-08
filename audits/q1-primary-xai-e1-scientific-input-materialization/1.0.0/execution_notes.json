@@ -1,0 +1,10 @@
+{
+  "scientific_transform_runs_per_scope": 2,
+  "model_queries": 0,
+  "warnings_recorded": 0,
+  "materialization_failures": 0,
+  "initial_test_fixture_correction": "Initial E2 preservation test expected six files; corrected to the explicit seven pre-existing E2 artifact filenames. All seven hashes were preserved; no evidence or scientific tolerance changed.",
+  "parent_runner_recovery": "Temporary prior runner was unavailable; used the immutable persisted56.2E runner as template. No science rerun.",
+  "scope_status": "12 partial TRAIN representations are not12 full materialized scopes. All168 E1 scope universes remain incomplete.",
+  "PROCESS_provenance_limit": "Frozen raw input and preprocessing equivalence preserved; historical feature aggregation details were not independently reconstructed. No invented ancestor/cutoff proof."
+}

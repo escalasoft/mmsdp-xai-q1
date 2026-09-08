@@ -1,0 +1,14 @@
+{
+  "deselected": 3,
+  "excluded_tests": {
+    "test_gitignore_is_exact_narrow_and_registry_remains_visible": "Historical Sprint55 uncommitted byte count 42143545 does not apply to this Sprint56.1 worktree; narrow-ignore/visibility checks replaced",
+    "test_isotonic_state_digests_match_persisted_source_and_block7_linkage": "Development probability ledger outside smoke scope",
+    "test_parent_hashes_tolerances_and_calibrators_remain_unchanged": "Would read historical T1 prediction payload"
+  },
+  "focused_and_sprint55_regression_tests_passed": 51,
+  "git_diff_check": "PASS",
+  "pip_check": "PASS",
+  "protected_data_open_guard_enabled": true,
+  "scientific_explanation_executions_repeated_per_family": 2,
+  "status": "PASS"
+}

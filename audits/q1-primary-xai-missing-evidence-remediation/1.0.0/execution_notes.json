@@ -1,0 +1,6 @@
+{
+  "TRAIN_read_provenance": "All 224 opened TRAIN probability paths and exact before/after SHA-256 values are recorded in TRAIN_object_integrity.json. metadata_access_log.json covers finalization/resumed metadata reads and is not an exhaustive OS access trace of the initial build.",
+  "contract_generation_recovery": "Initial generation stopped on a metadata enum assertion for isotonic E3; corrected to the existing frozen E3_FROZEN_MAPPING_INSPECTION_READY enum. Resumed metadata contract generation only. No reference-mean calculation rerun, no model or reference change.",
+  "no_primary_population_selection": true,
+  "reference_protocol_timing": "reference_feasibility_calculation_protocol.json persisted before probability objects were opened; unchanged after computation."
+}

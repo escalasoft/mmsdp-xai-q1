@@ -1,0 +1,1070 @@
+SPRINT 10.8.2.56.2A — SAFE TRAIN/T1 POPULATION SOURCE AUDIT & MATERIALIZATION
+
+ROLE
+Act as the scientific implementation, provenance, reproducibility, and governance auditor for MMSDP-XAI-Q1.
+
+This is a continuation of Sprint 56.2 on the SAME branch:
+
+    sprint-10/q1-primary-xai-execution
+
+Do NOT create or switch branches.
+Do NOT commit.
+Do NOT push.
+Do NOT open a PR.
+
+This stage exists ONLY to resolve the population-source access blocker discovered in Sprint 56.2.
+
+======================================================================
+0. SCIENTIFIC CONTEXT AND IMMUTABLE PARENT STATE
+======================================================================
+
+Sprint 56.1 outcome:
+
+    PRIMARY_XAI_ISOLATED_RUNTIME_SMOKE_TEST_PASS
+
+Sprint 56.2 current outcome:
+
+    PRIMARY_XAI_T1_SELECTION_CONTRACT_FAILURE
+
+The failure is NOT a predictive-model failure and NOT an XAI-method failure.
+
+The specific blocker is:
+
+    NO_VERIFIED_INDEPENDENTLY_ADDRESSABLE_TRAIN_T1_SOURCE_LOCATED
+
+Sprint 56.2 established:
+
+- 389/389 XAI scopes are READY_VERIFIED.
+- E1 = 168.
+- E2 = 221.
+- Exactly three frozen exclusions remain:
+    apache/zeppelin | Logistic Regression | C+T
+    apache/zeppelin | Logistic Regression | P+T
+    apache/zeppelin | Logistic Regression | C+P+T
+- Runtime is frozen and valid.
+- 5,649 reconstructed-state objects remain immutable.
+- 168 base feature-order definitions remain verified.
+- 56 TEXT representations remain verified.
+- SHAP/XAI scientific execution count = 0.
+- T1 model-query count = 0.
+- T2 access/read count = 0.
+- Sprint 56.3 is NOT authorized.
+
+Sprint 56.2 also determined that currently available canonical gzip streams
+combine TRAIN, VALIDATION, T1, and T2 in a sequential physical structure.
+
+Therefore:
+
+    reading a mixed stream and discarding T2 rows IS STILL T2 ACCESS
+
+and is prohibited.
+
+This stage MUST preserve all parent evidence byte-identically unless an
+explicit new child artifact is created in the Sprint 56.2A namespace.
+
+======================================================================
+1. PRIMARY OBJECTIVE
+======================================================================
+
+Audit the repository and available upstream/frozen artifacts to determine
+whether TRAIN and T1 can be addressed WITHOUT opening, traversing,
+decompressing, indexing, parsing, hashing row payloads from, or otherwise
+accessing T2.
+
+If and ONLY IF a scientifically and technically valid safe source exists,
+materialize a segregated XAI population source containing:
+
+A. TRAIN:
+   - all required same-project TRAIN row identities
+   - TRAIN class labels
+   - frozen CODE values
+   - frozen PROCESS values
+   - exact original row ordering / ordering key
+   - provenance sufficient to reconcile with the frozen TRAIN membership
+     digests and feature semantics
+
+B. T1:
+   - row identity
+   - project
+   - partition = T1
+   - ordering / deterministic row-order metadata
+   - NO label
+   - NO prediction
+   - NO confidence
+   - NO correctness
+   - NO residual
+   - NO SHAP
+   - NO model output
+
+The materialized source MUST be physically and logically segregated from T2.
+
+If no valid safe source exists, STOP FAIL-CLOSED.
+
+Do NOT weaken the T2 boundary.
+
+======================================================================
+2. ABSOLUTE T2 PROTECTION — NON-NEGOTIABLE
+======================================================================
+
+The following must remain exactly zero throughout Sprint 56.2A:
+
+    T2_ACCESS_COUNT = 0
+    T2_IDENTITY_READ_COUNT = 0
+    T2_FEATURE_READ_COUNT = 0
+    T2_LABEL_READ_COUNT = 0
+    T2_MODEL_QUERY_COUNT = 0
+    T2_XAI_EXECUTION_COUNT = 0
+
+T2 state must remain:
+
+    DENY_SEALED_REVIEWER_RESERVE
+
+FORBIDDEN:
+
+- opening any known mixed TRAIN/VALIDATION/T1/T2 stream if reaching the
+  desired data requires traversing T2 payloads;
+- decompressing a full mixed gzip and later filtering T2;
+- reading T2 headers, identities, labels, features, predictions, or offsets
+  as part of a sequential scientific-data traversal;
+- generating a new TRAIN/T1 export by first reading all partitions;
+- creating an index by scanning through T2;
+- using T2 to validate completeness;
+- using T2 counts to infer missing rows;
+- using T2 as a negative-control population;
+- consulting T2 for model/state compatibility;
+- any predictive, XAI, metric, calibration, or statistical access to T2.
+
+If there is ambiguity about whether an operation constitutes T2 access:
+
+    FAIL CLOSED.
+
+======================================================================
+3. NO SCIENTIFIC XAI EXECUTION
+======================================================================
+
+Sprint 56.2A is a DATA-ACCESS / PROVENANCE stage only.
+
+DO NOT:
+
+- execute SHAP;
+- create TreeExplainer;
+- calculate LR analytical attributions;
+- calculate fusion contributions;
+- calculate feature importance;
+- generate beeswarm plots;
+- generate waterfall plots;
+- generate bar plots;
+- generate dependence plots;
+- generate modality-contribution plots;
+- perform model inference;
+- call predict();
+- call predict_proba();
+- call decision_function();
+- deserialize models unless strictly necessary for metadata provenance
+  validation and explicitly already permitted by parent governance;
+- recompute metrics;
+- refit;
+- retrain;
+- reconstruct models;
+- recalibrate;
+- change hyperparameters;
+- change seeds;
+- alter XAI methods;
+- change XAI budgets;
+- change tolerances.
+
+Scientific XAI execution count MUST remain 0.
+
+======================================================================
+4. AUDIT FIRST — MATERIALIZATION SECOND
+======================================================================
+
+Sprint 56.2A MUST execute in two logically separated phases:
+
+    PHASE A — SOURCE AUDIT
+    PHASE B — SAFE MATERIALIZATION
+
+PHASE B is conditional.
+
+Never materialize first and justify later.
+
+======================================================================
+5. PHASE A — SOURCE AUDIT
+======================================================================
+
+Perform a targeted read-only audit for independently addressable sources.
+
+Search for candidate sources in at least:
+
+    audits/
+    data/
+    artifacts/
+    outputs/
+    experiments/
+    configs/
+    src/
+    tests/
+
+Also inspect relevant Git-tracked historical provenance/manifests where useful.
+
+Priority order:
+
+----------------------------------------------------------------------
+A1. EXISTING SEGREGATED FROZEN SOURCE
+----------------------------------------------------------------------
+
+Search for an already existing artifact containing any of:
+
+- TRAIN-only rows;
+- per-project TRAIN rows;
+- T1-only identities;
+- per-project T1 identity lists;
+- source-partition-specific exports;
+- independently addressable partition snapshots;
+- row-index files;
+- offsets;
+- manifests mapping identities to physical source locations;
+- content-addressed row objects;
+- per-project canonical datasets;
+- ApacheJIT train/test source files that were materialized before the final
+  mixed freeze.
+
+Do not assume filenames.
+Inspect provenance.
+
+----------------------------------------------------------------------
+A2. UPSTREAM APACHEJIT SOURCE
+----------------------------------------------------------------------
+
+If no ready-made segregated source exists, determine whether the frozen
+ApacheJIT acquisition/materialization artifacts retain a source from which
+TRAIN and T1 can be independently reproduced WITHOUT reading T2.
+
+This may include:
+
+- original ApacheJIT temporal train/test files;
+- upstream raw source where rows are directly addressable by identity;
+- pre-partition canonical rows with a frozen timestamp boundary;
+- source files from which only authorized row identities can be directly
+  selected;
+- previously materialized row-level inputs that predate the mixed-stream
+  freeze.
+
+IMPORTANT:
+
+A source is NOT safe merely because it is "upstream."
+
+It is safe only if accessing TRAIN/T1 does not require traversing T2 rows and
+if row identity, partition, values, and provenance can be reconciled exactly
+with the frozen campaign.
+
+----------------------------------------------------------------------
+A3. PRE-EXISTING RANDOM-ACCESS INDEX
+----------------------------------------------------------------------
+
+Look for an ALREADY EXISTING independent index created before Sprint 56.2A,
+such as:
+
+- SQLite;
+- Parquet row groups with direct partition access;
+- Arrow/Feather;
+- BGZF/GZI;
+- zran index;
+- byte-range index;
+- row-identity-to-object map;
+- content-addressed storage;
+- per-partition manifest.
+
+The index is usable only if:
+
+1. it already exists;
+2. it does not require scanning T2 now;
+3. it provides direct access to TRAIN/T1;
+4. its provenance is verifiable.
+
+Do NOT build a new mixed-stream index by traversing T2.
+
+======================================================================
+6. CANDIDATE SOURCE CLASSIFICATION
+======================================================================
+
+For every candidate source found, persist an audit record with:
+
+- candidate_id
+- path
+- file type
+- Git tracking status
+- source provenance
+- partition semantics
+- row-level addressability
+- whether opening it necessarily exposes T2
+- whether TRAIN can be selected without T2 access
+- whether T1 identities can be selected without T2 access
+- whether TRAIN class is available
+- whether CODE values are available
+- whether PROCESS values are available
+- whether T1 labels are avoidable
+- row-order semantics
+- project coverage
+- membership reconciliation capability
+- source hash
+- source-size metadata
+- verdict
+- reason
+
+Allowed verdicts:
+
+    SAFE_DIRECT_SOURCE
+    SAFE_UPSTREAM_RECONSTRUCTION_SOURCE
+    SAFE_PREEXISTING_RANDOM_ACCESS_INDEX
+    INCOMPLETE_SOURCE
+    PROVENANCE_INSUFFICIENT
+    T2_TRAVERSAL_REQUIRED
+    SEMANTIC_MISMATCH
+    NOT_RELEVANT
+
+No optimistic inference.
+
+======================================================================
+7. SAFE-SOURCE ACCEPTANCE CRITERIA
+======================================================================
+
+A candidate may be accepted only if ALL applicable criteria pass.
+
+TRAIN source must provide or allow derivation of:
+
+- project;
+- TRAIN partition;
+- row identity;
+- class;
+- CODE:
+    la
+    ld
+    nf
+    nd
+    ns
+    ent
+- PROCESS:
+    ndev
+    age
+    nuc
+    aexp
+    arexp
+    asexp
+- deterministic original ordering or frozen ordering key;
+- membership provenance;
+- feature provenance.
+
+T1 source must provide:
+
+- project;
+- T1 partition;
+- row identity;
+- ordering metadata.
+
+T1 source MUST NOT require:
+
+- T1 labels;
+- T1 predictions;
+- T1 confidence;
+- T1 correctness;
+- T1 metrics;
+- T1 SHAP;
+- T1 calibrated outputs.
+
+The source must permit reconciliation against frozen parent evidence.
+
+No performance information may influence source selection.
+
+======================================================================
+8. RECONCILIATION REQUIREMENTS
+======================================================================
+
+Before accepting materialized output, reconcile it against frozen evidence.
+
+For TRAIN:
+
+Verify, wherever frozen references permit:
+
+- project membership;
+- row-identity uniqueness;
+- TRAIN membership count;
+- membership digest;
+- original order or documented deterministic order;
+- CODE column identity/order;
+- PROCESS column identity/order;
+- class domain {0,1};
+- exact numerical representation;
+- no hidden target/proxy fields introduced.
+
+For T1:
+
+Verify:
+
+- row identity;
+- project;
+- T1 membership;
+- exact project-level row count;
+- frozen G4/G5 T1 membership digest when sufficient information exists;
+- no label field;
+- no prediction field;
+- no confidence field;
+- no correctness field.
+
+If a frozen digest cannot be reproduced because the historical digest
+serialization recipe is not fully specified:
+
+    DO NOT invent a matching rule.
+
+Instead classify:
+
+    DIGEST_RECONCILIATION_SPECIFICATION_INCOMPLETE
+
+and stop before population freeze.
+
+======================================================================
+9. MATERIALIZATION NAMESPACE
+======================================================================
+
+If a safe source passes Phase A, materialize only under a NEW isolated child
+namespace, for example:
+
+    audits/q1-primary-xai-safe-population-source/1.0.0/
+
+Do NOT overwrite:
+
+    audits/q1-primary-xai-population-freeze/1.0.0/
+    audits/q1-primary-xai-runtime-smoke/1.0.0/
+    audits/q1-xai-runtime-freeze/1.0.0/
+    audits/q1-xai-reconstruction-execution/1.0.0/
+    audits/q1-xai-reconstruction-equivalence-g4/1.0.0/
+    audits/q1-xai-final-output-equivalence-g5/1.0.0/
+
+Recommended structure:
+
+    audits/q1-primary-xai-safe-population-source/1.0.0/
+        SAFE_SOURCE_REPORT.md
+        source_candidate_ledger.jsonl
+        source_selection.json
+        provenance_chain.json
+        train/
+            <project>.jsonl.gz
+            ...
+        t1/
+            <project>_identities.jsonl
+            ...
+        train_membership_registry.json
+        t1_membership_registry.json
+        feature_schema.json
+        materialization_integrity.json
+        governance_counters.json
+        MANIFEST.sha256
+
+You may choose a more appropriate deterministic structure if justified.
+
+======================================================================
+10. TRAIN MATERIALIZATION RULES
+======================================================================
+
+TRAIN data must be materialized per project.
+
+Required TRAIN row fields should be minimal and explicit:
+
+    project
+    partition
+    row_identifier
+    class
+    order_key
+    la
+    ld
+    nf
+    nd
+    ns
+    ent
+    ndev
+    age
+    nuc
+    aexp
+    arexp
+    asexp
+
+Do NOT include:
+
+- future partition values;
+- validation-only outputs unless technically required for provenance and
+  specifically authorized;
+- predictions;
+- calibrated predictions;
+- SHAP;
+- model scores;
+- residuals;
+- correctness;
+- bug-keyword proxy features;
+- issue-label proxy fields;
+- post-outcome information.
+
+Partition must equal:
+
+    TRAIN
+
+for every TRAIN materialized row.
+
+======================================================================
+11. T1 MATERIALIZATION RULES
+======================================================================
+
+T1 materialization is IDENTITY-ONLY.
+
+Required fields:
+
+    project
+    partition
+    row_identifier
+    order_key
+
+Optional only if required for exact immutable provenance:
+
+    immutable_source_row_digest
+
+Do NOT materialize:
+
+    class
+    label
+    y
+    defect
+    prediction
+    probability
+    confidence
+    correctness
+    TP/TN/FP/FN
+    metric
+    calibration output
+    SHAP
+    residual
+    feature values
+
+Partition must equal:
+
+    T1
+
+for every T1 row.
+
+======================================================================
+12. DO NOT MATERIALIZE SELECTED XAI POPULATIONS YET
+======================================================================
+
+Sprint 56.2A creates a SAFE SOURCE.
+
+It does NOT yet create the final:
+
+    train_reference_population.jsonl
+    t1_global_foreground_population.jsonl
+    t1_local_case_population.jsonl
+
+Those belong to the resumed Sprint 56.2 population-freeze logic.
+
+Do not collapse source preparation and scientific population selection into
+one stage.
+
+This preserves the chain:
+
+    SOURCE AUDIT
+        ↓
+    SAFE SOURCE MATERIALIZATION
+        ↓
+    HUMAN REVIEW
+        ↓
+    RESUME 56.2
+        ↓
+    DETERMINISTIC POPULATION FREEZE
+        ↓
+    HUMAN AUTHORIZATION
+        ↓
+    SPRINT 56.3 XAI
+
+======================================================================
+13. T1 ACCESS ACCOUNTING
+======================================================================
+
+T1 identity-only access is permitted in Sprint 56.2A ONLY if required to
+materialize the safe T1 identity source.
+
+Track separately:
+
+    T1_SAFE_SOURCE_ACCESS_COUNT
+    T1_IDENTITY_ROW_READ_COUNT
+    T1_LABEL_READ_COUNT
+    T1_FEATURE_READ_COUNT
+    T1_MODEL_QUERY_COUNT
+
+Requirements:
+
+    T1_LABEL_READ_COUNT = 0
+    T1_FEATURE_READ_COUNT = 0
+    T1_MODEL_QUERY_COUNT = 0
+
+If the only available T1 source physically contains T1 labels/features and
+they cannot be avoided at read time:
+
+    FAIL CLOSED.
+
+Do not read-and-drop.
+
+======================================================================
+14. TRAIN ACCESS ACCOUNTING
+======================================================================
+
+Track:
+
+    TRAIN_SAFE_SOURCE_ACCESS_COUNT
+    TRAIN_IDENTITY_ROW_READ_COUNT
+    TRAIN_LABEL_ROW_READ_COUNT
+    TRAIN_FEATURE_ROW_READ_COUNT
+
+TRAIN labels/features are allowed because TRAIN is the authorized reference
+partition.
+
+But:
+
+- no TRAIN model query;
+- no TRAIN XAI attribution;
+- no retraining;
+- no calibration fitting.
+
+Required:
+
+    TRAIN_MODEL_QUERY_COUNT = 0
+    TRAIN_XAI_ATTRIBUTION_EXECUTION_COUNT = 0
+
+======================================================================
+15. PRESERVE VALIDATION AS NON-SCIENTIFIC / NON-XAI
+======================================================================
+
+Do not use VALIDATION for:
+
+- population selection;
+- XAI background;
+- XAI foreground;
+- model selection;
+- feature selection;
+- XAI method selection.
+
+If VALIDATION metadata must be inspected solely to understand an upstream
+partitioning file format, record that explicitly.
+
+Prefer not to read validation rows.
+
+======================================================================
+16. IMMUTABILITY AND HASHING
+======================================================================
+
+Before materialization, snapshot SHA-256 hashes of all protected parent
+artifacts.
+
+After materialization, verify they are unchanged.
+
+At minimum protect:
+
+- Sprint 54 T1 confirmatory evidence;
+- Sprint 55 G1–G5 evidence;
+- Sprint 55 runtime freeze;
+- Sprint 56.1 smoke artifacts;
+- Sprint 56.2 current artifacts;
+- reconstructed-state object store;
+- G4;
+- G5.
+
+Materialized files must receive:
+
+- SHA-256;
+- byte size;
+- row count;
+- schema digest;
+- source provenance;
+- project;
+- partition;
+- deterministic ordering digest.
+
+Create a complete MANIFEST.sha256.
+
+======================================================================
+17. ORIGINAL SOURCE PRESERVATION
+======================================================================
+
+Do not modify upstream source files.
+
+Do not rename them.
+Do not normalize them in place.
+Do not replace them.
+Do not delete them.
+
+Materialization must be copy/derive-only into the new namespace.
+
+No provenance laundering:
+
+If output is derived, explicitly record:
+
+    DERIVED_SAFE_POPULATION_SOURCE
+
+not:
+
+    ORIGINAL_SOURCE
+
+======================================================================
+18. SAFE MATERIALIZATION MUST BE REPRODUCIBLE
+======================================================================
+
+If materialization is authorized:
+
+Run it deterministically at least twice in temporary isolated output
+locations or via deterministic content verification.
+
+The canonical materialized content must reproduce identical:
+
+- row counts;
+- row identities;
+- ordering;
+- serialized scientific values;
+- file-level logical-content digests.
+
+If gzip container timestamps cause raw-byte differences, use deterministic
+gzip metadata or compare canonical decompressed content and explain the
+container-level distinction.
+
+Prefer deterministic gzip with fixed mtime if used.
+
+No tolerance-based row matching.
+
+Identity/value equality must be exact.
+
+======================================================================
+19. SOURCE SELECTION MUST NOT USE SCIENTIFIC OUTCOMES
+======================================================================
+
+Do not inspect or use:
+
+- PR-AUC;
+- ROC-AUC;
+- F1;
+- MCC;
+- Precision;
+- Recall;
+- Brier;
+- ECE;
+- SHAP;
+- feature importance;
+- model ranking;
+- algorithm superiority.
+
+Source choice must depend only on:
+
+    provenance
+    accessibility
+    partition semantics
+    identity integrity
+    feature integrity
+    reproducibility
+    T2 isolation
+
+======================================================================
+20. FAILURE STATES
+======================================================================
+
+Use explicit failure classifications.
+
+At minimum support:
+
+    SAFE_SOURCE_FOUND_AND_MATERIALIZED
+    SAFE_SOURCE_FOUND_MATERIALIZATION_FAILED
+    NO_SAFE_SOURCE_FOUND
+    T2_TRAVERSAL_REQUIRED
+    TRAIN_PROVENANCE_MISMATCH
+    T1_IDENTITY_PROVENANCE_MISMATCH
+    TRAIN_FEATURE_SCHEMA_MISMATCH
+    TRAIN_MEMBERSHIP_DIGEST_MISMATCH
+    T1_MEMBERSHIP_DIGEST_MISMATCH
+    DIGEST_RECONCILIATION_SPECIFICATION_INCOMPLETE
+    SOURCE_SEMANTICS_INSUFFICIENT
+    MATERIALIZATION_NONDETERMINISTIC
+    PARENT_ARTIFACT_INTEGRITY_FAILURE
+
+Never reinterpret a failure as PASS.
+
+Never create a “best effort” safe source.
+
+======================================================================
+21. SUCCESS CONDITION
+======================================================================
+
+Sprint 56.2A may be classified successful only if:
+
+1. a safe source is found;
+2. TRAIN is independently addressable for all required projects;
+3. T1 identity-only metadata is independently addressable for all required
+   projects;
+4. T2 access remains zero;
+5. TRAIN feature/class semantics match frozen contracts;
+6. T1 contains no unauthorized fields;
+7. project coverage is complete;
+8. membership/provenance reconciliation passes;
+9. deterministic materialization passes;
+10. parent evidence remains unchanged;
+11. MANIFEST verification passes;
+12. no model query/XAI/metric execution occurred.
+
+Desired success classification:
+
+    SAFE_TRAIN_T1_SOURCE_MATERIALIZED_READY_TO_RESUME_SPRINT56_2
+
+This success DOES NOT authorize Sprint 56.3.
+
+======================================================================
+22. IF NO SAFE SOURCE EXISTS
+======================================================================
+
+If Phase A finds no source satisfying the contract:
+
+DO NOT attempt to rescue by relaxing T2.
+
+Persist:
+
+    NO_SAFE_TRAIN_T1_SOURCE_AVAILABLE_UNDER_FROZEN_T2_BOUNDARY
+
+Include a precise explanation of:
+
+- sources examined;
+- why each failed;
+- whether a scientifically acceptable upstream rematerialization would
+  require a future protocol amendment;
+- what exact information is missing;
+- what human decision is needed.
+
+STOP.
+
+Do not start Sprint 56.3.
+
+======================================================================
+23. IMPLEMENTATION
+======================================================================
+
+Create a dedicated implementation module, suggested:
+
+    src/evaluation/q1_primary_xai_safe_population_source.py
+
+and tests, suggested:
+
+    tests/evaluation/test_q1_primary_xai_safe_population_source.py
+
+The implementation must:
+
+- audit before materializing;
+- enforce path guards;
+- reject mixed T2-bearing sequential sources;
+- maintain separate counters;
+- serialize deterministic artifacts;
+- validate provenance;
+- validate schema;
+- validate partition;
+- validate row identity uniqueness;
+- validate full project coverage;
+- validate frozen membership correspondence;
+- protect parent hashes;
+- write a complete report;
+- fail closed.
+
+Do not modify the existing Sprint 56.2 source merely to bypass its guard.
+
+The existing 56.2 blocker is evidence and must remain historically accurate.
+
+======================================================================
+24. REQUIRED TESTS
+======================================================================
+
+Add focused tests for at least:
+
+1. current branch is correct;
+2. parent Sprint 56.2 blocker remains unchanged;
+3. 389-scope universe remains unchanged;
+4. three exclusions remain unchanged;
+5. T2 counters stay zero;
+6. guard rejects known mixed gzip scientific streams;
+7. guard rejects any known T2 file;
+8. safe TRAIN schema accepts only expected fields;
+9. T1 schema rejects class/label fields;
+10. T1 schema rejects predictions/probabilities;
+11. T1 schema rejects feature columns;
+12. TRAIN requires exact C/P feature order;
+13. duplicate row identities fail;
+14. wrong project fails;
+15. wrong partition fails;
+16. partial project coverage fails;
+17. membership mismatch fails;
+18. feature mismatch fails;
+19. deterministic materialization reproduces exact canonical content;
+20. parent SHA-256 remains unchanged;
+21. no fit/predict/predict_proba/decision_function/TreeExplainer/
+    shap_values calls exist;
+22. no predictive metric recomputation exists;
+23. no object-store mutation exists;
+24. no Sprint 56.3 authorization is accidentally granted;
+25. manifest is complete and exact.
+
+Also run relevant regressions from:
+
+- Sprint 54;
+- Sprint 55;
+- Sprint 56.1;
+- Sprint 56.2.
+
+Do not edit earlier tests merely to make this stage pass.
+
+======================================================================
+25. SOURCE-DISCOVERY REPORT
+======================================================================
+
+Create:
+
+    SAFE_SOURCE_REPORT.md
+
+with sections A–Z.
+
+At minimum report:
+
+A. Branch / HEAD
+B. Parent outcomes
+C. Frozen scientific universe
+D. Protected evidence hashes
+E. Search paths
+F. Candidate-source inventory
+G. Candidate classifications
+H. Existing segregated source findings
+I. Upstream ApacheJIT source findings
+J. Pre-existing random-access index findings
+K. Selected source, if any
+L. Why selected source does not traverse T2
+M. TRAIN semantics
+N. T1 identity-only semantics
+O. Project coverage
+P. Membership reconciliation
+Q. Feature reconciliation
+R. Deterministic materialization
+S. Materialized artifact inventory
+T. T1 counters
+U. T2 counters
+V. Model/XAI/metric counters
+W. Parent artifact post-integrity
+X. Test results
+Y. Scientific/governance disposition
+Z. Exact next action
+
+======================================================================
+26. REQUIRED FINAL COUNTERS
+======================================================================
+
+Report at minimum:
+
+TRAIN_SAFE_SOURCE_ACCESS_COUNT
+TRAIN_IDENTITY_ROW_READ_COUNT
+TRAIN_LABEL_ROW_READ_COUNT
+TRAIN_FEATURE_ROW_READ_COUNT
+TRAIN_MODEL_QUERY_COUNT
+TRAIN_XAI_ATTRIBUTION_EXECUTION_COUNT
+
+T1_SAFE_SOURCE_ACCESS_COUNT
+T1_IDENTITY_ROW_READ_COUNT
+T1_LABEL_READ_COUNT
+T1_FEATURE_READ_COUNT
+T1_MODEL_QUERY_COUNT
+T1_XAI_ATTRIBUTION_EXECUTION_COUNT
+
+T2_ACCESS_COUNT
+T2_IDENTITY_READ_COUNT
+T2_FEATURE_READ_COUNT
+T2_LABEL_READ_COUNT
+T2_MODEL_QUERY_COUNT
+T2_XAI_EXECUTION_COUNT
+
+scientific_SHAP_execution_count
+scientific_analytical_attribution_execution_count
+predictive_metric_count
+retraining_count
+refit_count
+reconstruction_count
+recalibration_count
+figure_generation_count
+commit_count
+push_count
+
+Expected mandatory zeros:
+
+TRAIN_MODEL_QUERY_COUNT = 0
+TRAIN_XAI_ATTRIBUTION_EXECUTION_COUNT = 0
+
+T1_LABEL_READ_COUNT = 0
+T1_FEATURE_READ_COUNT = 0
+T1_MODEL_QUERY_COUNT = 0
+T1_XAI_ATTRIBUTION_EXECUTION_COUNT = 0
+
+ALL T2 counters = 0
+
+scientific_SHAP_execution_count = 0
+scientific_analytical_attribution_execution_count = 0
+predictive_metric_count = 0
+retraining_count = 0
+refit_count = 0
+reconstruction_count = 0
+recalibration_count = 0
+figure_generation_count = 0
+commit_count = 0
+push_count = 0
+
+======================================================================
+27. GIT / FILE-SIZE SAFETY
+======================================================================
+
+Do NOT commit or push.
+
+Before completion show:
+
+    git status --short
+    git diff --check
+
+Inspect generated file sizes.
+
+Do not create giant Git-tracked row dumps unnecessarily.
+
+If the safe materialized source is materially large:
+
+- report exact size;
+- determine whether it should be Git-tracked or treated as an external
+  reproducibility artifact;
+- DO NOT modify .gitignore or stage anything without human review.
+
+Do not place reconstructed model binaries into Git.
+
+Do not touch the 2.1 GB reconstructed object store.
+
+======================================================================
+28. HUMAN STOP POINT
+======================================================================
+
+At the end:
+
+If successful, print exactly:
+
+    SAFE_TRAIN_T1_SOURCE_MATERIALIZED_READY_TO_RESUME_SPRINT56_2
+
+    READY FOR HUMAN REVIEW BEFORE RESUMING SPRINT 56.2 POPULATION FREEZE
+
+If unsuccessful, print:
+
+    SAFE_TRAIN_T1_SOURCE_NOT_AVAILABLE_UNDER_CURRENT_T2_BOUNDARY
+
+    READY FOR HUMAN REVIEW — DO NOT START SPRINT 56.3
+
+Do not automatically resume Sprint 56.2.
+Do not start Sprint 56.3.
+Do not run SHAP.
+Do not generate figures.
+Do not commit.
+Do not push.

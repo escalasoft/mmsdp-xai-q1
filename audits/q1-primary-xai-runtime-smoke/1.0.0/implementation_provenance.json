@@ -1,0 +1,23 @@
+{
+  "files": {
+    "src/evaluation/q1_primary_xai_runtime_smoke.py": "b311a5292868b0a209bf736f1dff79e86512717c23614c07e6e8074cc294ce4f",
+    "src/evaluation/q1_primary_xai_runtime_smoke_closure.py": "ffaa00000128424614954cd52e9684daee3579ccf7b3c39ce729d51030abd962",
+    "tests/evaluation/test_q1_primary_xai_runtime_smoke.py": "ee09893429788572438290a2434e6bb3ba69aad2453a69dec5024abe6dfb6264"
+  },
+  "smoke_executor_unchanged_since_preexecution": true,
+  "stages": [
+    "prepare under .venv: metadata and immutable object hashes only",
+    "freeze-runtime under .venv-xai-s56: exact lock before scientific execution",
+    "population under .venv-xai-s56: bounded TRAIN prefix",
+    "execute under .venv-xai-s56: two runs/family, threads=1, PYTHONDONTWRITEBYTECODE=1",
+    "closure under .venv: hashes, inventory and reports only"
+  ],
+  "test_files": [
+    "tests/evaluation/test_q1_primary_xai_runtime_smoke.py",
+    "tests/evaluation/test_q1_xai_runtime_freeze.py",
+    "tests/evaluation/test_q1_xai_shap_compatibility_resolution.py",
+    "tests/evaluation/test_q1_xai_external_artifact_store_freeze.py",
+    "tests/evaluation/test_q1_xai_g5_final_output_equivalence.py"
+  ],
+  "tests_runtime": ".venv (no predictor/explainer query in tests)"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "focused_tests": 48,
+  "parent_governance_regressions": 56,
+  "total_passed": 104,
+  "focused_command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=. .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_primary_xai_alternative_design.py",
+  "regression_command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=.:src .venv/bin/python audits/q1-primary-xai-alternative-design/1.0.0/parent_regression_runner.py",
+  "regression_scope": "Metadata/static governance only; no prior scientific execution repeated",
+  "continuity_validation": "Negative cases reject DIRECT with any unknown/mismatched local link; global direct/nested require adequate coverage, stable direction and absence of subset bias",
+  "git_diff_check": "PASS"
+}

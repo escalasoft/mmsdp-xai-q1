@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "focused_tests": 30,
+  "parent_regressions": 26,
+  "total": 56,
+  "focused_command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=. .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_primary_xai_e1_e2_resolution.py",
+  "regression_command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=.:src .venv/bin/python audits/q1-primary-xai-e1-input-e2-reference-resolution/1.0.0/parent_regression_runner.py",
+  "Sprint54_regression_scope": "Static integrity inventory and second-access guard ordering only; no source materialization or historical payload read",
+  "representation_tests": "No reconstruction performed; equivalence status not applicable, never falsely passed",
+  "git_diff_check": "PASS"
+}
