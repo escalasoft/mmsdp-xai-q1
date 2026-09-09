@@ -1,0 +1,49 @@
+
+==================================== ERRORS ====================================
+_ ERROR collecting tests/evaluation/test_q1_e1_canonical_apachejit_train_reentry.py _
+ImportError while importing test module '/Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/tests/evaluation/test_q1_e1_canonical_apachejit_train_reentry.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/Cellar/python@3.11/3.11.14/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/evaluation/test_q1_e1_canonical_apachejit_train_reentry.py:8: in <module>
+    from src.evaluation import q1_e1_canonical_apachejit_train_reentry as r
+E   ModuleNotFoundError: No module named 'src'
+_ ERROR collecting tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py _
+ImportError while importing test module '/Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/Cellar/python@3.11/3.11.14/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:7: in <module>
+    from src.evaluation import q1_e1_remaining_train_source_transformation_resolution as r
+E   ModuleNotFoundError: No module named 'src'
+_ ERROR collecting tests/evaluation/test_q1_e1_prospective_train_representation_reconstruction.py _
+ImportError while importing test module '/Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/tests/evaluation/test_q1_e1_prospective_train_representation_reconstruction.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/Cellar/python@3.11/3.11.14/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/evaluation/test_q1_e1_prospective_train_representation_reconstruction.py:10: in <module>
+    from src.evaluation import q1_e1_prospective_train_representation_reconstruction as r
+E   ModuleNotFoundError: No module named 'src'
+_ ERROR collecting tests/evaluation/test_q1_e1_prospective_reconstructed_representation_protocol.py _
+ImportError while importing test module '/Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/tests/evaluation/test_q1_e1_prospective_reconstructed_representation_protocol.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+/usr/local/Cellar/python@3.11/3.11.14/Frameworks/Python.framework/Versions/3.11/lib/python3.11/importlib/__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/evaluation/test_q1_e1_prospective_reconstructed_representation_protocol.py:8: in <module>
+    from src.evaluation import q1_e1_prospective_reconstructed_representation_protocol as r
+E   ModuleNotFoundError: No module named 'src'
+=========================== short test summary info ============================
+ERROR tests/evaluation/test_q1_e1_canonical_apachejit_train_reentry.py
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py
+ERROR tests/evaluation/test_q1_e1_prospective_train_representation_reconstruction.py
+ERROR tests/evaluation/test_q1_e1_prospective_reconstructed_representation_protocol.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 4 errors during collection !!!!!!!!!!!!!!!!!!!!
+1 deselected, 4 errors in 3.86s

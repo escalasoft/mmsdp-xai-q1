@@ -1,0 +1,3 @@
+level,role,question,scope,scale,boundary
+E1,COMPLEMENTARY,Within-modality feature explanation,ActiveMQ TEXT only,LR logit; RF positive-class output unavailable; XGB/LGB raw margin,Associational; reconstructed states; no generalization
+E2,PRIMARY_MULTIMODAL_XAI,Between-modality fusion explanation,Frozen inherited multimodal scope,Fusion meta-logit,Unchanged; no mathematical propagation of E1

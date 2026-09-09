@@ -1,0 +1,1 @@
+{"T1_LABEL_ACCESS":"DENY","T2":"DENY_SEALED_REVIEWER_RESERVE","authority":"User Sprint 56.3C sections 7 and 10","frozen_transform_only":true,"modality":"TEXT","partitions":["TRAIN","T1"],"project":"apache/activemq"}

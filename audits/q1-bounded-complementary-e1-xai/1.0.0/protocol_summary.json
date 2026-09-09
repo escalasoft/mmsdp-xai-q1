@@ -1,0 +1,1 @@
+{"RF":"EXCLUDED_ADDITIVITY_FAILURE","attempted_families":["LR","RF","XGB","LGB"],"repair_attempts":1,"scientific_use":"BOUNDED_COMPLEMENTARY","scope":"apache/activemq \u00d7 TEXT","valid_families":["LR","XGB","LGB"],"verdict":"56_3C_PASS_BOUNDED_E1_XAI_WITH_PREDECLARED_LIMITATIONS"}

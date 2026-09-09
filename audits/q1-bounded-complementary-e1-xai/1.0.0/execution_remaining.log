@@ -1,0 +1,49 @@
+START XGB
+XGB repetition 1/20 residual=1.67e-06
+XGB repetition 2/20 residual=1.67e-06
+XGB repetition 3/20 residual=1.67e-06
+XGB repetition 4/20 residual=1.67e-06
+XGB repetition 5/20 residual=1.67e-06
+XGB repetition 6/20 residual=1.67e-06
+XGB repetition 7/20 residual=1.67e-06
+XGB repetition 8/20 residual=1.67e-06
+XGB repetition 9/20 residual=1.67e-06
+XGB repetition 10/20 residual=1.67e-06
+XGB repetition 11/20 residual=1.67e-06
+XGB repetition 12/20 residual=1.67e-06
+XGB repetition 13/20 residual=1.67e-06
+XGB repetition 14/20 residual=1.67e-06
+XGB repetition 15/20 residual=1.67e-06
+XGB repetition 16/20 residual=1.67e-06
+XGB repetition 17/20 residual=1.67e-06
+XGB repetition 18/20 residual=1.67e-06
+XGB repetition 19/20 residual=1.67e-06
+XGB repetition 20/20 residual=1.67e-06
+COMPLETE XGB
+START LGB
+/Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/.venv-xai-s56/lib/python3.11/site-packages/sklearn/utils/validation.py:2827: UserWarning: X does not have valid feature names, but LGBMClassifier was fitted with feature names
+  warnings.warn(
+/Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/.venv-xai-s56/lib/python3.11/site-packages/shap/explainers/_tree.py:620: UserWarning: LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray
+  warnings.warn(
+LGB repetition 1/20 residual=1.02e-12
+LGB repetition 2/20 residual=1.02e-12
+LGB repetition 3/20 residual=1.02e-12
+LGB repetition 4/20 residual=1.02e-12
+LGB repetition 5/20 residual=1.02e-12
+LGB repetition 6/20 residual=1.02e-12
+LGB repetition 7/20 residual=1.02e-12
+LGB repetition 8/20 residual=1.02e-12
+LGB repetition 9/20 residual=1.02e-12
+LGB repetition 10/20 residual=1.02e-12
+LGB repetition 11/20 residual=1.02e-12
+LGB repetition 12/20 residual=1.02e-12
+LGB repetition 13/20 residual=1.02e-12
+LGB repetition 14/20 residual=1.02e-12
+LGB repetition 15/20 residual=1.02e-12
+LGB repetition 16/20 residual=1.02e-12
+LGB repetition 17/20 residual=1.02e-12
+LGB repetition 18/20 residual=1.02e-12
+LGB repetition 19/20 residual=1.02e-12
+LGB repetition 20/20 residual=1.02e-12
+COMPLETE LGB
+ALL FAMILIES ACCOUNTED FOR; VALID RESULTS PERSISTED

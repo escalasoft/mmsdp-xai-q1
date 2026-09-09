@@ -1,0 +1,1 @@
+[{"family":"LGB","max_absolute_difference":0.0,"pairs":190,"repetitions":20,"status":"STABILITY_PASS"},{"family":"LR","max_absolute_difference":0.0,"pairs":190,"repetitions":20,"status":"STABILITY_PASS"},{"family":"XGB","max_absolute_difference":0.0,"pairs":190,"repetitions":20,"status":"STABILITY_PASS"}]

@@ -1,0 +1,1 @@
+{"RF": {"status": "INELIGIBLE_EXACT_TREESHAP_ADDITIVITY_FAILURE", "attempts": 1, "values_published": false, "error": "Exact tree_path_dependent TreeSHAP additivity check: reconstructed 0.742972 versus model output 0.544626", "repair": "No explainer switch or tolerance relaxation; global bounded repair was already consumed by exact TRAIN serialization restoration"}}

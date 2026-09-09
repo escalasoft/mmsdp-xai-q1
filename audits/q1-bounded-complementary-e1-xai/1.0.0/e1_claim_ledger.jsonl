@@ -1,0 +1,7 @@
+{"claim":"ActiveMQ TEXT LR/XGB/LGB feature explanations are faithful to their corresponding reconstructed predictor","evidence":["e1_fidelity_results.json","e1_model_representation_alignment.jsonl"],"status":"SUPPORTED_WITH_LIMITATION"}
+{"claim":"Attributions repeat exactly under 20 frozen seeds and fixed populations","evidence":["e1_stability_results.json"],"status":"SUPPORTED_WITH_LIMITATION"}
+{"claim":"Feature explanations depend on model family","evidence":["e1_cross_model_consistency.json","e1_explanation_heterogeneity.json"],"status":"SUPPORTED"}
+{"claim":"RF feature attributions are publication-ready","evidence":["rf_e1_fidelity.json"],"status":"NOT_SUPPORTED"}
+{"claim":"E1 complements E2 through architectural continuity","evidence":["e1_to_e2_traceability.jsonl","e1_e2_continuity_contract.json"],"status":"SUPPORTED_WITH_LIMITATION"}
+{"claim":"Full-modality or cross-project feature explanation","evidence":["bounded_e1_scope_registry.json","e1_limitations.json"],"status":"NOT_SUPPORTED"}
+{"claim":"Exact empirical same-row E1-to-E2 probability bridge","evidence":["e1_to_e2_traceability.jsonl"],"status":"DEFERRED"}

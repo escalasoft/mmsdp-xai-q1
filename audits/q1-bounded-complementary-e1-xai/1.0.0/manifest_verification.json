@@ -1,0 +1,12 @@
+{
+  "algorithm": "SHA256",
+  "detached_final_receipt": "../packaging_closure_receipt.json",
+  "final_command": "shasum -a 256 -c MANIFEST.sha256",
+  "final_mismatches": 0,
+  "original_mismatches": 23,
+  "packaging_reconciliation": "packaging/reconciliation.json",
+  "parent_E2_unchanged": true,
+  "scientific_equivalence": "PASS",
+  "scope": "Every file in 1.0.0 except root MANIFEST.sha256; nested manifest included",
+  "status": "PASS"
+}
