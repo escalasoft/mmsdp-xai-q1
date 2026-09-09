@@ -1,0 +1,15 @@
+{
+  "original_current_models_recreated": false,
+  "predictions_only_completion": false,
+  "required": [
+    "LR coefficients/intercept/class order",
+    "RF trees",
+    "XGB booster",
+    "LGB booster",
+    "fitted preprocessing",
+    "vectorizer",
+    "fusion meta-learner",
+    "calibrator",
+    "executable object SHA256"
+  ]
+}

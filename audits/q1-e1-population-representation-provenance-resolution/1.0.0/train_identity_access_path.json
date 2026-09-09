@@ -1,0 +1,67 @@
+{
+  "complete_commit_lookup_count": 0,
+  "complete_route": false,
+  "expected": {
+    "apache/activemq": {
+      "count": 3675,
+      "membership_digest": "3acfd7b19e5e059277ffaeed4751dee21ccf2e8ce8752ac67757b746d18db858"
+    },
+    "apache/camel": {
+      "count": 13620,
+      "membership_digest": "38e4a93328ce2a0ab3d3f251e8bac1e1c4380532cde8d55cf9ad8a123fbf0271"
+    },
+    "apache/cassandra": {
+      "count": 4895,
+      "membership_digest": "f8343fe84eea2a52da0b29003769851e94a367c2eb1131d978925fabb917d452"
+    },
+    "apache/flink": {
+      "count": 7014,
+      "membership_digest": "a252723757fb70ed5f491960671332bc9053a06d25c76421f3ba72c21a1f6f55"
+    },
+    "apache/groovy": {
+      "count": 4835,
+      "membership_digest": "263ec1ff29ae4ff4a39011a4b01e6f08dac01d052813aba428166a4185d1ac03"
+    },
+    "apache/hadoop-hdfs": {
+      "count": 1744,
+      "membership_digest": "bf6856713ec31f23451b4a0eac278c7f28ece5c0bd01916d2e1a80c88e268b86"
+    },
+    "apache/hadoop-mapreduce": {
+      "count": 792,
+      "membership_digest": "ebc88fa8e278ed236fa0393e14cc1700b88ef5c815f93327b0b0276a2d3d2597"
+    },
+    "apache/hbase": {
+      "count": 5238,
+      "membership_digest": "2747ea5c4d57d8a32f92a4417e168eaef11c8b02b6450b2b3b6e2ec3a6614b76"
+    },
+    "apache/hive": {
+      "count": 4105,
+      "membership_digest": "50c2857d0ba3c686e7ebbedde961ac8ba486d5a354133377a08eb6f2caabfcda"
+    },
+    "apache/ignite": {
+      "count": 7221,
+      "membership_digest": "09bb2c594d068cce616d9a347bc6db50888dc3b1a81a022987074876e1f5b193"
+    },
+    "apache/kafka": {
+      "count": 1430,
+      "membership_digest": "f264df1f47fe7bc953accd158d04b6a0e6575a7c581e8fc54b370d93b53be5af"
+    },
+    "apache/spark": {
+      "count": 879,
+      "membership_digest": "b7d1b15ca189cdc40c7cc2c1103426730354cf9fdee4eae9929556d4afb52f88"
+    },
+    "apache/zeppelin": {
+      "count": 870,
+      "membership_digest": "28009321714a239fbbf0813683cc233987b823801aa7732e08688a029aadd7bc"
+    },
+    "apache/zookeeper": {
+      "count": 503,
+      "membership_digest": "6c19dccbb3abd8c632670eceb4f9e5d2275e23b38951b91a81f78e5785ec179f"
+    }
+  },
+  "historical_partial_identities": 80,
+  "historical_subset_not_background": true,
+  "reason": "One-way row digest cannot be inverted; independent exact commit bridge required",
+  "recipe": "SHA256 UTF8 apachejit-v2|project|canonical_repository|commit_sha",
+  "status": "TRAIN_ACCESS_PATH_PARTIAL"
+}

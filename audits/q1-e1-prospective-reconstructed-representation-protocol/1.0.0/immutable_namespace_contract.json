@@ -1,0 +1,8 @@
+{
+  "NO_OVERWRITE_HISTORICAL_EVIDENCE": true,
+  "accepted_version_replacement": "DENY",
+  "historical_targets": "DENY",
+  "namespace": "audits/q1-prospective-reconstructed-e1-representations/<version>/",
+  "new_version_for_amendment": true,
+  "symlink_escape": "DENY"
+}

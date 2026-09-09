@@ -1,0 +1,16 @@
+{
+  "action": "DENY_BEFORE_OPEN",
+  "failures": [
+    "identity unauthorized",
+    "project mismatch",
+    "modality mismatch",
+    "scope mismatch",
+    "schema/order mismatch",
+    "label or prediction requested",
+    "model query requested",
+    "T2 or unknown partition",
+    "source digest mismatch",
+    "identity partition proof absent",
+    "safe byte route absent"
+  ]
+}

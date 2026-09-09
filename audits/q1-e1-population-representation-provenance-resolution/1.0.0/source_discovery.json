@@ -1,0 +1,25 @@
+{
+  "development_findings": [
+    "Sprint49 xai_readiness specifies deterministic reconstruction, not persisted original matrices",
+    "Sprint50 membership provenance contains fold counts/digests, not a commit bridge",
+    "Sprint51 calibration consumes probability provenance, not scientific feature vectors",
+    "Sprint52 T1 identity integrity supplies aggregate count/digest and a mixed manifest pointer",
+    "Sprint55/56.2 contains exact transform metadata but no complete safely routed raw population"
+  ],
+  "excluded": "Git internal objects, __pycache__, opaque model object directories; exact named transform objects inspected separately",
+  "historical_discovery_ref": "audits/q1-primary-xai-safe-population-source/1.0.0/source_discovery.json",
+  "limits": "Repository plus ignored artifacts; no external copies asserted absent; uninspected paths remain unknown",
+  "listed_file_count": 3012,
+  "path_list_digest": "1bfe649b2ef53827b4ae667e034cf1e22185f42df71e3799c13e28781b3a8e95",
+  "random_access_extension_candidates": [],
+  "roots_count": {
+    "artifacts": 16,
+    "audits": 1349,
+    "configs": 44,
+    "data": 1250,
+    "experiments": 1,
+    "outputs": 14,
+    "src": 176,
+    "tests": 162
+  }
+}

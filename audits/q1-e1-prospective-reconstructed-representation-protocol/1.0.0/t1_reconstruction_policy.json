@@ -1,0 +1,21 @@
+{
+  "T1_LABELS_FOR_E1_SELECTION": "DENY",
+  "activation_requires": "Separate scope/identity-bounded human authorization and source admission",
+  "authorization": "READY_FOR_SEPARATE_HUMAN_AUTHORIZATION",
+  "authorized": false,
+  "default_R4_scope": "EXCLUDED",
+  "forbidden": [
+    "labels",
+    "outcome sampling",
+    "metrics",
+    "model reselection",
+    "tuning",
+    "T2"
+  ],
+  "future_allowed": [
+    "identity",
+    "raw feature input",
+    "deterministic frozen transform",
+    "representation persistence"
+  ]
+}

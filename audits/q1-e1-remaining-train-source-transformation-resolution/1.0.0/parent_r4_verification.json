@@ -1,0 +1,25 @@
+{
+  "R3_verified": true,
+  "manifest_sha256": "6a8f3c3e0609dad5ccc82ba42f964e12305ed9ae723ca1f7553bc5558bcc8855",
+  "parent_modified": false,
+  "summary": {
+    "compatible_e1_scopes": 4,
+    "expected_project_modalities": 42,
+    "expected_train_rows": 56821,
+    "historical_exact_recovery": "CLOSED_AS_INFEASIBLE_UNDER_AVAILABLE_EVIDENCE",
+    "limitations": [
+      "Only first-project source prefix safely routable",
+      "Numeric standalone transform values unavailable; no predictor deserialization",
+      "PROCESS semantics require further evidence",
+      "No original matrix byte-equivalence claim",
+      "No T1 population or XAI authorization"
+    ],
+    "persisted_representations": 1,
+    "persisted_unique_train_rows": 3675,
+    "phase": "TRAIN_ONLY_RECONSTRUCTION_AND_VERIFICATION",
+    "predictive_evidence": "CLOSED_IMMUTABLE",
+    "projects": 14,
+    "verdict": "56_3B_R4_PASS_PARTIAL_TRAIN_RECONSTRUCTION_WITH_PREDECLARED_LIMITATIONS"
+  },
+  "verified": true
+}

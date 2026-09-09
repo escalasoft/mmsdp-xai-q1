@@ -1,0 +1,11 @@
+{
+  "background_cap": 256,
+  "foreground_cap": 256,
+  "identity_fallback": "Parent compact sorted-key SHA256; single unlabelled stratum",
+  "local_cap": 8,
+  "local_fallback": "First 8 frozen global keys; subset; no output reuse authorized here",
+  "missing_population": "Empty registry means no admitted population",
+  "policies_changed": false,
+  "seed": 20260901,
+  "selection_executed": false
+}

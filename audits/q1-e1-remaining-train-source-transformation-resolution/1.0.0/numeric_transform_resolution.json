@@ -1,0 +1,23 @@
+{
+  "deduplication_rule": "Matching column schemas alone do not imply identical transformed matrices: LR scaling must remain distinct unless exact state/output equivalence is proven",
+  "descriptor_fields": [
+    "dtype",
+    "shape",
+    "sha256"
+  ],
+  "direct_raw_passthrough_authorized": false,
+  "external_store_artifact_counts": {
+    "LIGHTGBM_NATIVE_MODEL_STATE": 378,
+    "OOF_PROBABILITY_STATE": 57,
+    "RECONSTRUCTED_EXECUTABLE_PIPELINE": 2521,
+    "RECONSTRUCTED_FUSION_META_LEARNER": 449,
+    "TFIDF_REPRESENTATION_STATE": 126,
+    "TRAIN_SOURCE_CHECK_OUTPUT_ARRAY": 1740,
+    "XGBOOST_NATIVE_MODEL_STATE": 378
+  },
+  "new_numeric_fit_authorized": false,
+  "numeric_state_values_standalone": false,
+  "producer": "src/evaluation/q1_xai_train_source_reconstruction.py:_preprocessor_state",
+  "scope": "Inspected frozen store inventory and producer; no claim about unprovided external artifacts",
+  "transform_rule": "Frozen median imputer for every family; additional frozen StandardScaler for LR"
+}

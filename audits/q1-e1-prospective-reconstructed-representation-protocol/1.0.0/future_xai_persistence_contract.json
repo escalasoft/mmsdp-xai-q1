@@ -1,0 +1,25 @@
+{
+  "executed": false,
+  "figure_without_source_tables": "DENY",
+  "required": [
+    "explainer type/version",
+    "configuration",
+    "background IDs",
+    "foreground IDs",
+    "local IDs",
+    "base/expected values",
+    "SHAP or analytical values",
+    "output scale",
+    "feature order",
+    "model identity",
+    "representation identity",
+    "fidelity residuals",
+    "stability evidence",
+    "global aggregation",
+    "heterogeneity evidence",
+    "figure source tables",
+    "rendered figures",
+    "figure metadata",
+    "manifest"
+  ]
+}

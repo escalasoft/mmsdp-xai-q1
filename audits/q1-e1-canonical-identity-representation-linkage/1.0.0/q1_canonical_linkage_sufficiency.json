@@ -1,0 +1,80 @@
+{
+  "CODE": {
+    "complete_projects": 0,
+    "critical_missing": [
+      "commit",
+      "source_row",
+      "complete_population"
+    ],
+    "dimensions": {
+      "cryptographic_evidence": "INCOMPLETE_CANONICAL_CHAIN",
+      "feature_order": "INCOMPLETE_CANONICAL_CHAIN",
+      "limitation_disclosure": "PRESERVED_BOUNDARY",
+      "manuscript_traceability": "INCOMPLETE_CANONICAL_CHAIN",
+      "model_identity": "INCOMPLETE_CANONICAL_CHAIN",
+      "no_T2_access": "PRESERVED_BOUNDARY",
+      "no_target_leakage": "INCOMPLETE_CANONICAL_CHAIN",
+      "partition_integrity": "INCOMPLETE_CANONICAL_CHAIN",
+      "reconstruction_transparency": "PRESERVED_BOUNDARY",
+      "representation_traceability": "INCOMPLETE_CANONICAL_CHAIN",
+      "reproducibility": "INCOMPLETE_CANONICAL_CHAIN",
+      "row_traceability": "INCOMPLETE_CANONICAL_CHAIN",
+      "source_traceability": "INCOMPLETE_CANONICAL_CHAIN",
+      "transformation_traceability": "INCOMPLETE_CANONICAL_CHAIN"
+    },
+    "publication_ready": false,
+    "status": "Q1_CANONICAL_LINKAGE_PARTIAL"
+  },
+  "PROCESS": {
+    "complete_projects": 0,
+    "critical_missing": [
+      "commit",
+      "source_row",
+      "complete_population"
+    ],
+    "dimensions": {
+      "cryptographic_evidence": "INCOMPLETE_CANONICAL_CHAIN",
+      "feature_order": "INCOMPLETE_CANONICAL_CHAIN",
+      "limitation_disclosure": "PRESERVED_BOUNDARY",
+      "manuscript_traceability": "INCOMPLETE_CANONICAL_CHAIN",
+      "model_identity": "INCOMPLETE_CANONICAL_CHAIN",
+      "no_T2_access": "PRESERVED_BOUNDARY",
+      "no_target_leakage": "INCOMPLETE_CANONICAL_CHAIN",
+      "partition_integrity": "INCOMPLETE_CANONICAL_CHAIN",
+      "reconstruction_transparency": "PRESERVED_BOUNDARY",
+      "representation_traceability": "INCOMPLETE_CANONICAL_CHAIN",
+      "reproducibility": "INCOMPLETE_CANONICAL_CHAIN",
+      "row_traceability": "INCOMPLETE_CANONICAL_CHAIN",
+      "source_traceability": "INCOMPLETE_CANONICAL_CHAIN",
+      "transformation_traceability": "INCOMPLETE_CANONICAL_CHAIN"
+    },
+    "publication_ready": false,
+    "status": "Q1_CANONICAL_LINKAGE_PARTIAL"
+  },
+  "TEXT": {
+    "complete_projects": 0,
+    "critical_missing": [
+      "commit",
+      "source_row",
+      "complete_population"
+    ],
+    "dimensions": {
+      "cryptographic_evidence": "INCOMPLETE_CANONICAL_CHAIN",
+      "feature_order": "INCOMPLETE_CANONICAL_CHAIN",
+      "limitation_disclosure": "PRESERVED_BOUNDARY",
+      "manuscript_traceability": "INCOMPLETE_CANONICAL_CHAIN",
+      "model_identity": "INCOMPLETE_CANONICAL_CHAIN",
+      "no_T2_access": "PRESERVED_BOUNDARY",
+      "no_target_leakage": "INCOMPLETE_CANONICAL_CHAIN",
+      "partition_integrity": "INCOMPLETE_CANONICAL_CHAIN",
+      "reconstruction_transparency": "PRESERVED_BOUNDARY",
+      "representation_traceability": "INCOMPLETE_CANONICAL_CHAIN",
+      "reproducibility": "INCOMPLETE_CANONICAL_CHAIN",
+      "row_traceability": "INCOMPLETE_CANONICAL_CHAIN",
+      "source_traceability": "INCOMPLETE_CANONICAL_CHAIN",
+      "transformation_traceability": "INCOMPLETE_CANONICAL_CHAIN"
+    },
+    "publication_ready": false,
+    "status": "Q1_CANONICAL_LINKAGE_PARTIAL"
+  }
+}

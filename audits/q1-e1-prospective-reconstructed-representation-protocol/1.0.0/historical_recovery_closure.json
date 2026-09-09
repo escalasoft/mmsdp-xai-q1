@@ -1,0 +1,17 @@
+{
+  "HISTORICAL_EXACT_E1_REPRESENTATION_RECOVERY": "CLOSED_AS_INFEASIBLE_UNDER_AVAILABLE_EVIDENCE",
+  "complete_original_transformed_matrices_persisted": false,
+  "data_corruption_inferred": false,
+  "evidence_refs": [
+    "audits/q1-e1-canonical-identity-representation-linkage/1.0.0/remaining_blockers.json",
+    "audits/q1-e1-population-representation-provenance-resolution/1.0.0/source_discovery.json",
+    "src/evaluation/q1_t1_confirmatory_execution.py",
+    "src/experimentation/q1_controlled_result_campaign.py"
+  ],
+  "evidence_scope": "Inspected repository producer and preserved audit inventories; no claim about every possible external copy",
+  "limitation": "Artifact persistence/provenance",
+  "model_invalidity_inferred": false,
+  "no_further_historical_forensic_dependency": true,
+  "original_fitted_predictor_objects_persisted": false,
+  "predictive_invalidity_inferred": false
+}

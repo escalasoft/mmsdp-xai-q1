@@ -1,0 +1,13 @@
+{
+  "authors": [
+    "Keshavarz, Hossein",
+    "Nagappan, Meiyappan"
+  ],
+  "doi": "10.5281/zenodo.5907847",
+  "official_record": "https://zenodo.org/records/5907847",
+  "publication_date": "2022-01-26",
+  "title": "ApacheJIT: A Large Dataset for Just-In-Time Defect Prediction",
+  "unverified_proceedings_pages_or_article_DOI": null,
+  "venue_as_described_by_source": "MSR 2022 Data Showcase Track; official dataset description says submitted",
+  "version": "v2"
+}

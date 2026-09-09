@@ -1,0 +1,11 @@
+{
+  "claims": [
+    "Representations reconstructed prospectively from frozen sources",
+    "Predictive results kept immutable",
+    "XAI artifacts persisted separately",
+    "Populations independent of T1 labels",
+    "Row/column/transform/model/runtime/digest provenance retained"
+  ],
+  "required_evidence": "Actual successful reconstruction, persistence and relevant execution audit",
+  "status": "CONDITIONAL_NOT_CURRENT_FINDINGS"
+}

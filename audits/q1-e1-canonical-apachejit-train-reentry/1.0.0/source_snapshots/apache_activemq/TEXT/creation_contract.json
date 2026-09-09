@@ -1,0 +1,16 @@
+{
+  "modality": "TEXT",
+  "no_fit": true,
+  "original_Sprint54_claim": false,
+  "partition": "TRAIN",
+  "project": "apache/activemq",
+  "source_archive_digest": "533e7c6fc4f7cb6f34b35539a972d00baa63a125e88ddb5743283dd277edcd5c",
+  "source_digest": "708d0909cc4d1cb665eab7bd91fcf17f2c3d5ca5ef5e32eb73e235c193b78ee5",
+  "source_origin": {
+    "new_Git_acquisition": false,
+    "path": "audits/q1-e1-prospective-train-representations/1.0.0/sources/text_train_prefix.jsonl",
+    "tier": 3,
+    "upstream": "Frozen exact commit-message Git extraction, already verified in R4"
+  },
+  "state": "PROSPECTIVE_CANONICAL_SOURCE_SNAPSHOT"
+}

@@ -1,0 +1,8 @@
+{
+  "authorization_is_separate": true,
+  "binding_validator": "validate_route(request,bound)",
+  "filtering_after_read": "FORBIDDEN",
+  "payload_reader": "ALWAYS_DENY_IN_R1",
+  "status": "DESIGN_VALIDATED_NO_PAYLOAD_ADAPTER",
+  "unknown_fields": "DENY"
+}

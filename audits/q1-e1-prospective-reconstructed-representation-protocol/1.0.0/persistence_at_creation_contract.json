@@ -1,0 +1,17 @@
+{
+  "downstream_XAI_before_verification": false,
+  "failure": "STOP_NO_EPHEMERAL_DOWNSTREAM",
+  "integration_status": "Protocol validator supplied; R4 builder must integrate and test persisted-file/receipt wiring",
+  "sequence": [
+    "construct",
+    "persist matrix",
+    "persist row registry",
+    "persist column registry",
+    "persist transform state",
+    "compute SHA256",
+    "write manifest",
+    "verify manifest",
+    "downstream eligibility gate"
+  ],
+  "verification_helper": "persistence_gate"
+}

@@ -1,0 +1,14 @@
+{
+  "action": "Resolve canonical identity bridge under a separate evidence/access decision",
+  "forbid": "No mixed-stream scan, SHA guessing, message matching or new fitting",
+  "if_unavailable": "Record unresolved; any broader access or changed scientific design requires separate amendment",
+  "required_artifact": [
+    "project",
+    "partition",
+    "frozen_row_identifier",
+    "full_commit_sha",
+    "canonical_repository",
+    "source_digest",
+    "independently_proven_safe_source_offset"
+  ]
+}

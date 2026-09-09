@@ -1,0 +1,22 @@
+{
+  "article_route": "ARTICLE_ROUTE_C_E2_PRIMARY_PLUS_BOUNDED_COMPLEMENTARY_E1",
+  "combined_unique_train_identities": 3675,
+  "expected_train_identities": 56821,
+  "new_representations": 0,
+  "parent_representations": 1,
+  "projects_with_1_representation": 1,
+  "projects_with_2_representations": 0,
+  "projects_with_3_representations": 0,
+  "projects_with_no_representation": 13,
+  "representation_eligible_CODE": 0,
+  "representation_eligible_PROCESS": 0,
+  "representation_eligible_TEXT": 1,
+  "scientific_interpretation": "Canonical raw-source progress for one project does not establish primary multi-project E1; accepted R4 TEXT remains bounded complementary/illustrative input evidence",
+  "source_ready_CODE": 1,
+  "source_ready_PROCESS": 0,
+  "source_ready_TEXT": 1,
+  "source_recovery_closed": true,
+  "source_snapshot_modalities": 2,
+  "source_snapshot_projects": 1,
+  "verdict": "56_3B_R4B_CLOSE_CANONICAL_REENTRY_ROUTE_INSUFFICIENT_FOR_PRIMARY_E1"
+}

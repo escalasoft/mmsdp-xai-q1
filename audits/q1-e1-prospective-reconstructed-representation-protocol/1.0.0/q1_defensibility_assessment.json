@@ -1,0 +1,89 @@
+{
+  "dimensions": {
+    "complete_persistence": {
+      "evidence": "R3 frozen contracts",
+      "limitation": "Source admission and prospective validation still required",
+      "status": "SPECIFIED_NOT_EMPIRICALLY_EXECUTED"
+    },
+    "deterministic_reconstruction": {
+      "evidence": "R3 frozen contracts",
+      "limitation": "Source admission and prospective validation still required",
+      "status": "SPECIFIED_NOT_EMPIRICALLY_EXECUTED"
+    },
+    "fidelity_plan": {
+      "evidence": "R3 frozen contracts",
+      "limitation": "Source admission and prospective validation still required",
+      "status": "SPECIFIED_NOT_EMPIRICALLY_EXECUTED"
+    },
+    "heterogeneity_plan": {
+      "evidence": "R3 frozen contracts",
+      "limitation": "Source admission and prospective validation still required",
+      "status": "SPECIFIED_NOT_EMPIRICALLY_EXECUTED"
+    },
+    "immutable_predictive_evidence": {
+      "evidence": "R3 frozen contracts",
+      "limitation": "Source admission and prospective validation still required",
+      "status": "SPECIFIED_NOT_EMPIRICALLY_EXECUTED"
+    },
+    "no_T2_access": {
+      "evidence": "R3 frozen contracts",
+      "limitation": "Source admission and prospective validation still required",
+      "status": "SPECIFIED_NOT_EMPIRICALLY_EXECUTED"
+    },
+    "no_retroactive_rewriting": {
+      "evidence": "R3 frozen contracts",
+      "limitation": "Source admission and prospective validation still required",
+      "status": "SPECIFIED_NOT_EMPIRICALLY_EXECUTED"
+    },
+    "no_test_label_dependence": {
+      "evidence": "R3 frozen contracts",
+      "limitation": "Source admission and prospective validation still required",
+      "status": "SPECIFIED_NOT_EMPIRICALLY_EXECUTED"
+    },
+    "prospective_protocol_freeze": {
+      "evidence": "R3 frozen contracts",
+      "limitation": "Source admission and prospective validation still required",
+      "status": "SPECIFIED_NOT_EMPIRICALLY_EXECUTED"
+    },
+    "reconstruction_labeled": {
+      "evidence": "R3 frozen contracts",
+      "limitation": "Source admission and prospective validation still required",
+      "status": "SPECIFIED_NOT_EMPIRICALLY_EXECUTED"
+    },
+    "replication_package_readiness": {
+      "evidence": "R3 frozen contracts",
+      "limitation": "Source admission and prospective validation still required",
+      "status": "SPECIFIED_NOT_EMPIRICALLY_EXECUTED"
+    },
+    "row_feature_model_traceability": {
+      "evidence": "R3 frozen contracts",
+      "limitation": "Source admission and prospective validation still required",
+      "status": "SPECIFIED_NOT_EMPIRICALLY_EXECUTED"
+    },
+    "stability_plan": {
+      "evidence": "R3 frozen contracts",
+      "limitation": "Source admission and prospective validation still required",
+      "status": "SPECIFIED_NOT_EMPIRICALLY_EXECUTED"
+    },
+    "threats_to_validity": {
+      "evidence": "R3 frozen contracts",
+      "limitation": "Source admission and prospective validation still required",
+      "status": "SPECIFIED_NOT_EMPIRICALLY_EXECUTED"
+    },
+    "transparent_historical_limitation": {
+      "evidence": "R3 frozen contracts",
+      "limitation": "Source admission and prospective validation still required",
+      "status": "SPECIFIED_NOT_EMPIRICALLY_EXECUTED"
+    }
+  },
+  "limitations": [
+    "SAFE_SOURCE_ACCESS_STILL_UNRESOLVED",
+    "COMPLETE_POPULATION_NOT_YET_MATERIALIZED",
+    "PROCESS_SOURCE_SEMANTICS_MUST_BE_VERIFIED",
+    "POST_HOC_RECONSTRUCTION_PROVENANCE",
+    "NO_ORIGINAL_BYTE_EQUIVALENCE_CLAIM",
+    "PERSISTENCE_RUNTIME_INTEGRATION_REQUIRED_IN_R4"
+  ],
+  "scope": "Protocol defensibility only; not journal acceptance, reconstruction success or E1 readiness",
+  "verdict": "Q1_PROTOCOL_AMENDMENT_DEFENSIBLE_WITH_LIMITATION"
+}

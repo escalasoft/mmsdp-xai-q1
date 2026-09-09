@@ -1,0 +1,8 @@
+{
+  "TRAIN_ONLY": "PASS_NO_NEW_SOURCE_PAYLOAD",
+  "new_T1_T2_payload_access": false,
+  "new_rows": 0,
+  "no_new_empirical_disjointness_claim": true,
+  "parent_TRAIN_rows": 3675,
+  "parent_partition_evidence": "audits/q1-e1-prospective-train-representations/1.0.0/train_partition_safety_audit.json"
+}

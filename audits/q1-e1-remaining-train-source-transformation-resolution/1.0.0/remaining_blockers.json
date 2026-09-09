@@ -1,0 +1,18 @@
+{
+  "dominant": "SOURCE_COVERAGE",
+  "historical_exact_matrix_recovery_required": false,
+  "items": [
+    "NO_FROZEN_TRAIN_ONLY_SEEK_ROUTE; PROJECT_GROUPED_GZIP_REQUIRES_TRAVERSING_EARLIER_T1_T2",
+    "NUMERIC_STATE_VALUES_NOT_STANDALONE; PREDICTOR_LOAD_DENIED; NEW_NUMERIC_FIT_NOT_AUTHORIZED_BY_R3",
+    "PREDICTION_TIME_ANCESTOR_AGGREGATION_NOT_PROVEN"
+  ],
+  "minimal_remedies": [
+    "Obtain frozen project-specific TRAIN identity/feature extracts or a verified TRAIN-only seek index created without this sprint traversing T1/T2",
+    "Provide standalone frozen numeric imputer/scaler values bound by existing digests; alternatively separately authorize a method amendment before any TRAIN-only transform refit",
+    "Supply exact PROCESS prediction-time/ancestor aggregation evidence"
+  ],
+  "numeric_transform_blocked_targets": 28,
+  "overlapping_counts": true,
+  "process_temporal_unproven_targets": 14,
+  "source_blocked_targets": 39
+}

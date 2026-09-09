@@ -1,0 +1,14 @@
+{
+  "CANONICAL_SOURCE_RECOVERY_SEARCH_TERMINATES_AT_R4B": true,
+  "R4C_forensic_search_recommended": false,
+  "allowed_tiers": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "new_lower_tiers": false,
+  "primary_inventory_rounds": 1,
+  "remaining_unresolved_state": "CLOSED_UNDER_AVAILABLE_CANONICAL_EVIDENCE",
+  "targeted_fallback_reconciliation_rounds": 1
+}

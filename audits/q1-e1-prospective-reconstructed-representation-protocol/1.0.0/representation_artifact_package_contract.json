@@ -1,0 +1,28 @@
+{
+  "TEXT_additional": [
+    "raw_message_registry",
+    "vectorizer_state",
+    "vocabulary",
+    "idf",
+    "token_column_registry"
+  ],
+  "model_family": "Shared representation only if exact frozen transform compatibility; otherwise family-specific child namespace",
+  "no_ephemeral_only": true,
+  "persist_immediately": true,
+  "required": [
+    "representation_matrix",
+    "row_identity_registry",
+    "column_identity_registry",
+    "feature_schema",
+    "transform_contract",
+    "transform_state",
+    "matrix_digest",
+    "schema_digest",
+    "row_order_digest",
+    "column_order_digest",
+    "source_digest",
+    "creation_runtime",
+    "provenance_manifest"
+  ],
+  "unit": "project × modality × partition"
+}

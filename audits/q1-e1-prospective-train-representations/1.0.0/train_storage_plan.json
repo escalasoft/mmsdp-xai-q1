@@ -1,0 +1,9 @@
+{
+  "columns": 2557,
+  "dense_upper_bound_bytes": 75175800,
+  "file_cap_bytes": 25000000,
+  "frozen_before_matrix_construction": true,
+  "rows": 3675,
+  "source_prefixes_persisted": true,
+  "storage": "CSR and R2 canonical row stream; single representation shared by four families"
+}

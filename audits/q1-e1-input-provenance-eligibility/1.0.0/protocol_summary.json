@@ -1,0 +1,11 @@
+{
+  "candidate_scopes": 168,
+  "eligible_algorithm_families": [],
+  "eligible_projects": [],
+  "eligible_scope_ids": [],
+  "scope_counts": {
+    "Q1_E1_BLOCKED": 112,
+    "Q1_E1_INELIGIBLE": 56
+  },
+  "verdict": "56_3B_BLOCKED_SCIENTIFIC_INPUT_PROVENANCE_INSUFFICIENT"
+}

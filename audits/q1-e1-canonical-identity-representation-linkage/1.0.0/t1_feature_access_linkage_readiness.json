@@ -1,0 +1,7 @@
+{
+  "allowed_identity_rows": 0,
+  "authorization": "BLOCKED_PENDING_LINKAGE_AND_SEPARATE_HUMAN_AUTHORIZATION",
+  "feature_access_authorized": false,
+  "identity_linkage_status": "T1_IDENTITY_LINKAGE_UNRESOLVED",
+  "status": "T1_FEATURE_ACCESS_LINKAGE_NOT_READY"
+}

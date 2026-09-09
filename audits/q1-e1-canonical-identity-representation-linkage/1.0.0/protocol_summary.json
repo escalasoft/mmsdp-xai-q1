@@ -1,0 +1,9 @@
+{
+  "candidate_scopes": 168,
+  "canonical_complete_scopes": 0,
+  "partial_scopes": 12,
+  "partial_train_unique_identities": 80,
+  "representation_row_digests": 960,
+  "unresolved_scopes": 156,
+  "verdict": "56_3B_R2_BLOCKED_CANONICAL_IDENTITY_LINKAGE_INCOMPLETE"
+}

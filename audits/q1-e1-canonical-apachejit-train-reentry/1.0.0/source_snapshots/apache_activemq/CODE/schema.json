@@ -1,0 +1,20 @@
+{
+  "identity_fields": [
+    "project",
+    "commit_identity",
+    "row_identifier",
+    "partition"
+  ],
+  "label_fields": [],
+  "modality": "CODE",
+  "scientific_fields": [
+    "la",
+    "ld",
+    "nf",
+    "nd",
+    "ns",
+    "ent"
+  ],
+  "serialization": "Sorted compact ASCII JSON per line with final LF (inherited canonical encoder)",
+  "state": "PROSPECTIVE_CANONICAL_SOURCE_SNAPSHOT"
+}

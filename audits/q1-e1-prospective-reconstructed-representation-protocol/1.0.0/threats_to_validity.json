@@ -1,0 +1,23 @@
+{
+  "future_mitigations_executed": false,
+  "limitations": [
+    "Original matrices not persisted",
+    "Reconstruction follows predictive campaign",
+    "Bytes may differ from historical ephemeral state",
+    "No predictive reevaluation",
+    "Future claims concern the reconstructed explanation pipeline",
+    "Source access remains unresolved"
+  ],
+  "mitigations": [
+    "frozen source",
+    "frozen transformations",
+    "deterministic execution",
+    "prior predictor equivalence",
+    "complete persistence",
+    "SHA256 manifests",
+    "no T1 labels",
+    "no T2",
+    "no tuning"
+  ],
+  "threat": "Post-hoc reconstructed representation provenance"
+}

@@ -1,0 +1,14 @@
+{"final_representation_ready":false,"limitation":"Raw frozen benchmark CODE values admitted; model preprocessing unresolved","project":"apache/activemq","snapshot_id":"5f025aa76049b69e10ef249189708726ed910aed4494f27ecd63be6c6361443b","status":"CODE_CANONICAL_SOURCE_READY_WITH_LIMITATION"}
+{"final_representation_ready":false,"limitation":"CLOSED_UNDER_AVAILABLE_CANONICAL_EVIDENCE","project":"apache/camel","snapshot_id":null,"status":"CODE_CANONICAL_SOURCE_INSUFFICIENT"}
+{"final_representation_ready":false,"limitation":"CLOSED_UNDER_AVAILABLE_CANONICAL_EVIDENCE","project":"apache/cassandra","snapshot_id":null,"status":"CODE_CANONICAL_SOURCE_INSUFFICIENT"}
+{"final_representation_ready":false,"limitation":"CLOSED_UNDER_AVAILABLE_CANONICAL_EVIDENCE","project":"apache/flink","snapshot_id":null,"status":"CODE_CANONICAL_SOURCE_INSUFFICIENT"}
+{"final_representation_ready":false,"limitation":"CLOSED_UNDER_AVAILABLE_CANONICAL_EVIDENCE","project":"apache/groovy","snapshot_id":null,"status":"CODE_CANONICAL_SOURCE_INSUFFICIENT"}
+{"final_representation_ready":false,"limitation":"CLOSED_UNDER_AVAILABLE_CANONICAL_EVIDENCE","project":"apache/hadoop-hdfs","snapshot_id":null,"status":"CODE_CANONICAL_SOURCE_INSUFFICIENT"}
+{"final_representation_ready":false,"limitation":"CLOSED_UNDER_AVAILABLE_CANONICAL_EVIDENCE","project":"apache/hadoop-mapreduce","snapshot_id":null,"status":"CODE_CANONICAL_SOURCE_INSUFFICIENT"}
+{"final_representation_ready":false,"limitation":"CLOSED_UNDER_AVAILABLE_CANONICAL_EVIDENCE","project":"apache/hbase","snapshot_id":null,"status":"CODE_CANONICAL_SOURCE_INSUFFICIENT"}
+{"final_representation_ready":false,"limitation":"CLOSED_UNDER_AVAILABLE_CANONICAL_EVIDENCE","project":"apache/hive","snapshot_id":null,"status":"CODE_CANONICAL_SOURCE_INSUFFICIENT"}
+{"final_representation_ready":false,"limitation":"CLOSED_UNDER_AVAILABLE_CANONICAL_EVIDENCE","project":"apache/ignite","snapshot_id":null,"status":"CODE_CANONICAL_SOURCE_INSUFFICIENT"}
+{"final_representation_ready":false,"limitation":"CLOSED_UNDER_AVAILABLE_CANONICAL_EVIDENCE","project":"apache/kafka","snapshot_id":null,"status":"CODE_CANONICAL_SOURCE_INSUFFICIENT"}
+{"final_representation_ready":false,"limitation":"CLOSED_UNDER_AVAILABLE_CANONICAL_EVIDENCE","project":"apache/spark","snapshot_id":null,"status":"CODE_CANONICAL_SOURCE_INSUFFICIENT"}
+{"final_representation_ready":false,"limitation":"CLOSED_UNDER_AVAILABLE_CANONICAL_EVIDENCE","project":"apache/zeppelin","snapshot_id":null,"status":"CODE_CANONICAL_SOURCE_INSUFFICIENT"}
+{"final_representation_ready":false,"limitation":"CLOSED_UNDER_AVAILABLE_CANONICAL_EVIDENCE","project":"apache/zookeeper","snapshot_id":null,"status":"CODE_CANONICAL_SOURCE_INSUFFICIENT"}

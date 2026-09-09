@@ -1,0 +1,18 @@
+{
+  "expanded_transform_metadata_scope_count": 56,
+  "parent_manifest_sha256": "55433729f28c86d442c97af0cecffa46deaef055cb5543ccf089bc613a613e86",
+  "prior_partial_text_scope_count": 4,
+  "reconciliation": "Additional existing 56.2 transform metadata verified; does not contradict complete-population blockers or rewrite parent",
+  "summary": {
+    "candidate_scopes": 168,
+    "eligible_algorithm_families": [],
+    "eligible_projects": [],
+    "eligible_scope_ids": [],
+    "scope_counts": {
+      "Q1_E1_BLOCKED": 112,
+      "Q1_E1_INELIGIBLE": 56
+    },
+    "verdict": "56_3B_BLOCKED_SCIENTIFIC_INPUT_PROVENANCE_INSUFFICIENT"
+  },
+  "verified": true
+}

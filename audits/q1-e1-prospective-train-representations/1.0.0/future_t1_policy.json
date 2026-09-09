@@ -1,0 +1,8 @@
+{
+  "R5_started": false,
+  "T1_REPRESENTATION_PHASE": "READY_FOR_SEPARATE_HUMAN_AUTHORIZATION",
+  "T1_labels": "DENY",
+  "T2": "DENY_SEALED_REVIEWER_RESERVE",
+  "authorized": false,
+  "scope_limit": "Only successful TRAIN dependency may be considered; others blocked"
+}

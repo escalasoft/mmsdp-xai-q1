@@ -1,0 +1,70 @@
+{
+  "archive_path": "data/external/apachejit-v2/apachejit_dataset_replication.zip",
+  "archive_sha256_from_frozen_lineage": "533e7c6fc4f7cb6f34b35539a972d00baa63a125e88ddb5743283dd277edcd5c",
+  "archive_size_bytes": 82769782,
+  "authors": [
+    "Hossein Keshavarz",
+    "Meiyappan Nagappan"
+  ],
+  "current_full_archive_hash_executed": false,
+  "doi": "10.5281/zenodo.5907847",
+  "full_archive_hash_reason": "Would read mixed scientific partitions; frozen digest and publisher metadata used instead",
+  "header_operations_including_initial_inspection": 8,
+  "notebooks": "Inventory only: embedded outputs not certified free of prohibited T1/T2 values; no blanket JSON decode",
+  "official_archive_md5": "528bf0ee04b15976be6bf15f8efddc65",
+  "official_record": "https://zenodo.org/records/5907847",
+  "project_repository_mapping": {
+    "AMQ": [
+      "apache/activemq"
+    ],
+    "CAMEL": [
+      "apache/camel"
+    ],
+    "CASSANDRA": [
+      "apache/cassandra"
+    ],
+    "FLINK": [
+      "apache/flink"
+    ],
+    "GROOVY": [
+      "apache/groovy"
+    ],
+    "HBASE": [
+      "apache/hbase"
+    ],
+    "HDFS": [
+      "apache/hadoop-hdfs",
+      "apache/hadoop"
+    ],
+    "HIVE": [
+      "apache/hive"
+    ],
+    "IGNITE": [
+      "apache/ignite"
+    ],
+    "KAFKA": [
+      "apache/kafka"
+    ],
+    "MAPREDUCE": [
+      "apache/hadoop-mapreduce",
+      "apache/hadoop"
+    ],
+    "SPARK": [
+      "apache/spark"
+    ],
+    "ZEPPELIN": [
+      "apache/zeppelin"
+    ],
+    "ZOOKEEPER": [
+      "apache/zookeeper"
+    ]
+  },
+  "published": "2022-01-26",
+  "published_balanced_train_replaces_campaign": false,
+  "search_rounds": {
+    "primary_inventory": 1,
+    "targeted_fallback_reconciliation": 1
+  },
+  "title": "ApacheJIT: A Large Dataset for Just-In-Time Defect Prediction",
+  "version": "v2"
+}

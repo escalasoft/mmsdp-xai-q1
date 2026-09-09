@@ -1,0 +1,11 @@
+{
+  "action": "Separate provenance-routing amendment",
+  "no_recovery_or_rematerialization_authorized": true,
+  "prerequisites": [
+    "Pre-existing immutable TRAIN/T1 identity-to-commit/source-offset bridge",
+    "Explicit T1 feature/identity access authorization with T2 exclusion",
+    "Complete authoritative numeric inputs and ancestor-only PROCESS proof",
+    "Exact TEXT row-token-column-state proof",
+    "Rerun eligibility before requesting E1 execution"
+  ]
+}

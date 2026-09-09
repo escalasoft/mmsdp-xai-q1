@@ -1,0 +1,7 @@
+{
+  "current_statement": "The confirmatory predictive experiment was completed and frozen before the feature-level explainability campaign. Predictive outputs and experimental metadata were retained, but complete fitted/transformed feature matrices were not persisted as standalone scientific artifacts in the inspected workflow. The exact historical human reason is not documented. The implementation focused on predictive outputs and experimental evidence; the representation persistence limitation was identified during later XAI audits. We have now frozen a prospective deterministic reconstruction protocol. No representations have been reconstructed under R3. Future representations must use admitted frozen inputs and transformations, retain explicit reconstructed labels, and be versioned, hashed and persisted separately. This amendment changes the provenance protocol for post-hoc explanation inputs; it does not recompute or replace the frozen predictive results.",
+  "final_wording": false,
+  "mandatory_limitation": "Original confirmatory feature-representation artifacts were not persisted; future XAI uses separately validated reconstructed representations.",
+  "predictive_evidence_unmodified": true,
+  "tense_gate": "Do not claim future artifacts have already been reconstructed or persisted"
+}

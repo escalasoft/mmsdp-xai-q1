@@ -1,0 +1,15 @@
+{
+  "combined_blocked": 41,
+  "combined_eligible_with_limitation": 1,
+  "coverage_assessment": "Q1_TRAIN_COVERAGE_WEAK",
+  "dominant_blocker": "Safe TRAIN source routes absent for 39 of 41 remaining targets",
+  "expected_train_identities": 56821,
+  "new_representations": 0,
+  "new_rows_persisted": 0,
+  "newly_resolved": 0,
+  "parent_representation_reused": true,
+  "project_modalities": 42,
+  "projects": 14,
+  "remaining_targets": 41,
+  "verdict": "56_3B_R4A_BLOCKED_SOURCE_COVERAGE_INSUFFICIENT"
+}

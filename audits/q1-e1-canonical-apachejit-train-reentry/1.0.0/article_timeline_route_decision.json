@@ -1,0 +1,7 @@
+{
+  "R4C_recommended": false,
+  "T1_authorized": false,
+  "XAI_authorized": false,
+  "bounded_plan": "Preserve E2 as primary; restrict complementary/illustrative E1 to scientifically supported inputs and separately authorized execution. No more canonical source-recovery sprint.",
+  "route": "ARTICLE_ROUTE_C_E2_PRIMARY_PLUS_BOUNDED_COMPLEMENTARY_E1"
+}

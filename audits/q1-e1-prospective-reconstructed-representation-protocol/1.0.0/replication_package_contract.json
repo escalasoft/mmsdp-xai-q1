@@ -1,0 +1,18 @@
+{
+  "licensing": "Where redistribution restricted, retain lawful retrieval instructions and digests; never infer permission",
+  "required": [
+    "source snapshot identifier",
+    "partition registry",
+    "representation builder",
+    "transformation contracts",
+    "reconstructed predictor states",
+    "environment lock",
+    "population registries",
+    "XAI configuration",
+    "tests",
+    "figures",
+    "source tables",
+    "manifests"
+  ],
+  "status": "BLUEPRINT_FROZEN_NOT_EXECUTION_PACKAGE_READY"
+}

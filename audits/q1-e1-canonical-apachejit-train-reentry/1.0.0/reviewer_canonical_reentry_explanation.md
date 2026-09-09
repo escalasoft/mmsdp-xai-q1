@@ -1,0 +1,7 @@
+# Reviewer canonical-source re-entry explanation
+
+Historical complete feature matrices were unavailable as preserved executable artifacts, so canonical re-entry was bounded to official ApacheJIT v2 lineage and the already frozen campaign TRAIN population. Official metadata, table headers and safe replication source code were inspected; published balanced TRAIN was not substituted. No whole mixed archive/table read, T1 feature/label access or T2 access was permitted.
+
+The one targeted reconciliation persisted ActiveMQ CODE raw change metrics from a preverified3675-row TRAIN prefix and ActiveMQ TEXT messages from the immutable R4 source. Full project/commit identities, row order, source/archive digests, schemas, runtime, creation contracts and manifests accompany both snapshots. They are PROSPECTIVE_CANONICAL_SOURCE_SNAPSHOT artifacts, not original Sprint54 inputs or final model matrices.
+
+No new representation, predictor query, fitting, metrics or XAI was executed. Only the accepted ActiveMQ TEXT representation remains available for bounded complementary/illustrative E1. The other13 projects lack safe complete joins; numerical state and PROCESS temporal proof remain insufficient. Static-source inventory does not assert that uninspected notebook/data outputs lack useful information; they were not admitted under the preserved partition boundary. This limited canonical route is closed for primary E1 expansion. E2 remains primary, with no claim that E1 covers every fusion scope.

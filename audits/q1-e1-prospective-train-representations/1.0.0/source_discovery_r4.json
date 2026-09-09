@@ -1,0 +1,13 @@
+{
+  "admitted_route": "Previously attested first-project TRAIN compressed prefix, freshly hash-verified in R4",
+  "discovery": "Path names only; no unknown payload opened",
+  "listed_paths": 9189,
+  "new_non_git_random_access_candidates": [],
+  "nonopaque_paths": 1769,
+  "not_admitted": [
+    "Mixed container tail scans",
+    "Repository Git pack indices as substitutes for frozen scientific partition routes",
+    "80-row partial derivative as complete TRAIN source"
+  ],
+  "path_list_sha256": "0b82f82546308cc63725cd7db6f710bafe8a42dff7adca3b637ff432cdcfd8fc"
+}

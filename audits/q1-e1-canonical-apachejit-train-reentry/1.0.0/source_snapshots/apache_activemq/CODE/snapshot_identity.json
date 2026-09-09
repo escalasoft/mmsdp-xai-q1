@@ -1,0 +1,11 @@
+{
+  "creation_contract_digest": "c3b8d79cdfa1b659517f3a59ed81b2f207c71ea5d982293c4411a143964fe3c9",
+  "partition": "TRAIN",
+  "payload_digest": "88d3230c360726bbdc2b98d7ec50168f632ca0c881e2ff1cf5f5aa6d0ddd773a",
+  "project": "apache/activemq",
+  "row_count": 3675,
+  "row_order_digest": "9e37380bcbd8c66afcf94aafb0493a126892f5634e73faa779eb09e04cb081fb",
+  "schema_digest": "0db407bc350d6a7b07b1390de5f3c882a210df2aa82c1f70d16ea08ca7100f8c",
+  "snapshot_id": "5f025aa76049b69e10ef249189708726ed910aed4494f27ecd63be6c6361443b",
+  "source_archive_digest": "533e7c6fc4f7cb6f34b35539a972d00baa63a125e88ddb5743283dd277edcd5c"
+}

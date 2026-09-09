@@ -1,0 +1,48 @@
+{
+  "builder": "src/evaluation/q1_e1_prospective_train_representation_reconstruction.py",
+  "eligible_subset": "ActiveMQ TEXT full TRAIN only",
+  "environment": "runtime.json and parent frozen runtime lock",
+  "persisted_source_prefixes": [
+    "sources/partition_train_prefix.jsonl",
+    "sources/text_train_prefix.jsonl"
+  ],
+  "remaining_41_project_modalities": "REPLICATION_NOT_READY",
+  "requires_frozen_parent_metadata": true,
+  "source_redistribution": "No license grant inferred; retain benchmark access conditions",
+  "source_snapshot": [
+    {
+      "boundary_verified": true,
+      "compressed_bytes_read": 269397,
+      "decode_limit_bytes": 1,
+      "decompressed_lines_read": 3675,
+      "full_file_hash_or_tail_scan": false,
+      "limitation": "Digest and route cover only frozen TRAIN prefix; no full mixed-container read/hash. Valid for ActiveMQ only.",
+      "membership_verified": true,
+      "partition": "TRAIN",
+      "path": "audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_manifest.jsonl.gz",
+      "prefix_sha256": "b86eae216207f4db218c8d99eb791efbd6d17205153dbd7e1d23bfea1825c922",
+      "producer_order_verified": true,
+      "project": "apache/activemq",
+      "read_unit_bytes": 1,
+      "source_class": "AUTHORITATIVE_FROZEN_SOURCE_WITH_LIMITATION"
+    },
+    {
+      "boundary_verified": true,
+      "compressed_bytes_read": 706809,
+      "decode_limit_bytes": 1,
+      "decompressed_lines_read": 3675,
+      "full_file_hash_or_tail_scan": false,
+      "limitation": "Digest and route cover only frozen TRAIN prefix; no full mixed-container read/hash. Valid for ActiveMQ only.",
+      "membership_verified": true,
+      "partition": "TRAIN",
+      "path": "audits/q1-apachejit-final-dataset-freeze/1.0.0/text_dataset.jsonl.gz",
+      "prefix_sha256": "708d0909cc4d1cb665eab7bd91fcf17f2c3d5ca5ef5e32eb73e235c193b78ee5",
+      "producer_order_verified": true,
+      "project": "apache/activemq",
+      "read_unit_bytes": 1,
+      "source_class": "AUTHORITATIVE_FROZEN_SOURCE_WITH_LIMITATION"
+    }
+  ],
+  "status": "REPLICATION_READY_WITH_LIMITATION",
+  "transform_state": "audits/q1-xai-reconstruction-execution/1.0.0/objects/3ec8674534cc2001e030e56cb9a37bbf8d66d7564b4052084adaae0edc063559.tfidf.json"
+}

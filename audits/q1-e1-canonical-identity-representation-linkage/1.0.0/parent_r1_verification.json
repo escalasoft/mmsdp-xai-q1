@@ -1,0 +1,14 @@
+{
+  "manifest_sha256": "cee837e4dd4a6d06061710f5e88a37e93f243265c21bce8349efeb62d78ffbec",
+  "parent_state_unchanged": true,
+  "parent_summary": {
+    "candidate_scopes": 168,
+    "complete_train_route": false,
+    "exact_text_transform_metadata_scopes": 56,
+    "no_revalidation_started": true,
+    "parent_verified": true,
+    "scientific_population_paths_established": 0,
+    "verdict": "56_3B_R1_BLOCKED_POPULATION_ACCESS_PATH_NOT_ESTABLISHED"
+  },
+  "verified": true
+}

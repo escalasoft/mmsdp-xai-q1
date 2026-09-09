@@ -1,0 +1,8 @@
+{
+  "authorization": "R4 user instruction authorizes TRAIN only",
+  "historical_failure_packages_unchanged": true,
+  "manifest_sha256": "4d5b9370e3c811260cebbca303b86ccc5a3f040be1e8e2ddb522dac488b53596",
+  "namespace_override": "R4 explicitly prescribes q1-e1-prospective-train-representations/1.0.0; replaces conceptual R3 destination for this execution only",
+  "verdict": "56_3B_R3_PASS_PROTOCOL_AMENDMENT_WITH_PREDECLARED_LIMITATIONS",
+  "verified": true
+}
