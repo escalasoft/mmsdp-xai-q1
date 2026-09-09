@@ -1,0 +1,14 @@
+{
+  "B_R1_R2_historical_dispositions_unchanged": true,
+  "manifest_sha256": "7c2e8e93e8a34f4ad5438e53f6a6ac5eba9c75b067670202c191579568991dc7",
+  "summary": {
+    "candidate_scopes": 168,
+    "canonical_complete_scopes": 0,
+    "partial_scopes": 12,
+    "partial_train_unique_identities": 80,
+    "representation_row_digests": 960,
+    "unresolved_scopes": 156,
+    "verdict": "56_3B_R2_BLOCKED_CANONICAL_IDENTITY_LINKAGE_INCOMPLETE"
+  },
+  "verified": true
+}

@@ -1,0 +1,9 @@
+{
+  "T1": "FOREGROUND_AFTER_SEPARATE_AUTHORIZATION",
+  "T2": "DENY_SEALED_REVIEWER_RESERVE",
+  "TRAIN": "BACKGROUND_REFERENCE",
+  "contract": "Historical frozen temporal definitions retained",
+  "no_inferred_disjointness": true,
+  "random_resplit": "DENY",
+  "required": "Persist exact full per-project membership and row order; source routing preflight first"
+}

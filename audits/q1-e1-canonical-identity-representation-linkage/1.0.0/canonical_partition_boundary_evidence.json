@@ -1,0 +1,8 @@
+{
+  "T1_T2": "NOT_PROVEN_T2_SEALED",
+  "TRAIN_T1": "COMPLETE_IDENTITY_SETS_UNAVAILABLE",
+  "TRAIN_T2": "NOT_PROVEN_T2_SEALED",
+  "inherited_boundary_ref": "audits/q1-e1-population-representation-provenance-resolution/1.0.0/partition_identity_resolution.json",
+  "no_disjointness_claim": true,
+  "status": "UNPROVEN"
+}

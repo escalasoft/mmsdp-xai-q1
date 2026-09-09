@@ -1,0 +1,16 @@
+{
+  "amendment": "New version only; no mutation of accepted version",
+  "failure": "STOP; retain failure journal; no downstream use",
+  "ordinary_overwriting_rename": "FORBIDDEN",
+  "replace_existing": false,
+  "sequence": [
+    "exclusive temporary write in destination filesystem",
+    "flush/fsync",
+    "validate contents",
+    "atomic no-clobber publish",
+    "SHA256",
+    "manifest registration",
+    "manifest verification",
+    "accept immutable version"
+  ]
+}

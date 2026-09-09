@@ -1,0 +1,546 @@
+{
+  "algorithm": {
+    "LightGBM": {
+      "blocked_n": 28,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 14
+    },
+    "Logistic Regression": {
+      "blocked_n": 28,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 14
+    },
+    "Random Forest": {
+      "blocked_n": 28,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 14
+    },
+    "XGBoost": {
+      "blocked_n": 28,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 14
+    }
+  },
+  "algorithm × project": {
+    "LightGBM|apache/activemq": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "LightGBM|apache/camel": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "LightGBM|apache/cassandra": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "LightGBM|apache/flink": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "LightGBM|apache/groovy": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "LightGBM|apache/hadoop-hdfs": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "LightGBM|apache/hadoop-mapreduce": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "LightGBM|apache/hbase": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "LightGBM|apache/hive": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "LightGBM|apache/ignite": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "LightGBM|apache/kafka": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "LightGBM|apache/spark": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "LightGBM|apache/zeppelin": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "LightGBM|apache/zookeeper": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Logistic Regression|apache/activemq": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Logistic Regression|apache/camel": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Logistic Regression|apache/cassandra": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Logistic Regression|apache/flink": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Logistic Regression|apache/groovy": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Logistic Regression|apache/hadoop-hdfs": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Logistic Regression|apache/hadoop-mapreduce": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Logistic Regression|apache/hbase": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Logistic Regression|apache/hive": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Logistic Regression|apache/ignite": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Logistic Regression|apache/kafka": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Logistic Regression|apache/spark": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Logistic Regression|apache/zeppelin": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Logistic Regression|apache/zookeeper": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Random Forest|apache/activemq": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Random Forest|apache/camel": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Random Forest|apache/cassandra": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Random Forest|apache/flink": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Random Forest|apache/groovy": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Random Forest|apache/hadoop-hdfs": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Random Forest|apache/hadoop-mapreduce": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Random Forest|apache/hbase": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Random Forest|apache/hive": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Random Forest|apache/ignite": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Random Forest|apache/kafka": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Random Forest|apache/spark": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Random Forest|apache/zeppelin": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "Random Forest|apache/zookeeper": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "XGBoost|apache/activemq": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "XGBoost|apache/camel": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "XGBoost|apache/cassandra": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "XGBoost|apache/flink": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "XGBoost|apache/groovy": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "XGBoost|apache/hadoop-hdfs": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "XGBoost|apache/hadoop-mapreduce": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "XGBoost|apache/hbase": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "XGBoost|apache/hive": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "XGBoost|apache/ignite": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "XGBoost|apache/kafka": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "XGBoost|apache/spark": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "XGBoost|apache/zeppelin": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    },
+    "XGBoost|apache/zookeeper": {
+      "blocked_n": 2,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 1
+    }
+  },
+  "modality": {
+    "CODE": {
+      "blocked_n": 56,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 0
+    },
+    "PROCESS": {
+      "blocked_n": 56,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 0
+    },
+    "TEXT": {
+      "blocked_n": 0,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 56
+    }
+  },
+  "modality × algorithm": {
+    "CODE|LightGBM": {
+      "blocked_n": 14,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 0
+    },
+    "CODE|Logistic Regression": {
+      "blocked_n": 14,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 0
+    },
+    "CODE|Random Forest": {
+      "blocked_n": 14,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 0
+    },
+    "CODE|XGBoost": {
+      "blocked_n": 14,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 0
+    },
+    "PROCESS|LightGBM": {
+      "blocked_n": 14,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 0
+    },
+    "PROCESS|Logistic Regression": {
+      "blocked_n": 14,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 0
+    },
+    "PROCESS|Random Forest": {
+      "blocked_n": 14,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 0
+    },
+    "PROCESS|XGBoost": {
+      "blocked_n": 14,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 0
+    },
+    "TEXT|LightGBM": {
+      "blocked_n": 0,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 14
+    },
+    "TEXT|Logistic Regression": {
+      "blocked_n": 0,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 14
+    },
+    "TEXT|Random Forest": {
+      "blocked_n": 0,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 14
+    },
+    "TEXT|XGBoost": {
+      "blocked_n": 0,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 14
+    }
+  },
+  "project": {
+    "apache/activemq": {
+      "blocked_n": 8,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 4
+    },
+    "apache/camel": {
+      "blocked_n": 8,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 4
+    },
+    "apache/cassandra": {
+      "blocked_n": 8,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 4
+    },
+    "apache/flink": {
+      "blocked_n": 8,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 4
+    },
+    "apache/groovy": {
+      "blocked_n": 8,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 4
+    },
+    "apache/hadoop-hdfs": {
+      "blocked_n": 8,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 4
+    },
+    "apache/hadoop-mapreduce": {
+      "blocked_n": 8,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 4
+    },
+    "apache/hbase": {
+      "blocked_n": 8,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 4
+    },
+    "apache/hive": {
+      "blocked_n": 8,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 4
+    },
+    "apache/ignite": {
+      "blocked_n": 8,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 4
+    },
+    "apache/kafka": {
+      "blocked_n": 8,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 4
+    },
+    "apache/spark": {
+      "blocked_n": 8,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 4
+    },
+    "apache/zeppelin": {
+      "blocked_n": 8,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 4
+    },
+    "apache/zookeeper": {
+      "blocked_n": 8,
+      "eligible_n": 0,
+      "eligible_with_limitation_n": 0,
+      "ineligible_n": 4
+    }
+  }
+}

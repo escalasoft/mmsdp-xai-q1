@@ -1,0 +1,7 @@
+{
+  "FUTURE_PRIMARY_E1_EXECUTION_ELIGIBILITY": "BLOCKED",
+  "authorized": false,
+  "eligible_scope_ids": [],
+  "execution_scope": "Only exact future frozen eligible ledger; separate human authorization",
+  "later_scope_addition": "Separate provenance gate"
+}

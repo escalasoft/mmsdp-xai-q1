@@ -1,0 +1,11 @@
+{
+  "all_critical_elements_at_least_P3": false,
+  "items": [
+    "Complete frozen row-id → repository/commit → safe source offset bridge absent",
+    "TRAIN/T1 count+digest references do not expose the complete row/commit mapping",
+    "Mixed source CSV/gzip cannot be scanned or hashed to repair routing under T2 seal",
+    "Exact PROCESS aggregation and per-row prediction-time availability remain incomplete",
+    "TEXT transform metadata is exact; raw message identity and full sparse population are not",
+    "T1 feature-value authorization contract is proposed, not activated"
+  ]
+}

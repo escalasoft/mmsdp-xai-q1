@@ -1,0 +1,7 @@
+{
+  "R5_started": false,
+  "T1_FEATURE_RECONSTRUCTION_PHASE": "BLOCKED_COVERAGE_WEAK",
+  "authorized": false,
+  "parent_R4_subset_statement_unchanged": true,
+  "reason": "One complete TRAIN TEXT population from one project remains useful as bounded evidence, but 13 projects and both numeric modalities are absent. Four algorithm dependencies do not add project or modality diversity. Missingness follows source/transform/temporal constraints, not outcomes. No arbitrary numeric threshold or broad Q1 sufficiency claim."
+}

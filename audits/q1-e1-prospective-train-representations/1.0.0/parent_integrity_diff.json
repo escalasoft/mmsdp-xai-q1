@@ -1,0 +1,6 @@
+{
+  "before_equals_after": true,
+  "changed": [],
+  "scope": "Metadata bytes plus tracked Git identities and clean diff; sealed scientific payloads not rehashed",
+  "status": "PASS"
+}

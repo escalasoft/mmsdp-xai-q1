@@ -1,0 +1,85 @@
+{
+  "commands": [
+    "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_e1_population_representation_provenance_resolution.py",
+    "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_e1_input_provenance_eligibility.py tests/evaluation/test_q1_prospective_e1_protocol_freeze.py tests/evaluation/test_q1_prospective_e1_parent_integrity_resolution.py tests/evaluation/test_q1_prospective_e1_protocol_revalidation_r2.py",
+    "PYTHONPATH=. PYTHONDONTWRITEBYTECODE=1 .venv/bin/python tests/evaluation/run_q1_prospective_e1_governance_regressions.py",
+    "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_xai_reconstruction_equivalence_protocol.py tests/evaluation/test_q1_primary_xai_runtime_smoke.py -k 'not package_manifest_and_sealed and (block6 or governance_counters or reconstruction_inputs or determinism_and_tolerances or gate_order or failure_partial or t1_technical or guard_denies or no_reconstruction_refit or lock_is_frozen)'",
+    ".venv/bin/ruff check src/evaluation/q1_e1_population_representation_provenance_resolution.py tests/evaluation/test_q1_e1_population_representation_provenance_resolution.py",
+    "git diff --check"
+  ],
+  "deterministic_manifest_test": "PASS",
+  "focused_passed": 48,
+  "focused_tests": "PASS",
+  "git_diff_check": "PASS",
+  "historical_exceptions": [
+    {
+      "errors": 37,
+      "evidence": "src/evaluation/q1_prospective_e1_parent_integrity_resolution.py:724",
+      "failed": 1,
+      "reason": "investigate() requires historical sprint-10/q1-prospective-e1-protocol-freeze branch; no branch spoofing or parent change",
+      "suite": "56.3A-R1"
+    },
+    {
+      "evidence": "tests/evaluation/test_q1_prospective_e1_protocol_revalidation_r2.py:458",
+      "failed": 1,
+      "reason": "HEAD audit-tree snapshot predates merge adding 56.3A/R1/R2 packages; git diff confirms no tracked parent modification",
+      "suite": "56.3A-R2"
+    },
+    {
+      "evidence": "audits/q1-prospective-e1-parent-integrity-resolution/1.0.0/current_hash_analysis.json",
+      "failed": 1,
+      "reason": "Historical diagnostic validation-initial-output.txt mismatch explicitly retained by R1; expected 8c4e2582..., actual b9d17eb9...",
+      "suite": "56.2 alternative"
+    }
+  ],
+  "parent_immutability_test": "PASS",
+  "regression_status": "HISTORICAL_EXCEPTIONS_RETAINED",
+  "regression_train_matrix_paths": [
+    "audits/q1-primary-xai-e1-scientific-input-materialization/1.0.0/1d8c6443ed7232f7eb12877a6275995b5660762ee96d4c952b603ea9f3fa2bb8.matrix.json",
+    "audits/q1-primary-xai-e1-scientific-input-materialization/1.0.0/3306704481f23b9640ac55990167172877045ffb0f6433f4c4a7eb3a491fe96e.matrix.json",
+    "audits/q1-primary-xai-e1-scientific-input-materialization/1.0.0/502cbc8e9c2d618d48b38963cb5e9a43c3a1d7c1c430e2001cd564888cfafe84.matrix.json",
+    "audits/q1-primary-xai-e1-scientific-input-materialization/1.0.0/5c8d7c300f78c3565bbf4e1f94dc26d12a60130fb272a55b831f32bb8651384c.matrix.json",
+    "audits/q1-primary-xai-e1-scientific-input-materialization/1.0.0/8fd9fd86f3e3bda5eafc792a6e62afdb305b139481034e3be3acbb3f11b86140.matrix.json"
+  ],
+  "ruff": "PASS",
+  "safe_regression_passed": 320,
+  "scientific_execution_in_tests": "NONE; 56.3B tests read only previously admitted partial TRAIN matrices",
+  "suites": [
+    {
+      "deselected": 0,
+      "errors": 0,
+      "failed": 0,
+      "log_sha256": "e36628ddb15bfba23585b709a341b1347711e4431c44269afdd76804e3f64816",
+      "passed": 48,
+      "suite": "focused",
+      "summary": "48 passed in 2.16s"
+    },
+    {
+      "deselected": 0,
+      "errors": 37,
+      "failed": 2,
+      "log_sha256": "777f05a976d4a36c8c9057a5138e2ae62757040172d57553623a209a29af5148",
+      "passed": 255,
+      "suite": "parent-regressions",
+      "summary": "2 failed, 255 passed, 37 errors in 17.18s"
+    },
+    {
+      "deselected": 1,
+      "errors": 0,
+      "failed": 1,
+      "log_sha256": "021e0ea54253862bddfa44bf69422baf1955d85a46dc62ad1c6092123434c83b",
+      "passed": 55,
+      "suite": "alternative-regressions",
+      "summary": "1 failed, 55 passed, 1 deselected in 0.66s"
+    },
+    {
+      "deselected": 13,
+      "errors": 0,
+      "failed": 0,
+      "log_sha256": "7b6728d39250a62b75ecd32bd1c42fe6bf0042b0ea1f47720a30867d3eaf7ec8",
+      "passed": 10,
+      "suite": "55-561-regressions",
+      "summary": "10 passed, 13 deselected in 0.27s"
+    }
+  ]
+}

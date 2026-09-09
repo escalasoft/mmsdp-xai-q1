@@ -1,0 +1,12 @@
+{
+  "published_train_substitution": false,
+  "scientific_label_values_read": 0,
+  "structurally_acknowledged": [
+    "buggy",
+    "fix"
+  ],
+  "used_for_feature_selection": false,
+  "used_for_identity_selection": false,
+  "used_for_imputation": false,
+  "used_for_source_construction": false
+}

@@ -1,0 +1,42 @@
+{
+  "metadata_paths": [
+    "audits/q1-xai-reconstruction-execution/1.0.0/external_artifact_registry/external_artifact_inventory.jsonl",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/350dbb85ed9d4ceb0ec957f02f3c093a9ec5c07ecf549b40ecfbf699b0db6974.tfidf.json",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/3d10840eb8e413bf41145d60699c3a54a1004df4b0672b3d13479452529bab6a.tfidf.json",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/3ec8674534cc2001e030e56cb9a37bbf8d66d7564b4052084adaae0edc063559.tfidf.json",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/3fe585f65c760cdbf8a25352630703eb6a9b2e626475922b1af30a1731d02c65.tfidf.json",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/6214b1a057dadf4c4138a3212c0022bd7249e4765306acc071a9e9c4014bb94a.tfidf.json",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/74f308b4027b4478565542acde6cb8676c758421f0bdc087f5668a05a5fa55e3.tfidf.json",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/7a1852b774daac717669ea8429d8173ada2225f46eed6e341b5a49b7d31fb558.tfidf.json",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/8404b15b223706fa0cbe016d6005193d68afe9eaa19378afb675d442f90b11c5.tfidf.json",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/a0e147bdba8c2234b4a73d5d6c55810ae6d3c0ae151f966cd83c005672b94f5e.tfidf.json",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/af8129320a353cae8dcc69ecd7c4151f05c601a799e96ceb9b29d4ed842c3190.tfidf.json",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/bcba599982e21a4ac56180feacc4e015c63ae9406264763ed4479e3900390ae4.tfidf.json",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/d26d03860658146363b47fd57bf14cc29358efde16b14b33841b63563abaa472.tfidf.json",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/db7d1702b2e62b4207e3a23a5363ab88839f2750007b5dc52093d85ceb68e541.tfidf.json",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/e7bbc2080baad3b59f93f67a3a4ba30bd45c2eb2648bbf4e25696759ee048c97.tfidf.json",
+    "audits/q1-xai-reconstruction-execution/1.0.0/reconstruction_inventory.json",
+    "src/evaluation/q1_xai_train_source_reconstruction.py"
+  ],
+  "numeric_fit_policy": "R3 train_reconstruction_policy.no_new_fit=true; R4A condition for previously authorized numeric fitting is not satisfied",
+  "numeric_state_producer": "src/evaluation/q1_xai_train_source_reconstruction.py:_preprocessor_state emits numeric array descriptors (shape/dtype/hash), returns no standalone state values",
+  "scope": "Only frozen per-project modality routes, exact state references, producer serialization/partition code and semantic contracts; no broad discovery",
+  "source_payload_reads": [],
+  "source_route_producer": "src/dataset/apachejit_final_dataset_freeze.py:_partition_rows groups projects and emits TRAIN/VALIDATION/T1/T2 before next project",
+  "state_hashes": {
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/350dbb85ed9d4ceb0ec957f02f3c093a9ec5c07ecf549b40ecfbf699b0db6974.tfidf.json": "350dbb85ed9d4ceb0ec957f02f3c093a9ec5c07ecf549b40ecfbf699b0db6974",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/3d10840eb8e413bf41145d60699c3a54a1004df4b0672b3d13479452529bab6a.tfidf.json": "3d10840eb8e413bf41145d60699c3a54a1004df4b0672b3d13479452529bab6a",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/3ec8674534cc2001e030e56cb9a37bbf8d66d7564b4052084adaae0edc063559.tfidf.json": "3ec8674534cc2001e030e56cb9a37bbf8d66d7564b4052084adaae0edc063559",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/3fe585f65c760cdbf8a25352630703eb6a9b2e626475922b1af30a1731d02c65.tfidf.json": "3fe585f65c760cdbf8a25352630703eb6a9b2e626475922b1af30a1731d02c65",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/6214b1a057dadf4c4138a3212c0022bd7249e4765306acc071a9e9c4014bb94a.tfidf.json": "6214b1a057dadf4c4138a3212c0022bd7249e4765306acc071a9e9c4014bb94a",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/74f308b4027b4478565542acde6cb8676c758421f0bdc087f5668a05a5fa55e3.tfidf.json": "74f308b4027b4478565542acde6cb8676c758421f0bdc087f5668a05a5fa55e3",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/7a1852b774daac717669ea8429d8173ada2225f46eed6e341b5a49b7d31fb558.tfidf.json": "7a1852b774daac717669ea8429d8173ada2225f46eed6e341b5a49b7d31fb558",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/8404b15b223706fa0cbe016d6005193d68afe9eaa19378afb675d442f90b11c5.tfidf.json": "8404b15b223706fa0cbe016d6005193d68afe9eaa19378afb675d442f90b11c5",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/a0e147bdba8c2234b4a73d5d6c55810ae6d3c0ae151f966cd83c005672b94f5e.tfidf.json": "a0e147bdba8c2234b4a73d5d6c55810ae6d3c0ae151f966cd83c005672b94f5e",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/af8129320a353cae8dcc69ecd7c4151f05c601a799e96ceb9b29d4ed842c3190.tfidf.json": "af8129320a353cae8dcc69ecd7c4151f05c601a799e96ceb9b29d4ed842c3190",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/bcba599982e21a4ac56180feacc4e015c63ae9406264763ed4479e3900390ae4.tfidf.json": "bcba599982e21a4ac56180feacc4e015c63ae9406264763ed4479e3900390ae4",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/d26d03860658146363b47fd57bf14cc29358efde16b14b33841b63563abaa472.tfidf.json": "d26d03860658146363b47fd57bf14cc29358efde16b14b33841b63563abaa472",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/db7d1702b2e62b4207e3a23a5363ab88839f2750007b5dc52093d85ceb68e541.tfidf.json": "db7d1702b2e62b4207e3a23a5363ab88839f2750007b5dc52093d85ceb68e541",
+    "audits/q1-xai-reconstruction-execution/1.0.0/objects/e7bbc2080baad3b59f93f67a3a4ba30bd45c2eb2648bbf4e25696759ee048c97.tfidf.json": "e7bbc2080baad3b59f93f67a3a4ba30bd45c2eb2648bbf4e25696759ee048c97"
+  }
+}

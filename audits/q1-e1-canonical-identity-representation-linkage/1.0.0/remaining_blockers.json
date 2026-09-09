@@ -1,0 +1,10 @@
+{
+  "items": [
+    "Canonical row digest → full project/commit mapping unavailable",
+    "Canonical source rows/offsets occur in mixed labelled provenance streams; opening is prohibited",
+    "Complete TRAIN and permitted T1 identity source not established",
+    "PROCESS ancestor-only source semantics remain insufficiently proven",
+    "TEXT raw message origin at exact commit remains unproven despite exact transform metadata",
+    "Partial derivative row digests do not establish canonical completeness"
+  ]
+}

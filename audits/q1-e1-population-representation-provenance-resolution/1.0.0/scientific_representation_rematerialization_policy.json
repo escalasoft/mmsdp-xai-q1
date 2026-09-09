@@ -1,0 +1,24 @@
+{
+  "authorized": false,
+  "background_cap": 256,
+  "background_sampling_executed": false,
+  "background_summary_policy_change": "NOT_AUTHORIZED",
+  "label": "RECONSTRUCTED_REPRESENTATION",
+  "original_claim": "PROHIBITED_WITHOUT_EXACT_ORIGINAL_PROOF",
+  "requirements": [
+    "Frozen source and transformation digests",
+    "Exact historical versions",
+    "Exact row and column order",
+    "Frozen fitted preprocessing only",
+    "No source substitution",
+    "No T1 labels",
+    "No T2",
+    "No fitting on T1",
+    "No tuning or outcome selection",
+    "Immediate SHA256 persistence",
+    "Row-order and column-order registries",
+    "Provenance manifest"
+  ],
+  "seed": 20260901,
+  "status": "CONDITIONAL_POLICY_ONLY_NO_ROUTE"
+}

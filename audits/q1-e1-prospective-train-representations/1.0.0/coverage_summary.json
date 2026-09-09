@@ -1,0 +1,126 @@
+{
+  "blocked": 41,
+  "blocked_e1_dependencies": 164,
+  "by_algorithm": {
+    "LightGBM": {
+      "blocked": 41,
+      "compatible": 1,
+      "expected": 42
+    },
+    "Logistic Regression": {
+      "blocked": 41,
+      "compatible": 1,
+      "expected": 42
+    },
+    "Random Forest": {
+      "blocked": 41,
+      "compatible": 1,
+      "expected": 42
+    },
+    "XGBoost": {
+      "blocked": 41,
+      "compatible": 1,
+      "expected": 42
+    }
+  },
+  "by_modality": {
+    "CODE": {
+      "blocked": 14,
+      "expected": 14,
+      "persisted_columns": 0,
+      "reconstructed_limited": 0
+    },
+    "PROCESS": {
+      "blocked": 14,
+      "expected": 14,
+      "persisted_columns": 0,
+      "reconstructed_limited": 0
+    },
+    "TEXT": {
+      "blocked": 13,
+      "expected": 14,
+      "persisted_columns": 2557,
+      "reconstructed_limited": 1
+    }
+  },
+  "by_project": {
+    "apache/activemq": {
+      "blocked": 2,
+      "expected": 3,
+      "reconstructed_limited": 1
+    },
+    "apache/camel": {
+      "blocked": 3,
+      "expected": 3,
+      "reconstructed_limited": 0
+    },
+    "apache/cassandra": {
+      "blocked": 3,
+      "expected": 3,
+      "reconstructed_limited": 0
+    },
+    "apache/flink": {
+      "blocked": 3,
+      "expected": 3,
+      "reconstructed_limited": 0
+    },
+    "apache/groovy": {
+      "blocked": 3,
+      "expected": 3,
+      "reconstructed_limited": 0
+    },
+    "apache/hadoop-hdfs": {
+      "blocked": 3,
+      "expected": 3,
+      "reconstructed_limited": 0
+    },
+    "apache/hadoop-mapreduce": {
+      "blocked": 3,
+      "expected": 3,
+      "reconstructed_limited": 0
+    },
+    "apache/hbase": {
+      "blocked": 3,
+      "expected": 3,
+      "reconstructed_limited": 0
+    },
+    "apache/hive": {
+      "blocked": 3,
+      "expected": 3,
+      "reconstructed_limited": 0
+    },
+    "apache/ignite": {
+      "blocked": 3,
+      "expected": 3,
+      "reconstructed_limited": 0
+    },
+    "apache/kafka": {
+      "blocked": 3,
+      "expected": 3,
+      "reconstructed_limited": 0
+    },
+    "apache/spark": {
+      "blocked": 3,
+      "expected": 3,
+      "reconstructed_limited": 0
+    },
+    "apache/zeppelin": {
+      "blocked": 3,
+      "expected": 3,
+      "reconstructed_limited": 0
+    },
+    "apache/zookeeper": {
+      "blocked": 3,
+      "expected": 3,
+      "reconstructed_limited": 0
+    }
+  },
+  "compatible_e1_dependencies": 4,
+  "expected_e1_dependencies": 168,
+  "expected_project_modalities": 42,
+  "failed": 0,
+  "persisted_unique_TRAIN_rows": 3675,
+  "reconstructed_exact": 0,
+  "reconstructed_limited": 1,
+  "unique_TRAIN_rows": 56821
+}

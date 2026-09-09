@@ -1,0 +1,19 @@
+{
+  "corrected_workflow": "Persist source/row/column/transform/model/runtime/output provenance at creation before downstream use",
+  "exact_historical_human_reason": "UNKNOWN_NOT_DOCUMENTED",
+  "not_persisted": [
+    "complete fitted predictor executable states in original campaign",
+    "complete original transformed input matrices"
+  ],
+  "preserved": [
+    "row-level predictions",
+    "model identities",
+    "hyperparameters",
+    "seeds",
+    "contracts",
+    "runtime metadata",
+    "predictive evidence"
+  ],
+  "reason_evidence": "Producer persists predictive evidence and metadata; no full executable representation export established",
+  "scientific_acceptability": "Conditional new experiment, not proof of historical matrix equivalence"
+}

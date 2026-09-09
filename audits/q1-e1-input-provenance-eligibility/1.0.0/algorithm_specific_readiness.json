@@ -1,0 +1,26 @@
+{
+  "LightGBM": {
+    "exact_population_alignment": false,
+    "model_metadata_available": true,
+    "no_new_runtime_load_proof": true,
+    "status": "BLOCKED"
+  },
+  "Logistic Regression": {
+    "exact_population_alignment": false,
+    "model_metadata_available": true,
+    "no_new_runtime_load_proof": true,
+    "status": "BLOCKED"
+  },
+  "Random Forest": {
+    "exact_population_alignment": false,
+    "model_metadata_available": true,
+    "no_new_runtime_load_proof": true,
+    "status": "BLOCKED"
+  },
+  "XGBoost": {
+    "exact_population_alignment": false,
+    "model_metadata_available": true,
+    "no_new_runtime_load_proof": true,
+    "status": "BLOCKED"
+  }
+}

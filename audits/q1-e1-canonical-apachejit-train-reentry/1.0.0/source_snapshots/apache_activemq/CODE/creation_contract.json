@@ -1,0 +1,17 @@
+{
+  "modality": "CODE",
+  "no_fit": true,
+  "original_Sprint54_claim": false,
+  "partition": "TRAIN",
+  "project": "apache/activemq",
+  "source_archive_digest": "533e7c6fc4f7cb6f34b35539a972d00baa63a125e88ddb5743283dd277edcd5c",
+  "source_digest": "a51f5fcbcaff57446ec2263d2624cbdbc404af95cae9e2909a4bf81c67ece1b6",
+  "source_origin": {
+    "compressed_prefix_bytes": 183512,
+    "lineage": "Frozen canonical copy producer copies benchmark fields by exact identity; prior archive SHA verified at dataset freeze",
+    "path": "audits/q1-apachejit-final-dataset-freeze/1.0.0/code_dataset.jsonl.gz",
+    "tier": 3,
+    "whole_container_read": false
+  },
+  "state": "PROSPECTIVE_CANONICAL_SOURCE_SNAPSHOT"
+}

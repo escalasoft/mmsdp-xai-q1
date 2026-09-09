@@ -1,0 +1,18 @@
+{
+  "available_key": [
+    "project",
+    "exact_frozen_row_identifier"
+  ],
+  "full_sha_available_in_admitted_sources": false,
+  "inverse_mapping": "NOT_DERIVABLE_FROM_SHA256_ALONE",
+  "message_similarity_matching": "FORBIDDEN",
+  "normalization": "No trimming, case/Unicode normalization, numeric coercion or heuristic merging",
+  "preferred_key": [
+    "project",
+    "full_commit_sha"
+  ],
+  "row_index_matching": "FORBIDDEN",
+  "short_sha_expansion": "FORBIDDEN",
+  "source_recipe": "SHA256 UTF8 apachejit-v2|project|canonical_repository|commit_sha",
+  "status": "IDENTITY_CANONICAL_WITH_LIMITATION"
+}

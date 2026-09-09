@@ -1,0 +1,189 @@
+{
+  "multi_repository_projects": "HDFS/MAPREDUCE candidates retained; no arbitrary repository assignment",
+  "projects": [
+    {
+      "TRAIN_expected_count": 3675,
+      "canonical_dataset_row_count": null,
+      "canonical_dataset_row_count_status": "Not scanned across prohibited partitions",
+      "canonical_project_name": "apache/activemq",
+      "identity_reconciliation_count": 3675,
+      "project_id": "apache/activemq",
+      "repository_evidence": "Official replication gitminer.py proj_repo literal",
+      "repository_identity_candidates": [
+        "apache/activemq"
+      ],
+      "source_url_if_persisted": null
+    },
+    {
+      "TRAIN_expected_count": 13620,
+      "canonical_dataset_row_count": null,
+      "canonical_dataset_row_count_status": "Not scanned across prohibited partitions",
+      "canonical_project_name": "apache/camel",
+      "identity_reconciliation_count": 0,
+      "project_id": "apache/camel",
+      "repository_evidence": "Official replication gitminer.py proj_repo literal",
+      "repository_identity_candidates": [
+        "apache/camel"
+      ],
+      "source_url_if_persisted": null
+    },
+    {
+      "TRAIN_expected_count": 4895,
+      "canonical_dataset_row_count": null,
+      "canonical_dataset_row_count_status": "Not scanned across prohibited partitions",
+      "canonical_project_name": "apache/cassandra",
+      "identity_reconciliation_count": 0,
+      "project_id": "apache/cassandra",
+      "repository_evidence": "Official replication gitminer.py proj_repo literal",
+      "repository_identity_candidates": [
+        "apache/cassandra"
+      ],
+      "source_url_if_persisted": null
+    },
+    {
+      "TRAIN_expected_count": 7014,
+      "canonical_dataset_row_count": null,
+      "canonical_dataset_row_count_status": "Not scanned across prohibited partitions",
+      "canonical_project_name": "apache/flink",
+      "identity_reconciliation_count": 0,
+      "project_id": "apache/flink",
+      "repository_evidence": "Official replication gitminer.py proj_repo literal",
+      "repository_identity_candidates": [
+        "apache/flink"
+      ],
+      "source_url_if_persisted": null
+    },
+    {
+      "TRAIN_expected_count": 4835,
+      "canonical_dataset_row_count": null,
+      "canonical_dataset_row_count_status": "Not scanned across prohibited partitions",
+      "canonical_project_name": "apache/groovy",
+      "identity_reconciliation_count": 0,
+      "project_id": "apache/groovy",
+      "repository_evidence": "Official replication gitminer.py proj_repo literal",
+      "repository_identity_candidates": [
+        "apache/groovy"
+      ],
+      "source_url_if_persisted": null
+    },
+    {
+      "TRAIN_expected_count": 1744,
+      "canonical_dataset_row_count": null,
+      "canonical_dataset_row_count_status": "Not scanned across prohibited partitions",
+      "canonical_project_name": "apache/hadoop-hdfs",
+      "identity_reconciliation_count": 0,
+      "project_id": "apache/hadoop-hdfs",
+      "repository_evidence": "Official replication gitminer.py proj_repo literal",
+      "repository_identity_candidates": [
+        "apache/hadoop-hdfs",
+        "apache/hadoop"
+      ],
+      "source_url_if_persisted": null
+    },
+    {
+      "TRAIN_expected_count": 792,
+      "canonical_dataset_row_count": null,
+      "canonical_dataset_row_count_status": "Not scanned across prohibited partitions",
+      "canonical_project_name": "apache/hadoop-mapreduce",
+      "identity_reconciliation_count": 0,
+      "project_id": "apache/hadoop-mapreduce",
+      "repository_evidence": "Official replication gitminer.py proj_repo literal",
+      "repository_identity_candidates": [
+        "apache/hadoop-mapreduce",
+        "apache/hadoop"
+      ],
+      "source_url_if_persisted": null
+    },
+    {
+      "TRAIN_expected_count": 5238,
+      "canonical_dataset_row_count": null,
+      "canonical_dataset_row_count_status": "Not scanned across prohibited partitions",
+      "canonical_project_name": "apache/hbase",
+      "identity_reconciliation_count": 0,
+      "project_id": "apache/hbase",
+      "repository_evidence": "Official replication gitminer.py proj_repo literal",
+      "repository_identity_candidates": [
+        "apache/hbase"
+      ],
+      "source_url_if_persisted": null
+    },
+    {
+      "TRAIN_expected_count": 4105,
+      "canonical_dataset_row_count": null,
+      "canonical_dataset_row_count_status": "Not scanned across prohibited partitions",
+      "canonical_project_name": "apache/hive",
+      "identity_reconciliation_count": 0,
+      "project_id": "apache/hive",
+      "repository_evidence": "Official replication gitminer.py proj_repo literal",
+      "repository_identity_candidates": [
+        "apache/hive"
+      ],
+      "source_url_if_persisted": null
+    },
+    {
+      "TRAIN_expected_count": 7221,
+      "canonical_dataset_row_count": null,
+      "canonical_dataset_row_count_status": "Not scanned across prohibited partitions",
+      "canonical_project_name": "apache/ignite",
+      "identity_reconciliation_count": 0,
+      "project_id": "apache/ignite",
+      "repository_evidence": "Official replication gitminer.py proj_repo literal",
+      "repository_identity_candidates": [
+        "apache/ignite"
+      ],
+      "source_url_if_persisted": null
+    },
+    {
+      "TRAIN_expected_count": 1430,
+      "canonical_dataset_row_count": null,
+      "canonical_dataset_row_count_status": "Not scanned across prohibited partitions",
+      "canonical_project_name": "apache/kafka",
+      "identity_reconciliation_count": 0,
+      "project_id": "apache/kafka",
+      "repository_evidence": "Official replication gitminer.py proj_repo literal",
+      "repository_identity_candidates": [
+        "apache/kafka"
+      ],
+      "source_url_if_persisted": null
+    },
+    {
+      "TRAIN_expected_count": 879,
+      "canonical_dataset_row_count": null,
+      "canonical_dataset_row_count_status": "Not scanned across prohibited partitions",
+      "canonical_project_name": "apache/spark",
+      "identity_reconciliation_count": 0,
+      "project_id": "apache/spark",
+      "repository_evidence": "Official replication gitminer.py proj_repo literal",
+      "repository_identity_candidates": [
+        "apache/spark"
+      ],
+      "source_url_if_persisted": null
+    },
+    {
+      "TRAIN_expected_count": 870,
+      "canonical_dataset_row_count": null,
+      "canonical_dataset_row_count_status": "Not scanned across prohibited partitions",
+      "canonical_project_name": "apache/zeppelin",
+      "identity_reconciliation_count": 0,
+      "project_id": "apache/zeppelin",
+      "repository_evidence": "Official replication gitminer.py proj_repo literal",
+      "repository_identity_candidates": [
+        "apache/zeppelin"
+      ],
+      "source_url_if_persisted": null
+    },
+    {
+      "TRAIN_expected_count": 503,
+      "canonical_dataset_row_count": null,
+      "canonical_dataset_row_count_status": "Not scanned across prohibited partitions",
+      "canonical_project_name": "apache/zookeeper",
+      "identity_reconciliation_count": 0,
+      "project_id": "apache/zookeeper",
+      "repository_evidence": "Official replication gitminer.py proj_repo literal",
+      "repository_identity_candidates": [
+        "apache/zookeeper"
+      ],
+      "source_url_if_persisted": null
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "canonical_fields": [
+    "commit_sha",
+    "canonical_repository_identifier",
+    "source_apachejit_row_identity"
+  ],
+  "conclusion": "Producer proves field semantics; it does not provide an admissible inverse index",
+  "evidence_lines": "778-807",
+  "label_in_same_record": true,
+  "mixed_provenance_payload_opened": false,
+  "row_id_recipe": "SHA256 apachejit-v2|project|repository|commit_id",
+  "source": "src/dataset/apachejit_final_dataset_freeze.py",
+  "source_sha256": "3a7308aabfd75257a16263fa3ed17a104f33cb49716514ca938095f8d9273290"
+}

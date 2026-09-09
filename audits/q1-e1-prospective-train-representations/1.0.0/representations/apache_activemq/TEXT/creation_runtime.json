@@ -1,0 +1,21 @@
+{
+  "architecture": "x86_64",
+  "lock_sha256": "324707477b91d36ab382c0d367324aa1d11aea3fa06a6a6a081693e14731c9ee",
+  "model_deserialization": false,
+  "new_vectorizer_fit": false,
+  "packages": {
+    "numpy": "2.3.5",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.17.1"
+  },
+  "platform": "macOS-15.7.7-x86_64-i386-64bit",
+  "python": "3.11.14",
+  "seed": 20260901,
+  "threads": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  }
+}

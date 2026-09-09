@@ -1,0 +1,39 @@
+{
+  "applicability": "For scientifically unused components persist explicit NOT_APPLICABLE plus reason; never fabricate an object",
+  "applies_to": "ALL_FUTURE_MMSDP_XAI_PREDICTIVE_AND_EXPLANATORY_EXECUTIONS",
+  "completion_gate": "No completed campaign with missing required artifacts",
+  "future_predictions_only_campaign": "FORBIDDEN",
+  "phases": {
+    "after_XAI": "All explanation/figure artifacts",
+    "before_XAI": "Input/model/population/configuration manifests verified",
+    "before_prediction": "Input/model/environment artifacts"
+  },
+  "required": [
+    "dataset_identity",
+    "partition_membership",
+    "row_identity_order",
+    "raw_feature_source_identity",
+    "transformed_feature_matrices",
+    "column_identity_order",
+    "fitted_preprocessing_state",
+    "fitted_text_vectorizer_state",
+    "vocabulary",
+    "idf",
+    "model_state",
+    "class_order",
+    "model_feature_order",
+    "fusion_meta_learner_state",
+    "calibration_state",
+    "runtime_metadata",
+    "package_versions",
+    "random_seeds",
+    "deterministic_thread_configuration",
+    "row_level_predictions",
+    "explanation_inputs",
+    "explanation_outputs",
+    "background_population",
+    "foreground_population",
+    "local_case_population",
+    "sha256_provenance_manifests"
+  ]
+}

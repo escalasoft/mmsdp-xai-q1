@@ -1,0 +1,19 @@
+{
+  "allowed_operations": [
+    "Retrieve legitimate frozen TRAIN inputs",
+    "Apply already-fitted frozen transform",
+    "Persist representation"
+  ],
+  "allowed_partition": "TRAIN",
+  "complete_population_required": true,
+  "forbidden_partitions": [
+    "T1",
+    "T2"
+  ],
+  "no_model_query": true,
+  "no_new_fit": true,
+  "partial_80_row_promotion": false,
+  "performance_selection": false,
+  "prior_admission": "Identity/project/partition/source/transform checks must pass before opening",
+  "source_only": true
+}

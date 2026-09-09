@@ -1,0 +1,22 @@
+{
+  "granularity": "Canonical row × scope; scope ledger is a summary, not fabricated full row records",
+  "null_policy": "Missing links stored as null and prohibit complete status",
+  "required": [
+    "partition",
+    "project",
+    "commit_identity",
+    "source_identity",
+    "source_location",
+    "modality",
+    "source_schema_digest",
+    "transform_identity",
+    "representation_row_identity",
+    "representation_schema_digest",
+    "representation_order_digest",
+    "representation_value_digest",
+    "model_identity",
+    "provenance_strength",
+    "linkage_status"
+  ],
+  "type": "object"
+}

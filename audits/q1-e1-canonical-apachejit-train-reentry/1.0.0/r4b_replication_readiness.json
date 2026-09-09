@@ -1,0 +1,20 @@
+{
+  "builder": "src/evaluation/q1_e1_canonical_apachejit_train_reentry.py",
+  "feature_mapping": [
+    "apachejit_code_feature_mapping.jsonl",
+    "apachejit_process_feature_mapping.jsonl"
+  ],
+  "frozen_parent_dependencies": true,
+  "identity_mapping": "canonical_train_reentry_identity_ledger.jsonl",
+  "no_new_model_or_XAI_package": true,
+  "project_mapping": "apachejit_project_repository_registry.json",
+  "runtime": "Snapshot runtime.json files; standard library source serialization only",
+  "snapshot_manifests": [
+    "source_snapshots/apache_activemq/CODE/MANIFEST.sha256",
+    "source_snapshots/apache_activemq/TEXT/MANIFEST.sha256"
+  ],
+  "source_archive_digest": "533e7c6fc4f7cb6f34b35539a972d00baa63a125e88ddb5743283dd277edcd5c",
+  "source_version": "ApacheJIT v2",
+  "status": "READY_WITH_LIMITATION_FOR_ACTIVEMQ_RAW_SOURCE_SNAPSHOTS_ONLY",
+  "temporal_evidence": "apachejit_process_temporal_provenance.jsonl"
+}

@@ -1,0 +1,12 @@
+{
+  "MODEL_STATE": "RECONSTRUCTED",
+  "XAI_REPRESENTATION_STATE": "RECONSTRUCTED_REPRESENTATION",
+  "equivalence_not_rerun": true,
+  "model_identity_fixed": true,
+  "no_model_retraining_for_XAI": true,
+  "original_matrix_equivalence_not_claimed": true,
+  "prior_equivalence_required": [
+    "G4",
+    "G5 where applicable"
+  ]
+}

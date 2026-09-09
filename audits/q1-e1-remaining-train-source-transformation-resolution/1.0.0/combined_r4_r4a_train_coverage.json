@@ -1,0 +1,63 @@
+{
+  "algorithm_dependencies_eligible": 4,
+  "algorithm_dependencies_total": 168,
+  "by_modality": {
+    "CODE": {
+      "blocked": 14,
+      "eligible": 0,
+      "fail": 0,
+      "ineligible": 0,
+      "limited": 0
+    },
+    "PROCESS": {
+      "blocked": 14,
+      "eligible": 0,
+      "fail": 0,
+      "ineligible": 0,
+      "limited": 0
+    },
+    "TEXT": {
+      "blocked": 13,
+      "eligible": 0,
+      "fail": 0,
+      "ineligible": 0,
+      "limited": 1
+    }
+  },
+  "combined_columns": {
+    "CODE": 0,
+    "PROCESS": 0,
+    "TEXT": 2557
+  },
+  "combined_unique_rows": 3675,
+  "eligible_including_limited": 1,
+  "expected": 42,
+  "new_R4A_representations": 0,
+  "new_columns": {
+    "CODE": 0,
+    "PROCESS": 0,
+    "TEXT": 0
+  },
+  "new_rows": 0,
+  "parent_R4_representations": 1,
+  "project_eligible_modality_counts": {
+    "apache/activemq": 1,
+    "apache/camel": 0,
+    "apache/cassandra": 0,
+    "apache/flink": 0,
+    "apache/groovy": 0,
+    "apache/hadoop-hdfs": 0,
+    "apache/hadoop-mapreduce": 0,
+    "apache/hbase": 0,
+    "apache/hive": 0,
+    "apache/ignite": 0,
+    "apache/kafka": 0,
+    "apache/spark": 0,
+    "apache/zeppelin": 0,
+    "apache/zookeeper": 0
+  },
+  "projects_with_1_modality": 1,
+  "projects_with_2_modalities": 0,
+  "projects_with_3_modalities": 0,
+  "projects_without_eligible_modality": 13
+}

@@ -1,0 +1,17 @@
+{
+  "dense": "ASCII E1R2_ROW_V1 + NUL + D; uint64_le column_count; contiguous float64_le values",
+  "digest": "SHA256",
+  "dtype": "IEEE754_FLOAT64_LITTLE_ENDIAN",
+  "filesystem_metadata": "EXCLUDED",
+  "frozen_before_row_digest_computation": true,
+  "json": "UTF8; sorted keys; ensure_ascii=true; compact comma/colon separators; allow_nan=false; one LF",
+  "nonfinite": "REJECT_NAN_POSITIVE_INFINITY_NEGATIVE_INFINITY",
+  "numeric_decimal_precision": "NOT_APPLICABLE_BINARY",
+  "shape": "One scientific row (1,column_count); no matrix row ordinal in value digest",
+  "signed_zero": "Preserve IEEE754 sign bit",
+  "sparse": "ASCII E1R2_ROW_V1 + NUL + S; uint64_le column_count,nnz; sorted uint64_le indices; paired float64_le values",
+  "sparse_order": "Sort index-value pairs ascending by index; reject duplicates; preserve explicit zeros",
+  "strings": "Exact Unicode strings, no trimming, case folding, Unicode normalization or SHA expansion",
+  "utf8": "Strict UTF8 for text digests; invalid strings rejected",
+  "version": "E1R2_ROW_V1"
+}

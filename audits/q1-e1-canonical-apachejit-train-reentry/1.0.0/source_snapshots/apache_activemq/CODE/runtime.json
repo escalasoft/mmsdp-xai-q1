@@ -1,0 +1,5 @@
+{
+  "operations": "JSON raw source serialization only; no transform/model execution",
+  "platform": "macOS-15.7.7-x86_64-i386-64bit",
+  "python": "3.11.14"
+}

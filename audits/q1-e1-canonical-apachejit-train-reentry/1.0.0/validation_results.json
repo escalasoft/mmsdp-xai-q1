@@ -1,0 +1,57 @@
+{
+  "current_R4B_passed": 75,
+  "errors": 37,
+  "failed": 2,
+  "git_diff_check": "PASS",
+  "historical_A_R1_R2_passed": 189,
+  "historical_exceptions": [
+    {
+      "errors": 37,
+      "failed": 1,
+      "reason": "Legacy investigator explicitly requires sprint-10/q1-prospective-e1-protocol-freeze; current authorized branch differs.",
+      "scope": "A-R1"
+    },
+    {
+      "errors": 0,
+      "failed": 1,
+      "reason": "Premerge tracked historical audit tree excludes parent audit packages now committed at HEAD; no current artifact mutation.",
+      "scope": "A-R2"
+    }
+  ],
+  "parent_integrity": "PASS; all preflight metadata digests and payload stat identities unchanged",
+  "passed": 740,
+  "ruff": "PASS",
+  "runs": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_e1_canonical_apachejit_train_reentry.py",
+      "group": "focused",
+      "log": "validation_focused.log",
+      "result": "75 passed in 1.43s",
+      "sha256": "d7582bd0dacfb739b3903dec321c083879ed7671a1c290a68597f80a07383a9e"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py tests/evaluation/test_q1_e1_prospective_train_representation_reconstruction.py tests/evaluation/test_q1_e1_prospective_reconstructed_representation_protocol.py",
+      "group": "parents",
+      "log": "validation_parents.log",
+      "result": "344 passed in 18.80s",
+      "sha256": "481093e3e5b7320b6ccf04f787fa649e297571f9739d57593dac159bed874500"
+    },
+    {
+      "command": "PYTHONPATH=. PYTHONDONTWRITEBYTECODE=1 .venv/bin/python /Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/audits/q1-e1-canonical-apachejit-train-reentry/1.0.0/safe_regression_selector.py",
+      "group": "safe",
+      "log": "validation_safe.log",
+      "result": "132 passed in 0.42s",
+      "sha256": "2fbac5ffac5181d2c7ffdf0771a4b7910b92511a56b2441995b3360245f4e30c"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_prospective_e1_protocol_freeze.py tests/evaluation/test_q1_prospective_e1_parent_integrity_resolution.py tests/evaluation/test_q1_prospective_e1_protocol_revalidation_r2.py",
+      "group": "legacy",
+      "log": "validation_legacy.log",
+      "result": "2 failed, 189 passed, 37 errors in 17.22s",
+      "sha256": "f3cf38e4d7cc515a7726ca228d83b128be4ce7f04a1b6868a5deddd36079215d"
+    }
+  ],
+  "safe_B_through_R4A_plus_seven_Sprint55_metadata_tests_passed": 476,
+  "scientific_execution_in_tests": "Synthetic inputs and admitted TRAIN snapshot integrity only; no T1/T2 payload, model inference or XAI",
+  "status": "PASS_CURRENT_GATES_WITH_DOCUMENTED_HISTORICAL_REGRESSION_EXCEPTIONS"
+}

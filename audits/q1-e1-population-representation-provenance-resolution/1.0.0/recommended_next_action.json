@@ -1,0 +1,16 @@
+{
+  "action": "Obtain or independently establish a permitted immutable population routing artifact",
+  "alternatives": "If no such artifact exists, require a separate governance/design amendment; no scan-and-filter workaround",
+  "exact_required_fields": [
+    "project",
+    "partition",
+    "row_identifier",
+    "canonical_repository",
+    "commit_sha",
+    "frozen_source_digest",
+    "safe_record_offset_or_separate_partition_file",
+    "ordered_feature_schema_digest"
+  ],
+  "no_feasible_current_generation_route": true,
+  "verification": "Reconcile full ordered TRAIN/T1 membership digests without touching T2 or T1 labels"
+}

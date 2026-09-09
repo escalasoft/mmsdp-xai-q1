@@ -1,0 +1,18 @@
+{
+  "chain": [
+    "commit",
+    "raw message",
+    "normalization",
+    "proven fitted/reconstructed vectorizer",
+    "vocabulary",
+    "IDF",
+    "token order",
+    "sparse vector"
+  ],
+  "expected_predictor_alignment": "Verify vocabulary, IDF, normalization and column order against exact intended predictor; matching dimensions insufficient",
+  "new_T1_fit": "DENY",
+  "new_vectorizer_fit": "Separate methodological change; frozen TRAIN only if explicitly authorized",
+  "new_vectorizer_fit_authorized": false,
+  "new_vectorizer_not_equivalent_by_default": true,
+  "preferred": "Exact persisted RECONSTRUCTED vectorizer metadata; 56 inherited bindings"
+}

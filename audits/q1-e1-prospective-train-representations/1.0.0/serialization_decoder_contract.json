@@ -1,0 +1,9 @@
+{
+  "canonical_digest_encoding": "Sorted-key compact JSON, ASCII escapes, allow_nan=False, UTF-8, one final LF; inherited R1 canonical() exactly",
+  "matrix_encoding": "R2 row binary format inside R4 matrix envelope; separate little-endian CSR arrays",
+  "registry_decoder": "Parse each nonempty line; reject malformed nonempty JSON. Blank separators are not scientific rows.",
+  "registry_encoding": "Each R1 canonical JSON record followed by one additional LF; blank separator lines are retained in hashes",
+  "repeatability": "Both independent reconstructions used identical frozen bytes; criterion unchanged",
+  "representation_artifacts_modified": false,
+  "status": "EXPLICIT_ENCODING_CLARIFICATION_NO_ARTIFACT_REWRITE"
+}

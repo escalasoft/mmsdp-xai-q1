@@ -1,0 +1,20 @@
+{
+  "combined_unique_train_identities": 3675,
+  "expected_train_identities": 56821,
+  "new_representations": 0,
+  "parent_representations": 1,
+  "projects_with_1_representation": 1,
+  "projects_with_2_representations": 0,
+  "projects_with_3_representations": 0,
+  "projects_with_no_representation": 13,
+  "reason": "One-project TEXT input provenance and two raw-source snapshots do not provide multi-project or numeric feature-explanation evidence. Deterministic source persistence is verified; transform, temporal and broader population limitations remain.",
+  "representation_eligible_CODE": 0,
+  "representation_eligible_PROCESS": 0,
+  "representation_eligible_TEXT": 1,
+  "source_ready_CODE": 1,
+  "source_ready_PROCESS": 0,
+  "source_ready_TEXT": 1,
+  "source_snapshot_modalities": 2,
+  "source_snapshot_projects": 1,
+  "verdict": "Q1_E1_CANONICAL_REENTRY_TOO_NARROW_FOR_PRIMARY_CLAIMS"
+}

@@ -1,0 +1,117 @@
+{
+  "projects": [
+    {
+      "TRAIN_expected_count": 3675,
+      "canonical_project_name": "apache/activemq",
+      "count_evidence": "Original frozen TRAIN phase counts, independently crosschecked with 168 campaign scopes",
+      "identity_scheme": "project/full commit SHA linked through frozen row_identifier",
+      "partition_source": "audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json",
+      "project_id": "apache/activemq"
+    },
+    {
+      "TRAIN_expected_count": 13620,
+      "canonical_project_name": "apache/camel",
+      "count_evidence": "Original frozen TRAIN phase counts, independently crosschecked with 168 campaign scopes",
+      "identity_scheme": "project/full commit SHA linked through frozen row_identifier",
+      "partition_source": "audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json",
+      "project_id": "apache/camel"
+    },
+    {
+      "TRAIN_expected_count": 4895,
+      "canonical_project_name": "apache/cassandra",
+      "count_evidence": "Original frozen TRAIN phase counts, independently crosschecked with 168 campaign scopes",
+      "identity_scheme": "project/full commit SHA linked through frozen row_identifier",
+      "partition_source": "audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json",
+      "project_id": "apache/cassandra"
+    },
+    {
+      "TRAIN_expected_count": 7014,
+      "canonical_project_name": "apache/flink",
+      "count_evidence": "Original frozen TRAIN phase counts, independently crosschecked with 168 campaign scopes",
+      "identity_scheme": "project/full commit SHA linked through frozen row_identifier",
+      "partition_source": "audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json",
+      "project_id": "apache/flink"
+    },
+    {
+      "TRAIN_expected_count": 4835,
+      "canonical_project_name": "apache/groovy",
+      "count_evidence": "Original frozen TRAIN phase counts, independently crosschecked with 168 campaign scopes",
+      "identity_scheme": "project/full commit SHA linked through frozen row_identifier",
+      "partition_source": "audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json",
+      "project_id": "apache/groovy"
+    },
+    {
+      "TRAIN_expected_count": 1744,
+      "canonical_project_name": "apache/hadoop-hdfs",
+      "count_evidence": "Original frozen TRAIN phase counts, independently crosschecked with 168 campaign scopes",
+      "identity_scheme": "project/full commit SHA linked through frozen row_identifier",
+      "partition_source": "audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json",
+      "project_id": "apache/hadoop-hdfs"
+    },
+    {
+      "TRAIN_expected_count": 792,
+      "canonical_project_name": "apache/hadoop-mapreduce",
+      "count_evidence": "Original frozen TRAIN phase counts, independently crosschecked with 168 campaign scopes",
+      "identity_scheme": "project/full commit SHA linked through frozen row_identifier",
+      "partition_source": "audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json",
+      "project_id": "apache/hadoop-mapreduce"
+    },
+    {
+      "TRAIN_expected_count": 5238,
+      "canonical_project_name": "apache/hbase",
+      "count_evidence": "Original frozen TRAIN phase counts, independently crosschecked with 168 campaign scopes",
+      "identity_scheme": "project/full commit SHA linked through frozen row_identifier",
+      "partition_source": "audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json",
+      "project_id": "apache/hbase"
+    },
+    {
+      "TRAIN_expected_count": 4105,
+      "canonical_project_name": "apache/hive",
+      "count_evidence": "Original frozen TRAIN phase counts, independently crosschecked with 168 campaign scopes",
+      "identity_scheme": "project/full commit SHA linked through frozen row_identifier",
+      "partition_source": "audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json",
+      "project_id": "apache/hive"
+    },
+    {
+      "TRAIN_expected_count": 7221,
+      "canonical_project_name": "apache/ignite",
+      "count_evidence": "Original frozen TRAIN phase counts, independently crosschecked with 168 campaign scopes",
+      "identity_scheme": "project/full commit SHA linked through frozen row_identifier",
+      "partition_source": "audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json",
+      "project_id": "apache/ignite"
+    },
+    {
+      "TRAIN_expected_count": 1430,
+      "canonical_project_name": "apache/kafka",
+      "count_evidence": "Original frozen TRAIN phase counts, independently crosschecked with 168 campaign scopes",
+      "identity_scheme": "project/full commit SHA linked through frozen row_identifier",
+      "partition_source": "audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json",
+      "project_id": "apache/kafka"
+    },
+    {
+      "TRAIN_expected_count": 879,
+      "canonical_project_name": "apache/spark",
+      "count_evidence": "Original frozen TRAIN phase counts, independently crosschecked with 168 campaign scopes",
+      "identity_scheme": "project/full commit SHA linked through frozen row_identifier",
+      "partition_source": "audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json",
+      "project_id": "apache/spark"
+    },
+    {
+      "TRAIN_expected_count": 870,
+      "canonical_project_name": "apache/zeppelin",
+      "count_evidence": "Original frozen TRAIN phase counts, independently crosschecked with 168 campaign scopes",
+      "identity_scheme": "project/full commit SHA linked through frozen row_identifier",
+      "partition_source": "audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json",
+      "project_id": "apache/zeppelin"
+    },
+    {
+      "TRAIN_expected_count": 503,
+      "canonical_project_name": "apache/zookeeper",
+      "count_evidence": "Original frozen TRAIN phase counts, independently crosschecked with 168 campaign scopes",
+      "identity_scheme": "project/full commit SHA linked through frozen row_identifier",
+      "partition_source": "audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json",
+      "project_id": "apache/zookeeper"
+    }
+  ],
+  "source_digest": "02bb9fb45d45f666bf874e0f14459505cb552843814ae4c20e0bc8a90efb0eb5"
+}

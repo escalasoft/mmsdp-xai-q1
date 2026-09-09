@@ -1,0 +1,13 @@
+{
+  "T1_default_excluded": true,
+  "historical_original_matrix_recovery_required": false,
+  "mode": "Separate human authorization; source-admission preflight first",
+  "prerequisites": [
+    "Immutable safe TRAIN source route",
+    "Project/commit/partition proof",
+    "Frozen transformations",
+    "Mandatory persistence integration"
+  ],
+  "sprint": "56.3B-R4 — Prospective TRAIN Representation Reconstruction & Persistence",
+  "started": false
+}

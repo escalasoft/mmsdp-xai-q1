@@ -1,0 +1,12 @@
+{
+  "claims": [
+    "We recovered the original Sprint54 representations",
+    "Reconstructed matrices are identical to historical matrices",
+    "Original XAI inputs were preserved",
+    "SHAP explains the exact historical Sprint54 matrix",
+    "SHAP proves causality",
+    "All projects share identical drivers",
+    "All algorithms use features identically"
+  ],
+  "exceptions": "Original-identity claims require literal independent evidence, not this amendment"
+}

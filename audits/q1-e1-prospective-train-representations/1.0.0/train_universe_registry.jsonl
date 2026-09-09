@@ -1,0 +1,27 @@
+{"admitted_source_rows":3675,"algorithm_dependencies":4,"authority":"audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json","availability":{"CODE":false,"PROCESS":false,"TEXT":true},"count_basis":"Original frozen phase_support.TRAIN.rows; not 80-row derivative","project":"apache/activemq","total_frozen_train_identities":3675}
+
+{"admitted_source_rows":0,"algorithm_dependencies":4,"authority":"audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json","availability":{"CODE":false,"PROCESS":false,"TEXT":false},"count_basis":"Original frozen phase_support.TRAIN.rows; not 80-row derivative","project":"apache/camel","total_frozen_train_identities":13620}
+
+{"admitted_source_rows":0,"algorithm_dependencies":4,"authority":"audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json","availability":{"CODE":false,"PROCESS":false,"TEXT":false},"count_basis":"Original frozen phase_support.TRAIN.rows; not 80-row derivative","project":"apache/cassandra","total_frozen_train_identities":4895}
+
+{"admitted_source_rows":0,"algorithm_dependencies":4,"authority":"audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json","availability":{"CODE":false,"PROCESS":false,"TEXT":false},"count_basis":"Original frozen phase_support.TRAIN.rows; not 80-row derivative","project":"apache/flink","total_frozen_train_identities":7014}
+
+{"admitted_source_rows":0,"algorithm_dependencies":4,"authority":"audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json","availability":{"CODE":false,"PROCESS":false,"TEXT":false},"count_basis":"Original frozen phase_support.TRAIN.rows; not 80-row derivative","project":"apache/groovy","total_frozen_train_identities":4835}
+
+{"admitted_source_rows":0,"algorithm_dependencies":4,"authority":"audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json","availability":{"CODE":false,"PROCESS":false,"TEXT":false},"count_basis":"Original frozen phase_support.TRAIN.rows; not 80-row derivative","project":"apache/hadoop-hdfs","total_frozen_train_identities":1744}
+
+{"admitted_source_rows":0,"algorithm_dependencies":4,"authority":"audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json","availability":{"CODE":false,"PROCESS":false,"TEXT":false},"count_basis":"Original frozen phase_support.TRAIN.rows; not 80-row derivative","project":"apache/hadoop-mapreduce","total_frozen_train_identities":792}
+
+{"admitted_source_rows":0,"algorithm_dependencies":4,"authority":"audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json","availability":{"CODE":false,"PROCESS":false,"TEXT":false},"count_basis":"Original frozen phase_support.TRAIN.rows; not 80-row derivative","project":"apache/hbase","total_frozen_train_identities":5238}
+
+{"admitted_source_rows":0,"algorithm_dependencies":4,"authority":"audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json","availability":{"CODE":false,"PROCESS":false,"TEXT":false},"count_basis":"Original frozen phase_support.TRAIN.rows; not 80-row derivative","project":"apache/hive","total_frozen_train_identities":4105}
+
+{"admitted_source_rows":0,"algorithm_dependencies":4,"authority":"audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json","availability":{"CODE":false,"PROCESS":false,"TEXT":false},"count_basis":"Original frozen phase_support.TRAIN.rows; not 80-row derivative","project":"apache/ignite","total_frozen_train_identities":7221}
+
+{"admitted_source_rows":0,"algorithm_dependencies":4,"authority":"audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json","availability":{"CODE":false,"PROCESS":false,"TEXT":false},"count_basis":"Original frozen phase_support.TRAIN.rows; not 80-row derivative","project":"apache/kafka","total_frozen_train_identities":1430}
+
+{"admitted_source_rows":0,"algorithm_dependencies":4,"authority":"audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json","availability":{"CODE":false,"PROCESS":false,"TEXT":false},"count_basis":"Original frozen phase_support.TRAIN.rows; not 80-row derivative","project":"apache/spark","total_frozen_train_identities":879}
+
+{"admitted_source_rows":0,"algorithm_dependencies":4,"authority":"audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json","availability":{"CODE":false,"PROCESS":false,"TEXT":false},"count_basis":"Original frozen phase_support.TRAIN.rows; not 80-row derivative","project":"apache/zeppelin","total_frozen_train_identities":870}
+
+{"admitted_source_rows":0,"algorithm_dependencies":4,"authority":"audits/q1-apachejit-final-dataset-freeze/1.0.0/temporal_partition_summary.json","availability":{"CODE":false,"PROCESS":false,"TEXT":false},"count_basis":"Original frozen phase_support.TRAIN.rows; not 80-row derivative","project":"apache/zookeeper","total_frozen_train_identities":503}

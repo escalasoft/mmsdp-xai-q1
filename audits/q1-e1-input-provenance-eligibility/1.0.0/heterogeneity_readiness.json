@@ -1,0 +1,7 @@
+{
+  "eligible_families": 0,
+  "eligible_projects": 0,
+  "minimum_comparative_families": 3,
+  "status": "BLOCKED",
+  "text_token_rank_pooling": "FORBIDDEN_WITHOUT_COMPARABILITY_PROOF"
+}

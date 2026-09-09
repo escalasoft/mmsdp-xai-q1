@@ -1,0 +1,9 @@
+{
+  "T1_T2": "NOT_TESTED_T2_SEALED",
+  "TRAIN_T1": "NOT_TESTED_NO_AUTHORIZED_T1_IDENTITIES",
+  "TRAIN_T2": "NOT_TESTED_T2_SEALED",
+  "admitted_population_count": 0,
+  "contamination_detected": false,
+  "no_contamination_claim_authorized": false,
+  "status": "UNPROVEN_NO_ADMITTED_POPULATION"
+}

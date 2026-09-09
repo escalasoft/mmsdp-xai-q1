@@ -1,0 +1,1715 @@
+{
+  "algorithm": {
+    "LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 3,
+      "unresolved": 39
+    },
+    "Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 3,
+      "unresolved": 39
+    },
+    "Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 3,
+      "unresolved": 39
+    },
+    "XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 3,
+      "unresolved": 39
+    }
+  },
+  "modality": {
+    "CODE": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 4,
+      "unresolved": 52
+    },
+    "PROCESS": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 4,
+      "unresolved": 52
+    },
+    "TEXT": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 4,
+      "unresolved": 52
+    }
+  },
+  "modality × algorithm": {
+    "CODE|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 13
+    },
+    "CODE|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 13
+    },
+    "CODE|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 13
+    },
+    "CODE|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 13
+    },
+    "PROCESS|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 13
+    },
+    "PROCESS|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 13
+    },
+    "PROCESS|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 13
+    },
+    "PROCESS|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 13
+    },
+    "TEXT|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 13
+    },
+    "TEXT|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 13
+    },
+    "TEXT|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 13
+    },
+    "TEXT|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 13
+    }
+  },
+  "project": {
+    "apache/activemq": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 12,
+      "unresolved": 0
+    },
+    "apache/camel": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 12
+    },
+    "apache/cassandra": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 12
+    },
+    "apache/flink": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 12
+    },
+    "apache/groovy": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 12
+    },
+    "apache/hadoop-hdfs": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 12
+    },
+    "apache/hadoop-mapreduce": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 12
+    },
+    "apache/hbase": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 12
+    },
+    "apache/hive": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 12
+    },
+    "apache/ignite": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 12
+    },
+    "apache/kafka": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 12
+    },
+    "apache/spark": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 12
+    },
+    "apache/zeppelin": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 12
+    },
+    "apache/zookeeper": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 12
+    }
+  },
+  "project × modality": {
+    "apache/activemq|CODE": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 4,
+      "unresolved": 0
+    },
+    "apache/activemq|PROCESS": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 4,
+      "unresolved": 0
+    },
+    "apache/activemq|TEXT": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 4,
+      "unresolved": 0
+    },
+    "apache/camel|CODE": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/camel|PROCESS": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/camel|TEXT": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/cassandra|CODE": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/cassandra|PROCESS": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/cassandra|TEXT": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/flink|CODE": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/flink|PROCESS": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/flink|TEXT": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/groovy|CODE": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/groovy|PROCESS": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/groovy|TEXT": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/hadoop-hdfs|CODE": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/hadoop-hdfs|PROCESS": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/hadoop-hdfs|TEXT": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/hadoop-mapreduce|CODE": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/hadoop-mapreduce|PROCESS": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/hadoop-mapreduce|TEXT": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/hbase|CODE": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/hbase|PROCESS": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/hbase|TEXT": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/hive|CODE": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/hive|PROCESS": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/hive|TEXT": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/ignite|CODE": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/ignite|PROCESS": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/ignite|TEXT": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/kafka|CODE": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/kafka|PROCESS": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/kafka|TEXT": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/spark|CODE": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/spark|PROCESS": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/spark|TEXT": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/zeppelin|CODE": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/zeppelin|PROCESS": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/zeppelin|TEXT": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/zookeeper|CODE": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/zookeeper|PROCESS": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    },
+    "apache/zookeeper|TEXT": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 4
+    }
+  },
+  "project × modality × algorithm": {
+    "apache/activemq|CODE|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 0
+    },
+    "apache/activemq|CODE|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 0
+    },
+    "apache/activemq|CODE|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 0
+    },
+    "apache/activemq|CODE|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 0
+    },
+    "apache/activemq|PROCESS|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 0
+    },
+    "apache/activemq|PROCESS|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 0
+    },
+    "apache/activemq|PROCESS|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 0
+    },
+    "apache/activemq|PROCESS|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 0
+    },
+    "apache/activemq|TEXT|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 0
+    },
+    "apache/activemq|TEXT|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 0
+    },
+    "apache/activemq|TEXT|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 0
+    },
+    "apache/activemq|TEXT|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 1,
+      "unresolved": 0
+    },
+    "apache/camel|CODE|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/camel|CODE|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/camel|CODE|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/camel|CODE|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/camel|PROCESS|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/camel|PROCESS|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/camel|PROCESS|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/camel|PROCESS|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/camel|TEXT|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/camel|TEXT|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/camel|TEXT|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/camel|TEXT|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/cassandra|CODE|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/cassandra|CODE|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/cassandra|CODE|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/cassandra|CODE|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/cassandra|PROCESS|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/cassandra|PROCESS|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/cassandra|PROCESS|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/cassandra|PROCESS|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/cassandra|TEXT|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/cassandra|TEXT|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/cassandra|TEXT|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/cassandra|TEXT|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/flink|CODE|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/flink|CODE|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/flink|CODE|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/flink|CODE|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/flink|PROCESS|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/flink|PROCESS|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/flink|PROCESS|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/flink|PROCESS|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/flink|TEXT|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/flink|TEXT|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/flink|TEXT|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/flink|TEXT|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/groovy|CODE|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/groovy|CODE|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/groovy|CODE|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/groovy|CODE|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/groovy|PROCESS|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/groovy|PROCESS|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/groovy|PROCESS|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/groovy|PROCESS|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/groovy|TEXT|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/groovy|TEXT|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/groovy|TEXT|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/groovy|TEXT|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-hdfs|CODE|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-hdfs|CODE|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-hdfs|CODE|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-hdfs|CODE|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-hdfs|PROCESS|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-hdfs|PROCESS|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-hdfs|PROCESS|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-hdfs|PROCESS|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-hdfs|TEXT|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-hdfs|TEXT|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-hdfs|TEXT|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-hdfs|TEXT|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-mapreduce|CODE|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-mapreduce|CODE|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-mapreduce|CODE|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-mapreduce|CODE|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-mapreduce|PROCESS|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-mapreduce|PROCESS|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-mapreduce|PROCESS|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-mapreduce|PROCESS|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-mapreduce|TEXT|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-mapreduce|TEXT|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-mapreduce|TEXT|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hadoop-mapreduce|TEXT|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hbase|CODE|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hbase|CODE|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hbase|CODE|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hbase|CODE|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hbase|PROCESS|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hbase|PROCESS|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hbase|PROCESS|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hbase|PROCESS|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hbase|TEXT|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hbase|TEXT|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hbase|TEXT|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hbase|TEXT|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hive|CODE|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hive|CODE|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hive|CODE|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hive|CODE|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hive|PROCESS|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hive|PROCESS|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hive|PROCESS|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hive|PROCESS|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hive|TEXT|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hive|TEXT|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hive|TEXT|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/hive|TEXT|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/ignite|CODE|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/ignite|CODE|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/ignite|CODE|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/ignite|CODE|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/ignite|PROCESS|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/ignite|PROCESS|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/ignite|PROCESS|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/ignite|PROCESS|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/ignite|TEXT|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/ignite|TEXT|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/ignite|TEXT|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/ignite|TEXT|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/kafka|CODE|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/kafka|CODE|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/kafka|CODE|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/kafka|CODE|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/kafka|PROCESS|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/kafka|PROCESS|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/kafka|PROCESS|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/kafka|PROCESS|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/kafka|TEXT|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/kafka|TEXT|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/kafka|TEXT|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/kafka|TEXT|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/spark|CODE|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/spark|CODE|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/spark|CODE|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/spark|CODE|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/spark|PROCESS|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/spark|PROCESS|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/spark|PROCESS|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/spark|PROCESS|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/spark|TEXT|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/spark|TEXT|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/spark|TEXT|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/spark|TEXT|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zeppelin|CODE|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zeppelin|CODE|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zeppelin|CODE|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zeppelin|CODE|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zeppelin|PROCESS|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zeppelin|PROCESS|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zeppelin|PROCESS|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zeppelin|PROCESS|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zeppelin|TEXT|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zeppelin|TEXT|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zeppelin|TEXT|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zeppelin|TEXT|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zookeeper|CODE|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zookeeper|CODE|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zookeeper|CODE|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zookeeper|CODE|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zookeeper|PROCESS|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zookeeper|PROCESS|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zookeeper|PROCESS|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zookeeper|PROCESS|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zookeeper|TEXT|LightGBM": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zookeeper|TEXT|Logistic Regression": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zookeeper|TEXT|Random Forest": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    },
+    "apache/zookeeper|TEXT|XGBoost": {
+      "exact": 0,
+      "exact_with_limitation": 0,
+      "fail": 0,
+      "partial": 0,
+      "unresolved": 1
+    }
+  }
+}

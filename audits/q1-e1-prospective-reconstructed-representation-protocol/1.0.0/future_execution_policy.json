@@ -1,0 +1,10 @@
+{
+  "PROSPECTIVE_RECONSTRUCTED_REPRESENTATION_EXECUTION": "READY_FOR_SEPARATE_HUMAN_AUTHORIZATION",
+  "R4_must_stop_before_payload_if_source_admission_fails": true,
+  "T1_included": false,
+  "XAI_authorized": false,
+  "authorization_meaning": "Future controlled TRAIN campaign may be requested; no current source route or population is approved",
+  "authorized": false,
+  "current_admitted_scope_ids": [],
+  "started": false
+}

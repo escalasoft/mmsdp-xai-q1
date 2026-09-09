@@ -1,0 +1,28 @@
+{
+  "T2_byte_access": "DENY",
+  "current_operational_route": "UNRESOLVED; amendment does not waive access governance",
+  "evidence_refs": [
+    "audits/q1-e1-population-representation-provenance-resolution/1.0.0/population_and_representation_source_inventory.jsonl",
+    "audits/q1-e1-canonical-identity-representation-linkage/1.0.0/identity_producer_analysis.json"
+  ],
+  "forbidden": [
+    "T1 labels",
+    "T2",
+    "test outcomes",
+    "explanations",
+    "model errors",
+    "post-hoc features",
+    "new engineering",
+    "performance-guided changes"
+  ],
+  "mixed_csv_gzip_scan_filter": "NOT_AUTHORIZED",
+  "preference_order": [
+    "frozen ApacheJIT benchmark",
+    "frozen authoritative partition metadata",
+    "frozen feature definitions",
+    "frozen transformations",
+    "proven reconstructed preprocessing/vectorizer states",
+    "source-derived values only under exact frozen semantics"
+  ],
+  "source_admission": "Require explicit project/commit/partition binding, source digest, and physically safe read route before opening"
+}

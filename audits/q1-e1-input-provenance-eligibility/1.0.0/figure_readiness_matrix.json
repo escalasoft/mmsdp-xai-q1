@@ -1,0 +1,34 @@
+{
+  "CODE_global": {
+    "reason": "No eligible E1 population",
+    "status": "BLOCKED"
+  },
+  "E1_E2_continuity": {
+    "reason": "No eligible E1 population",
+    "status": "BLOCKED"
+  },
+  "E2_modality_contribution": {
+    "reason": "Preserved parent E2; not re-audited or generated in this E1 gate",
+    "status": "NOT_APPLICABLE"
+  },
+  "PROCESS_global": {
+    "reason": "No eligible E1 population",
+    "status": "BLOCKED"
+  },
+  "TEXT_global": {
+    "reason": "No eligible E1 population",
+    "status": "BLOCKED"
+  },
+  "heterogeneity": {
+    "reason": "No eligible E1 population",
+    "status": "BLOCKED"
+  },
+  "local": {
+    "reason": "No eligible E1 population",
+    "status": "BLOCKED"
+  },
+  "stability": {
+    "reason": "No eligible E1 population",
+    "status": "BLOCKED"
+  }
+}

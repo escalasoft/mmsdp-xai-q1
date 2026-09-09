@@ -1,0 +1,59 @@
+{
+  "claims_not_supported": [
+    "Our specific reconstruction is validated",
+    "Q1 journals explicitly permit this workflow",
+    "All missing historical data can be reconstructed"
+  ],
+  "inspected_via": "Primary publisher/research pages and official documentation using web tool",
+  "sources": [
+    {
+      "authors": "Ormenisan et al.",
+      "id": "ORMENISAN2020",
+      "supports": [
+        "Pipeline processing steps and artifacts",
+        "Data versioning/provenance for reproducibility and debugging"
+      ],
+      "title": "Time Travel and Provenance for Machine Learning Pipelines",
+      "url": "https://www.usenix.org/conference/opml20/presentation/ormenisan",
+      "venue": "USENIX OpML",
+      "year": 2020
+    },
+    {
+      "authors": "Pineau et al.",
+      "id": "PINEAU2021",
+      "supports": [
+        "Documented code/data and experimental reporting",
+        "Reproducibility checklists and robust workflows"
+      ],
+      "title": "Improving Reproducibility in Machine Learning Research",
+      "url": "https://jmlr.org/papers/v22/20-303.html",
+      "venue": "JMLR 22(164):1–20",
+      "year": 2021
+    },
+    {
+      "authors": "Lundberg and Lee",
+      "id": "LUNDBERG2017",
+      "supports": [
+        "Feature attribution for model predictions",
+        "Additive explanation methods; not causal proof"
+      ],
+      "title": "A Unified Approach to Interpreting Model Predictions",
+      "url": "https://proceedings.neurips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html",
+      "venue": "NeurIPS 30",
+      "year": 2017
+    },
+    {
+      "authors": "TensorFlow authors",
+      "evidence_type": "Primary documentation, not a journal article",
+      "id": "MLMD",
+      "supports": [
+        "Artifacts, executions, provenance and runtime metadata"
+      ],
+      "title": "ML Metadata",
+      "url": "https://www.tensorflow.org/tfx/guide/mlmd",
+      "venue": "Official technical documentation",
+      "year": null
+    }
+  ],
+  "verification_date": "2026-09-08"
+}

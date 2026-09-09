@@ -1,0 +1,8 @@
+{
+  "E2": "META_LOGIT",
+  "LightGBM": "NATIVE_RAW_MARGIN",
+  "Logistic_Regression": "LOGIT",
+  "Random_Forest": "POSITIVE_CLASS_MODEL_OUTPUT",
+  "XGBoost": "NATIVE_RAW_MARGIN",
+  "mixed_scale_quantitative_comparison": "PROHIBITED"
+}

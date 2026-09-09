@@ -1,0 +1,38 @@
+{
+  "conditional_future_claims": [
+    "Only provenance-eligible scopes explained, if later executed and verified",
+    "Populations selected deterministically before attribution, if later frozen"
+  ],
+  "continuity": "Architectural and interpretive; no automatic feature-SHAP propagation",
+  "current_allowed": [
+    "168 candidate scopes audited; zero admitted for primary E1",
+    "E1 explains within-modality feature behavior; E2 explains cross-modality fusion behavior",
+    "Historical partial TRAIN representation evidence retained without promotion"
+  ],
+  "fusion": "eta=alpha+sum(beta_m*p_m); phi_m=beta_m*(p_m-mu_m)",
+  "prohibited": {
+    "allowed": [
+      "feature association with model output",
+      "relative within-scope attribution importance",
+      "model/project-specific explanatory patterns",
+      "cross-model disagreement",
+      "cross-project heterogeneity",
+      "analytical fusion modality contribution",
+      "architectural continuity",
+      "measured explanation stability",
+      "descriptive cross-level co-occurrence when linked"
+    ],
+    "prohibited": [
+      "causal defect causes",
+      "causal developer behavior",
+      "semantic intent from TEXT",
+      "universal software-defect mechanisms",
+      "universal feature superiority",
+      "universal multimodal superiority",
+      "reconstructed states are original Sprint54 models",
+      "unvalidated end-to-end E1 decomposition of E2",
+      "SHAP proves performance improvement",
+      "largest E1 feature caused largest E2 modality contribution"
+    ]
+  }
+}

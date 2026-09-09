@@ -1,0 +1,15 @@
+{
+  "allowed_changes": [
+    "new 56.3B implementation",
+    "new 56.3B tests",
+    "new 56.3B audit package"
+  ],
+  "ancestry_verified": true,
+  "base_merge": "PR #120; Sprint 56.3A/R1/R2",
+  "branch": "sprint-10/q1-e1-input-provenance-eligibility",
+  "head": "0620c76fbcdcd1e602d5d5422b1f8e2c591553d9",
+  "initial_git_log": "0620c76 (HEAD -> sprint-10/q1-e1-input-provenance-eligibility, origin/main, main) Merge pull request #120 from escalasoft/sprint-10/q1-prospective-e1-protocol-freeze\n78cd9d1 Sprint 10.8.2.56.3A: freeze and revalidate prospective E1 protocol\nb3ecfa2 Merge pull request #119 from escalasoft/sprint-10/q1-primary-xai-execution\n4572ec9 Sprint 10.8.2.56.2: establish Q1-viable alternative primary XAI design\n89fe7e1 Merge pull request #118 from escalasoft/sprint-10/q1-xai-governance-protocol\n",
+  "initial_status": "",
+  "initial_status_basis": "First preflight tool output before implementation",
+  "preexisting_changes": []
+}
