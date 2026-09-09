@@ -1,0 +1,41 @@
+START LR
+LR repetition 1/20 residual=1.33e-15
+LR repetition 2/20 residual=1.33e-15
+LR repetition 3/20 residual=1.33e-15
+LR repetition 4/20 residual=1.33e-15
+LR repetition 5/20 residual=1.33e-15
+LR repetition 6/20 residual=1.33e-15
+LR repetition 7/20 residual=1.33e-15
+LR repetition 8/20 residual=1.33e-15
+LR repetition 9/20 residual=1.33e-15
+LR repetition 10/20 residual=1.33e-15
+LR repetition 11/20 residual=1.33e-15
+LR repetition 12/20 residual=1.33e-15
+LR repetition 13/20 residual=1.33e-15
+LR repetition 14/20 residual=1.33e-15
+LR repetition 15/20 residual=1.33e-15
+LR repetition 16/20 residual=1.33e-15
+LR repetition 17/20 residual=1.33e-15
+LR repetition 18/20 residual=1.33e-15
+LR repetition 19/20 residual=1.33e-15
+LR repetition 20/20 residual=1.33e-15
+COMPLETE LR
+START RF
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/src/evaluation/q1_bounded_complementary_e1_xai.py", line 465, in <module>
+    main()
+  File "/Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/src/evaluation/q1_bounded_complementary_e1_xai.py", line 460, in main
+    execute()
+  File "/Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/src/evaluation/q1_bounded_complementary_e1_xai.py", line 380, in execute
+    values=explainer.shap_values(x if family=='XGB' else x.toarray(),approximate=False,check_additivity=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/.venv-xai-s56/lib/python3.11/site-packages/shap/explainers/_tree.py", line 711, in shap_values
+    self.assert_additivity(out, self.model.predict(X))  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/.venv-xai-s56/lib/python3.11/site-packages/shap/explainers/_tree.py", line 901, in assert_additivity
+    check_sum(self.expected_value[i] + phi[i].sum(-1), model_output[:, i])
+  File "/Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/.venv-xai-s56/lib/python3.11/site-packages/shap/explainers/_tree.py", line 897, in check_sum
+    raise ExplainerError(err_msg)
+shap.utils._exceptions.ExplainerError: Additivity check failed in TreeExplainer! Please ensure the data matrix you passed to the explainer is the same shape that the model was trained on. If your data shape is correct then please report this on GitHub. Consider retrying with the feature_perturbation='interventional' option. This check failed because for one of the samples the sum of the SHAP values was 0.742972, while the model output was 0.544626. If this difference is acceptable you can set check_additivity=False to disable this check.

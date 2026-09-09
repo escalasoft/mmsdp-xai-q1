@@ -1,0 +1,8 @@
+| family_a | family_b | jaccard | k | row_feature_sign_agreement_shared | shared | sign_zero_band | signed_mean_agreement_shared | spearman_support | spearman_union | thresholds_pass | union_count |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| LR | XGB | 0.5 | 3 | 0.9816326530612245 | ['amq', 'issues'] | 1e-12 | 1.0 | union of top-k; average tied ranks; native-scale magnitudes ranked within family | -0.39999999999999997 | False | 4 |
+| LR | XGB | 0.5384615384615384 | 10 | 0.8507288629737609 | ['amq', 'and', 'browse', 'id', 'incubator', 'issues', 'test'] | 1e-12 | 0.8571428571428571 | union of top-k; average tied ranks; native-scale magnitudes ranked within family | 0.5 | False | 13 |
+| LR | LGB | 0.2 | 3 | 0.9795918367346939 | ['amq'] | 1e-12 | 1.0 | union of top-k; average tied ranks; native-scale magnitudes ranked within family | -0.8999999999999998 | False | 5 |
+| LR | LGB | 0.6666666666666666 | 10 | 0.9892857142857143 | ['amq', 'browse', 'id', 'incubator', 'issues', 'svn', 'test', 'trunk'] | 1e-12 | 1.0 | union of top-k; average tied ranks; native-scale magnitudes ranked within family | 0.4055944055944056 | False | 12 |
+| XGB | LGB | 0.5 | 3 | 0.9918367346938776 | ['amq', 'browse'] | 1e-12 | 1.0 | union of top-k; average tied ranks; native-scale magnitudes ranked within family | -0.39999999999999997 | False | 4 |
+| XGB | LGB | 0.42857142857142855 | 10 | 0.8224489795918367 | ['amq', 'browse', 'id', 'incubator', 'issues', 'test'] | 1e-12 | 0.8333333333333334 | union of top-k; average tied ranks; native-scale magnitudes ranked within family | 0.4197802197802198 | False | 14 |

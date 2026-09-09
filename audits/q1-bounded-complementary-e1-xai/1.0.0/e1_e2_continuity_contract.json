@@ -1,0 +1,1 @@
+{"algebraic_propagation":"DENY","chain":["TEXT features","TEXT unimodal predictor","TEXT probability","frozen E2 modality input","frozen late fusion","multimodal prediction"],"connection":["ARCHITECTURAL","TRACEABLE","INTERPRETIVE"],"same_row_empirical_claim":"REQUIRES_SEPARATE_PROOF"}

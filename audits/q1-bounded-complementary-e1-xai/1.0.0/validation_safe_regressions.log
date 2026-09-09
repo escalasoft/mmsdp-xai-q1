@@ -1,0 +1,1877 @@
+.EEEEE.................................................................. [ 16%]
+.E..EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE.................................... [ 33%]
+...................EE..................EEEEEEEEE.EE..................... [ 49%]
+............................................................F........... [ 66%]
+........................................................................ [ 82%]
+........................................................................ [ 99%]
+...                                                                      [100%]
+==================================== ERRORS ====================================
+_____________ ERROR at setup of test_parent_required[verdict-PASS] _____________
+
+    @pytest.fixture(scope="module")
+    def parents():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_canonical_apachejit_train_reentry.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src/evaluation/q1_e1_canonical_apachejit_train_reentry.py:94: in load_parent
+    inherited, r3, r4parent, reads = r4a.load_parent()
+                                     ^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+________ ERROR at setup of test_parent_required[project_modalities-41] _________
+
+    @pytest.fixture(scope="module")
+    def parents():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_canonical_apachejit_train_reentry.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src/evaluation/q1_e1_canonical_apachejit_train_reentry.py:94: in load_parent
+    inherited, r3, r4parent, reads = r4a.load_parent()
+                                     ^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_____________ ERROR at setup of test_parent_required[projects-13] ______________
+
+    @pytest.fixture(scope="module")
+    def parents():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_canonical_apachejit_train_reentry.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src/evaluation/q1_e1_canonical_apachejit_train_reentry.py:94: in load_parent
+    inherited, r3, r4parent, reads = r4a.load_parent()
+                                     ^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_ ERROR at setup of test_parent_required[combined_eligible_with_limitation-2] __
+
+    @pytest.fixture(scope="module")
+    def parents():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_canonical_apachejit_train_reentry.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src/evaluation/q1_e1_canonical_apachejit_train_reentry.py:94: in load_parent
+    inherited, r3, r4parent, reads = r4a.load_parent()
+                                     ^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+________ ERROR at setup of test_parent_required[new_representations-1] _________
+
+    @pytest.fixture(scope="module")
+    def parents():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_canonical_apachejit_train_reentry.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src/evaluation/q1_e1_canonical_apachejit_train_reentry.py:94: in load_parent
+    inherited, r3, r4parent, reads = r4a.load_parent()
+                                     ^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_________________ ERROR at setup of test_parent_r4a_unchanged __________________
+
+    @pytest.fixture(scope="module")
+    def parents():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_canonical_apachejit_train_reentry.py:13:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src/evaluation/q1_e1_canonical_apachejit_train_reentry.py:94: in load_parent
+    inherited, r3, r4parent, reads = r4a.load_parent()
+                                     ^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_______ ERROR at setup of test_parent_material_difference[verdict-PASS] ________
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+________ ERROR at setup of test_parent_material_difference[projects-13] ________
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_ ERROR at setup of test_parent_material_difference[expected_train_rows-56820] _
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_ ERROR at setup of test_parent_material_difference[persisted_representations-2] _
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_ ERROR at setup of test_parent_material_difference[persisted_unique_train_rows-80] _
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+__ ERROR at setup of test_parent_material_difference[compatible_e1_scopes-3] ___
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_ ERROR at setup of test_parent_zero_counters_required[T1_IDENTITY_ACCESS_COUNT] _
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_ ERROR at setup of test_parent_zero_counters_required[T1_FEATURE_VALUE_ACCESS_COUNT] _
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_ ERROR at setup of test_parent_zero_counters_required[T1_LABEL_ACCESS_COUNT] __
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+__ ERROR at setup of test_parent_zero_counters_required[T1_MODEL_QUERY_COUNT] __
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+____ ERROR at setup of test_parent_zero_counters_required[T2_ACCESS_COUNT] _____
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+___ ERROR at setup of test_parent_zero_counters_required[T2_ROW_READ_COUNT] ____
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_ ERROR at setup of test_parent_zero_counters_required[T2_IDENTITY_READ_COUNT] _
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_ ERROR at setup of test_parent_zero_counters_required[T2_FEATURE_READ_COUNT] __
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+__ ERROR at setup of test_parent_zero_counters_required[T2_LABEL_READ_COUNT] ___
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+__ ERROR at setup of test_parent_zero_counters_required[T2_MODEL_QUERY_COUNT] __
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+___ ERROR at setup of test_parent_zero_counters_required[MODEL_QUERY_COUNT] ____
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+__ ERROR at setup of test_parent_zero_counters_required[SHAP_EXECUTION_COUNT] __
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_ ERROR at setup of test_parent_zero_counters_required[ANALYTICAL_ATTRIBUTION_EXECUTION_COUNT] _
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+__ ERROR at setup of test_parent_zero_counters_required[E1_ATTRIBUTION_COUNT] __
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_ ERROR at setup of test_parent_zero_counters_required[E1_EXPLAINED_ROW_COUNT] _
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_ ERROR at setup of test_parent_zero_counters_required[FIGURE_GENERATION_COUNT] _
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_____ ERROR at setup of test_parent_zero_counters_required[RETRAIN_COUNT] ______
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+______ ERROR at setup of test_parent_zero_counters_required[REFIT_COUNT] _______
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+__ ERROR at setup of test_parent_zero_counters_required[RECALIBRATION_COUNT] ___
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_ ERROR at setup of test_parent_zero_counters_required[HYPERPARAMETER_TUNING_COUNT] _
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_ ERROR at setup of test_parent_zero_counters_required[MODEL_SELECTION_COUNT] __
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_ ERROR at setup of test_parent_zero_counters_required[PREDICTIVE_METRIC_RECOMPUTATION_COUNT] _
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+____ ERROR at setup of test_parent_zero_counters_required[MODEL_LOAD_COUNT] ____
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+______ ERROR at setup of test_parent_zero_counters_required[COMMIT_COUNT] ______
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_______ ERROR at setup of test_parent_zero_counters_required[PUSH_COUNT] _______
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+________ ERROR at setup of test_parent_zero_counters_required[PR_COUNT] ________
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+__________ ERROR at setup of test_modality_and_order_preserved[CODE] ___________
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_________ ERROR at setup of test_modality_and_order_preserved[PROCESS] _________
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_______________ ERROR at setup of test_partial_reporting_all_42 ________________
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_______________ ERROR at setup of test_no_scope_disappears[drop] _______________
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+____________ ERROR at setup of test_no_scope_disappears[duplicate] _____________
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_____________ ERROR at setup of test_no_scope_disappears[modality] _____________
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+______________ ERROR at setup of test_no_scope_disappears[parent] ______________
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_________________ ERROR at setup of test_parent_reference_only _________________
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+____ ERROR at setup of test_all_vectorizers_verified_without_reconstruction ____
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+____________ ERROR at setup of test_weak_coverage_keeps_t1_blocked _____________
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+_________________ ERROR at setup of test_actual_counters_zero __________________
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+___________ ERROR at setup of test_parent_byte_identities_unchanged ____________
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+___________ ERROR at setup of test_deterministic_jsonl_and_manifest ____________
+
+    @pytest.fixture(scope="module")
+    def evidence():
+>       return r.load_parent()
+               ^^^^^^^^^^^^^^^
+
+tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py:12:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+    def load_parent():
+        inherited, r3, reads = r4.metadata()
+        base = ROOT / r4.OUT
+        raw = (base / "MANIFEST.sha256").read_bytes()
+        if sha(raw) != R4_PIN:
+            raise ValueError("R4 immutable manifest mismatch")
+        entries = {}
+        d = {}
+        for line in raw.decode().splitlines():
+            h, n = line.split("  ", 1)
+            p = base / n
+            if (
+                n in entries
+                or Path(n).is_absolute()
+                or ".." in Path(n).parts
+                or p.resolve() != p
+            ):
+                raise ValueError("Unsafe parent manifest")
+            data = p.read_bytes()
+            if sha(data) != h:
+>               raise ValueError("Parent digest mismatch")
+E               ValueError: Parent digest mismatch
+
+src/evaluation/q1_e1_remaining_train_source_transformation_resolution.py:90: ValueError
+=================================== FAILURES ===================================
+____________ test_persisted_representation_cross_artifact_integrity ____________
+
+    def test_persisted_representation_cross_artifact_integrity():
+        base = r.ROOT / r.OUT / "representations/apache_activemq/TEXT"
+        if not base.exists():
+            pytest.skip("Execution artifact not generated yet")
+        assert (
+>           r.verify_persistence(base)
+            == "ELIGIBLE_FOR_DOWNSTREAM_REVIEW_NOT_XAI_AUTHORIZATION"
+        )
+
+tests/evaluation/test_q1_e1_prospective_train_representation_reconstruction.py:373:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+base = PosixPath('/Users/alex/ESTUDIO/DOCTORADO/Articulos/CONTRIBUCION/MMSDP-XAI-Q1/audits/q1-e1-prospective-train-representations/1.0.0/representations/apache_activemq/TEXT')
+
+    def verify_persistence(base):
+        base = Path(base)
+        manifest = base / "MANIFEST.sha256"
+        if not manifest.is_file():
+            raise ValueError("No manifest: STOP")
+        required = {
+            "matrix.bin",
+            "row_registry.jsonl",
+            "column_registry.jsonl",
+            "transform_state.json",
+            "schema.json",
+            "digests.json",
+            "provenance.json",
+            "raw_message_registry.jsonl",
+            "vocabulary.json",
+            "idf.json",
+            "token_column_registry.jsonl",
+            "creation_runtime.json",
+            "csr_data.f64",
+            "csr_indices.u64",
+            "csr_indptr.u64",
+            "csr_shape.json",
+        }
+        entries = {}
+        for line in manifest.read_text().splitlines():
+            h, n = line.split("  ", 1)
+            if Path(n).name != n or n in entries:
+                raise ValueError("Invalid manifest")
+            entries[n] = h
+        if not required <= entries.keys() or set(entries) != {
+            p.name for p in base.iterdir() if p.name != "MANIFEST.sha256"
+        }:
+            raise ValueError("Persistence incomplete: STOP")
+        for n, h in entries.items():
+            p = base / n
+            if p.is_symlink() or not p.is_file() or sha(p.read_bytes()) != h:
+>               raise ValueError("Persistence integrity: STOP")
+E               ValueError: Persistence integrity: STOP
+
+src/evaluation/q1_e1_prospective_train_representation_reconstruction.py:379: ValueError
+=========================== short test summary info ============================
+FAILED tests/evaluation/test_q1_e1_prospective_train_representation_reconstruction.py::test_persisted_representation_cross_artifact_integrity
+ERROR tests/evaluation/test_q1_e1_canonical_apachejit_train_reentry.py::test_parent_required[verdict-PASS]
+ERROR tests/evaluation/test_q1_e1_canonical_apachejit_train_reentry.py::test_parent_required[project_modalities-41]
+ERROR tests/evaluation/test_q1_e1_canonical_apachejit_train_reentry.py::test_parent_required[projects-13]
+ERROR tests/evaluation/test_q1_e1_canonical_apachejit_train_reentry.py::test_parent_required[combined_eligible_with_limitation-2]
+ERROR tests/evaluation/test_q1_e1_canonical_apachejit_train_reentry.py::test_parent_required[new_representations-1]
+ERROR tests/evaluation/test_q1_e1_canonical_apachejit_train_reentry.py::test_parent_r4a_unchanged
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_material_difference[verdict-PASS]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_material_difference[projects-13]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_material_difference[expected_train_rows-56820]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_material_difference[persisted_representations-2]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_material_difference[persisted_unique_train_rows-80]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_material_difference[compatible_e1_scopes-3]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[T1_IDENTITY_ACCESS_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[T1_FEATURE_VALUE_ACCESS_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[T1_LABEL_ACCESS_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[T1_MODEL_QUERY_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[T2_ACCESS_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[T2_ROW_READ_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[T2_IDENTITY_READ_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[T2_FEATURE_READ_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[T2_LABEL_READ_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[T2_MODEL_QUERY_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[MODEL_QUERY_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[SHAP_EXECUTION_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[ANALYTICAL_ATTRIBUTION_EXECUTION_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[E1_ATTRIBUTION_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[E1_EXPLAINED_ROW_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[FIGURE_GENERATION_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[RETRAIN_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[REFIT_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[RECALIBRATION_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[HYPERPARAMETER_TUNING_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[MODEL_SELECTION_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[PREDICTIVE_METRIC_RECOMPUTATION_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[MODEL_LOAD_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[COMMIT_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[PUSH_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_zero_counters_required[PR_COUNT]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_modality_and_order_preserved[CODE]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_modality_and_order_preserved[PROCESS]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_partial_reporting_all_42
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_no_scope_disappears[drop]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_no_scope_disappears[duplicate]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_no_scope_disappears[modality]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_no_scope_disappears[parent]
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_reference_only
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_all_vectorizers_verified_without_reconstruction
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_weak_coverage_keeps_t1_blocked
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_actual_counters_zero
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_parent_byte_identities_unchanged
+ERROR tests/evaluation/test_q1_e1_remaining_train_source_transformation_resolution.py::test_deterministic_jsonl_and_manifest
+1 failed, 383 passed, 1 deselected, 51 errors in 15.41s

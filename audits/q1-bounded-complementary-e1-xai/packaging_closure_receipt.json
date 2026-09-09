@@ -1,0 +1,117 @@
+{
+  "E2_unchanged": true,
+  "T1_labels": 0,
+  "T2_all_counters": 0,
+  "after_manifest_sha256": "3344d0fee34d422e8d67fde217353c7240dcdcf048c1917f283d84937bf72574",
+  "after_package_file_map_sha256": "a1a5de707ce4f09477c2fc4e3721fd60148e8473ab08ed3985528fdf1b8d5c54",
+  "before_manifest_sha256": "a0ad625e8287a22a86397b1979cb335220c4e55339ef4080130274d82fd4c15b",
+  "checks": {
+    "git_cached_diff_check": {
+      "OK_lines": 0,
+      "command": "git diff --cached --check",
+      "exit_code": 0,
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "git_diff_check": {
+      "OK_lines": 0,
+      "command": "git diff --check",
+      "exit_code": 0,
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "nested_manifest": {
+      "OK_lines": 16,
+      "command": "shasum -a 256 -c MANIFEST.sha256",
+      "exit_code": 0,
+      "stderr": "",
+      "stdout_sha256": "65cc80a9f2ab710bbf7fe212e9bc99d851f636b85c3fd379bf3bb37f2981721d"
+    },
+    "root_manifest": {
+      "OK_lines": 216,
+      "command": "shasum -a 256 -c MANIFEST.sha256",
+      "exit_code": 0,
+      "stderr": "",
+      "stdout_sha256": "af356049b404b1cb4dd0c345ad94dc5699472bb2963bea0c51d254cd250bb6ac"
+    }
+  },
+  "files_written": {
+    "MANIFEST.sha256": {
+      "after": "3344d0fee34d422e8d67fde217353c7240dcdcf048c1917f283d84937bf72574",
+      "before": "a0ad625e8287a22a86397b1979cb335220c4e55339ef4080130274d82fd4c15b"
+    },
+    "e1_figure_registry.jsonl": {
+      "after": "f1a4f231c5a03659257778f80013a2bd666228f41dc13df2845c8a53a2d2f9be",
+      "before": "51a1accc57d32bf87d9b5a5d51f89fd5ae8920391ce95a3a303332fbc7251215"
+    },
+    "manifest_verification.json": {
+      "after": "a8f1ecb7d6b0e4e8b512111f1de8bdf44c2ff0941a19f99ff210b518733d4026",
+      "before": "4b38a85029adf71cacd43925bb9db96f4cb0b78d1ee0d7bb0a15e77d2f2decdc"
+    },
+    "packaging/pre_normalization_manifest.sha256.txt": {
+      "after": "a0ad625e8287a22a86397b1979cb335220c4e55339ef4080130274d82fd4c15b",
+      "before": null
+    },
+    "packaging/reconcile_packaging.py": {
+      "after": "6f9bf87654780940c5d840b25bc672f1e6af5584c24049cb37b1e9c44cdfa620",
+      "before": null
+    },
+    "packaging/reconciliation.json": {
+      "after": "6dc8dea299c3e33cef4bbad0a78c626e864cddf61f2d6c7b1cf0e42ab5f99a0a",
+      "before": null
+    },
+    "packaging/serialization_digest_registry.json": {
+      "after": "cdd140ef75104aa61fd44c1af226586883f9af3b0457a1280377fdce948528de",
+      "before": null
+    },
+    "packaging/validation_safe_regressions.original.log.gz": {
+      "after": "a7b5858e99f1984f89605bf287861c3f8c732ccf1d21b2940e8a4bf1b250ba73",
+      "before": null
+    },
+    "representations/train_verified_copy/MANIFEST.sha256": {
+      "after": "6af079b7e1c79b0aeee85be41163a90edfd3028565e8be3c60543cf8d5b3b0bf",
+      "before": "2dc7b27f3ddd67c0bd7c2e7397a0fcfbf311a5fa9bf22f1192c054494824176f"
+    },
+    "text_train_representation_integrity.json": {
+      "after": "bdcb98bae1b71f13c4900edd705ed0fa3c444bea1a8abba89ed8673e336e0072",
+      "before": "a8b9736abf109cc54a7b8c138068e9d936d49a6a06a7590a42144e27695514fb"
+    },
+    "validation_safe_regressions.log": {
+      "after": "d9ee050a19a144660e8a4da7cc2f9ebd61f598560ba4c9c148c9c620d6bb9333",
+      "before": "147df49a536045130c8d15badb9774de04a60a1b80ddc7cb7e91aee4adbb9a26"
+    }
+  },
+  "final_manifest_entry_count": 216,
+  "final_mismatches": 0,
+  "git_commit_push_PR": false,
+  "git_packaging_completeness": {
+    "action": "Stage all existing manifest-referenced logs; no verification or science rerun",
+    "additional_verification_record_serialization": {
+      "after_sha256": "d9ee050a19a144660e8a4da7cc2f9ebd61f598560ba4c9c148c9c620d6bb9333",
+      "archive_roundtrip_sha256": "147df49a536045130c8d15badb9774de04a60a1b80ddc7cb7e91aee4adbb9a26",
+      "before_sha256": "147df49a536045130c8d15badb9774de04a60a1b80ddc7cb7e91aee4adbb9a26",
+      "classification": "WHITESPACE_SERIALIZATION_ONLY",
+      "original_byte_archive": "packaging/validation_safe_regressions.original.log.gz",
+      "path": "validation_safe_regressions.log",
+      "scientific_test_results_and_line_order_unchanged": true
+    },
+    "previously_ignored_manifest_members": [
+      "execution.log",
+      "execution_remaining.log",
+      "validation_focused.log",
+      "validation_focused_final.log",
+      "validation_initial_collection.log",
+      "validation_safe_regressions.log"
+    ]
+  },
+  "original_mismatches": 23,
+  "package": "1.0.0",
+  "parents_unchanged": true,
+  "scientific_content_unchanged": true,
+  "scientific_recomputation": 0,
+  "staged_file_count": 222,
+  "staged_manifest_members_verified": 216,
+  "unstaged_files": 0,
+  "untracked_files": 0,
+  "verdict": "PACKAGING_MANIFEST_RECONCILIATION_PASS"
+}

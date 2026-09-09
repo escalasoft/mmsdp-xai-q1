@@ -1,0 +1,6 @@
+| project | modality | family | status | representation | predictor | background | foreground | local_cases | scale |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| apache/activemq | TEXT | LR | VALID | RECONSTRUCTED | RECONSTRUCTED | 256 | 245 | 8 | LOGIT |
+| apache/activemq | TEXT | RF | EXCLUDED_EXACT_ADDITIVITY_FAILURE | RECONSTRUCTED | RECONSTRUCTED | 256 | 245 | 8 | POSITIVE_CLASS_OUTPUT |
+| apache/activemq | TEXT | XGB | VALID | RECONSTRUCTED | RECONSTRUCTED | 256 | 245 | 8 | RAW_MARGIN |
+| apache/activemq | TEXT | LGB | VALID | RECONSTRUCTED | RECONSTRUCTED | 256 | 245 | 8 | RAW_MARGIN |

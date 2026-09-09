@@ -1,0 +1,6 @@
+| family | fidelity | n | max_residual | tolerance | stability | repetitions | max_repeat_difference |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| LR | FIDELITY_PASS | 245 | 1.3322676295501878e-15 | 1e-10 * (1 + abs(model_output)) | STABILITY_PASS | 20 | 0.0 |
+| RF | FAIL_INTERNAL_ADDITIVITY | 0 | UNAVAILABLE | Frozen exact check failed | INSUFFICIENT_EVIDENCE | 0 | UNAVAILABLE |
+| XGB | FIDELITY_PASS | 245 | 1.6689300537109375e-06 | 1e-06 * (1 + abs(model_output)) | STABILITY_PASS | 20 | 0.0 |
+| LGB | FIDELITY_PASS | 245 | 1.0182965581861936e-12 | 1e-06 * (1 + abs(model_output)) | STABILITY_PASS | 20 | 0.0 |

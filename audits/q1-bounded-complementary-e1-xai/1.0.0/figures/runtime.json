@@ -1,0 +1,7 @@
+{
+  "python": "3.12.9 (v3.12.9:fdb81425a9a, Feb  4 2025, 12:21:36) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "matplotlib": "3.11.1",
+  "numpy": "2.5.3",
+  "platform": "macOS-15.7.7-x86_64-i386-64bit",
+  "role": "Separate rendering environment; frozen XAI environment unchanged"
+}

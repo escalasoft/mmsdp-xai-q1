@@ -1,0 +1,134 @@
+[
+  {
+    "file": "code_train_reconstruction_ledger.jsonl",
+    "terminal_LF_only": true,
+    "expected": "8f35b477372dfb1bca59e7626bc30cfbdc6842094c23c3037d83ba28a9deeb34",
+    "actual": "8c1858dd683ffb002acb6b9c129f765536212786a55a5c00b3ccd6c7e5d241dc"
+  },
+  {
+    "file": "process_train_reconstruction_ledger.jsonl",
+    "terminal_LF_only": true,
+    "expected": "9e74d7795148302dc50d837018946d4a513b2593c2807872e5721551c618b276",
+    "actual": "6db84f7d5e78e51113e547b7d71ad97620362b0e705b98c79f4833fed5ced519"
+  },
+  {
+    "file": "representations/apache_activemq/TEXT/column_registry.jsonl",
+    "terminal_LF_only": true,
+    "expected": "0434ca04c4663508b367dd5645f56ac2c842826086e5796702081cae748c1fe4",
+    "actual": "9bca25cf090945b93dd9559e67bfec36a5361176cb9169429c9a28775aa2320b"
+  },
+  {
+    "file": "representations/apache_activemq/TEXT/raw_message_registry.jsonl",
+    "terminal_LF_only": true,
+    "expected": "d5042c03bbfac2fb480ce95598a2e180190c78e9c15191a7942f1ffbcc39b81a",
+    "actual": "9399b8fdf93f6a00bc03d3084d8a73bd3d073544b352333d08907cccdcbfe385"
+  },
+  {
+    "file": "representations/apache_activemq/TEXT/row_registry.jsonl",
+    "terminal_LF_only": true,
+    "expected": "5c46ed62137922dcd7c18fd45e1c10c31b4ccf8d0b9fb3d6187a80a5e06c1c80",
+    "actual": "ed53b15cc2f75f3c189d54553cdbab7ef5c3a861142424604ddba114fcf39cbb"
+  },
+  {
+    "file": "representations/apache_activemq/TEXT/token_column_registry.jsonl",
+    "terminal_LF_only": true,
+    "expected": "0434ca04c4663508b367dd5645f56ac2c842826086e5796702081cae748c1fe4",
+    "actual": "9bca25cf090945b93dd9559e67bfec36a5361176cb9169429c9a28775aa2320b"
+  },
+  {
+    "file": "representations/apache_activemq/TEXT/transform_state.json",
+    "terminal_LF_only": true,
+    "expected": "3ec8674534cc2001e030e56cb9a37bbf8d66d7564b4052084adaae0edc063559",
+    "actual": "ff724aa347212dad9e0e2d12d8422286ef8b33ffaf885cb024dc53a980b2f96c"
+  },
+  {
+    "file": "text_train_reconstruction_ledger.jsonl",
+    "terminal_LF_only": true,
+    "expected": "6c09d050bff0bfc9795b52c8531196fc93dfee678f6c563229ccd290b69fbfda",
+    "actual": "afb3867c880e934a007d88f78b0ea91e29e56c8654381793f733ac1914a054d4"
+  },
+  {
+    "file": "train_background_readiness.jsonl",
+    "terminal_LF_only": true,
+    "expected": "db5bbd42a0e2a3b7efe3384833f328724b01cd32b772a6f48b7926e501be34db",
+    "actual": "546a9f7bc1737918685b0b4ff694e911f3a0966d36ff5ec5bd561663c57316d8"
+  },
+  {
+    "file": "train_correlation_readiness.jsonl",
+    "terminal_LF_only": true,
+    "expected": "b581fc43637cd0f91ab57c34698257b4e2f5d2081efec05f4da94eabdc192874",
+    "actual": "591bda7c5ac07777899a89b59ada0feb33d4365f66cb9b24998af62d90628a11"
+  },
+  {
+    "file": "train_feature_value_integrity.jsonl",
+    "terminal_LF_only": true,
+    "expected": "4b97668f60fe45ae39769108bd2c8180db576753d0b0c1e911970e50fe05b6e8",
+    "actual": "dc639c763b14ad3a7c957cd05d9178516974a4fa660797b9d267cc39c393f837"
+  },
+  {
+    "file": "train_persistence_verification.jsonl",
+    "terminal_LF_only": true,
+    "expected": "191a59c270c163f79692255b6f8fc22a9564a5dabb677e880deb1c8d48eca419",
+    "actual": "b75434d5eb9902ed3275cff0f4d9c226474ac13a3bfbebe1011be30f042575f5"
+  },
+  {
+    "file": "train_reconstruction_repeatability.jsonl",
+    "terminal_LF_only": true,
+    "expected": "4fe56c5e40b862e7829912e393d7f7a4afa3e65a8008861cfc4bd037efc94481",
+    "actual": "ffe35d1ab5daf8163e33bacdde4d42327e6d620d2fa819e01275bce14a9c22e4"
+  },
+  {
+    "file": "train_representation_column_registry.jsonl",
+    "terminal_LF_only": true,
+    "expected": "f286220b7b18ef8d646f7a265f01b16b914de73a3e2f04b73c846ab3439afefb",
+    "actual": "91443d6428dc72187086d7a468bf665350fe13b261bc3d1e3aaff53280d8d64c"
+  },
+  {
+    "file": "train_representation_digest_registry.jsonl",
+    "terminal_LF_only": true,
+    "expected": "a636f8ac5c3e782da5ecf4f42638ee9f9da195e4c745d3afaf602f92bd55eb3f",
+    "actual": "242bb5fcbee825c6b897dd07149f687d93d50789c5d442ef0f32ff569ce2c26d"
+  },
+  {
+    "file": "train_representation_model_compatibility.jsonl",
+    "terminal_LF_only": true,
+    "expected": "f492a38d13dd20c4c9f152776464cc0c619241dedbe5b6d174237b696fd99437",
+    "actual": "d4f253b3deb45b8ed5436b6a5426d7d36a3078eb2bd174a58f9b92499ac759c3"
+  },
+  {
+    "file": "train_representation_row_registry.jsonl",
+    "terminal_LF_only": true,
+    "expected": "e3358ce3f446defadba06cae0a54b31b1f287bfd65b9b6b95c9c4cfd4cada6b9",
+    "actual": "8570b1bfe01f37e1694c178431756ab340bb24f879ba886a6014533144628c58"
+  },
+  {
+    "file": "train_representation_to_e1_scope_linkage.jsonl",
+    "terminal_LF_only": true,
+    "expected": "f492a38d13dd20c4c9f152776464cc0c619241dedbe5b6d174237b696fd99437",
+    "actual": "d4f253b3deb45b8ed5436b6a5426d7d36a3078eb2bd174a58f9b92499ac759c3"
+  },
+  {
+    "file": "train_row_identity_registry.jsonl",
+    "terminal_LF_only": true,
+    "expected": "7e78380f3aa3452c1066cf1d81995577f681a0a762a91cd4be61c945a1cebcb8",
+    "actual": "73854126663a9cf8798465bcc25444101d0f2550d4093bfaf48cf46d38f4b4b3"
+  },
+  {
+    "file": "train_source_admission_ledger.jsonl",
+    "terminal_LF_only": true,
+    "expected": "1816b949ee00792120a8abb9189816757205bedc44d278a4b236e284d9ede720",
+    "actual": "e2411036c39629b80895a2399c1ddd0405b8ff6e15c7654f8ff64cf770895bfe"
+  },
+  {
+    "file": "train_transform_state_registry.jsonl",
+    "terminal_LF_only": true,
+    "expected": "c8cbd003af87456d8ffe36efc7c0ba322f85b885adf6e623830af500c0dffd39",
+    "actual": "5e2d5df1ebcbf7c8ba920daa45dfa768b783a755bc258d8ff6d215f01df8de80"
+  },
+  {
+    "file": "train_universe_registry.jsonl",
+    "terminal_LF_only": true,
+    "expected": "5651c08650fdbb9a5aeddab34e4e85146cfea893f6c3b3af074c9283cfed758d",
+    "actual": "08faf73f878d90edf6632461963f079d0d4cfe366957a19835c38132309e4065"
+  }
+]

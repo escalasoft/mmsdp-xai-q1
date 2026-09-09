@@ -1,0 +1,1 @@
+{"RQ-E1.1":"Which TEXT features most strongly influence ActiveMQ unimodal predictions?","RQ-E1.2":"Are explanations faithful to the frozen reconstructed predictors?","RQ-E1.3":"Are explanations stable under the frozen protocol?","RQ-E1.4":"How consistent are explanations across LR, RF, XGB and LGB?","RQ-E1.5":"How does bounded E1 complement primary E2?"}
