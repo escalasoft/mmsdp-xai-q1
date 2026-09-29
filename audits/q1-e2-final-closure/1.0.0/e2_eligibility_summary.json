@@ -1,0 +1,32 @@
+{
+  "configuration_counts": {
+    "C+P": 56,
+    "C+P+T": 55,
+    "C+T": 55,
+    "P+T": 55
+  },
+  "eligible_scopes": 221,
+  "exclusions": [
+    [
+      "apache/zeppelin",
+      "Logistic Regression",
+      "C+P+T"
+    ],
+    [
+      "apache/zeppelin",
+      "Logistic Regression",
+      "C+T"
+    ],
+    [
+      "apache/zeppelin",
+      "Logistic Regression",
+      "P+T"
+    ]
+  ],
+  "frozen_T1_global_rows": 0,
+  "frozen_T1_local_rows": 0,
+  "not_a_successful_empty_selection": true,
+  "scope_rows_executed": 0,
+  "source_status": "NOT_FROZEN_SOURCE_ACCESS_CONTRACT_BLOCKED",
+  "status": "READINESS_COUNTS_CONFIRMED_EXECUTION_BLOCKED"
+}

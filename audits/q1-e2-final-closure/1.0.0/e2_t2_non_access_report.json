@@ -1,0 +1,15 @@
+{
+  "access_boundary": "Only repository metadata, implementation text, audit governance/report documents and resolved OOF mean metadata inspected. No T1/T2 prediction ledger, mixed dataset, labels, features or T2 metrics opened. Path inventory is metadata only.",
+  "governance_counters": {
+    "E1_reexecution_count": 0,
+    "E2_attribution_execution_count": 0,
+    "T1_prediction_payload_access_count": 0,
+    "T2_scientific_access_count": 0,
+    "calibration_refit_count": 0,
+    "model_retraining_count": 0,
+    "predictive_recomputation_count": 0
+  },
+  "scientific_T2_access_count": 0,
+  "scientific_T2_access_log": [],
+  "status": "NO_SCIENTIFIC_T2_ACCESS"
+}

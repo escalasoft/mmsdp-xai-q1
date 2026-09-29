@@ -1,0 +1,151 @@
+{
+  "T1_foreground_rows_used": 0,
+  "active_branch": "sprint-10/q1-e2-final-closure",
+  "critical_inputs": [
+    {
+      "bytes": 803496,
+      "path": "audits/q1-primary-xai-e1-input-e2-reference-resolution/1.0.0/e2_fusion_decomposition_readiness.json",
+      "sha256": "c4901713d632f431f6fa5f2a940d029d203c388d6fd13fc22f6d6fc353e6defa"
+    },
+    {
+      "bytes": 837,
+      "path": "audits/q1-primary-xai-e1-input-e2-reference-resolution/1.0.0/q1_execution_readiness.json",
+      "sha256": "b8a524892bf203137ac5d0c23d5427d68189405ce1b1975fc6eade01c836c6f2"
+    },
+    {
+      "bytes": 364,
+      "path": "audits/q1-primary-xai-e1-input-e2-reference-resolution/1.0.0/exact_remaining_blockers.json",
+      "sha256": "0cf50c9b1b9b78a43e4e689bc6ce4b66eccfd62d88d2eacae026b8f3acc77dda"
+    },
+    {
+      "bytes": 3939,
+      "path": "audits/q1-primary-xai-e1-input-e2-reference-resolution/1.0.0/SPRINT56_2E_E1_E2_RESOLUTION_REPORT.md",
+      "sha256": "781ed583c599e222fd7d1b5b624c67d5a9c6087365a365b88bafe03b9003dcc3"
+    },
+    {
+      "bytes": 803620,
+      "path": "audits/q1-primary-xai-e1-input-e2-reference-resolution/1.0.0/e2_primary_reference_decision.json",
+      "sha256": "44a0914330d872ece2052be9592c95c4316fdd21f1077cd0ca49e2196df2abe6"
+    },
+    {
+      "bytes": 153250,
+      "path": "audits/q1-primary-xai-e1-input-e2-reference-resolution/1.0.0/e2_reference_means.jsonl",
+      "sha256": "11ad3d6cccf6465340eeb23f6468ed1ae3404d3c25ad54c4b4c62696173025a2"
+    },
+    {
+      "bytes": 3162,
+      "path": "audits/q1-primary-xai-population-freeze/1.0.0/population_selection_summary.json",
+      "sha256": "ef56ffcd9502e4caefcad2b24c72a2e1e4309b36d8ee0920deeb772041c4cbee"
+    },
+    {
+      "bytes": 1805,
+      "path": "audits/q1-primary-xai-population-freeze/1.0.0/population_selection_contract.json",
+      "sha256": "482f9066e70a1254c782a27b99559ad96d0a61a08fbe0d3a90ebe29fdf9fdb9e"
+    },
+    {
+      "bytes": 2249,
+      "path": "audits/q1-primary-xai-population-freeze/1.0.0/population_source_access_blocker.json",
+      "sha256": "ba5de422025a477a64f69590618725b37df8551cbc045243b391425cc0c9c05b"
+    },
+    {
+      "bytes": 455,
+      "path": "audits/q1-primary-xai-population-freeze/1.0.0/scope_readiness_summary.json",
+      "sha256": "266895e54e8c0f7fa82672f0cf620eca551a2419ecac172dd4e49412318750d2"
+    },
+    {
+      "bytes": 647,
+      "path": "audits/q1-primary-xai-population-freeze/1.0.0/fusion_explanation_contract.json",
+      "sha256": "ad99595bf88bf87eaa0979043030a3e95c78b5d9b7ec6489db35fb3d3a368ac9"
+    },
+    {
+      "bytes": 0,
+      "path": "audits/q1-primary-xai-population-freeze/1.0.0/t1_global_foreground_population.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "audits/q1-primary-xai-population-freeze/1.0.0/t1_local_case_population.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1588,
+      "path": "audits/q1-primary-xai-alternative-design/1.0.0/e2_primary_scientific_scope.json",
+      "sha256": "f8a1cb1bc7d310035634fb82b00836652008bfb9f7aba2ef22e45332db94583f"
+    },
+    {
+      "bytes": 287,
+      "path": "audits/q1-bounded-complementary-e1-xai/1.0.0/e1_e2_continuity_contract.json",
+      "sha256": "8693037aa42dff83df9de31ec0dac8d3429367c0cc9dff54af477c24f3e2c030"
+    },
+    {
+      "bytes": 5905,
+      "path": "audits/q1-bounded-complementary-e1-xai/1.0.0/SPRINT56_3C_BOUNDED_COMPLEMENTARY_E1_XAI_REPORT.md",
+      "sha256": "900c7c024d180e1308b71f6e683ae13fcbe66020b8e021de7db8a6df37ee200b"
+    },
+    {
+      "bytes": 1085,
+      "path": "audits/q1-primary-xai-missing-evidence-remediation/1.0.0/fidelity_execution_contract.json",
+      "sha256": "5d74d7b6fea6d2d557070ea6fd9eae89b7f835f646a29e1e16cafe280d7dbfc1"
+    }
+  ],
+  "critical_inputs_hash_recheck": "PASS",
+  "eligible_scope_counts": {
+    "C+P": 56,
+    "C+P+T": 55,
+    "C+T": 55,
+    "P+T": 55
+  },
+  "fidelity_status": "NOT_EXECUTED",
+  "files_created_only_under": "audits/q1-e2-final-closure/1.0.0",
+  "frozen_predictive_artifacts_changed": false,
+  "governance_counters": {
+    "E1_reexecution_count": 0,
+    "E2_attribution_execution_count": 0,
+    "T1_prediction_payload_access_count": 0,
+    "T2_scientific_access_count": 0,
+    "calibration_refit_count": 0,
+    "model_retraining_count": 0,
+    "predictive_recomputation_count": 0
+  },
+  "hash_convention": "Manifest lists other diagnostic outputs; MANIFEST.sha256 includes execution manifest and all other files, excludes itself to avoid recursive hashing.",
+  "outputs": [
+    {
+      "path": "audits/q1-e2-final-closure/1.0.0/E2_FINAL_CLOSURE_REPORT.md",
+      "sha256": "6fdfc4d7032da32830e467f559529767baf8c74700d2f8a055e52205bfce6e4e"
+    },
+    {
+      "path": "audits/q1-e2-final-closure/1.0.0/e2_discovery_inventory.json",
+      "sha256": "5ceee5dc45db03561af5651968da6958c31b4c93bf78ec5ae9054a86f4a4acc8"
+    },
+    {
+      "path": "audits/q1-e2-final-closure/1.0.0/e2_eligibility_summary.json",
+      "sha256": "42675fa648dd719b501540683ffda9860644344b1114f07ebc9253b1a1c25e52"
+    },
+    {
+      "path": "audits/q1-e2-final-closure/1.0.0/e2_publication_claims.json",
+      "sha256": "9854e4d4ab91b1c1ff8e214d9fa07ce1716d0c151e7f21db318d229e62511e1a"
+    },
+    {
+      "path": "audits/q1-e2-final-closure/1.0.0/e2_reproducibility_report.json",
+      "sha256": "bd4194a9cf2746d6fd74daccb70e49edaddb30d928401e71dcd9dfa224515081"
+    },
+    {
+      "path": "audits/q1-e2-final-closure/1.0.0/e2_t2_non_access_report.json",
+      "sha256": "14a23681219b7a82a75027184a24d624f535758e913f0e1ba1e17a85a3ddb733"
+    }
+  ],
+  "package_type": "DIAGNOSTIC_ONLY_FAIL_CLOSED",
+  "repository_remote": "git@github.com:escalasoft/mmsdp-xai-q1.git",
+  "repository_root": "/Users/alex/MMSDP-XAI-Q1",
+  "reproducibility_status": "NOT_EXECUTED",
+  "runtime": {
+    "packages": "Python standard library only; no scientific runtime executed",
+    "platform": "macOS-15.7.9-x86_64-i386-64bit",
+    "python": "3.12.9"
+  },
+  "scopes_executed": 0,
+  "starting_HEAD": "77c1af5d59ee7af6257f67ce17d06968ef78a416",
+  "starting_working_tree_porcelain": "",
+  "status": "E2_FINAL_CLOSURE_FAIL_CLOSED",
+  "timestamp_UTC": "2026-09-29T04:46:17.890078+00:00"
+}
