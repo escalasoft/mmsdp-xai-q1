@@ -1,0 +1,22 @@
+{
+  "BOUNDED_CLAIMS": [
+    "E2 is a prospective model-level additive decomposition relative to historical OOF meta-training means; no executed E2 finding is established by this package.",
+    "OOF reference means describe historical meta-training, not deployed-model full-TRAIN behavior.",
+    "E1 remains bounded complementary evidence with its existing inclusion/exclusion decisions unchanged."
+  ],
+  "PROHIBITED_CLAIMS": [
+    "E2 final scientific closure passed",
+    "Executed E2 fidelity or reproducibility passed",
+    "E2 results are publication-ready",
+    "Causal modality claims",
+    "Universal modality superiority",
+    "E2 improves predictive performance",
+    "E2 validates human usefulness",
+    "E1 generalizes beyond its frozen scope",
+    "Claims based on T2"
+  ],
+  "SUPPORTED_CLAIMS": [
+    "Existing readiness metadata identifies 221 eligible multimodal E2 scopes with resolved historical OOF references.",
+    "This closure stopped before attribution because a frozen E2 foreground population was not established."
+  ]
+}

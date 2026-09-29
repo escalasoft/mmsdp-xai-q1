@@ -1,0 +1,19 @@
+{
+  "checks": [
+    "13 focused synthetic tests passed",
+    "Two independent production processes byte-identical",
+    "Both processes reconciled all 221 ordered T1 memberships to frozen G4/G5 scope ledger",
+    "Both processes compared historical selector to independent hash-selection implementation",
+    "Persisted local subset validated for all 221 scopes",
+    "All named critical input hashes unchanged",
+    "Prior closure diagnostic MANIFEST.sha256 remains valid",
+    "Git tracked and staged diffs empty"
+  ],
+  "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_e2_t1_foreground_freeze.py",
+  "execution_start_working_tree_note": "population_manifest records execution-start state after adding the dedicated implementation/tests; prior diagnostic was the only task-start untracked path.",
+  "focused_tests": 13,
+  "scientific_E2_execution": false,
+  "status": "PASS",
+  "task_start_working_tree_porcelain": "?? audits/q1-e2-final-closure/",
+  "test_source_sha256": "9be9ee7fc3a8f1a866576cc8f100b2a645bf249830876f2df31400077df4ec21"
+}

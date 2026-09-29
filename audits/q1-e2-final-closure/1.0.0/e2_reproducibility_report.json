@@ -1,0 +1,9 @@
+{
+  "differing_rows": null,
+  "equality_status": "NOT_TESTED",
+  "maximum_difference": null,
+  "numeric_output_hashes": {},
+  "reason": "No frozen E2 foreground population established.",
+  "repeated_executions": 0,
+  "status": "NOT_EXECUTED_BLOCKED_BEFORE_ATTRIBUTION"
+}

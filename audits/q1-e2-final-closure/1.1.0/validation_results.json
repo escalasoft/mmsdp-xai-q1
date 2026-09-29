@@ -1,0 +1,28 @@
+{
+  "final_input_hash_verification": "PASS",
+  "focused_tests_command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m pytest -q -p no:cacheprovider tests/evaluation/test_q1_e2_final_closure.py",
+  "focused_tests_passed": 9,
+  "frozen_artifacts_modified": false,
+  "historical_diagnostic_and_foreground_manifests": "PASS",
+  "implementation_hashes": {
+    "scripts/finalize_q1_e2_final_closure.py": "8bc376cff616e54f6ab72d04245af9b15cb8317585a0705a42b8bf7673b987e5",
+    "scripts/plot_q1_e2_final_closure.py": "29ec8cf68fc62bac5fb3e2eb88d68906d07bb0325323670cf7576bef9a944038",
+    "src/evaluation/q1_e2_final_closure.py": "e6a80eaadf77293832f7f1fea1045e2b86f835c4a7b2639b0fbc9c7e3e9d8957",
+    "tests/evaluation/test_q1_e2_final_closure.py": "8d1a5bcaba7582b4c23b36ae0da269051d1c04945750ddad3da9b80b86cbe276"
+  },
+  "persisted_output_checks": [
+    "39026 unique scope-row keys",
+    "221 scope fidelity rows and no failures",
+    "All outputs T1",
+    "CSV-roundtrip additive reconstruction exact",
+    "Absent modalities remain absent",
+    "All 1768 local rows exactly match frozen selection and global output",
+    "Residual bounds hold for every serialized row"
+  ],
+  "repeat_output_hash_verification": "PASS",
+  "scientific_execution_runtime": ".venv-xai-s56/bin/python",
+  "status": "PASS",
+  "tracked_and_staged_changes": "NONE",
+  "visual_QA": "PASS",
+  "visual_QA_detail": "Both 3600x2400 PNGs inspected: readable labels, legends, signed waterfall increments, no overlaps or clipping; same figures exported as PDF/SVG."
+}
