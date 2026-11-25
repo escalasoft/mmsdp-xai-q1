@@ -1,0 +1,20 @@
+{
+  "SVG_and_PNG": true,
+  "completed_utc": "2026-10-12T06:42:01.558542+00:00",
+  "dependence_plots": "OMITTED_NOT_IDENTIFIABLE_FROM_AUTHORIZED_SOURCE",
+  "exclusive_source": "audits/q1-e1-code-execution/1.0.0/scientific",
+  "feature_values_available": false,
+  "figure_sheets": 7,
+  "global_statistics_rows": 24,
+  "independent_regeneration": "PASS",
+  "local_explanations": 32,
+  "main_manuscript_modified": false,
+  "model_commit_heterogeneity_rows": 980,
+  "model_pair_commit_comparisons": 1470,
+  "models_or_SHAP_executed": false,
+  "per_commit_feature_rows": 5880,
+  "source_unchanged": true,
+  "status": "PASS",
+  "version": "1.0.0",
+  "waterfall_panels": 32
+}

@@ -1,0 +1,123 @@
+{
+  "version": "1.0.0",
+  "completed_at_utc": "2026-10-10T06:45:41.268225+00:00",
+  "status": "SYNTHETIC PASS",
+  "tests_run": 19,
+  "failures": 0,
+  "errors": 0,
+  "tests": [
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_01_correct_segment_and_exact_types",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_02_exact_stop_and_same_stream_T2_sentinel",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_03_truncated_expected_file",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_04_truncated_prefix_even_with_matching_hash",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_05_corruption_and_invalid_compression",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_06_duplicate_missing_unexpected_identity",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_07_changed_order",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_08_extra_fields_and_duplicate_keys",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_09_incorrect_types_and_nonfinite",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_10_last_row_failure_worker_has_no_partial_output",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_11_no_auxiliary_writes",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_12_separate_consumer_cannot_open_source",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_13_source_replaced_during_read",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_14_source_modified_during_read",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_15_tail_noninterference",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_16_immutable_verified_bytes_after_capture",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_17_byte_memory_and_line_limits",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_18_real_configuration_symlinks_and_bad_contract_denied",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_19_full_future_cardinality_is_synthetic",
+      "status": "PASS"
+    }
+  ],
+  "prior_attempt": {
+    "tests_run": 19,
+    "passed": 18,
+    "failed": 1,
+    "failure": "test_11 audit detector counted authorized IPC pipe open as disk write",
+    "correction": "Exclude only verified FIFO file descriptors from disk-write events; retain disk event checks"
+  },
+  "artifact_sha256": {
+    "src/governance/e1_code_synthetic_extractor.py": "28725c594e84e6ea8d857e1b86db27a97f3e5b2255b3c5e038ef98769f1c31ef",
+    "tests/governance/test_e1_code_synthetic_extractor.py": "c130e1795bd5cd5e0918f4265a0d939ee0fe0a17b0fd14d1e4f3fde878d14947",
+    "audits/q1-e1-code-permission-b/1.0.0/authorization.json": "3f2d33fc21a5a5efcaac5792c681e9a5964eb71917571303d81b5c1d4136936a",
+    "audits/q1-e1-code-permission-b/1.0.0/CONTRACT.md": "794a8008f62a4a20f9920f5a2b4b2571247e5cfcf33dd3c7bbd04abe95538b3f"
+  },
+  "historical_reference_hashes": {
+    "audits/q1-apachejit-final-dataset-freeze/1.0.0/MANIFEST.sha256": "5dfb187f6d10a4bec4569111b4a53b2bff78bdb1995d3c45cf885f1e760c6dbb",
+    "audits/q1-apachejit-final-dataset-freeze/1.0.0/code_schema.json": "a68bde979da2a156e279d9945dd055a1b7961acd62ca74d3f83f283ad5df440a",
+    "audits/q1-primary-xai-t2-semantic-boundary-amendment/1.0.0/future_blind_router_contract.json": "17e2738dff12e0120f412897e98413765f40cff105d69e0db67502502c6841cd",
+    "audits/q1-primary-xai-t2-semantic-boundary-amendment/1.0.0/future_t1_output_contract.json": "cca0e9d761e51f247fa8b24dad3c555d7412c92cd770e8d90eecdbc1ddc2e442",
+    "audits/q1-primary-xai-t2-semantic-boundary-amendment/1.0.0/mechanical_routing_definition.json": "1c8892acc0cbde0ace7f342117f91ce3ae86e067421acbb941acb65d28f926a0",
+    "audits/q1-xai-reconstruction-equivalence-protocol/1.0.0/numerical_tolerance_policy.json": "62fd3780c94c6a69bfc036bdd4b567409ffc46c8c892a807b221f5d40d0eb336"
+  },
+  "historical_references_unchanged": true,
+  "real_source_opened": false,
+  "real_records_used": false,
+  "models_loaded": false,
+  "inference_executed": false,
+  "SHAP_executed": false,
+  "permission_C_started": false,
+  "fixture_policy": "Wholly invented JSONL/gzip in temporary e1-code-b-synthetic directories, removed by test cleanup",
+  "limitations": [
+    "Python audit controls are not OS sandboxing",
+    "No actual scientific E1 process integrated",
+    "Compressed bytes may encode information across logical boundary; only output bytes are bounded",
+    "Native decompressor memory and total RSS are not measured",
+    "Real scalar types and production identity adapter require separate approval",
+    "No real payload hashes computed in B"
+  ]
+}

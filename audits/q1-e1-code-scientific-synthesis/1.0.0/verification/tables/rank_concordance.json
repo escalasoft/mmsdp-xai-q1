@@ -1,0 +1,74 @@
+[
+  {
+    "global_kendall_tau": -0.3333333333333333,
+    "global_spearman": -0.5428571428571429,
+    "interpretation": "Descriptive model agreement, not accuracy, causality or equal attribution magnitudes; six features only.",
+    "median_normalized_absolute_profile_TV": 0.5998819605480284,
+    "model_a": "LR",
+    "model_b": "RF",
+    "per_commit_abs_rank_spearman_median": 0.028571428571428574,
+    "per_commit_rank_undefined": 0,
+    "threshold_disagreement_count": 23,
+    "top3_jaccard": 0.2
+  },
+  {
+    "global_kendall_tau": -0.3333333333333333,
+    "global_spearman": -0.48571428571428577,
+    "interpretation": "Descriptive model agreement, not accuracy, causality or equal attribution magnitudes; six features only.",
+    "median_normalized_absolute_profile_TV": 0.7047962436119933,
+    "model_a": "LR",
+    "model_b": "XGB",
+    "per_commit_abs_rank_spearman_median": 0.028571428571428574,
+    "per_commit_rank_undefined": 0,
+    "threshold_disagreement_count": 18,
+    "top3_jaccard": 0.2
+  },
+  {
+    "global_kendall_tau": -0.6,
+    "global_spearman": -0.8285714285714287,
+    "interpretation": "Descriptive model agreement, not accuracy, causality or equal attribution magnitudes; six features only.",
+    "median_normalized_absolute_profile_TV": 0.7407952623603586,
+    "model_a": "LR",
+    "model_b": "LGB",
+    "per_commit_abs_rank_spearman_median": -0.08571428571428573,
+    "per_commit_rank_undefined": 0,
+    "threshold_disagreement_count": 27,
+    "top3_jaccard": 0.2
+  },
+  {
+    "global_kendall_tau": 0.4666666666666666,
+    "global_spearman": 0.6,
+    "interpretation": "Descriptive model agreement, not accuracy, causality or equal attribution magnitudes; six features only.",
+    "median_normalized_absolute_profile_TV": 0.25873484866638696,
+    "model_a": "RF",
+    "model_b": "XGB",
+    "per_commit_abs_rank_spearman_median": 0.6,
+    "per_commit_rank_undefined": 0,
+    "threshold_disagreement_count": 13,
+    "top3_jaccard": 0.5
+  },
+  {
+    "global_kendall_tau": 0.7333333333333333,
+    "global_spearman": 0.8285714285714287,
+    "interpretation": "Descriptive model agreement, not accuracy, causality or equal attribution magnitudes; six features only.",
+    "median_normalized_absolute_profile_TV": 0.2761853636622408,
+    "model_a": "RF",
+    "model_b": "LGB",
+    "per_commit_abs_rank_spearman_median": 0.6571428571428573,
+    "per_commit_rank_undefined": 0,
+    "threshold_disagreement_count": 12,
+    "top3_jaccard": 1.0
+  },
+  {
+    "global_kendall_tau": 0.2,
+    "global_spearman": 0.4285714285714286,
+    "interpretation": "Descriptive model agreement, not accuracy, causality or equal attribution magnitudes; six features only.",
+    "median_normalized_absolute_profile_TV": 0.1599566309356235,
+    "model_a": "XGB",
+    "model_b": "LGB",
+    "per_commit_abs_rank_spearman_median": 0.6,
+    "per_commit_rank_undefined": 0,
+    "threshold_disagreement_count": 13,
+    "top3_jaccard": 0.5
+  }
+]

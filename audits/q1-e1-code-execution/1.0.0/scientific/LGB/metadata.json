@@ -1,0 +1,130 @@
+{
+  "approximate": false,
+  "counters": {
+    "attribution_rows": 4900,
+    "direct_prediction_calls": 2,
+    "direct_prediction_rows": 490,
+    "explainer_calls": 20,
+    "internal_tree_operations": null,
+    "local_extra_calls": 0
+  },
+  "data": null,
+  "feature_perturbation": "tree_path_dependent",
+  "features": [
+    "la",
+    "ld",
+    "nf",
+    "nd",
+    "ns",
+    "ent"
+  ],
+  "method": "EXACT_TREESHAP",
+  "model": "LightGBM",
+  "model_identity": "ae808a68dfd3eb33285271ebad66411cc44fdba6ddae24b65fe2cd8c44c82d61",
+  "pipeline_sha256": "3325e6d894e2db808a6712f17ddbcc2b1f0b2cb8cb32db946fb9e899d97f1f2e",
+  "positive_class": 1,
+  "scale": "NATIVE_RAW_MARGIN",
+  "schema": "e1-code-scientific-1.0.0",
+  "warnings": [
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 0
+    },
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 1
+    },
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 2
+    },
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 3
+    },
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 4
+    },
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 5
+    },
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 6
+    },
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 7
+    },
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 8
+    },
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 9
+    },
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 10
+    },
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 11
+    },
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 12
+    },
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 13
+    },
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 14
+    },
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 15
+    },
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 16
+    },
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 17
+    },
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 18
+    },
+    {
+      "category": "UserWarning",
+      "message": "LightGBM binary classifier with TreeExplainer shap values output has changed to a list of ndarray",
+      "repetition": 19
+    }
+  ]
+}

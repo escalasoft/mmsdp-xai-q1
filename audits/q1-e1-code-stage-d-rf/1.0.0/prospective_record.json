@@ -1,0 +1,21 @@
+{
+  "authorization": "User authorized prospective RF-only extension; D must remain unchanged",
+  "created_utc": "2026-10-12T04:48:45.527848+00:00",
+  "expected_canonical_state_sha256": "07c0436d5229c4d4b5c6f91723e9c2d3bb6a6d427e09b8766631d02eb04822b4",
+  "expected_pipeline_sha256": "3950ddec4e97c3477e6e8d653474c6640aa790812cba52280ed472dc60dde998",
+  "plan": "Check same frozen T1 identity/RAW evidence and RF full learned state; three independent single-thread processes; no D rerun; no mixed CODE source, T2, fit, calibration, E1 or SHAP.",
+  "preserved_D_hashes": {
+    "audits/q1-e1-code-stage-d/1.0.0/MANIFEST.sha256": "49b60fa108d26cfd06ca2adddd563da0fda0d29b71b628a063a86a83f8379b90",
+    "audits/q1-e1-code-stage-d/1.0.0/REPORT.md": "1f5ac115669785a537066905034dd7c54599b3ab77afeb22cacb76316d91846d",
+    "audits/q1-e1-code-stage-d/1.0.0/authorization.json": "f3d56668f2db6aaa1af42655786247f8eab9aa6df91f632c3605607516b18a57",
+    "audits/q1-e1-code-stage-d/1.0.0/closure.json": "1233b0105fb97c5c8f79fa1c7070bfd00e7e01caa22421c0984ddba1378928aa",
+    "audits/q1-e1-code-stage-d/1.0.0/repetition_01.json": "28900cc8d1e9194402d9bc1a73f8d477c05343c752deaaa48f614ddd7f21e5ac",
+    "audits/q1-e1-code-stage-d/1.0.0/repetition_02.json": "28900cc8d1e9194402d9bc1a73f8d477c05343c752deaaa48f614ddd7f21e5ac",
+    "audits/q1-e1-code-stage-d/1.0.0/repetition_03.json": "28900cc8d1e9194402d9bc1a73f8d477c05343c752deaaa48f614ddd7f21e5ac",
+    "audits/q1-e1-code-stage-d/1.0.0/result.json": "27747391379bf61168fed6242b6a5bedb2fddfecac21f78c2318d3cda8ed1563",
+    "audits/q1-e1-code-stage-d/1.0.0/verify.py": "a8a6d4d7efef2f56a638c769aec4e00bef26828a98f24a5626527aad6da57fc0"
+  },
+  "source_verifier_sha256": "a8a6d4d7efef2f56a638c769aec4e00bef26828a98f24a5626527aad6da57fc0",
+  "stage": "D-RF",
+  "version": "1.0.0"
+}

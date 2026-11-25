@@ -1,0 +1,8 @@
+{
+  "independent_process": true,
+  "no_models_or_SHAP_loaded": true,
+  "report_reconstructed_from_persisted_arrays": true,
+  "staging_absent": true,
+  "status": "PASS",
+  "utc": "2026-10-12T06:01:23.948207+00:00"
+}

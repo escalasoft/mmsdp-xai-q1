@@ -1,0 +1,82 @@
+[
+  {
+    "dominant_feature_counts": {
+      "ent": 192,
+      "la": 1,
+      "ld": 0,
+      "nd": 27,
+      "nf": 5,
+      "ns": 20
+    },
+    "mean_cancellation_index": 0.5275078085769352,
+    "median_cancellation_index": 0.4270899224025232,
+    "median_dominant_share": 0.5699175457196294,
+    "median_normalized_entropy": 0.6575876077707394,
+    "model": "LR",
+    "p90_cancellation_index": 0.8617473608730519,
+    "positive_threshold_decisions": 10,
+    "top_feature": "ent",
+    "top_two_global_share": 0.6615957463411104,
+    "zero_total_attribution_rows": 0
+  },
+  {
+    "dominant_feature_counts": {
+      "ent": 9,
+      "la": 183,
+      "ld": 33,
+      "nd": 2,
+      "nf": 17,
+      "ns": 1
+    },
+    "mean_cancellation_index": 0.279650205205813,
+    "median_cancellation_index": 0.15364032375481906,
+    "median_dominant_share": 0.49533436457057656,
+    "median_normalized_entropy": 0.7473032750175437,
+    "model": "RF",
+    "p90_cancellation_index": 0.763304227313925,
+    "positive_threshold_decisions": 19,
+    "top_feature": "la",
+    "top_two_global_share": 0.6196379888833708,
+    "zero_total_attribution_rows": 0
+  },
+  {
+    "dominant_feature_counts": {
+      "ent": 7,
+      "la": 193,
+      "ld": 28,
+      "nd": 8,
+      "nf": 1,
+      "ns": 8
+    },
+    "mean_cancellation_index": 0.28862803651568136,
+    "median_cancellation_index": 0.1674845966240862,
+    "median_dominant_share": 0.650239294251344,
+    "median_normalized_entropy": 0.5841775834054239,
+    "model": "XGB",
+    "p90_cancellation_index": 0.7938626184688996,
+    "positive_threshold_decisions": 22,
+    "top_feature": "la",
+    "top_two_global_share": 0.7634652437051799,
+    "zero_total_attribution_rows": 0
+  },
+  {
+    "dominant_feature_counts": {
+      "ent": 1,
+      "la": 198,
+      "ld": 23,
+      "nd": 3,
+      "nf": 5,
+      "ns": 15
+    },
+    "mean_cancellation_index": 0.32709671374204463,
+    "median_cancellation_index": 0.2247071816803594,
+    "median_dominant_share": 0.6537877160753068,
+    "median_normalized_entropy": 0.5765146703708282,
+    "model": "LGB",
+    "p90_cancellation_index": 0.7923178025791567,
+    "positive_threshold_decisions": 29,
+    "top_feature": "la",
+    "top_two_global_share": 0.7268926043271946,
+    "zero_total_attribution_rows": 0
+  }
+]

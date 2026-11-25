@@ -1,0 +1,13 @@
+modality,algorithm,project,partition,commits,accepted_E1,method,scale,fidelity,max_residual,normalized_residual,stability_repetitions,max_attribution_difference,E1_status,E2,cross_level,limitation
+CODE,LR,apache/activemq,T1,245,245,ANALYTICAL_CENTERED_LOGIT,LOGIT,PASS,4.440892098500626e-16,4.2131571490142926e-16,20,0.0,READY,AVAILABLE in 3 configurations,EXACT,Reconstructed pipeline; fixed population stability
+TEXT,LR,apache/activemq,T1,245,245,ANALYTICAL_CENTERED_LOGIT,LOGIT,FIDELITY_PASS,1.3322676295501878e-15,,20,0,READY,AVAILABLE in 3 configurations,EXACT,Reconstructed representation
+PROCESS,LR,apache/activemq,T1,245,0,NOT_EVALUATED,NOT_APPLICABLE,NOT_EVALUATED,,,0,,NO-GO,AVAILABLE in 3 configurations,E2_ONLY,PROCESS_ANCESTRAL_UNPROVEN; not evidence of observed leakage
+CODE,RF,apache/activemq,T1,245,245,EXACT_TREESHAP,POSITIVE_CLASS_PROBABILITY,PASS,1.7541523789077473e-14,9.351737345973583e-15,20,0.0,READY,AVAILABLE in 3 configurations,EXACT,Reconstructed pipeline; fixed population stability
+TEXT,RF,apache/activemq,T1,245,0,EXACT_TREE_PATH_DEPENDENT,UNAVAILABLE,FIDELITY_FAIL,,,0,,NO-GO,AVAILABLE in 3 configurations,PREDICTOR_IDENTITY_ONLY,Exact TreeSHAP additivity failed; no accepted attributions
+PROCESS,RF,apache/activemq,T1,245,0,NOT_EVALUATED,NOT_APPLICABLE,NOT_EVALUATED,,,0,,NO-GO,AVAILABLE in 3 configurations,E2_ONLY,PROCESS_ANCESTRAL_UNPROVEN; not evidence of observed leakage
+CODE,XGB,apache/activemq,T1,245,245,EXACT_TREESHAP,NATIVE_RAW_MARGIN,PASS,3.223307430744171e-06,8.230246492277956e-07,20,0.0,READY,AVAILABLE in 3 configurations,EXACT,Reconstructed pipeline; fixed population stability
+TEXT,XGB,apache/activemq,T1,245,245,EXACT_TREE_PATH_DEPENDENT,RAW_MARGIN,FIDELITY_PASS,1.6689300537109375e-06,,20,0,READY,AVAILABLE in 3 configurations,EXACT,Reconstructed representation
+PROCESS,XGB,apache/activemq,T1,245,0,NOT_EVALUATED,NOT_APPLICABLE,NOT_EVALUATED,,,0,,NO-GO,AVAILABLE in 3 configurations,E2_ONLY,PROCESS_ANCESTRAL_UNPROVEN; not evidence of observed leakage
+CODE,LGB,apache/activemq,T1,245,245,EXACT_TREESHAP,NATIVE_RAW_MARGIN,PASS,1.0658141036401503e-14,8.399738263817199e-15,20,0.0,READY,AVAILABLE in 3 configurations,EXACT,Reconstructed pipeline; fixed population stability
+TEXT,LGB,apache/activemq,T1,245,245,EXACT_TREE_PATH_DEPENDENT,RAW_MARGIN,FIDELITY_PASS,1.0182965581861936e-12,,20,0,READY,AVAILABLE in 3 configurations,EXACT,Reconstructed representation
+PROCESS,LGB,apache/activemq,T1,245,0,NOT_EVALUATED,NOT_APPLICABLE,NOT_EVALUATED,,,0,,NO-GO,AVAILABLE in 3 configurations,E2_ONLY,PROCESS_ANCESTRAL_UNPROVEN; not evidence of observed leakage

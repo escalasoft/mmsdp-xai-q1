@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "observed_at_utc": "2026-10-12T03:15:15.845182+00:00",
+  "human_confirmations": {
+    "scientific_consumers_inactive_throughout_C": true,
+    "source_not_written_modified_regenerated_or_replaced_by_processes_under_user_control": true,
+    "source": "Explicit confirmations in the immediately preceding user message"
+  },
+  "authorization_created": false,
+  "attempt_created": false,
+  "observable_processes": 843,
+  "scientific_runtime_candidates": [],
+  "general_editor_automation_runtime_count": 33,
+  "process_observer_excluded": true,
+  "process_arguments_read": false,
+  "lock_device": 16777225,
+  "lock_inode": 131286779,
+  "hashes_match": true,
+  "prior_state_absent": true,
+  "staging_count": 0,
+  "scope": "CODE/ActiveMQ/T1 only; source fixed; no inference/SHAP",
+  "observation_limit": "Snapshot plus explicit human confirmations under trusted cooperative model; no absolute exclusion of unobservable/nonparticipants",
+  "status": "PASS",
+  "reason": "GATES_SATISFIED_UNDER_APPROVED_TRUST_MODEL"
+}

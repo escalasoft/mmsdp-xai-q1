@@ -1,0 +1,10 @@
+{
+  "checked_utc": "2026-10-12T05:58:35.035932+00:00",
+  "code_sha256": "e0d0b401d71f07ced78e849f611677e03a10a8aabec433ea9817c7b249a31b58",
+  "destination_absent": true,
+  "output_contract_sha256": "acff2432bffac09b392f742f2d52c68fd36501b6580a9349b4982a4f4b767c6a",
+  "schema_dimensions_validated": true,
+  "scientific_PASS_requires_independent_readback": true,
+  "staging_absent": true,
+  "syntax_validated": true
+}

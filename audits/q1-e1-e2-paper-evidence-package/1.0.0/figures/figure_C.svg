@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="7.2in" height="5.9885in" viewBox="0 0 1040 865"><rect width="100%" height="100%" fill="white"/>
+<text x="28" y="37" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#182936" font-weight="bold" text-anchor="start">C  Explanatory coverage and verified connections</text>
+<text x="28" y="67" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#182936" font-weight="normal" text-anchor="start">ActiveMQ / T1   •   245 commits   •   Four model families</text>
+<text x="28" y="113" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#182936" font-weight="bold" text-anchor="start">Modality</text>
+<text x="185" y="113" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#182936" font-weight="bold" text-anchor="start">Model</text>
+<text x="280" y="113" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#182936" font-weight="bold" text-anchor="start">E1 status</text>
+<text x="450" y="113" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#182936" font-weight="bold" text-anchor="start">E2 input</text>
+<text x="650" y="113" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#182936" font-weight="bold" text-anchor="start">E1–E2 link</text>
+<text x="820" y="113" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#182936" font-weight="bold" text-anchor="start">Hierarchy</text>
+<rect x="24" y="127" width="992" height="39" fill="#f7f9fb" stroke="none" rx="3"/>
+<text x="28" y="153" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">CODE</text>
+<text x="185" y="153" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">LR</text>
+<text x="280" y="153" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">READY</text>
+<text x="450" y="153" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">Available</text>
+<text x="650" y="153" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">Exact</text>
+<text x="820" y="153" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">READY branch</text>
+<rect x="24" y="170" width="992" height="39" fill="#ffffff" stroke="none" rx="3"/>
+<text x="28" y="196" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">TEXT</text>
+<text x="185" y="196" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">LR</text>
+<text x="280" y="196" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">READY</text>
+<text x="450" y="196" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">Available</text>
+<text x="650" y="196" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">Exact</text>
+<text x="820" y="196" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">READY branch</text>
+<rect x="24" y="213" width="992" height="39" fill="#f7f9fb" stroke="none" rx="3"/>
+<text x="28" y="239" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">PROCESS</text>
+<text x="185" y="239" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">LR</text>
+<text x="280" y="239" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">NO-GO¹</text>
+<text x="450" y="239" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">Available</text>
+<text x="650" y="239" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">Not available</text>
+<text x="820" y="239" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">PARTIAL</text>
+<rect x="24" y="256" width="992" height="39" fill="#ffffff" stroke="none" rx="3"/>
+<text x="28" y="282" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">CODE</text>
+<text x="185" y="282" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">RF</text>
+<text x="280" y="282" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">READY</text>
+<text x="450" y="282" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">Available</text>
+<text x="650" y="282" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">Exact</text>
+<text x="820" y="282" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">READY branch</text>
+<rect x="24" y="299" width="992" height="39" fill="#f7f9fb" stroke="none" rx="3"/>
+<text x="28" y="325" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">TEXT</text>
+<text x="185" y="325" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">RF</text>
+<text x="280" y="325" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">NO-GO²</text>
+<text x="450" y="325" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">Available</text>
+<text x="650" y="325" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">Not available</text>
+<text x="820" y="325" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">PARTIAL</text>
+<rect x="24" y="342" width="992" height="39" fill="#ffffff" stroke="none" rx="3"/>
+<text x="28" y="368" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">PROCESS</text>
+<text x="185" y="368" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">RF</text>
+<text x="280" y="368" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">NO-GO¹</text>
+<text x="450" y="368" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">Available</text>
+<text x="650" y="368" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">Not available</text>
+<text x="820" y="368" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">PARTIAL</text>
+<rect x="24" y="385" width="992" height="39" fill="#f7f9fb" stroke="none" rx="3"/>
+<text x="28" y="411" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">CODE</text>
+<text x="185" y="411" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">XGB</text>
+<text x="280" y="411" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">READY</text>
+<text x="450" y="411" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">Available</text>
+<text x="650" y="411" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">Exact</text>
+<text x="820" y="411" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">READY branch</text>
+<rect x="24" y="428" width="992" height="39" fill="#ffffff" stroke="none" rx="3"/>
+<text x="28" y="454" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">TEXT</text>
+<text x="185" y="454" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">XGB</text>
+<text x="280" y="454" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">READY</text>
+<text x="450" y="454" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">Available</text>
+<text x="650" y="454" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">Exact</text>
+<text x="820" y="454" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">READY branch</text>
+<rect x="24" y="471" width="992" height="39" fill="#f7f9fb" stroke="none" rx="3"/>
+<text x="28" y="497" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">PROCESS</text>
+<text x="185" y="497" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">XGB</text>
+<text x="280" y="497" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">NO-GO¹</text>
+<text x="450" y="497" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">Available</text>
+<text x="650" y="497" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">Not available</text>
+<text x="820" y="497" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">PARTIAL</text>
+<rect x="24" y="514" width="992" height="39" fill="#ffffff" stroke="none" rx="3"/>
+<text x="28" y="540" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">CODE</text>
+<text x="185" y="540" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">LGB</text>
+<text x="280" y="540" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">READY</text>
+<text x="450" y="540" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">Available</text>
+<text x="650" y="540" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">Exact</text>
+<text x="820" y="540" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">READY branch</text>
+<rect x="24" y="557" width="992" height="39" fill="#f7f9fb" stroke="none" rx="3"/>
+<text x="28" y="583" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">TEXT</text>
+<text x="185" y="583" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">LGB</text>
+<text x="280" y="583" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">READY</text>
+<text x="450" y="583" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">Available</text>
+<text x="650" y="583" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">Exact</text>
+<text x="820" y="583" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#136f63" font-weight="normal" text-anchor="start">READY branch</text>
+<rect x="24" y="600" width="992" height="39" fill="#ffffff" stroke="none" rx="3"/>
+<text x="28" y="626" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">PROCESS</text>
+<text x="185" y="626" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">LGB</text>
+<text x="280" y="626" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">NO-GO¹</text>
+<text x="450" y="626" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">Available</text>
+<text x="650" y="626" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">Not available</text>
+<text x="820" y="626" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="normal" text-anchor="start">PARTIAL</text>
+<text x="28" y="690" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">E2 is available in three configurations containing each modality.</text>
+<text x="28" y="720" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">¹ PROCESS: temporal provenance not independently established.</text>
+<text x="28" y="750" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">² RF TEXT: exact TreeSHAP additivity failure; no accepted E1 attributions.</text>
+<text x="28" y="780" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">NO-GO applies to E1; it does not mean zero predictive contribution.</text>
+<text x="28" y="810" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">Complete C+T links: LR / XGB / LGB. Configurations including PROCESS remain PARTIAL.</text>
+</svg>

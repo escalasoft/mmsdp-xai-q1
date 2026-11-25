@@ -1,0 +1,36 @@
+{
+  "acceptance": "finite arrays, exact shapes and identities, immutable inputs, frozen fidelity bounds on every row, 20 repetitions, <=1e-12 attribution differences, all informative stability metrics passing; failed models under diagnostics, never accepted",
+  "arrays": {
+    "base": "float64 [20,245]",
+    "commit_identity": "Unicode [245]",
+    "features": "Unicode [6]",
+    "model_identity": "Unicode scalar",
+    "model_output": "float64 [20,245]",
+    "phi": "float64 [20,245,6]",
+    "probability": "float64 [20,245] positive class RAW",
+    "reconstructed": "float64 [20,245]",
+    "residual": "float64 [20,245] signed reconstruction minus model output",
+    "row_identifier": "Unicode [245]",
+    "seeds": "int64 [20]"
+  },
+  "derived": "global.json includes all 20 repetitions, 190 stability pairs and summary; local.jsonl contains 20x8 local explanations",
+  "features": [
+    "la",
+    "ld",
+    "nf",
+    "nd",
+    "ns",
+    "ent"
+  ],
+  "identity": "row_identifier and commit SHA, model identity, temporal and foreground positions; local selection/order from frozen metadata",
+  "repetitions": 20,
+  "rows": 245,
+  "scales": {
+    "LGB": "NATIVE_RAW_MARGIN",
+    "LR": "LOGIT",
+    "RF": "POSITIVE_CLASS_PROBABILITY",
+    "XGB": "NATIVE_RAW_MARGIN"
+  },
+  "schema": "e1-code-scientific-1.0.0",
+  "standalone_readback": "numpy load allow_pickle=False; reconstruct global/local/residual evidence without models or SHAP"
+}

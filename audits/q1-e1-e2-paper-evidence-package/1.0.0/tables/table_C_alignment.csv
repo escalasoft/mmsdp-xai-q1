@@ -1,0 +1,17 @@
+configuration,algorithm,commits,verified_explanatory_links,comparisons,max_error,status,verification,limitation
+C+P,LR,245,1,245,0.0,PARTIAL,SHA256 + row identity + shared FINAL_BASE + stored probability equality,PROCESS E1 unavailable
+C+T,LR,245,2,490,0.0,READY,SHA256 + row identity + shared FINAL_BASE + stored probability equality,
+P+T,LR,245,1,245,0.0,PARTIAL,SHA256 + row identity + shared FINAL_BASE + stored probability equality,PROCESS E1 unavailable
+C+P+T,LR,245,2,490,0.0,PARTIAL,SHA256 + row identity + shared FINAL_BASE + stored probability equality,PROCESS E1 unavailable
+C+P,RF,245,1,245,0.0,PARTIAL,SHA256 + row identity + shared FINAL_BASE + stored probability equality,PROCESS E1 unavailable
+C+T,RF,245,1,245,0.0,PARTIAL,SHA256 + row identity + shared FINAL_BASE + stored probability equality,RF TEXT E1 unavailable
+P+T,RF,245,0,0,,PARTIAL,SHA256 + row identity + shared FINAL_BASE + stored probability equality,PROCESS E1 unavailable; RF TEXT E1 unavailable
+C+P+T,RF,245,1,245,0.0,PARTIAL,SHA256 + row identity + shared FINAL_BASE + stored probability equality,PROCESS E1 unavailable; RF TEXT E1 unavailable
+C+P,XGB,245,1,245,0.0,PARTIAL,SHA256 + row identity + shared FINAL_BASE + stored probability equality,PROCESS E1 unavailable
+C+T,XGB,245,2,490,0.0,READY,SHA256 + row identity + shared FINAL_BASE + stored probability equality,
+P+T,XGB,245,1,245,0.0,PARTIAL,SHA256 + row identity + shared FINAL_BASE + stored probability equality,PROCESS E1 unavailable
+C+P+T,XGB,245,2,490,0.0,PARTIAL,SHA256 + row identity + shared FINAL_BASE + stored probability equality,PROCESS E1 unavailable
+C+P,LGB,245,1,245,0.0,PARTIAL,SHA256 + row identity + shared FINAL_BASE + stored probability equality,PROCESS E1 unavailable
+C+T,LGB,245,2,490,0.0,READY,SHA256 + row identity + shared FINAL_BASE + stored probability equality,
+P+T,LGB,245,1,245,0.0,PARTIAL,SHA256 + row identity + shared FINAL_BASE + stored probability equality,PROCESS E1 unavailable
+C+P+T,LGB,245,2,490,0.0,PARTIAL,SHA256 + row identity + shared FINAL_BASE + stored probability equality,PROCESS E1 unavailable

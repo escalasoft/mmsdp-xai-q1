@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "figures": [
+    {
+      "figure": "A",
+      "width": 2160,
+      "height": 2098,
+      "dpi": 300,
+      "regenerated_pixels_identical": true,
+      "visual_review": "PASS; inspected all four panels/images for clipping, labels, units and exclusions"
+    },
+    {
+      "figure": "B",
+      "width": 3660,
+      "height": 2700,
+      "dpi": 300,
+      "regenerated_pixels_identical": null,
+      "visual_review": "PASS; inspected all four panels/images for clipping, labels, units and exclusions"
+    },
+    {
+      "figure": "C",
+      "width": 2160,
+      "height": 1797,
+      "dpi": 300,
+      "regenerated_pixels_identical": true,
+      "visual_review": "PASS; inspected all four panels/images for clipping, labels, units and exclusions"
+    },
+    {
+      "figure": "D",
+      "width": 2160,
+      "height": 2285,
+      "dpi": 300,
+      "regenerated_pixels_identical": true,
+      "visual_review": "PASS; inspected all four panels/images for clipping, labels, units and exclusions"
+    }
+  ]
+}

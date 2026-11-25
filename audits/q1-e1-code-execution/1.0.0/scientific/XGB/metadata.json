@@ -1,0 +1,29 @@
+{
+  "approximate": false,
+  "counters": {
+    "attribution_rows": 4900,
+    "direct_prediction_calls": 2,
+    "direct_prediction_rows": 490,
+    "explainer_calls": 20,
+    "internal_tree_operations": null,
+    "local_extra_calls": 0
+  },
+  "data": null,
+  "feature_perturbation": "tree_path_dependent",
+  "features": [
+    "la",
+    "ld",
+    "nf",
+    "nd",
+    "ns",
+    "ent"
+  ],
+  "method": "EXACT_TREESHAP",
+  "model": "XGBoost",
+  "model_identity": "897b72f79d7dc5b66c8cbb785303a49fe4431802d2468059547acff070560889",
+  "pipeline_sha256": "b0c40912bd1c3de725a58ff3aedc7cb8e556b1f07002eca03e9020a81cd72593",
+  "positive_class": 1,
+  "scale": "NATIVE_RAW_MARGIN",
+  "schema": "e1-code-scientific-1.0.0",
+  "warnings": []
+}
