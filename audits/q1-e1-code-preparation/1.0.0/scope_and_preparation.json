@@ -1,0 +1,52 @@
+{
+  "code_scope": {
+    "T1_rows": 245,
+    "explanations_authorized": false,
+    "families": [
+      "LR",
+      "RF",
+      "XGB",
+      "LGB"
+    ],
+    "local_cases": 8,
+    "project": "apache/activemq",
+    "status": "PREPARATION_CONDITIONAL"
+  },
+  "created_utc": "2026-10-12T05:33:21.473351+00:00",
+  "historical_hashes": {
+    "audits/q1-e1-canonical-apachejit-train-reentry/1.0.0/apachejit_process_temporal_provenance.jsonl": "083a4306247837142f0b57e42c58a595153ac3e28458e2a5277dda4d6f4bd6b5",
+    "audits/q1-e1-canonical-apachejit-train-reentry/1.0.0/source_snapshots/apache_activemq/CODE/creation_contract.json": "c3b8d79cdfa1b659517f3a59ed81b2f207c71ea5d982293c4411a143964fe3c9",
+    "audits/q1-e1-canonical-apachejit-train-reentry/1.0.0/source_snapshots/apache_activemq/CODE/row_order.jsonl": "9e37380bcbd8c66afcf94aafb0493a126892f5634e73faa779eb09e04cb081fb",
+    "audits/q1-e1-canonical-apachejit-train-reentry/1.0.0/source_snapshots/apache_activemq/CODE/runtime.json": "4b1380cfe43f168b5bf2087d86d3c119deabd9cbca9db6ff334fa03a1450d93f",
+    "audits/q1-e1-canonical-apachejit-train-reentry/1.0.0/source_snapshots/apache_activemq/CODE/schema.json": "0db407bc350d6a7b07b1390de5f3c882a210df2aa82c1f70d16ea08ca7100f8c",
+    "audits/q1-e1-canonical-apachejit-train-reentry/1.0.0/source_snapshots/apache_activemq/CODE/snapshot_identity.json": "6859b1a92869d1224c176e649a67daad1daa74c38bc9d5d58bd0e644d05ebd03",
+    "audits/q1-e1-canonical-apachejit-train-reentry/1.0.0/source_snapshots/apache_activemq/CODE/source.jsonl": "88d3230c360726bbdc2b98d7ec50168f632ca0c881e2ff1cf5f5aa6d0ddd773a",
+    "audits/q1-e1-code-stage-d-rf/1.0.0/result.json": "f8d24c285370eb0e395b82e8b19412d4416aa7f924479dfd0cd9da1b96b1d2c0",
+    "audits/q1-e1-code-stage-d/1.0.0/result.json": "27747391379bf61168fed6242b6a5bedb2fddfecac21f78c2318d3cda8ed1563",
+    "audits/q1-primary-xai-runtime-smoke/1.0.0/lgb_treeshap_smoke.json": "0b43b4d893231d6499e44c53412093811c251fda45016760b9bfea60eaebafc7",
+    "audits/q1-primary-xai-runtime-smoke/1.0.0/lr_analytical_smoke.json": "f45187f41c11b39eda659a759bb38b6f9f1bd4ded2c9a0c64e5b4c2ba87c6e35",
+    "audits/q1-primary-xai-runtime-smoke/1.0.0/rf_treeshap_smoke.json": "91c9342bc2213556c5ce6ce5dbe7e1f350a0300125bb0be60ee5bc006a316793",
+    "audits/q1-primary-xai-runtime-smoke/1.0.0/xgb_treeshap_smoke.json": "21255212a74a7c7301bd6138444c0281839f38b1e39fe65d25f1a8aeee131076",
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/fidelity_contract.json": "2048cfa3715fde991de5cd12f64ec26b1a7594a69fc7dbb74203f744137435b6",
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/lgb_treeshap_contract.json": "6775aebb30ea3a1dc13a1603e35fda8efa2a2df801d903173784cfa9889249af",
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/lr_analytical_contract.json": "3750577cf1fecb4a5bce5ae3fe74780345a1648e778bb363d3edb5a0bc765060",
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/query_budget.json": "a31694d283c39690a7ba7f71730ddb31534635ecc80407cd248045ed5c27395f",
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/rf_treeshap_contract.json": "9734cecc1b8ffd80df7307f70de0b9df49b43e0fbc3ade235a090f161d176850",
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/stability_contract.json": "df534173e4128cb777a3b5ba57bd61cf9e59809aa92dc125a1e74a6d5ab81afe",
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/train_background_policy.json": "7f7e0082ceae60685c9d217df465fc034171c5a081862135ede2b3b5f3d4dc45",
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/xgb_treeshap_contract.json": "165e0985bbf99441c32f096237ef1e012ac8578b3c7babf568a5d7b6efd180f9",
+    "audits/q1-xai-reconstruction-equivalence-g4/1.0.0/g4_scope_results.jsonl": "0320dcdf3eb73b5b242a4223292c9708074e6e24f33f4757a9ebe582a9e9d5c1"
+  },
+  "process_decision": {
+    "historical_results_preserved": true,
+    "no_process_execution_authorized": true,
+    "not_leakage_demonstration": true,
+    "not_predictive_framework_exclusion": true,
+    "reason": "PROCESS_ANCESTRAL_UNPROVEN",
+    "status": "E1_PROCESS_NO_GO"
+  },
+  "runtime_gate": "Predictive .venv lacks shap; existing XAI environment uses numpy 2.3.5 vs frozen predictive 2.4.6; prospective explicit runtime authorization and same-pipeline state/output checks required before attribution; do not mutate historical runtime contract.",
+  "train_selection_executed": false,
+  "train_snapshot_manifest_verified": true,
+  "version": "1.0.0"
+}

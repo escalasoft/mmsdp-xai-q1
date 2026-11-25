@@ -1,0 +1,29 @@
+{
+  "approximate": false,
+  "counters": {
+    "attribution_rows": 4900,
+    "direct_prediction_calls": 2,
+    "direct_prediction_rows": 490,
+    "explainer_calls": 0,
+    "internal_tree_operations": null,
+    "local_extra_calls": 0
+  },
+  "data": null,
+  "feature_perturbation": null,
+  "features": [
+    "la",
+    "ld",
+    "nf",
+    "nd",
+    "ns",
+    "ent"
+  ],
+  "method": "ANALYTICAL_CENTERED_LOGIT",
+  "model": "Logistic Regression",
+  "model_identity": "830ceae2937cdd0de60708699f3f75ead834b17dfbe1f219e5b9c3d256e7898b",
+  "pipeline_sha256": "69d2151975ab6bf4fe5f9fadd685ca5e48620fcce8d3f754ee169f06508214f2",
+  "positive_class": 1,
+  "scale": "LOGIT",
+  "schema": "e1-code-scientific-1.0.0",
+  "warnings": []
+}

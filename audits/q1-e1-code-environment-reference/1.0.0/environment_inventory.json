@@ -1,0 +1,28 @@
+{
+  ".venv": {
+    "joblib": "1.5.3",
+    "lightgbm": "4.6.0",
+    "llvmlite": null,
+    "numba": null,
+    "numpy": "2.4.6",
+    "platform": "macOS-15.7.9-x86_64-i386-64bit",
+    "python": "3.11.14",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.17.1",
+    "shap": null,
+    "xgboost": "3.2.0"
+  },
+  ".venv-xai-s56": {
+    "joblib": "1.5.3",
+    "lightgbm": "4.6.0",
+    "llvmlite": "0.45.1",
+    "numba": "0.62.1",
+    "numpy": "2.3.5",
+    "platform": "macOS-15.7.9-x86_64-i386-64bit",
+    "python": "3.11.14",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.17.1",
+    "shap": "0.51.0",
+    "xgboost": "3.2.0"
+  }
+}

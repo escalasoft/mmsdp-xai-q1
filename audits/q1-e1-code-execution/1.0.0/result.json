@@ -1,0 +1,90 @@
+{
+  "completed_utc": "2026-10-12T06:00:55.248212+00:00",
+  "coverage": {
+    "families": 4,
+    "features": 6,
+    "local_cases": 8,
+    "persisted_attribution_scalars": 117600,
+    "repetitions_per_family": 20,
+    "unique_commits": 245
+  },
+  "global_status": "PASS",
+  "historical_invariance": true,
+  "independent_readback": "PASS",
+  "limitations": [
+    "repeatability of fixed model/population/reference is not reference-sampling robustness",
+    "RF probability and LR logit/XGB LGB margins differ in scale",
+    "reconstructed pipelines, not original executables",
+    "correlated-feature attribution is not causal",
+    "cooperative local lock, no OS sandbox"
+  ],
+  "models": {
+    "LGB": {
+      "LR_probability_reconstruction_error": null,
+      "arrays_reconstructed": true,
+      "global_and_local_reconstructed": true,
+      "local_rows": 8,
+      "max_abs_residual": 1.0658141036401503e-14,
+      "max_normalized_residual": 8.399738263817199e-15,
+      "maximum_attribution_repeat_difference": 0.0,
+      "pairs_checked": 190,
+      "repetitions": 20,
+      "rows": 245,
+      "stability": "STABLE",
+      "status": "PASS"
+    },
+    "LR": {
+      "LR_probability_reconstruction_error": 2.220446049250313e-16,
+      "arrays_reconstructed": true,
+      "global_and_local_reconstructed": true,
+      "local_rows": 8,
+      "max_abs_residual": 4.440892098500626e-16,
+      "max_normalized_residual": 4.2131571490142926e-16,
+      "maximum_attribution_repeat_difference": 0.0,
+      "pairs_checked": 190,
+      "repetitions": 20,
+      "rows": 245,
+      "stability": "STABLE",
+      "status": "PASS"
+    },
+    "RF": {
+      "LR_probability_reconstruction_error": null,
+      "arrays_reconstructed": true,
+      "global_and_local_reconstructed": true,
+      "local_rows": 8,
+      "max_abs_residual": 1.7541523789077473e-14,
+      "max_normalized_residual": 9.351737345973583e-15,
+      "maximum_attribution_repeat_difference": 0.0,
+      "pairs_checked": 190,
+      "repetitions": 20,
+      "rows": 245,
+      "stability": "STABLE",
+      "status": "PASS"
+    },
+    "XGB": {
+      "LR_probability_reconstruction_error": null,
+      "arrays_reconstructed": true,
+      "global_and_local_reconstructed": true,
+      "local_rows": 8,
+      "max_abs_residual": 3.223307430744171e-06,
+      "max_normalized_residual": 8.230246492277956e-07,
+      "maximum_attribution_repeat_difference": 0.0,
+      "pairs_checked": 190,
+      "repetitions": 20,
+      "rows": 245,
+      "stability": "STABLE",
+      "status": "PASS"
+    }
+  },
+  "schema": "e1-code-execution-result-1.0.0",
+  "scientific_manifest_sha256": "1da3ac92a999ea9d5b2212741dcc6cd40c941beb549dc2b343f3d68fae7ad633",
+  "scientific_npz_sha256": {
+    "LGB": "19808c78f6de9ee048f1c1a5f997b75be05ebcdfa40a1408f3064f27f117ddde",
+    "LR": "3fd3654d8804ffcf12d55b62e9d5101abfc150bac6ab07fb29c83c0a3151c393",
+    "RF": "6dd4a1a0e23f82c082ec21e4e7484bdf617fae2835d4c764fecf1fa53ef8af0a",
+    "XGB": "addc2b810ce5f564e16ae4cb369ce10b17dec44d6d010ed5fd8534229c754c73"
+  },
+  "staging_residual": false,
+  "stop_after_E1_CODE": true,
+  "warning": "LGB sklearn UserWarning: X does not have valid feature names; explicit six-column order and exact probability digest checked."
+}

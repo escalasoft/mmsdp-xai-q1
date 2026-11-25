@@ -1,0 +1,9 @@
+{
+  "LR_fixture_repeatability_exact": true,
+  "TRAIN_membership_digest_matches_frozen_models": "3acfd7b19e5e059277ffaeed4751dee21ccf2e8ce8752ac67757b746d18db858",
+  "independent_LR_fixture_reloads": 2,
+  "mean_exact_across_predictive_and_explanatory_runtime": true,
+  "no_T1_attributions": true,
+  "note": "LR fixture repeats independently recomputed here; original method script copy was not independent repetition evidence.",
+  "status": "PASS"
+}

@@ -1,0 +1,39 @@
+{
+  "E1_execution_authorized": false,
+  "T1_scientific_attributions_executed": 0,
+  "completed_utc": "2026-10-12T05:49:42.195669+00:00",
+  "environment_repetitions": 3,
+  "exact_repeatability": true,
+  "global": "READY",
+  "historical_hashes_unchanged": true,
+  "lr_mean_file_sha256": "78f99cfe060346ed3ca58f24b606df9346a67602b9ac40b91a49888f74914c43",
+  "models": {
+    "LightGBM": {
+      "ENV": "PASS",
+      "METHOD": "PASS",
+      "REF": "PASS",
+      "readiness": "READY"
+    },
+    "Logistic Regression": {
+      "ENV": "PASS",
+      "METHOD": "PASS",
+      "REF": "PASS",
+      "readiness": "READY"
+    },
+    "Random Forest": {
+      "ENV": "PASS",
+      "METHOD": "PASS",
+      "REF": "PASS",
+      "readiness": "READY"
+    },
+    "XGBoost": {
+      "ENV": "PASS",
+      "METHOD": "PASS",
+      "REF": "PASS",
+      "readiness": "READY"
+    }
+  },
+  "reference_sha256": "6c63451a91d920df5c8fbe90465cf5bab3100effefc4fea595f44304abe462d7",
+  "selected_identity_digest": "691ccf56d001414601ae2f990a26fb8b386a80d31affe85da2ff0be1c9673ef3",
+  "version": "1.0.0"
+}

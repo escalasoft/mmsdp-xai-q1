@@ -1,0 +1,20 @@
+{
+  "producer_provenance": {
+    "attribution_methods_unchanged_by_final_formatting": true,
+    "execution_environment": ".venv-xai-s56",
+    "manuscript_generator": "runtime/manuscript_generation.py",
+    "post_execution_changes": [
+      "Handle RF family-local exact explainer failure without abandoning other families",
+      "Prevent rerunning a closed execution",
+      "Format code and add focused tests"
+    ],
+    "source_files": {
+      "src/evaluation/q1_bounded_complementary_e1_figures.py": "295c802cdc4b82d9df93a3763427c9671868f0f81acc4ac775e9392a9241f4b5",
+      "src/evaluation/q1_bounded_complementary_e1_publication.py": "0fb5cba132d248cfeec0cd172ddc04588dbb23034522405884b2151cb56ab2ce",
+      "src/evaluation/q1_bounded_complementary_e1_xai.py": "ce321ea2a966658c1600d71d873560d53d8295372c58e7c0428419246bf33e42",
+      "tests/evaluation/test_q1_bounded_complementary_e1_xai.py": "97ddaeb530edb2ec3a7a81f16ffea6e47d44e5889c52e859c897ac5333aa8580"
+    },
+    "table_generator_executed": "runtime/publication_table_generation_executed.py"
+  },
+  "binding": "Static producer lines 911-918: fg ledger -> row_index into T1 representation -> ordered output; NPZ has no embedded IDs. CODE foreground_index independently matches this ledger. No representation loaded."
+}

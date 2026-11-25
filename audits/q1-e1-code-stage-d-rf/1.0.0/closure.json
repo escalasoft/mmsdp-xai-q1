@@ -1,0 +1,14 @@
+{
+  "D_not_reexecuted": true,
+  "D_original_files_unchanged": 9,
+  "all_unchanged": true,
+  "historical_files_rechecked": 26,
+  "stage": "D-RF",
+  "status": "PASS",
+  "stderr_present_by_repetition": [
+    false,
+    false,
+    false
+  ],
+  "utc": "2026-10-12T04:50:09.464224+00:00"
+}

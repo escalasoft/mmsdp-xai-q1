@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "authorized_at_utc": "2026-10-10T06:58:26.039350+00:00",
+  "source": "Explicit user authorization: E1-CODE \u2014 Etapa C.1",
+  "scope": "Implement candidate adapter, lexical preservation and atomic publication; synthetic tests only; inspect frozen identity records without CODE values",
+  "real_CODE_access_authorized": false,
+  "permission_C_authorized": false,
+  "allowed_writes": [
+    "new candidate module",
+    "new synthetic tests",
+    "new C.1 audit documents",
+    "temporary synthetic fixtures and publication artifacts cleaned up by tests"
+  ],
+  "prohibited": [
+    "real CODE file access",
+    "real feature extraction",
+    "model or prediction loading",
+    "inference",
+    "SHAP",
+    "historical modifications",
+    "branches commits PRs",
+    "dependency installation"
+  ],
+  "preserved_sha256": {
+    "src/governance/e1_code_synthetic_extractor.py": "28725c594e84e6ea8d857e1b86db27a97f3e5b2255b3c5e038ef98769f1c31ef",
+    "tests/governance/test_e1_code_synthetic_extractor.py": "c130e1795bd5cd5e0918f4265a0d939ee0fe0a17b0fd14d1e4f3fde878d14947",
+    "audits/q1-e1-code-permission-a/1.0.0/result.json": "1accfd215fb41daa58a14e45d14f306781af2d812dab990d4dd58bff202c308e",
+    "audits/q1-e1-code-permission-a/1.0.0/authorization.json": "8577c51d45d34dbb01c7519bf765a683d160cf03ed19cf503f312f391f4250ac",
+    "audits/q1-e1-code-permission-b/1.0.0/results.json": "6dd36220895adc462413d577874bc8d84d469e05f98d13601778da2f20f2b885",
+    "audits/q1-e1-code-permission-b/1.0.0/CONTRACT.md": "794a8008f62a4a20f9920f5a2b4b2571247e5cfcf33dd3c7bbd04abe95538b3f",
+    "audits/q1-e1-code-permission-b/1.0.0/authorization.json": "3f2d33fc21a5a5efcaac5792c681e9a5964eb71917571303d81b5c1d4136936a"
+  }
+}

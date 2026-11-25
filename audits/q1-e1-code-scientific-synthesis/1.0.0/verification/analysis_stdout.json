@@ -1,0 +1,161 @@
+{
+  "status": "PASS",
+  "global_rows": 24,
+  "local_rows": 32,
+  "rank_concordance": [
+    {
+      "model_a": "LR",
+      "model_b": "RF",
+      "global_spearman": -0.5428571428571429,
+      "global_kendall_tau": -0.3333333333333333,
+      "top3_jaccard": 0.2,
+      "per_commit_abs_rank_spearman_median": 0.028571428571428574,
+      "per_commit_rank_undefined": 0,
+      "median_normalized_absolute_profile_TV": 0.5998819605480284,
+      "threshold_disagreement_count": 23,
+      "interpretation": "Descriptive model agreement, not accuracy, causality or equal attribution magnitudes; six features only."
+    },
+    {
+      "model_a": "LR",
+      "model_b": "XGB",
+      "global_spearman": -0.48571428571428577,
+      "global_kendall_tau": -0.3333333333333333,
+      "top3_jaccard": 0.2,
+      "per_commit_abs_rank_spearman_median": 0.028571428571428574,
+      "per_commit_rank_undefined": 0,
+      "median_normalized_absolute_profile_TV": 0.7047962436119933,
+      "threshold_disagreement_count": 18,
+      "interpretation": "Descriptive model agreement, not accuracy, causality or equal attribution magnitudes; six features only."
+    },
+    {
+      "model_a": "LR",
+      "model_b": "LGB",
+      "global_spearman": -0.8285714285714287,
+      "global_kendall_tau": -0.6,
+      "top3_jaccard": 0.2,
+      "per_commit_abs_rank_spearman_median": -0.08571428571428573,
+      "per_commit_rank_undefined": 0,
+      "median_normalized_absolute_profile_TV": 0.7407952623603586,
+      "threshold_disagreement_count": 27,
+      "interpretation": "Descriptive model agreement, not accuracy, causality or equal attribution magnitudes; six features only."
+    },
+    {
+      "model_a": "RF",
+      "model_b": "XGB",
+      "global_spearman": 0.6,
+      "global_kendall_tau": 0.4666666666666666,
+      "top3_jaccard": 0.5,
+      "per_commit_abs_rank_spearman_median": 0.6,
+      "per_commit_rank_undefined": 0,
+      "median_normalized_absolute_profile_TV": 0.25873484866638696,
+      "threshold_disagreement_count": 13,
+      "interpretation": "Descriptive model agreement, not accuracy, causality or equal attribution magnitudes; six features only."
+    },
+    {
+      "model_a": "RF",
+      "model_b": "LGB",
+      "global_spearman": 0.8285714285714287,
+      "global_kendall_tau": 0.7333333333333333,
+      "top3_jaccard": 1.0,
+      "per_commit_abs_rank_spearman_median": 0.6571428571428573,
+      "per_commit_rank_undefined": 0,
+      "median_normalized_absolute_profile_TV": 0.2761853636622408,
+      "threshold_disagreement_count": 12,
+      "interpretation": "Descriptive model agreement, not accuracy, causality or equal attribution magnitudes; six features only."
+    },
+    {
+      "model_a": "XGB",
+      "model_b": "LGB",
+      "global_spearman": 0.4285714285714286,
+      "global_kendall_tau": 0.2,
+      "top3_jaccard": 0.5,
+      "per_commit_abs_rank_spearman_median": 0.6,
+      "per_commit_rank_undefined": 0,
+      "median_normalized_absolute_profile_TV": 0.1599566309356235,
+      "threshold_disagreement_count": 13,
+      "interpretation": "Descriptive model agreement, not accuracy, causality or equal attribution magnitudes; six features only."
+    }
+  ],
+  "heterogeneity": [
+    {
+      "model": "LR",
+      "top_feature": "ent",
+      "top_two_global_share": 0.6615957463411104,
+      "mean_cancellation_index": 0.5275078085769352,
+      "median_cancellation_index": 0.4270899224025232,
+      "p90_cancellation_index": 0.8617473608730519,
+      "median_normalized_entropy": 0.6575876077707394,
+      "median_dominant_share": 0.5699175457196294,
+      "dominant_feature_counts": {
+        "la": 1,
+        "ld": 0,
+        "nf": 5,
+        "nd": 27,
+        "ns": 20,
+        "ent": 192
+      },
+      "zero_total_attribution_rows": 0,
+      "positive_threshold_decisions": 10
+    },
+    {
+      "model": "RF",
+      "top_feature": "la",
+      "top_two_global_share": 0.6196379888833708,
+      "mean_cancellation_index": 0.279650205205813,
+      "median_cancellation_index": 0.15364032375481906,
+      "p90_cancellation_index": 0.763304227313925,
+      "median_normalized_entropy": 0.7473032750175437,
+      "median_dominant_share": 0.49533436457057656,
+      "dominant_feature_counts": {
+        "la": 183,
+        "ld": 33,
+        "nf": 17,
+        "nd": 2,
+        "ns": 1,
+        "ent": 9
+      },
+      "zero_total_attribution_rows": 0,
+      "positive_threshold_decisions": 19
+    },
+    {
+      "model": "XGB",
+      "top_feature": "la",
+      "top_two_global_share": 0.7634652437051799,
+      "mean_cancellation_index": 0.28862803651568136,
+      "median_cancellation_index": 0.1674845966240862,
+      "p90_cancellation_index": 0.7938626184688996,
+      "median_normalized_entropy": 0.5841775834054239,
+      "median_dominant_share": 0.650239294251344,
+      "dominant_feature_counts": {
+        "la": 193,
+        "ld": 28,
+        "nf": 1,
+        "nd": 8,
+        "ns": 8,
+        "ent": 7
+      },
+      "zero_total_attribution_rows": 0,
+      "positive_threshold_decisions": 22
+    },
+    {
+      "model": "LGB",
+      "top_feature": "la",
+      "top_two_global_share": 0.7268926043271946,
+      "mean_cancellation_index": 0.32709671374204463,
+      "median_cancellation_index": 0.2247071816803594,
+      "p90_cancellation_index": 0.7923178025791567,
+      "median_normalized_entropy": 0.5765146703708282,
+      "median_dominant_share": 0.6537877160753068,
+      "dominant_feature_counts": {
+        "la": 198,
+        "ld": 23,
+        "nf": 5,
+        "nd": 3,
+        "ns": 15,
+        "ent": 1
+      },
+      "zero_total_attribution_rows": 0,
+      "positive_threshold_decisions": 29
+    }
+  ]
+}

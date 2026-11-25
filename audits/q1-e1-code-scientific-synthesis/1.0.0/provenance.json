@@ -1,0 +1,24 @@
+{
+  "analysis_runtime": {
+    "numpy": "2.3.5",
+    "python": "3.11.14",
+    "scipy": "1.17.1"
+  },
+  "code_sha256": {
+    "analyze.py": "9b959fcfeb231ee68167f7aeaaebadeea5be5614bb3c7a1344478ed4a9193f12",
+    "plot_svg.py": "a862fc21eb8bd7375ae25d6f0e5cb256aaeb5076b033a879afe52d994562aa97",
+    "render_png.cjs": "0c8d09c5358b4ca0fa97be787daeed72b07559f340d652c680009027d7e6899c",
+    "verify_synthesis.py": "f8e67d61565879f8ee77e1f99ec120e7a08bfed5920a8abd557fd7559a6422a1",
+    "write_synthesis.py": "59dc9af2c233da96d56a28ae3c1bf04fcec717c14c056f9375625194b1d67e86"
+  },
+  "created_utc": "2026-10-12T06:38:08.723454+00:00",
+  "feature_values": "ABSENT; no inversion, new source access or dependence plots",
+  "figure_strategy": "7 sheets: global, distributions, rank comparison and 4 sheets with 8 local panels each; tables for remaining exploratory analyses",
+  "methods": "No retraining, prediction, SHAP, calibration or T2 access; all figures descriptive, output scales preserved",
+  "replication": "Separate processes regenerate statistics, SVG and PNG; verify_synthesis.py uses alternate standard-library statistics and PNG pixel comparison",
+  "scope": "Descriptive E1 CODE scientific synthesis and figures, exclusively persisted accepted source",
+  "source": "audits/q1-e1-code-execution/1.0.0/scientific",
+  "source_manifest_sha256": "1da3ac92a999ea9d5b2212741dcc6cd40c941beb549dc2b343f3d68fae7ad633",
+  "units": "245 independent stored commit vectors, 20 identical numerical repetitions not pooled",
+  "version": "1.0.0"
+}

@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "recorded_at_utc": "2026-10-11T21:58:35.702579+00:00",
+  "authorization": "User authorizes coordinator development and invented fixtures only",
+  "permission_C": false,
+  "real_payload_access": false,
+  "preserved_sha256": {
+    "audits/q1-e1-code-permission-a/1.0.0/result.json": "1accfd215fb41daa58a14e45d14f306781af2d812dab990d4dd58bff202c308e",
+    "audits/q1-e1-code-permission-a/1.0.0/authorization.json": "8577c51d45d34dbb01c7519bf765a683d160cf03ed19cf503f312f391f4250ac",
+    "audits/q1-e1-code-permission-b/1.0.0/results.json": "6dd36220895adc462413d577874bc8d84d469e05f98d13601778da2f20f2b885",
+    "audits/q1-e1-code-permission-b/1.0.0/CONTRACT.md": "794a8008f62a4a20f9920f5a2b4b2571247e5cfcf33dd3c7bbd04abe95538b3f",
+    "audits/q1-e1-code-permission-b/1.0.0/authorization.json": "3f2d33fc21a5a5efcaac5792c681e9a5964eb71917571303d81b5c1d4136936a",
+    "audits/q1-e1-code-c1/1.0.0/results.json": "ef0aa3ed3f37bcc341355208b78a01a76d033f6b1c24bd51a5c5b2a3455e366f",
+    "audits/q1-e1-code-c1/1.0.0/memory_probe.json": "a86086b2d4a9aadcb7da2594ff1c2833be9ab232ec341be0b8f78af011c0b530",
+    "audits/q1-e1-code-c1/1.0.0/CONTRACT.md": "1f4297cd6985eba6483a10e32affec31d8d8fe19841052ab211dec742382fd95",
+    "audits/q1-e1-code-c1/1.0.0/authorization.json": "5e922e00af5a0f5ed00b749b7e2b3e4c8260df1d0974ee96f14b10aa9ce81187",
+    "audits/q1-e1-code-c1/1.0.0/identity_verification.json": "81fbde1d2891011a48103a2bcd617a78ada44a1104a8f8f4a14ef3bd0a029a4a",
+    "audits/q1-e1-code-c2/1.0.0/proposed_permission_C.md": "a0585f78e51e06c4672a553bb7b731279551cddeedf7aba9bdff792ecea3178c",
+    "audits/q1-e1-code-c2/1.0.0/risk_acceptance.json": "f4c984c0962d7f72a62f471bd25e5ce6ca8b4fcac6aff114222025a6eea24d5a",
+    "audits/q1-e1-code-route-b-amendment/1.0.0/record.json": "1a892299f60a9eacebd99dcaab3f30497345859d7b9b7312128dd1b18c6eddf6",
+    "audits/q1-e1-code-route-b-amendment/1.0.0/AMENDMENT.md": "041cbc3fed9027986ef618d4a81265b2237a084d217fda93572b253769f6be4d",
+    "audits/q1-apachejit-final-dataset-freeze/1.0.0/MANIFEST.sha256": "5dfb187f6d10a4bec4569111b4a53b2bff78bdb1995d3c45cf885f1e760c6dbb",
+    "audits/q1-apachejit-final-dataset-freeze/1.0.0/code_schema.json": "a68bde979da2a156e279d9945dd055a1b7961acd62ca74d3f83f283ad5df440a",
+    "audits/q1-primary-xai-t2-semantic-boundary-amendment/1.0.0/future_blind_router_contract.json": "17e2738dff12e0120f412897e98413765f40cff105d69e0db67502502c6841cd",
+    "audits/q1-primary-xai-t2-semantic-boundary-amendment/1.0.0/future_t1_output_contract.json": "cca0e9d761e51f247fa8b24dad3c555d7412c92cd770e8d90eecdbc1ddc2e442",
+    "audits/q1-primary-xai-t2-semantic-boundary-amendment/1.0.0/mechanical_routing_definition.json": "1c8892acc0cbde0ace7f342117f91ce3ae86e067421acbb941acb65d28f926a0",
+    "audits/q1-xai-reconstruction-equivalence-protocol/1.0.0/numerical_tolerance_policy.json": "62fd3780c94c6a69bfc036bdd4b567409ffc46c8c892a807b221f5d40d0eb336",
+    "src/governance/e1_code_candidate.py": "218c76a051417ca1067cda55b4786aaf7b2fbe8dfa60e21acff5b775121a32f2",
+    "src/governance/e1_code_synthetic_extractor.py": "28725c594e84e6ea8d857e1b86db27a97f3e5b2255b3c5e038ef98769f1c31ef",
+    "tests/governance/test_e1_code_candidate.py": "c25326aa92288378ccbe5110bc57fb58a2522bf97d638e8711269fdc125af8a7",
+    "tests/governance/test_e1_code_synthetic_extractor.py": "c130e1795bd5cd5e0918f4265a0d939ee0fe0a17b0fd14d1e4f3fde878d14947"
+  }
+}

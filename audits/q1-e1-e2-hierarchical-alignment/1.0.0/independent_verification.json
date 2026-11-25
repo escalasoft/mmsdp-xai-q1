@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "source_references_unchanged": 29,
+  "matrix_links": 24,
+  "matched_links": 21,
+  "row_comparisons": 5145,
+  "maximum_absolute_error": 0,
+  "local_cases": 8,
+  "scope": "Independent process re-read of audit outputs, count/identity checks and source/manifest hashes; no new models or attribution calculations"
+}

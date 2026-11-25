@@ -1,0 +1,37 @@
+{
+  "version": "1.1.0",
+  "project": "apache/activemq",
+  "partition": "T1",
+  "source": "audits/q1-apachejit-final-dataset-freeze/1.0.0/code_dataset.jsonl.gz",
+  "source_sha256": "42ec61d2adf3c708a4e55d856a7f3e95ee58464da022f84552c846379d796be3",
+  "destination": "audits/q1-e1-code-permission-c/1.0.0/validated",
+  "cooperative_lock": "audits/q1-e1-code-permission-c/1.0.0/scientific.lock",
+  "limits": {
+    "source_bytes": 4985060,
+    "start": 4900,
+    "stop": 5145,
+    "rows": 245,
+    "line_bytes": 4096,
+    "prefix_bytes": 4194304,
+    "request_bytes": 12582912,
+    "response_bytes": 2097152,
+    "timeout_seconds": 10
+  },
+  "identity_metadata": {
+    "e1_t1_global_foreground_population.jsonl": "e80eda789dedabbe3cb249aa15d3c3568cc19ebff2c4551ae7b2b7a293ff4b02",
+    "e1_local_case_population.jsonl": "7dfb985d78b10bed896c003da2b1dd6fa36a682e5f74b3f1f2a2d2dcf8c333e5",
+    "representations/t1_row_registry.jsonl": "8faa1cede722f2858ee4c546bea9257687c5cb31c978f05c646e3e6d854345e5"
+  },
+  "temporal_membership_sha256": "aded97af168717cf2ae8716835a79d8830adff9131ad04edc0618873ab42c0c8",
+  "identity_base": "audits/q1-bounded-complementary-e1-xai/1.0.0",
+  "output_fields": [
+    "row_identifier",
+    "la",
+    "ld",
+    "nf",
+    "nd",
+    "ns",
+    "ent"
+  ],
+  "authorization_required": true
+}

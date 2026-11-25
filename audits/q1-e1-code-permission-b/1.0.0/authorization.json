@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "created_at_utc": "2026-10-10T06:41:11.411205+00:00",
+  "authorization": "Explicit user authorization in this chat: E1-CODE \u2014 Permiso B",
+  "scope": "New implementation, automated tests and prospective audit using wholly synthetic JSONL/gzip only",
+  "future_source": "audits/q1-apachejit-final-dataset-freeze/1.0.0/code_dataset.jsonl.gz",
+  "real_source_access_authorized": false,
+  "permission_C_authorized": false,
+  "future_expected_sha256": "42ec61d2adf3c708a4e55d856a7f3e95ee58464da022f84552c846379d796be3",
+  "future_universe": {
+    "project": "apache/activemq",
+    "commits": 245,
+    "local_cases": 8,
+    "changes_authorized": false
+  },
+  "allowed_writes": [
+    "new implementation and tests",
+    "new prospective audit documentation and results",
+    "temporary synthetic fixtures removed by tests"
+  ],
+  "prohibited": [
+    "real payload access",
+    "models labels or predictions",
+    "inference or SHAP",
+    "historical modifications",
+    "dependency installation",
+    "branches commits PRs"
+  ],
+  "stop": "Report synthetic results and stop; no real extraction"
+}

@@ -1,0 +1,9 @@
+topic,evidence,boundary
+Scope,ActiveMQ T1; 245 commits,No automatic generalization to 14 projects
+PROCESS,Predictive and E2 modality; E1 not evaluated,Temporal provenance not independently established; no observed leakage demonstrated
+RF TEXT,Predictor remains; no accepted E1,Exact TreeSHAP additivity failed
+Calibration,16 aligned scopes have RAW state,No independently verified calibrated endpoint for these instances
+Scales,E1 native scales; E2 meta-logit,No cross-level addition or magnitude equivalence
+Stability,20 deterministic repetitions,Not perturbation robustness or human usefulness
+Provenance,Reconstructed predictors and representations,Not original executable recovery
+Local cases,Eight frozen E1 cases available in E2 foreground,Not the same E2 historical local set; not a representative sample

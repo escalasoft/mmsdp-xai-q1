@@ -1,0 +1,12 @@
+claim,evidence_type,statement,package_evidence,historical_source,boundary
+E1 CODE coverage,EMPIRICAL,Four models; 245 commits; six features; 20 deterministic repetitions,tables/table_A_coverage.csv,CODE scientific NPZ and metadata,ActiveMQ/T1 only
+Cross-level correspondence,EMPIRICAL,21 links; 5145 exact row/link comparisons,tables/table_C_alignment.csv,alignment_matrix.json and row-level audit,Not 5145 independent commits
+Global ranking heterogeneity,DESCRIPTIVE,LR ranks ent first; trees rank la first,tables/table_B_global_CODE.csv,Accepted CODE synthesis,No cross-scale magnitude comparison
+Local linkage,EMPIRICAL,Figure A probabilities equal actual E2 inputs,data/figure_A.json,"CODE NPZ, TEXT NPZ and E2 attribution row",Frozen E1 case; not E2 historical local sample
+Numerical fidelity,EMPIRICAL,All four CODE families satisfy frozen bounds,tables/table_A_coverage.csv,CODE scientific arrays and historical report,Not causal validity
+Fixed-input stability,EMPIRICAL,Maximum attribution difference zero over 20 repetitions,tables/table_A_coverage.csv,CODE scientific arrays,Not perturbation robustness
+PROCESS exclusion,DOCUMENTARY,E1 temporal provenance not independently established,tables/table_D_limitations.csv,2026-10-12 recoverability report,Does not demonstrate observed leakage
+RF TEXT exclusion,EMPIRICAL_HISTORICAL,Exact TreeSHAP additivity failed; no accepted E1,tables/table_A_coverage.csv,Historical TEXT fidelity evidence,CODE RF remains accepted
+RAW boundary,DOCUMENTARY,16 aligned instances have RAW state,tables/table_D_limitations.csv,Alignment calibration_boundary.csv,No additive calibrated-probability claim
+Auditable hierarchy,REASONED_INTERPRETATION,Separate panels expose the verified computation chain,scientific_summary.md,Identity and probability linkage,No combined E1-E2 additive calculus
+QA efficiency and trust,FUTURE_HYPOTHESIS,Potential utility requires task-based or user evaluation,scientific_summary.md,No measured utility data,Do not claim measured industrial benefit

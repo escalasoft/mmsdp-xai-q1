@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "time_utc": "2026-10-10T07:02:22.149405+00:00",
+  "probe": "Disposable child processes; RLIMIT_AS=64 MiB; touch 96 MiB; no real data",
+  "results": [
+    {
+      "allocator": "bytearray",
+      "returncode": 0,
+      "output": {
+        "setlimit": "REJECTED",
+        "exception": "ValueError"
+      },
+      "stderr_empty": true
+    },
+    {
+      "allocator": "mmap",
+      "returncode": 0,
+      "output": {
+        "setlimit": "REJECTED",
+        "exception": "ValueError"
+      },
+      "stderr_empty": true
+    }
+  ],
+  "hard_total_memory_status": "PENDING",
+  "interpretation": "A limit API or one blocked allocation does not establish reliable total-memory enforcement. No total-memory PASS is claimed."
+}

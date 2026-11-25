@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "scope": "apache/activemq T1",
+  "model": "LR",
+  "main_configuration": "C+T",
+  "optional_configuration": "C+P+T",
+  "case_rule": "Minimum non-null local_index in the frozen E1 CODE identity ledger; no selection using probabilities or attribution values",
+  "text_display_rule": "Five greatest positive and two most negative persisted contributions; remaining contributions summed within E1 TEXT only and explicitly labelled",
+  "no_new_prediction_or_attribution": true
+}

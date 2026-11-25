@@ -1,0 +1,150 @@
+{
+  "all_source_artifacts_unchanged": true,
+  "feature_values_not_available": true,
+  "figures": [
+    {
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "png_bytes_identical": true,
+      "png_pixels_identical": true,
+      "png_sha256": "dccebfe1845d79fdea03d67c61ac40600471f2fb3a1fa31c40c6ddfc0e794bcf",
+      "size": [
+        3660,
+        2880
+      ],
+      "svg": "attribution_distributions.svg",
+      "svg_bytes_identical": true,
+      "svg_sha256": "f2a5a738d7b66e789d296db94e14853a47eabd63085173d21b8c4186818212f1"
+    },
+    {
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "png_bytes_identical": true,
+      "png_pixels_identical": true,
+      "png_sha256": "b34b6521d789c5741a89a20ffb4f1d0f9881a80eb5f7e14b36cab34e26ec5cba",
+      "size": [
+        3660,
+        2700
+      ],
+      "svg": "global_importance.svg",
+      "svg_bytes_identical": true,
+      "svg_sha256": "068a7f2419435321156d0a08ab89b29ddef62ec614927be96775850c671eef74"
+    },
+    {
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "png_bytes_identical": true,
+      "png_pixels_identical": true,
+      "png_sha256": "39a0c06ea171d47f11612e10f15ded06b74a74bdbf7b01532402f99e2668ad4b",
+      "size": [
+        3060,
+        1560
+      ],
+      "svg": "rank_comparison.svg",
+      "svg_bytes_identical": true,
+      "svg_sha256": "5b3e5c90c0d5730fd14357745d7de4290f8db93bd3db7f3b9b8e0bc46d5f896b"
+    },
+    {
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "png_bytes_identical": true,
+      "png_pixels_identical": true,
+      "png_sha256": "6ba60cc42a38d794a4d7e8d1aeff926263dbb8810c684e96484808d57a244320",
+      "size": [
+        4500,
+        6720
+      ],
+      "svg": "waterfalls_LGB.svg",
+      "svg_bytes_identical": true,
+      "svg_sha256": "6389c3242ec83ac34b894256b0522fe3f1fb9f5f9baf8943085c4f833284933e"
+    },
+    {
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "png_bytes_identical": true,
+      "png_pixels_identical": true,
+      "png_sha256": "ac22bdd657e99bfd9dad3fd12fc00939866ef1d8456b456af8b490828b8b8deb",
+      "size": [
+        4500,
+        6720
+      ],
+      "svg": "waterfalls_LR.svg",
+      "svg_bytes_identical": true,
+      "svg_sha256": "728da0277b701741855af925ebf2d1e293c2ca01ec5133844047348241d00231"
+    },
+    {
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "png_bytes_identical": true,
+      "png_pixels_identical": true,
+      "png_sha256": "374e543efed69518255cdc15c1d3364b465835b1cd6c960b34871f91e906ffa3",
+      "size": [
+        4500,
+        6720
+      ],
+      "svg": "waterfalls_RF.svg",
+      "svg_bytes_identical": true,
+      "svg_sha256": "e66470ddfd5a1cde2501a4c3912910aa1593042866523a0e5b26824ec9525a5e"
+    },
+    {
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "png_bytes_identical": true,
+      "png_pixels_identical": true,
+      "png_sha256": "9097ee518a2384804ebf3990583570ade09e8e85de7790d3b060bfcadbd5bb95",
+      "size": [
+        4500,
+        6720
+      ],
+      "svg": "waterfalls_XGB.svg",
+      "svg_bytes_identical": true,
+      "svg_sha256": "28e7131e35a0b446ed2e37e31de1366c7ec3ae2db73966316ec3b1610a23b7d5"
+    }
+  ],
+  "global_statistic_rows": 24,
+  "independent_standard_library_arithmetic_check": "PASS",
+  "rank_pair_checks": 6,
+  "regenerated_table_and_plot_data_files": [
+    "tables/attributions_long.csv",
+    "tables/attributions_long.json",
+    "tables/commit_heterogeneity.csv",
+    "tables/commit_heterogeneity.json",
+    "tables/figure_data/attribution_distributions.json",
+    "tables/figure_data/global_importance.json",
+    "tables/figure_data/rank_comparison.json",
+    "tables/figure_data/waterfalls_LGB.json",
+    "tables/figure_data/waterfalls_LR.json",
+    "tables/figure_data/waterfalls_RF.json",
+    "tables/figure_data/waterfalls_XGB.json",
+    "tables/global_statistics.csv",
+    "tables/global_statistics.json",
+    "tables/heterogeneity_summary.json",
+    "tables/integrity.json",
+    "tables/local_cases.csv",
+    "tables/local_cases.json",
+    "tables/paired_commit_profiles.csv",
+    "tables/paired_commit_profiles.json",
+    "tables/rank_concordance.csv",
+    "tables/rank_concordance.json"
+  ],
+  "scientific_models_or_SHAP_executed": false,
+  "source_expected_hashes_match": true,
+  "statistics_regenerated_in_separate_process": true,
+  "status": "PASS",
+  "verified_utc": "2026-10-12T06:41:17.484363+00:00",
+  "visual_review": "All seven figure sheets visually inspected; labels, titles, scales, panels and figure boundaries checked."
+}

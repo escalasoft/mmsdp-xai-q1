@@ -1,0 +1,71 @@
+# Resultados individuales — coordinador 1.0.0
+
+27 pruebas nuevas PASS. Regresión: 37 pruebas originales PASS y una prueba con cobertura adaptada PASS; no se ejecutó extract_real. No afirmar 38 ejecuciones originales sin adaptación.
+
+| Prueba | Resultado | Cobertura |
+|---|---|---|
+| test_e1_code_coordinator.CoordinatorTests.test_01_end_to_end_linkage_and_no_T2 | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_02_preflight_contract_tamper | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_03_release_code_hash_rejected_before_capture | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_04_preflight_destination_and_residue | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_05_consumer_and_coordinator_exclusion | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_06_capture_hash_and_size_failures | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_07_capture_race | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_08_source_changed_after_capture | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_09_identity_and_schema_failures | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_10_independent_response_counters_and_hashes | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_11_ipc_errors_sanitized | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_12_disk_corruption_never_published | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_13_publication_failure_and_no_overwrite | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_14_atomic_visibility_permissions | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_15_timeout_no_publication_no_retry | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_16_tail_independence | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_17_no_auxiliary_payload_writes | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_18_fixed_paths_limits_and_production_gate | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_19_symlink_and_hardlink_source_denied | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_20_capture_not_reopened_for_extraction | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_21_contract_modified_during_worker | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_22_partial_write_and_racing_destination | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_23_forged_valid_hash_wrong_identity_and_numeric_type | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_24_separate_process_cooperative_consumer_blocks | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_25_outer_logs_and_errors_do_not_expose_payloads | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_26_production_plan_denied_by_shared_engine | PASS | executed |
+| test_e1_code_coordinator.CoordinatorTests.test_27_truncated_stream_even_with_matching_capture_hash | PASS | executed |
+| test_e1_code_candidate.CandidateTests.test_01_hex_identity_orders_and_lexical_preservation | PASS | executed |
+| test_e1_code_candidate.CandidateTests.test_02_identity_missing_duplicate_order_and_unknown | PASS | executed |
+| test_e1_code_candidate.CandidateTests.test_03_non_numbers_nonfinite_and_duplicate_keys | PASS | executed |
+| test_e1_code_candidate.CandidateTests.test_04_last_row_failure_no_data_in_worker_error | PASS | executed |
+| test_e1_code_candidate.CandidateTests.test_05_truncation_corruption_and_capture_hash | PASS | executed |
+| test_e1_code_candidate.CandidateTests.test_06_atomic_directory_publication_and_no_overwrite | PASS | executed |
+| test_e1_code_candidate.CandidateTests.test_07_fail_before_and_during_publication | PASS | executed |
+| test_e1_code_candidate.CandidateTests.test_08_destination_race_does_not_overwrite | PASS | executed |
+| test_e1_code_candidate.CandidateTests.test_09_source_replacement_and_modification_during_capture | PASS | executed |
+| test_e1_code_candidate.CandidateTests.test_10_change_after_verified_capture_cannot_change_result | PASS | executed |
+| test_e1_code_candidate.CandidateTests.test_11_tail_noninterference_and_prefix_limits | PASS | executed |
+| test_e1_code_candidate.CandidateTests.test_12_consumer_file_access_denied_and_no_extractor_writes | PASS | executed |
+| test_e1_code_candidate.CandidateTests.test_13_actual_subprocess_timeout_enforced | PASS | executed |
+| test_e1_code_candidate.CandidateTests.test_14_memory_guarantee_explicitly_pending | PASS | executed |
+| test_e1_code_candidate.CandidateTests.test_15_real_entry_point_disabled_and_symlink_rejected | PASS | static guard plus substitute; original extract_real NOT executed |
+| test_e1_code_candidate.CandidateTests.test_16_identity_adapter_synthetic_metadata_and_hash_failure | PASS | executed |
+| test_e1_code_candidate.CandidateTests.test_17_partial_disk_write_never_published | PASS | executed |
+| test_e1_code_candidate.CandidateTests.test_18_ipc_response_tampering_rejected | PASS | executed |
+| test_e1_code_candidate.CandidateTests.test_19_line_byte_limit_and_missing_LF | PASS | executed |
+| test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_01_correct_segment_and_exact_types | PASS | executed |
+| test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_02_exact_stop_and_same_stream_T2_sentinel | PASS | executed |
+| test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_03_truncated_expected_file | PASS | executed |
+| test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_04_truncated_prefix_even_with_matching_hash | PASS | executed |
+| test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_05_corruption_and_invalid_compression | PASS | executed |
+| test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_06_duplicate_missing_unexpected_identity | PASS | executed |
+| test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_07_changed_order | PASS | executed |
+| test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_08_extra_fields_and_duplicate_keys | PASS | executed |
+| test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_09_incorrect_types_and_nonfinite | PASS | executed |
+| test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_10_last_row_failure_worker_has_no_partial_output | PASS | executed |
+| test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_11_no_auxiliary_writes | PASS | executed |
+| test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_12_separate_consumer_cannot_open_source | PASS | executed |
+| test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_13_source_replaced_during_read | PASS | executed |
+| test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_14_source_modified_during_read | PASS | executed |
+| test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_15_tail_noninterference | PASS | executed |
+| test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_16_immutable_verified_bytes_after_capture | PASS | executed |
+| test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_17_byte_memory_and_line_limits | PASS | executed |
+| test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_18_real_configuration_symlinks_and_bad_contract_denied | PASS | executed |
+| test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_19_full_future_cardinality_is_synthetic | PASS | executed |

@@ -1,0 +1,29 @@
+{
+  "approximate": false,
+  "counters": {
+    "attribution_rows": 4900,
+    "direct_prediction_calls": 1,
+    "direct_prediction_rows": 245,
+    "explainer_calls": 20,
+    "internal_tree_operations": null,
+    "local_extra_calls": 0
+  },
+  "data": null,
+  "feature_perturbation": "tree_path_dependent",
+  "features": [
+    "la",
+    "ld",
+    "nf",
+    "nd",
+    "ns",
+    "ent"
+  ],
+  "method": "EXACT_TREESHAP",
+  "model": "Random Forest",
+  "model_identity": "a14a321bb3ed77d06b03a7ec3921181b60105448d0e4500244d4bacf084d245b",
+  "pipeline_sha256": "3950ddec4e97c3477e6e8d653474c6640aa790812cba52280ed472dc60dde998",
+  "positive_class": 1,
+  "scale": "POSITIVE_CLASS_PROBABILITY",
+  "schema": "e1-code-scientific-1.0.0",
+  "warnings": []
+}

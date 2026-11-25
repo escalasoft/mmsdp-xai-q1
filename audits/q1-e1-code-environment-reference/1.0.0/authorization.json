@@ -1,0 +1,71 @@
+{
+  "authorization": "User authorizes TRAIN reference, explanatory runtime T1 prediction equivalence and method compatibility on invented fixtures only. No scientific T1 attribution.",
+  "created_utc": "2026-10-12T05:46:28.731076+00:00",
+  "fixture_raw_rows": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      10,
+      2,
+      3,
+      2,
+      1,
+      0.5
+    ],
+    [
+      100,
+      20,
+      10,
+      5,
+      3,
+      2
+    ]
+  ],
+  "historical_hashes": {
+    "audits/q1-e1-code-preparation/1.0.0/MANIFEST.sha256": "c68ee534bbcc3cea4c5d79d271d351ad6a168422aafb0e702ed6dbc965d102f5",
+    "audits/q1-e1-code-preparation/1.0.0/PROPOSAL.md": "1237086be92f0ac18ce70695c2dd2b6f2b163ec7a2492f8786a6828c63891477",
+    "audits/q1-e1-code-preparation/1.0.0/scope_and_preparation.json": "9c43d0812b63bcfbc77eb6a1f00543025e229329e108cadbaaccaa9de20d30c6",
+    "audits/q1-e1-code-stage-d-rf/1.0.0/MANIFEST.sha256": "4077cb958d96f2a8cedf7b4c5364d1e93f86de836d50cd91cabf96399d1f133c",
+    "audits/q1-e1-code-stage-d-rf/1.0.0/REPORT.md": "8062b856f48a7b669018b18a8201d7c3a4155c272c795d320be650c3deb9c43f",
+    "audits/q1-e1-code-stage-d-rf/1.0.0/authorization.json": "8eefb981561851fab0251ece303c19793c58d7dca70f67722623b4e8ee27d9ef",
+    "audits/q1-e1-code-stage-d-rf/1.0.0/closure.json": "82d74c623fd55e2e04882aa23aaf704af3e91d475aaa01744d696b372651193c",
+    "audits/q1-e1-code-stage-d-rf/1.0.0/prospective_record.json": "7a5d12e4ff87e455bf87452892ca420ef0a2da1ccd318fa130e1d21f1e705ced",
+    "audits/q1-e1-code-stage-d-rf/1.0.0/repetition_01.json": "a472fc5ed71c47f9ce4e95e85083ef5f5f7efa8638ba3af7108bdce216a100b2",
+    "audits/q1-e1-code-stage-d-rf/1.0.0/repetition_02.json": "a472fc5ed71c47f9ce4e95e85083ef5f5f7efa8638ba3af7108bdce216a100b2",
+    "audits/q1-e1-code-stage-d-rf/1.0.0/repetition_03.json": "a472fc5ed71c47f9ce4e95e85083ef5f5f7efa8638ba3af7108bdce216a100b2",
+    "audits/q1-e1-code-stage-d-rf/1.0.0/result.json": "f8d24c285370eb0e395b82e8b19412d4416aa7f924479dfd0cd9da1b96b1d2c0",
+    "audits/q1-e1-code-stage-d-rf/1.0.0/verify.py": "992ade4f16212d847d19c15145c35bf754bb5f326e8f212e026f6b4d981e7033",
+    "audits/q1-e1-code-stage-d/1.0.0/MANIFEST.sha256": "49b60fa108d26cfd06ca2adddd563da0fda0d29b71b628a063a86a83f8379b90",
+    "audits/q1-e1-code-stage-d/1.0.0/REPORT.md": "1f5ac115669785a537066905034dd7c54599b3ab77afeb22cacb76316d91846d",
+    "audits/q1-e1-code-stage-d/1.0.0/authorization.json": "f3d56668f2db6aaa1af42655786247f8eab9aa6df91f632c3605607516b18a57",
+    "audits/q1-e1-code-stage-d/1.0.0/closure.json": "1233b0105fb97c5c8f79fa1c7070bfd00e7e01caa22421c0984ddba1378928aa",
+    "audits/q1-e1-code-stage-d/1.0.0/repetition_01.json": "28900cc8d1e9194402d9bc1a73f8d477c05343c752deaaa48f614ddd7f21e5ac",
+    "audits/q1-e1-code-stage-d/1.0.0/repetition_02.json": "28900cc8d1e9194402d9bc1a73f8d477c05343c752deaaa48f614ddd7f21e5ac",
+    "audits/q1-e1-code-stage-d/1.0.0/repetition_03.json": "28900cc8d1e9194402d9bc1a73f8d477c05343c752deaaa48f614ddd7f21e5ac",
+    "audits/q1-e1-code-stage-d/1.0.0/result.json": "27747391379bf61168fed6242b6a5bedb2fddfecac21f78c2318d3cda8ed1563",
+    "audits/q1-e1-code-stage-d/1.0.0/verify.py": "a8a6d4d7efef2f56a638c769aec4e00bef26828a98f24a5626527aad6da57fc0",
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/fidelity_contract.json": "2048cfa3715fde991de5cd12f64ec26b1a7594a69fc7dbb74203f744137435b6",
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/lgb_treeshap_contract.json": "6775aebb30ea3a1dc13a1603e35fda8efa2a2df801d903173784cfa9889249af",
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/lr_analytical_contract.json": "3750577cf1fecb4a5bce5ae3fe74780345a1648e778bb363d3edb5a0bc765060",
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/rf_treeshap_contract.json": "9734cecc1b8ffd80df7307f70de0b9df49b43e0fbc3ade235a090f161d176850",
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/train_background_policy.json": "7f7e0082ceae60685c9d217df465fc034171c5a081862135ede2b3b5f3d4dc45",
+    "audits/q1-prospective-e1-protocol-freeze/1.0.0/xgb_treeshap_contract.json": "165e0985bbf99441c32f096237ef1e012ac8578b3c7babf568a5d7b6efd180f9"
+  },
+  "numpy_exception": "2.3.5 in existing .venv-xai-s56 evaluated prospectively; historical contracts untouched",
+  "reference_policy": "one unlabelled stratum; 256 rows; seed 20260901; TRAIN_REFERENCE; common imputed six-feature representation shared by all families, LR scaler applied downstream only for LR mean; tree reference diagnostic only, data=None",
+  "version": "1.0.0"
+}

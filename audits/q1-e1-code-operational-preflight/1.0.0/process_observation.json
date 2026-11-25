@@ -1,0 +1,266 @@
+{
+  "version": "1.0.0",
+  "observed_at_utc": "2026-10-12T02:35:10.049675+00:00",
+  "total_observed": 841,
+  "counts": {
+    "SCHEDULER_HOST": 1,
+    "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME": 33,
+    "PREFLIGHT_OBSERVER": 1
+  },
+  "selected_processes": [
+    {
+      "pid": 1,
+      "ppid": 0,
+      "same_user": false,
+      "executable": "launchd",
+      "classification": "SCHEDULER_HOST"
+    },
+    {
+      "pid": 446,
+      "ppid": 1,
+      "same_user": true,
+      "executable": "Electron",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 664,
+      "ppid": 443,
+      "same_user": true,
+      "executable": "Codex (Service)",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 665,
+      "ppid": 443,
+      "same_user": true,
+      "executable": "Codex (Service)",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 671,
+      "ppid": 443,
+      "same_user": true,
+      "executable": "Codex (Service)",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 691,
+      "ppid": 446,
+      "same_user": true,
+      "executable": "Code Helper (GPU)",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 692,
+      "ppid": 446,
+      "same_user": true,
+      "executable": "Code Helper",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 719,
+      "ppid": 446,
+      "same_user": true,
+      "executable": "Code Helper (Renderer)",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 727,
+      "ppid": 443,
+      "same_user": true,
+      "executable": "Codex (Renderer)",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 728,
+      "ppid": 443,
+      "same_user": true,
+      "executable": "Codex (Renderer)",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 745,
+      "ppid": 443,
+      "same_user": true,
+      "executable": "codex",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 760,
+      "ppid": 446,
+      "same_user": true,
+      "executable": "Code Helper",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 762,
+      "ppid": 446,
+      "same_user": true,
+      "executable": "Code Helper",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 770,
+      "ppid": 446,
+      "same_user": true,
+      "executable": "Code Helper",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 771,
+      "ppid": 446,
+      "same_user": true,
+      "executable": "Code Helper (Plugin)",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 776,
+      "ppid": 443,
+      "same_user": true,
+      "executable": "Codex (Service)",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 1033,
+      "ppid": 443,
+      "same_user": true,
+      "executable": "Codex (Renderer)",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 1200,
+      "ppid": 443,
+      "same_user": true,
+      "executable": "Codex (Renderer)",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 1309,
+      "ppid": 443,
+      "same_user": true,
+      "executable": "Codex (Renderer)",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 1314,
+      "ppid": 443,
+      "same_user": true,
+      "executable": "Codex (Renderer)",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 1323,
+      "ppid": 443,
+      "same_user": true,
+      "executable": "codex",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 1408,
+      "ppid": 443,
+      "same_user": true,
+      "executable": "Codex (Renderer)",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 1409,
+      "ppid": 443,
+      "same_user": true,
+      "executable": "Codex (Renderer)",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 2301,
+      "ppid": 745,
+      "same_user": true,
+      "executable": "node",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 2302,
+      "ppid": 745,
+      "same_user": true,
+      "executable": "node",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 2303,
+      "ppid": 745,
+      "same_user": true,
+      "executable": "node_repl",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 2309,
+      "ppid": 745,
+      "same_user": true,
+      "executable": "node",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 2361,
+      "ppid": 2302,
+      "same_user": true,
+      "executable": "node_repl",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 9207,
+      "ppid": 745,
+      "same_user": true,
+      "executable": "codex-code-mode-host",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 14207,
+      "ppid": 745,
+      "same_user": true,
+      "executable": "node",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 14208,
+      "ppid": 745,
+      "same_user": true,
+      "executable": "node",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 14209,
+      "ppid": 745,
+      "same_user": true,
+      "executable": "node",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 14210,
+      "ppid": 745,
+      "same_user": true,
+      "executable": "node_repl",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 14211,
+      "ppid": 14208,
+      "same_user": true,
+      "executable": "node_repl",
+      "classification": "EDITOR_AUTOMATION_OR_GENERAL_RUNTIME"
+    },
+    {
+      "pid": 14427,
+      "ppid": 745,
+      "same_user": true,
+      "executable": "Python",
+      "classification": "PREFLIGHT_OBSERVER"
+    }
+  ],
+  "argv_environment_or_process_payloads_read": false,
+  "processes_terminated": false,
+  "limitations": [
+    "Snapshot only; executable names do not reveal the workload or prevent later launches",
+    "No guarantee of absence of embedded, nonparticipant or unobservable consumers",
+    "No all_consumers_stopped attestation is issued by this observation"
+  ],
+  "initial_sandbox_ps_denied": true,
+  "read_only_process_query_after_escalation_succeeded": true
+}

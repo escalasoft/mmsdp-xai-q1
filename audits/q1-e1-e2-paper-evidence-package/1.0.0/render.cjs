@@ -1,0 +1,3 @@
+const fs=require('fs'),path=require('path');
+const sharp=require('/Users/alex/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');
+(async()=>{let dir=process.argv[2]||path.join(__dirname,'figures');let stats=[];for(let n of ['A','C','D']){let p=path.join(dir,`figure_${n}`);await sharp(p+'.svg',{density:96}).resize({width:2160}).withMetadata({density:300}).png().toFile(p+'.png');stats.push({figure:n,...await sharp(p+'.png').metadata()});}fs.writeFileSync(path.join(dir,'render_metadata.json'),JSON.stringify({node:process.version,libraries:sharp.versions,figures:stats},null,2));})().catch(e=>{console.error(e);process.exit(1)});

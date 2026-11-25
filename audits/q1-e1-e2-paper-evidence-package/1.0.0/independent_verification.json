@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "independent_process": true,
+  "source_references_unchanged": 63,
+  "checks": [
+    {
+      "figure": "A",
+      "local_identity": "PASS",
+      "E1_reconstruction": "PASS",
+      "E2_stored_reconstruction": "PASS",
+      "probability_input_link": "EXACT"
+    },
+    {
+      "figure": "D",
+      "local_identity": "PASS",
+      "E1_reconstruction": "PASS",
+      "E2_stored_reconstruction": "PASS",
+      "probability_input_link": "EXACT"
+    }
+  ],
+  "global_mean_absolute_checks": 24,
+  "SVG_regeneration": "A/C/D byte-identical",
+  "figure_B": "SVG and PNG byte-identical to accepted source",
+  "TEXT_token_column_binding": "PASS",
+  "model_calls": 0,
+  "SHAP_calls": 0,
+  "calibration_calls": 0,
+  "T2_access": 0
+}

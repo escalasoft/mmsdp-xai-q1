@@ -1,0 +1,193 @@
+{
+  "version": "1.0.0",
+  "completed_at_utc": "2026-10-10T07:05:17.225823+00:00",
+  "functional_status": "SYNTHETIC PASS",
+  "readiness": "C CONDITIONAL",
+  "tests_run": 38,
+  "failures": 0,
+  "errors": 0,
+  "tests": [
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_01_hex_identity_orders_and_lexical_preservation",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_02_identity_missing_duplicate_order_and_unknown",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_03_non_numbers_nonfinite_and_duplicate_keys",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_04_last_row_failure_no_data_in_worker_error",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_05_truncation_corruption_and_capture_hash",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_06_atomic_directory_publication_and_no_overwrite",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_07_fail_before_and_during_publication",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_08_destination_race_does_not_overwrite",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_09_source_replacement_and_modification_during_capture",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_10_change_after_verified_capture_cannot_change_result",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_11_tail_noninterference_and_prefix_limits",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_12_consumer_file_access_denied_and_no_extractor_writes",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_13_actual_subprocess_timeout_enforced",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_14_memory_guarantee_explicitly_pending",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_15_real_entry_point_disabled_and_symlink_rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_16_identity_adapter_synthetic_metadata_and_hash_failure",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_17_partial_disk_write_never_published",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_18_ipc_response_tampering_rejected",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_19_line_byte_limit_and_missing_LF",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_01_correct_segment_and_exact_types",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_02_exact_stop_and_same_stream_T2_sentinel",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_03_truncated_expected_file",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_04_truncated_prefix_even_with_matching_hash",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_05_corruption_and_invalid_compression",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_06_duplicate_missing_unexpected_identity",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_07_changed_order",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_08_extra_fields_and_duplicate_keys",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_09_incorrect_types_and_nonfinite",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_10_last_row_failure_worker_has_no_partial_output",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_11_no_auxiliary_writes",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_12_separate_consumer_cannot_open_source",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_13_source_replaced_during_read",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_14_source_modified_during_read",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_15_tail_noninterference",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_16_immutable_verified_bytes_after_capture",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_17_byte_memory_and_line_limits",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_18_real_configuration_symlinks_and_bad_contract_denied",
+      "status": "PASS"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_19_full_future_cardinality_is_synthetic",
+      "status": "PASS"
+    }
+  ],
+  "prior_candidate_run": {
+    "tests_run": 16,
+    "passed": 16,
+    "additional_changes": "Identity tuple immutability, implementation hash provenance, partial-disk-failure, IPC-tamper and LF-boundary tests added before final run"
+  },
+  "preserved_A_B_unchanged": true,
+  "historical_contracts_unchanged": true,
+  "artifact_sha256": {
+    "src/governance/e1_code_candidate.py": "218c76a051417ca1067cda55b4786aaf7b2fbe8dfa60e21acff5b775121a32f2",
+    "tests/governance/test_e1_code_candidate.py": "c25326aa92288378ccbe5110bc57fb58a2522bf97d638e8711269fdc125af8a7",
+    "audits/q1-e1-code-c1/1.0.0/memory_probe.json": "a86086b2d4a9aadcb7da2594ff1c2833be9ab232ec341be0b8f78af011c0b530",
+    "audits/q1-e1-code-c1/1.0.0/CONTRACT.md": "1f4297cd6985eba6483a10e32affec31d8d8fe19841052ab211dec742382fd95",
+    "audits/q1-e1-code-c1/1.0.0/authorization.json": "5e922e00af5a0f5ed00b749b7e2b3e4c8260df1d0974ee96f14b10aa9ce81187",
+    "audits/q1-e1-code-c1/1.0.0/identity_verification.json": "81fbde1d2891011a48103a2bcd617a78ada44a1104a8f8f4a14ef3bd0a029a4a"
+  },
+  "memory_total_hard_limit": "PENDING_NOT_PASS",
+  "OS_sandbox": "NOT_IMPLEMENTED_OR_CLAIMED",
+  "real_CODE_opened": false,
+  "real_features_used": false,
+  "real_identity_metadata_verified": true,
+  "models_or_predictions_loaded": false,
+  "inference_or_SHAP_executed": false,
+  "permission_C_started": false,
+  "limitations": [
+    "No validated hard total-memory ceiling",
+    "Private staging 0700 is not isolation from same-UID processes",
+    "Python audit hooks are not native OS sandboxing",
+    "Crash can leave private unaccepted staging; power-loss durability unproved",
+    "Production source entry point disabled"
+  ]
+}

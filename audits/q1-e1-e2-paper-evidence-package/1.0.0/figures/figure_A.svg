@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="7.2in" height="6.9923in" viewBox="0 0 1040 1010"><rect width="100%" height="100%" fill="white"/>
+<text x="28" y="35" font-family="Arial, Helvetica, sans-serif" font-size="25" fill="#182936" font-weight="bold" text-anchor="start">A  Linked explanations at two distinct levels</text>
+<text x="28" y="65" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#182936" font-weight="normal" text-anchor="start">ActiveMQ / T1   •   LR   •   C+T   •   Frozen E1 local case 1</text>
+<text x="28" y="91" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#62717c" font-weight="normal" text-anchor="start">Commit e947927511796484e2ae0a066df7fa7b4800a578</text>
+<rect x="28" y="110" width="984" height="290" fill="#f0f5f8" stroke="none" rx="3"/>
+<text x="45" y="141" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#182936" font-weight="bold" text-anchor="start">E2  Modality contributions to the fusion meta-logit</text>
+<text x="45" y="168" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#62717c" font-weight="normal" text-anchor="start">OOF reference   |   Separate additive decomposition</text>
+<text x="46" y="198" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">Base = -1.326734</text>
+<text x="46" y="228" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="bold" text-anchor="start">CODE</text>
+<text x="140" y="228" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#182936" font-weight="normal" text-anchor="start">p=0.212793</text>
+<rect x="302.5589249787634" y="211" width="48.45290200097048" height="21" fill="#D55E00" stroke="none" rx="3"/>
+<line x1="302.5589249787634" y1="206" x2="302.5589249787634" y2="237" stroke="#62717c" stroke-width="1.2"/>
+<line x1="351.0118269797339" y1="206" x2="351.0118269797339" y2="237" stroke="#62717c" stroke-width="1.2"/>
+<text x="990" y="228" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="end">+0.297632</text>
+<text x="46" y="261" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="bold" text-anchor="start">TEXT</text>
+<text x="140" y="261" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#182936" font-weight="normal" text-anchor="start">p=0.704001</text>
+<rect x="351.0118269797339" y="244" width="396.4292480415028" height="21" fill="#D55E00" stroke="none" rx="3"/>
+<line x1="351.0118269797339" y1="239" x2="351.0118269797339" y2="270" stroke="#62717c" stroke-width="1.2"/>
+<line x1="747.4410750212367" y1="239" x2="747.4410750212367" y2="270" stroke="#62717c" stroke-width="1.2"/>
+<text x="990" y="261" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="end">+2.435149</text>
+<text x="46" y="346" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#182936" font-weight="bold" text-anchor="start">Fusion meta-logit = 1.406048   →   RAW p = 0.803142</text>
+<text x="46" y="377" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#62717c" font-weight="normal" text-anchor="start">Not a calibrated probability. Bar lengths use the E2 scale only.</text>
+<text x="520" y="435" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#182936" font-weight="bold" text-anchor="middle">↑  Unimodal probabilities are the verified E2 inputs  ↑</text>
+<rect x="28" y="458" width="482" height="475" fill="#f7f9fb" stroke="none" rx="3"/>
+<text x="44" y="486" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#182936" font-weight="bold" text-anchor="start">E1 CODE  •  LR analytical</text>
+<text x="44" y="512" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">Base = -1.353054 logit</text>
+<text x="44" y="535" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#62717c" font-weight="normal" text-anchor="start">Signed contributions to the unimodal logit</text>
+<line x1="290.5" y1="550" x2="290.5" y2="823" stroke="#aeb8bf" stroke-width="1.2"/>
+<text x="43" y="572" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">la</text>
+<rect x="285.51682738279607" y="555" width="4.983172617203934" height="20" fill="#0072B2" stroke="none" rx="3"/>
+<text x="498" y="572" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#182936" font-weight="normal" text-anchor="end">-0.0109</text>
+<text x="43" y="603" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">ld</text>
+<rect x="289.9987209569507" y="586" width="0.7" height="20" fill="#0072B2" stroke="none" rx="3"/>
+<text x="498" y="603" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#182936" font-weight="normal" text-anchor="end">-0.0011</text>
+<text x="43" y="634" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">nf</text>
+<rect x="255.7659246816603" y="617" width="34.734075318339706" height="20" fill="#0072B2" stroke="none" rx="3"/>
+<text x="498" y="634" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#182936" font-weight="normal" text-anchor="end">-0.0757</text>
+<text x="43" y="665" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">nd</text>
+<rect x="290.5" y="648" width="11.400645399940686" height="20" fill="#D55E00" stroke="none" rx="3"/>
+<text x="498" y="665" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#182936" font-weight="normal" text-anchor="end">+0.0248</text>
+<text x="43" y="696" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">ns</text>
+<rect x="220.01818935530855" y="679" width="70.48181064469145" height="20" fill="#0072B2" stroke="none" rx="3"/>
+<text x="498" y="696" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#182936" font-weight="normal" text-anchor="end">-0.1535</text>
+<text x="43" y="727" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">ent</text>
+<rect x="290.5" y="710" width="119.90740740740739" height="20" fill="#D55E00" stroke="none" rx="3"/>
+<text x="498" y="727" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#182936" font-weight="normal" text-anchor="end">+0.2612</text>
+<text x="44" y="855" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="bold" text-anchor="start">Output = -1.308170 logit</text>
+<text x="44" y="881" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#182936" font-weight="bold" text-anchor="start">Unimodal RAW p = 0.212793</text>
+<text x="44" y="908" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#62717c" font-weight="normal" text-anchor="start">Additive residual = 0.00e+00</text>
+<rect x="530" y="458" width="482" height="475" fill="#f7f9fb" stroke="none" rx="3"/>
+<text x="546" y="486" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#182936" font-weight="bold" text-anchor="start">E1 TEXT  •  LR analytical</text>
+<text x="546" y="512" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">Base = -1.559703 logit</text>
+<text x="546" y="535" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#62717c" font-weight="normal" text-anchor="start">Signed contributions to the unimodal logit</text>
+<line x1="792.5" y1="550" x2="792.5" y2="823" stroke="#aeb8bf" stroke-width="1.2"/>
+<text x="545" y="572" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">issues</text>
+<rect x="792.5" y="555" width="44.828809029965555" height="20" fill="#D55E00" stroke="none" rx="3"/>
+<text x="1000" y="572" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#182936" font-weight="normal" text-anchor="end">+0.3649</text>
+<text x="545" y="603" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">browse</text>
+<rect x="792.5" y="586" width="42.96085441247669" height="20" fill="#D55E00" stroke="none" rx="3"/>
+<text x="1000" y="603" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#182936" font-weight="normal" text-anchor="end">+0.3497</text>
+<text x="545" y="634" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">amq</text>
+<rect x="792.5" y="617" width="37.22815546314064" height="20" fill="#D55E00" stroke="none" rx="3"/>
+<text x="1000" y="634" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#182936" font-weight="normal" text-anchor="end">+0.3030</text>
+<text x="545" y="665" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">jira</text>
+<rect x="792.5" y="648" width="33.054768154260614" height="20" fill="#D55E00" stroke="none" rx="3"/>
+<text x="1000" y="665" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#182936" font-weight="normal" text-anchor="end">+0.2691</text>
+<text x="545" y="696" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">deadlock</text>
+<rect x="792.5" y="679" width="27.44279044635516" height="20" fill="#D55E00" stroke="none" rx="3"/>
+<text x="1000" y="696" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#182936" font-weight="normal" text-anchor="end">+0.2234</text>
+<text x="545" y="727" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">and</text>
+<rect x="788.3097820802136" y="710" width="4.190217919786392" height="20" fill="#0072B2" stroke="none" rx="3"/>
+<text x="1000" y="727" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#182936" font-weight="normal" text-anchor="end">-0.0341</text>
+<text x="545" y="758" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">on</text>
+<rect x="789.3129673955839" y="741" width="3.1870326044161175" height="20" fill="#0072B2" stroke="none" rx="3"/>
+<text x="1000" y="758" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#182936" font-weight="normal" text-anchor="end">-0.0259</text>
+<text x="545" y="789" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">Other 2550</text>
+<rect x="792.5" y="772" width="119.90740740740739" height="20" fill="#D55E00" stroke="none" rx="3"/>
+<text x="1000" y="789" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#182936" font-weight="normal" text-anchor="end">+0.9761</text>
+<text x="546" y="855" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#182936" font-weight="bold" text-anchor="start">Output = 0.866426 logit</text>
+<text x="546" y="881" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#182936" font-weight="bold" text-anchor="start">Unimodal RAW p = 0.704001</text>
+<text x="546" y="908" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#62717c" font-weight="normal" text-anchor="start">Additive residual = 4.44e-16</text>
+<text x="28" y="965" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">Orange: positive contribution. Blue: negative contribution. Not causal effects.</text>
+<text x="28" y="991" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#182936" font-weight="normal" text-anchor="start">No attribution is added or propagated between E1 and E2. Panel axes are independent.</text>
+</svg>

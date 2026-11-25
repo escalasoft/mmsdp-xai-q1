@@ -1,0 +1,60 @@
+{
+  "SHAP_count": 0,
+  "authorization": "authorization.json",
+  "auxiliary_expected_size_bytes": 4985060,
+  "auxiliary_size_matches": true,
+  "completed_at_utc": "2026-10-10T06:38:09.148682+00:00",
+  "consistency": "Two identical full-file digests; unchanged descriptor/path identity, size, mtime and ctime; shared advisory lock held throughout reads.",
+  "decompression_count": 0,
+  "digest_matches": true,
+  "expected_sha256": "42ec61d2adf3c708a4e55d856a7f3e95ee58464da022f84552c846379d796be3",
+  "final_metadata": {
+    "ctime_ns": 1789008422085371511,
+    "device": 16777224,
+    "inode": 125638494,
+    "mode": 33188,
+    "mtime_ns": 1788238915653449178,
+    "size_bytes": 4985060
+  },
+  "historical_metadata_hashes_after": {
+    "audits/q1-apachejit-final-dataset-freeze/1.0.0/MANIFEST.sha256": "5dfb187f6d10a4bec4569111b4a53b2bff78bdb1995d3c45cf885f1e760c6dbb",
+    "audits/q1-apachejit-final-dataset-freeze/1.0.0/code_schema.json": "a68bde979da2a156e279d9945dd055a1b7961acd62ca74d3f83f283ad5df440a",
+    "audits/q1-primary-xai-t2-semantic-boundary-amendment/1.0.0/future_blind_router_contract.json": "17e2738dff12e0120f412897e98413765f40cff105d69e0db67502502c6841cd",
+    "audits/q1-primary-xai-t2-semantic-boundary-amendment/1.0.0/future_t1_output_contract.json": "cca0e9d761e51f247fa8b24dad3c555d7412c92cd770e8d90eecdbc1ddc2e442",
+    "audits/q1-primary-xai-t2-semantic-boundary-amendment/1.0.0/mechanical_routing_definition.json": "1c8892acc0cbde0ace7f342117f91ce3ae86e067421acbb941acb65d28f926a0",
+    "audits/q1-xai-reconstruction-equivalence-protocol/1.0.0/numerical_tolerance_policy.json": "62fd3780c94c6a69bfc036bdd4b567409ffc46c8c892a807b221f5d40d0eb336"
+  },
+  "historical_metadata_unchanged": true,
+  "inference_count": 0,
+  "initial_metadata": {
+    "ctime_ns": 1789008422085371511,
+    "device": 16777224,
+    "inode": 125638494,
+    "mode": 33188,
+    "mtime_ns": 1788238915653449178,
+    "size_bytes": 4985060
+  },
+  "model_load_count": 0,
+  "obtained_sha256": "42ec61d2adf3c708a4e55d856a7f3e95ee58464da022f84552c846379d796be3",
+  "passes": [
+    {
+      "bytes_read": 4985060,
+      "pass": 1,
+      "sha256": "42ec61d2adf3c708a4e55d856a7f3e95ee58464da022f84552c846379d796be3"
+    },
+    {
+      "bytes_read": 4985060,
+      "pass": 2,
+      "sha256": "42ec61d2adf3c708a4e55d856a7f3e95ee58464da022f84552c846379d796be3"
+    }
+  ],
+  "per_row_hash_count": 0,
+  "permission_B_started": false,
+  "permission_C_started": false,
+  "record_interpretation_count": 0,
+  "schema_version": "e1-code-permission-a-result-1.0.0",
+  "size_bytes": 4985060,
+  "source": "audits/q1-apachejit-final-dataset-freeze/1.0.0/code_dataset.jsonl.gz",
+  "started_at_utc": "2026-10-10T06:38:09.092675+00:00",
+  "status": "PASS"
+}

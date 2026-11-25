@@ -1,0 +1,81 @@
+{
+  "all_source_hashes_verified": true,
+  "models": {
+    "LGB": {
+      "feature_values_persisted": false,
+      "local_cases": 8,
+      "max_normalized_residual": 8.399738263817199e-15,
+      "max_repeat_difference": 0.0,
+      "max_residual": 1.0658141036401503e-14,
+      "model_identity": "ae808a68dfd3eb33285271ebad66411cc44fdba6ddae24b65fe2cd8c44c82d61",
+      "npz_sha256": "19808c78f6de9ee048f1c1a5f997b75be05ebcdfa40a1408f3064f27f117ddde",
+      "repetitions": 20,
+      "rows": 245,
+      "scale": "NATIVE_RAW_MARGIN",
+      "stability_pairs": 190
+    },
+    "LR": {
+      "feature_values_persisted": false,
+      "local_cases": 8,
+      "max_normalized_residual": 4.2131571490142926e-16,
+      "max_repeat_difference": 0.0,
+      "max_residual": 4.440892098500626e-16,
+      "model_identity": "830ceae2937cdd0de60708699f3f75ead834b17dfbe1f219e5b9c3d256e7898b",
+      "npz_sha256": "3fd3654d8804ffcf12d55b62e9d5101abfc150bac6ab07fb29c83c0a3151c393",
+      "repetitions": 20,
+      "rows": 245,
+      "scale": "LOGIT",
+      "stability_pairs": 190
+    },
+    "RF": {
+      "feature_values_persisted": false,
+      "local_cases": 8,
+      "max_normalized_residual": 9.351737345973583e-15,
+      "max_repeat_difference": 0.0,
+      "max_residual": 1.7541523789077473e-14,
+      "model_identity": "a14a321bb3ed77d06b03a7ec3921181b60105448d0e4500244d4bacf084d245b",
+      "npz_sha256": "6dd4a1a0e23f82c082ec21e4e7484bdf617fae2835d4c764fecf1fa53ef8af0a",
+      "repetitions": 20,
+      "rows": 245,
+      "scale": "POSITIVE_CLASS_PROBABILITY",
+      "stability_pairs": 190
+    },
+    "XGB": {
+      "feature_values_persisted": false,
+      "local_cases": 8,
+      "max_normalized_residual": 8.230246492277956e-07,
+      "max_repeat_difference": 0.0,
+      "max_residual": 3.223307430744171e-06,
+      "model_identity": "897b72f79d7dc5b66c8cbb785303a49fe4431802d2468059547acff070560889",
+      "npz_sha256": "addc2b810ce5f564e16ae4cb369ce10b17dec44d6d010ed5fd8534229c754c73",
+      "repetitions": 20,
+      "rows": 245,
+      "scale": "NATIVE_RAW_MARGIN",
+      "stability_pairs": 190
+    }
+  },
+  "repetition_policy": "Use repetition 0 after verifying all 20 attribution arrays are exactly equal; n=245, never n=4900.",
+  "source_manifest": {
+    "LGB/explanations.npz": "19808c78f6de9ee048f1c1a5f997b75be05ebcdfa40a1408f3064f27f117ddde",
+    "LGB/global.json": "327af58a40956b88d2e1c093bf7dea04bd957e10532b3bfd100704252ecf2fae",
+    "LGB/local.jsonl": "29f4f4b869ac0340653bf1d366d8aa06af710cf5db479119dea6c527523459aa",
+    "LGB/metadata.json": "5a495f0ccd5666059872b796a6390fb30311a3dbecd3fa8df7f89ee508f689af",
+    "LR/explanations.npz": "3fd3654d8804ffcf12d55b62e9d5101abfc150bac6ab07fb29c83c0a3151c393",
+    "LR/global.json": "9a7bf969e6d424cc3e75b7d58f5644bfe47d6513e046756386e92537c3015cb8",
+    "LR/local.jsonl": "782c47b882398874a6a01a1911471773ab7e3ef846a91e46a2aad2aeb68c91f0",
+    "LR/metadata.json": "6e53c1064f5b62480dea84ea2b092fc64396b556b681378dc3c31de1679ffa79",
+    "RF/explanations.npz": "6dd4a1a0e23f82c082ec21e4e7484bdf617fae2835d4c764fecf1fa53ef8af0a",
+    "RF/global.json": "daa7b0e38b4ad9eb9ee287a0cd67be1aa77ddff8044362825f88e1bfa92cca83",
+    "RF/local.jsonl": "feb28e49e41cc9eda82d82653db05637ecb1598a7eacf767ceb4ffb07c02ce1d",
+    "RF/metadata.json": "bbedf34ea026ffe0dd367e100a5cd5b5ab855b035b63c0e11a1fcc659f8af00f",
+    "XGB/explanations.npz": "addc2b810ce5f564e16ae4cb369ce10b17dec44d6d010ed5fd8534229c754c73",
+    "XGB/global.json": "f60205dc03da525c2b89185bc4f3c25f2639085a79d0eb7db4e359e11ebfb198",
+    "XGB/local.jsonl": "675d7d92140b67b383540690d3087737ccf342d997cdc7a720e09b2625847826",
+    "XGB/metadata.json": "3176d49ad0c6cf7e8eb59c372916d36d6dfff79fc0e67fe8dc96709797eb4a50",
+    "identities.jsonl": "66f9a32101acd8299911d443a239e5063bcecf648cf8ac4bda910466b8f78ad9",
+    "provenance.json": "d848ed6e464e5029ef8169161ccb664c24cac10c1d2f0f2576ca2ff0b43ecafa",
+    "status.json": "e0b78c81bed48b5f148dcbfcb2fa6d7827a4f1e473064c976864518494afcf4b"
+  },
+  "source_manifest_sha256": "1da3ac92a999ea9d5b2212741dcc6cd40c941beb549dc2b343f3d68fae7ad633",
+  "statistical_policy": "Population SD ddof=0; NumPy linear percentiles; exact zero and frozen +/-1e-12 zero band both reported; no p-values, bootstraps or generalization."
+}

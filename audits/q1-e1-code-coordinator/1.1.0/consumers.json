@@ -1,0 +1,28 @@
+{
+  "version": "1.1.0",
+  "during_C": "ALL_DISABLED",
+  "participants": [
+    {
+      "id": "CODE_T1_transform",
+      "enabled_during_C": false,
+      "integration": "NOT_IMPLEMENTED; must remain stopped"
+    },
+    {
+      "id": "CODE_T1_inference_LR_XGB_LGB",
+      "enabled_during_C": false,
+      "integration": "NOT_IMPLEMENTED; must remain stopped"
+    },
+    {
+      "id": "E1_CODE_SHAP_LR_XGB_LGB",
+      "enabled_during_C": false,
+      "integration": "NOT_IMPLEMENTED; must remain stopped"
+    },
+    {
+      "id": "E1_CODE_figures_and_scientific_publication",
+      "enabled_during_C": false,
+      "integration": "NOT_IMPLEMENTED; must remain stopped"
+    }
+  ],
+  "cooperative_rule": "Every future consumer holds LOCK_SH on the stable scientific.lock for its full lifetime; coordinator holds LOCK_EX. No nonparticipant detection guarantee.",
+  "human_preflight_required": true
+}

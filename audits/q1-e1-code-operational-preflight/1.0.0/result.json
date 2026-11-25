@@ -1,0 +1,76 @@
+{
+  "version": "1.0.0",
+  "completed_at_utc": "2026-10-12T02:35:39.710331+00:00",
+  "verdict": "C OPERATIONAL CONDITIONAL",
+  "release_version": "1.1.0",
+  "hashes_match": true,
+  "release_sha256": "ffeb09e577eecc1d9140575b7f10ae358997230716a08be0b326024a68ae1d99",
+  "lock": {
+    "path": "/Users/alex/MMSDP-XAI-Q1/audits/q1-e1-code-permission-c/1.0.0/scientific.lock",
+    "device": 16777225,
+    "inode": 131286779,
+    "mode": "0600",
+    "created": true,
+    "size_bytes": 0,
+    "exclusive_nonblocking_acquired": true
+  },
+  "lock_held_after_preflight": false,
+  "final_state_exists": {
+    "permission_C.json": false,
+    "attempt.json": false,
+    "completion.json": false,
+    "validated": false
+  },
+  "staging_residual_count": 0,
+  "scientific_runtime_candidates_observed": 0,
+  "all_consumers_stopped_confirmed": false,
+  "consumer_roles": [
+    "CODE_T1_transform",
+    "CODE_T1_inference_LR_XGB_LGB",
+    "E1_CODE_SHAP_LR_XGB_LGB",
+    "E1_CODE_figures_and_scientific_publication"
+  ],
+  "consumer_policy": "All disabled during C; production consumer integration absent; human confirmation and cooperative participation required",
+  "authorization_controls": {
+    "explicit_human_confirmation": true,
+    "binds_release_contract_inventory_and_lock": true,
+    "max_validity_seconds": 300,
+    "exclusive_persistent_attempt_before_capture": true,
+    "no_automatic_retry": true,
+    "production_arguments_allow_overrides": false
+  },
+  "output_contract": {
+    "rows": 245,
+    "project": "apache/activemq",
+    "partition": "T1",
+    "fields": [
+      "row_identifier",
+      "la",
+      "ld",
+      "nf",
+      "nd",
+      "ns",
+      "ent"
+    ],
+    "order": "frozen temporal",
+    "lexical_preservation": true
+  },
+  "acceptance_rule": "Only complete atomic output with valid matching completion PASS/accepted=true is consumable; future cooperative consumer must enforce receipt verification. No OS access prohibition is claimed.",
+  "status_rules": {
+    "PASS": "complete validated publication and receipt",
+    "FAIL": "deterministic integrity/identity/schema/limits/authorization/publication rejection",
+    "INCONCLUSIVE": "concurrency, interruption, timeout, resource failure or uncertain state"
+  },
+  "remaining_condition": "Immediate human verification that all relevant scientific consumers and source writer are stopped and cannot restart during C; then separately issue explicit one-use C approval. Repeat dynamic checks immediately before execution.",
+  "processes_terminated": false,
+  "production_entry_executed": false,
+  "real_CODE_opened": false,
+  "authorization_created": false,
+  "attempt_created": false,
+  "code_contracts_modified": false,
+  "evidence_sha256": {
+    "preparation.json": "72f644d4e12053ee6e324430eaa0a00192cc8b22c596eefe98a7b00c680820d8",
+    "process_observation.json": "d14ebcb3f0811ffc4855b984feea5f3e546bbdb4f323858a637b8f355aeb3051",
+    "scope.json": "9e3401165955936eca92f9729f082b7c6eeeeb05a311095dc0897e581f732e98"
+  }
+}

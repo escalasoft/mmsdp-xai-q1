@@ -1,0 +1,433 @@
+{
+  "version": "1.1.0",
+  "recorded_at_utc": "2026-10-12T02:21:09.294709+00:00",
+  "tests_run": 83,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 55.57557586900657,
+  "tests": [
+    {
+      "test": "test_e1_code_release.ReleaseTests.test_01_absent_approval_never_captures",
+      "status": "PASS",
+      "coverage": "NEW"
+    },
+    {
+      "test": "test_e1_code_release.ReleaseTests.test_02_invalid_and_incompatible_authorizations",
+      "status": "PASS",
+      "coverage": "NEW"
+    },
+    {
+      "test": "test_e1_code_release.ReleaseTests.test_03_expiry_and_lock_substitution",
+      "status": "PASS",
+      "coverage": "NEW"
+    },
+    {
+      "test": "test_e1_code_release.ReleaseTests.test_04_success_exact_bytes_receipt_and_reuse",
+      "status": "PASS",
+      "coverage": "NEW"
+    },
+    {
+      "test": "test_e1_code_release.ReleaseTests.test_05_failed_attempt_cannot_be_reused",
+      "status": "PASS",
+      "coverage": "NEW"
+    },
+    {
+      "test": "test_e1_code_release.ReleaseTests.test_06_worker_identity_failure_is_FAIL",
+      "status": "PASS",
+      "coverage": "NEW"
+    },
+    {
+      "test": "test_e1_code_release.ReleaseTests.test_07_timeout_inconclusive_no_retry",
+      "status": "PASS",
+      "coverage": "NEW"
+    },
+    {
+      "test": "test_e1_code_release.ReleaseTests.test_08_interruption_and_resource_classification",
+      "status": "PASS",
+      "coverage": "NEW"
+    },
+    {
+      "test": "test_e1_code_release.ReleaseTests.test_09_concurrent_source_change",
+      "status": "PASS",
+      "coverage": "NEW"
+    },
+    {
+      "test": "test_e1_code_release.ReleaseTests.test_10_lease_conflict_and_no_claim",
+      "status": "PASS",
+      "coverage": "NEW"
+    },
+    {
+      "test": "test_e1_code_release.ReleaseTests.test_11_partial_publication_rejected",
+      "status": "PASS",
+      "coverage": "NEW"
+    },
+    {
+      "test": "test_e1_code_release.ReleaseTests.test_12_uncertain_after_rename_not_accepted",
+      "status": "PASS",
+      "coverage": "NEW"
+    },
+    {
+      "test": "test_e1_code_release.ReleaseTests.test_13_receipt_failure_never_PASS",
+      "status": "PASS",
+      "coverage": "NEW"
+    },
+    {
+      "test": "test_e1_code_release.ReleaseTests.test_14_no_real_entry_called_static_fixed_contract",
+      "status": "PASS",
+      "coverage": "NEW"
+    },
+    {
+      "test": "test_e1_code_release.ReleaseTests.test_15_approval_modified_before_commit",
+      "status": "PASS",
+      "coverage": "NEW"
+    },
+    {
+      "test": "test_e1_code_release.ReleaseTests.test_16_no_auxiliary_payload_copies",
+      "status": "PASS",
+      "coverage": "NEW"
+    },
+    {
+      "test": "test_e1_code_release.ReleaseTests.test_17_claim_exclusive",
+      "status": "PASS",
+      "coverage": "NEW"
+    },
+    {
+      "test": "test_e1_code_release.ReleaseTests.test_18_staging_residue_rejects_before_claim",
+      "status": "PASS",
+      "coverage": "NEW"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_01_end_to_end_linkage_and_no_T2",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_02_preflight_contract_tamper",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_03_release_code_hash_rejected_before_capture",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_04_preflight_destination_and_residue",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_05_consumer_and_coordinator_exclusion",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_06_capture_hash_and_size_failures",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_07_capture_race",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_08_source_changed_after_capture",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_09_identity_and_schema_failures",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_10_independent_response_counters_and_hashes",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_11_ipc_errors_sanitized",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_12_disk_corruption_never_published",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_13_publication_failure_and_no_overwrite",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_14_atomic_visibility_permissions",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_15_timeout_no_publication_no_retry",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_16_tail_independence",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_17_no_auxiliary_payload_writes",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_18_fixed_paths_limits_and_production_gate",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_19_symlink_and_hardlink_source_denied",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_20_capture_not_reopened_for_extraction",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_21_contract_modified_during_worker",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_22_partial_write_and_racing_destination",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_23_forged_valid_hash_wrong_identity_and_numeric_type",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_24_separate_process_cooperative_consumer_blocks",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_25_outer_logs_and_errors_do_not_expose_payloads",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_26_production_plan_denied_by_shared_engine",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_coordinator.CoordinatorTests.test_27_truncated_stream_even_with_matching_capture_hash",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_01_hex_identity_orders_and_lexical_preservation",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_02_identity_missing_duplicate_order_and_unknown",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_03_non_numbers_nonfinite_and_duplicate_keys",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_04_last_row_failure_no_data_in_worker_error",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_05_truncation_corruption_and_capture_hash",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_06_atomic_directory_publication_and_no_overwrite",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_07_fail_before_and_during_publication",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_08_destination_race_does_not_overwrite",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_09_source_replacement_and_modification_during_capture",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_10_change_after_verified_capture_cannot_change_result",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_11_tail_noninterference_and_prefix_limits",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_12_consumer_file_access_denied_and_no_extractor_writes",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_13_actual_subprocess_timeout_enforced",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_14_memory_guarantee_explicitly_pending",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_15_real_entry_point_disabled_and_symlink_rejected",
+      "status": "PASS",
+      "coverage": "ADAPTED_STATIC_AND_MOCK"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_16_identity_adapter_synthetic_metadata_and_hash_failure",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_17_partial_disk_write_never_published",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_18_ipc_response_tampering_rejected",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_candidate.CandidateTests.test_19_line_byte_limit_and_missing_LF",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_01_correct_segment_and_exact_types",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_02_exact_stop_and_same_stream_T2_sentinel",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_03_truncated_expected_file",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_04_truncated_prefix_even_with_matching_hash",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_05_corruption_and_invalid_compression",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_06_duplicate_missing_unexpected_identity",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_07_changed_order",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_08_extra_fields_and_duplicate_keys",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_09_incorrect_types_and_nonfinite",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_10_last_row_failure_worker_has_no_partial_output",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_11_no_auxiliary_writes",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_12_separate_consumer_cannot_open_source",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_13_source_replaced_during_read",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_14_source_modified_during_read",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_15_tail_noninterference",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_16_immutable_verified_bytes_after_capture",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_17_byte_memory_and_line_limits",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_18_real_configuration_symlinks_and_bad_contract_denied",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    },
+    {
+      "test": "test_e1_code_synthetic_extractor.SyntheticExtractorTests.test_19_full_future_cardinality_is_synthetic",
+      "status": "PASS",
+      "coverage": "ORIGINAL_UNADAPTED"
+    }
+  ],
+  "production_entry_executed": false,
+  "extract_real_executed": false,
+  "real_CODE_opened": false,
+  "development_run": {
+    "passed": 45,
+    "seconds": 28.733,
+    "note": "18 new plus 27 coordinator tests; duplicate discovery through imported class removed before final run"
+  }
+}
